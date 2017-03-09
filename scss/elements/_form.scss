@@ -441,8 +441,7 @@ input[type="checkbox"].form-switch {
   position: relative;
   display: flex;
   align-items: center;
-  flex-flow: row wrap;
-  @include clearfix;
+  flex-wrap: nowrap;
 
   .form-group {
     margin-bottom: 0;
