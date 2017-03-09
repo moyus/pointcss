@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hint Point</title>
+  <title>Flex Grid Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
@@ -135,63 +135,21 @@
       </aside>
       <!-- END .docs-l-sidebar -->
       <main id="main" class="docs-l-main docs-c-content" role="main">
-        <h1 id="hint">Hint</h1>
+        <h1 id="flex-grid">Flex Grid</h1>
 <ul>
 <li><a href="#basic">Basic</a></li>
-<li><a href="#sizes">Sizes</a></li>
-<li><a href="#position">Position</a></li>
+<li><a href="#responsive">Responsive</a></li>
+<li><a href="#offset">Offset</a></li>
+<li><a href="#flex">Flex</a></li>
 </ul>
 <h2 id="basic">Basic</h2>
-<p>Hint is built with pure css code. It can be apply on any elements who&#39;s
-<code>overflow</code> is not hidden and <code>position</code> is not undefined.</p>
-<div class="u-mb-15 u-textCenter">
-  <button class="btn btn--info hint u-mb-15" data-label="I'm always here!">Hover Me</button>
-</div>
-
-<pre><code class="lang-html">&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint"</span> <span class="hljs-meta">data</span>-label=<span class="hljs-string">"I'm always here!"</span>&gt;Hover Me&lt;/<span class="hljs-keyword">button&gt;</span>
-</code></pre>
-<h2 id="sizes">Sizes</h2>
-<p>By default, Hint will always remain single-line. you can change this behavior by
-adding <code>.hint--sm</code>, <code>.hint--md</code> or <code>.hint--lg</code> modifier class.</p>
-<div class="l-row u-textCenter">
-    <div class="l-col-4@md">
-        <button class="btn btn--info hint hint--sm u-mb-15" data-label="Lorem ipsum dolor sit amet.">Small Hint</button>
-    </div>
-    <div class="l-col-4@md">
-        <button class="btn btn--info hint hint--md u-mb-15" data-label="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione!">Medium Hint</button>
-    </div>
-    <div class="l-col-4@md">
-        <button class="btn btn--info hint hint--lg u-mb-15" data-label="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, illo recusandae dolorem magni odit.">Large Hint</button>
-    </div>
-</div>
-
-<pre><code class="lang-html">&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint hint--sm"</span> <span class="hljs-meta">data</span>-label=<span class="hljs-string">"Lorem ipsum dolor sit amet."</span>&gt;Small Hint&lt;/<span class="hljs-keyword">button&gt;
-</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint hint--md"</span> <span class="hljs-meta">data</span>-label=<span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione!"</span>&gt;Medium Hint&lt;/<span class="hljs-keyword">button&gt;
-</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint hint--lg"</span> <span class="hljs-meta">data</span>-label=<span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, illo recusandae dolorem magni odit."</span>&gt;Large Hint&lt;/<span class="hljs-keyword">button&gt;</span>
-</code></pre>
-<h2 id="position">Position</h2>
-<p>Hint use top as default position. By adding <code>.hint--right</code>, <code>.hint--bottom</code> or
-<code>.hint--left</code> modifier class to change hint position.</p>
-<div class="l-row u-textCenter">
-  <div class="l-col-6@sm l-col-3@md">
-      <button class="btn btn--info hint u-mb-15" data-label="Hello, There!">Hover me!</button>
-  </div>
-  <div class="l-col-6@sm l-col-3@md">
-      <button class="btn btn--info hint hint--right u-mb-15" data-label="Hello, There!">Hover me!</button>
-  </div>
-  <div class="l-col-6@sm l-col-3@md">
-      <button class="btn btn--info hint hint--bottom u-mb-15" data-label="Hello, There!">Hover me!</button>
-  </div>
-  <div class="l-col-6@sm l-col-3@md">
-      <button class="btn btn--info hint hint--left u-mb-15" data-label="Hello, There!">Hover me!</button>
-  </div>
-</div>
-
-<pre><code class="lang-html">&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint"</span> data-label=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint hint--right"</span> data-label=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint hint--bottom"</span> data-label=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint hint--left"</span> data-label=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-</code></pre>
+<p>Structure:</p>
+<ul>
+<li><code>.l-row</code>: the main container<ul>
+<li><code>.l-col-*@&lt;breakpoint&gt;</code>: column class, etc: <code>.l-col-4@md</code></li>
+</ul>
+</li>
+</ul>
 
 
       </main>

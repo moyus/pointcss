@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hint Point</title>
+  <title>Drop Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
@@ -135,62 +135,109 @@
       </aside>
       <!-- END .docs-l-sidebar -->
       <main id="main" class="docs-l-main docs-c-content" role="main">
-        <h1 id="hint">Hint</h1>
+        <h1 id="drop">Drop</h1>
 <ul>
 <li><a href="#basic">Basic</a></li>
-<li><a href="#sizes">Sizes</a></li>
 <li><a href="#position">Position</a></li>
 </ul>
 <h2 id="basic">Basic</h2>
-<p>Hint is built with pure css code. It can be apply on any elements who&#39;s
-<code>overflow</code> is not hidden and <code>position</code> is not undefined.</p>
-<div class="u-mb-15 u-textCenter">
-  <button class="btn btn--info hint u-mb-15" data-label="I'm always here!">Hover Me</button>
+<p>The most use case of <strong>Drop</strong> is Drop Menu, it use stacked nav
+component as it&#39;s content.</p>
+<div class="u-mb-15">
+  <div class="c-drop">
+    <button class="btn btn--primary c-drop__toggle">Click Me</button>
+    <div class="c-drop__content c-drop__content--bottomStart">
+      <ul class="c-nav c-nav--pills c-nav--stacked">
+        <li class="c-nav__item">
+            <a role="button" class="c-nav__link is-active">Profile</a>
+        </li>
+        <li class="c-nav__item">
+            <a role="button" class="c-nav__link">Inbox</a>
+        </li>
+        <li class="c-nav__item">
+            <a role="button" class="c-nav__link is-disabled">Task</a>
+        </li>
+        <li class="c-nav__divider"></li>
+        <li class="c-nav__item">
+            <a role="button" class="c-nav__link">Log out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<pre><code class="lang-html">&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint"</span> <span class="hljs-meta">data</span>-label=<span class="hljs-string">"I'm always here!"</span>&gt;Hover Me&lt;/<span class="hljs-keyword">button&gt;</span>
+<pre><code class="lang-html">&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-drop"</span>&gt;
+  &lt;button <span class="hljs-keyword">class</span>=<span class="hljs-string">"btn btn--primary c-drop__toggle"</span>&gt;Click Me&lt;/button&gt;
+  &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-drop__content c-drop__content--bottomStart"</span>&gt;
+    &lt;ul <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-nav c-nav--pills c-nav--stacked"</span>&gt;
+      &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-nav__item"</span>&gt;
+          &lt;a role=<span class="hljs-string">"button"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-nav__link is-active"</span>&gt;Profile&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-nav__item"</span>&gt;
+          &lt;a role=<span class="hljs-string">"button"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-nav__link"</span>&gt;Inbox&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-nav__item"</span>&gt;
+          &lt;a role=<span class="hljs-string">"button"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-nav__link is-disabled"</span>&gt;Task&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-nav__divider"</span>&gt;&lt;/li&gt;
+      &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-nav__item"</span>&gt;
+          &lt;a role=<span class="hljs-string">"button"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-nav__link"</span>&gt;Log <span class="hljs-keyword">out</span>&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
-<h2 id="sizes">Sizes</h2>
-<p>By default, Hint will always remain single-line. you can change this behavior by
-adding <code>.hint--sm</code>, <code>.hint--md</code> or <code>.hint--lg</code> modifier class.</p>
-<div class="l-row u-textCenter">
-    <div class="l-col-4@md">
-        <button class="btn btn--info hint hint--sm u-mb-15" data-label="Lorem ipsum dolor sit amet.">Small Hint</button>
-    </div>
-    <div class="l-col-4@md">
-        <button class="btn btn--info hint hint--md u-mb-15" data-label="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione!">Medium Hint</button>
-    </div>
-    <div class="l-col-4@md">
-        <button class="btn btn--info hint hint--lg u-mb-15" data-label="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, illo recusandae dolorem magni odit.">Large Hint</button>
-    </div>
+<div class="c-note c-note--warning u-mt-40">
+Point only use pure css trick <code>.c-drop__toggle:active</code> to simulate click and show drop content. And Point does <strong>not</strong> include any JavaScript interaction with <strong>Drop</strong>. You need to implement the class toggle yourself.
 </div>
 
-<pre><code class="lang-html">&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint hint--sm"</span> <span class="hljs-meta">data</span>-label=<span class="hljs-string">"Lorem ipsum dolor sit amet."</span>&gt;Small Hint&lt;/<span class="hljs-keyword">button&gt;
-</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint hint--md"</span> <span class="hljs-meta">data</span>-label=<span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione!"</span>&gt;Medium Hint&lt;/<span class="hljs-keyword">button&gt;
-</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint hint--lg"</span> <span class="hljs-meta">data</span>-label=<span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, illo recusandae dolorem magni odit."</span>&gt;Large Hint&lt;/<span class="hljs-keyword">button&gt;</span>
-</code></pre>
 <h2 id="position">Position</h2>
-<p>Hint use top as default position. By adding <code>.hint--right</code>, <code>.hint--bottom</code> or
-<code>.hint--left</code> modifier class to change hint position.</p>
-<div class="l-row u-textCenter">
-  <div class="l-col-6@sm l-col-3@md">
-      <button class="btn btn--info hint u-mb-15" data-label="Hello, There!">Hover me!</button>
-  </div>
-  <div class="l-col-6@sm l-col-3@md">
-      <button class="btn btn--info hint hint--right u-mb-15" data-label="Hello, There!">Hover me!</button>
-  </div>
-  <div class="l-col-6@sm l-col-3@md">
-      <button class="btn btn--info hint hint--bottom u-mb-15" data-label="Hello, There!">Hover me!</button>
-  </div>
-  <div class="l-col-6@sm l-col-3@md">
-      <button class="btn btn--info hint hint--left u-mb-15" data-label="Hello, There!">Hover me!</button>
+<p>The default position of <strong>Drop Content</strong> is bottomStart.
+You can change the position by adding modifier classes below
+on <code>.c-drop__content</code> container element.</p>
+<ul>
+<li><code>.c-drop-topStart</code></li>
+<li><code>.c-drop-top</code></li>
+<li><code>.c-drop-topEnd</code></li>
+<li><code>.c-drop-rightStart</code></li>
+<li><code>.c-drop-right</code></li>
+<li><code>.c-drop-rightEnd</code></li>
+<li><code>.c-drop-bottomStart</code></li>
+<li><code>.c-drop-bottom</code></li>
+<li><code>.c-drop-bottomEnd</code></li>
+<li><code>.c-drop-leftStart</code></li>
+<li><code>.c-drop-left</code></li>
+<li><code>.c-drop-leftEnd</code></li>
+</ul>
+<div class="u-mb-15">
+  <div class="c-drop">
+    <button class="btn btn--primary c-drop__toggle">Click Me</button>
+    <div class="c-drop__content c-drop__content--topStart">
+      <form action="#" class="form-inline u-p-10">
+        <div class="form-group">
+            <input type="text" class="form-input" value="Edit Me">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn--info">Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 
-<pre><code class="lang-html">&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint"</span> data-label=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint hint--right"</span> data-label=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint hint--bottom"</span> data-label=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint hint--left"</span> data-label=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+<pre><code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"c-drop"</span>&gt;
+  &lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--primary c-drop__toggle"</span>&gt;<span class="hljs-type">Click</span> <span class="hljs-type">Me</span>&lt;/button&gt;
+  &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"c-drop__content c-drop__content--topStart"</span>&gt;
+    &lt;form action=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-inline u-p-10"</span>&gt;
+      &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group"</span>&gt;
+          &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span> value=<span class="hljs-string">"Edit Me"</span>&gt;
+      &lt;/div&gt;
+      &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group"</span>&gt;
+          &lt;button <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"button"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info"</span>&gt;<span class="hljs-type">Submit</span>&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
 
 
