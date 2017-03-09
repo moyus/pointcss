@@ -98,7 +98,11 @@ gulp.task('docs:assets', function () {
 gulp.task('watch', function () {
   gulp.watch('./scss/**/*.scss', gulp.series('build'))
   gulp.watch('./docs/scss/*.scss', gulp.series('docs:scss'))
-  gulp.watch(['./docs/index.html', './docs/**/*.md'], gulp.series('docs:nunjucks'))
+  gulp.watch([
+    './docs/index.html',
+    './docs/_templates/*',
+    './docs/**/*.md'
+  ], gulp.series('docs:nunjucks'))
   gulp.watch(['./docs/assets/**/*'], gulp.series('docs:assets'))
 })
 
