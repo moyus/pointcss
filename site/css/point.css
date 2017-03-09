@@ -715,28 +715,28 @@ abbr[title] {
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
-  width: 100%;
   max-width: 100%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .l-container {
-    width: 100%;
     max-width: 100%;
+    width: 100%;
   }
 }
 
 @media (min-width: 1024px) {
   .l-container {
-    width: 980px;
-    max-width: 100%;
+    max-width: 980px;
+    width: 100%;
   }
 }
 
 @media (min-width: 1200px) {
   .l-container {
-    width: 1180px;
-    max-width: 100%;
+    max-width: 1180px;
+    width: 100%;
   }
 }
 
@@ -1460,6 +1460,8 @@ abbr[title] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .l-level.is-top {
@@ -1482,12 +1484,13 @@ abbr[title] {
 
 .l-level > .l-level__item {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
+      -ms-flex: 1 1 0%;
           flex: 1 1 0%;
   text-align: center;
 }
 
 .l-level__left,
+.l-level__center,
 .l-level__right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1497,14 +1500,8 @@ abbr[title] {
           align-items: center;
 }
 
-.l-level__left.is-shrink,
-.l-level__right.is-shrink {
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  min-width: 0;
-}
-
 .l-level__left.is-top,
+.l-level__center.is-top,
 .l-level__right.is-top {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -1512,6 +1509,7 @@ abbr[title] {
 }
 
 .l-level__left.is-bottom,
+.l-level__center.is-bottom,
 .l-level__right.is-bottom {
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -1519,6 +1517,7 @@ abbr[title] {
 }
 
 .l-level__left > .l-level__item:not(:last-child),
+.l-level__center > .l-level__item:not(:last-child),
 .l-level__right > .l-level__item:not(:last-child) {
   margin-right: 16px;
 }
@@ -1539,6 +1538,9 @@ abbr[title] {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .l-level__right {
@@ -1551,6 +1553,21 @@ abbr[title] {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.l-level__left.is-auto,
+.l-level__right.is-auto {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-width: 0;
+}
+
+.l-level__left.is-fixed,
+.l-level__right.is-fixed {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
 .form-input,
@@ -2054,16 +2071,8 @@ input[type="checkbox"].form-switch:checked:after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-}
-
-.form-inline::after {
-  content: "";
-  display: table;
-  clear: both;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .form-inline .form-group {

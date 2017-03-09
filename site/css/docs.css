@@ -1,3 +1,23 @@
+.docs-l-topbar {
+  position: relative;
+  width: 100%;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.docs-l-topbar__inner {
+  max-width: 1020px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.docs-l-topbar .c-navbar {
+  font-size: 14px;
+}
+
 .docs-l-content {
   padding-top: 32px;
   max-width: 1020px;
@@ -79,7 +99,6 @@
           justify-content: center;
   padding: 30px;
   font-size: 16px;
-  background-color: #fafafa;
 }
 
 .docs-c-hero__content {
