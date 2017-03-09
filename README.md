@@ -5,7 +5,7 @@ A flexible CSS Framework for building modern responsive web apps.
 There are two ways to start
 ### 1. Install with Yarn
 ```
-yarn add point.css
+yarn add point-sass
 ```
 *****
 ### 2. Download from the repository
