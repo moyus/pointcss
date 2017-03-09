@@ -31,3 +31,6 @@ find the compiled CSS files in the `./dist` directory
 ```
 gulp build
 ```
+
+## Copyright and license
+Code copyright 2017 moyu. Code released under [the MIT license](https://github.com/moyus/point.css/blob/master/LICENSE).
