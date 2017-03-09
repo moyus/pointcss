@@ -1,0 +1,44 @@
+{
+  "name": "point",
+  "version": "0.8.0",
+  "homepage": "http://getpoint.io",
+  "author": "moyu <moyuboy@gmail.com> (http://liuxinyu.me)",
+  "description": "A flexible CSS Framework for building modern responsive web apps",
+  "main": "dist/point.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moyus/point.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "sass",
+    "flexbox",
+    "responsive",
+    "front-end",
+    "mobile-first",
+    "framework",
+    "web"
+  ],
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "browser-sync": "^2.18.8",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-nunjucks-md": "^1.0.6",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sizereport": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "postcss-flexbugs-fixes": "^2.1.0"
+  },
+  "dependencies": {
+    "highlight.js": "^9.9.0"
+  }
+}

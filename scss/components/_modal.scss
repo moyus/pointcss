@@ -1,0 +1,111 @@
+// .c-modal
+//   .c-modal__content
+//     .c-modal__header
+//       .c-modal__title
+//       .c-modal__close
+//     .c-modal__body
+//     .c-modal__footer
+
+// Block
+.c-modal {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $modal-zIndex;
+  overflow: hidden;
+
+  &.is-active {
+    display: flex;
+  }
+}
+
+// Elements
+.c-modal__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: $modal-width-base;
+  max-height: calc(100vh - #{$modal-margin * 2});
+  width: 100%;
+  margin: $modal-margin;
+  background-color: $modal-bg-color;
+  border-radius: $modal-border-radius;
+  border: $modal-border-width solid rgba(120,130,140,.1);
+}
+
+.c-modal__header {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $modal-padding;
+  border-bottom: $modal-border-width solid $modal-divider-color;
+  @include clearfix;
+}
+
+.c-modal__title {
+  order: 1;
+  flex: 1;
+  margin: 0;
+  font-weight: 500;
+  font-size: $font-size-lg;
+}
+
+.c-modal__close {
+  order: 2;
+  font-size: 22px;
+  line-height: 1;
+  color: rgba(0,0,0,.2);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.c-modal__body {
+  flex: 1 1 auto;
+  padding: $modal-padding;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+.c-modal__footer {
+  flex-shrink: 0;
+  padding: $modal-padding;
+  border-top: $modal-border-width solid $modal-divider-color;
+  text-align: right;
+}
+
+// Modifiers
+.c-modal--always {
+  display: flex;
+}
+
+.c-modal--sm {
+  .c-modal__content {
+    max-width: $modal-width-sm;
+  }
+}
+.c-modal--lg {
+  .c-modal__content {
+    max-width: $modal-width-lg;
+  }
+}
+
+.c-modal--max {
+  .c-modal__content {
+    max-width: none;
+    align-self: stretch;
+  }
+}

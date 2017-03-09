@@ -1,0 +1,7 @@
+// note variant
+// -----------------------------------------------------------------------------
+@mixin note-variant($text-color, $border-color, $background-color) {
+  color: $text-color;
+  border-color: $border-color;
+  background-color: $background-color;
+}

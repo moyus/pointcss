@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Point | Form</title>
+  <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
+  <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="/css/point.css">
+  <link rel="stylesheet" href="/css/docs.css">
+  <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+</head>
+<body>
+  <div id="docs" class="docs-l-app">
+    <div class="docs-l-content">
+      <aside class="docs-l-sidebar">
+        <nav id="sidenav" class="docs-c-sidenav">
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Get started</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#introduction" class="docs-c-sidenav__link">Introduction</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#setup" class="docs-c-sidenav__link">Setup</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#customize" class="docs-c-sidenav__link">Customize</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Layouts</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/layouts/flex-grid.html" class="docs-c-sidenav__link">Flex Grid</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/layouts/level.html" class="docs-c-sidenav__link">Level</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Elements</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/typography.html" class="docs-c-sidenav__link">Typography</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/buttons.html" class="docs-c-sidenav__link">Buttons</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/form.html" class="docs-c-sidenav__link">Form</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/tables.html" class="docs-c-sidenav__link">Tables</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/media.html" class="docs-c-sidenav__link">Media</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/badges.html" class="docs-c-sidenav__link">Badges</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/hint.html" class="docs-c-sidenav__link">Hint</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/progress.html" class="docs-c-sidenav__link">Progress</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/icons.html" class="docs-c-sidenav__link">Icons</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Components</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/box.html" class="docs-c-sidenav__link">Box</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/note.html" class="docs-c-sidenav__link">Note</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/lists.html" class="docs-c-sidenav__link">Lists</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/navs.html" class="docs-c-sidenav__link">Navs</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/navbar.html" class="docs-c-sidenav__link">Navbar</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/breadcrumb.html" class="docs-c-sidenav__link">Breadcrumb</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/pagination.html" class="docs-c-sidenav__link">Pagination</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/drop.html" class="docs-c-sidenav__link">Drop</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/modal.html" class="docs-c-sidenav__link">Modal</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Utilities</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/utilities/helpers.html" class="docs-c-sidenav__link">Helpers</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+</nav>
+
+      </aside>
+      <!-- END .docs-l-sidebar -->
+      <main id="main" class="docs-l-main docs-c-content" role="main">
+        <h1 id="form">Form</h1>
+<ul>
+<li><a href="#types">Types</a><ul>
+<li><a href="#inputs">Inputs</a></li>
+<li><a href="#checkbox-radio">Checkbox &amp; Radio</a></li>
+<li><a href="#textarea">Textarea</a></li>
+<li><a href="#select">Select</a></li>
+</ul>
+</li>
+<li><a href="#states">States</a></li>
+<li><a href="#sizes">Sizes</a></li>
+<li><a href="#icons">Icons</a></li>
+<li><a href="#group">Group</a></li>
+<li><a href="#flex">Flex</a></li>
+</ul>
+<h2 id="types">Types</h2>
+<p>There are six basic types of form element: <code>.form-input</code>, <code>.form-select</code>,
+<code>.form-checkbox</code>, <code>.form-radio</code>, <code>.form-switch</code>, <code>.form-textarea</code></p>
+<h3 id="inputs">Inputs</h3>
+<div class="form-group">
+    <label class="form-label">Text</label>
+    <input type="text" class="form-input">
+</div>
+<div class="form-group">
+    <label class="form-label">Password</label>
+    <div class="form-control">
+        <input type="password" class="form-input">
+    </div>
+</div>
+<div class="form-group">
+    <label class="form-label">Number</label>
+    <div class="form-control">
+        <input type="number" class="form-input">
+    </div>
+</div>
+<div class="form-group">
+    <label class="form-label">Date</label>
+    <div class="form-control">
+        <input type="date" class="form-input">
+    </div>
+</div>
+<div class="form-group">
+    <label class="form-label">Input with placeholder</label>
+    <div class="form-control">
+        <input type="text" class="form-input" placeholder="Enter the magic word...">
+    </div>
+</div>
+
+<pre><code class="lang-html">&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span>&gt;
+&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"password"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span>&gt;
+&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"number"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span>&gt;
+&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"date"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span>&gt;
+</code></pre>
+<h3 id="checkbox-radio">Checkbox &amp; Radio</h3>
+<div class="l-level">
+  <div class="l-level__item form-group">
+      <label class="form-label">Radio</label>
+      <div class="form-control">
+          <input type="radio" class="form-radio">
+      </div>
+  </div>
+  <div class="l-level__item form-group">
+      <label class="form-label">Checkbox</label>
+      <div class="form-control">
+          <input type="checkbox" class="form-checkbox">
+      </div>
+  </div>
+  <div class="l-level__item form-group">
+      <label class="form-label">Switch</label>
+      <div class="form-control">
+          <input type="checkbox" class="form-switch">
+      </div>
+  </div>
+</div>
+<div class="l-level">
+  <div class="l-level__item form-group">
+      <label class="form-radio">
+          <input type="radio" name="r2"> Male
+      </label>
+      <label class="form-radio">
+          <input type="radio" name="r2"> Female
+      </label>
+  </div>
+  <div class="l-level__item form-group">
+      <label class="form-checkbox">
+          <input type="checkbox"> Remember Me?
+      </label>
+  </div>
+</div>
+
+<pre><code class="lang-html">&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"radio"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-radio"</span>&gt;
+&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox"</span>&gt;
+&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-switch"</span>&gt;
+
+&lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-radio"</span>&gt;
+  &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"r2"</span>&gt; <span class="hljs-type">Male</span>
+&lt;/label&gt;
+&lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox"</span>&gt;
+  &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span>&gt; <span class="hljs-type">Remember</span> <span class="hljs-type">Me</span>?
+&lt;/label&gt;
+</code></pre>
+<h3 id="textarea">Textarea</h3>
+<div class="form-group">
+  <div class="form-control">
+      <textarea class="form-textarea" rows="4"></textarea>
+  </div>
+</div>
+
+<pre><code class="lang-html">&lt;textarea <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-textarea"</span> rows=<span class="hljs-string">"4"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span></span>
+</code></pre>
+<h3 id="select">Select</h3>
+<div class="form-group">
+  <div class="form-control">
+      <select class="form-select">
+          <option value="0" selected>Beijing</option>
+          <option value="1">Washington</option>
+          <option value="2">Tokyo</option>
+          <option value="3">London</option>
+          <option value="4">Paris</option>
+      </select>
+  </div>
+</div>
+
+<div class="form-group">
+    <label class="form-label">Multiple select</label>
+    <div class="form-control">
+        <select class="form-select" multiple>
+            <option value="0">Beijing</option>
+            <option value="1">Washington</option>
+            <option value="2" selected>Tokyo</option>
+            <option value="3">London</option>
+            <option value="4">Paris</option>
+        </select>
+    </div>
+</div>
+
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">select</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"form-select"</span>&gt;
+  &lt;<span class="hljs-keyword">option</span> value=<span class="hljs-string">"0"</span> selected&gt;Beijing&lt;/<span class="hljs-keyword">option</span>&gt;
+  &lt;<span class="hljs-keyword">option</span> value=<span class="hljs-string">"1"</span>&gt;Washington&lt;/<span class="hljs-keyword">option</span>&gt;
+  &lt;<span class="hljs-keyword">option</span> value=<span class="hljs-string">"2"</span>&gt;Tokyo&lt;/<span class="hljs-keyword">option</span>&gt;
+&lt;/<span class="hljs-keyword">select</span>&gt;
+
+&lt;<span class="hljs-keyword">select</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"form-select"</span> multiple&gt;
+  &lt;<span class="hljs-keyword">option</span> value=<span class="hljs-string">"0"</span>&gt;Beijing&lt;/<span class="hljs-keyword">option</span>&gt;
+  &lt;<span class="hljs-keyword">option</span> value=<span class="hljs-string">"1"</span>&gt;Washington&lt;/<span class="hljs-keyword">option</span>&gt;
+  &lt;<span class="hljs-keyword">option</span> value=<span class="hljs-string">"2"</span> selected&gt;Tokyo&lt;/<span class="hljs-keyword">option</span>&gt;
+&lt;/<span class="hljs-keyword">select</span>&gt;
+</code></pre>
+<h2 id="states">States</h2>
+<div class="form-group">
+    <label class="form-label">Read only field</label>
+    <div class="form-control">
+        <input type="text" class="form-input" value="23423" readonly>
+    </div>
+</div>
+<div class="form-group">
+    <label class="form-label">Disabled field</label>
+    <div class="form-control">
+        <input type="text" class="form-input" value="you can't change me" disabled>
+    </div>
+</div>
+<div class="form-group">
+    <label class="form-label">Success</label>
+    <input type="text" class="form-input is-success">
+</div>
+<div class="form-group">
+    <label class="form-label">Danger</label>
+    <input type="text" class="form-input is-danger">
+    <small class="form-help u-color-danger">you enter the wrong text！</small>
+</div>
+<div class="form-group">
+    <label class="form-label">Warning</label>
+    <input type="text" class="form-input is-warning">
+</div>
+
+<pre><code class="lang-html">&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span> value=<span class="hljs-string">"23423"</span> readonly&gt;
+&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span> value=<span class="hljs-string">"you can't change me"</span> disabled&gt;
+&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input is-success"</span>&gt;
+&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input is-danger"</span>&gt;
+&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input is-warning"</span>&gt;
+</code></pre>
+<h2 id="sizes">Sizes</h2>
+<p>By adding <code>.form-input--sm</code> or <code>.form-input--lg</code> to <code>.form-input</code> element and <code>.form-select--sm</code> or <code>.form-select--lg</code> to <code>.form-select</code> element to change default sizes.</p>
+<div class="l-row">
+    <div class="l-col-6@sm">
+        <div class="form-group">
+            <label class="form-label">Small input</label>
+            <input type="text" class="form-input form-input--sm">
+        </div>
+    </div>
+    <div class="l-col-6@sm">
+        <div class="form-group">
+            <label class="form-label">Small select</label>
+            <select class="form-select form-select--sm">
+                <option value="0" selected>Beijing</option>
+                <option value="1">Washington</option>
+                <option value="2">Tokyo</option>
+                <option value="3">London</option>
+                <option value="4">Paris</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="l-row">
+    <div class="l-col-6@sm">
+        <div class="form-group">
+            <label class="form-label">Default input</label>
+            <input type="text" class="form-input">
+        </div>
+    </div>
+    <div class="l-col-6@sm">
+        <div class="form-group">
+            <label class="form-label">Default select</label>
+            <select class="form-select">
+                <option value="0" selected>Beijing</option>
+                <option value="1">Washington</option>
+                <option value="2">Tokyo</option>
+                <option value="3">London</option>
+                <option value="4">Paris</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="l-row">
+    <div class="l-col-6@sm">
+        <div class="form-group">
+            <label class="form-label">Large input</label>
+            <input type="text" class="form-input form-input--lg">
+        </div>
+    </div>
+    <div class="l-col-6@sm">
+        <div class="form-group">
+            <label class="form-label">Large select</label>
+            <select class="form-select form-select--lg">
+                <option value="0" selected>Beijing</option>
+                <option value="1">Washington</option>
+                <option value="2">Tokyo</option>
+                <option value="3">London</option>
+                <option value="4">Paris</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<pre><code class="lang-html">&lt;input type=<span class="hljs-string">"text"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"form-input form-input--sm"</span>&gt;
+&lt;input type=<span class="hljs-string">"text"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"form-input"</span>&gt;
+&lt;input type=<span class="hljs-string">"text"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"form-input form-input--lg"</span>&gt;
+
+&lt;<span class="hljs-keyword">select</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"form-select form-select--sm"</span>&gt;&lt;/<span class="hljs-keyword">select</span>&gt;
+&lt;<span class="hljs-keyword">select</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"form-select"</span>&gt;&lt;/<span class="hljs-keyword">select</span>&gt;
+&lt;<span class="hljs-keyword">select</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"form-select form-select--lg"</span>&gt;&lt;/<span class="hljs-keyword">select</span>&gt;
+</code></pre>
+<h2 id="icons">Icons</h2>
+<p>By adding <code>.has-icon</code> or <code>.has-iconRight</code> class on <code>.form-control</code> element to indicate it has float icon.</p>
+<div class="form-group">
+    <div class="form-control has-icon">
+        <i class="fa fa-lock form-icon"></i>
+        <input type="text" class="form-input">
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-control has-iconRight">
+        <input type="text" class="form-input">
+        <i class="fa fa-check form-iconRight"></i>
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-control has-icon has-iconRight">
+        <i class="fa fa-lock form-icon"></i>
+        <input type="text" class="form-input">
+        <i class="fa fa-check form-iconRight"></i>
+    </div>
+</div>
+
+<pre><code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-control has-icon"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-lock form-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span>
+  &lt;input type=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span>&gt;
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-control has-iconRight"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-check form-iconRight"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-control has-icon has-iconRight"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-lock form-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span>
+  &lt;input type=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-check form-iconRight"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span>
+&lt;<span class="hljs-regexp">/div&gt;</span>
+</code></pre>
+<h2 id="group">Group</h2>
+<p>In addation to basic form inputs, there are some other form elements can be grouped together.</p>
+<ul>
+<li><code>.form-group</code><ul>
+<li><code>.form-label</code></li>
+<li><code>.form-control</code><ul>
+<li>basic form input elements</li>
+</ul>
+</li>
+<li><code>.form-help</code></li>
+</ul>
+</li>
+</ul>
+<div class="form-group">
+    <label class="form-label">Label text</label>
+    <div class="form-control">
+        <input type="text" class="form-input" placeholder="form input">
+    </div>
+    <small class="form-help">Input description text...</small>
+</div>
+
+<pre><code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group"</span>&gt;
+    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-label"</span>&gt;<span class="hljs-type">Label</span> text&lt;/label&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-control"</span>&gt;
+        &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span> placeholder=<span class="hljs-string">"form input"</span>&gt;
+    &lt;/div&gt;
+    &lt;small <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-help"</span>&gt;<span class="hljs-type">Input</span> description text...&lt;/small&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="flex">Flex</h2>
+<p>Use flexbox to create input group.</p>
+<p><div class="form-group">
+    <div class="form-flex">
+        <span class="form-addon"><a href="http://example.com/users/">http://example.com/users/</a></span>
+        <input type="text" class="form-input">
+    </div>
+</div>
+<!-- END .form-group --></p>
+<p><div class="form-group">
+    <div class="form-flex">
+        <input type="text" class="form-input">
+        <span class="form-addon">@example.com</span>
+    </div>
+</div>
+<!-- END .form-group --></p>
+<p><div class="form-group">
+    <div class="form-flex">
+        <span class="form-addon">$</span>
+        <input type="text" class="form-input">
+        <span class="form-addon">.0.0</span>
+    </div>
+</div>
+<!-- END .form-group --></p>
+<p><div class="form-group">
+    <div class="form-flex">
+        <span class="form-addon">From</span>
+        <input type="text" class="form-input">
+        <span class="form-addon">To</span>
+        <input type="text" class="form-input">
+    </div>
+</div>
+<!-- END .form-group --></p>
+<p><div class="form-group">
+    <div class="form-flex">
+        <span class="form-addon">
+          <input type="radio">
+        </span>
+        <input type="text" class="form-input">
+    </div>
+    <!-- END .form-flex -->
+</div>
+<!-- END .form-group --></p>
+<p><div class="form-group">
+    <div class="form-flex">
+        <input type="text" class="form-input">
+        <span class="form-addon">
+            <input type="checkbox">
+        </span>
+    </div>
+    <!-- END .form-flex -->
+</div>
+<!-- END .form-group --></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-flex"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-addon"</span>&gt;</span>http://example.com/users/<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- END .form-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-flex"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-addon"</span>&gt;</span>@example.com<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- END .form-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-flex"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-addon"</span>&gt;</span>$<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-addon"</span>&gt;</span>.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- END .form-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-flex"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-addon"</span>&gt;</span>From<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-addon"</span>&gt;</span>To<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- END .form-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-flex"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-addon"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- END .form-flex --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- END .form-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-flex"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-input"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-addon"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- END .form-flex --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- END .form-group --&gt;</span>
+</code></pre>
+
+
+      </main>
+      <!-- END #main -->
+    </div>
+    <!-- END .docs-l-content -->
+    <footer id="colophon" class="docs-l-footer" role="contentinfo">
+      <p>Designed and built by <a href="#">MOYU</a></p>
+      <p>Licensed under the <a href="#">MIT License</a>.</p>
+    </footer>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>

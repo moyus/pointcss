@@ -1,5 +1,11 @@
-#Point
-A flexible CSS Framework for building modern responsive web apps.
+---
+layout: default
+title: "Getting started"
+description: "Some Awesome Description"
+---
+
+## Introduction
+Point is a flexible CSS Framework for building modern responsive web apps.
 
 ## Setup
 There are two ways to start
@@ -9,7 +15,7 @@ yarn add point.css
 ```
 *****
 ### 2. Download from the repository
-[https://github.com/moyu/point.css](https://github.com/moyu/point.css)
+[https://github.com/moyu/point/tree/master/css](https://github.com/moyu/point/tree/master/css)
 
 ## Customize
 Point uses Gulp for compiling SASS into CSS, If you want to customize Point with

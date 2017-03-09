@@ -1,0 +1,30 @@
+// background color
+.u-bg-black {
+  background-color: $color-black !important;
+}
+.u-bg-white {
+  background-color: $color-white !important;
+}
+
+@each $modifier, $color in $master-palette {
+  .u-bg-#{$modifier} {
+    background-color: $color !important;
+  }
+}
+
+// text color
+.u-color-white {
+  color: $color-white !important;
+}
+.u-color-black {
+  color: $color-black !important;
+}
+.u-color-muted {
+  color: $muted-color !important;
+}
+
+@each $modifier, $color in $master-palette {
+  .u-color-#{$modifier} {
+    color: $color !important;
+  }
+}

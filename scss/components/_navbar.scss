@@ -1,0 +1,60 @@
+// Navbar @TODO flex, item, space, nav
+// -----------------------------------------------------------------------------
+
+// Block
+.c-navbar {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: $navbar-font-size;
+  height: $navbar-height;
+}
+
+// inner layout
+.c-navbar__left,
+.c-navbar__center,
+.c-navbar__right {
+  display: flex;
+  align-items: center;
+  align-items: stretch;
+  order: 1;
+  &.is-shrink {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+}
+
+.c-navbar__left {
+  order: 1;
+  flex: 1 0 0%;
+  justify-content: flex-start;
+}
+
+.c-navbar__center {
+  justify-content: center;
+  order: 2;
+}
+
+.c-navbar__right {
+  order: 3;
+  flex: 1 0 0%;
+  justify-content: flex-end;
+}
+
+.c-navbar__item {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:not(:last-child) {
+    margin-right: $navbar-item-margin-x;
+  }
+}
+
+
+// modifiers - theme
+.c-navbar--light {
+  color: $navbar-light-color;
+}

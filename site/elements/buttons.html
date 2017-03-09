@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Point | Buttons</title>
+  <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
+  <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="/css/point.css">
+  <link rel="stylesheet" href="/css/docs.css">
+  <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+</head>
+<body>
+  <div id="docs" class="docs-l-app">
+    <div class="docs-l-content">
+      <aside class="docs-l-sidebar">
+        <nav id="sidenav" class="docs-c-sidenav">
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Get started</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#introduction" class="docs-c-sidenav__link">Introduction</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#setup" class="docs-c-sidenav__link">Setup</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#customize" class="docs-c-sidenav__link">Customize</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Layouts</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/layouts/flex-grid.html" class="docs-c-sidenav__link">Flex Grid</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/layouts/level.html" class="docs-c-sidenav__link">Level</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Elements</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/typography.html" class="docs-c-sidenav__link">Typography</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/buttons.html" class="docs-c-sidenav__link">Buttons</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/form.html" class="docs-c-sidenav__link">Form</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/tables.html" class="docs-c-sidenav__link">Tables</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/media.html" class="docs-c-sidenav__link">Media</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/badges.html" class="docs-c-sidenav__link">Badges</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/hint.html" class="docs-c-sidenav__link">Hint</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/progress.html" class="docs-c-sidenav__link">Progress</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/icons.html" class="docs-c-sidenav__link">Icons</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Components</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/box.html" class="docs-c-sidenav__link">Box</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/note.html" class="docs-c-sidenav__link">Note</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/lists.html" class="docs-c-sidenav__link">Lists</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/navs.html" class="docs-c-sidenav__link">Navs</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/navbar.html" class="docs-c-sidenav__link">Navbar</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/breadcrumb.html" class="docs-c-sidenav__link">Breadcrumb</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/pagination.html" class="docs-c-sidenav__link">Pagination</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/drop.html" class="docs-c-sidenav__link">Drop</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/modal.html" class="docs-c-sidenav__link">Modal</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Utilities</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/utilities/helpers.html" class="docs-c-sidenav__link">Helpers</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+</nav>
+
+      </aside>
+      <!-- END .docs-l-sidebar -->
+      <main id="main" class="docs-l-main docs-c-content" role="main">
+        <h1 id="buttons">Buttons</h1>
+<ul>
+<li><a href="#types">Types</a></li>
+<li><a href="#outline">Outline</a></li>
+<li><a href="#states">States</a></li>
+<li><a href="#sizes">Sizes</a></li>
+<li><a href="#block">Block</a></li>
+<li><a href="#group">Group</a></li>
+</ul>
+<h2 id="types">Types</h2>
+<p>There are seven predefined button styles.</p>
+<div class="u-mb-15">
+  <button class="btn">Button</button>
+  <button class="u-mb-5 btn btn--default">Default</button>
+  <button class="u-mb-5 btn btn--primary">Primary</button>
+  <button class="u-mb-5 btn btn--info">Info</button>
+  <button class="u-mb-5 btn btn--success">Success</button>
+  <button class="u-mb-5 btn btn--danger">Danger</button>
+  <button class="u-mb-5 btn btn--warning">Warning</button>
+</div>
+
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn"</span>&gt;<span class="hljs-keyword">Button</span>&lt;/<span class="hljs-keyword">button</span>&gt;
+&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn btn--default"</span>&gt;<span class="hljs-keyword">Default</span>&lt;/<span class="hljs-keyword">button</span>&gt;
+&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn btn--primary"</span>&gt;Primary&lt;/<span class="hljs-keyword">button</span>&gt;
+&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn btn--info"</span>&gt;Info&lt;/<span class="hljs-keyword">button</span>&gt;
+&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn btn--success"</span>&gt;Success&lt;/<span class="hljs-keyword">button</span>&gt;
+&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn btn--danger"</span>&gt;Danger&lt;/<span class="hljs-keyword">button</span>&gt;
+&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn btn--warning"</span>&gt;Warning&lt;/<span class="hljs-keyword">button</span>&gt;
+</code></pre>
+<h2 id="outline">Outline</h2>
+<p>By adding the <code>.btn--outline</code> modifier class on any predefined button element to
+remove background color.</p>
+<div class="u-mb-15">
+  <button class="u-mb-5 btn btn--outline btn--primary">Primary</button>
+  <button class="u-mb-5 btn btn--outline btn--info">Info</button>
+  <button class="u-mb-5 btn btn--outline btn--success">Success</button>
+  <button class="u-mb-5 btn btn--outline btn--danger">Danger</button>
+  <button class="u-mb-5 btn btn--outline btn--warning">Warning</button>
+</div>
+
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--outline btn--primary"</span>&gt;Primary&lt;/<span class="hljs-keyword">button&gt;
+</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--outline btn--info"</span>&gt;<span class="hljs-meta">Info</span>&lt;/<span class="hljs-keyword">button&gt;
+</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--outline btn--success"</span>&gt;Success&lt;/<span class="hljs-keyword">button&gt;
+</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--outline btn--danger"</span>&gt;Danger&lt;/<span class="hljs-keyword">button&gt;
+</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--outline btn--warning"</span>&gt;Warning&lt;/<span class="hljs-keyword">button&gt;</span>
+</code></pre>
+<h2 id="states">States</h2>
+<p>Make buttons look inactive by adding the <code>disabled</code> attrubute or <code>.is-disabled</code>
+class to <code>.btn</code> element.</p>
+<div class="u-mb-15">
+  <button class="u-mb-5 btn btn--primary is-disabled" disabled>Disabled</button>
+  <button class="u-mb-5 btn btn--info" disabled>Info</button>
+</div>
+
+
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--primary is-disabled"</span>&gt;Primary&lt;/<span class="hljs-keyword">button&gt;
+</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info"</span> disabled&gt;<span class="hljs-meta">Info</span>&lt;/<span class="hljs-keyword">button&gt;</span>
+</code></pre>
+<hr>
+<p>Make buttons look loading by adding the <code>.is-loading</code> class to <code>.btn</code> element.</p>
+<div class="u-mb-15">
+  <button class="u-mb-5 btn btn--info btn--smart is-loading">Loading</button>
+  <button class="u-mb-5 btn btn--info btn--smart is-loading" disabled>Loading</button>
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--info btn--smart is-loading"</span>&gt;</span>Loading<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--info btn--smart is-loading"</span> <span class="hljs-attr">disabled</span>&gt;</span>Loading<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<h2 id="sizes">Sizes</h2>
+<p>Add <code>.btn--sm</code> or <code>.btn--lg</code> modifier class to quickly create different size button</p>
+<div class="u-mb-15">
+  <button class="u-mb-5 btn btn--default btn--sm">Small Button</button>
+  <button class="u-mb-5 btn btn--default">Default Size</button>
+  <button class="u-mb-5 btn btn--default btn--lg">Large Button</button>
+</div>
+
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn btn--default btn--sm"</span>&gt;Small <span class="hljs-keyword">Button</span>&lt;/<span class="hljs-keyword">button</span>&gt;
+&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn btn--default"</span>&gt;<span class="hljs-keyword">Default</span> Size&lt;/<span class="hljs-keyword">button</span>&gt;
+&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn btn--default btn--lg"</span>&gt;Large <span class="hljs-keyword">Button</span>&lt;/<span class="hljs-keyword">button</span>&gt;
+</code></pre>
+<h2 id="block">Block</h2>
+<p>By adding <code>.btn--block</code> modifier class to quickly create block level button</p>
+<div class="u-mb-15">
+  <button class="btn btn--primary btn--block btn--lg">Block Button</button>
+</div>
+
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">button</span> class=<span class="hljs-string">"btn btn--primary btn--block btn--lg"</span>&gt;Block <span class="hljs-keyword">Button</span>&lt;/<span class="hljs-keyword">button</span>&gt;
+</code></pre>
+<h2 id="group">Group</h2>
+<p>Buttons can be grouped by placing multiple <code>.btn</code> elements into a <code>.btnGroup</code>
+container element</p>
+<div class="u-mb-15">
+  <div class="btnGroup">
+    <button class="u-mb-5 btn btn--primary btn--outline">Left</button>
+    <button class="u-mb-5 btn btn--primary btn--outline">Middle</button>
+    <button class="u-mb-5 btn btn--primary btn--outline">Right</button>
+  </div>
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btnGroup"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary btn--outline"</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary btn--outline"</span>&gt;</span>Middle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary btn--outline"</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+
+
+      </main>
+      <!-- END #main -->
+    </div>
+    <!-- END .docs-l-content -->
+    <footer id="colophon" class="docs-l-footer" role="contentinfo">
+      <p>Designed and built by <a href="#">MOYU</a></p>
+      <p>Licensed under the <a href="#">MIT License</a>.</p>
+    </footer>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>

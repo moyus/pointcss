@@ -1,0 +1,192 @@
+---
+layout: default
+---
+
+<section id="navbar" class="c-group">
+    <h1 class="c-group__title">Navbar</h1>
+    <p>
+      Navbar component is the primary site navigation, usually used as topbar in page.
+    </p>
+    <p>
+      <strong>class structure</strong>:
+      <ul>
+        <li>
+            <code>.c-navbar</code>
+            <ul>
+              <li>
+                <code>.c-navbar__left</code>, <code>.c-navabar__center</code>, <code>.c-navbar__right</code>
+                <ul>
+                  <li>
+                    <code>.c-navbar__item</code>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </li>
+      </ul>
+    </p>
+</section>
+<!-- END .c-group -->
+
+<section id="basic" class="c-group">
+    <h2 class="c-group__title">Basic</h2>
+    <div class="c-navbar">
+        <div class="c-navbar__left is-shrink">
+            <a role="button" class="c-navbar__item">
+                <img src="{{site.baseurl}}/images/logo.svg" alt="">
+            </a>
+        </div>
+        <!-- END .c-navbar__left -->
+        <div class="c-navbar__right">
+          <a role="button" class="c-navbar__item">Home</a>
+          <a role="button" class="c-navbar__item">About</a>
+          <a role="button" class="c-navbar__item">Work</a>
+          <a role="button" class="c-navbar__item">Shop</a>
+          <a role="button" class="c-navbar__item">Blog</a>
+          <a role="button" class="c-navbar__item">Contact</a>
+        </div>
+        <!-- END .c-navbar__right -->
+    </div>
+    <!-- END .c-navbar -->
+    <hr>
+    <div class="c-navbar">
+        <div class="c-navbar__center">
+          <a role="button" class="c-navbar__item c-navbar__brand">
+              <img src="{{site.baseurl}}/images/logo.svg" alt="">
+          </a>
+        </div>
+        <!-- END .c-navbar__center -->
+        <div class="c-navbar__left">
+          <a role="button" class="c-navbar__item">APPS</a>
+          <a role="button" class="c-navbar__item">TECH</a>
+          <a role="button" class="c-navbar__item">CREATIVE</a>
+          <a role="button" class="c-navbar__item">INSIGHTS</a>
+        </div>
+        <!-- END .c-navbar__left -->
+        <div class="c-navbar__right">
+          <div class="c-navbar__item">
+            <form action="#" class="form-inline">
+              <div class="form-control has-icon">
+                <i class="fa fa-search form-icon"></i>
+                <input type="text" class="form-input" placeholder="Search...">
+              </div>
+            </form>
+          </div>
+          <div class="c-navbar__item">
+            <a role="button" class="btn btn--primary btn--outline">SIGN IN</a>
+          </div>
+        </div>
+        <!-- END .c-navbar__right -->
+    </div>
+    <!-- END .c-navbar -->
+</section>
+<!-- END .c-group -->
+
+<section id="styles" class="c-group">
+    <h2 class="c-group__title">Styles</h2>
+    <p>
+      c-navbar component provide two different styles: default is dark, another is light.
+      By adding <code>.c-navbar--light</code> modifier class on <code>.c-navbar</code> container
+      to apply light style.
+    </p>
+    <div class="c-navbar c-navbar--light u-bg-black u-plr10">
+        <div class="c-navbar__left is-shrink">
+            <a role="button" class="c-navbar__item u-fontSize-18">Point</a>
+        </div>
+        <!-- END .c-navbar__left -->
+        <div class="c-navbar__right">
+          <div class="c-navbar__item">
+            <ul class="c-nav c-nav--inline c-navbar__nav">
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Home</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">About</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Work</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Shop</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Blog</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END .c-navbar__right -->
+    </div>
+    <!-- END .c-navbar -->
+    <hr>
+    <div class="c-navbar c-navbar--light u-plr10 u-bg-primary u-mb15">
+        <div class="c-navbar__left is-shrink">
+            <a role="button" class="c-navbar__item u-fontSize-18">Point</a>
+        </div>
+        <!-- END .c-navbar__left -->
+        <div class="c-navbar__right">
+          <div class="c-navbar__item">
+            <ul class="c-nav c-nav--inline">
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Home</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">About</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Work</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Shop</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Blog</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END .c-navbar__right -->
+    </div>
+    <!-- END .c-navbar -->
+  {% highlight html %}
+  <div class="c-navbar c-navbar--light u-plr10 u-bg-primary">
+      <div class="c-navbar__left is-shrink">
+          <a role="button" class="c-navbar__item u-fontSize-18">Point</a>
+      </div>
+      <!-- END .c-navbar__left -->
+      <div class="c-navbar__right">
+        <div class="c-navbar__item">
+          <ul class="c-nav c-nav--inline">
+            <li class="c-nav__item">
+              <a href="#" class="c-nav__link">Home</a>
+            </li>
+            <li class="c-nav__item">
+              <a href="#" class="c-nav__link">About</a>
+            </li>
+            <li class="c-nav__item">
+              <a href="#" class="c-nav__link">Work</a>
+            </li>
+            <li class="c-nav__item">
+              <a href="#" class="c-nav__link">Shop</a>
+            </li>
+            <li class="c-nav__item">
+              <a href="#" class="c-nav__link">Blog</a>
+            </li>
+            <li class="c-nav__item">
+              <a href="#" class="c-nav__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END .c-navbar__right -->
+  </div>
+  <!-- END .c-navbar -->
+  {% endhighlight %}
+</section>
+<!-- END .c-group -->

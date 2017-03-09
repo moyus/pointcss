@@ -1,0 +1,120 @@
+---
+layout: default
+---
+
+<section id="drop" class="c-group">
+  <h1 class="c-group__title">c-modal</h1>
+  <ul>
+    <li>
+      <a href="#basic">Basic</a>
+    </li>
+    <li>
+      <a href="#sizes">Sizes</a>
+    </li>
+    <li>
+      <a href="#position">Position</a>
+    </li>
+  </ul>
+</section>
+<!-- END .c-group -->
+
+<section id="basic" class="c-group">
+  <h1 class="c-group__title">Basic</h1>
+  <p>
+    A flexible dialog prompt.
+  </p>
+  <div class="c-example u-bg-fade u-mb15">
+    <div class="c-modal is-in" style="position: absolute;display: flex;">
+        <div class="c-modal__content">
+            <header class="c-modal__header">
+                <button type="button" class="c-modal__close">
+                  <i aria-hidden="true" class="i-remove"></i>
+                </button>
+                <h4 class="c-modal__title">Modal Title</h4>
+            </header>
+            <!-- END .c-modal__header -->
+            <div class="c-modal__body">
+                "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
+            </div>
+            <!-- END .c-modal__body -->
+            <footer class="c-modal__footer">
+                <button type="button" class="btn">Close</button>
+                <button type="button" class="btn btn--primary">Ok</button>
+            </footer>
+            <!-- END .c-modal__footer -->
+        </div>
+        <!-- END .c-modal__content -->
+    </div>
+    <!-- END .c-modal -->
+  </div>
+  <!-- END .c-example -->
+{% highlight html %}
+<div id="default-modal" class="c-modal">
+  <div class="c-modal__content">
+    <header class="c-modal__header">
+      <h4 class="c-modal__title">Modal Title</h4>
+      <button type="button" class="c-modal__close">
+        <i aria-hidden="true" class="i-remove"></i>
+      </button>
+    </header>
+    <!-- END .c-modal__header -->
+    <div class="c-modal__body">
+      "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
+    </div>
+    <!-- END .c-modal__body -->
+    <footer class="c-modal__footer">
+      <button type="button" class="btn">Close</button>
+      <button type="button" class="btn btn--primary">Ok</button>
+    </footer>
+    <!-- END .c-modal__footer -->
+  </div>
+  <!-- END .c-modal__content -->
+</div>
+<!-- END .c-modal -->
+{% endhighlight %}
+</section>
+<!-- END .c-group -->
+
+<section id="sizes" class="c-group">
+  <h1 class="c-group__title">Sizes</h1>
+  <p>
+    By adding <code>.c-modal--lg</code>, <code>.c-modal--max</code> modifier class on
+    <code>.c-modal</code> container element to quick create different sizes modal.
+  </p>
+  <p>
+    <button class="btn btn--primary">Default Modal</button>
+    <button class="btn btn--primary">Large Modal</button>
+    <button class="btn btn--primary">Max Modal</button>
+  </p>
+{% highlight html %}
+<div id="default-modal" class="c-modal">
+  ...
+</div>
+
+<div id="lg-modal" class="c-modal c-modal--lg">
+  ...
+</div>
+
+<div id="max-modal" class="c-modal c-modal--max">
+  ...
+</div>
+{% endhighlight %}
+</section>
+<!-- END .c-group -->
+
+<section id="position" class="c-group">
+  <h1 class="c-group__title">Position</h1>
+  <p>
+    By adding <code>.c-modal--center</code> modifier class on <code>.c-modal</code> container
+    element to quick create a modal whose vertical and horizontal are both center.
+  </p>
+  <p>
+    <button class="btn btn--primary">Center Modal</button>
+  </p>
+{% highlight html %}
+<div id="center-modal" class="c-modal c-modal--center">
+  ...
+</div>
+{% endhighlight %}
+</section>
+<!-- END .c-group -->

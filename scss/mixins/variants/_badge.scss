@@ -1,0 +1,6 @@
+// badge variant
+// -----------------------------------------------------------------------------
+@mixin badge-variant($text-color, $background-color) {
+  color: $text-color;
+  background-color: $background-color;
+}

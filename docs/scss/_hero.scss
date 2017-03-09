@@ -1,0 +1,27 @@
+.docs-c-hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-size: 16px;
+  background-color: #fafafa;
+}
+
+.docs-c-hero__content {
+  margin: auto;
+  text-align: center;
+}
+
+.docs-c-hero__title {
+  color: #333;
+  font-size: 48px;
+}
+
+.docs-c-hero__lead {
+  color: #4D4C4C;
+  font-size: 20px;
+  margin-bottom: 32px;
+}

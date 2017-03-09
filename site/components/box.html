@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Point | Box</title>
+  <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
+  <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="/css/point.css">
+  <link rel="stylesheet" href="/css/docs.css">
+  <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+</head>
+<body>
+  <div id="docs" class="docs-l-app">
+    <div class="docs-l-content">
+      <aside class="docs-l-sidebar">
+        <nav id="sidenav" class="docs-c-sidenav">
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Get started</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#introduction" class="docs-c-sidenav__link">Introduction</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#setup" class="docs-c-sidenav__link">Setup</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#customize" class="docs-c-sidenav__link">Customize</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Layouts</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/layouts/flex-grid.html" class="docs-c-sidenav__link">Flex Grid</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/layouts/level.html" class="docs-c-sidenav__link">Level</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Elements</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/typography.html" class="docs-c-sidenav__link">Typography</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/buttons.html" class="docs-c-sidenav__link">Buttons</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/form.html" class="docs-c-sidenav__link">Form</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/tables.html" class="docs-c-sidenav__link">Tables</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/media.html" class="docs-c-sidenav__link">Media</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/badges.html" class="docs-c-sidenav__link">Badges</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/hint.html" class="docs-c-sidenav__link">Hint</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/progress.html" class="docs-c-sidenav__link">Progress</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/icons.html" class="docs-c-sidenav__link">Icons</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Components</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/box.html" class="docs-c-sidenav__link">Box</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/note.html" class="docs-c-sidenav__link">Note</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/lists.html" class="docs-c-sidenav__link">Lists</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/navs.html" class="docs-c-sidenav__link">Navs</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/navbar.html" class="docs-c-sidenav__link">Navbar</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/breadcrumb.html" class="docs-c-sidenav__link">Breadcrumb</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/pagination.html" class="docs-c-sidenav__link">Pagination</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/drop.html" class="docs-c-sidenav__link">Drop</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/modal.html" class="docs-c-sidenav__link">Modal</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Utilities</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/utilities/helpers.html" class="docs-c-sidenav__link">Helpers</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+</nav>
+
+      </aside>
+      <!-- END .docs-l-sidebar -->
+      <main id="main" class="docs-l-main docs-c-content" role="main">
+        <h1 id="box">Box</h1>
+<ul>
+<li><a href="#basic">Basic</a></li>
+<li><a href="#types">Types</a></li>
+</ul>
+<h2 id="basic">Basic</h2>
+<p>Sometimes you have groups of content and need to put them in boxes. In those
+situations, try the Box component.</p>
+<div class="c-box">
+  <header class="c-box__header">Box Title</header>
+  <div class="c-box__body">
+    <div class="c-box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
+  </div>
+</div>
+
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-box"</span>&gt;
+  &lt;header <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-box__header"</span>&gt;Box Title&lt;/header&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-box__body"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-box__inner"</span>&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      &lt;/p&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<h2 id="types">Types</h2>
+<p>By adding the following modifier classes on <code>.c-box</code> container to quick create different styled Box</p>
+<ul>
+<li><code>c-box--info</code></li>
+<li><code>c-box--danger</code></li>
+<li><code>c-box--success</code></li>
+<li><code>c-box--warning</code></li>
+</ul>
+<p><div class="c-box c-box--info">
+  <header class="c-box__header">Info Box</header>
+  <div class="c-box__body">
+    <div class="c-box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- END .c-box --></p>
+<p><div class="c-box c-box--danger">
+  <header class="c-box__header">Danger Box</header>
+  <div class="c-box__body">
+    <div class="c-box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- END .c-box --></p>
+<p><div class="c-box c-box--success">
+  <header class="c-box__header">Success Box</header>
+  <div class="c-box__body">
+    <div class="c-box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- END .c-box --></p>
+<p><div class="c-box c-box--warning">
+  <header class="c-box__header">Warning Box</header>
+  <div class="c-box__body">
+    <div class="c-box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- END .c-box --></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box c-box--info"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__header"</span>&gt;</span>Info Box<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__body"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__inner"</span>&gt;</span>
+      // ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- END .c-box --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box c-box--danger"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__header"</span>&gt;</span>Danger Box<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__body"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__inner"</span>&gt;</span>
+      // ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- END .c-box --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box c-box--success"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__header"</span>&gt;</span>Success Box<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__body"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__inner"</span>&gt;</span>
+      // ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- END .c-box --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box c-box--warning"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__header"</span>&gt;</span>Warning Box<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__body"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-box__inner"</span>&gt;</span>
+      // ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- END .c-box --&gt;</span>
+</code></pre>
+
+
+      </main>
+      <!-- END #main -->
+    </div>
+    <!-- END .docs-l-content -->
+    <footer id="colophon" class="docs-l-footer" role="contentinfo">
+      <p>Designed and built by <a href="#">MOYU</a></p>
+      <p>Licensed under the <a href="#">MIT License</a>.</p>
+    </footer>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>

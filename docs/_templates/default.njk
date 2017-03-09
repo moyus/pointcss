@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }} | {{ page.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="{{site.url}}css/point.css">
+  <link rel="stylesheet" href="{{site.url}}css/docs.css">
+  <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+</head>
+<body>
+  <div id="docs" class="docs-l-app">
+    <div class="docs-l-content">
+      <aside class="docs-l-sidebar">
+        {% include "menus.html" %}
+      </aside>
+      <!-- END .docs-l-sidebar -->
+      <main id="main" class="docs-l-main docs-c-content" role="main">
+        {% block content %}{% endblock %}
+      </main>
+      <!-- END #main -->
+    </div>
+    <!-- END .docs-l-content -->
+    <footer id="colophon" class="docs-l-footer" role="contentinfo">
+      <p>Designed and built by <a href="#">MOYU</a></p>
+      <p>Licensed under the <a href="#">MIT License</a>.</p>
+    </footer>
+  </div>
+  <script src="{{site.url}}js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+const gulp = require('gulp')
+const sass = require('gulp-sass')
+const sourcemaps = require('gulp-sourcemaps')
+const rename = require('gulp-rename')
+const cssnano = require('gulp-cssnano')
+const sizereport = require('gulp-sizereport')
+const notify = require('gulp-notify')
+const postcss = require('gulp-postcss')
+const autoprefixer = require('autoprefixer')
+const flexbugsFixes = require('postcss-flexbugs-fixes')
+const browserSync = require('browser-sync').create()
+const nunjucksRender = require('gulp-nunjucks-md')
+
+const postCssOpts = [
+  autoprefixer({ browsers: ['last 2 versions', '> 2%'] }),
+  flexbugsFixes
+]
+
+nunjucksRender.setDefaults({
+  marked: {
+    highlight: function (code) {
+      return require('highlight.js').highlightAuto(code).value
+    }
+  }
+})
+
+/**
+ * Build
+ */
+gulp.task('build', function () {
+
+  return gulp.src('./scss/point.scss')
+    .pipe(sass({
+      outputStyle: 'expanded',
+      precision: 8
+    }).on('error', sass.logError))
+    .pipe(postcss(postCssOpts))
+    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./site/css'))
+    .pipe(cssnano())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./dist'))
+    .pipe(notify('Point build successfully.'))
+})
+
+/**
+ * Size Report
+ */
+gulp.task('report', function () {
+  return gulp.src('./dist/*')
+    .pipe(sizereport({
+      gzip: true
+    }))
+})
+
+// Docs Tasks
+gulp.task('docs:scss', function () {
+  return gulp.src('./docs/scss/docs.scss')
+    .pipe(sass({
+      outputStyle: 'expanded',
+      precision: 8
+    }).on('error', sass.logError))
+    .pipe(postcss(postCssOpts))
+    .pipe(gulp.dest('./site/css'))
+    .pipe(browserSync.stream())
+})
+
+gulp.task('docs:serve', function (done) {
+  browserSync.init({
+    "server": {
+      "baseDir": "./site"
+    }
+  })
+  done()
+})
+
+gulp.task('docs:nunjucks', function () {
+  return gulp.src([
+      'docs/index.html',
+      'docs/**/*.md'
+    ])
+    .pipe(nunjucksRender({
+      "path": ["./docs/_templates"],
+      data: 'docs/data.json'
+    }))
+    .pipe(gulp.dest('./site'))
+    .on('end', browserSync.reload)
+})
+
+gulp.task('docs:assets', function () {
+  return gulp.src('./docs/assets/**/*')
+      .pipe(gulp.dest('./site'))
+})
+
+/**
+ * Watcher
+ */
+gulp.task('watch', function () {
+  gulp.watch('./scss/**/*.scss', gulp.series('build'))
+  gulp.watch('./docs/scss/*.scss', gulp.series('docs:scss'))
+  gulp.watch(['./docs/index.html', './docs/**/*.md'], gulp.series('docs:nunjucks'))
+  gulp.watch(['./docs/assets/**/*'], gulp.series('docs:assets'))
+})
+
+/**
+ * Scripts
+ */
+gulp.task('default', gulp.series('build', 'report'))
+gulp.task('docs', gulp.series('docs:scss', 'docs:assets', 'docs:nunjucks', 'docs:serve'))
+gulp.task('dev', gulp.series('build', 'docs', 'watch'))

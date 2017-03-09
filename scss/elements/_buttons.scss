@@ -1,0 +1,120 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: $button-padding-base-y $button-padding-base-x;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $button-default-color;
+  height: $button-height-computed;
+  min-width: $button-height-computed;
+  border: $button-border-width solid transparent;
+  border-radius: $button-border-radius-base;
+  cursor: pointer;
+  background: none;
+  box-shadow: none;
+  appearance: none;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &.is-loading {
+    color: transparent;
+    cursor: not-allowed;
+
+    &:after {
+      animation: spin-around 500ms infinite linear;
+      border: 2px solid $grey-light;
+      border-radius: 50%;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      content: "";
+      display: block;
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+
+  }
+
+}
+
+// modifiers - theme
+.btn--default {
+  @include btn-variant($text-color, $element-bg-color, $border-color);
+}
+
+@each $modifier, $value in $master-palette {
+  .btn--#{$modifier} {
+    @include btn-variant($color-white, $value, $value);
+    &.btn--outline {
+      @include btn-outline-variant($color-white, $value);
+    }
+  }
+}
+
+// modifiers - size
+.btn--smart {
+  padding-left: $button-padding-base-x * 2;
+  padding-right: $button-padding-base-x * 2;
+}
+
+.btn--sm {
+  font-size: $font-size-sm;
+  line-height: 1.5;
+  border-radius: $button-border-radius-sm;
+  padding: $button-padding-sm-y $button-padding-sm-x;
+  height: ($button-padding-sm-y + $button-border-width) * 2 + $font-size-sm * 1.5;
+  min-width: ($button-padding-sm-y + $button-border-width) * 2 + $font-size-sm * 1.5;
+  &.btn--smart {
+    padding-left: $button-padding-sm-x * 2;
+    padding-right: $button-padding-sm-x * 2;
+  }
+}
+
+.btn--lg {
+  font-size: $font-size-lg;
+  line-height: 1.5;
+  border-radius: $button-border-radius-lg;
+  padding: $button-padding-lg-y $button-padding-lg-x;
+  height: ($button-padding-lg-y + $button-border-width) * 2 + $font-size-lg * 1.5;
+  min-width: ($button-padding-lg-y + $button-border-width) * 2 + $font-size-lg * 1.5;
+  &.btn--smart {
+    padding-left: $button-padding-lg-x * 2;
+    padding-right: $button-padding-lg-x * 2;
+  }
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+// button group
+.btnGroup {
+  display: inline-flex;
+  .btn {
+    flex: 1 0 auto;
+    &.is-active {
+      z-index: 15;
+    }
+    &:not(:first-of-type) {
+      margin-left: - $button-border-width;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &:not(:last-of-type) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+}

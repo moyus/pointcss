@@ -1,0 +1,51 @@
+// Get next breakpoint name
+// @name breakpoint name
+@function breakpoint-next($name) {
+  $breakpoint-names: map-keys($grid-breakpoints);
+  $n: index($breakpoint-names, $name);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+// Get breakpoint min value
+// @name breakpoint name
+@function breakpoint-min($name) {
+  $min: map-get($grid-breakpoints, $name);
+  @return if($min > 0, $min, null);
+}
+
+// Get breakpoint max value = next breakpoint value - 1px
+// @name breakpoint name
+@function breakpoint-max($name) {
+  $next: breakpoint-next($name);
+  @return if($next, breakpoint-min($next) - 1px, null);
+}
+
+@mixin media-breakpoint-up($name) {
+  $min: breakpoint-min($name);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($name) {
+  $max: breakpoint-max($name);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($lower, $upper) {
+  @include media-breakpoint-up($lower) {
+    @include media-breakpoint-down($upper) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// margin
+.u-m0 {
+  margin: 0 !important;
+}
+@include loop-space(t, 5, 12, margin, "u-mt");
+@include loop-space(r, 5, 12, margin, "u-mr");
+@include loop-space(b, 5, 12, margin, "u-mb");
+@include loop-space(l, 5, 12, margin, "u-ml");
+@include loop-space(all, 5, 12, margin, "u-m");
+
+// padding
+.u-p0 {
+  padding: 0 !important;
+}
+@include loop-space(t, 5, 12, padding, "u-pt");
+@include loop-space(r, 5, 12, padding, "u-pr");
+@include loop-space(b, 5, 12, padding, "u-pb");
+@include loop-space(l, 5, 12, padding, "u-pl");
+@include loop-space(all, 5, 12, padding, "u-p");

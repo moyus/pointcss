@@ -1,0 +1,139 @@
+// .c-drop
+//   .c-drop__toggle
+//   .c-drop__content
+
+// Block
+.c-drop {
+  position: relative; // absolute or fixed
+  display: inline-block;
+
+  // states
+  &.is-open {
+    > .c-drop__content {
+      display: block;
+    }
+  }
+}
+
+// Elements
+.c-drop__toggle {
+  &:focus {
+    + .c-drop__content {
+      display: block;
+    }
+  }
+}
+
+.c-drop__content {
+  position: absolute;
+  display: none;
+  font-size: $font-size-base;
+  color: $text-color;
+  text-align: left;
+  min-width: $drop-content-min-width;
+  border: $drop-border-width solid $drop-border-color;
+  border-radius: $drop-border-radius;
+  background-color: $drop-bg-color;
+  z-index: $drop-zIndex;
+
+  > .c-nav--stacked {
+    margin: 0;
+    padding: $drop-content-padding 0;
+    .c-nav__item {
+      padding-left: $drop-content-padding;
+      padding-right: $drop-content-padding;
+    }
+  }
+
+  &--topStart {
+    top: auto;
+    right: auto;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: $drop-content-gutter;
+  }
+  &--top {
+    top: auto;
+    right: auto;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: $drop-content-gutter;
+    transform: translateX(-50%);
+  }
+  &--topEnd {
+    top: auto;
+    right: 0;
+    bottom: 100%;
+    left: auto;
+    margin-bottom: $drop-content-gutter;
+  }
+
+  &--rightStart {
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 100%;
+    margin-left: $drop-content-gutter;
+  }
+  &--right {
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 100%;
+    margin-left: $drop-content-gutter;
+    transform: translateY(-50%);
+  }
+  &--rightEnd {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 100%;
+    margin-left: $drop-content-gutter;
+  }
+
+  &--bottomStart {
+    top: 100%;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    margin-top: $drop-content-gutter;
+  }
+  &--bottom {
+    top: 100%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    margin-top: $drop-content-gutter;
+    transform: translateX(-50%);
+  }
+  &--bottomEnd {
+    top: 100%;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    margin-top: $drop-content-gutter;
+  }
+
+  &--leftStart {
+    top: 0;
+    right: 100%;
+    bottom: auto;
+    left: auto;
+    margin-right: $drop-content-gutter;
+  }
+  &--left {
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 100%;
+    margin-right: $drop-content-gutter;
+    transform: translateY(-50%);
+  }
+  &--leftEnd {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 100%;
+    margin-right: $drop-content-gutter;
+  }
+}

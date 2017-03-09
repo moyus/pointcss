@@ -1,0 +1,359 @@
+---
+layout: default
+---
+<section class="c-group">
+  <h1 class="c-group__title">Flex Grid</h1>
+  <p>12 Grid system based on <strong>Flexbox</strong></p>
+  <p>
+    <strong>contents:</strong>
+    <ul>
+      <li><a href="#basic">Basic</a></li>
+      <li><a href="#responsive">Responsive</a></li>
+      <li><a href="#offset">Offset</a></li>
+      <li><a href="#flex">Flex</a></li>
+    </ul>
+  </p>
+</section>
+
+<section id="basic" class="c-group">
+  <h2 class="c-group__title">Basic</h2>
+  <p>Code structure:</p>
+  <ul>
+    <li>
+      <code>.l-row</code>: the main container
+      <ul>
+        <li>
+          <code>.l-col-*@&lt;breakpoint&gt;</code>: column class, example: <code>.l-col-4@md</code>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <div class="l-row">
+    {% for i in (1..2) %}
+    <div class="l-col-6">
+      <div class="shadow-box">.l-col-6</div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- END .l-row -->
+  <div class="l-row">
+    {% for i in (1..6) %}
+    <div class="l-col-2@md">
+      <div class="shadow-box">.l-col-2@md</div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- END .l-row -->
+  <div class="l-row">
+    <div class="l-col-8@md">
+      <div class="shadow-box">.l-col-8@md</div>
+    </div>
+    <div class="l-col-4@md">
+      <div class="shadow-box">.l-col-4@md</div>
+    </div>
+  </div>
+  <!-- END .l-row -->
+  <div class="l-row">
+    {% for i in (1..3) %}
+    <div class="l-col-4@md">
+      <div class="shadow-box">.l-col-4@md</div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- END .l-row -->
+{% highlight html %}
+<div class="l-row">
+  <div class="l-col-6">
+    //...
+  </div>
+  <div class="l-col-6">
+    //...
+  </div>
+</div>
+
+<div class="l-row">
+  <div class="l-col-8@md">
+    // ...
+  </div>
+  <div class="l-col-4@md">
+    // ...
+  </div>
+</div>
+{% endhighlight %}
+</section>
+
+<section id="responsive" class="c-group">
+  <h2 class="c-group__title">Responsive</h2>
+  <div class="l-row">
+    <div class="l-col-6@sm l-col-7@md l-col-8@lg">
+      <div class="shadow-box">.l-col-6@sm .l-col-7@md .l-col-8@lg</div>
+    </div>
+    <div class="l-col-6@sm l-col-5@md l-col-4@lg">
+      <div class="shadow-box">.l-col-6@sm .l-col-5@md .l-col-4@lg</div>
+    </div>
+  </div>
+  <!-- END .l-row -->
+  <div class="l-row">
+    <div class="l-col-12 l-col-6@sm l-col-4@md">
+      <div class="shadow-box">.l-col-12 .l-col-6@sm .l-col-4@md</div>
+    </div>
+    <div class="l-col-12 l-col-6@sm l-col-4@md">
+      <div class="shadow-box">.l-col-12 .l-col-6@sm .l-col-4@md</div>
+    </div>
+    <div class="l-col-12 l-col-6@sm l-col-4@md">
+      <div class="shadow-box">.l-col-12 .l-col-6@sm .l-col-4@md</div>
+    </div>
+  </div>
+  <!-- END .l-row -->
+  <div class="l-row">
+    <div class="l-col-12 l-col-6@sm">
+      <div class="shadow-box">.l-col-12 .l-col-6@sm</div>
+    </div>
+    <div class="l-col-12 l-col-6@sm">
+      <div class="shadow-box">.l-col-12 .l-col-6@sm</div>
+    </div>
+  </div>
+  <!-- END .l-row -->
+{% highlight html %}
+<div class="l-row">
+  <div class="l-col-6@sm l-col-7@md l-col-8@lg">
+    // ...
+  </div>
+  <div class="l-col-6@sm l-col-5@md l-col-4@lg">
+    // ...
+  </div>
+</div>
+{% endhighlight %}
+</section>
+
+<section id="offset" class="c-group">
+  <h2 class="c-group__title">Offset</h2>
+  <div class="l-row">
+    <div class="l-col-6@sm l-col-4@md">
+      <div class="shadow-box">.l-col-6@sm .l-col-4@md</div>
+    </div>
+    <div class="l-col-6@sm l-col-4@md l-col-offset-4@md">
+      <div class="shadow-box">.l-col-6@sm .l-col-4@md .l-col-offset-4@md</div>
+    </div>
+  </div>
+  <!-- END .l-row -->
+  <div class="l-row">
+    <div class="l-col-3@sm l-col-offset-3@sm">
+      <div class="shadow-box">.l-col-3@sm .l-col-offset-3@sm</div>
+    </div>
+    <div class="l-col-3@sm l-col-offset-3@sm">
+      <div class="shadow-box">.l-col-3@sm .l-col-offset-3@sm</div>
+    </div>
+  </div>
+  <!-- END .l-row -->
+  <div class="l-row">
+    <div class="l-col-4@sm l-col-offset-3@sm">
+      <div class="shadow-box">.l-col-4@sm .l-col-offset-3@sm</div>
+    </div>
+    <div class="l-col-2@sm">
+      <div class="shadow-box">.l-col-2@sm</div>
+    </div>
+  </div>
+  <!-- END .l-row -->
+{% highlight html %}
+<div class="l-row">
+  <div class="l-col-6@sm l-col-4@md">
+    // ...
+  </div>
+  <div class="l-col-6@sm l-col-4@md l-col-offset-4@md">
+    // ...
+  </div>
+</div>
+
+<div class="l-row">
+  <div class="l-col-3@sm l-col-offset-3@sm">
+    // ...
+  </div>
+  <div class="l-col-3@sm l-col-offset-3@sm">
+    // ...
+  </div>
+</div>
+
+<div class="l-row">
+  <div class="l-col-4@sm l-col-offset-3@sm">
+    // ...
+  </div>
+  <div class="l-col-2@sm">
+    // ...
+  </div>
+</div>
+{% endhighlight %}
+</section>
+
+<section id="flex" class="c-group">
+  <h2 class="c-group__title">Flex</h2>
+  <p>
+    Add any number of <code>.l-col@{breakpoint}</code> to quickly create
+    equal-width columns at certian breakpoint.
+  </p>
+  <div class="l-row">
+      {% for i in (1..6) %}
+      <div class="l-col@md">
+          <div class="shadow-box">.l-col@md</div>
+      </div>
+      {% endfor %}
+  </div>
+  <!-- END .l-row -->
+  <p>Or specify some column's width, leaving rest space to create euqal-width columns.</p>
+  <div class="l-row">
+      <div class="l-col@sm">
+          <div class="shadow-box">.l-col@sm</div>
+      </div>
+      <div class="l-col@sm">
+          <div class="shadow-box">.l-col@sm</div>
+      </div>
+      <div class="l-col-4@sm">
+          <div class="shadow-box">.l-col-4@sm</div>
+      </div>
+      <div class="l-col@sm">
+          <div class="shadow-box">.l-col@sm</div>
+      </div>
+      <div class="l-col@sm">
+          <div class="shadow-box">.l-col@sm</div>
+      </div>
+  </div>
+  <!-- END .l-row -->
+  <p>Want columns start from right? Add <code>.is-end</code> class on <code>.l-row</code> container.</p>
+  <div class="l-row is-end">
+      <div class="l-col-2@md">
+          <div class="shadow-box">1</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">2</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">3</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">4</div>
+      </div>
+  </div>
+  <!-- END .l-row -->
+  <p>Or align center? Add <code>.is-center</code> class on <code>.l-row</code> container.</p>
+  <div class="l-row is-center">
+      <div class="l-col-2@md">
+          <div class="shadow-box">1</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">2</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">3</div>
+      </div>
+  </div>
+  <!-- END .l-row -->
+  <p>Or make rest space spread around? Add <code>.is-around</code> class on <code>.l-row</code> container</p>
+  <div class="l-row is-around">
+      <div class="l-col-2@md">
+          <div class="shadow-box">1</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">2</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">3</div>
+      </div>
+  </div>
+  <!-- END .l-row -->
+  <p>Or make rest space spread between? Add <code>.is-between</code> class on <code>.l-row</code> container</p>
+  <div class="l-row is-between">
+      <div class="l-col-2@md">
+          <div class="shadow-box">1</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">2</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">3</div>
+      </div>
+  </div>
+  <!-- END .l-row -->
+  <p>Reversing colums? No problem, just add <code>.is-reverse</code> class on <code>.l-row</code> container</p>
+  <div class="l-row is-reverse">
+      {% for i in (1..7) %}
+      <div class="l-col-1@md">
+          <div class="shadow-box">{{i}}</div>
+      </div>
+      {% endfor %}
+  </div>
+  <!-- END .l-row -->
+  <p>Reorder colums? No problem, just add <code>.u-first</code> or <code>.u-last</code> class on column element</p>
+  <div class="l-row">
+      <div class="l-col-2@md">
+          <div class="shadow-box">1</div>
+      </div>
+      <div class="l-col-2@md u-last">
+          <div class="shadow-box">2 .u-last</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">3</div>
+      </div>
+      <div class="l-col-2@md u-first">
+          <div class="shadow-box">4 .u-first</div>
+      </div>
+      <div class="l-col-2@md">
+          <div class="shadow-box">5</div>
+      </div>
+  </div>
+  <!-- END .l-row -->
+  <p>How about set the direction of columns? By adding <code>.is-col</code> class on <code>.l-row</code> container</p>
+  <div class="l-row is-col">
+      {% for i in (1..3) %}
+      <div class="l-col-2@md">
+          <div class="shadow-box">{{i}}</div>
+      </div>
+      {% endfor %}
+  </div>
+  <!-- END .l-row -->
+  <p>Sometimes want vertical align columns? Add <code>.is-top</code>, <code>.is-middle</code> or <code>.is-bottom</code> on <code>.l-row</code> container</p>
+  <div class="l-row">
+      <div class="l-col-4@md">
+          <div class="l-row is-center is-top">
+              <div class="l-col-3@md">
+                  <div class="shadow-box is-3">Tall</div>
+              </div>
+              <div class="l-col-3@md">
+                  <div class="shadow-box is-2">Middle</div>
+              </div>
+              <div class="l-col-3@md">
+                  <div class="shadow-box">Short</div>
+              </div>
+          </div>
+      </div>
+      <!-- END .l-col-4@md -->
+      <div class="l-col-4@md">
+          <div class="l-row is-center is-middle">
+              <div class="l-col-3@md">
+                  <div class="shadow-box is-3">Tall</div>
+              </div>
+              <div class="l-col-3@md">
+                  <div class="shadow-box is-2">Middle</div>
+              </div>
+              <div class="l-col-3@md">
+                  <div class="shadow-box">Short</div>
+              </div>
+          </div>
+      </div>
+      <!-- END .l-col-4@md -->
+      <div class="l-col-4@md">
+          <div class="l-row is-center is-bottom">
+              <div class="l-col-3@md">
+                  <div class="shadow-box is-3">Tall</div>
+              </div>
+              <div class="l-col-3@md">
+                  <div class="shadow-box is-2">Middle</div>
+              </div>
+              <div class="l-col-3@md">
+                  <div class="shadow-box">Short</div>
+              </div>
+          </div>
+      </div>
+      <!-- END .l-col-4@md -->
+  </div>
+  <!-- END .l-row -->
+</section>

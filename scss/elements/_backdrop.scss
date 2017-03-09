@@ -1,0 +1,13 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $backdrop-bg-color;
+  z-index: $backdrop-zIndex;
+}
+
+body.is-modal-open {
+  overflow: hidden;
+}

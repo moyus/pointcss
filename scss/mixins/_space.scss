@@ -1,0 +1,26 @@
+// Space
+@mixin make-space($position: b, $distance: 5, $prop: "margin") {
+  @if $prop == "padding" {
+    $prop: "padding";
+  }
+  @if $position == l {
+    #{$prop}-left: #{$distance}px !important;
+  } @else if $position == t {
+    #{$prop}-top: #{$distance}px !important;
+  } @else if $position == r {
+    #{$prop}-right: #{$distance}px !important;
+  } @else if $position == b {
+    #{$prop}-bottom: #{$distance}px !important;
+  } @else {
+    #{$prop}: #{$distance}px !important;
+  }
+}
+
+@mixin loop-space($position: b, $step: 5, $range: 2, $prop: "margin", $prefix: "m") {
+  @for $i from 0 through $range {
+    $v: $i * $step;
+    .#{$prefix}-#{$v} {
+      @include make-space($position, $v, $prop);
+    }
+  }
+}

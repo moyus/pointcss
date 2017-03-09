@@ -1,0 +1,40 @@
+// Block
+.c-note {
+  position: relative;
+  border-radius: $note-border-radius;
+  padding: $note-padding;
+  margin-bottom: $note-margin-bottom;
+  color: $note-color;
+  border: $note-border-width solid $note-border-color;
+  background-color: $note-bg-color;
+
+  &.has-close {
+    padding-right: 30px;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Elements
+.c-note__close {
+  position: absolute;
+  top: $note-padding;
+  right: 10px;
+  font-size: $font-size-lg;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+// Modifiers
+@each $modifier, $value in $note-palette {
+  .c-note--#{$modifier} {
+    @include note-variant(map-get($value, 'text'), map-get($value, 'border'), map-get($value, 'bg'))
+  }
+}

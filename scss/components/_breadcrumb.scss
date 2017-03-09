@@ -1,0 +1,30 @@
+// .c-breadcrumb
+//   .c-breadcrumb__item
+//     .c-breadcrumb__link
+
+// Block
+.c-breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: $font-size-base;
+  color: $muted-color;
+  @include clearfix;
+}
+
+// Elements
+.c-breadcrumb__item {
+  float: left;
+  &:nth-child(n+2) {
+    &:before {
+      content: '/';
+      padding-left: 8px;
+      padding-right: 8px;
+      color: $muted-color;
+    }
+  }
+}
+
+.c-breadcrumb__link {
+  color: $text-color;
+}

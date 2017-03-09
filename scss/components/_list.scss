@@ -1,0 +1,109 @@
+// .c-list
+//   .c-list__item || .c-list__link
+//     .c-list__link
+
+// Block
+.c-list {
+  margin: 0 0 $list-margin-bottom 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Elements
+.c-list__item,
+.c-list__link {
+  position: relative;
+  display: block;
+  padding: $list-item-padding-y-base 0;
+  background-color: $list-item-bg-color;
+
+  &:not(:first-child) {
+    border-top: $list-border-width solid $list-border-color;
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    color: rgba($text-color, .5);
+  }
+}
+
+.c-list__link {
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $list-item-hover-bg;
+  }
+
+  &.is-active {
+    color: $color-white;
+    background-color: map-get($master-palette, 'primary') !important;
+    border-color: map-get($master-palette, 'primary') !important;
+    z-index: 2;
+  }
+}
+
+// Modifiers
+.c-list--inset {
+  .c-list__item,
+  .c-list__link {
+    padding-left: $list-item-padding-x-base;
+    padding-right: $list-item-padding-x-base;
+  }
+}
+
+.c-list--bordered {
+  .c-list__item,
+  .c-list__link {
+    padding: $list-item-padding-y-base $list-item-padding-x-base;
+    border: $list-border-width solid $list-border-color;
+    margin-bottom: (0 - $list-border-width);
+
+    &:first-child {
+      border-top-left-radius: $list-border-radius;
+      border-top-right-radius: $list-border-radius;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom-left-radius: $list-border-radius;
+      border-bottom-right-radius: $list-border-radius;
+    }
+  }
+}
+
+.c-list--transparent {
+  .c-list__item,
+  .c-list__link {
+    background-color: transparent;
+  }
+}
+
+.c-list--sm {
+  .c-list__item,
+  .c-list__link {
+    padding: $list-item-padding-y-sm 0;
+  }
+
+  &.c-list--bordered,
+  &.c-list--inset {
+    .c-list__item {
+      padding: $list-item-padding-y-sm $list-item-padding-x-sm;
+    }
+  }
+}
+
+.c-list--lg {
+  .c-list__item,
+  .c-list__link {
+    padding: $list-item-padding-x-lg 0;
+  }
+
+  &.c-list--bordered,
+  &.c-list--inset {
+    .c-list__item,
+    .c-list__link {
+      padding: $list-item-padding-y-lg $list-item-padding-x-lg;
+    }
+  }
+}

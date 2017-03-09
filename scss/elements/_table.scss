@@ -1,0 +1,80 @@
+// .table
+// .table.table--bordered
+// .table.table--striped
+// .table.table--hover
+// .table.table--responsive
+
+.table {
+  width: 100%;
+  padding: 0;
+  margin: 0 0 $table-margin-bottom 0;
+
+  th,
+  td {
+    text-align: left;
+    padding: $table-td-padding-y $table-td-padding-x;
+    vertical-align: middle;
+    border-bottom: $table-border-width solid $table-border-color;
+  }
+
+  tbody + tbody {
+    margin-top: $table-body-margin-top;
+  }
+
+}
+
+.table--bordered {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+
+    }
+  }
+
+}
+
+.table--striped {
+  tbody tr:nth-of-type(odd) {
+    background-color: $table-bg-accent;
+  }
+}
+
+.table--hover {
+  tbody tr:hover {
+    background-color: $element-bg-hover-color;
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, 'md')) {
+  .table--responsive {
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: block;
+      &:not(:last-child) {
+        border-bottom: 3px solid $divider-color;
+      }
+    }
+
+    th, td {
+      display: block;
+      width: 100% !important;
+      text-align: right;
+      &:before {
+        float: left;
+        color: $muted-color;
+        content: attr(data-label);
+      }
+    }
+
+  }
+}

@@ -1,0 +1,193 @@
+---
+layout: default
+---
+
+<section class="c-group">
+  <h1 class="c-group__title">Level</h1>
+  <p>Vertical align center base on <strong>Flexbox</strong></p>
+  <p>Code structure:</p>
+  <ul>
+    <li>
+      <code>.l-level</code>: the main container
+      <ul>
+        <li>
+          <code>.l-level__left</code>, <code>.l-level__center</code>, .l-level__right
+          <ul>
+            <li><code>.l-level__item</code></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+  <div class="l-level u-mb15">
+    <div class="l-level__left">
+      <a href="#" class="l-level__item btn btn--success btn--smart">Add</a>
+      <a href="#" class="l-level__item">All</a>
+      <a href="#" class="l-level__item">Publish</a>
+      <a href="#" class="l-level__item">Draft</a>
+      <a href="#" class="l-level__item">Pending</a>
+      <a href="#" class="l-level__item">Trash</a>
+    </div>
+    <!-- END .l-level__left -->
+    <div class="l-level__right">
+      <div class="l-level__item">
+        <form action="#" class="form-inline">
+          <div class="form-flex">
+            <input type="text" class="form-input" placeholder="Search...">
+            <button class="form-addon btn btn--primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- END .l-level__right -->
+  </div>
+  <!-- END .l-level -->
+{% highlight html %}
+<div class="l-level">
+  <div class="l-level__left">
+    <a href="#" class="l-level__item btn btn--success btn--smart">Add</a>
+    <a href="#" class="l-level__item">All</a>
+    <a href="#" class="l-level__item">Publish</a>
+    <a href="#" class="l-level__item">Draft</a>
+    <a href="#" class="l-level__item">Pending</a>
+    <a href="#" class="l-level__item">Trash</a>
+  </div>
+  <!-- END .l-level__left -->
+  <div class="l-level__right">
+    <div class="l-level__item">
+      <form action="#" class="form-inline">
+        <div class="form-flex">
+          <input type="text" class="form-input" placeholder="Search...">
+          <button class="form-addon btn btn--primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- END .l-level__right -->
+</div>
+<!-- END .l-level -->
+{% endhighlight %}
+  <hr>
+  <div class="l-level u-mb15">
+    <div class="l-level__left">
+      <div class="u-fontSize-20">All <span class="u-fontSize-14 u-textMuted">34 projects</span></div>
+    </div>
+    <!-- END .l-level__left -->
+    <div class="l-level__center">
+      <div class="c-btnGroup">
+        <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
+        <button class="btn btn--primary btn--outline">SHARED</button>
+        <button class="btn btn--primary btn--outline">MEDIA FILES</button>
+      </div>
+    </div>
+    <div class="l-level__right">
+      <div class="l-level__item">
+        <form action="#" class="form-inline">
+          <div class="form-group">
+            <select class="form-select">
+              <option value="2016-01-25" selected="selected">Jul 25, 16</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- END .l-level__right -->
+  </div>
+  <!-- END .l-level -->
+{% highlight html %}
+<div class="l-level">
+  <div class="l-level__left">
+    <div class="u-fontSize-20">All <span class="u-fontSize-14 u-textMuted">34 projects</span></div>
+  </div>
+  <!-- END .l-level__left -->
+  <div class="l-level__center">
+    <div class="c-btnGroup">
+      <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
+      <button class="btn btn--primary btn--outline">SHARED</button>
+      <button class="btn btn--primary btn--outline">MEDIA FILES</button>
+    </div>
+  </div>
+  <div class="l-level__right">
+    <div class="l-level__item">
+      <form action="#" class="form-inline">
+        <div class="form-group">
+          <select class="form-select">
+            <option value="2016-01-25" selected="selected">Jul 25, 16</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- END .l-level__right -->
+</div>
+<!-- END .l-level -->
+{% endhighlight %}
+  <hr>
+  <div class="l-level u-mb15">
+    <div class="l-level__left">
+      <div class="l-level__item">
+        <div class="u-fontSize-20">Dashboard</div>
+        <ol class="c-breadcrumb">
+          <li class="c-breadcrumb__item">
+            <a href="#" class="c-breadcrumb__link">Home</a>
+          </li>
+          <li class="c-breadcrumb__item">
+            <a href="#" class="c-breadcrumb__link">Library</a>
+          </li>
+          <li class="c-breadcrumb__item">
+            Book
+          </li>
+        </ol>
+      </div>
+      <!-- END .l-level__item -->
+    </div>
+    <!-- END .l-level__left -->
+    <div class="l-level__right">
+      <div class="l-level__item">
+        <form action="#" class="form-inline">
+          <div class="form-group">
+            <input type="text" class="form-input" placeholder="Search...">
+          </div>
+          <button class="btn btn--success">New Post</button>
+        </form>
+      </div>
+    </div>
+    <!-- END .l-level__right -->
+  </div>
+  <!-- END .l-level -->
+{% highlight html %}
+<div class="l-level">
+  <div class="l-level__left">
+    <div class="l-level__item">
+      <div class="u-fontSize-20">Dashboard</div>
+      <ol class="c-breadcrumb">
+        <li class="c-breadcrumb__item">
+          <a href="#" class="c-breadcrumb__link">Home</a>
+        </li>
+        <li class="c-breadcrumb__item">
+          <a href="#" class="c-breadcrumb__link">Library</a>
+        </li>
+        <li class="c-breadcrumb__item">
+          Book
+        </li>
+      </ol>
+    </div>
+    <!-- END .l-level__item -->
+  </div>
+  <!-- END .l-level__left -->
+  <div class="l-level__right">
+    <div class="l-level__item">
+      <form action="#" class="form-inline">
+        <div class="form-group">
+          <input type="text" class="form-input" placeholder="Search...">
+        </div>
+        <button class="btn btn--success">New Post</button>
+      </form>
+    </div>
+  </div>
+  <!-- END .l-level__right -->
+</div>
+<!-- END .l-level -->
+{% endhighlight %}
+</section>
