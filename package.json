@@ -1,6 +1,6 @@
 {
   "name": "point-sass",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "homepage": "http://getpoint.io",
   "author": "moyu <moyuboy@gmail.com> (http://liuxinyu.me)",
   "description": "A flexible CSS Framework for building modern responsive web apps",
@@ -45,9 +45,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sizereport": "^1.2.0",
     "gulp-sourcemaps": "^1.6.0",
-    "postcss-flexbugs-fixes": "^2.1.0"
-  },
-  "dependencies": {
+    "postcss-flexbugs-fixes": "^2.1.0",
     "highlight.js": "^9.9.0"
   }
 }
