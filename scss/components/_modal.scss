@@ -47,7 +47,7 @@
   width: 100%;
   background-color: $modalCard-bg-color;
   border-radius: $modalCard-border-radius;
-  border: $modalCard-border-width solid rgba(120,130,140,.1);
+  border: $modalCard-border-width solid $modalCard-border-color;
 }
 
 .c-modalCard__header {

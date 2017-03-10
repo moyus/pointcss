@@ -8,7 +8,7 @@ title: "Note"
 - [Types](#types)
 
 ## Basic
-Note component provide prompt messages in a page for users to take note.
+Note component provide prompt messages in a page for users to take notice.
 
 <div class="c-note has-close">
   <a role="button" class="c-note__close">

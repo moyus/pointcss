@@ -1,6 +1,11 @@
 #Point
 A flexible CSS Framework for building modern responsive web apps.
 
+- Built with Flexbox
+- Mobile-First
+- BEM, Namespaces, Modular, Beautiful code
+- 14KB gzipped
+
 ## Setup
 There are two ways to start
 
@@ -23,7 +28,7 @@ yarn
 ```
 
 ### 2. Override variables
-All initial variables are located in `src/_vars.scss`.
+All initial variables are located in `scss/_vars.scss`.
 
 ### 3. Compile
 Run the command below to start compiling your own customized **Point**, you can

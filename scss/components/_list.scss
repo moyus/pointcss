@@ -23,7 +23,7 @@
 
   &.is-disabled {
     cursor: not-allowed;
-    color: rgba($text-color, .5);
+    opacity: .65;
   }
 }
 
@@ -36,9 +36,9 @@
   }
 
   &.is-active {
-    color: $color-white;
-    background-color: map-get($master-palette, 'primary') !important;
-    border-color: map-get($master-palette, 'primary') !important;
+    color: $list-item-active-color;
+    background-color: $list-item-active-bg-color !important;
+    border-color: $list-item-active-bg-color !important;
     z-index: 2;
   }
 }

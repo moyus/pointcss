@@ -37,7 +37,7 @@
   &.is-focus,
   &.is-active {
     outline: none;
-    border-color: map-get($master-palette, 'primary');
+    border-color: $form-input-active-border-color;
   }
 
   &::placeholder {
@@ -241,7 +241,7 @@ input[type="checkbox"].form-switch {
   border: 0;
   border-radius: 12px;
   cursor: pointer;
-  background-color: $color-success;
+  background-color: $form-switch-active-color;
   transition: background-color .3s;
   background-image: none;
   background-clip: padding-box;
@@ -254,7 +254,7 @@ input[type="checkbox"].form-switch {
     cursor: not-allowed;
   }
   &:not(:checked) {
-    background-color: $grey-lighter;
+    background-color: $form-switch-bg-color;
   }
 
   &:after {
@@ -265,7 +265,7 @@ input[type="checkbox"].form-switch {
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background-color: $color-white;
+    background-color: $form-switch-color;
     transition: all .3s;
   }
 

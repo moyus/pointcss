@@ -3,8 +3,15 @@ layout: default
 title: "Getting started"
 ---
 
+# Getting started
+
 ## Introduction
 Point is a flexible CSS Framework for building modern responsive web apps.
+
+- Built with Flexbox
+- Mobile-First
+- BEM, Namespaces, Modular, Beautiful code
+- 14KB gzipped
 
 ## Setup
 There are two ways to start

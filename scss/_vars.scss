@@ -12,31 +12,27 @@ $master-palette: (
   // shine: #e91e63, you can add more
 ) !default;
 
-$grey-darkest:                           #161616 !default;
-$grey-dark:                              #333333 !default; // text
-$grey-base:                              #4D4C4C !default; // sub
-$grey-light:                             #888888 !default; // meta, help
-$grey-lighter:                           #e4e4e3 !default; // #e5e5e5, disabled
-$grey-lightest:                          #f2f2f2 !default; // #f5f5f5,
+$grey-darkest:                          #161616 !default;
+$grey-dark:                             #333333 !default; // text
+$grey-base:                             #4D4C4C !default; // sub
+$grey-light:                            #888888 !default; // meta, help
+$grey-lighter:                          #e4e4e3 !default;
+$grey-lightest:                         #f5f5f5 !default;
 
-$color-black:                            #000 !default;
-$color-white:                            #fff !default;
+$color-black:                           #000 !default;
+$color-white:                           #fff !default;
 
 // colors used for form validation etc.
-$color-success:                          #4caf50 !default;
-$color-danger:                           #f44336 !default;
-$color-warning:                          #ff9800 !default;
+$color-success:                         #4caf50 !default;
+$color-danger:                          #f44336 !default;
+$color-warning:                         #ff9800 !default;
 
-$divider-color:                          rgba($color-black, 0.1) !default;
-$border-color:                           #ddd !default;
-$border-width:                           1px !default;
-$border-radius-sm:                       2px !default;
-$border-radius-base:                     3px !default;
-$border-radius-lg:                       5px !default;
-
-$element-bg-color:                       $color-white !default;
-$element-bg-hover-color:                 rgba($color-black,.06) !default;
-$element-bg-active-color:                rgba($color-black,.04) !default;
+$divider-color:                         #e5e5e5 !default;
+$border-color:                          #ddd !default;
+$border-width:                          1px !default;
+$border-radius-sm:                      2px !default;
+$border-radius-base:                    3px !default;
+$border-radius-lg:                      5px !default;
 
 // color transformations
 $mix-level-4:                           40% !default;
@@ -67,7 +63,7 @@ $line-height-computed:                  round($font-size-base * $line-height-bas
 
 $body-font-family:                      "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", sans-serif !default;
 $body-bg:                               $color-white !default;
-$body-color:                            $text-color;
+$body-color:                            $text-color !default;
 
 $link-color:                            #0073AA !default;
 $link-decoration:                       none !default;
@@ -112,17 +108,21 @@ $form-help-margin-top:                  $space-stack-xs !default;
 $form-input-padding-y:                  $space-squish-base-y !default;
 $form-input-padding-x:                  $space-squish-base-x !default;
 
-$form-input-color:                      $text-color;
-$form-input-placeholder-color:          $muted-color;
+$form-input-color:                      $text-color !default;
+$form-input-placeholder-color:          $muted-color !default;
 $form-input-bg:                         $color-white !default;
 $form-input-bg-disabled:                $grey-lightest !default;
+$form-input-active-border-color:        map-get($master-palette, 'primary') !default;
 $form-input-border-color:               #ccc !default;
 $form-input-border-width:               $border-width !default;
 $form-input-border-radius:              $border-radius-base !default;
 $form-input-addon-bg:                   $grey-lightest !default;
-$form-input-icon-padding:               $space-l;
+$form-input-icon-padding:               $space-l !default;
 $form-checkbox-border-radius:           0 !default;
-$form-input-height-computed:            round(($form-input-padding-y + $form-input-border-width) * 2 + $line-height-computed) !default; // 34px
+$form-input-height-computed:            round(($form-input-padding-y + $form-input-border-width) * 2 + $line-height-computed); // 34px
+$form-switch-color:                     $color-white !default;
+$form-switch-bg-color:                  $grey-lighter !default;
+$form-switch-active-color:              $color-success !default;
 
 // Button
 // -----------------------------------------------------------------------------
@@ -137,7 +137,7 @@ $button-padding-base-y:                 $space-squish-base-y !default;
 $button-padding-base-x:                 $space-squish-base-x !default;
 $button-padding-lg-y:                   $space-squish-l-y !default;
 $button-padding-lg-x:                   $space-squish-l-x !default;
-$button-height-computed:                round(($button-padding-base-y + $button-border-width) * 2 + $line-height-computed) !default; // 34px
+$button-height-computed:                round(($button-padding-base-y + $button-border-width) * 2 + $line-height-computed); // 34px
 
 // Table
 // -----------------------------------------------------------------------------
@@ -148,6 +148,7 @@ $table-td-padding-x:                    $space-squish-l-x !default;
 $table-border-width:                    $border-width !default;
 $table-border-color:                    $border-color !default;
 $table-bg-accent:                       $grey-lightest !default;
+$table-hover-color:                     $grey-lightest !default;
 
 // Progress
 // -----------------------------------------------------------------------------
@@ -155,7 +156,7 @@ $progress-height-sm:                    4px !default;
 $progress-height-base:                  8px !default;
 $progress-height-lg:                    12px !default;
 $progress-margin-bottom:                $space-stack-base !default;
-$progress-bg-color:                     $element-bg-active-color !default;
+$progress-bg-color:                     $grey-lightest !default;
 $progress-bar-bg-color-default:         $color-success !default;
 
 // Badges
@@ -184,31 +185,33 @@ $list-item-padding-y-base:              $space-squish-l-y !default;
 $list-item-padding-x-base:              $space-squish-l-x !default;
 $list-item-padding-y-lg:                $space-squish-xl-y !default;
 $list-item-padding-x-lg:                $space-squish-xl-x !default;
-$list-item-bg-color:                    $element-bg-color;
+$list-item-bg-color:                    $color-white !default;
+$list-item-active-bg-color:             map-get($master-palette, 'primary') !important;
+$list-item-active-color:                $color-white !important;
 $list-border-width:                     $border-width !default;
 $list-border-color:                     $border-color !default;
 $list-border-radius:                    $border-radius-base !default;
-$list-item-hover-bg:                    $element-bg-hover-color !default;
+$list-item-hover-bg:                    $grey-lightest !default;
 
 // Drop
 // -----------------------------------------------------------------------------
-$drop-bg-color:                         $element-bg-color !default;
+$drop-bg-color:                         $color-white !default;
 $drop-border-color:                     $border-color !default;
 $drop-border-width:                     $border-width !default;
 $drop-border-radius:                    $border-radius-base !default;
 $drop-content-min-width:                160px !default;
-$drop-content-padding:                  $space-inset-xs;
-$drop-content-gutter:                   $space-stack-xs;
+$drop-content-gutter:                   $space-stack-xs !default;
 
 // Modal
 // -----------------------------------------------------------------------------
-$modal-padding:                         $space-inset-base;
+$modal-padding:                         $space-inset-base !default;
 $modalCard-width-sm:                    480px !default;
 $modalCard-width-base:                  600px !default;
 $modalCard-width-lg:                    900px !default;
 $modalCard-title-font-size:             $font-size-lg;
-$modalCard-bg-color:                    $element-bg-color !default;
+$modalCard-bg-color:                    $color-white !default;
 $modalCard-padding:                     $space-inset-base !default;
+$modalCard-border-color:                rgba(120,130,140,.1) !default;
 $modalCard-border-radius:               $border-radius-lg !default;
 $modalCard-border-width:                $border-width !default;
 $modalCard-divider-color:               $divider-color !default;
@@ -219,7 +222,9 @@ $backdrop-bg-color:                     rgba($color-black,.5) !default;
 $nav-menus-item-margin-y:               $space-stack-xxs !default;
 $nav-menus-link-border-radius-sm:       $border-radius-sm !default;
 $nav-menus-link-border-radius-base:     $border-radius-base !default;
-$nav-menus-link-hover-bg:               $element-bg-hover-color !default;
+$nav-menus-link-color:                  $text-color !default;
+$nav-menus-link-hover-bg:               $grey-lightest !default;
+$nav-menus-link-active-color:           $color-white !default;
 $nav-menus-link-active-bg:              map-get($master-palette, 'primary') !default;
 $nav-menus-link-padding-sm-y:           $space-squish-s-y !default;
 $nav-menus-link-padding-sm-x:           $space-squish-s-x !default;
@@ -232,7 +237,9 @@ $nav-menus-divider-color:               $divider-color !default;
 $nav-pills-item-margin-x:               $space-inline-s !default;
 $nav-pills-link-border-radius-sm:       $border-radius-sm !default;
 $nav-pills-link-border-radius-base:     $border-radius-base !default;
-$nav-pills-link-hover-bg:               $element-bg-hover-color !default;
+$nav-pills-link-color:                  $text-color !default;
+$nav-pills-link-hover-bg:               $grey-lightest !default;
+$nav-pills-link-active-color:           $color-white !default;
 $nav-pills-link-active-bg:              map-get($master-palette, 'primary') !default;
 $nav-pills-link-padding-sm-y:           $space-squish-s-y !default;
 $nav-pills-link-padding-sm-x:           $space-squish-s-x !default;
@@ -248,7 +255,10 @@ $nav-tabs-link-border-radius-sm:        $border-radius-sm !default;
 $nav-tabs-link-border-radius-base:      $border-radius-base !default;
 $nav-tabs-link-border-width:            $border-width !default;
 $nav-tabs-link-border-color:            $border-color !default;
-$nav-tabs-link-hover-bg:                $element-bg-hover-color !default;
+$nav-tabs-link-color:                   $muted-color !default;
+$nav-tabs-link-hover-bg:                $grey-lightest !default;
+$nav-tabs-link-active-color:            $heading-color !default;
+$nav-tabs-link-active-bg:               $color-white !default;
 $nav-tabs-link-padding-sm-y:            $space-squish-s-y !default;
 $nav-tabs-link-padding-sm-x:            $space-squish-s-x !default;
 $nav-tabs-link-padding-base-y:          $space-squish-base-y !default;
@@ -259,8 +269,8 @@ $nav-tabs-link-padding-lg-x:            $space-squish-l-x !default;
 // Navbar
 // -----------------------------------------------------------------------------
 $navbar-height:                         50px !default;
-$navbar-font-size:                      $font-size-base;
-$navbar-color:                          $text-color;
+$navbar-font-size:                      $font-size-base !default;
+$navbar-color:                          $text-color !default;
 $navbar-item-margin-x:                  $space-inline-l !default;
 
 
@@ -272,17 +282,21 @@ $pagination-item-border-radius:         $border-radius-base !default;
 $pagination-item-border-width:          $border-width !default;
 $pagination-item-min-width:             ($line-height-computed + ($pagination-item-padding-base-y + $pagination-item-border-width) * 2) !default;
 $pagination-item-border-color:          $border-color !default;
-$pagination-item-hover-bg:              $element-bg-hover-color !default;
-$pagination-item-bg:                    $element-bg-color !default;
+$pagination-item-color:                 $link-color !default;
+$pagination-item-hover-bg:              $grey-lightest !default;
+$pagination-item-active-color:          $color-white !default;
+$pagination-item-active-bg:             map-get($master-palette, 'primary') !default;
+$pagination-item-disabled-bg:           $grey-lightest !default;
+$pagination-item-bg:                    $color-white !default;
 
 // Note & Box
 // -----------------------------------------------------------------------------
 $box-margin-bottom:                     $space-stack-l !default;
 $box-padding-y:                         $space-squish-l-y !default;
 $box-padding-x:                         $space-squish-l-x !default;
-$box-heading-color:                     $heading-color !default;
-$box-heading-bg:                        $grey-lightest !default;
-$box-body-bg:                           $element-bg-color !default;
+$box-header-color:                      $heading-color !default;
+$box-header-bg:                         $grey-lightest !default;
+$box-body-bg:                           $color-white !default;
 $box-border-width:                      $border-width !default;
 $box-border-color:                      $border-color !default;
 $box-border-radius:                     $border-radius-base !default;

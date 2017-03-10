@@ -45,7 +45,7 @@
 
 // modifiers - theme
 .btn--default {
-  @include btn-variant($text-color, $element-bg-color, $border-color);
+  @include btn-variant($text-color, $color-white, $border-color);
 }
 
 @each $modifier, $value in $master-palette {

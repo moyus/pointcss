@@ -14,6 +14,7 @@
   min-width: $pagination-item-min-width;
   font-size: $font-size-base;
   line-height: $line-height-base;
+  color: $pagination-item-color;
   padding: $pagination-item-padding-base-y $pagination-item-padding-base-x;
   border-radius: $pagination-item-border-radius;
   border: $pagination-item-border-width solid transparent;
@@ -23,15 +24,17 @@
   }
 
   &.is-active {
-    color: $color-white;
+    color: $pagination-item-active-color;
     font-style: normal;
-    background-color: map-get($master-palette, 'primary');
-    border-color: map-get($master-palette, 'primary') !important;
+    background-color: $pagination-item-active-bg;
+    border-color: $pagination-item-active-bg !important;
     z-index: 15;
   }
 
   &.is-disabled {
-    color: $muted-color;
+    color: rgba($pagination-item-color ,.65);
+    cursor: not-allowed;
+    background-color: $pagination-item-bg;
   }
 }
 
@@ -54,7 +57,7 @@
     }
 
     &.is-disabled {
-      background-color: lighten($pagination-item-border-color, $mix-level-2);
+      background-color: $pagination-item-disabled-bg;
     }
   }
 }

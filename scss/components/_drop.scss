@@ -36,6 +36,10 @@
   background-color: $drop-bg-color;
   z-index: $drop-zIndex;
 
+  &--always {
+    display: block;
+  }
+  
   &--topStart {
     top: auto;
     right: auto;
