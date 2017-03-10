@@ -10,7 +10,7 @@ yarn add point-sass
 ```
 
 ### 2. Download from the repository
-[https://github.com/moyu/point.css](https://github.com/moyu/point.css)
+[https://github.com/moyus/point](https://github.com/moyus/point)
 
 ## Customize
 Point uses Gulp for compiling SASS into CSS, If you want to customize Point with
@@ -34,4 +34,4 @@ gulp build
 ```
 
 ## Copyright and license
-Code copyright 2017 moyu. Code released under [the MIT license](https://github.com/moyus/point.css/blob/master/LICENSE).
+Code copyright 2017 moyu. Code released under [the MIT license](https://github.com/moyus/point/blob/master/LICENSE).
