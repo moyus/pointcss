@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Getting started"
-description: "Some Awesome Description"
 ---
 
 ## Introduction

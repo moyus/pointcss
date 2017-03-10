@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Breadcrumb | Point</title>
+  <title> Navbar | Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
   <link rel="stylesheet" href="/css/point.css">
@@ -135,33 +135,83 @@
       </aside>
       <!-- END .docs-l-sidebar -->
       <main id="main" class="docs-l-main docs-c-content" role="main">
-        <h1 id="breadcrumb">Breadcrumb</h1>
+        <h1 id="navbar">Navbar</h1>
+<ul>
+<li><a href="#basic">Basic</a></li>
+</ul>
+<h2 id="basic">Basic</h2>
+<p>Structure:</p>
+<ul>
+<li><code>.c-navbar</code><ul>
+<li><code>.c-navbar__left</code>, <code>.c-navbar__center</code>, <code>.c-navbar__right</code><ul>
+<li><code>.c-navbar__item</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <div class="u-mb-15">
-  <ul class="c-breadcrumb">
-    <li class="c-breadcrumb__item">
-      <a href="#" class="c-breadcrumb__link">Home</a>
-    </li>
-    <li class="c-breadcrumb__item">
-      <a href="#" class="c-breadcrumb__link">Library</a>
-    </li>
-    <li class="c-breadcrumb__item">
-      Book
-    </li>
-  </ul>
+  <nav class="c-navbar">
+    <div class="c-navbar__left is-auto">
+        <a role="button" class="c-navbar__item">
+            <img src="/images/logo-head.png" alt="">
+        </a>
+    </div>
+    <div class="c-navbar__right is-fixed">
+      <a role="button" class="c-navbar__item">Home</a>
+      <a role="button" class="c-navbar__item">About</a>
+      <a role="button" class="c-navbar__item">Work</a>
+      <a role="button" class="c-navbar__item">Shop</a>
+      <a role="button" class="c-navbar__item">Blog</a>
+      <a role="button" class="c-navbar__item">Contact</a>
+    </div>
+  </nav>
 </div>
 
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-breadcrumb"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-breadcrumb__item"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-breadcrumb__link"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-breadcrumb__item"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-breadcrumb__link"</span>&gt;</span>Library<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-breadcrumb__item"</span>&gt;</span>
-    Book
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<pre><code class="lang-html">&lt;nav <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"c-navbar"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__left is-auto"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/logo-head.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__right is-fixed"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>Work<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>Shop<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>Blog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></span>
 </code></pre>
+<hr>
+<div class="u-mb-15">
+  <nav class="c-navbar">
+      <div class="c-navbar__center">
+        <a role="button" class="c-navbar__item">
+            <img src="/images/logo.png" width="40" height="40">
+        </a>
+      </div>
+      <div class="c-navbar__left">
+        <a role="button" class="c-navbar__item">APPS</a>
+        <a role="button" class="c-navbar__item">TECH</a>
+        <a role="button" class="c-navbar__item">CREATIVE</a>
+        <a role="button" class="c-navbar__item">INSIGHTS</a>
+      </div>
+      <div class="c-navbar__right">
+        <div class="c-navbar__item">
+          <form action="#" class="form-inline">
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+        <div class="c-navbar__item">
+          <a role="button" class="btn btn--primary btn--outline">SIGN IN</a>
+        </div>
+      </div>
+  </nav>
+</div>
 
 
       </main>

@@ -16,7 +16,7 @@ component as it's content.
   <div class="c-drop">
     <button class="btn btn--primary c-drop__toggle">Click Me</button>
     <div class="c-drop__content c-drop__content--bottomStart">
-      <ul class="c-nav c-nav--pills c-nav--stacked">
+      <ul class="c-nav c-nav--menus u-p-5">
         <li class="c-nav__item">
             <a role="button" class="c-nav__link is-active">Profile</a>
         </li>
@@ -39,7 +39,7 @@ component as it's content.
 <div class="c-drop">
   <button class="btn btn--primary c-drop__toggle">Click Me</button>
   <div class="c-drop__content c-drop__content--bottomStart">
-    <ul class="c-nav c-nav--pills c-nav--stacked">
+    <ul class="c-nav c-nav--menus u-p-5">
       <li class="c-nav__item">
           <a role="button" class="c-nav__link is-active">Profile</a>
       </li>

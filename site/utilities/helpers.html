@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Helpers | Point</title>
+  <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
+  <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
+  <link rel="stylesheet" href="/css/point.css">
+  <link rel="stylesheet" href="/css/docs.css">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+</head>
+<body>
+  <div id="docs" class="docs-l-app">
+    <header class="docs-l-topbar">
+      <div class="docs-l-topbar__inner">
+        <nav class="c-navbar">
+          <div class="c-navbar__left is-fixed">
+            <a href="/" class="c-navbar__item">
+              <img src="/images/logo-head.png">
+            </a>
+          </div>
+          <!-- END .c-navbar__left -->
+          <div class="c-navbar__right is-auto">
+            <a href="/getting-started" class="c-navbar__item">Documentation</a>
+            <a href="https://github.com/moyus/point" class="c-navbar__item">Github</a>
+            <div class="c-navbar__item">
+              <a href="https://github.com/moyus/point" class="btn btn--outline btn--primary">Download</a>
+            </div>
+          </div>
+          <!-- END .c-navbar__right -->
+        </nav>
+      </div>
+    </header>
+    <!-- END .docs-l-topbar -->
+    <div class="docs-l-content">
+      <aside class="docs-l-sidebar">
+        <nav id="sidenav" class="docs-c-sidenav">
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Get started</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#introduction" class="docs-c-sidenav__link">Introduction</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#setup" class="docs-c-sidenav__link">Setup</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/index.html#customize" class="docs-c-sidenav__link">Customize</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Layouts</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/layouts/flex-grid.html" class="docs-c-sidenav__link">Flex Grid</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/layouts/level.html" class="docs-c-sidenav__link">Level</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Elements</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/typography.html" class="docs-c-sidenav__link">Typography</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/buttons.html" class="docs-c-sidenav__link">Buttons</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/form.html" class="docs-c-sidenav__link">Form</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/tables.html" class="docs-c-sidenav__link">Tables</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/media.html" class="docs-c-sidenav__link">Media</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/badges.html" class="docs-c-sidenav__link">Badges</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/hint.html" class="docs-c-sidenav__link">Hint</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/progress.html" class="docs-c-sidenav__link">Progress</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/icons.html" class="docs-c-sidenav__link">Icons</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Components</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/box.html" class="docs-c-sidenav__link">Box</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/note.html" class="docs-c-sidenav__link">Note</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/lists.html" class="docs-c-sidenav__link">Lists</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/navs.html" class="docs-c-sidenav__link">Navs</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/navbar.html" class="docs-c-sidenav__link">Navbar</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/breadcrumb.html" class="docs-c-sidenav__link">Breadcrumb</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/pagination.html" class="docs-c-sidenav__link">Pagination</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/drop.html" class="docs-c-sidenav__link">Drop</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/components/modal.html" class="docs-c-sidenav__link">Modal</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+  <ul class="docs-c-sidenav__group">
+    <li class="docs-c-sidenav__label">Utilities</li>
+    <li class="docs-c-sidenav__item">
+      <a href="/utilities/helpers.html" class="docs-c-sidenav__link">Helpers</a>
+    </li>
+  </ul>
+  <!-- END .docs-c-sidenav__group -->
+</nav>
+
+      </aside>
+      <!-- END .docs-l-sidebar -->
+      <main id="main" class="docs-l-main docs-c-content" role="main">
+        <h1 id="helpers">Helpers</h1>
+<ul>
+<li><a href="#colors">Colors</a></li>
+<li><a href="#spaces">Spaces</a></li>
+<li><a href="#text">Text</a></li>
+<li><a href="#appearance">Appearance</a></li>
+</ul>
+<h2 id="colors">Colors</h2>
+<p>Change text color or background color.</p>
+<table class="table table--bordered">
+  <thead>
+      <tr>
+          <th>Class</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>.u-color-primary</code></td>
+          <td><span class="u-color-primary">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-color-success</code></td>
+          <td><span class="u-color-success">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-color-info</code></td>
+          <td><span class="u-color-info">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-color-danger</code></td>
+          <td><span class="u-color-danger">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-color-warning</code></td>
+          <td><span class="u-color-warning">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-primary</code></td>
+          <td><span class="u-bg-primary u-pr-60 u-pb-5"></span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-success</code></td>
+          <td><span class="u-bg-success u-pr-60 u-pb-5"></span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-info</code></td>
+          <td><span class="u-bg-info u-pr-60 u-pb-5"></span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-danger</code></td>
+          <td><span class="u-bg-danger u-pr-60 u-pb-5"></span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-warning</code></td>
+          <td><span class="u-bg-warning u-pr-60 u-pb-5"></span></td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 id="spaces">Spaces</h2>
+<p>Space step is 5px, start from 0, end at 60px</p>
+<table class="table table--bordered">
+  <thead>
+      <tr>
+          <th>Class</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>.u-mt-<em></code></td>
+          <td>
+              <code>.u-mt-0</code> is <code>margin-top: 0 !important;</code>
+          </td>
+      </tr>
+      <tr>
+          <td><code>.u-mb-</em></code></td>
+          <td>
+              <code>.u-mb-5</code> is <code>margin-bottom: 5px !important;</code>
+          </td>
+      </tr>
+      <tr>
+          <td><code>.u-ml-<em></code></td>
+          <td>
+              <code>.u-ml-10</code> is <code>margin-left: 10px !important;</code>
+          </td>
+      </tr>
+      <tr>
+          <td><code>.u-mr-</em></code></td>
+          <td>
+              <code>.u-mr-15</code> is <code>margin-right: 15px !important;</code>
+          </td>
+      </tr>
+      <tr>
+          <td><code>.u-m-<em></code></td>
+          <td>
+              <code>.u-m-20</code> is <code>margin: 20px !important;</code>
+          </td>
+      </tr>
+      <tr>
+          <td><code>.u-pt-</em></code></td>
+          <td>
+              <code>.u-pt-0</code> is <code>padding-top: 0 !important;</code>
+          </td>
+      </tr>
+      <tr>
+          <td><code>.u-pb-<em></code></td>
+          <td>
+              <code>.u-pb-5</code> is <code>padding-bottom: 5px !important;</code>
+          </td>
+      </tr>
+      <tr>
+          <td><code>.u-pl-</em></code></td>
+          <td>
+              <code>.u-pl-10</code> is <code>padding-left: 10px !important;</code>
+          </td>
+      </tr>
+      <tr>
+          <td><code>.u-pr-<em></code></td>
+          <td>
+              <code>.u-pr-15</code> is <code>padding-right: 15px !important;</code>
+          </td>
+      </tr>
+      <tr>
+          <td><code>.u-p-</em></code></td>
+          <td>
+              <code>.u-p-20</code> is <code>padding: 20px !important;</code>
+          </td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 id="text">Text</h2>
+<table class="table table--bordered">
+  <thead>
+      <tr>
+          <th>Class</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>.u-textMuted</code></td>
+          <td><span class="u-textMuted">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-textCenter</code></td>
+          <td><div class="u-textCenter">Lorem ipsum dolor sit amet.</div></td>
+      </tr>
+      <tr>
+          <td><code>.u-textRight</code></td>
+          <td><div class="u-textRight">Lorem ipsum dolor sit amet.</div></td>
+      </tr>
+      <tr>
+          <td><code>.u-textLeft</code></td>
+          <td><div class="u-textLeft">Lorem ipsum dolor sit amet.</div></td>
+      </tr>
+      <tr>
+          <td><code>.u-textTruncated</code></td>
+          <td><div class="u-textTruncated" style="width: 100px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, velit?</div></td>
+      </tr>
+      <tr>
+          <td><code>.u-textBreak</code></td>
+          <td><div class="u-textBreak" style="width: 100px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, velit?</div></td>
+      </tr>
+      <tr>
+          <td><code>.u-textNowrap</code></td>
+          <td><div class="u-textNowrap" style="width: 100px;">Lorem ipsum dolor sit amet</div></td>
+      </tr>
+      <tr>
+          <td><code>.u-h1</code></td>
+          <td><span class="u-h1">Heading 1</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-h2</code></td>
+          <td><span class="u-h2">Heading 2</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-h3</code></td>
+          <td><span class="u-h3">Heading 3</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-h4</code></td>
+          <td><span class="u-h4">Heading 4</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-h5</code></td>
+          <td><span class="u-h5">Heading 5</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-h6</code></td>
+          <td><span class="u-h6">Heading 6</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-12</code></td>
+          <td><span class="u-fs-12">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-14</code></td>
+          <td><span class="u-fs-14">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-16</code></td>
+          <td><span class="u-fs-16">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-18</code></td>
+          <td><span class="u-fs-18">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-20</code></td>
+          <td><span class="u-fs-20">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-24</code></td>
+          <td><span class="u-fs-24">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-28</code></td>
+          <td><span class="u-fs-28">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-32</code></td>
+          <td><span class="u-fs-32">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-48</code></td>
+          <td><span class="u-fs-48">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-64</code></td>
+          <td><span class="u-fs-64">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-fs-128</code></td>
+          <td><span class="u-fs-128">Lorem ipsum</span></td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 id="appearance">Appearance</h2>
+<table class="table table--bordered">
+  <thead>
+      <tr>
+          <th>Class</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>.u-scrollable</code></td>
+          <td>set a fixed height or width of element and provide a y-axis or x-axis scrollbar</td>
+      </tr>
+      <tr>
+          <td><code>.u-block</code></td>
+          <td><code>display: block !important;</code></td>
+      </tr>
+      <tr>
+          <td><code>u-centerBlock</code></td>
+          <td><code>display: block !important;</code>, <code>margin-left: auto !important;</code>, <code>margin-right: auto !important;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-inline</code></td>
+          <td><code>display: inline !important;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-inlineBlock</code></td>
+          <td><code>display: inline-block !important;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-floatLeft</code></td>
+          <td>Float an element to the left</td>
+      </tr>
+      <tr>
+          <td><code>.u-floatRight</code></td>
+          <td>Float an element to the right</td>
+      </tr>
+      <tr>
+          <td><code>.u-clearfix</code></td>
+          <td>Clear floats</td>
+      </tr>
+      <tr>
+          <td><code>.u-hidden</code></td>
+          <td>Force an elment to be hidden</td>
+      </tr>
+      <tr>
+          <td><code>.u-hiddenUp@(sm, md, lg)</code></td>
+          <td>Force an elment to be hidden at breakpoint up</td>
+      </tr>
+      <tr>
+          <td><code>.u-hiddenDown@(sm, md, lg)</code></td>
+          <td>Force an elment to be hidden at breakpoint down</td>
+      </tr>
+  </tbody>
+</table>
+
+
+      </main>
+      <!-- END #main -->
+    </div>
+    <!-- END .docs-l-content -->
+    <footer id="colophon" class="docs-l-footer" role="contentinfo">
+      <p>Designed and built by <a href="http://liuxinyu.me">moyu</a></p>
+      <p>Licensed under the <a href="https://github.com/moyus/point.css/blob/master/LICENSE">MIT License</a>.</p>
+    </footer>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
