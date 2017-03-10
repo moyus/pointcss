@@ -23,9 +23,9 @@ $color-black:                            #000 !default;
 $color-white:                            #fff !default;
 
 // colors used for form validation etc.
-$color-success:                         #4caf50 !default;
-$color-danger:                          #f44336 !default;
-$color-warning:                         #ff9800 !default;
+$color-success:                          #4caf50 !default;
+$color-danger:                           #f44336 !default;
+$color-warning:                          #ff9800 !default;
 
 $divider-color:                          rgba($color-black, 0.1) !default;
 $border-color:                           #ddd !default;
@@ -202,53 +202,67 @@ $drop-content-gutter:                   $space-stack-xs;
 
 // Modal
 // -----------------------------------------------------------------------------
-$modal-width-sm:                        480px !default;
-$modal-width-base:                      600px !default;
-$modal-width-lg:                        900px !default;
-$modal-bg-color:                        $element-bg-color !default;
-$modal-margin:                          $space-inset-base !default;
-$modal-padding:                         $space-inset-base !default;
-$modal-border-radius:                   $border-radius-lg !default;
-$modal-border-width:                    $border-width !default;
-$modal-divider-color:                   $divider-color !default;
+$modal-padding:                         $space-inset-base;
+$modalCard-width-sm:                    480px !default;
+$modalCard-width-base:                  600px !default;
+$modalCard-width-lg:                    900px !default;
+$modalCard-title-font-size:             $font-size-lg;
+$modalCard-bg-color:                    $element-bg-color !default;
+$modalCard-padding:                     $space-inset-base !default;
+$modalCard-border-radius:               $border-radius-lg !default;
+$modalCard-border-width:                $border-width !default;
+$modalCard-divider-color:               $divider-color !default;
 $backdrop-bg-color:                     rgba($color-black,.5) !default;
 
 // Nav
 // -----------------------------------------------------------------------------
-$nav-inline-item-margn-x:               $space-inline-xs !default;
-$nav-stacked-item-margin-y:             $space-stack-xxs !default;
-$nav-link-padding-sm-y:                 $space-squish-s-y !default;
-$nav-link-padding-sm-x:                 $space-squish-s-x !default;
-$nav-link-padding-base-y:               $space-squish-base-y !default;
-$nav-link-padding-base-x:               $space-squish-base-x !default;
-$nav-link-padding-lg-y:                 $space-squish-l-y !default;
-$nav-link-padding-lg-x:                 $space-squish-l-x !default;
-$nav-border-color:                      $border-color !default;
-$nav-border-width:                      $border-width !default;
-$nav-divider-color:                     $divider-color !default;
-$nav-sub-margin-x:                      $space-stack-s !default;
+$nav-menus-item-margin-y:               $space-stack-xxs !default;
+$nav-menus-link-border-radius-sm:       $border-radius-sm !default;
+$nav-menus-link-border-radius-base:     $border-radius-base !default;
+$nav-menus-link-hover-bg:               $element-bg-hover-color !default;
+$nav-menus-link-active-bg:              map-get($master-palette, 'primary') !default;
+$nav-menus-link-padding-sm-y:           $space-squish-s-y !default;
+$nav-menus-link-padding-sm-x:           $space-squish-s-x !default;
+$nav-menus-link-padding-base-y:         $space-squish-base-y !default;
+$nav-menus-link-padding-base-x:         $space-squish-base-x !default;
+$nav-menus-link-padding-lg-y:           $space-squish-l-y !default;
+$nav-menus-link-padding-lg-x:           $space-squish-l-x !default;
+$nav-menus-divider-color:               $divider-color !default;
 
+$nav-pills-item-margin-x:               $space-inline-s !default;
+$nav-pills-link-border-radius-sm:       $border-radius-sm !default;
+$nav-pills-link-border-radius-base:     $border-radius-base !default;
+$nav-pills-link-hover-bg:               $element-bg-hover-color !default;
+$nav-pills-link-active-bg:              map-get($master-palette, 'primary') !default;
+$nav-pills-link-padding-sm-y:           $space-squish-s-y !default;
+$nav-pills-link-padding-sm-x:           $space-squish-s-x !default;
+$nav-pills-link-padding-base-y:         $space-squish-base-y !default;
+$nav-pills-link-padding-base-x:         $space-squish-base-x !default;
+$nav-pills-link-padding-lg-y:           $space-squish-l-y !default;
+$nav-pills-link-padding-lg-x:           $space-squish-l-x !default;
+
+$nav-tabs-border-color:                 $border-color !default;
+$nav-tabs-border-width:                 $border-width !default;
 $nav-tabs-item-margin-x:                $space-inline-s !default;
 $nav-tabs-link-border-radius-sm:        $border-radius-sm !default;
 $nav-tabs-link-border-radius-base:      $border-radius-base !default;
 $nav-tabs-link-border-width:            $border-width !default;
 $nav-tabs-link-border-color:            $border-color !default;
 $nav-tabs-link-hover-bg:                $element-bg-hover-color !default;
+$nav-tabs-link-padding-sm-y:            $space-squish-s-y !default;
+$nav-tabs-link-padding-sm-x:            $space-squish-s-x !default;
+$nav-tabs-link-padding-base-y:          $space-squish-base-y !default;
+$nav-tabs-link-padding-base-x:          $space-squish-base-x !default;
+$nav-tabs-link-padding-lg-y:            $space-squish-l-y !default;
+$nav-tabs-link-padding-lg-x:            $space-squish-l-x !default;
 
-$nav-pills-item-margin-x:               $space-inline-s !default;
-$nav-pills-link-border-radius-sm:       $border-radius-sm !default;
-$nav-pills-link-border-radius-base:     $border-radius-base !default;
-$nav-pills-link-border-color:           $border-color !default;
-$nav-pills-link-hover-bg:               $element-bg-hover-color !default;
-
-// Navbar @TODO
+// Navbar
 // -----------------------------------------------------------------------------
 $navbar-height:                         50px !default;
-$navbar-font-size:                      $font-size-lg;
+$navbar-font-size:                      $font-size-base;
+$navbar-color:                          $text-color;
 $navbar-item-margin-x:                  $space-inline-l !default;
 
-// @TODO
-$navbar-light-color:                    rgba($color-white, 0.8) !default;
 
 // Pagination
 // -----------------------------------------------------------------------------
@@ -261,7 +275,7 @@ $pagination-item-border-color:          $border-color !default;
 $pagination-item-hover-bg:              $element-bg-hover-color !default;
 $pagination-item-bg:                    $element-bg-color !default;
 
-// Notices & Box
+// Note & Box
 // -----------------------------------------------------------------------------
 $box-margin-bottom:                     $space-stack-l !default;
 $box-padding-y:                         $space-squish-l-y !default;

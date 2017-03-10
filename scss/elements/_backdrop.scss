@@ -7,7 +7,3 @@
   background-color: $backdrop-bg-color;
   z-index: $backdrop-zIndex;
 }
-
-body.is-modal-open {
-  overflow: hidden;
-}

@@ -36,15 +36,6 @@
   background-color: $drop-bg-color;
   z-index: $drop-zIndex;
 
-  > .c-nav--stacked {
-    margin: 0;
-    padding: $drop-content-padding 0;
-    .c-nav__item {
-      padding-left: $drop-content-padding;
-      padding-right: $drop-content-padding;
-    }
-  }
-
   &--topStart {
     top: auto;
     right: auto;
