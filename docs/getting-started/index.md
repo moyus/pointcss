@@ -38,11 +38,11 @@ yarn add point-sass --dev
 ```
 
 ### 2. Set your variables
-you can reference all initial variables in `scss/_ars.scss`
+you can reference all initial variables in `scss/_vars.scss`
 ```scss
 $master-palette: (
   primary: #e74c3c
-) !default;
+);
 
 $link-color: #e74c3c;
 ```
@@ -51,7 +51,7 @@ $link-color: #e74c3c;
 ```scss
 $master-palette: (
   primary: #e74c3c
-) !default;
+);
 
 $link-color: #e74c3c;
 
