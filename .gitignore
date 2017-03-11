@@ -1,2 +1,8 @@
+# Folders
 node_modules
-point.sketch
+.idea/
+.sass-cache
+
+# Files
+.DS_Store
+.npm-debug.log
