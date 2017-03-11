@@ -1,6 +1,6 @@
 /*
  * Point
- * version: 0.8.4
+ * version: 0.8.5
  * url: http://getpoint.io
  * Copyright 2017 moyu
  * Licensed under MIT (https://github.com/moyus/point/blob/master/LICENSE)
@@ -3753,6 +3753,10 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   background-color: #e5e5e5;
 }
 
+.c-nav--menus .c-nav--menus {
+  margin: 2px 0 2px 8px;
+}
+
 .c-nav--pills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3799,13 +3803,31 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 }
 
 .c-nav--tabs > .c-nav__item > .c-nav__link:hover {
-  background-color: #f5f5f5;
+  color: #333333;
 }
 
 .c-nav--tabs > .c-nav__item .c-nav__link.is-active {
   color: #333333;
   border-color: #ddd #ddd #fff;
   background-color: #fff;
+}
+
+.c-nav--sm.c-nav--menus > .c-nav__item > .c-nav__link {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.c-nav--sm.c-nav--pills > .c-nav__item > .c-nav__link {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.c-nav--sm.c-nav--tabs > .c-nav__item > .c-nav__link {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 2px 2px 0 0;
 }
 
 .c-navbar {
@@ -3960,17 +3982,17 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 
 .c-drop__content--topStart {
   top: auto;
+  left: 0;
   right: auto;
   bottom: 100%;
-  left: 0;
   margin-bottom: 4px;
 }
 
 .c-drop__content--top {
   top: auto;
+  left: 50%;
   right: auto;
   bottom: 100%;
-  left: 50%;
   margin-bottom: 4px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -3978,25 +4000,25 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 
 .c-drop__content--topEnd {
   top: auto;
+  left: auto;
   right: 0;
   bottom: 100%;
-  left: auto;
   margin-bottom: 4px;
 }
 
 .c-drop__content--rightStart {
   top: 0;
+  left: 100%;
   right: auto;
   bottom: auto;
-  left: 100%;
   margin-left: 4px;
 }
 
 .c-drop__content--right {
   top: 50%;
+  left: 100%;
   right: auto;
   bottom: auto;
-  left: 100%;
   margin-left: 4px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -4004,25 +4026,25 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 
 .c-drop__content--rightEnd {
   top: auto;
+  left: 100%;
   right: auto;
   bottom: 0;
-  left: 100%;
   margin-left: 4px;
 }
 
-.c-drop__content--bottomStart {
+.c-drop__content, .c-drop__content--bottomStart {
   top: 100%;
+  left: 0;
   right: auto;
   bottom: auto;
-  left: 0;
   margin-top: 4px;
 }
 
 .c-drop__content--bottom {
   top: 100%;
+  left: 50%;
   right: auto;
   bottom: auto;
-  left: 50%;
   margin-top: 4px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -4030,25 +4052,25 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 
 .c-drop__content--bottomEnd {
   top: 100%;
+  left: auto;
   right: 0;
   bottom: auto;
-  left: auto;
   margin-top: 4px;
 }
 
 .c-drop__content--leftStart {
   top: 0;
+  left: auto;
   right: 100%;
   bottom: auto;
-  left: auto;
   margin-right: 4px;
 }
 
 .c-drop__content--left {
   top: 50%;
+  left: 100%;
   right: auto;
   bottom: auto;
-  left: 100%;
   margin-right: 4px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -4056,9 +4078,9 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 
 .c-drop__content--leftEnd {
   top: auto;
+  left: 100%;
   right: auto;
   bottom: 0;
-  left: 100%;
   margin-right: 4px;
 }
 

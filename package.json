@@ -1,13 +1,13 @@
 {
   "name": "point-sass",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "homepage": "http://getpoint.io",
   "author": "moyu <moyuboy@gmail.com> (http://moyu.io)",
   "description": "A flexible CSS Framework for building modern responsive web apps",
   "main": "scss/point.scss",
   "repository": {
     "type": "git",
-    "url": "https://github.com/moyus/point.git"
+    "url": "git+https://github.com/moyus/point.git"
   },
   "bugs": {
     "url": "https://github.com/moyus/point/issues"
@@ -15,6 +15,7 @@
   "files": [
     "dist",
     "scss",
+    "point.scss",
     "LICENSE",
     "README.md"
   ],
