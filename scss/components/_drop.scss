@@ -39,96 +39,105 @@
   &--always {
     display: block;
   }
-  
+
   &--topStart {
     top: auto;
+    left: 0;
     right: auto;
     bottom: 100%;
-    left: 0;
     margin-bottom: $drop-content-gutter;
   }
+
   &--top {
     top: auto;
+    left: 50%;
     right: auto;
     bottom: 100%;
-    left: 50%;
     margin-bottom: $drop-content-gutter;
     transform: translateX(-50%);
   }
+
   &--topEnd {
     top: auto;
+    left: auto;
     right: 0;
     bottom: 100%;
-    left: auto;
     margin-bottom: $drop-content-gutter;
   }
 
   &--rightStart {
     top: 0;
+    left: 100%;
     right: auto;
     bottom: auto;
-    left: 100%;
-    margin-left: $drop-content-gutter;
-  }
-  &--right {
-    top: 50%;
-    right: auto;
-    bottom: auto;
-    left: 100%;
-    margin-left: $drop-content-gutter;
-    transform: translateY(-50%);
-  }
-  &--rightEnd {
-    top: auto;
-    right: auto;
-    bottom: 0;
-    left: 100%;
     margin-left: $drop-content-gutter;
   }
 
+  &--right {
+    top: 50%;
+    left: 100%;
+    right: auto;
+    bottom: auto;
+    margin-left: $drop-content-gutter;
+    transform: translateY(-50%);
+  }
+
+  &--rightEnd {
+    top: auto;
+    left: 100%;
+    right: auto;
+    bottom: 0;
+    margin-left: $drop-content-gutter;
+  }
+
+  &,
   &--bottomStart {
     top: 100%;
+    left: 0;
     right: auto;
     bottom: auto;
-    left: 0;
     margin-top: $drop-content-gutter;
   }
+
   &--bottom {
     top: 100%;
+    left: 50%;
     right: auto;
     bottom: auto;
-    left: 50%;
     margin-top: $drop-content-gutter;
     transform: translateX(-50%);
   }
+
   &--bottomEnd {
     top: 100%;
+    left: auto;
     right: 0;
     bottom: auto;
-    left: auto;
     margin-top: $drop-content-gutter;
   }
 
   &--leftStart {
     top: 0;
+    left: auto;
     right: 100%;
     bottom: auto;
-    left: auto;
     margin-right: $drop-content-gutter;
   }
+
   &--left {
     top: 50%;
+    left: 100%;
     right: auto;
     bottom: auto;
-    left: 100%;
     margin-right: $drop-content-gutter;
     transform: translateY(-50%);
   }
+
   &--leftEnd {
     top: auto;
+    left: 100%;
     right: auto;
     bottom: 0;
-    left: 100%;
     margin-right: $drop-content-gutter;
   }
 }

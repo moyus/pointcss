@@ -29,7 +29,7 @@ nunjucksRender.setDefaults({
  */
 gulp.task('build', function () {
 
-  return gulp.src('./scss/point.scss')
+  return gulp.src('./point.scss')
     .pipe(sass({
       outputStyle: 'expanded',
       precision: 8
@@ -96,13 +96,19 @@ gulp.task('docs:assets', function () {
  * Watcher
  */
 gulp.task('watch', function () {
-  gulp.watch('./scss/**/*.scss', gulp.series('build'))
+  gulp.watch([
+    './point.scss',
+    './scss/**/*.scss'
+  ], gulp.series('build'))
+
   gulp.watch('./docs/scss/*.scss', gulp.series('docs:scss'))
+
   gulp.watch([
     './docs/index.html',
     './docs/_templates/*',
     './docs/**/*.md'
   ], gulp.series('docs:nunjucks'))
+  
   gulp.watch(['./docs/assets/**/*'], gulp.series('docs:assets'))
 })
 

@@ -13,11 +13,11 @@ $master-palette: (
 ) !default;
 
 $grey-darkest:                          #161616 !default;
-$grey-dark:                             #333333 !default; // text
-$grey-base:                             #4D4C4C !default; // sub
-$grey-light:                            #888888 !default; // meta, help
-$grey-lighter:                          #e4e4e3 !default;
-$grey-lightest:                         #f5f5f5 !default;
+$grey-dark:                             #333333 !default; // text, heading
+$grey-base:                             #4D4C4C !default; //
+$grey-light:                            #888888 !default; // meta, help, muted
+$grey-lighter:                          #e4e4e3 !default; // disabled
+$grey-lightest:                         #f5f5f5 !default; // bg, hover-bg
 
 $color-black:                           #000 !default;
 $color-white:                           #fff !default;
@@ -256,7 +256,7 @@ $nav-tabs-link-border-radius-base:      $border-radius-base !default;
 $nav-tabs-link-border-width:            $border-width !default;
 $nav-tabs-link-border-color:            $border-color !default;
 $nav-tabs-link-color:                   $muted-color !default;
-$nav-tabs-link-hover-bg:                $grey-lightest !default;
+$nav-tabs-link-hover-color:             $text-color !default;
 $nav-tabs-link-active-color:            $heading-color !default;
 $nav-tabs-link-active-bg:               $color-white !default;
 $nav-tabs-link-padding-sm-y:            $space-squish-s-y !default;
