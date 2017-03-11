@@ -1,4 +1,10 @@
 (function () {
+  var forEach = function (items, fn) {
+    var len = items.length
+    for (var i = 0; i < len; i++) {
+      fn(items[i], i, items)
+    }
+  }
 
   var modalify = function (triggerEl) {
     var modalId = triggerEl.getAttribute('data-target')
@@ -8,7 +14,8 @@
       e.preventDefault()
       modal.classList.toggle('is-active');
     })
-    modalCloseEls.forEach(function (el) {
+
+    forEach(modalCloseEls, function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault()
         modal.classList.remove('is-active')
@@ -18,7 +25,7 @@
 
   // cache selectors
   var $modalTriggers = document.querySelectorAll('.js-modal-trigger')
-  $modalTriggers.forEach(function (el) {
+  forEach($modalTriggers, function (el) {
     modalify(el)
   })
 
