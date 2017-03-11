@@ -49,6 +49,9 @@
     <li class="docs-c-sidenav__item">
       <a href="/getting-started/index.html#customize" class="docs-c-sidenav__link">Customize</a>
     </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/getting-started/style-guide.html" class="docs-c-sidenav__link">Style Guide</a>
+    </li>
   </ul>
   <!-- END .docs-c-sidenav__group -->
   <ul class="docs-c-sidenav__group">
@@ -145,27 +148,53 @@
 <li>14KB gzipped</li>
 </ul>
 <h2 id="setup">Setup</h2>
-<p>There are two ways to start</p>
-<h3 id="1-install-with-yarn">1. Install with Yarn</h3>
-<pre><code class="lang-sh">yarn <span class="hljs-keyword">add</span><span class="bash"> point.css</span>
+<p>There are 3 ways to start</p>
+<h3 id="install-with-yarn">Install with Yarn</h3>
+<pre><code class="lang-sh">yarn <span class="hljs-keyword">add</span><span class="bash"> point-sass</span>
 </code></pre>
-<hr>
-<h3 id="2-download-from-the-repository">2. Download from the repository</h3>
-<p><a href="https://github.com/moyus/point">https://github.com/moyus/point</a></p>
+<h3 id="install-with-npm">Install with NPM</h3>
+<pre><code class="lang-sh">npm install <span class="hljs-built_in">point</span>-sass --<span class="hljs-built_in">save</span>
+</code></pre>
+<h3 id="direct-script-include">Direct <code>&lt;script&gt;</code> Include</h3>
+<p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/point.min.css&quot; /&gt;</code></p>
 <h2 id="customize">Customize</h2>
-<p>Point uses Gulp for compiling SASS into CSS, If you want to customize Point with
-your own variables, just download the source files from the repository.</p>
-<h3 id="1-install-dependences">1. Install dependences</h3>
-<p>Navigate to the root directory of Point, then run the command below to install all dependencies.</p>
-<pre><code class="lang-sh"><span class="hljs-attribute">yarn</span>
+<p>Point is coded in <a href="http://sass-lang.com/">SASS</a>, If you&#39;re familiar with it, You can continue.</p>
+<h3 id="1-install-the-dependence">1. Install the dependence</h3>
+<pre><code class="lang-sh">yarn <span class="hljs-keyword">add</span><span class="bash"> point-sass --dev</span>
 </code></pre>
-<h3 id="2-override-variables">2. Override variables</h3>
-<p>All initial variables are located in <code>src/_vars.scss</code>.</p>
-<h3 id="3-compile">3. Compile</h3>
-<p>Run the command below to start compiling your own customized <strong>Point</strong>, you can
-find the compiled CSS files in the <code>./dist</code> directory</p>
-<pre><code><span class="hljs-attribute">gulp build</span>
-</code></pre><h2 id="copyright-and-license">Copyright and license</h2>
+<h3 id="2-set-your-variables">2. Set your variables</h3>
+<p>you can reference all initial variables in <code>scss/_ars.scss</code></p>
+<pre><code class="lang-scss"><span class="hljs-variable">$master-palette</span>: (
+  primary: <span class="hljs-number">#e74c3c</span>
+) !default;
+
+<span class="hljs-variable">$link-color</span>: <span class="hljs-number">#e74c3c</span>;
+</code></pre>
+<h3 id="3-import-point-at-the-end-of-your-code">3. Import Point at the end of your code</h3>
+<pre><code class="lang-scss"><span class="hljs-variable">$master-palette</span>: (
+  primary: <span class="hljs-number">#e74c3c</span>
+) !default;
+
+<span class="hljs-variable">$link-color</span>: <span class="hljs-number">#e74c3c</span>;
+
+<span class="hljs-comment">// Your code</span>
+
+@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/point-sass/point"</span>
+</code></pre>
+<h2 id="browser-support">Browser Support</h2>
+<p>Point uses <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> for CSS
+reset and <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to make styles
+compatible with earlier browser versions. For best user experience, these
+browsers are recommended:</p>
+<ul>
+<li>Chrome</li>
+<li>Firefox</li>
+<li>Safari</li>
+<li>Opera</li>
+<li>Microsoft Edge</li>
+<li>Internet Explorer 10+</li>
+</ul>
+<h2 id="copyright-and-license">Copyright and license</h2>
 <p>Code copyright 2017 moyu. Code released under <a href="https://github.com/moyus/point/blob/master/LICENSE">the MIT license</a>.</p>
 
 
@@ -175,7 +204,7 @@ find the compiled CSS files in the <code>./dist</code> directory</p>
     <!-- END .docs-l-content -->
     <footer id="colophon" class="docs-l-footer" role="contentinfo">
       <p>Designed and built by <a href="http://moyu.io">moyu</a></p>
-      <p>Licensed under the <a href="https://github.com/moyus/point.css/blob/master/LICENSE">MIT License</a>.</p>
+      <p>Licensed under the <a href="https://github.com/moyus/point/blob/master/LICENSE">MIT License</a>.</p>
     </footer>
   </div>
   <script src="/js/main.js"></script>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Navbar | Point</title>
+  <title> Style Guide | Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
   <link rel="stylesheet" href="/css/point.css">
@@ -138,83 +138,73 @@
       </aside>
       <!-- END .docs-l-sidebar -->
       <main id="main" class="docs-l-main docs-c-content" role="main">
-        <h1 id="navbar">Navbar</h1>
-<ul>
-<li><a href="#basic">Basic</a></li>
-</ul>
-<h2 id="basic">Basic</h2>
-<p>Structure:</p>
-<ul>
-<li><code>.c-navbar</code><ul>
-<li><code>.c-navbar__left</code>, <code>.c-navbar__center</code>, <code>.c-navbar__right</code><ul>
-<li><code>.c-navbar__item</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<div class="u-mb-15">
-  <nav class="c-navbar">
-    <div class="c-navbar__left is-auto">
-        <a role="button" class="c-navbar__item">
-            <img src="/images/logo-head.png" alt="">
-        </a>
-    </div>
-    <div class="c-navbar__right is-fixed">
-      <a role="button" class="c-navbar__item">Home</a>
-      <a role="button" class="c-navbar__item">About</a>
-      <a role="button" class="c-navbar__item">Work</a>
-      <a role="button" class="c-navbar__item">Shop</a>
-      <a role="button" class="c-navbar__item">Blog</a>
-      <a role="button" class="c-navbar__item">Contact</a>
-    </div>
-  </nav>
+        <h1 id="style-guide">Style Guide</h1>
+<p>In order to create a more transparent UI code, <strong>Point</strong> introduced some great code styles from the community.</p>
+<h2 id="bem">BEM</h2>
+<p><strong>Point</strong> relies on <a href="http://getbem.com/">BEM</a> to create structured class names.</p>
+<pre><code class="lang-html">&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-box c-box--info"</span>&gt;
+  &lt;header <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-box__header"</span>&gt;Tip&lt;/header&gt;
+  &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-box__body"</span>&gt;
+    &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"c-box__inner"</span>&gt;
+      <span class="hljs-comment">// ...</span>
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="namespaces">Namespaces</h2>
+<p>By prefixing some classes with a certain string can explain what kind of job it does.</p>
+<table class="table table--bordered">
+  <thead>
+    <tr>
+      <th>Prefix</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.c-<em></code></td>
+      <td>Component</td>
+      <td><code>.c-modal</code></td>
+    </tr>
+    <tr>
+      <td><code>.l-</em></code></td>
+      <td>Layout</td>
+      <td><code>.l-row</code>, <code>.l-col</code></td>
+    </tr>
+    <tr>
+      <td><code>.is-<em></code>, <code>.has-</em></code></td>
+      <td>State</td>
+      <td><code>.is-active</code>, <code>.has-children</code></td>
+    </tr>
+    <tr>
+      <td><code>.js-<em></code></td>
+      <td>JavaScript hooks</td>
+      <td><code>.js-nav</code></td>
+    </tr>
+    <tr>
+      <td><code>.form-</em></code></td>
+      <td>Form related element</td>
+      <td><code>.form-input</code></td>
+    </tr>
+    <tr>
+      <td><code>.u-*</code></td>
+      <td>Utilities</td>
+      <td><code>.u-color-primary</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="c-note c-note--warning">
+  Classes without prefixing are treated as simple elements which could be native HTML elements or one tag element.
 </div>
 
-<pre><code class="lang-html">&lt;nav <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"c-navbar"</span>&gt;
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__left is-auto"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/logo-head.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__right is-fixed"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>Work<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>Shop<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>Blog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-navbar__item"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></span>
-</code></pre>
-<hr>
-<div class="u-mb-15">
-  <nav class="c-navbar">
-      <div class="c-navbar__center">
-        <a role="button" class="c-navbar__item">
-            <img src="/images/logo.png" width="40" height="40">
-        </a>
-      </div>
-      <div class="c-navbar__left">
-        <a role="button" class="c-navbar__item">APPS</a>
-        <a role="button" class="c-navbar__item">TECH</a>
-        <a role="button" class="c-navbar__item">CREATIVE</a>
-        <a role="button" class="c-navbar__item">INSIGHTS</a>
-      </div>
-      <div class="c-navbar__right">
-        <div class="c-navbar__item">
-          <form action="#" class="form-inline">
-            <div class="form-group">
-              <input type="text" class="form-input" placeholder="Search...">
-            </div>
-          </form>
-        </div>
-        <div class="c-navbar__item">
-          <a role="button" class="btn btn--primary btn--outline">SIGN IN</a>
-        </div>
-      </div>
-  </nav>
-</div>
+<h2 id="responsive-suffixes">Responsive Suffixes</h2>
+<p><code>*@&lt;breakpoint&gt;</code> tell us <em>&#39;when at this breakpoint, use this class&#39;</em>. Some examples:</p>
+<ul>
+<li><code>.u-hiddenUp@md</code>: a utility class to hide things when at <code>md</code> breakpoint and up.</li>
+<li><code>.l-col-6@sm</code>: change column&#39;s size to half of it&#39;s parent when at <code>sm</code> breakpoint and up</li>
+</ul>
 
 
       </main>

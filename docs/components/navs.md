@@ -56,6 +56,14 @@ The basic **Nav** just remove default list style. You can easily extend it to cr
       </li>
       <li class="c-nav__item">
         <a href="#" class="c-nav__link">Link</a>
+        <ul class="c-nav c-nav--menus c-nav--sm">
+          <li class="c-nav__item">
+            <a href="#" class="c-nav__link">SubItem 1</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#" class="c-nav__link">SubItem 2</a>
+          </li>
+        </ul>
       </li>
       <li class="c-nav__item">
         <a href="#" class="c-nav__link">Another Link</a>
@@ -75,6 +83,14 @@ The basic **Nav** just remove default list style. You can easily extend it to cr
   </li>
   <li class="c-nav__item">
     <a href="#" class="c-nav__link">Link</a>
+    <ul class="c-nav c-nav--menus c-nav--sm">
+      <li class="c-nav__item">
+        <a href="#" class="c-nav__link">SubItem 1</a>
+      </li>
+      <li class="c-nav__item">
+        <a href="#" class="c-nav__link">SubItem 2</a>
+      </li>
+    </ul>
   </li>
   <li class="c-nav__item">
     <a href="#" class="c-nav__link">Another Link</a>

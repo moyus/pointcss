@@ -14,35 +14,64 @@ Point is a flexible CSS Framework for building modern responsive web apps.
 - 14KB gzipped
 
 ## Setup
-There are two ways to start
-### 1. Install with Yarn
+There are 3 ways to start
+
+### Install with Yarn
 ```sh
-yarn add point.css
+yarn add point-sass
 ```
-*****
-### 2. Download from the repository
-[https://github.com/moyus/point](https://github.com/moyus/point)
+
+### Install with NPM
+```sh
+npm install point-sass --save
+```
+
+### Direct `<script>` Include
+`<link rel="stylesheet" href="dist/point.min.css" />`
 
 ## Customize
-Point uses Gulp for compiling SASS into CSS, If you want to customize Point with
-your own variables, just download the source files from the repository.
+Point is coded in [SASS](http://sass-lang.com/), If you're familiar with it, You can continue.
 
-### 1. Install dependences
-Navigate to the root directory of Point, then run the command below to install all dependencies.
+### 1. Install the dependence
 ```sh
-yarn
+yarn add point-sass --dev
 ```
 
-### 2. Override variables
-All initial variables are located in `src/_vars.scss`.
+### 2. Set your variables
+you can reference all initial variables in `scss/_ars.scss`
+```scss
+$master-palette: (
+  primary: #e74c3c
+) !default;
 
-### 3. Compile
-Run the command below to start compiling your own customized **Point**, you can
-find the compiled CSS files in the `./dist` directory
+$link-color: #e74c3c;
+```
 
+### 3. Import Point at the end of your code
+```scss
+$master-palette: (
+  primary: #e74c3c
+) !default;
+
+$link-color: #e74c3c;
+
+// Your code
+
+@import "node_modules/point-sass/point"
 ```
-gulp build
-```
+
+## Browser Support
+Point uses [Normalize.css](https://necolas.github.io/normalize.css/) for CSS
+reset and [Autoprefixer](https://github.com/postcss/autoprefixer) to make styles
+compatible with earlier browser versions. For best user experience, these
+browsers are recommended:
+
+- Chrome
+- Firefox
+- Safari
+- Opera
+- Microsoft Edge
+- Internet Explorer 10+
 
 ## Copyright and license
 Code copyright 2017 moyu. Code released under [the MIT license](https://github.com/moyus/point/blob/master/LICENSE).
