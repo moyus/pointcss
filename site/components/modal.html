@@ -202,15 +202,15 @@ Point does <strong>not</strong> include any JavaScript interaction with <strong>
 </div>
 
 <h2 id="sizes">Sizes</h2>
-<p>Add <code>.c-modalCard--sm</code> or <code>.c-modalCard--lg</code> modifier class on <code>.c-modalCard</code> container to quickly change the size of modalCard.</p>
+<p>Add <code>.c-modal--sm</code> or <code>.c-modal--lg</code> modifier class on <code>.c-modal</code> container to quickly change the size of modal content.</p>
 <div class="u-mb-15">
   <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="smModal">Small Modal</button>
   <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="lgModal">Large Modal</button>
 </div>
 
-<div id="smModal" class="c-modal" style="background-color: rgba(0,0,0,0.65)">
+<div id="smModal" class="c-modal c-modal--sm" style="background-color: rgba(0,0,0,0.65)">
   <div class="c-modal__content">
-    <div class="c-modalCard c-modalCard--sm">
+    <div class="c-modalCard">
       <header class="c-modalCard__header">
         <h4 class="c-modalCard__title">Large Modal</h4>
         <a role="button" class="c-modalCard__close js-modal-close">
@@ -233,9 +233,9 @@ Point does <strong>not</strong> include any JavaScript interaction with <strong>
   </div>
 </div>
 
-<div id="lgModal" class="c-modal" style="background-color: rgba(0,0,0,0.65)">
+<div id="lgModal" class="c-modal c-modal--lg" style="background-color: rgba(0,0,0,0.65)">
   <div class="c-modal__content">
-    <div class="c-modalCard c-modalCard--lg">
+    <div class="c-modalCard">
       <header class="c-modalCard__header">
         <h4 class="c-modalCard__title">Large Modal</h4>
         <a role="button" class="c-modalCard__close js-modal-close">
@@ -258,17 +258,17 @@ Point does <strong>not</strong> include any JavaScript interaction with <strong>
   </div>
 </div>
 
-<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"smModal"</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-modal"</span> style=<span class="hljs-string">"background-color: rgba(0,0,0,0.65)"</span>&gt;
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"smModal"</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-modal  c-modal--sm"</span> style=<span class="hljs-string">"background-color: rgba(0,0,0,0.65)"</span>&gt;
   &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-modal__content"</span>&gt;
-    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-modalCard c-modalCard--sm"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-modalCard"</span>&gt;
       ...
     &lt;/<span class="hljs-keyword">div</span>&gt;
   &lt;/<span class="hljs-keyword">div</span>&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
 
-&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"lgModal"</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-modal"</span> style=<span class="hljs-string">"background-color: rgba(0,0,0,0.65)"</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"lgModal"</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-modal c-modal--lg"</span> style=<span class="hljs-string">"background-color: rgba(0,0,0,0.65)"</span>&gt;
   &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-modal__content"</span>&gt;
-    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-modalCard c-modalCard--lg"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"c-modalCard"</span>&gt;
       ...
     &lt;/<span class="hljs-keyword">div</span>&gt;
   &lt;/<span class="hljs-keyword">div</span>&gt;

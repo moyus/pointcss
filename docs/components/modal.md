@@ -59,16 +59,16 @@ Point does <strong>not</strong> include any JavaScript interaction with <strong>
 </div>
 
 ## Sizes
-Add `.c-modalCard--sm` or `.c-modalCard--lg` modifier class on `.c-modalCard` container to quickly change the size of modalCard.
+Add `.c-modal--sm` or `.c-modal--lg` modifier class on `.c-modal` container to quickly change the size of modal content.
 
 <div class="u-mb-15">
   <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="smModal">Small Modal</button>
   <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="lgModal">Large Modal</button>
 </div>
 
-<div id="smModal" class="c-modal" style="background-color: rgba(0,0,0,0.65)">
+<div id="smModal" class="c-modal c-modal--sm" style="background-color: rgba(0,0,0,0.65)">
   <div class="c-modal__content">
-    <div class="c-modalCard c-modalCard--sm">
+    <div class="c-modalCard">
       <header class="c-modalCard__header">
         <h4 class="c-modalCard__title">Large Modal</h4>
         <a role="button" class="c-modalCard__close js-modal-close">
@@ -91,9 +91,9 @@ Add `.c-modalCard--sm` or `.c-modalCard--lg` modifier class on `.c-modalCard` co
   </div>
 </div>
 
-<div id="lgModal" class="c-modal" style="background-color: rgba(0,0,0,0.65)">
+<div id="lgModal" class="c-modal c-modal--lg" style="background-color: rgba(0,0,0,0.65)">
   <div class="c-modal__content">
-    <div class="c-modalCard c-modalCard--lg">
+    <div class="c-modalCard">
       <header class="c-modalCard__header">
         <h4 class="c-modalCard__title">Large Modal</h4>
         <a role="button" class="c-modalCard__close js-modal-close">
@@ -117,17 +117,17 @@ Add `.c-modalCard--sm` or `.c-modalCard--lg` modifier class on `.c-modalCard` co
 </div>
 
 ```html
-<div id="smModal" class="c-modal" style="background-color: rgba(0,0,0,0.65)">
+<div id="smModal" class="c-modal  c-modal--sm" style="background-color: rgba(0,0,0,0.65)">
   <div class="c-modal__content">
-    <div class="c-modalCard c-modalCard--sm">
+    <div class="c-modalCard">
       ...
     </div>
   </div>
 </div>
 
-<div id="lgModal" class="c-modal" style="background-color: rgba(0,0,0,0.65)">
+<div id="lgModal" class="c-modal c-modal--lg" style="background-color: rgba(0,0,0,0.65)">
   <div class="c-modal__content">
-    <div class="c-modalCard c-modalCard--lg">
+    <div class="c-modalCard">
       ...
     </div>
   </div>
