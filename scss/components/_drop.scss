@@ -35,6 +35,11 @@
   border-radius: $drop-border-radius;
   background-color: $drop-bg-color;
   z-index: $drop-zIndex;
+  top: 100%;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  margin: $drop-content-gutter 0 0 0;
 
   &--always {
     display: block;
@@ -45,7 +50,7 @@
     left: 0;
     right: auto;
     bottom: 100%;
-    margin-bottom: $drop-content-gutter;
+    margin: 0 0 $drop-content-gutter 0;
   }
 
   &--top {
@@ -53,7 +58,7 @@
     left: 50%;
     right: auto;
     bottom: 100%;
-    margin-bottom: $drop-content-gutter;
+    margin: 0 0 $drop-content-gutter 0;
     transform: translateX(-50%);
   }
 
@@ -62,7 +67,7 @@
     left: auto;
     right: 0;
     bottom: 100%;
-    margin-bottom: $drop-content-gutter;
+    margin: 0 0 $drop-content-gutter 0;
   }
 
   &--rightStart {
@@ -70,7 +75,7 @@
     left: 100%;
     right: auto;
     bottom: auto;
-    margin-left: $drop-content-gutter;
+    margin: 0 0 0 $drop-content-gutter;
   }
 
   &--right {
@@ -78,7 +83,7 @@
     left: 100%;
     right: auto;
     bottom: auto;
-    margin-left: $drop-content-gutter;
+    margin: 0 0 0 $drop-content-gutter;
     transform: translateY(-50%);
   }
 
@@ -87,16 +92,15 @@
     left: 100%;
     right: auto;
     bottom: 0;
-    margin-left: $drop-content-gutter;
+    margin: 0 0 0 $drop-content-gutter;
   }
 
-  &,
   &--bottomStart {
     top: 100%;
     left: 0;
     right: auto;
     bottom: auto;
-    margin-top: $drop-content-gutter;
+    margin: $drop-content-gutter 0 0 0;
   }
 
   &--bottom {
@@ -104,7 +108,7 @@
     left: 50%;
     right: auto;
     bottom: auto;
-    margin-top: $drop-content-gutter;
+    margin: $drop-content-gutter 0 0 0;
     transform: translateX(-50%);
   }
 
@@ -113,7 +117,7 @@
     left: auto;
     right: 0;
     bottom: auto;
-    margin-top: $drop-content-gutter;
+    margin: $drop-content-gutter 0 0 0;
   }
 
   &--leftStart {
@@ -121,7 +125,7 @@
     left: auto;
     right: 100%;
     bottom: auto;
-    margin-right: $drop-content-gutter;
+    margin: 0 $drop-content-gutter 0 0;
   }
 
   &--left {
@@ -129,7 +133,7 @@
     left: 100%;
     right: auto;
     bottom: auto;
-    margin-right: $drop-content-gutter;
+    margin: 0 $drop-content-gutter 0 0;
     transform: translateY(-50%);
   }
 
@@ -138,6 +142,6 @@
     left: 100%;
     right: auto;
     bottom: 0;
-    margin-right: $drop-content-gutter;
+    margin: 0 $drop-content-gutter 0 0;
   }
 }
