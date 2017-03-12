@@ -3974,6 +3974,11 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   border-radius: 3px;
   background-color: #fff;
   z-index: 400;
+  top: 100%;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  margin: 4px 0 0 0;
 }
 
 .c-drop__content--always {
@@ -3985,7 +3990,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: 0;
   right: auto;
   bottom: 100%;
-  margin-bottom: 4px;
+  margin: 0 0 4px 0;
 }
 
 .c-drop__content--top {
@@ -3993,7 +3998,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: 50%;
   right: auto;
   bottom: 100%;
-  margin-bottom: 4px;
+  margin: 0 0 4px 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -4003,7 +4008,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: auto;
   right: 0;
   bottom: 100%;
-  margin-bottom: 4px;
+  margin: 0 0 4px 0;
 }
 
 .c-drop__content--rightStart {
@@ -4011,7 +4016,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: 100%;
   right: auto;
   bottom: auto;
-  margin-left: 4px;
+  margin: 0 0 0 4px;
 }
 
 .c-drop__content--right {
@@ -4019,7 +4024,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: 100%;
   right: auto;
   bottom: auto;
-  margin-left: 4px;
+  margin: 0 0 0 4px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -4029,15 +4034,15 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: 100%;
   right: auto;
   bottom: 0;
-  margin-left: 4px;
+  margin: 0 0 0 4px;
 }
 
-.c-drop__content, .c-drop__content--bottomStart {
+.c-drop__content--bottomStart {
   top: 100%;
   left: 0;
   right: auto;
   bottom: auto;
-  margin-top: 4px;
+  margin: 4px 0 0 0;
 }
 
 .c-drop__content--bottom {
@@ -4045,7 +4050,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: 50%;
   right: auto;
   bottom: auto;
-  margin-top: 4px;
+  margin: 4px 0 0 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -4055,7 +4060,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: auto;
   right: 0;
   bottom: auto;
-  margin-top: 4px;
+  margin: 4px 0 0 0;
 }
 
 .c-drop__content--leftStart {
@@ -4063,7 +4068,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: auto;
   right: 100%;
   bottom: auto;
-  margin-right: 4px;
+  margin: 0 4px 0 0;
 }
 
 .c-drop__content--left {
@@ -4071,7 +4076,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: 100%;
   right: auto;
   bottom: auto;
-  margin-right: 4px;
+  margin: 0 4px 0 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -4081,7 +4086,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   left: 100%;
   right: auto;
   bottom: 0;
-  margin-right: 4px;
+  margin: 0 4px 0 0;
 }
 
 .c-pagination {
@@ -4182,6 +4187,8 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 }
 
 .c-modal__content {
+  max-width: 600px;
+  width: 100%;
   margin: auto;
 }
 
@@ -4203,7 +4210,6 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 600px;
   width: 100%;
   background-color: #fff;
   border-radius: 5px;
@@ -4225,12 +4231,6 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
           align-items: center;
   padding: 16px;
   border-bottom: 1px solid #e5e5e5;
-}
-
-.c-modalCard__header::after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .c-modalCard__title {
@@ -4273,11 +4273,11 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   text-align: right;
 }
 
-.c-modalCard--sm {
+.c-modal--sm .c-modal__content {
   max-width: 480px;
 }
 
-.c-modalCard--lg {
+.c-modal--lg .c-modal__content {
   max-width: 900px;
 }
 
