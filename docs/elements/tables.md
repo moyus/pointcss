@@ -16,7 +16,7 @@ Applying `.table` class on `table` element to quick create a styled table.
 <table class="table">
   <thead>
     <tr>
-      <th>#ID</th>
+      <th>ID</th>
       <th>Task</th>
       <th>Completed</th>
       <th>User</th>
