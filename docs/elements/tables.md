@@ -66,7 +66,7 @@ Applying `.table` class on `table` element to quick create a styled table.
 <table class="table">
   <thead>
     <tr>
-      <th>#ID</th>
+      <th>ID</th>
       <th>Task</th>
       <th>Completed</th>
       <th>User</th>
@@ -90,7 +90,7 @@ By adding `.table--striped` modifier class on `.table` element to quick create a
 <table class="table table--striped">
   <thead>
     <tr>
-      <th>#ID</th>
+      <th>ID</th>
       <th>Name</th>
       <th>Age</th>
       <th>Gender</th>
@@ -147,7 +147,7 @@ By adding `.table--striped` modifier class on `.table` element to quick create a
 <table class="table table--striped">
   <thead>
     <tr>
-      <th>#ID</th>
+      <th>ID</th>
       <th>Name</th>
       <th>Age</th>
       <th>Gender</th>
@@ -172,7 +172,7 @@ By adding `.table--hover` modifier class on `.table` element to quick create a t
 <table class="table table--hover">
   <thead>
     <tr>
-      <th>#ID</th>
+      <th>ID</th>
       <th>Name</th>
       <th>Age</th>
       <th>Gender</th>
@@ -229,7 +229,7 @@ By adding `.table--hover` modifier class on `.table` element to quick create a t
 <table class="table table--hover">
   <thead>
     <tr>
-      <th>#ID</th>
+      <th>ID</th>
       <th>Name</th>
       <th>Age</th>
       <th>Gender</th>
@@ -255,7 +255,7 @@ By adding `.table--bordered` modifier class on `.table` element to quick create 
 <table class="table table--striped table--bordered">
   <thead>
     <tr>
-      <th>#ID</th>
+      <th>ID</th>
       <th>Name</th>
       <th>Age</th>
       <th>Gender</th>
@@ -312,7 +312,7 @@ By adding `.table--bordered` modifier class on `.table` element to quick create 
 <table class="table table--striped table--bordered">
   <thead>
     <tr>
-      <th>#ID</th>
+      <th>ID</th>
       <th>Name</th>
       <th>Age</th>
       <th>Gender</th>
