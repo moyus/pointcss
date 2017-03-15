@@ -1,6 +1,6 @@
 /*
  * Point
- * version: 0.8.6
+ * version: 0.8.7
  * url: http://getpoint.io
  * Copyright 2017 moyu
  * Licensed under MIT (https://github.com/moyus/point/blob/master/LICENSE)
@@ -3641,9 +3641,9 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 }
 
 .c-list__link.is-active {
-  color: #fff !important;
-  background-color: #7872ff !important !important;
-  border-color: #7872ff !important !important;
+  color: #fff;
+  background-color: #7872ff !important;
+  border-color: #7872ff !important;
   z-index: 2;
 }
 
@@ -3702,18 +3702,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   position: relative;
   margin: 0;
   padding: 0;
-  text-align: left;
   list-style: none;
-}
-
-.c-nav::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.c-nav__item {
-  position: relative;
 }
 
 .c-nav__link {
@@ -3783,11 +3772,13 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 }
 
 .c-nav--tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-bottom: 1px solid #ddd;
 }
 
 .c-nav--tabs > .c-nav__item {
-  float: left;
   margin-bottom: -1px;
 }
 
@@ -3806,7 +3797,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   color: #333333;
 }
 
-.c-nav--tabs > .c-nav__item .c-nav__link.is-active {
+.c-nav--tabs > .c-nav__item > .c-nav__link.is-active {
   color: #333333;
   border-color: #ddd #ddd #fff;
   background-color: #fff;
