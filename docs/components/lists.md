@@ -17,7 +17,7 @@ display complex content.
 <div class="l-row">
   <div class="l-col-6@md">
     <ul class="c-list">
-      <li class="c-list__item">1.Active</li>
+      <li class="c-list__item">1. Active</li>
       <li class="c-list__item">2. Dapibus ac facilisis in</li>
       <li class="c-list__item">3. Morbi leo risus</li>
       <li class="c-list__item is-disabled">4. Disabled</li>
@@ -28,7 +28,7 @@ display complex content.
 
 ```html
 <ul class="c-list">
-  <li class="c-list__item">1.Active</li>
+  <li class="c-list__item">1. Active</li>
   <li class="c-list__item">2. Dapibus ac facilisis in</li>
   <li class="c-list__item">3. Morbi leo risus</li>
   <li class="c-list__item is-disabled">4. Disabled</li>
@@ -43,7 +43,7 @@ container to create a inset list, so you can use it as inner content of other co
 <div class="l-row">
   <div class="l-col-6@md">
     <ul class="c-list c-list--inset">
-      <li class="c-list__item">1.Active</li>
+      <li class="c-list__item">1. Active</li>
       <li class="c-list__item">2. Dapibus ac facilisis in</li>
       <li class="c-list__item">3. Morbi leo risus</li>
       <li class="c-list__item is-disabled">4. Disabled</li>
@@ -55,7 +55,7 @@ container to create a inset list, so you can use it as inner content of other co
       <header class="c-box__header">List in Box</header>
       <div class="c-box__body">
         <ul class="c-list c-list--inset u-mb-0">
-          <li class="c-list__item">1.Active</li>
+          <li class="c-list__item">1. Active</li>
           <li class="c-list__item">2. Dapibus ac facilisis in</li>
           <li class="c-list__item">3. Morbi leo risus</li>
           <li class="c-list__item is-disabled">4. Disabled</li>
@@ -68,7 +68,7 @@ container to create a inset list, so you can use it as inner content of other co
 
 ```html
 <ul class="c-list c-list--inset">
-  <li class="c-list__item">1.Active</li>
+  <li class="c-list__item">1. Active</li>
   <li class="c-list__item">2. Dapibus ac facilisis in</li>
   <li class="c-list__item">3. Morbi leo risus</li>
   <li class="c-list__item is-disabled">4. Disabled</li>
@@ -79,7 +79,7 @@ container to create a inset list, so you can use it as inner content of other co
   <header class="c-box__header">List in Box</header>
   <div class="c-box__body">
     <ul class="c-list c-list--inset u-mb-0">
-      <li class="c-list__item">1.Active</li>
+      <li class="c-list__item">1. Active</li>
       <li class="c-list__item">2. Dapibus ac facilisis in</li>
       <li class="c-list__item">3. Morbi leo risus</li>
       <li class="c-list__item is-disabled">4. Disabled</li>
@@ -96,7 +96,7 @@ container, you can easily create a borderd list style.
 <div class="l-row">
   <div class="l-col-6@md">
     <ul class="c-list c-list--bordered">
-      <li class="c-list__item">1.Active</li>
+      <li class="c-list__item">1. Active</li>
       <li class="c-list__item">2. Dapibus ac facilisis in</li>
       <li class="c-list__item">3. Morbi leo risus</li>
       <li class="c-list__item is-disabled">4. Disabled</li>
@@ -107,7 +107,7 @@ container, you can easily create a borderd list style.
 
 ```html
 <ul class="c-list c-list--bordered">
-  <li class="c-list__item">1.Active</li>
+  <li class="c-list__item">1. Active</li>
   <li class="c-list__item">2. Dapibus ac facilisis in</li>
   <li class="c-list__item">3. Morbi leo risus</li>
   <li class="c-list__item is-disabled">4. Disabled</li>
@@ -121,7 +121,7 @@ To quick create linkify list by using `<a>` tag and child `.c-list__link` class.
 <div class="l-row">
   <div class="l-col-6@md">
     <div class="c-list c-list--bordered c-list--lg">
-      <a class="c-list__link">1.Dapibus ac facilisis in</a>
+      <a class="c-list__link">1. Dapibus ac facilisis in</a>
       <a class="c-list__link is-active">2. Active</a>
       <a class="c-list__link">3. Morbi leo risus</a>
       <a class="c-list__link is-disabled">4. Disabled</a>
@@ -132,7 +132,7 @@ To quick create linkify list by using `<a>` tag and child `.c-list__link` class.
 
 ```html
 <div class="c-list c-list--bordered c-list--lg">
-  <a class="c-list__link">1.Dapibus ac facilisis in</a>
+  <a class="c-list__link">1. Dapibus ac facilisis in</a>
   <a class="c-list__link is-active">2. Active</a>
   <a class="c-list__link">3. Morbi leo risus</a>
   <a class="c-list__link is-disabled">4. Disabled</a>
@@ -147,7 +147,7 @@ modifier classes on `.c-list` container to change list size.
 <div class="l-row">
   <div class="l-col-4@md">
     <ul class="c-list c-list--bordered c-list--sm">
-      <li class="c-list__item">1.Active</li>
+      <li class="c-list__item">1. Active</li>
       <li class="c-list__item">2. Dapibus ac facilisis in</li>
       <li class="c-list__item">3. Morbi leo risus</li>
       <li class="c-list__item is-disabled">4. Disabled</li>
@@ -156,7 +156,7 @@ modifier classes on `.c-list` container to change list size.
   </div>
   <div class="l-col-4@md">
     <ul class="c-list c-list--bordered">
-      <li class="c-list__item">1.Active</li>
+      <li class="c-list__item">1. Active</li>
       <li class="c-list__item">2. Dapibus ac facilisis in</li>
       <li class="c-list__item">3. Morbi leo risus</li>
       <li class="c-list__item is-disabled">4. Disabled</li>
@@ -165,7 +165,7 @@ modifier classes on `.c-list` container to change list size.
   </div>
   <div class="l-col-4@md">
     <ul class="c-list c-list--bordered c-list--lg">
-      <li class="c-list__item">1.Active</li>
+      <li class="c-list__item">1. Active</li>
       <li class="c-list__item">2. Dapibus ac facilisis in</li>
       <li class="c-list__item">3. Morbi leo risus</li>
       <li class="c-list__item is-disabled">4. Disabled</li>
@@ -176,7 +176,7 @@ modifier classes on `.c-list` container to change list size.
 
 ```html
 <ul class="c-list c-list--bordered c-list--sm">
-  <li class="c-list__item">1.Active</li>
+  <li class="c-list__item">1. Active</li>
   <li class="c-list__item">2. Dapibus ac facilisis in</li>
   <li class="c-list__item">3. Morbi leo risus</li>
   <li class="c-list__item is-disabled">4. Disabled</li>
@@ -184,7 +184,7 @@ modifier classes on `.c-list` container to change list size.
 </ul>
 
 <ul class="c-list c-list--bordered">
-  <li class="c-list__item">1.Active</li>
+  <li class="c-list__item">1. Active</li>
   <li class="c-list__item">2. Dapibus ac facilisis in</li>
   <li class="c-list__item">3. Morbi leo risus</li>
   <li class="c-list__item is-disabled">4. Disabled</li>
@@ -192,7 +192,7 @@ modifier classes on `.c-list` container to change list size.
 </ul>
 
 <ul class="c-list c-list--bordered c-list--lg">
-  <li class="c-list__item">1.Active</li>
+  <li class="c-list__item">1. Active</li>
   <li class="c-list__item">2. Dapibus ac facilisis in</li>
   <li class="c-list__item">3. Morbi leo risus</li>
   <li class="c-list__item is-disabled">4. Disabled</li>
