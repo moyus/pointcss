@@ -357,7 +357,7 @@ Use flexbox to create input group.
     <div class="form-flex">
         <span class="form-addon">$</span>
         <input type="text" class="form-input">
-        <span class="form-addon">.0.0</span>
+        <span class="form-addon">.00</span>
     </div>
 </div>
 <!-- END .form-group -->

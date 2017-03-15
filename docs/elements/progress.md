@@ -8,7 +8,7 @@ title: "Progress"
 - [Sizes](#sizes)
 
 ## Types
-Navtive HTML `progress` bar with five predefined styles.
+Native HTML `progress` bar with five predefined styles.
 
 <div class="u-mb-15">
     <progress class="progress" value="15" max="100"></progress>
