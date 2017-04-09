@@ -1,4 +1,4 @@
-#Point
+# Point
 A flexible CSS Framework for building modern responsive web apps.
 
 - Built with Flexbox
