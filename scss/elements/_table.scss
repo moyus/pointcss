@@ -14,13 +14,24 @@
     text-align: left;
     padding: $table-td-padding-y $table-td-padding-x;
     vertical-align: middle;
-    border-bottom: $table-border-width solid $table-border-color;
+    border-top: $table-border-width solid $table-border-color;
+  }
+  
+  thead {
+    th {
+      border-top: 0;
+    }
   }
 
   tbody + tbody {
     margin-top: $table-body-margin-top;
   }
+}
 
+.thead--accent {
+  th {
+    background-color: $grey-lightest;
+  }
 }
 
 .table--bordered {

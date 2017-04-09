@@ -460,7 +460,8 @@ input[type="checkbox"].form-switch {
     padding-bottom: $form-input-padding-y;
   }
 
-  .form-input {
+  .form-input,
+  .form-control {
     display: inline-block;
     width: auto;
     vertical-align: middle;

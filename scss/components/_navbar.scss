@@ -42,6 +42,12 @@
   &.is-auto {
     flex: 1 1 auto;
     min-width: 0;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &.is-fixed {
     flex: none;

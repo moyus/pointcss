@@ -292,8 +292,8 @@ $pagination-item-bg:                    $color-white !default;
 // Note & Box
 // -----------------------------------------------------------------------------
 $box-margin-bottom:                     $space-stack-l !default;
-$box-padding-y:                         $space-squish-l-y !default;
-$box-padding-x:                         $space-squish-l-x !default;
+$box-padding-y:                         10px !default;
+$box-padding-x:                         10px !default;
 $box-header-color:                      $heading-color !default;
 $box-header-bg:                         $grey-lightest !default;
 $box-body-bg:                           $color-white !default;
