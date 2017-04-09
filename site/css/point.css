@@ -1,6 +1,6 @@
 /*
  * Point
- * version: 0.8.7
+ * version: 0.8.8
  * url: http://getpoint.io
  * Copyright 2017 moyu
  * Licensed under MIT (https://github.com/moyus/point/blob/master/LICENSE)
@@ -1496,6 +1496,11 @@ abbr[title] {
   text-align: center;
 }
 
+.l-level__item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
 .l-level__left,
 .l-level__center,
 .l-level__right {
@@ -1568,6 +1573,15 @@ abbr[title] {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   min-width: 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.l-level__left.is-auto::-webkit-scrollbar,
+.l-level__right.is-auto::-webkit-scrollbar {
+  display: none;
 }
 
 .l-level__left.is-fixed,
@@ -2100,7 +2114,8 @@ input[type="checkbox"].form-switch:checked:after {
   padding-bottom: 6px;
 }
 
-.form-inline .form-input {
+.form-inline .form-input,
+.form-inline .form-control {
   display: inline-block;
   width: auto;
   vertical-align: middle;
@@ -2728,11 +2743,19 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   text-align: left;
   padding: 8px 16px;
   vertical-align: middle;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.table thead th {
+  border-top: 0;
 }
 
 .table tbody + tbody {
   margin-top: 8px;
+}
+
+.thead--accent th {
+  background-color: #f5f5f5;
 }
 
 .table--bordered {
@@ -3530,40 +3553,31 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 }
 
 .c-box {
+  position: relative;
   margin-bottom: 32px;
+  border-radius: 3px;
 }
 
-.c-box__header {
+.c-box__heading {
   color: #333333;
   line-height: 1.2;
-  padding: 8px 16px;
+  font-size: 14px;
+  padding: 10px 10px;
+  margin: 0;
   background-color: #f5f5f5;
   border: 1px solid #ddd;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  overflow: hidden;
+  border-radius: 3px 3px 0 0;
 }
 
 .c-box__body {
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-color: #ddd;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border: 1px solid #ddd;
+  border-top: 0;
+  border-radius: 0 0 3px 3px;
   background-color: #fff;
-  overflow: hidden;
 }
 
 .c-box__inner {
-  padding: 16px;
-}
-
-.c-box__inner > *:first-child {
-  margin-top: 0;
-}
-
-.c-box__inner > *:last-child {
-  margin-bottom: 0;
+  padding: 10px;
 }
 
 .c-box--danger .c-box__header {
@@ -3886,6 +3900,15 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   min-width: 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.c-navbar__left.is-auto::-webkit-scrollbar,
+.c-navbar__right.is-auto::-webkit-scrollbar {
+  display: none;
 }
 
 .c-navbar__left.is-fixed,
@@ -4084,9 +4107,8 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .c-pagination__item {
@@ -4099,7 +4121,6 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   padding: 6px 12px;
   border-radius: 3px;
   border: 1px solid transparent;
-  background-color: #fff;
 }
 
 .c-pagination__item:hover {
@@ -4111,19 +4132,20 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   font-style: normal;
   background-color: #7872ff;
   border-color: #7872ff !important;
+  background-color: #7872ff;
   z-index: 15;
 }
 
 .c-pagination__item.is-disabled {
   color: rgba(0, 115, 170, 0.65);
   cursor: not-allowed;
-  background-color: #fff;
 }
 
 .c-pagination--bordered .c-pagination__item {
   min-width: 34px;
   border-color: #ddd;
   margin-left: -1px;
+  background-color: #fff;
 }
 
 .c-pagination--bordered .c-pagination__item:first-child {
@@ -4138,6 +4160,11 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 
 .c-pagination--bordered .c-pagination__item:nth-child(n+2):nth-last-child(n+2) {
   border-radius: 0;
+}
+
+.c-pagination--bordered .c-pagination__item.is-active {
+  color: #fff;
+  background-color: #7872ff;
 }
 
 .c-pagination--bordered .c-pagination__item.is-disabled {
@@ -4278,6 +4305,26 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 
 .u-circle {
   border-radius: 1993px !important;
+}
+
+.u-bb-0 {
+  border-bottom: 0 !important;
+}
+
+.u-bl-0 {
+  border-left: 0 !important;
+}
+
+.u-bt-0 {
+  border-top: 0 !important;
+}
+
+.u-br-0 {
+  border-right: 0 !important;
+}
+
+.u-b-0 {
+  border: 0 !important;
 }
 
 .u-clearfix::after {
@@ -4906,10 +4953,6 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
 
 .u-textNowrap {
   white-space: nowrap;
-}
-
-.u-title {
-  color: #333333 !important;
 }
 
 .u-h1 {

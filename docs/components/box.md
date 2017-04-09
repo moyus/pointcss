@@ -12,7 +12,7 @@ Sometimes you have groups of content and need to put them in boxes. In those
 situations, try the Box component.
 
 <div class="c-box">
-  <header class="c-box__header">Box Title</header>
+  <header class="c-box__heading">Box Title</header>
   <div class="c-box__body">
     <div class="c-box__inner">
       <p>
@@ -24,7 +24,7 @@ situations, try the Box component.
 
 ```html
 <div class="c-box">
-  <header class="c-box__header">Box Title</header>
+  <header class="c-box__heading">Box Title</header>
   <div class="c-box__body">
     <div class="c-box__inner">
       <p>
@@ -44,7 +44,7 @@ By adding the following modifier classes on <code>.c-box</code> container to qui
 - `c-box--warning`
 
 <div class="c-box c-box--info">
-  <header class="c-box__header">Info Box</header>
+  <header class="c-box__heading">Info Box</header>
   <div class="c-box__body">
     <div class="c-box__inner">
       <p>
@@ -55,7 +55,7 @@ By adding the following modifier classes on <code>.c-box</code> container to qui
 </div>
 <!-- END .c-box -->
 <div class="c-box c-box--danger">
-  <header class="c-box__header">Danger Box</header>
+  <header class="c-box__heading">Danger Box</header>
   <div class="c-box__body">
     <div class="c-box__inner">
       <p>
@@ -66,7 +66,7 @@ By adding the following modifier classes on <code>.c-box</code> container to qui
 </div>
 <!-- END .c-box -->
 <div class="c-box c-box--success">
-  <header class="c-box__header">Success Box</header>
+  <header class="c-box__heading">Success Box</header>
   <div class="c-box__body">
     <div class="c-box__inner">
       <p>
@@ -77,7 +77,7 @@ By adding the following modifier classes on <code>.c-box</code> container to qui
 </div>
 <!-- END .c-box -->
 <div class="c-box c-box--warning">
-  <header class="c-box__header">Warning Box</header>
+  <header class="c-box__heading">Warning Box</header>
   <div class="c-box__body">
     <div class="c-box__inner">
       <p>
@@ -90,7 +90,7 @@ By adding the following modifier classes on <code>.c-box</code> container to qui
 
 ```html
 <div class="c-box c-box--info">
-  <header class="c-box__header">Info Box</header>
+  <header class="c-box__heading">Info Box</header>
   <div class="c-box__body">
     <div class="c-box__inner">
       // ...
@@ -99,7 +99,7 @@ By adding the following modifier classes on <code>.c-box</code> container to qui
 </div>
 <!-- END .c-box -->
 <div class="c-box c-box--danger">
-  <header class="c-box__header">Danger Box</header>
+  <header class="c-box__heading">Danger Box</header>
   <div class="c-box__body">
     <div class="c-box__inner">
       // ...
@@ -108,7 +108,7 @@ By adding the following modifier classes on <code>.c-box</code> container to qui
 </div>
 <!-- END .c-box -->
 <div class="c-box c-box--success">
-  <header class="c-box__header">Success Box</header>
+  <header class="c-box__heading">Success Box</header>
   <div class="c-box__body">
     <div class="c-box__inner">
       // ...
@@ -117,7 +117,7 @@ By adding the following modifier classes on <code>.c-box</code> container to qui
 </div>
 <!-- END .c-box -->
 <div class="c-box c-box--warning">
-  <header class="c-box__header">Warning Box</header>
+  <header class="c-box__heading">Warning Box</header>
   <div class="c-box__body">
     <div class="c-box__inner">
       // ...

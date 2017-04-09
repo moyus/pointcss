@@ -132,30 +132,14 @@ and another block has fixed width use `.is-fixed`. *(resize your window to see t
 
 ```html
 <div class="l-level u-mb-15">
-  <div class="l-level__left">
-    <div class="l-level__item">
-      <div class="u-fs-20">Dashboard</div>
-      <ol class="c-breadcrumb">
-        <li class="c-breadcrumb__item">
-          <a href="#" class="c-breadcrumb__link">Home</a>
-        </li>
-        <li class="c-breadcrumb__item">
-          <a href="#" class="c-breadcrumb__link">Library</a>
-        </li>
-        <li class="c-breadcrumb__item">
-          Book
-        </li>
-      </ol>
+  <div class="l-level__left is-auto">
+    <div class="l-level__item u-textTruncated">
+      If you resize your width, you can see the effect!
     </div>
   </div>
-  <div class="l-level__right">
+  <div class="l-level__right is-fixed">
     <div class="l-level__item">
-      <form action="#" class="form-inline">
-        <div class="form-group">
-          <input type="text" class="form-input" placeholder="Search...">
-        </div>
-        <button class="btn btn--success">New Post</button>
-      </form>
+      <button class="btn btn--primary">I will remain my width</button>
     </div>
   </div>
 </div>
