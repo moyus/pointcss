@@ -1,6 +1,6 @@
 /*
  * Point
- * version: 0.8.8
+ * version: 0.8.9
  * url: http://getpoint.io
  * Copyright 2017 moyu
  * Licensed under MIT (https://github.com/moyus/point/blob/master/LICENSE)
@@ -3580,7 +3580,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   padding: 10px;
 }
 
-.c-box--danger .c-box__header {
+.c-box--danger .c-box__heading {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
@@ -3590,7 +3590,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   border-color: #ebccd1;
 }
 
-.c-box--info .c-box__header {
+.c-box--info .c-box__heading {
   color: #31708f;
   background-color: #d9edf7;
   border-color: #bde2fb;
@@ -3600,7 +3600,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   border-color: #bde2fb;
 }
 
-.c-box--success .c-box__header {
+.c-box--success .c-box__heading {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
@@ -3610,7 +3610,7 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   border-color: #d6e9c6;
 }
 
-.c-box--warning .c-box__header {
+.c-box--warning .c-box__heading {
   color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;
