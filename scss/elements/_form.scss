@@ -127,21 +127,30 @@ select.form-select {
 }
 
 // checkbox
-label.form-checkbox input[type="checkbox"],
-input[type="checkbox"].form-checkbox {
+.form-checkbox {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 $space-inline-l $space-inline-base 0;
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.form-checkbox__indicator {
+  position: relative;
+  display: block;
   width: 16px;
   height: 16px;
   background-color: $form-input-bg;
   border: 1px solid $form-input-border-color;
   border-radius: $form-checkbox-border-radius;
-  cursor: pointer;
-  background-image: none;
-  background-clip: padding-box;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  &:after {
+
+  &::after {
     content: ' ';
     position: absolute;
     top: 3px;
@@ -150,114 +159,93 @@ input[type="checkbox"].form-checkbox {
     height: 8px;
     background-color: transparent;
   }
-  &:checked {
-    &:after {
-      background-color: map-get($master-palette, 'primary');
+}
+
+.form-checkbox input[type="checkbox"] {
+  &:disabled {
+    + .form-checkbox__indicator {
+      opacity: 0.75;
+      background-color: $form-input-bg-disabled;
     }
   }
-  &:disabled {
-    opacity: 0.75;
-    background-color: $form-input-bg-disabled;
-  }
-}
-label.form-checkbox {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  margin: 0 $space-inline-l $space-inline-base 0;
-  input[type="checkbox"] {
-    margin-right: 6px;
-  }
-  &.is-disabled {
-    pointer-events: none;
-    opacity: 0.75;
-    input {
-      pointer-events: none;
-      background-color: $form-input-bg-disabled;
+  &:checked {
+    + .form-checkbox__indicator::after {
+      background-color: map-get($master-palette, 'primary');
     }
   }
 }
 
 // radio
-label.form-radio input[type="radio"],
-input[type="radio"].form-radio {
+.form-radio {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 $space-inline-l $space-inline-base 0;
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.form-radio__indicator {
   position: relative;
+  display: block;
   width: 16px;
   height: 16px;
   border-radius: 8px;
   background-color: $form-input-bg;
   border: 1px solid $form-input-border-color;
-  cursor: pointer;
-  background-image: none;
-  background-clip: padding-box;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   &:after {
     content: ' ';
+    width: 8px;
+    height: 8px;
     position: absolute;
     top: 3px;
     left: 3px;
-    width: 8px;
-    height: 8px;
     border-radius: 4px;
     background-color: transparent;
   }
-  &:checked {
-    &:after {
-      background-color: map-get($master-palette, 'primary');
+}
+
+.form-radio input[type="radio"] {
+  &:disabled {
+    + .form-radio__indicator {
+      opacity: 0.75;
+      background-color: $form-input-bg-disabled;
     }
   }
-  &:disabled {
-    opacity: 0.75;
-    background-color: $form-input-bg-disabled;
-  }
-}
-label.form-radio {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  margin: 0 $space-inline-l $space-inline-base 0;
-  input[type="radio"] {
-    margin-right: 6px;
-  }
-  &.is-disabled {
-    pointer-events: none;
-    opacity: 0.75;
-    input {
-      pointer-events: none;
-      background-color: $form-input-bg-disabled;
+  &:checked {
+    + .form-radio__indicator:after {
+      background-color: map-get($master-palette, 'primary');
     }
   }
 }
 
 // switch
-input[type="checkbox"].form-switch {
+.form-switch {
+  display: inline-flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.form-switch__indicator {
   position: relative;
+  display: block;
   width: 48px;
   height: 24px;
-  outline: 0;
-  font-size: $font-size-sm;
-  border: 0;
   border-radius: 12px;
-  cursor: pointer;
-  background-color: $form-switch-active-color;
+  background-color: $form-switch-bg-color;
   transition: background-color .3s;
-  background-image: none;
-  background-clip: padding-box;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  cursor: pointer;
 
-  &[disabled] {
-    opacity: .75;
-    cursor: not-allowed;
-  }
-  &:not(:checked) {
-    background-color: $form-switch-bg-color;
-  }
-
-  &:after {
+  &::after {
     content: ' ';
     position: absolute;
     top: 2px;
@@ -268,12 +256,28 @@ input[type="checkbox"].form-switch {
     background-color: $form-switch-color;
     transition: all .3s;
   }
+}
 
-  &:checked {
-    &:after {
-      left: calc(100% - 22px);
+.form-switch input[type="checkbox"] {
+  &:disabled {
+    + .form-switch__indicator {
+      opacity: .75;
+      cursor: not-allowed;
     }
   }
+  &:checked {
+    + .form-switch__indicator {
+      background-color: $form-switch-active-color;
+      &::after {
+        left: calc(100% - 22px);
+      }
+    }
+  }
+}
+
+.form-radio__text,
+.form-checkbox__text {
+  margin-left: 6px;
 }
 
 // Group elements
@@ -284,7 +288,6 @@ input[type="checkbox"].form-switch {
 //   .form-help
 // -----------------------------------------------------------------------------
 .form-group {
-  position: relative;
   margin-bottom: $form-group-margin-bottom;
 }
 
@@ -330,7 +333,6 @@ input[type="checkbox"].form-switch {
 }
 
 .form-flex {
-  position: relative;
   display: flex;
   align-items: stretch;
 
@@ -399,7 +401,6 @@ input[type="checkbox"].form-switch {
 }
 
 .form-addon {
-  position: relative;
   display: inline-flex;
   align-items: center;
   padding: $form-input-padding-y $form-input-padding-x;
@@ -411,7 +412,6 @@ input[type="checkbox"].form-switch {
 }
 
 .form-static {
-  position: relative;
   display: block;
   width: 100%;
   padding: $form-input-padding-y 0;
@@ -427,22 +427,14 @@ input[type="checkbox"].form-switch {
     font-size: $font-size-base;
     line-height: $line-height-base;
     padding-top: $form-input-padding-y;
-    padding-bottom: $form-input-padding-y;
-    margin-bottom: 0;
-    @include media-breakpoint-up('md') {
-      & {
-        text-align: right;
-      }
-    }
   }
 }
 
 .form-inline {
-  position: relative;
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
-
+  flex-wrap: wrap;
+  
   .form-group {
     margin-bottom: 0;
     &:not(:last-child) {
@@ -453,7 +445,6 @@ input[type="checkbox"].form-switch {
   .form-label {
     display: inline-block;
     margin: 0 $space-inline-s 0 0;
-    vertical-align: middle;
     font-size: $font-size-base;
     line-height: $line-height-base;
     padding-top: $form-input-padding-y;
@@ -461,13 +452,9 @@ input[type="checkbox"].form-switch {
   }
 
   .form-input,
-  .form-control {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-  }
-
+  .form-control,
   .form-flex {
+    display: inline-block;
     width: auto;
   }
 
