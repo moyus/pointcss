@@ -1,6 +1,6 @@
 /*
  * Point
- * version: 0.8.9
+ * version: 0.9.0
  * url: http://getpoint.io
  * Copyright 2017 moyu
  * Licensed under MIT (https://github.com/moyus/point/blob/master/LICENSE)
@@ -461,7 +461,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 * {
@@ -1577,6 +1577,7 @@ abbr[title] {
       flex-wrap: nowrap;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
 }
 
 .l-level__left.is-auto::-webkit-scrollbar,
@@ -1744,24 +1745,35 @@ select.form-select:hover {
   padding-right: 17px;
 }
 
-label.form-checkbox input[type="checkbox"],
-input[type="checkbox"].form-checkbox {
+.form-checkbox {
   position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  margin: 0 16px 8px 0;
+}
+
+.form-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.form-checkbox__indicator {
+  position: relative;
+  display: block;
   width: 16px;
   height: 16px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 0;
-  cursor: pointer;
-  background-image: none;
-  background-clip: padding-box;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
-label.form-checkbox input[type="checkbox"]:after,
-input[type="checkbox"].form-checkbox:after {
+.form-checkbox__indicator::after {
   content: ' ';
   position: absolute;
   top: 3px;
@@ -1771,18 +1783,16 @@ input[type="checkbox"].form-checkbox:after {
   background-color: transparent;
 }
 
-label.form-checkbox input[type="checkbox"]:checked:after,
-input[type="checkbox"].form-checkbox:checked:after {
-  background-color: #7872ff;
-}
-
-label.form-checkbox input[type="checkbox"]:disabled,
-input[type="checkbox"].form-checkbox:disabled {
+.form-checkbox input[type="checkbox"]:disabled + .form-checkbox__indicator {
   opacity: 0.75;
   background-color: #f5f5f5;
 }
 
-label.form-checkbox {
+.form-checkbox input[type="checkbox"]:checked + .form-checkbox__indicator::after {
+  background-color: #7872ff;
+}
+
+.form-radio {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1793,113 +1803,70 @@ label.form-checkbox {
   margin: 0 16px 8px 0;
 }
 
-label.form-checkbox input[type="checkbox"] {
-  margin-right: 6px;
+.form-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 }
 
-label.form-checkbox.is-disabled {
-  pointer-events: none;
-  opacity: 0.75;
-}
-
-label.form-checkbox.is-disabled input {
-  pointer-events: none;
-  background-color: #f5f5f5;
-}
-
-label.form-radio input[type="radio"],
-input[type="radio"].form-radio {
+.form-radio__indicator {
   position: relative;
+  display: block;
   width: 16px;
   height: 16px;
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid #ccc;
-  cursor: pointer;
-  background-image: none;
-  background-clip: padding-box;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
-label.form-radio input[type="radio"]:after,
-input[type="radio"].form-radio:after {
+.form-radio__indicator:after {
   content: ' ';
+  width: 8px;
+  height: 8px;
   position: absolute;
   top: 3px;
   left: 3px;
-  width: 8px;
-  height: 8px;
   border-radius: 4px;
   background-color: transparent;
 }
 
-label.form-radio input[type="radio"]:checked:after,
-input[type="radio"].form-radio:checked:after {
-  background-color: #7872ff;
-}
-
-label.form-radio input[type="radio"]:disabled,
-input[type="radio"].form-radio:disabled {
+.form-radio input[type="radio"]:disabled + .form-radio__indicator {
   opacity: 0.75;
   background-color: #f5f5f5;
 }
 
-label.form-radio {
+.form-radio input[type="radio"]:checked + .form-radio__indicator:after {
+  background-color: #7872ff;
+}
+
+.form-switch {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
-  margin: 0 16px 8px 0;
 }
 
-label.form-radio input[type="radio"] {
-  margin-right: 6px;
+.form-switch input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 }
 
-label.form-radio.is-disabled {
-  pointer-events: none;
-  opacity: 0.75;
-}
-
-label.form-radio.is-disabled input {
-  pointer-events: none;
-  background-color: #f5f5f5;
-}
-
-input[type="checkbox"].form-switch {
+.form-switch__indicator {
   position: relative;
+  display: block;
   width: 48px;
   height: 24px;
-  outline: 0;
-  font-size: 12px;
-  border: 0;
   border-radius: 12px;
-  cursor: pointer;
-  background-color: #4caf50;
+  background-color: #e4e4e3;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
-  background-image: none;
-  background-clip: padding-box;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  cursor: pointer;
 }
 
-input[type="checkbox"].form-switch[disabled] {
-  opacity: .75;
-  cursor: not-allowed;
-}
-
-input[type="checkbox"].form-switch:not(:checked) {
-  background-color: #e4e4e3;
-}
-
-input[type="checkbox"].form-switch:after {
+.form-switch__indicator::after {
   content: ' ';
   position: absolute;
   top: 2px;
@@ -1912,12 +1879,25 @@ input[type="checkbox"].form-switch:after {
   transition: all .3s;
 }
 
-input[type="checkbox"].form-switch:checked:after {
+.form-switch input[type="checkbox"]:disabled + .form-switch__indicator {
+  opacity: .75;
+  cursor: not-allowed;
+}
+
+.form-switch input[type="checkbox"]:checked + .form-switch__indicator {
+  background-color: #4caf50;
+}
+
+.form-switch input[type="checkbox"]:checked + .form-switch__indicator::after {
   left: calc(100% - 22px);
 }
 
+.form-radio__text,
+.form-checkbox__text {
+  margin-left: 6px;
+}
+
 .form-group {
-  position: relative;
   margin-bottom: 16px;
 }
 
@@ -1964,7 +1944,6 @@ input[type="checkbox"].form-switch:checked:after {
 }
 
 .form-flex {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2045,7 +2024,6 @@ input[type="checkbox"].form-switch:checked:after {
 }
 
 .form-addon {
-  position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2061,7 +2039,6 @@ input[type="checkbox"].form-switch:checked:after {
 }
 
 .form-static {
-  position: relative;
   display: block;
   width: 100%;
   padding: 6px 0;
@@ -2074,26 +2051,17 @@ input[type="checkbox"].form-switch:checked:after {
   font-size: 14px;
   line-height: 1.42857143;
   padding-top: 6px;
-  padding-bottom: 6px;
-  margin-bottom: 0;
-}
-
-@media (min-width: 1024px) {
-  .form-horizontal .form-label {
-    text-align: right;
-  }
 }
 
 .form-inline {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .form-inline .form-group {
@@ -2107,7 +2075,6 @@ input[type="checkbox"].form-switch:checked:after {
 .form-inline .form-label {
   display: inline-block;
   margin: 0 4px 0 0;
-  vertical-align: middle;
   font-size: 14px;
   line-height: 1.42857143;
   padding-top: 6px;
@@ -2115,13 +2082,9 @@ input[type="checkbox"].form-switch:checked:after {
 }
 
 .form-inline .form-input,
-.form-inline .form-control {
-  display: inline-block;
-  width: auto;
-  vertical-align: middle;
-}
-
+.form-inline .form-control,
 .form-inline .form-flex {
+  display: inline-block;
   width: auto;
 }
 
@@ -2738,15 +2701,14 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   margin: 0 0 16px 0;
 }
 
-.table th,
-.table td {
+.table th, .table td {
   text-align: left;
   padding: 8px 16px;
   vertical-align: middle;
   border-top: 1px solid #ddd;
 }
 
-.table thead th {
+.table thead th, .table thead td {
   border-top: 0;
 }
 
@@ -2754,7 +2716,16 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   margin-top: 8px;
 }
 
-.thead--accent th {
+.table--striped th,
+.table--striped td {
+  border: 0;
+}
+
+.table--striped thead tr {
+  background-color: #f5f5f5;
+}
+
+.table--striped tbody tr:nth-of-type(even) {
   background-color: #f5f5f5;
 }
 
@@ -2767,12 +2738,8 @@ fieldset[disabled] .btn--warning.btn--outline.is-active {
   border: 1px solid #ddd;
 }
 
-.table--striped tbody tr:nth-of-type(odd) {
-  background-color: #f5f5f5;
-}
-
 .table--hover tbody tr:hover {
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
 }
 
 @media (max-width: 1024px) {
