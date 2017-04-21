@@ -2082,10 +2082,15 @@ select.form-select:hover {
 }
 
 .form-inline .form-input,
-.form-inline .form-control,
-.form-inline .form-flex {
+.form-inline .form-control {
   display: inline-block;
   width: auto;
+}
+
+.form-inline .form-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .btn {

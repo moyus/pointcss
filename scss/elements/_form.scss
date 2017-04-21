@@ -434,7 +434,7 @@ select.form-select {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  
+
   .form-group {
     margin-bottom: 0;
     &:not(:last-child) {
@@ -452,10 +452,13 @@ select.form-select {
   }
 
   .form-input,
-  .form-control,
-  .form-flex {
+  .form-control {
     display: inline-block;
     width: auto;
+  }
+
+  .form-flex {
+    display: inline-flex;
   }
 
 }
