@@ -147,8 +147,9 @@ $table-td-padding-y:                    $space-squish-l-y !default;
 $table-td-padding-x:                    $space-squish-l-x !default;
 $table-border-width:                    $border-width !default;
 $table-border-color:                    $border-color !default;
-$table-bg-accent:                       $grey-lightest !default;
-$table-hover-color:                     $grey-lightest !default;
+$table-thead-accent-bg:                 $grey-lightest !default;
+$table-strip-bg:                        $grey-lightest !default;
+$table-hover-color:                     darken($grey-lightest, 2%) !default;
 
 // Progress
 // -----------------------------------------------------------------------------
