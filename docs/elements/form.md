@@ -14,6 +14,8 @@ title: "Form"
 - [Icons](#icons)
 - [Group](#group)
 - [Flex](#flex)
+- [Inline](#inline)
+- [Horizontal](#horizontal)
 
 ## Types
 There are six basic types of form element: `.form-input`, `.form-select`,
@@ -62,48 +64,79 @@ There are six basic types of form element: `.form-input`, `.form-select`,
   <div class="l-level__item form-group">
       <label class="form-label">Radio</label>
       <div class="form-control">
-          <input type="radio" class="form-radio">
+          <label class="form-radio">
+              <input type="radio">
+              <span class="form-radio__indicator"></span>
+          </label>
       </div>
   </div>
   <div class="l-level__item form-group">
       <label class="form-label">Checkbox</label>
       <div class="form-control">
-          <input type="checkbox" class="form-checkbox">
+          <label class="form-checkbox">
+              <input type="checkbox">
+              <span class="form-checkbox__indicator"></span>
+          </label>
       </div>
   </div>
   <div class="l-level__item form-group">
       <label class="form-label">Switch</label>
       <div class="form-control">
-          <input type="checkbox" class="form-switch">
+          <label class="form-switch">
+              <input type="checkbox">
+              <span class="form-switch__indicator"></span>
+          </label>
       </div>
   </div>
 </div>
 <div class="l-level">
   <div class="l-level__item form-group">
       <label class="form-radio">
-          <input type="radio" name="r2"> Male
+          <input type="radio" name="r2">
+          <span class="form-radio__indicator"></span>
+          Male
       </label>
       <label class="form-radio">
-          <input type="radio" name="r2"> Female
+          <input type="radio" name="r2">
+          <span class="form-radio__indicator"></span>
+          <span class="form-radio__text">Female</span>
       </label>
   </div>
   <div class="l-level__item form-group">
       <label class="form-checkbox">
-          <input type="checkbox"> Remember Me?
+          <input type="checkbox">
+          <span class="form-checkbox__indicator"></span>
+          <span class="form-checkbox__text">Remember Me?</span>
       </label>
   </div>
 </div>
 
 ```html
-<input type="radio" class="form-radio">
-<input type="checkbox" class="form-checkbox">
-<input type="checkbox" class="form-switch">
+<label class="form-radio">
+    <input type="radio">
+    <span class="form-radio__indicator"></span>
+</label>
+
+<label class="form-checkbox">
+    <input type="checkbox">
+    <span class="form-checkbox__indicator"></span>
+</label>
+
+<label class="form-switch">
+    <input type="checkbox">
+    <span class="form-switch__indicator"></span>
+</label>
 
 <label class="form-radio">
-  <input type="radio" name="r2"> Male
+    <input type="radio" name="r2">
+    <span class="form-radio__indicator"></span>
+    <span class="form-radio__text">Male</span>
 </label>
+
 <label class="form-checkbox">
-  <input type="checkbox"> Remember Me?
+    <input type="checkbox">
+    <span class="form-checkbox__indicator"></span>
+    <span class="form-checkbox__text">Remember Me?</span>
 </label>
 ```
 
@@ -443,4 +476,114 @@ Use flexbox to create input group.
     <!-- END .form-flex -->
 </div>
 <!-- END .form-group -->
+```
+
+## Inline
+Use the `.form-inline` class to display a series of group elements on a single horizontal row.
+
+<form class="form-inline u-mb-15">
+    <div class="form-group">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-input">
+    </div>
+    <div class="form-group">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-input">
+    </div>
+    <div class="form-group">
+        <label class="form-checkbox u-m-0">
+            <input type="checkbox">
+            <span class="form-checkbox__indicator"></span>
+            <span class="form-checkbox__text">Remember me?</span>
+        </label>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn--primary btn--outline">Login</button>
+    </div>
+</form>
+
+```html
+<form class="form-inline u-mb-15">
+    <div class="form-group">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-input">
+    </div>
+    <div class="form-group">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-input">
+    </div>
+    <div class="form-group">
+        <label class="form-checkbox u-m-0">
+            <input type="checkbox">
+            <span class="form-checkbox__indicator"></span>
+            <span class="form-checkbox__text">Remember me?</span>
+        </label>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn--primary btn--outline">Login</button>
+    </div>
+</form>
+```
+
+## Horizontal
+Use Grid System and `.form-horizontal` to create horizontal forms.
+
+<form class="form-horizontal u-mb-15">
+    <div class="form-group l-row">
+        <label class="form-label l-col-12 l-col-3@md">Username</label>
+        <div class="l-col-12 l-col-9@md">
+            <input type="text" class="form-input">
+        </div>
+    </div>
+    <div class="form-group l-row">
+        <label class="form-label l-col-12 l-col-3@md">Password</label>
+        <div class="l-col-12 l-col-9@md">
+            <input type="password" class="form-input">
+        </div>
+    </div>
+    <div class="form-group l-row">
+        <div class="l-col-12 l-col-9@md l-col-offset-3@md">
+            <label class="form-checkbox">
+                <input type="checkbox">
+                <span class="form-checkbox__indicator"></span>
+                <span class="form-checkbox__text">Remember me?</span>
+            </label>
+        </div>
+    </div>
+    <div class="form-group l-row">
+        <div class="l-col-12 l-col-9@md l-col-offset-3@md">
+            <button type="button" class="btn btn--primary">Login</button>
+        </div>
+    </div>
+</form>
+
+```html
+<form class="form-horizontal u-mb-15">
+    <div class="form-group l-row">
+        <label class="form-label l-col-12 l-col-3@md">Username</label>
+        <div class="l-col-12 l-col-9@md">
+            <input type="text" class="form-input">
+        </div>
+    </div>
+    <div class="form-group l-row">
+        <label class="form-label l-col-12 l-col-3@md">Password</label>
+        <div class="l-col-12 l-col-9@md">
+            <input type="password" class="form-input">
+        </div>
+    </div>
+    <div class="form-group l-row">
+        <div class="l-col-12 l-col-9@md l-col-offset-3@md">
+            <label class="form-checkbox">
+                <input type="checkbox">
+                <span class="form-checkbox__indicator"></span>
+                <span class="form-checkbox__text">Remember me?</span>
+            </label>
+        </div>
+    </div>
+    <div class="form-group l-row">
+        <div class="l-col-12 l-col-9@md l-col-offset-3@md">
+            <button type="button" class="btn btn--primary">Login</button>
+        </div>
+    </div>
+</form>
 ```

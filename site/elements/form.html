@@ -162,6 +162,8 @@
 <li><a href="#icons">Icons</a></li>
 <li><a href="#group">Group</a></li>
 <li><a href="#flex">Flex</a></li>
+<li><a href="#inline">Inline</a></li>
+<li><a href="#horizontal">Horizontal</a></li>
 </ul>
 <h2 id="types">Types</h2>
 <p>There are six basic types of form element: <code>.form-input</code>, <code>.form-select</code>,
@@ -206,48 +208,79 @@
   <div class="l-level__item form-group">
       <label class="form-label">Radio</label>
       <div class="form-control">
-          <input type="radio" class="form-radio">
+          <label class="form-radio">
+              <input type="radio">
+              <span class="form-radio__indicator"></span>
+          </label>
       </div>
   </div>
   <div class="l-level__item form-group">
       <label class="form-label">Checkbox</label>
       <div class="form-control">
-          <input type="checkbox" class="form-checkbox">
+          <label class="form-checkbox">
+              <input type="checkbox">
+              <span class="form-checkbox__indicator"></span>
+          </label>
       </div>
   </div>
   <div class="l-level__item form-group">
       <label class="form-label">Switch</label>
       <div class="form-control">
-          <input type="checkbox" class="form-switch">
+          <label class="form-switch">
+              <input type="checkbox">
+              <span class="form-switch__indicator"></span>
+          </label>
       </div>
   </div>
 </div>
 <div class="l-level">
   <div class="l-level__item form-group">
       <label class="form-radio">
-          <input type="radio" name="r2"> Male
+          <input type="radio" name="r2">
+          <span class="form-radio__indicator"></span>
+          Male
       </label>
       <label class="form-radio">
-          <input type="radio" name="r2"> Female
+          <input type="radio" name="r2">
+          <span class="form-radio__indicator"></span>
+          <span class="form-radio__text">Female</span>
       </label>
   </div>
   <div class="l-level__item form-group">
       <label class="form-checkbox">
-          <input type="checkbox"> Remember Me?
+          <input type="checkbox">
+          <span class="form-checkbox__indicator"></span>
+          <span class="form-checkbox__text">Remember Me?</span>
       </label>
   </div>
 </div>
 
-<pre><code class="lang-html">&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"radio"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-radio"</span>&gt;
-&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox"</span>&gt;
-&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-switch"</span>&gt;
+<pre><code class="lang-html">&lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-radio"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-radio__indicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span>
+
+&lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-checkbox__indicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span>
+
+&lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-switch"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-switch__indicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span>
 
 &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-radio"</span>&gt;
-  &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"r2"</span>&gt; <span class="hljs-type">Male</span>
-&lt;/label&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"r2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-radio__indicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-radio__text"</span>&gt;</span>Male<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span>
+
 &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox"</span>&gt;
-  &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span>&gt; <span class="hljs-type">Remember</span> <span class="hljs-type">Me</span>?
-&lt;/label&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-checkbox__indicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-checkbox__text"</span>&gt;</span>Remember Me?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span>
 </code></pre>
 <h3 id="textarea">Textarea</h3>
 <div class="form-group">
@@ -571,6 +604,110 @@
     <span class="hljs-comment">&lt;!-- END .form-flex --&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- END .form-group --&gt;</span>
+</code></pre>
+<h2 id="inline">Inline</h2>
+<p>Use the <code>.form-inline</code> class to display a series of group elements on a single horizontal row.</p>
+<form class="form-inline u-mb-15">
+    <div class="form-group">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-input">
+    </div>
+    <div class="form-group">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-input">
+    </div>
+    <div class="form-group">
+        <label class="form-checkbox u-m-0">
+            <input type="checkbox">
+            <span class="form-checkbox__indicator"></span>
+            <span class="form-checkbox__text">Remember me?</span>
+        </label>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn--primary btn--outline">Login</button>
+    </div>
+</form>
+
+<pre><code class="lang-html">&lt;form <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-inline u-mb-15"</span>&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group"</span>&gt;
+        &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-label"</span>&gt;<span class="hljs-type">Username</span>&lt;/label&gt;
+        &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span>&gt;
+    &lt;/div&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group"</span>&gt;
+        &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-label"</span>&gt;<span class="hljs-type">Password</span>&lt;/label&gt;
+        &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"password"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span>&gt;
+    &lt;/div&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group"</span>&gt;
+        &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox u-m-0"</span>&gt;
+            &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span>&gt;
+            &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox__indicator"</span>&gt;&lt;/span&gt;
+            &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox__text"</span>&gt;<span class="hljs-type">Remember</span> me?&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group"</span>&gt;
+        &lt;button <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"button"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--primary btn--outline"</span>&gt;<span class="hljs-type">Login</span>&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<h2 id="horizontal">Horizontal</h2>
+<p>Use Grid System and <code>.form-horizontal</code> to create horizontal forms.</p>
+<form class="form-horizontal u-mb-15">
+    <div class="form-group l-row">
+        <label class="form-label l-col-12 l-col-3@md">Username</label>
+        <div class="l-col-12 l-col-9@md">
+            <input type="text" class="form-input">
+        </div>
+    </div>
+    <div class="form-group l-row">
+        <label class="form-label l-col-12 l-col-3@md">Password</label>
+        <div class="l-col-12 l-col-9@md">
+            <input type="password" class="form-input">
+        </div>
+    </div>
+    <div class="form-group l-row">
+        <div class="l-col-12 l-col-9@md l-col-offset-3@md">
+            <label class="form-checkbox">
+                <input type="checkbox">
+                <span class="form-checkbox__indicator"></span>
+                <span class="form-checkbox__text">Remember me?</span>
+            </label>
+        </div>
+    </div>
+    <div class="form-group l-row">
+        <div class="l-col-12 l-col-9@md l-col-offset-3@md">
+            <button type="button" class="btn btn--primary">Login</button>
+        </div>
+    </div>
+</form>
+
+<pre><code class="lang-html">&lt;form <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-horizontal u-mb-15"</span>&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group l-row"</span>&gt;
+        &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-label l-col-12 l-col-3@md"</span>&gt;<span class="hljs-type">Username</span>&lt;/label&gt;
+        &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"l-col-12 l-col-9@md"</span>&gt;
+            &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span>&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group l-row"</span>&gt;
+        &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-label l-col-12 l-col-3@md"</span>&gt;<span class="hljs-type">Password</span>&lt;/label&gt;
+        &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"l-col-12 l-col-9@md"</span>&gt;
+            &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"password"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-input"</span>&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group l-row"</span>&gt;
+        &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"l-col-12 l-col-9@md l-col-offset-3@md"</span>&gt;
+            &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox"</span>&gt;
+                &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span>&gt;
+                &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox__indicator"</span>&gt;&lt;/span&gt;
+                &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-checkbox__text"</span>&gt;<span class="hljs-type">Remember</span> me?&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-group l-row"</span>&gt;
+        &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"l-col-12 l-col-9@md l-col-offset-3@md"</span>&gt;
+            &lt;button <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"button"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--primary"</span>&gt;<span class="hljs-type">Login</span>&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
 </code></pre>
 
 
