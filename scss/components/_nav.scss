@@ -62,6 +62,7 @@
     }
     > .c-nav__link {
       color: $nav-pills-link-color;
+      text-align: center;
       padding: $nav-pills-link-padding-base-y $nav-pills-link-padding-base-x;
       border-radius: $nav-pills-link-border-radius-base;
       &:hover {
