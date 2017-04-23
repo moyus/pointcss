@@ -19,7 +19,7 @@ Use flexbox to align items vertically.
     <a href="#" class="l-level__item">Pending</a>
     <a href="#" class="l-level__item">Trash</a>
   </div>
-  <div class="l-level__right is-shrink">
+  <div class="l-level__right">
     <div class="l-level__item">
       <form action="#" class="form-inline">
         <div class="form-flex">
@@ -56,16 +56,19 @@ Use flexbox to align items vertically.
 
 ***
 
+If you want to create 3-colums level, you must place `.l-level__center` in
+first, so it can use `~` CSS selector to control siblings style.
+
 <div class="l-level u-mb-15">
-  <div class="l-level__left">
-    <div class="u-fs-20">All <span class="u-fs-14 u-textMuted">34 projects</span></div>
-  </div>
   <div class="l-level__center">
     <div class="btnGroup">
       <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
       <button class="btn btn--primary btn--outline">SHARED</button>
       <button class="btn btn--primary btn--outline">MEDIA FILES</button>
     </div>
+  </div>
+  <div class="l-level__left">
+    <div class="u-fs-20">All <span class="u-fs-14 u-textMuted">34 projects</span></div>
   </div>
   <div class="l-level__right">
     <div class="l-level__item">
@@ -85,15 +88,15 @@ Use flexbox to align items vertically.
 
 ```html
 <div class="l-level">
-  <div class="l-level__left">
-    <div class="u-fs-20">All <span class="u-fs-14 u-textMuted">34 projects</span></div>
-  </div>
   <div class="l-level__center">
     <div class="btnGroup">
       <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
       <button class="btn btn--primary btn--outline">SHARED</button>
       <button class="btn btn--primary btn--outline">MEDIA FILES</button>
     </div>
+  </div>
+  <div class="l-level__left">
+    <div class="u-fs-20">All <span class="u-fs-14 u-textMuted">34 projects</span></div>
   </div>
   <div class="l-level__right">
     <div class="l-level__item">
@@ -107,39 +110,6 @@ Use flexbox to align items vertically.
           </select>
         </div>
       </form>
-    </div>
-  </div>
-</div>
-```
-
-## Shrink
-If there are only `.l-level__left`, `.l-level__right` block and you are resizing
-the window, you can specify which block should have flex width use `.is-auto`
-and another block has fixed width use `.is-fixed`. *(resize your window to see the effect)*
-
-<div class="l-level u-mb-15">
-  <div class="l-level__left is-auto">
-    <div class="l-level__item u-textTruncated">
-      If you resize your width, you can see the effect!
-    </div>
-  </div>
-  <div class="l-level__right is-fixed">
-    <div class="l-level__item">
-      <button class="btn btn--primary">I will remain my width</button>
-    </div>
-  </div>
-</div>
-
-```html
-<div class="l-level u-mb-15">
-  <div class="l-level__left is-auto">
-    <div class="l-level__item u-textTruncated">
-      If you resize your width, you can see the effect!
-    </div>
-  </div>
-  <div class="l-level__right is-fixed">
-    <div class="l-level__item">
-      <button class="btn btn--primary">I will remain my width</button>
     </div>
   </div>
 </div>

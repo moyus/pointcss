@@ -1,6 +1,8 @@
 // .l-level
-//   .l-level__left || .l-level__center || .l-level__right
+//   .l-level__left, .l-level__center, .l-level__right
 //     .l-level__item
+
+// [1] simulate collapsing margins
 
 // block
 .l-level {
@@ -8,7 +10,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  margin-top: -5px; // [1]
+  margin-bottom: -5px; // [1]
 
   &.is-top {
     align-items: flex-start;
@@ -25,12 +29,9 @@
   > .l-level__item {
     flex: 1 1 0%;
     text-align: center;
+    margin-top: 5px; // [1]
+    margin-bottom: 5px; // [1]
   }
-}
-
-// elements
-.l-level__item {
-  flex-shrink: 0;
 }
 
 .l-level__left,
@@ -38,6 +39,9 @@
 .l-level__right {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5px; // [1]
+  margin-bottom: 5px; // [1]
   &.is-top {
     align-items: flex-start;
   }
@@ -52,7 +56,6 @@
 
 .l-level__left {
   order: 1;
-  flex: 1 0 0%;
   justify-content: flex-start;
 }
 
@@ -63,24 +66,10 @@
 
 .l-level__right {
   order: 3;
-  flex: 1 0 0%;
   justify-content: flex-end;
 }
 
-.l-level__left,
-.l-level__right {
-  &.is-auto {
-    flex: 1 1 auto;
-    min-width: 0;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-  &.is-fixed {
-    flex: none;
-  }
+.l-level__center ~ .l-level__left,
+.l-level__center ~ .l-level__right {
+  flex: 1 0 0%;
 }

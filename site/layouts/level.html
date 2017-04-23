@@ -164,7 +164,7 @@
     <a href="#" class="l-level__item">Pending</a>
     <a href="#" class="l-level__item">Trash</a>
   </div>
-  <div class="l-level__right is-shrink">
+  <div class="l-level__right">
     <div class="l-level__item">
       <form action="#" class="form-inline">
         <div class="form-flex">
@@ -198,16 +198,18 @@
 &lt;<span class="hljs-regexp">/div&gt;</span>
 </code></pre>
 <hr>
+<p>If you want to create 3-colums level, you must place <code>.l-level__center</code> in
+first, so it can use <code>~</code> CSS selector to control siblings style.</p>
 <div class="l-level u-mb-15">
-  <div class="l-level__left">
-    <div class="u-fs-20">All <span class="u-fs-14 u-textMuted">34 projects</span></div>
-  </div>
   <div class="l-level__center">
     <div class="btnGroup">
       <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
       <button class="btn btn--primary btn--outline">SHARED</button>
       <button class="btn btn--primary btn--outline">MEDIA FILES</button>
     </div>
+  </div>
+  <div class="l-level__left">
+    <div class="u-fs-20">All <span class="u-fs-14 u-textMuted">34 projects</span></div>
   </div>
   <div class="l-level__right">
     <div class="l-level__item">
@@ -226,15 +228,15 @@
 </div>
 
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level__left"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-fs-20"</span>&gt;</span>All <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-fs-14 u-textMuted"</span>&gt;</span>34 projects<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level__center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btnGroup"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary btn--outline"</span>&gt;</span>ALL PROJECTS<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary btn--outline"</span>&gt;</span>SHARED<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary btn--outline"</span>&gt;</span>MEDIA FILES<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level__left"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-fs-20"</span>&gt;</span>All <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-fs-14 u-textMuted"</span>&gt;</span>34 projects<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level__right"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level__item"</span>&gt;</span>
@@ -251,36 +253,6 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre>
-<h2 id="shrink">Shrink</h2>
-<p>If there are only <code>.l-level__left</code>, <code>.l-level__right</code> block and you are resizing
-the window, you can specify which block should have flex width use <code>.is-auto</code>
-and another block has fixed width use <code>.is-fixed</code>. <em>(resize your window to see the effect)</em></p>
-<div class="l-level u-mb-15">
-  <div class="l-level__left is-auto">
-    <div class="l-level__item u-textTruncated">
-      If you resize your width, you can see the effect!
-    </div>
-  </div>
-  <div class="l-level__right is-fixed">
-    <div class="l-level__item">
-      <button class="btn btn--primary">I will remain my width</button>
-    </div>
-  </div>
-</div>
-
-<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"l-level u-mb-15"</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"l-level__left is-auto"</span>&gt;
-    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"l-level__item u-textTruncated"</span>&gt;
-      If you resize your width, you can see <span class="hljs-keyword">the</span> effect!
-    &lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"l-level__right is-fixed"</span>&gt;
-    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"l-level__item"</span>&gt;
-      &lt;button <span class="hljs-built_in">class</span>=<span class="hljs-string">"btn btn--primary"</span>&gt;I will remain <span class="hljs-keyword">my</span> width&lt;/button&gt;
-    &lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;/<span class="hljs-keyword">div</span>&gt;
-&lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
 
 
