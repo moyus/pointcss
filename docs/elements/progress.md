@@ -6,6 +6,7 @@ title: "Progress"
 # Progress
 - [Types](#types)
 - [Sizes](#sizes)
+- [Striped](#striped)
 
 ## Types
 Native HTML `progress` bar with five predefined styles.
@@ -41,3 +42,8 @@ class for additional sizes.
 <progress class="progress" value="30" max="100"></progress>
 <progress class="progress progress--lg" value="60" max="100"></progress>
 ```
+
+## Striped
+By adding `.progress--striped` modifier class to create striped progress.
+
+<progress class="progress progress--striped" value="50" max="100"></progress>

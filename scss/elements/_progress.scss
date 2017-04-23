@@ -3,50 +3,74 @@
   display: block;
   width: 100%;
   height: $progress-height-base;
-  border: 0;
+  border: none;
+  /* For IE10 */
+  color: $progress-bar-bg-color-default;
   border-radius: ($progress-height-lg / 2);
-  padding: 0;
   margin: 0 0 $progress-margin-bottom 0;
   appearance: none;
   overflow: hidden;
 }
 
-.progress[value] {
-  background-color: $progress-bg-color;
-}
-
-.progress[value]::-moz-progress-bar {
-  background-color: $progress-bg-color;
-}
-
 .progress[value]::-webkit-progress-bar {
   background-color: $progress-bg-color;
 }
-
-.progress[value]::-moz-progress-value {
-  background-color: $progress-bar-bg-color-default;
-}
-
 .progress[value]::-webkit-progress-value {
   background-color: $progress-bar-bg-color-default;
 }
 
-// Modifiers - theme
-@each $modifier, $value in $master-palette {
-
-  $scope-background-color: $value;
-
-  .progress--#{$modifier} {
-    @include progress-variant($scope-background-color)
-  }
-
+.progress[value]::-moz-progress-bar {
+  background-color: $progress-bar-bg-color-default;
 }
 
-// Modifiers - size
+// Modifiers
+.progress--striped {
+  &[value]::-webkit-progress-value {
+    background-image: -webkit-linear-gradient( 45deg,
+      rgba(255,255,255,.15) 25%, transparent 25%,
+      transparent 50%, rgba(255,255,255,.15) 50%,
+      rgba(255,255,255,.15) 75%, transparent 75%,
+      transparent
+    );
+    background-size: $progress-height-base $progress-height-base;
+  }
+  &[value]::-moz-progress-bar {
+    background-image: -moz-linear-gradient( 45deg,
+      rgba(255,255,255,.15) 25%, transparent 25%,
+      transparent 50%, rgba(255,255,255,.15) 50%,
+      rgba(255,255,255,.15) 75%, transparent 75%,
+      transparent
+    );
+    background-size: $progress-height-base $progress-height-base;
+  }
+}
+
+@each $modifier, $value in $master-palette {
+  .progress--#{$modifier} {
+    @include progress-variant($value)
+  }
+}
+
 .progress--sm {
   height: $progress-height-sm;
+  .progress--striped {
+    &[value]::-webkit-progress-value {
+      background-size: $progress-height-sm $progress-height-sm;
+    }
+    &[value]::-moz-progress-bar {
+      background-size: $progress-height-sm $progress-height-sm;
+    }
+  }
 }
 
 .progress--lg {
   height: $progress-height-lg;
+  .progress--striped {
+    &[value]::-webkit-progress-value {
+      background-size: $progress-height-lg $progress-height-lg;
+    }
+    &[value]::-moz-progress-bar {
+      background-size: $progress-height-lg $progress-height-lg;
+    }
+  }
 }

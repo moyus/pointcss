@@ -1,7 +1,9 @@
 // progress variant
 // -----------------------------------------------------------------------------
 @mixin progress-variant($background-color) {
-  &[value]::-moz-progress-value {
+  color: $background-color;
+
+  &[value]::-moz-progress-bar {
     background-color: $background-color;
   }
 
