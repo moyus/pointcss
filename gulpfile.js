@@ -12,7 +12,17 @@ const browserSync = require('browser-sync').create()
 const nunjucksRender = require('gulp-nunjucks-md')
 
 const postCssOpts = [
-  autoprefixer({ browsers: ['last 2 versions', '> 2%'] }),
+  autoprefixer({ browsers: [
+    'Chrome >= 35',
+    'Firefox >= 38',
+    'Edge >= 12',
+    'Explorer >= 10',
+    'iOS >= 8',
+    'Safari >= 8',
+    'Android 2.3',
+    'Android >= 4',
+    'Opera >= 12'
+  ]}),
   flexbugsFixes
 ]
 
