@@ -4,12 +4,15 @@
   width: 100%;
   height: $progress-height-base;
   border: none;
-  /* For IE10 */
-  color: $progress-bar-bg-color-default;
   border-radius: ($progress-height-lg / 2);
   margin: 0 0 $progress-margin-bottom 0;
   appearance: none;
   overflow: hidden;
+}
+
+.progress[value]::-ms-fill {
+  border: none;
+  background-color: $progress-bar-bg-color-default;
 }
 
 .progress[value]::-webkit-progress-bar {

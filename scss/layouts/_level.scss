@@ -8,9 +8,9 @@
 .l-level {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   margin-top: -5px; // [1]
   margin-bottom: -5px; // [1]
 

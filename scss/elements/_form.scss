@@ -79,6 +79,7 @@ select.form-select {
   &::-ms-expand {
     background-color: transparent;
     border: 0;
+    display: none;
   }
 
   &:not([multiple]) {

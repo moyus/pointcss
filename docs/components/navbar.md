@@ -10,17 +10,17 @@ title: "Navbar"
 
 Structure:
 - `.c-navbar`
-  - `.c-navbar__left`, `.c-navbar__center`, `.c-navbar__right`
+  -  `.c-navbar__center`, `.c-navbar__left`, `.c-navbar__right`
     - `.c-navbar__item`
 
 <div class="u-mb-15">
   <nav class="c-navbar">
-    <div class="c-navbar__left is-auto">
+    <div class="c-navbar__left">
         <a role="button" class="c-navbar__item">
             <img src="{{site.url}}images/logo-head.png" alt="">
         </a>
     </div>
-    <div class="c-navbar__right is-fixed">
+    <div class="c-navbar__right">
       <a role="button" class="c-navbar__item">Home</a>
       <a role="button" class="c-navbar__item">About</a>
       <a role="button" class="c-navbar__item">Work</a>
@@ -33,12 +33,12 @@ Structure:
 
 ```html
 <nav class="c-navbar">
-  <div class="c-navbar__left is-auto">
+  <div class="c-navbar__left">
       <a role="button" class="c-navbar__item">
           <img src="images/logo-head.png" alt="">
       </a>
   </div>
-  <div class="c-navbar__right is-fixed">
+  <div class="c-navbar__right">
     <a role="button" class="c-navbar__item">Home</a>
     <a role="button" class="c-navbar__item">About</a>
     <a role="button" class="c-navbar__item">Work</a>

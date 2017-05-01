@@ -11,8 +11,6 @@
 .c-modal {
   position: fixed;
   display: none;
-  justify-content: center;
-  align-items: center;
   top: 0;
   left: 0;
   right: 0;
@@ -22,6 +20,10 @@
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   &.is-active {
     display: flex;
   }

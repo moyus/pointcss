@@ -94,7 +94,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
       <label class="form-radio">
           <input type="radio" name="r2">
           <span class="form-radio__indicator"></span>
-          Male
+          <span class="form-radio__text">Male</span>
       </label>
       <label class="form-radio">
           <input type="radio" name="r2">
