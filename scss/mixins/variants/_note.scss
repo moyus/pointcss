@@ -4,4 +4,10 @@
   color: $text-color;
   border-color: $border-color;
   background-color: $background-color;
+  a {
+    color: darken($text-color, 5%);
+    &:hover {
+      color: darken($text-color, 8%);
+    }
+  }
 }
