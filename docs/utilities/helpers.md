@@ -9,6 +9,7 @@ title: "Helpers"
 - [Spaces](#spaces)
 - [Text](#text)
 - [Appearance](#appearance)
+- [Flexbox](#flexbox)
 
 ## Colors
 Change text color or background color.
@@ -300,4 +301,44 @@ Space step is 5px, start from 0, end at 60px
           <td>Force an elment to be hidden at breakpoint down</td>
       </tr>
   </tbody>
+</table>
+
+## Flexbox
+<table class="table table--bordered">
+    <thead>
+        <tr>
+            <th>Class</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>.u-flex</code></td>
+            <td><code>display: flex;</code></td>
+        </tr>
+        <tr>
+            <td><code>.u-inlineFlex</code></td>
+            <td><code>display: inline-flex;</code></td>
+        </tr>
+        <tr>
+            <td><code>.u-flexCenter</code></td>
+            <td><code>  display: flex; flex-direction: column; justify-content: center; align-items: center;</code></td>
+        </tr>
+        <tr>
+            <td><code>.u-flexMiddle</code></td>
+            <td><code>display: flex; align-items: center;</code></td>
+        </tr>
+        <tr>
+            <td><code>.u-inlineFlexMiddle</code></td>
+            <td><code>display: inline-flex; align-items: center;</code></td>
+        </tr>
+        <tr>
+            <td><code>.u-flex-0</code></td>
+            <td><code>flex: 0 0 auto !important;</code></td>
+        </tr>
+        <tr>
+            <td><code>.u-flex-1</code></td>
+            <td><code>flex: 1 1 auto !important;</code></td>
+        </tr>
+    </tbody>
 </table>
