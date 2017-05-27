@@ -10,7 +10,8 @@
 .u-textLeft {
   text-align: left !important;
 }
-.u-textTruncated {
+.u-textTruncated,
+.u-textOneLine {
   @include oneline;
 }
 .u-textBreak {
@@ -19,6 +20,16 @@
 }
 .u-textNowrap {
   white-space: nowrap;
+}
+.u-textInherit {
+  color: inherit !important;
+}
+.u-bolder {
+  font-weight: bolder !important;
+}
+.u-textDone {
+  color: $muted-color;
+  text-decoration: line-through;
 }
 
 // font sizes
@@ -59,3 +70,20 @@
 .u-fs-48 { font-size: 48px !important }
 .u-fs-64 { font-size: 64px !important }
 .u-fs-128 { font-size: 128px !important }
+
+@each $breakpoint, $value in $grid-breakpoints {
+  $suffix: "";
+
+  @if $value > 0 {
+    $suffix: "\\@#{$breakpoint}";
+  }
+
+  @include media-breakpoint-up($breakpoint) {
+    .u-textRight#{$suffix} {
+      text-align: right !important;
+    }
+    .u-textCenter#{$suffix} {
+      text-align: center !important;
+    }
+  }
+}
