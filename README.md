@@ -4,7 +4,7 @@ A flexible CSS Framework for building modern responsive web apps.
 - Built with Flexbox
 - Mobile-First
 - BEM, Namespaces, Modular, Beautiful code
-- 14KB gzipped
+- 11KB gzipped
 
 ## Setup
 There are 3 ways to start
@@ -23,8 +23,8 @@ npm install point-sass --save
 `<link rel="stylesheet" href="dist/point.min.css" />`
 
 ## Documentation
-- [Documentation](http://www.getpoint.io/getting-started/)
-- [Style Guide](http://www.getpoint.io/getting-started/style-guide.html)
+- [Documentation](http://point.moyu.io/getting-started/)
+- [Style Guide](http://point.moyu.io/getting-started/style-guide.html)
 
 ## Customize
 Point is coded in [SASS](http://sass-lang.com/), If you're familiar with it, You can continue.

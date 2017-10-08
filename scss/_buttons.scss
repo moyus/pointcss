@@ -1,3 +1,15 @@
+/*
+Button Markup:
+<button class="btn {{modifier}}">Save</button>
+
+Button Group Markup:
+<div class="btn-group">
+  <button class="btn {{modifier}}">Stop</button>
+  <button class="btn {{modifier}}">Play</button>
+  <button class="btn {{modifier}}">Pause</button>
+</div>
+*/
+
 .btn {
   position: relative;
   display: inline-block;
@@ -43,21 +55,20 @@
 
 }
 
-// modifiers - theme
-.btn--default {
+// Modifiers
+.btn--ghost {
   @include btn-variant($text-color, $color-white, $border-color);
 }
 
-@each $modifier, $value in $master-palette {
+@each $modifier, $color in $master-palette {
   .btn--#{$modifier} {
-    @include btn-variant($color-white, $value, $value);
+    @include btn-variant($color-white, $color, mix($color-black, $color, $mix-level-2));
     &.btn--outline {
-      @include btn-outline-variant($color-white, $value);
+      @include btn-outline-variant($color-white, $color);
     }
   }
 }
 
-// modifiers - size
 .btn--smart {
   padding-left: $button-padding-base-x * 2;
   padding-right: $button-padding-base-x * 2;
@@ -94,8 +105,8 @@
   width: 100%;
 }
 
-// button group
-.btnGroup {
+// Button Group
+.btn-group {
   display: inline-flex;
   .btn {
     flex: 1 0 auto;

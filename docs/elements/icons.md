@@ -21,13 +21,13 @@ Icon set made with pure css code, no dependencies.
     <i class="i-arrowUp"></i>
   </div>
   <div class="icon-wrapper">
-    <i class="i-arrowRight"></i>
+    <i class="i-arrow-right"></i>
   </div>
   <div class="icon-wrapper">
     <i class="i-caret"></i>
   </div>
   <div class="icon-wrapper">
-    <i class="i-arrowLeft"></i>
+    <i class="i-arrow-left"></i>
   </div>
   <div class="icon-wrapper">
     <i class="i-remove"></i>
@@ -55,16 +55,16 @@ Icon set made with pure css code, no dependencies.
     <i class="i-sort i-sort--light is-down"></i>
   </div>
   <div class="icon-wrapper u-bg-primary">
-    <i class="i-arrowUp i-arrowUp--light"></i>
+    <i class="i-arrow-up i-arrow-up--light"></i>
   </div>
   <div class="icon-wrapper u-bg-primary">
-    <i class="i-arrowRight i-arrowRight--light"></i>
+    <i class="i-arrow-right i-arrow-right--light"></i>
   </div>
   <div class="icon-wrapper u-bg-primary">
     <i class="i-caret i-caret--light"></i>
   </div>
   <div class="icon-wrapper u-bg-primary">
-    <i class="i-arrowLeft i-arrowLeft--light"></i>
+    <i class="i-arrow-left i-arrow-left--light"></i>
   </div>
   <div class="icon-wrapper u-bg-primary">
     <i class="i-remove i-remove--light"></i>
@@ -85,11 +85,11 @@ Icon set made with pure css code, no dependencies.
 <i class="i-sort"></i>
 <i class="i-sort is-up"></i>
 <i class="i-sort is-down"></i>
-<i class="i-arrowUp"></i>
-<i class="i-arrowRight"></i>
-<i class="i-arrowDown"></i>
+<i class="i-arrow-up"></i>
+<i class="i-arrow-right"></i>
+<i class="i-arrow-down"></i>
 <i class="i-caret"></i>
-<i class="i-arrowLeft"></i>
+<i class="i-arrow-left"></i>
 <i class="i-remove"></i>
 <i class="i-spinner"></i>
 <i class="i-menu"></i>
@@ -100,10 +100,10 @@ Icon set made with pure css code, no dependencies.
 <i class="i-sort i-sort--light"></i>
 <i class="i-sort i-sort--light is-up"></i>
 <i class="i-sort i-sort--light is-down"></i>
-<i class="i-arrowUp i-arrowUp--light"></i>
-<i class="i-arrowRight i-arrowRight--light"></i>
+<i class="i-arrow-up i-arrow-up--light"></i>
+<i class="i-arrow-right i-arrow-right--light"></i>
 <i class="i-caret i-caret--light"></i>
-<i class="i-arrowLeft i-arrowLeft--light"></i>
+<i class="i-arrow-left i-arrow-left--light"></i>
 <i class="i-remove i-remove--light"></i>
 <i class="i-spinner i-spinner--light"></i>
 <i class="i-menu i-menu--light"></i>

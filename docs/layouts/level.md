@@ -61,7 +61,7 @@ first, so it can use `~` CSS selector to control siblings style.
 
 <div class="l-level u-mb-15">
   <div class="l-level__center">
-    <div class="btnGroup">
+    <div class="btn-group">
       <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
       <button class="btn btn--primary btn--outline">SHARED</button>
       <button class="btn btn--primary btn--outline">MEDIA FILES</button>
@@ -89,7 +89,7 @@ first, so it can use `~` CSS selector to control siblings style.
 ```html
 <div class="l-level">
   <div class="l-level__center">
-    <div class="btnGroup">
+    <div class="btn-group">
       <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
       <button class="btn btn--primary btn--outline">SHARED</button>
       <button class="btn btn--primary btn--outline">MEDIA FILES</button>

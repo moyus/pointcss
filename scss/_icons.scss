@@ -1,8 +1,8 @@
 // .i-sort, .i-sort--light, .i-sort.is-up, .i-sort.is-down
-// .i-arrowUp, .i-arrowUp--light
-// .i-arrowRight, .i-arrowRight--light
-// .i-arrowDown, .i-arrowDown--light
-// .i-arrowLeft, .i-arrowLeft--light
+// .i-arrowup, .i-arrow-up--light
+// .i-arrow-right, .i-arrow-right--light
+// .i-arrow-down, .i-arrow-down--light
+// .i-arrow-left, .i-arrow-left--light
 // .i-caret, .i-caret--light
 // .i-remove, .i-remove--light
 // .i-plus, .i-plus--light
@@ -55,7 +55,7 @@
   }
 }
 
-.i-arrowDown {
+.i-arrow-down {
   display: inline-block;
   vertical-align: middle;
   color: $color-black;
@@ -71,7 +71,7 @@
   }
 }
 
-.i-arrowUp {
+.i-arrow-up {
   display: inline-block;
   vertical-align: middle;
   color: $color-black;
@@ -87,7 +87,7 @@
   }
 }
 
-.i-arrowLeft {
+.i-arrow-left {
   display: inline-block;
   vertical-align: middle;
   color: $color-black;
@@ -103,7 +103,7 @@
   }
 }
 
-.i-arrowRight {
+.i-arrow-right {
   display: inline-block;
   vertical-align: middle;
   color: $color-black;
@@ -120,7 +120,7 @@
 }
 
 .i-caret,
-.i-arrowDown {
+.i-arrow-down {
   display: inline-block;
   vertical-align: middle;
   color: $color-black;

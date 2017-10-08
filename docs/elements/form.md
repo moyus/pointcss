@@ -11,7 +11,6 @@ title: "Form"
   - [Select](#select)
 - [States](#states)
 - [Sizes](#sizes)
-- [Icons](#icons)
 - [Group](#group)
 - [Flex](#flex)
 - [Inline](#inline)
@@ -21,131 +20,148 @@ title: "Form"
 There are six basic types of form element: `.form-input`, `.form-select`,
 `.form-checkbox`, `.form-radio`, `.form-switch`, `.form-textarea`
 
-### Inputs
-<div class="form-group">
-    <label class="form-label">Text</label>
-    <input type="text" class="form-input">
-</div>
-<div class="form-group">
-    <label class="form-label">Password</label>
-    <div class="form-control">
-        <input type="password" class="form-input">
+### Input types
+<form class="form-horizontal">
+  <div class="form-group l-row">
+    <label class="form-label l-col-2@md">Text</label>
+    <div class="l-col-10@md">
+      <input type="text" class="form-input" placeholder="Enter your name">
     </div>
-</div>
-<div class="form-group">
-    <label class="form-label">Number</label>
-    <div class="form-control">
-        <input type="number" class="form-input">
+  </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-2@md">Password</label>
+    <div class="l-col-10@md">
+      <input type="password" class="form-input" value="123456">
     </div>
-</div>
-<div class="form-group">
-    <label class="form-label">Date</label>
-    <div class="form-control">
-        <input type="date" class="form-input">
+  </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-2@md">Email</label>
+    <div class="l-col-10@md">
+      <input type="email" class="form-input" value="moyuboy@gmail.com">
     </div>
-</div>
-<div class="form-group">
-    <label class="form-label">Input with placeholder</label>
-    <div class="form-control">
-        <input type="text" class="form-input" placeholder="Enter the magic word...">
+  </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-2@md">Url</label>
+    <div class="l-col-10@md">
+      <input type="url" class="form-input" value="https://github.com/moyus/point">
     </div>
-</div>
+  </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-2@md">Tel</label>
+    <div class="l-col-10@md">
+      <input type="tel" class="form-input" value="010-123456">
+    </div>
+  </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-2@md">Number</label>
+    <div class="l-col-10@md">
+      <input type="number" class="form-input" value="666">
+    </div>
+  </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-2@md">Color</label>
+    <div class="l-col-10@md">
+      <input type="color" class="form-input">
+    </div>
+  </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-2@md">Date</label>
+    <div class="l-col-10@md">
+      <input type="date" class="form-input">
+    </div>
+  </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-2@md">File</label>
+    <div class="l-col-10@md">
+      <input type="file" class="form-input">
+    </div>
+  </div>
+</form>
 
 ```html
-<input type="text" class="form-input">
-<input type="password" class="form-input">
-<input type="number" class="form-input">
+<input type="text" class="form-input" placeholder="Enter your name">
+<input type="password" class="form-input" value="123456">
+<input type="email" class="form-input" value="moyuboy@gmail.com">
+<input type="url" class="form-input" value="https://github.com/moyus/point">
+<input type="tel" class="form-input" value="010-123456">
+<input type="number" class="form-input" value="666">
+<input type="color" class="form-input">
 <input type="date" class="form-input">
+<input type="file" class="form-input">
 ```
 
 ### Checkbox & Radio
 
-<div class="l-level">
-  <div class="l-level__item form-group">
-      <label class="form-label">Radio</label>
-      <div class="form-control">
-          <label class="form-radio">
-              <input type="radio">
-              <span class="form-radio__indicator"></span>
-          </label>
-      </div>
-  </div>
-  <div class="l-level__item form-group">
-      <label class="form-label">Checkbox</label>
-      <div class="form-control">
-          <label class="form-checkbox">
-              <input type="checkbox">
-              <span class="form-checkbox__indicator"></span>
-          </label>
-      </div>
-  </div>
-  <div class="l-level__item form-group">
-      <label class="form-label">Switch</label>
-      <div class="form-control">
-          <label class="form-switch">
-              <input type="checkbox">
-              <span class="form-switch__indicator"></span>
-          </label>
-      </div>
-  </div>
-</div>
-<div class="l-level">
-  <div class="l-level__item form-group">
-      <label class="form-radio">
-          <input type="radio" name="r2">
-          <span class="form-radio__indicator"></span>
-          <span class="form-radio__text">Male</span>
-      </label>
-      <label class="form-radio">
-          <input type="radio" name="r2">
-          <span class="form-radio__indicator"></span>
-          <span class="form-radio__text">Female</span>
-      </label>
-  </div>
-  <div class="l-level__item form-group">
-      <label class="form-checkbox">
-          <input type="checkbox">
-          <span class="form-checkbox__indicator"></span>
-          <span class="form-checkbox__text">Remember Me?</span>
-      </label>
-  </div>
+<div class="form-group">
+  <label class="form-label">Gender</label>
+  <label class="form-radio">
+    <input type="radio" name="gender">
+    <span class="form-radio__indicator"></span>
+    Male
+  </label>
+  <label class="form-radio">
+    <input type="radio" name="gender">
+    <span class="form-radio__indicator"></span>
+    Female
+  </label>
 </div>
 
 ```html
-<label class="form-radio">
-    <input type="radio">
+<div class="form-group">
+  <label class="form-label">Gender</label>
+  <label class="form-radio">
+    <input type="radio" name="gender">
     <span class="form-radio__indicator"></span>
-</label>
+    Male
+  </label>
+  <label class="form-radio">
+    <input type="radio" name="gender">
+    <span class="form-radio__indicator"></span>
+    Female
+  </label>
+</div>
+```
 
-<label class="form-checkbox">
-    <input type="checkbox">
+<div class="form-group">
+  <label class="form-checkbox">
+    <input type="checkbox" name="remember" />
     <span class="form-checkbox__indicator"></span>
-</label>
+    Remember Me?
+  </label>
+</div>
 
-<label class="form-switch">
-    <input type="checkbox">
+```html
+<div class="form-group">
+  <label class="form-checkbox">
+    <input type="checkbox" name="remember" />
+    <span class="form-checkbox__indicator"></span>
+    Remember Me?
+  </label>
+</div>
+```
+
+<div class="form-group">
+  <label class="form-switch">
+    <input type="checkbox" name="light">
     <span class="form-switch__indicator"></span>
-</label>
+    Turn the light on
+  </label>
+</div>
 
-<label class="form-radio">
-    <input type="radio" name="r2">
-    <span class="form-radio__indicator"></span>
-    <span class="form-radio__text">Male</span>
-</label>
-
-<label class="form-checkbox">
-    <input type="checkbox">
-    <span class="form-checkbox__indicator"></span>
-    <span class="form-checkbox__text">Remember Me?</span>
-</label>
+```html
+<div class="form-group">
+  <label class="form-switch">
+    <input type="checkbox" name="light">
+    <span class="form-switch__indicator"></span>
+    Turn the light on
+  </label>
+</div>
 ```
 
 ### Textarea
 
 <div class="form-group">
-  <div class="form-control">
-      <textarea class="form-textarea" rows="4"></textarea>
-  </div>
+  <textarea class="form-textarea" rows="4"></textarea>
 </div>
 
 ```html
@@ -155,56 +171,57 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 ### Select
 
 <div class="form-group">
-  <div class="form-control">
-      <select class="form-select">
-          <option value="0" selected>Beijing</option>
-          <option value="1">Washington</option>
-          <option value="2">Tokyo</option>
-          <option value="3">London</option>
-          <option value="4">Paris</option>
-      </select>
-  </div>
+  <select class="form-select">
+    <option value="0" selected>Beijing</option>
+    <option value="1">Washington</option>
+    <option value="2">Tokyo</option>
+    <option value="3">London</option>
+    <option value="4">Paris</option>
+  </select>
 </div>
 
 <div class="form-group">
-    <label class="form-label">Multiple select</label>
-    <div class="form-control">
-        <select class="form-select" multiple>
-            <option value="0">Beijing</option>
-            <option value="1">Washington</option>
-            <option value="2" selected>Tokyo</option>
-            <option value="3">London</option>
-            <option value="4">Paris</option>
-        </select>
-    </div>
+  <label class="form-label">Multiple select</label>
+  <select class="form-select" multiple>
+    <option value="0">Beijing</option>
+    <option value="1">Washington</option>
+    <option value="2" selected>Tokyo</option>
+    <option value="3">London</option>
+    <option value="4">Paris</option>
+  </select>
 </div>
 
 ```html
-<select class="form-select">
-  <option value="0" selected>Beijing</option>
-  <option value="1">Washington</option>
-  <option value="2">Tokyo</option>
-</select>
+<div class="form-group">
+  <select class="form-select">
+    <option value="0" selected>Beijing</option>
+    <option value="1">Washington</option>
+    <option value="2">Tokyo</option>
+    <option value="3">London</option>
+    <option value="4">Paris</option>
+  </select>
+</div>
 
-<select class="form-select" multiple>
-  <option value="0">Beijing</option>
-  <option value="1">Washington</option>
-  <option value="2" selected>Tokyo</option>
-</select>
+<div class="form-group">
+  <label class="form-label">Multiple select</label>
+  <select class="form-select" multiple>
+    <option value="0">Beijing</option>
+    <option value="1">Washington</option>
+    <option value="2" selected>Tokyo</option>
+    <option value="3">London</option>
+    <option value="4">Paris</option>
+  </select>
+</div>
 ```
 
 ## States
 <div class="form-group">
     <label class="form-label">Read only field</label>
-    <div class="form-control">
-        <input type="text" class="form-input" value="23423" readonly>
-    </div>
+    <input type="text" class="form-input" value="23423" readonly>
 </div>
 <div class="form-group">
     <label class="form-label">Disabled field</label>
-    <div class="form-control">
-        <input type="text" class="form-input" value="you can't change me" disabled>
-    </div>
+    <input type="text" class="form-input" value="you can't change me" disabled>
 </div>
 <div class="form-group">
     <label class="form-label">Success</label>
@@ -232,64 +249,64 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 By adding `.form-input--sm` or `.form-input--lg` to `.form-input` element and `.form-select--sm` or `.form-select--lg` to `.form-select` element to change default sizes.
 
 <div class="l-row">
-    <div class="l-col-6@sm">
-        <div class="form-group">
-            <label class="form-label">Small input</label>
-            <input type="text" class="form-input form-input--sm">
-        </div>
+  <div class="l-col-6@sm">
+    <div class="form-group">
+      <label class="form-label">Small input</label>
+      <input type="text" class="form-input form-input--sm" />
     </div>
-    <div class="l-col-6@sm">
-        <div class="form-group">
-            <label class="form-label">Small select</label>
-            <select class="form-select form-select--sm">
-                <option value="0" selected>Beijing</option>
-                <option value="1">Washington</option>
-                <option value="2">Tokyo</option>
-                <option value="3">London</option>
-                <option value="4">Paris</option>
-            </select>
-        </div>
+  </div>
+  <div class="l-col-6@sm">
+    <div class="form-group">
+      <label class="form-label">Small select</label>
+      <select class="form-select form-select--sm">
+        <option value="0" selected>Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
     </div>
+  </div>
 </div>
 <div class="l-row">
-    <div class="l-col-6@sm">
-        <div class="form-group">
-            <label class="form-label">Default input</label>
-            <input type="text" class="form-input">
-        </div>
+  <div class="l-col-6@sm">
+    <div class="form-group">
+      <label class="form-label">Default input</label>
+      <input type="text" class="form-input">
     </div>
-    <div class="l-col-6@sm">
-        <div class="form-group">
-            <label class="form-label">Default select</label>
-            <select class="form-select">
-                <option value="0" selected>Beijing</option>
-                <option value="1">Washington</option>
-                <option value="2">Tokyo</option>
-                <option value="3">London</option>
-                <option value="4">Paris</option>
-            </select>
-        </div>
+  </div>
+  <div class="l-col-6@sm">
+    <div class="form-group">
+      <label class="form-label">Default select</label>
+      <select class="form-select">
+        <option value="0" selected>Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
     </div>
+  </div>
 </div>
 <div class="l-row">
-    <div class="l-col-6@sm">
-        <div class="form-group">
-            <label class="form-label">Large input</label>
-            <input type="text" class="form-input form-input--lg">
-        </div>
+  <div class="l-col-6@sm">
+    <div class="form-group">
+      <label class="form-label">Large input</label>
+      <input type="text" class="form-input form-input--lg">
     </div>
-    <div class="l-col-6@sm">
-        <div class="form-group">
-            <label class="form-label">Large select</label>
-            <select class="form-select form-select--lg">
-                <option value="0" selected>Beijing</option>
-                <option value="1">Washington</option>
-                <option value="2">Tokyo</option>
-                <option value="3">London</option>
-                <option value="4">Paris</option>
-            </select>
-        </div>
+  </div>
+  <div class="l-col-6@sm">
+    <div class="form-group">
+      <label class="form-label">Large select</label>
+      <select class="form-select form-select--lg">
+        <option value="0" selected>Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
     </div>
+  </div>
 </div>
 
 ```html
@@ -302,226 +319,176 @@ By adding `.form-input--sm` or `.form-input--lg` to `.form-input` element and `.
 <select class="form-select form-select--lg"></select>
 ```
 
-## Icons
-By adding `.has-icon` or `.has-iconRight` class on `.form-control` element to indicate it has float icon.
-
-<div class="form-group">
-    <div class="form-control has-icon">
-        <i class="fa fa-lock form-icon"></i>
-        <input type="text" class="form-input">
-    </div>
-</div>
-<div class="form-group">
-    <div class="form-control has-iconRight">
-        <input type="text" class="form-input">
-        <i class="fa fa-check form-iconRight"></i>
-    </div>
-</div>
-<div class="form-group">
-    <div class="form-control has-icon has-iconRight">
-        <i class="fa fa-lock form-icon"></i>
-        <input type="text" class="form-input">
-        <i class="fa fa-check form-iconRight"></i>
-    </div>
-</div>
-
-```html
-<div class="form-control has-icon">
-  <i class="fa fa-lock form-icon"></i>
-  <input type="text" class="form-input">
-</div>
-
-<div class="form-control has-iconRight">
-  <input type="text" class="form-input">
-  <i class="fa fa-check form-iconRight"></i>
-</div>
-
-<div class="form-control has-icon has-iconRight">
-  <i class="fa fa-lock form-icon"></i>
-  <input type="text" class="form-input">
-  <i class="fa fa-check form-iconRight"></i>
-</div>
-```
-
 ## Group
 In addation to basic form inputs, there are some other form elements can be grouped together.
 
 - `.form-group`
   - `.form-label`
-  - `.form-control`
-    - basic form input elements
+  - `.form-flex`
+    - form elements
   - `.form-help`
 
 <div class="form-group">
-    <label class="form-label">Label text</label>
-    <div class="form-control">
-        <input type="text" class="form-input" placeholder="form input">
-    </div>
-    <small class="form-help">Input description text...</small>
+  <label class="form-label">Label text</label>
+  <input type="text" class="form-input" placeholder="form input">
+  <small class="form-help">Input description text...</small>
 </div>
 
 ```html
 <div class="form-group">
-    <label class="form-label">Label text</label>
-    <div class="form-control">
-        <input type="text" class="form-input" placeholder="form input">
-    </div>
-    <small class="form-help">Input description text...</small>
+  <label class="form-label">Label text</label>
+  <input type="text" class="form-input" placeholder="form input">
+  <small class="form-help">Input description text...</small>
 </div>
 ```
 
 ## Flex
 Use flexbox to create input group.
+
 <div class="form-group">
-    <div class="form-flex">
-        <span class="form-addon">http://example.com/users/</span>
-        <input type="text" class="form-input">
-    </div>
+  <div class="form-flex">
+    <span class="form-addon">http://example.com/users/</span>
+    <input type="text" class="form-input">
+  </div>
 </div>
-<!-- END .form-group -->
+
 <div class="form-group">
-    <div class="form-flex">
-        <input type="text" class="form-input">
-        <span class="form-addon">@example.com</span>
-    </div>
+  <div class="form-flex">
+    <input type="text" class="form-input">
+    <span class="form-addon">@example.com</span>
+  </div>
 </div>
-<!-- END .form-group -->
+
 <div class="form-group">
-    <div class="form-flex">
-        <span class="form-addon">$</span>
-        <input type="text" class="form-input">
-        <span class="form-addon">.00</span>
-    </div>
+  <div class="form-flex">
+    <span class="form-addon">$</span>
+    <input type="text" class="form-input">
+    <span class="form-addon">.00</span>
+  </div>
 </div>
-<!-- END .form-group -->
+
 <div class="form-group">
-    <div class="form-flex">
-        <span class="form-addon">From</span>
-        <input type="text" class="form-input">
-        <span class="form-addon">To</span>
-        <input type="text" class="form-input">
-    </div>
+  <div class="form-flex">
+    <span class="form-addon">From</span>
+    <input type="text" class="form-input">
+    <span class="form-addon">To</span>
+    <input type="text" class="form-input">
+  </div>
 </div>
-<!-- END .form-group -->
+
 <div class="form-group">
-    <div class="form-flex">
-        <span class="form-addon">
-          <input type="radio">
-        </span>
-        <input type="text" class="form-input">
-    </div>
-    <!-- END .form-flex -->
+  <div class="form-flex">
+    <span class="form-addon">
+      <input type="radio">
+    </span>
+    <input type="text" class="form-input">
+  </div>
 </div>
-<!-- END .form-group -->
+
 <div class="form-group">
-    <div class="form-flex">
-        <input type="text" class="form-input">
-        <span class="form-addon">
-            <input type="checkbox">
-        </span>
-    </div>
-    <!-- END .form-flex -->
+  <div class="form-flex">
+    <input type="text" class="form-input">
+    <span class="form-addon">
+      <input type="checkbox">
+    </span>
+  </div>
 </div>
-<!-- END .form-group -->
 
 ```html
 <div class="form-group">
-    <div class="form-flex">
-        <span class="form-addon">http://example.com/users/</span>
-        <input type="text" class="form-input">
-    </div>
+  <div class="form-flex">
+    <span class="form-addon">http://example.com/users/</span>
+    <input type="text" class="form-input">
+  </div>
 </div>
-<!-- END .form-group -->
+
 <div class="form-group">
-    <div class="form-flex">
-        <input type="text" class="form-input">
-        <span class="form-addon">@example.com</span>
-    </div>
+  <div class="form-flex">
+    <input type="text" class="form-input">
+    <span class="form-addon">@example.com</span>
+  </div>
 </div>
-<!-- END .form-group -->
+
 <div class="form-group">
-    <div class="form-flex">
-        <span class="form-addon">$</span>
-        <input type="text" class="form-input">
-        <span class="form-addon">.0.0</span>
-    </div>
+  <div class="form-flex">
+    <span class="form-addon">$</span>
+    <input type="text" class="form-input">
+    <span class="form-addon">.00</span>
+  </div>
 </div>
-<!-- END .form-group -->
+
 <div class="form-group">
-    <div class="form-flex">
-        <span class="form-addon">From</span>
-        <input type="text" class="form-input">
-        <span class="form-addon">To</span>
-        <input type="text" class="form-input">
-    </div>
+  <div class="form-flex">
+    <span class="form-addon">From</span>
+    <input type="text" class="form-input">
+    <span class="form-addon">To</span>
+    <input type="text" class="form-input">
+  </div>
 </div>
-<!-- END .form-group -->
+
 <div class="form-group">
-    <div class="form-flex">
-        <span class="form-addon">
-          <input type="radio">
-        </span>
-        <input type="text" class="form-input">
-    </div>
-    <!-- END .form-flex -->
+  <div class="form-flex">
+    <span class="form-addon">
+      <input type="radio">
+    </span>
+    <input type="text" class="form-input">
+  </div>
 </div>
-<!-- END .form-group -->
+
 <div class="form-group">
-    <div class="form-flex">
-        <input type="text" class="form-input">
-        <span class="form-addon">
-            <input type="checkbox">
-        </span>
-    </div>
-    <!-- END .form-flex -->
+  <div class="form-flex">
+    <input type="text" class="form-input">
+    <span class="form-addon">
+      <input type="checkbox">
+    </span>
+  </div>
 </div>
-<!-- END .form-group -->
 ```
 
 ## Inline
 Use the `.form-inline` class to display a series of group elements on a single horizontal row.
 
 <form class="form-inline u-mb-15">
-    <div class="form-group">
-        <label class="form-label">Username</label>
-        <input type="text" class="form-input">
-    </div>
-    <div class="form-group">
-        <label class="form-label">Password</label>
-        <input type="password" class="form-input">
-    </div>
-    <div class="form-group">
-        <label class="form-checkbox u-m-0">
-            <input type="checkbox">
-            <span class="form-checkbox__indicator"></span>
-            <span class="form-checkbox__text">Remember me?</span>
-        </label>
-    </div>
-    <div class="form-group">
-        <button type="button" class="btn btn--primary btn--outline">Login</button>
-    </div>
+  <div class="form-group">
+    <label class="form-label">Username</label>
+    <input type="text" class="form-input">
+  </div>
+  <div class="form-group">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-input">
+  </div>
+  <div class="form-group">
+    <label class="form-checkbox">
+      <input type="checkbox">
+      <span class="form-checkbox__indicator"></span>
+      Remember me?
+    </label>
+  </div>
+  <div class="form-group">
+    <button type="button" class="btn btn--primary btn--outline">Login</button>
+  </div>
 </form>
 
 ```html
 <form class="form-inline u-mb-15">
-    <div class="form-group">
-        <label class="form-label">Username</label>
-        <input type="text" class="form-input">
-    </div>
-    <div class="form-group">
-        <label class="form-label">Password</label>
-        <input type="password" class="form-input">
-    </div>
-    <div class="form-group">
-        <label class="form-checkbox u-m-0">
-            <input type="checkbox">
-            <span class="form-checkbox__indicator"></span>
-            <span class="form-checkbox__text">Remember me?</span>
-        </label>
-    </div>
-    <div class="form-group">
-        <button type="button" class="btn btn--primary btn--outline">Login</button>
-    </div>
+  <div class="form-group">
+    <label class="form-label">Username</label>
+    <input type="text" class="form-input">
+  </div>
+  <div class="form-group">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-input">
+  </div>
+  <div class="form-group">
+    <label class="form-checkbox">
+      <input type="checkbox">
+      <span class="form-checkbox__indicator"></span>
+      Remember me?
+    </label>
+  </div>
+  <div class="form-group">
+    <button type="button" class="btn btn--primary btn--outline">Login</button>
+  </div>
 </form>
 ```
 
@@ -529,61 +496,61 @@ Use the `.form-inline` class to display a series of group elements on a single h
 Use Grid System and `.form-horizontal` to create horizontal forms.
 
 <form class="form-horizontal u-mb-15">
-    <div class="form-group l-row">
-        <label class="form-label l-col-12 l-col-3@md">Username</label>
-        <div class="l-col-12 l-col-9@md">
-            <input type="text" class="form-input">
-        </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-3@md">Username</label>
+    <div class="l-col-12 l-col-9@md">
+      <input type="text" class="form-input">
     </div>
-    <div class="form-group l-row">
-        <label class="form-label l-col-12 l-col-3@md">Password</label>
-        <div class="l-col-12 l-col-9@md">
-            <input type="password" class="form-input">
-        </div>
+  </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-3@md">Password</label>
+    <div class="l-col-12 l-col-9@md">
+      <input type="password" class="form-input">
     </div>
-    <div class="form-group l-row">
-        <div class="l-col-12 l-col-9@md l-col-offset-3@md">
-            <label class="form-checkbox">
-                <input type="checkbox">
-                <span class="form-checkbox__indicator"></span>
-                <span class="form-checkbox__text">Remember me?</span>
-            </label>
-        </div>
+  </div>
+  <div class="form-group l-row">
+    <div class="l-col-9@md l-col-offset-3@md">
+      <label class="form-checkbox">
+        <input type="checkbox">
+        <span class="form-checkbox__indicator"></span>
+        Remember me?
+      </label>
     </div>
-    <div class="form-group l-row">
-        <div class="l-col-12 l-col-9@md l-col-offset-3@md">
-            <button type="button" class="btn btn--primary">Login</button>
-        </div>
+  </div>
+  <div class="form-group l-row">
+    <div class="l-col-9@md l-col-offset-3@md">
+      <button type="button" class="btn btn--primary">Login</button>
     </div>
+  </div>
 </form>
 
 ```html
 <form class="form-horizontal u-mb-15">
-    <div class="form-group l-row">
-        <label class="form-label l-col-12 l-col-3@md">Username</label>
-        <div class="l-col-12 l-col-9@md">
-            <input type="text" class="form-input">
-        </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-3@md">Username</label>
+    <div class="l-col-12 l-col-9@md">
+      <input type="text" class="form-input">
     </div>
-    <div class="form-group l-row">
-        <label class="form-label l-col-12 l-col-3@md">Password</label>
-        <div class="l-col-12 l-col-9@md">
-            <input type="password" class="form-input">
-        </div>
+  </div>
+  <div class="form-group l-row">
+    <label class="form-label l-col-3@md">Password</label>
+    <div class="l-col-12 l-col-9@md">
+      <input type="password" class="form-input">
     </div>
-    <div class="form-group l-row">
-        <div class="l-col-12 l-col-9@md l-col-offset-3@md">
-            <label class="form-checkbox">
-                <input type="checkbox">
-                <span class="form-checkbox__indicator"></span>
-                <span class="form-checkbox__text">Remember me?</span>
-            </label>
-        </div>
+  </div>
+  <div class="form-group l-row">
+    <div class="l-col-9@md l-col-offset-3@md">
+      <label class="form-checkbox">
+        <input type="checkbox">
+        <span class="form-checkbox__indicator"></span>
+        Remember me?
+      </label>
     </div>
-    <div class="form-group l-row">
-        <div class="l-col-12 l-col-9@md l-col-offset-3@md">
-            <button type="button" class="btn btn--primary">Login</button>
-        </div>
+  </div>
+  <div class="form-group l-row">
+    <div class="l-col-9@md l-col-offset-3@md">
+      <button type="button" class="btn btn--primary">Login</button>
     </div>
+  </div>
 </form>
 ```

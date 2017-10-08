@@ -16,7 +16,7 @@ There are seven predefined button styles.
 
 <div class="u-mb-15">
   <button class="btn">Button</button>
-  <button class="u-mb-5 btn btn--default">Default</button>
+  <button class="u-mb-5 btn btn--ghost">Ghost</button>
   <button class="u-mb-5 btn btn--primary">Primary</button>
   <button class="u-mb-5 btn btn--info">Info</button>
   <button class="u-mb-5 btn btn--success">Success</button>
@@ -26,7 +26,7 @@ There are seven predefined button styles.
 
 ```html
 <button class="btn">Button</button>
-<button class="btn btn--default">Default</button>
+<button class="btn btn--ghost">Ghost</button>
 <button class="btn btn--primary">Primary</button>
 <button class="btn btn--info">Info</button>
 <button class="btn btn--success">Success</button>
@@ -55,17 +55,16 @@ remove background color.
 ```
 
 ## States
-Make buttons look inactive by adding the `disabled` attrubute or `.is-disabled`
-class to `.btn` element.
+Make buttons look inactive by adding the `disabled` attrubute.
 
 <div class="u-mb-15">
-  <button class="u-mb-5 btn btn--primary is-disabled" disabled>Disabled</button>
+  <button class="u-mb-5 btn btn--primary" disabled>Disabled</button>
   <button class="u-mb-5 btn btn--info" disabled>Info</button>
 </div>
 
 
 ```html
-<button class="btn btn--primary is-disabled">Primary</button>
+<button class="btn btn--primary" disabled>Primary</button>
 <button class="btn btn--info" disabled>Info</button>
 ```
 
@@ -109,11 +108,11 @@ By adding `.btn--block` modifier class to quickly create block level button
 ```
 
 ## Group
-Buttons can be grouped by placing multiple `.btn` elements into a `.btnGroup`
+Buttons can be grouped by placing multiple `.btn` elements into a `.btn-group`
 container element
 
 <div class="u-mb-15">
-  <div class="btnGroup">
+  <div class="btn-group">
     <button class="u-mb-5 btn btn--primary btn--outline">Left</button>
     <button class="u-mb-5 btn btn--primary btn--outline">Middle</button>
     <button class="u-mb-5 btn btn--primary btn--outline">Right</button>
@@ -121,7 +120,7 @@ container element
 </div>
 
 ```html
-<div class="btnGroup">
+<div class="btn-group">
   <button class="btn btn--primary btn--outline">Left</button>
   <button class="btn btn--primary btn--outline">Middle</button>
   <button class="btn btn--primary btn--outline">Right</button>

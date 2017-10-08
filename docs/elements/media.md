@@ -7,7 +7,6 @@ title: "Media"
 - [Fluid image](#fluid-image)
 - [Rounded image](#rounded-image)
 - [Circle Image](#circle-image)
-- [Avatars](#avatars)
 - [Fluid embeds](#fluid-embeds)
 
 ## Fluid image
@@ -36,27 +35,6 @@ Change image shape into circle by adding `.img-circle` class.
 
 ```html
 <img src="..." class="img-circle" />
-```
-
-## Avatars
-There are three predefined sizes of avatar.
-
-<div class="l-level u-mb-15">
-    <div class="l-level__item">
-        <img src="http://cloud.liuxinyu.me/image/avatar/avatar.jpg" class="avatar avatar--sm">
-    </div>
-    <div class="l-level__item">
-        <img src="http://cloud.liuxinyu.me/image/avatar/avatar.jpg" class="avatar">
-    </div>
-    <div class="l-level__item">
-        <img src="http://cloud.liuxinyu.me/image/avatar/avatar.jpg" class="avatar avatar--lg">
-    </div>
-</div>
-
-```html
-<img src="..." class="avatar avatar--sm" />
-<img src="..." class="avatar" />
-<img src="..." class="avatar avatar--lg" />
 ```
 
 ## Fluid embeds

@@ -1,33 +1,32 @@
-.u-textMuted {
+.u-text-muted {
   color: $muted-color !important;
 }
-.u-textCenter {
+.u-text-center {
   text-align: center !important;
-},
-.u-textRight {
+}
+.u-text-right {
   text-align: right !important;
 }
-.u-textLeft {
+.u-text-left {
   text-align: left !important;
 }
-.u-textTruncated,
-.u-textOneLine {
+.u-text-truncated {
   @include oneline;
 }
-.u-textBreak {
+.u-text-break {
   white-space: normal;
   word-wrap: break-word;
 }
-.u-textNowrap {
+.u-text-nowrap {
   white-space: nowrap;
 }
-.u-textInherit {
+.u-text-inherit {
   color: inherit !important;
 }
 .u-bolder {
   font-weight: bolder !important;
 }
-.u-textDone {
+.u-text-cross {
   color: $muted-color;
   text-decoration: line-through;
 }
@@ -79,10 +78,10 @@
   }
 
   @include media-breakpoint-up($breakpoint) {
-    .u-textRight#{$suffix} {
+    .u-text-right#{$suffix} {
       text-align: right !important;
     }
-    .u-textCenter#{$suffix} {
+    .u-text-center#{$suffix} {
       text-align: center !important;
     }
   }

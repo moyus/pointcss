@@ -1,0 +1,129 @@
+/*
+Markup:
+<body class="is-masking">
+  <div class="modal {{modifier}}" role="dialog">
+    <section class="modal__content">
+      <header class="modal__header">
+        <h4 class="modal__title">Modal Title</h4>
+        <a role="button" class="modal__close"></a>
+      </header>
+      <div class="modal__body">
+
+      </div>
+      <footer class="modal__footer">
+
+      </footer>
+    </section>
+  </div>
+  
+  <div class="mask"></div>
+</body>
+*/
+
+// Block
+.modal {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: $modal-padding;
+  z-index: $modal-zIndex;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &.is-active {
+    display: flex;
+  }
+}
+
+// Elements
+.modal__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: $modal-width-base;
+  width: 100%;
+  margin: auto;
+  background-color: $modal-bg-color;
+  border-radius: $modal-border-radius;
+}
+
+.modal__header {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $modal-padding;
+}
+
+.modal__title {
+  flex: 1 1 0%;
+  min-width: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: $modal-title-font-size;
+  @include oneline;
+}
+
+.modal__close {
+  font-size: 22px;
+  line-height: 1;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.modal__body {
+  flex: 1 1 auto;
+  padding: $modal-padding;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+.modal__footer {
+  flex-shrink: 0;
+  padding: $modal-padding;
+  text-align: right;
+}
+
+// Modifiers
+.modal--sm {
+  .modal__content {
+    max-width: $modal-width-sm;
+  }
+}
+
+.modal--lg {
+  .modal__content {
+    max-width: $modal-width-lg;
+  }
+}
+
+/*
+Markup:
+<body class="is-masking">
+  ...
+  <div class="mask"></div>
+</body>
+*/
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $mask-bg;
+  z-index: $mask-zIndex;
+}
+
+body.is-masking {
+  overflow: hidden;
+}

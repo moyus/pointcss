@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/css/docs.css">
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
-  <script>
+  <!-- <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -20,27 +20,28 @@
     ga('create', 'UA-93499539-1', 'auto');
     ga('send', 'pageview');
 
-  </script>
+  </script> -->
 </head>
 <body>
   <div id="docs" class="docs-l-app">
     <header class="docs-l-topbar">
       <div class="docs-l-topbar__inner">
-        <nav class="c-navbar">
-          <div class="c-navbar__left is-fixed">
-            <a href="/" class="c-navbar__item">
-              <img src="/images/logo-head.png">
+        <nav class="navbar">
+          <div class="navbar__start">
+            <a href="/" class="navbar__item">
+              <img width="32" height="32" src="/images/logo.svg">
             </a>
           </div>
-          <!-- END .c-navbar__left -->
-          <div class="c-navbar__right is-auto">
-            <a href="/getting-started" class="c-navbar__item">Documentation</a>
-            <a href="https://github.com/moyus/point" class="c-navbar__item">Github</a>
-            <div class="c-navbar__item">
+          <!-- END .navbar__left -->
+          <div class="navbar__end">
+            <a href="/getting-started" class="navbar__item">Documentation</a>
+            <a href="https://github.com/moyus/point" class="navbar__item">Github</a>
+            <a href="http://cover.20theme.com" class="navbar__item">Cover</a>
+            <div class="navbar__item">
               <a href="https://github.com/moyus/point/releases" class="btn btn--outline btn--primary">Download</a>
             </div>
           </div>
-          <!-- END .c-navbar__right -->
+          <!-- END .navbar__right -->
         </nav>
       </div>
     </header>
@@ -80,6 +81,9 @@
       <a href="/elements/typography.html" class="docs-c-sidenav__link">Typography</a>
     </li>
     <li class="docs-c-sidenav__item">
+      <a href="/elements/badges.html" class="docs-c-sidenav__link">Badges</a>
+    </li>
+    <li class="docs-c-sidenav__item">
       <a href="/elements/buttons.html" class="docs-c-sidenav__link">Buttons</a>
     </li>
     <li class="docs-c-sidenav__item">
@@ -89,12 +93,6 @@
       <a href="/elements/tables.html" class="docs-c-sidenav__link">Tables</a>
     </li>
     <li class="docs-c-sidenav__item">
-      <a href="/elements/media.html" class="docs-c-sidenav__link">Media</a>
-    </li>
-    <li class="docs-c-sidenav__item">
-      <a href="/elements/badges.html" class="docs-c-sidenav__link">Badges</a>
-    </li>
-    <li class="docs-c-sidenav__item">
       <a href="/elements/hint.html" class="docs-c-sidenav__link">Hint</a>
     </li>
     <li class="docs-c-sidenav__item">
@@ -102,6 +100,9 @@
     </li>
     <li class="docs-c-sidenav__item">
       <a href="/elements/icons.html" class="docs-c-sidenav__link">Icons</a>
+    </li>
+    <li class="docs-c-sidenav__item">
+      <a href="/elements/media.html" class="docs-c-sidenav__link">Media</a>
     </li>
   </ul>
   <!-- END .docs-c-sidenav__group -->

@@ -1,3 +1,8 @@
+/*
+Markup:
+<button class="btn hint {{modifier}}" data-hint="Are you sure?">Save</button> 
+*/
+
 .hint {
   position: relative; // absolute or fixed
   overflow: visible;
@@ -23,7 +28,7 @@
   }
 
   &:after {
-    content: attr(data-label);
+    content: attr(data-hint);
     color: $hint-color;
     font-size: $hint-font-size;
     line-height: $hint-line-height;

@@ -1,5 +1,14 @@
+/*
+Markup:
+<ul class="nav {{modifier}}">
+  <li class="nav__item">
+    <a href="#" class="nav__link"></a>
+  </li>
+</ul>
+*/
+
 // Block
-.c-nav {
+.nav {
   position: relative;
   margin: 0;
   padding: 0;
@@ -7,11 +16,11 @@
 }
 
 // Elements
-.c-nav__item {
+.nav__item {
 
 }
 
-.c-nav__link {
+.nav__link {
   display: block;
   line-height: $line-height-base;
   font-size: $font-size-base;
@@ -23,12 +32,12 @@
 }
 
 // Modifiers
-.c-nav--menus {
-  > .c-nav__item {
+.nav--menus {
+  > .nav__item {
     &:not(:last-child) {
       margin-bottom: $nav-menus-item-margin-y;
     }
-    > .c-nav__link {
+    > .nav__link {
       color: $nav-menus-link-color;
       padding: $nav-menus-link-padding-base-y $nav-menus-link-padding-base-x;
       border-radius: $nav-menus-link-border-radius-base;
@@ -42,25 +51,25 @@
     }
   }
 
-  > .c-nav__divider {
+  > .nav__divider {
     height: 1px;
     margin-top: $space-stack-xs;
     margin-bottom: $space-stack-xs;
     background-color: $nav-menus-divider-color;
   }
 
-  .c-nav--menus {
+  .nav--menus {
     margin: $nav-menus-item-margin-y 0 $nav-menus-item-margin-y $space-stack-s;
   }
 }
 
-.c-nav--pills {
+.nav--pills {
   display: flex;
-  > .c-nav__item {
+  > .nav__item {
     &:not(:last-child) {
       margin-right: $nav-pills-item-margin-x;
     }
-    > .c-nav__link {
+    > .nav__link {
       color: $nav-pills-link-color;
       text-align: center;
       padding: $nav-pills-link-padding-base-y $nav-pills-link-padding-base-x;
@@ -76,15 +85,15 @@
   }
 }
 
-.c-nav--tabs {
+.nav--tabs {
   display: flex;
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
-  > .c-nav__item {
+  > .nav__item {
     margin-bottom: (0 - $nav-tabs-border-width);
     &:not(:last-child) {
       margin-right: $nav-tabs-item-margin-x;
     }
-    > .c-nav__link {
+    > .nav__link {
       color: $nav-tabs-link-color;
       padding: $nav-tabs-link-padding-base-y $nav-tabs-link-padding-base-x;
       border-radius: $nav-tabs-link-border-radius-base $nav-tabs-link-border-radius-base 0 0;
@@ -101,9 +110,9 @@
   }
 }
 
-.c-nav--sm.c-nav--menus {
-  > .c-nav__item {
-    > .c-nav__link {
+.nav--sm.nav--menus {
+  > .nav__item {
+    > .nav__link {
       font-size: $font-size-sm;
       padding: $nav-menus-link-padding-sm-y $nav-menus-link-padding-sm-x;
       border-radius: $nav-menus-link-border-radius-sm;
@@ -111,9 +120,9 @@
   }
 }
 
-.c-nav--sm.c-nav--pills {
-  > .c-nav__item {
-    > .c-nav__link {
+.nav--sm.nav--pills {
+  > .nav__item {
+    > .nav__link {
       font-size: $font-size-sm;
       padding: $nav-pills-link-padding-sm-y $nav-pills-link-padding-sm-x;
       border-radius: $nav-pills-link-border-radius-sm;
@@ -121,9 +130,9 @@
   }
 }
 
-.c-nav--sm.c-nav--tabs {
-  > .c-nav__item {
-    > .c-nav__link {
+.nav--sm.nav--tabs {
+  > .nav__item {
+    > .nav__link {
       font-size: $font-size-sm;
       padding: $nav-tabs-link-padding-sm-y $nav-tabs-link-padding-sm-x;
       border-radius: $nav-tabs-link-border-radius-sm $nav-tabs-link-border-radius-sm 0 0;

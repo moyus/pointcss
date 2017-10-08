@@ -12,6 +12,7 @@ $master-palette: (
   // shine: #e91e63, you can add more
 ) !default;
 
+$color-primary:                         map-get($master-palette, 'primary') !default;
 $grey-darkest:                          #161616 !default;
 $grey-dark:                             #333333 !default; // text, heading
 $grey-base:                             #4D4C4C !default;
@@ -190,7 +191,7 @@ $list-item-padding-x-sm:                $space-squish-base-x !default;
 $list-item-padding-y-base:              $space-squish-l-y !default;
 $list-item-padding-x-base:              $space-squish-l-x !default;
 $list-item-padding-y-lg:                $space-squish-xl-y !default;
-$list-item-padding-x-lg:                $space-squish-xl-x !default;
+$list-item-padding-x-lg:                $space-squish-l-x !default;
 $list-item-bg-color:                    $color-white !default;
 $list-item-active-bg-color:             map-get($master-palette, 'primary') !default;
 $list-item-active-color:                $color-white !default;
@@ -199,29 +200,27 @@ $list-border-color:                     $border-color !default;
 $list-border-radius:                    $border-radius-base !default;
 $list-item-hover-bg:                    $grey-lightest !default;
 
-// Drop
+// Dropmenu
 // -----------------------------------------------------------------------------
-$drop-bg-color:                         $color-white !default;
-$drop-border-color:                     $border-color !default;
-$drop-border-width:                     $border-width !default;
-$drop-border-radius:                    $border-radius-base !default;
-$drop-content-min-width:                160px !default;
-$drop-content-gutter:                   $space-stack-xs !default;
+$dropmenu-bg-color:                     $color-white !default;
+$dropmenu-border-color:                 $border-color !default;
+$dropmenu-border-width:                 $border-width !default;
+$dropmenu-border-radius:                $border-radius-base !default;
+$dropmenu-min-width:                    160px !default;
+$dropmenu-gutter:                       $space-stack-xs !default;
+$dropmenu-link-padding-y:               $space-squish-base-y !default;
+$dropmenu-link-padding-x:               $space-squish-base-x !default;
 
 // Modal
 // -----------------------------------------------------------------------------
-$modal-padding:                         $space-inset-base !default;
 $modal-width-sm:                        480px !default;
 $modal-width-base:                      600px !default;
 $modal-width-lg:                        900px !default;
-$modalCard-title-font-size:             $font-size-lg;
-$modalCard-bg-color:                    $color-white !default;
-$modalCard-padding:                     $space-inset-base !default;
-$modalCard-border-color:                rgba(120,130,140,.1) !default;
-$modalCard-border-radius:               $border-radius-lg !default;
-$modalCard-border-width:                $border-width !default;
-$modalCard-divider-color:               $divider-color !default;
-$backdrop-bg-color:                     rgba($color-black,.5) !default;
+$modal-title-font-size:                 $font-size-lg;
+$modal-bg-color:                        $color-white !default;
+$modal-padding:                         $space-inset-base !default;
+$modal-border-radius:                   $border-radius-lg !default;
+$mask-bg:                               rgba($color-black,.5) !default;
 
 // Nav
 // -----------------------------------------------------------------------------
@@ -309,17 +308,17 @@ $box-border-radius:                     $border-radius-base !default;
 
 $note-color:                            $text-color !default;
 $note-bg-color:                         $grey-lightest !default;
-$note-border-color:                     $border-color !default;
+$note-border-color:                     transparent !default;
 $note-border-width:                     $border-width !default;
 $note-border-radius:                    $border-radius-base !default;
 $note-padding:                          $space-inset-base !default;
 $note-margin-bottom:                    $space-stack-l !default;
 
 $note-palette: (
-  danger: (bg: #f2dede, border: #ebccd1, text: #a94442),
-  info: (bg: #d9edf7, border: #bde2fb, text: #31708f),
-  success: (bg: #dff0d8, border: #d6e9c6, text: #3c763d),
-  warning: (bg: #fcf8e3, border: #faebcc, text: #8a6d3b)
+  danger: (bg: #f2dede, border: #f2dede, text: #a94442),
+  info: (bg: #d9edf7, border: #d9edf7, text: #31708f),
+  success: (bg: #dff0d8, border: #dff0d8, text: #3c763d),
+  warning: (bg: #fcf8e3, border: #fcf8e3, text: #8a6d3b)
 ) !default;
 
 $box-palette: (

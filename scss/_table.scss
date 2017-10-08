@@ -1,8 +1,9 @@
-// .table
-// .table.table--bordered
-// .table.table--striped
-// .table.table--hover
-// .table.table--responsive
+/*
+Markup:
+<table class="table {{modifler}}">
+  ...
+</table>
+*/
 
 .table {
   width: 100%;

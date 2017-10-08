@@ -6,28 +6,28 @@ title: "Breadcrumb"
 # Breadcrumb
 
 <div class="u-mb-15">
-  <ul class="c-breadcrumb">
-    <li class="c-breadcrumb__item">
-      <a href="#" class="c-breadcrumb__link">Home</a>
+  <ul class="breadcrumb">
+    <li class="breadcrumb__item">
+      <a href="#" class="breadcrumb__link">Home</a>
     </li>
-    <li class="c-breadcrumb__item">
-      <a href="#" class="c-breadcrumb__link">Library</a>
+    <li class="breadcrumb__item">
+      <a href="#" class="breadcrumb__link">Library</a>
     </li>
-    <li class="c-breadcrumb__item">
+    <li class="breadcrumb__item">
       Book
     </li>
   </ul>
 </div>
 
 ```html
-<ul class="c-breadcrumb">
-  <li class="c-breadcrumb__item">
-    <a href="#" class="c-breadcrumb__link">Home</a>
+<ul class="breadcrumb">
+  <li class="breadcrumb__item">
+    <a href="#" class="breadcrumb__link">Home</a>
   </li>
-  <li class="c-breadcrumb__item">
-    <a href="#" class="c-breadcrumb__link">Library</a>
+  <li class="breadcrumb__item">
+    <a href="#" class="breadcrumb__link">Library</a>
   </li>
-  <li class="c-breadcrumb__item">
+  <li class="breadcrumb__item">
     Book
   </li>
 </ul>

@@ -1,0 +1,28 @@
+/*
+Markup:
+<span class="badge {{modifier}}">Administrator</span>
+*/
+
+.badge {
+  display: inline-block;
+  padding: $badge-padding-y-base $badge-padding-x-base;
+  font-size: $font-size-sm;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 1993px;
+  vertical-align: baseline;
+  @include badge-variant($badge-color-default, $badge-bg-color-default);
+  &:empty {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+  }
+}
+
+// modifiers
+@each $modifier, $value in $master-palette {
+  .badge--#{$modifier} {
+    @include badge-variant($color-white, $value)
+  }
+}

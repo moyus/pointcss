@@ -1,12 +1,12 @@
 // button variant
 // -----------------------------------------------------------------------------
 @mixin box-variant($text-color, $border-color, $background-color) {
-  .c-box__heading {
+  .box__header {
     color: $text-color;
     background-color: $background-color;
     border-color: $border-color;
   }
-  .c-box__body {
+  .box__body {
     border-color: $border-color;
   }
 }

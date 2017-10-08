@@ -6,18 +6,37 @@
     }
   }
 
+  var $mask = document.querySelector('.mask')
+  var showMask = function () {
+    if (!$mask) {
+      $mask = document.createElement('div')
+      $mask.className = 'mask'
+      document.body.appendChild($mask)
+    }
+  }
+  var hideMask = function () {
+    if ($mask) {
+      document.body.removeChild($mask)
+      $mask = null
+    }
+  }
+
   var modalify = function (triggerEl) {
     var modalId = triggerEl.getAttribute('data-target')
     var modal = document.getElementById(modalId)
     var modalCloseEls = document.querySelectorAll('#' + modalId + ' .js-modal-close')
     triggerEl.addEventListener('click', function (e) {
       e.preventDefault()
-      modal.classList.toggle('is-active');
+      showMask()
+      document.body.classList.add('is-masking')
+      modal.classList.add('is-active')
     })
 
     forEach(modalCloseEls, function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault()
+        hideMask()
+        document.body.classList.remove('is-masking')
         modal.classList.remove('is-active')
       })
     })

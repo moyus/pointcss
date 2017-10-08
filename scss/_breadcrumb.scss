@@ -1,0 +1,38 @@
+/*
+Markup:
+<ul class="breadcrumb">
+  <li class="breadcrumb__item">
+    <a href="#" class="breadcrumb__link">Home</a>
+  </li>
+  <li class="breadcrumb__item">
+    <a href="#" class="breadcrumb__link">Posts</a>
+  </li>
+  <li class="breadcrumb__item">Add</li>
+</ul>
+*/
+
+// Block
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: $muted-color;
+  @include clearfix;
+}
+
+// Elements
+.breadcrumb__item {
+  float: left;
+  &:nth-child(n+2) {
+    &:before {
+      content: '/';
+      padding-left: 8px;
+      padding-right: 8px;
+      color: $muted-color;
+    }
+  }
+}
+
+.breadcrumb__link {
+  color: $text-color;
+}

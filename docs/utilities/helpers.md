@@ -149,32 +149,32 @@ Space step is 5px, start from 0, end at 60px
   </thead>
   <tbody>
       <tr>
-          <td><code>.u-textMuted</code></td>
-          <td><span class="u-textMuted">Lorem ipsum dolor sit amet.</span></td>
+          <td><code>.u-text-muted</code></td>
+          <td><span class="u-text-muted">Lorem ipsum dolor sit amet.</span></td>
       </tr>
       <tr>
-          <td><code>.u-textCenter</code></td>
-          <td><div class="u-textCenter">Lorem ipsum dolor sit amet.</div></td>
+          <td><code>.u-text-center</code></td>
+          <td><div class="u-text-center">Lorem ipsum dolor sit amet.</div></td>
       </tr>
       <tr>
-          <td><code>.u-textRight</code></td>
-          <td><div class="u-textRight">Lorem ipsum dolor sit amet.</div></td>
+          <td><code>.u-text-right</code></td>
+          <td><div class="u-text-right">Lorem ipsum dolor sit amet.</div></td>
       </tr>
       <tr>
-          <td><code>.u-textLeft</code></td>
-          <td><div class="u-textLeft">Lorem ipsum dolor sit amet.</div></td>
+          <td><code>.u-text-left</code></td>
+          <td><div class="u-text-left">Lorem ipsum dolor sit amet.</div></td>
       </tr>
       <tr>
-          <td><code>.u-textTruncated</code></td>
-          <td><div class="u-textTruncated" style="width: 100px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, velit?</div></td>
+          <td><code>.u-text-truncated</code></td>
+          <td><div class="u-text-truncated" style="width: 100px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, velit?</div></td>
       </tr>
       <tr>
-          <td><code>.u-textBreak</code></td>
-          <td><div class="u-textBreak" style="width: 100px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, velit?</div></td>
+          <td><code>.u-text-break</code></td>
+          <td><div class="u-text-break" style="width: 100px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, velit?</div></td>
       </tr>
       <tr>
-          <td><code>.u-textNowrap</code></td>
-          <td><div class="u-textNowrap" style="width: 100px;">Lorem ipsum dolor sit amet</div></td>
+          <td><code>.u-text-nowrap</code></td>
+          <td><div class="u-text-nowrap" style="width: 100px;">Lorem ipsum dolor sit amet</div></td>
       </tr>
       <tr>
           <td><code>.u-h1</code></td>
@@ -257,15 +257,11 @@ Space step is 5px, start from 0, end at 60px
   </thead>
   <tbody>
       <tr>
-          <td><code>.u-scrollable</code></td>
-          <td>set a fixed height or width of element and provide a y-axis or x-axis scrollbar</td>
-      </tr>
-      <tr>
           <td><code>.u-block</code></td>
           <td><code>display: block !important;</code></td>
       </tr>
       <tr>
-          <td><code>u-centerBlock</code></td>
+          <td><code>u-center-block</code></td>
           <td><code>display: block !important;</code>, <code>margin-left: auto !important;</code>, <code>margin-right: auto !important;</code></td>
       </tr>
       <tr>
@@ -273,15 +269,15 @@ Space step is 5px, start from 0, end at 60px
           <td><code>display: inline !important;</code></td>
       </tr>
       <tr>
-          <td><code>.u-inlineBlock</code></td>
+          <td><code>.u-inline-block</code></td>
           <td><code>display: inline-block !important;</code></td>
       </tr>
       <tr>
-          <td><code>.u-floatLeft</code></td>
+          <td><code>.u-fl</code></td>
           <td>Float an element to the left</td>
       </tr>
       <tr>
-          <td><code>.u-floatRight</code></td>
+          <td><code>.u-fr</code></td>
           <td>Float an element to the right</td>
       </tr>
       <tr>
@@ -312,26 +308,6 @@ Space step is 5px, start from 0, end at 60px
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><code>.u-flex</code></td>
-            <td><code>display: flex;</code></td>
-        </tr>
-        <tr>
-            <td><code>.u-inlineFlex</code></td>
-            <td><code>display: inline-flex;</code></td>
-        </tr>
-        <tr>
-            <td><code>.u-flexCenter</code></td>
-            <td><code>  display: flex; flex-direction: column; justify-content: center; align-items: center;</code></td>
-        </tr>
-        <tr>
-            <td><code>.u-flexMiddle</code></td>
-            <td><code>display: flex; align-items: center;</code></td>
-        </tr>
-        <tr>
-            <td><code>.u-inlineFlexMiddle</code></td>
-            <td><code>display: inline-flex; align-items: center;</code></td>
-        </tr>
         <tr>
             <td><code>.u-flex-0</code></td>
             <td><code>flex: 0 0 auto !important;</code></td>

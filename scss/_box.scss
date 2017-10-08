@@ -1,42 +1,48 @@
-// like panel
-// .c-box
-//   .c-box__heading
-//   .c-box__body
-//     .c-box__inner
-// @TODO
+/*
+Markup:
+<div class="box {{modifier}}">
+  <header class="box__header">Box Title</header>
+  <div class="box__body">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, nisi?
+  </div>
+</div>
+*/
+
 // Block
-.c-box {
+.box {
   position: relative;
   margin-bottom: $box-margin-bottom;
   border-radius: $box-border-radius;
 }
 
 // Elements
-.c-box__heading {
+.box__header {
   color: $box-header-color;
-  line-height: 1.2;
   font-size: $font-size-base;
+  line-height: 1.2;
   padding: $box-padding-y $box-padding-x;
-  margin: 0;
-  background-color: $box-header-bg;
   border: $box-border-width solid $box-border-color;
   border-radius: $box-border-radius $box-border-radius 0 0;
+  background-color: $box-header-bg;
 }
 
-.c-box__body {
+.box__body {
   border: $box-border-width solid $box-border-color;
   border-top: 0;
+  padding: $box-padding-x;
   border-radius: 0 0 $box-border-radius $box-border-radius;
   background-color: $box-body-bg;
-}
-
-.c-box__inner {
-  padding: $box-padding-x;
+  > *:first-child {
+    margin-top: 0;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Modifiers
 @each $modifier, $value in $box-palette {
-  .c-box--#{$modifier} {
+  .box--#{$modifier} {
     @include box-variant(map-get($value, 'text'), map-get($value, 'border'), map-get($value, 'bg'))
   }
 }

@@ -1,4 +1,4 @@
-.docs-c-hero {
+.c-hero {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -9,18 +9,20 @@
   font-size: 16px;
 }
 
-.docs-c-hero__content {
+.c-hero__content {
   margin: auto;
   text-align: center;
 }
 
-.docs-c-hero__title {
-  color: #333;
-  font-size: 48px;
+.c-hero__title {
+  color: #000;
+  font-size: 96px;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.docs-c-hero__lead {
+.c-hero__lead {
   color: #4D4C4C;
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 32px;
 }

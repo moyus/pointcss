@@ -1,0 +1,17 @@
+.img-fluid {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.img-rounded {
+  border-radius: $border-radius-base !important;
+}
+
+.img-circle {
+  border-radius: 1993px !important;
+}
+
+// embed
+.embed-fluid {
+  @include embed-ratio(16, 9);
+}

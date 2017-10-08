@@ -1,5 +1,13 @@
+/*
+Markup:
+<div class="note has-close {{modifier}}">
+  <a role="button" class="note__close">&times;</a>
+  ...
+</note>
+*/
+
 // Block
-.c-note {
+.note {
   position: relative;
   border-radius: $note-border-radius;
   padding: $note-padding;
@@ -22,7 +30,7 @@
 }
 
 // Elements
-.c-note__close {
+.note__close {
   position: absolute;
   top: $note-padding;
   right: 10px;
@@ -34,7 +42,7 @@
 
 // Modifiers
 @each $modifier, $value in $note-palette {
-  .c-note--#{$modifier} {
+  .note--#{$modifier} {
     @include note-variant(map-get($value, 'text'), map-get($value, 'border'), map-get($value, 'bg'))
   }
 }

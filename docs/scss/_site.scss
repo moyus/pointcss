@@ -1,42 +1,63 @@
-.docs-l-topbar {
+.site {
+
+}
+
+.site-wrapper {
+  max-width: $content-width;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-topbar {
   position: relative;
   width: 100%;
   background-color: #fafafa;
-  border-bottom: 1px solid #e5e5e5;
-  &__inner {
-    max-width: $content-width;
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .c-navbar {
+  border-bottom: 4px solid $primary-color;
+}
+
+.site-navigation {
+  font-size: 14px;
+  max-width: $content-width;
+  width: 100%;
+  height: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  .navbar {
     font-size: 14px;
+  }
+  .navbar__brand {
+    color: #000;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
   }
 }
 
-.docs-l-content {
+.site-content {
+  display: flex;
+  justify-content: space-between;
   padding-top: 32px;
   max-width: $content-width;
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  display: flex;
-  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
 }
 
-.docs-l-sidebar {
+.site-sidebar {
   width: $sidebar-width;
 }
 
-.docs-l-main {
+.site-main {
   width: $main-width;
 }
 
-.docs-l-footer {
+.site-footer {
   position: relative;
   text-align: center;
   margin-top: 64px;
@@ -64,10 +85,10 @@
 }
 
 @media (max-width: 1000px) {
-  .docs-l-sidebar {
+  .site-sidebar {
     display: none;
   }
-  .docs-l-main {
+  .site-main {
     width: 100%;
   }
 }

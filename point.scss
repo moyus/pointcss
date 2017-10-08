@@ -1,51 +1,46 @@
 /*
  * Point
- * version: 0.9.3
- * url: http://getpoint.io
+ * version: 1.0.0
+ * url: http://point.moyu.io
  * Copyright 2017 moyu
  * Licensed under MIT (https://github.com/moyus/point/blob/master/LICENSE)
  */
 
 @import 'scss/mixins';
-@import 'scss/vars';
-
-// Base
-@import 'scss/base/normalize';
-@import 'scss/base/reboot';
-
-// Layouts
-@import 'scss/layouts/grid';
-@import 'scss/layouts/level';
+@import 'scss/variables';
 
 // Elements
-@import 'scss/elements/form';
-@import 'scss/elements/buttons';
-@import 'scss/elements/table';
-@import 'scss/elements/badges';
-@import 'scss/elements/hint';
-@import 'scss/elements/progress';
-@import 'scss/elements/icons';
-@import 'scss/elements/media';
-@import 'scss/elements/backdrop';
+@import 'scss/normalize';
+@import 'scss/reboot';
+@import 'scss/badges';
+@import 'scss/buttons'; 
+@import 'scss/form'; 
+@import 'scss/table'; 
+@import 'scss/hint'; 
+@import 'scss/progress'; 
+@import 'scss/icons'; 
+@import 'scss/media'; 
+
+// Layouts
+@import 'scss/grid'; 
+@import 'scss/level'; 
 
 // Components
-@import 'scss/components/note';
-@import 'scss/components/box';
-@import 'scss/components/list';
-@import 'scss/components/nav';
-@import 'scss/components/navbar';
-@import 'scss/components/breadcrumb';
-@import 'scss/components/drop';
-@import 'scss/components/pagination';
-@import 'scss/components/modal';
+@import 'scss/box'; 
+@import 'scss/note'; 
+@import 'scss/list';
+@import 'scss/nav'; 
+@import 'scss/navbar';
+@import 'scss/breadcrumb'; 
+@import 'scss/dropmenu'; 
+@import 'scss/pagination'; 
+@import 'scss/modal'; 
 
 // Utils
-@import 'scss/utils/border';
-@import 'scss/utils/clearfix';
-@import 'scss/utils/spaces';
-@import 'scss/utils/colors';
-@import 'scss/utils/text';
+@import 'scss/utils/animations'; 
 @import 'scss/utils/appearance';
-@import 'scss/utils/animations';
-@import 'scss/utils/flex';
-@import 'scss/utils/misc';
+@import 'scss/utils/clearfix'; 
+@import 'scss/utils/colors'; 
+@import 'scss/utils/flex'; 
+@import 'scss/utils/spaces'; 
+@import 'scss/utils/text'; 

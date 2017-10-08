@@ -1,16 +1,29 @@
-// .c-pagination
-//   .c-pagition__item
+/*
+Markup:
+<nav class="pagination" role="pagination">
+  <a href="#" class="pagination__item">Prev</a>
+  <a href="#" class="pagination__item">1</a>
+  <a href="#" class="pagination__item">2</a>
+  <span class="pagination__item">...<span>
+  <a href="#" class="pagination__item">7</a>
+  <a href="#" class="pagination__item is-active">8</a>
+  <a href="#" class="pagination__item">9</a>
+  <span class="pagination__item">...<span>
+  <a href="#" class="pagination__item">15</a>
+  <a href="#" class="pagination__item">Next</a>
+</nav>
+*/
 
 // Block
-.c-pagination {
+.pagination {
   display: flex;
   flex-wrap: wrap;
 }
 
 // Elements
-.c-pagination__item {
+.pagination__item {
   position: relative;
-  display: block;
+  display: inline-block;
   min-width: $pagination-item-min-width;
   font-size: $font-size-base;
   line-height: $line-height-base;
@@ -18,17 +31,17 @@
   padding: $pagination-item-padding-base-y $pagination-item-padding-base-x;
   border-radius: $pagination-item-border-radius;
   border: $pagination-item-border-width solid transparent;
+  z-index: 5;
   &:hover {
     background-color: $pagination-item-hover-bg;
   }
 
   &.is-active {
     color: $pagination-item-active-color;
-    font-style: normal;
     background-color: $pagination-item-active-bg;
     border-color: $pagination-item-active-bg !important;
     background-color: $pagination-item-active-bg;
-    z-index: 15;
+    z-index: 10;
   }
 
   &.is-disabled {
@@ -37,36 +50,50 @@
   }
 }
 
+span.pagination__item {
+  color: rgba($pagination-item-color ,.65);
+  cursor: not-allowed;
+}
+
 // Modifiers
-.c-pagination--bordered {
-  .c-pagination__item {
+.pagination--bordered {
+  .pagination__item {
     min-width: $pagination-item-min-width;
     border-color: $pagination-item-border-color;
     margin-left: - $pagination-item-border-width;
     background-color: $pagination-item-bg;
+
+    &:hover {
+      background-color: $pagination-item-hover-bg;
+    }
+
     &:first-child {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
+
     &:last-child {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+
     &:nth-child(n+2):nth-last-child(n+2) {
       border-radius: 0;
     }
+
     &.is-active {
       color: $pagination-item-active-color;
       background-color: $pagination-item-active-bg;
     }
+
     &.is-disabled {
       background-color: $pagination-item-disabled-bg;
     }
   }
 }
 
-.c-pagination--sm {
-  .c-pagination__item {
+.pagination--sm {
+  .pagination__item {
     min-width: 26px;
     font-size: $font-size-sm;
     padding: 4px 8px;

@@ -1,28 +1,3 @@
-.u-flex {
-  display: flex;
-}
-
-.u-inlineFlex {
-  display: inline-flex;
-}
-
-.u-flexCenter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.u-flexMiddle {
-  display: flex;
-  align-items: center;
-}
-
-.u-inlineFlexMiddle {
-  display: flex;
-  align-items: center;
-}
-
 .u-flex-0 {
   flex: 0 0 auto !important;
 }

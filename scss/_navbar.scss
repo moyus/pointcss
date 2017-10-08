@@ -1,9 +1,17 @@
-// .c-navbar
-//   .c-navbar__left .c-navbar__center .c-navabar__right
-//     .c-navbar__item
+/*
+Markup:
+<nav class="navbar">
+  <div class="navbar__start">
+    <a href="#" class="navbar__item"></a>
+  </div>
+  <div class="navbar__end">
 
-// block
-.c-navbar {
+  </div>
+</nav>
+*/
+
+// Block
+.navbar {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -12,35 +20,20 @@
   height: $navbar-height;
 }
 
-// elements
-.c-navbar__left,
-.c-navbar__center,
-.c-navbar__right {
+// Elements
+.navbar__start {
   display: flex;
   align-items: stretch;
-}
-
-.c-navbar__left {
-  order: 1;
   justify-content: flex-start;
 }
 
-.c-navbar__center {
-  order: 2;
-  justify-content: center;
-}
-
-.c-navbar__right {
-  order: 3;
+.navbar__end {
+  display: flex;
+  align-items: stretch;
   justify-content: flex-end;
 }
 
-.c-navbar__center ~ .c-navbar__left,
-.c-navbar__center ~ .c-navbar__right {
-  flex: 1 0 0%;
-}
-
-.c-navbar__item {
+.navbar__item {
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
@@ -50,4 +43,9 @@
   &:not(:last-child) {
     margin-right: $navbar-item-margin-x;
   }
+}
+
+.navbar__brand {
+  font-size: 28px;
+  line-height: 1.2;
 }

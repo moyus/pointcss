@@ -10,12 +10,10 @@ In order to create a more transparent UI code, **Point** introduced some great c
 **Point** relies on [BEM](http://getbem.com/) to create structured class names.
 
 ```html
-<div class="c-box c-box--info">
-  <header class="c-box__header">Tip</header>
-  <div class="c-box__body">
-    <div class="c-box__inner">
-      // ...
-    </div>
+<div class="box box--info">
+  <header class="box__header">Tip</header>
+  <div class="box__body">
+    // ...
   </div>
 </div>
 ```
@@ -32,11 +30,6 @@ By prefixing some classes with a certain string can explain what kind of job it 
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><code>.c-*</code></td>
-      <td>Component</td>
-      <td><code>.c-modal</code></td>
-    </tr>
     <tr>
       <td><code>.l-*</code></td>
       <td>Layout</td>
@@ -65,12 +58,8 @@ By prefixing some classes with a certain string can explain what kind of job it 
   </tbody>
 </table>
 
-<div class="c-note c-note--warning">
-  Classes without prefixing are treated as simple elements which could be native HTML elements or one tag element.
-</div>
-
 ## Responsive Suffixes
 `*@<breakpoint>` tell us *'when at this breakpoint, use this class'*. Some examples:
 
-- `.u-hiddenUp@md`: a utility class to hide things when at `md` breakpoint and up.
+- `.u-hidden-up@md`: a utility class to hide things when at `md` breakpoint and up.
 - `.l-col-6@sm`: change column's size to half of it's parent when at `sm` breakpoint and up

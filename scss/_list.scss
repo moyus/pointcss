@@ -1,17 +1,31 @@
-// .c-list
-//   .c-list__item || .c-list__link
-//     .c-list__link
+/*
+Markup:
+<ul class="list">
+  <li class="list__item">
+    <a href="#" class="list__link">Profile</a>
+  </li>
+  <li class="list__item">
+    <a href="#" class="list__link">Likes</a>
+  </li>
+  <li class="list__item">
+    <a href="#" class="list__link">Bills</a>
+  </li>
+  <li class="list__item">
+    <a href="#" class="list__link">Logout</a>
+  </li>
+</ul>
+*/
 
 // Block
-.c-list {
+.list {
   margin: 0 0 $list-margin-bottom 0;
   padding: 0;
   list-style: none;
 }
 
 // Elements
-.c-list__item,
-.c-list__link {
+.list__item,
+.list__link {
   position: relative;
   display: block;
   padding: $list-item-padding-y-base 0;
@@ -21,13 +35,9 @@
     border-top: $list-border-width solid $list-border-color;
   }
 
-  &.is-disabled {
-    cursor: not-allowed;
-    opacity: .65;
-  }
 }
 
-.c-list__link {
+.list__link {
   color: inherit;
   cursor: pointer;
 
@@ -44,17 +54,17 @@
 }
 
 // Modifiers
-.c-list--inset {
-  .c-list__item,
-  .c-list__link {
+.list--inset {
+  .list__item,
+  .list__link {
     padding-left: $list-item-padding-x-base;
     padding-right: $list-item-padding-x-base;
   }
 }
 
-.c-list--bordered {
-  .c-list__item,
-  .c-list__link {
+.list--bordered {
+  .list__item,
+  .list__link {
     padding: $list-item-padding-y-base $list-item-padding-x-base;
     border: $list-border-width solid $list-border-color;
     margin-bottom: (0 - $list-border-width);
@@ -72,37 +82,37 @@
   }
 }
 
-.c-list--transparent {
-  .c-list__item,
-  .c-list__link {
+.list--transparent {
+  .list__item,
+  .list__link {
     background-color: transparent;
   }
 }
 
-.c-list--sm {
-  .c-list__item,
-  .c-list__link {
+.list--sm {
+  .list__item,
+  .list__link {
     padding: $list-item-padding-y-sm 0;
   }
 
-  &.c-list--bordered,
-  &.c-list--inset {
-    .c-list__item {
+  &.list--bordered,
+  &.list--inset {
+    .list__item {
       padding: $list-item-padding-y-sm $list-item-padding-x-sm;
     }
   }
 }
 
-.c-list--lg {
-  .c-list__item,
-  .c-list__link {
+.list--lg {
+  .list__item,
+  .list__link {
     padding: $list-item-padding-x-lg 0;
   }
 
-  &.c-list--bordered,
-  &.c-list--inset {
-    .c-list__item,
-    .c-list__link {
+  &.list--bordered,
+  &.list--inset {
+    .list__item,
+    .list__link {
       padding: $list-item-padding-y-lg $list-item-padding-x-lg;
     }
   }

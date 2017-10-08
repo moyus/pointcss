@@ -8,24 +8,23 @@
     background-color: $background-color;
   }
 
-  &:hover, &.is-hover {
+  &:hover {
     color: $text-color;
     border-color: mix($color-black, $border-color, $mix-level-1);
     background-color: mix($color-black, $background-color, $mix-level-1);
   }
 
-  &:active, &.is-active {
+  &:active {
     color: $text-color;
     border-color: mix($color-black, $border-color, $mix-level-2);
     background-color: mix($color-black, $background-color, $mix-level-2);
   }
 
   &[disabled],
-  &.is-disabled,
   fieldset[disabled] & {
     &,
-    &:hover, &.is-hover,
-    &:active, &.is-active {
+    &:hover,
+    &:active {
       background-color: mix($color-white, $background-color, $mix-level-2);
       border-color: mix($color-white, $border-color, $mix-level-2);
       color: $text-color;
@@ -54,25 +53,24 @@
     background-color: transparent;
     border-color: $border-color;
   }
-
-  &:active, &.is-active {
+  
+  &:hover {
+    color: $inverse-text-color;
+    background-color: $border-color;
+    border-color: $border-color;
+  }
+  
+  &:active {
     color: $inverse-text-color;
     background-color: mix($color-black, $border-color, $mix-level-2);
     border-color: mix($color-black, $border-color, $mix-level-2);
   }
 
-  &:hover, &.is-hover {
-    color: $inverse-text-color;
-    background-color: $border-color;
-    border-color: $border-color;
-  }
-
   &[disabled],
-  &.is-disabled,
   fieldset[disabled] & {
     &,
-    &:hover, &.is-hover,
-    &:active, &.is-active {
+    &:hover,
+    &:active {
       border-color: mix($color-white, $border-color, $mix-level-2);
       color: mix($color-white, $border-color, $mix-level-2);
       background-color: transparent;

@@ -1,10 +1,22 @@
-// .l-level
-//   .l-level__left, .l-level__center, .l-level__right
-//     .l-level__item
+/*
+Markup:
+<div class="l-level">
+  <div class="l-level__left">
+    <div class="l-level__item">...</div>
+    ...
+  </div>
+  <div class="l-level__center">
+    <div class="l-level__item">...</div>
+    ...
+  </div>
+  <div class="l-level__right">
+    <div class="l-level__item">...</div>
+    ...
+  </div>
+</div>
+*/
 
-// [1] simulate collapsing margins
-
-// block
+// Block
 .l-level {
   position: relative;
   display: flex;
@@ -13,18 +25,6 @@
   justify-content: space-between;
   margin-top: -5px; // [1]
   margin-bottom: -5px; // [1]
-
-  &.is-top {
-    align-items: flex-start;
-  }
-
-  &.is-bottom {
-    align-items: flex-end;
-  }
-
-  &.is-center {
-    justify-content: center;
-  }
 
   > .l-level__item {
     flex: 1 1 0%;
@@ -42,16 +42,11 @@
   flex-wrap: wrap;
   margin-top: 5px; // [1]
   margin-bottom: 5px; // [1]
-  &.is-top {
-    align-items: flex-start;
-  }
 
-  &.is-bottom {
-    align-items: flex-end;
-  }
   > .l-level__item:not(:last-child) {
     margin-right: $level-item-margin-x;
   }
+  
 }
 
 .l-level__left {

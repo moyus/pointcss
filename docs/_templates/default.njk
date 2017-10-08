@@ -9,54 +9,40 @@
   <meta name="keywords" content="{{ site.keywords }}">
   <link rel="stylesheet" href="{{site.url}}css/point.css">
   <link rel="stylesheet" href="{{site.url}}css/docs.css">
-  <link rel="shortcut icon" href="{{site.url}}images/favicon.ico" type="image/x-icon">
   <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-93499539-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
 </head>
 <body>
-  <div id="docs" class="docs-l-app">
-    <header class="docs-l-topbar">
-      <div class="docs-l-topbar__inner">
-        <nav class="c-navbar">
-          <div class="c-navbar__left is-fixed">
-            <a href="{{site.url}}" class="c-navbar__item">
-              <img src="{{site.url}}images/logo-head.png">
-            </a>
+  <div id="docs" class="site">
+    <header class="site-topbar">
+      <nav class="navbar site-navigation">
+        <div class="navbar__start">
+          <a href="{{site.url}}" class="navbar__item navbar__brand">Point</a>
+        </div>
+        <!-- END .navbar__left -->
+        <div class="navbar__end">
+          <a href="{{site.url}}getting-started" class="navbar__item">Documentation</a>
+          <a href="{{site.github}}" class="navbar__item">Github</a>
+          <a href="http://cover.20theme.com" class="navbar__item">Cover</a>
+          <div class="navbar__item">
+            <a href="{{site.download}}" class="btn btn--outline btn--primary">Download</a>
           </div>
-          <!-- END .c-navbar__left -->
-          <div class="c-navbar__right is-auto">
-            <a href="{{site.url}}getting-started" class="c-navbar__item">Documentation</a>
-            <a href="{{site.github}}" class="c-navbar__item">Github</a>
-            <div class="c-navbar__item">
-              <a href="{{site.download}}" class="btn btn--outline btn--primary">Download</a>
-            </div>
-          </div>
-          <!-- END .c-navbar__right -->
-        </nav>
-      </div>
+        </div>
+        <!-- END .navbar__right -->
+      </nav>
     </header>
-    <!-- END .docs-l-topbar -->
-    <div class="docs-l-content">
-      <aside class="docs-l-sidebar">
+    <!-- END .site -->
+    <div class="site-content">
+      <aside class="site-sidebar">
         {% include "menus.html" %}
       </aside>
-      <!-- END .docs-l-sidebar -->
-      <main id="main" class="docs-l-main docs-c-content" role="main">
+      <!-- END .site-sidebar -->
+      <main id="main" class="site-main c-content" role="main">
         {% block content %}{% endblock %}
       </main>
       <!-- END #main -->
     </div>
-    <!-- END .docs-l-content -->
-    <footer id="colophon" class="docs-l-footer" role="contentinfo">
+    <!-- END .site-content -->
+    <footer id="colophon" class="site-footer" role="contentinfo">
       <p>Designed and built by <a href="{{site.author}}">moyu</a></p>
       <p>Licensed under the <a href="{{site.license}}">MIT License</a>.</p>
     </footer>
