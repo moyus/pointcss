@@ -12,7 +12,7 @@ To **active** the modal, just add the `.is-active` state class on the `.modal` c
 
 <button class="btn btn--primary js-modal-trigger u-mb-15" data-target="exampleModal">Launch modal</button>
 
-<div id="exampleModal" class="modal">
+<div id="exampleModal" class="modal is-hidden">
   <div class="modal__content">
     <header class="modal__header">
       <h4 class="modal__title">Modal Title</h4>
@@ -66,7 +66,7 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` container to quickly
   <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="lgModal">Large Modal</button>
 </div>
 
-<div id="smModal" class="modal modal--sm">
+<div id="smModal" class="modal modal--sm is-hidden">
   <div class="modal__content">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
@@ -89,7 +89,7 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` container to quickly
   </div>
 </div>
 
-<div id="lgModal" class="modal modal--lg">
+<div id="lgModal" class="modal modal--lg is-hidden">
   <div class="modal__content">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
@@ -113,7 +113,7 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` container to quickly
 </div>
 
 ```html
-<div id="smModal" class="modal  modal--sm">
+<div id="smModal" class="modal modal--sm">
   <div class="modal__content">
     ...
   </div>

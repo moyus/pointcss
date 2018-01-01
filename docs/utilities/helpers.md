@@ -289,11 +289,11 @@ Space step is 5px, start from 0, end at 60px
           <td>Force an elment to be hidden</td>
       </tr>
       <tr>
-          <td><code>.u-hiddenUp@(sm, md, lg)</code></td>
+          <td><code>.u-hidden-up@(sm, md, lg)</code></td>
           <td>Force an elment to be hidden at breakpoint up</td>
       </tr>
       <tr>
-          <td><code>.u-hiddenDown@(sm, md, lg)</code></td>
+          <td><code>.u-hidden-down@(sm, md, lg)</code></td>
           <td>Force an elment to be hidden at breakpoint down</td>
       </tr>
   </tbody>

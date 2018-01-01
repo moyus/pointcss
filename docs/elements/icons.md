@@ -18,7 +18,7 @@ Icon set made with pure css code, no dependencies.
     <i class="i-sort is-down"></i>
   </div>
   <div class="icon-wrapper">
-    <i class="i-arrowUp"></i>
+    <i class="i-arrow-up"></i>
   </div>
   <div class="icon-wrapper">
     <i class="i-arrow-right"></i>

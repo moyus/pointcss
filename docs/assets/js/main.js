@@ -29,7 +29,7 @@
       e.preventDefault()
       showMask()
       document.body.classList.add('is-masking')
-      modal.classList.add('is-active')
+      modal.classList.remove('is-hidden')
     })
 
     forEach(modalCloseEls, function (el) {
@@ -37,7 +37,7 @@
         e.preventDefault()
         hideMask()
         document.body.classList.remove('is-masking')
-        modal.classList.remove('is-active')
+        modal.classList.add('is-hidden')
       })
     })
   }
