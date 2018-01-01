@@ -30,7 +30,8 @@ Button Group Markup:
   white-space: nowrap;
   text-overflow: ellipsis;
 
-  &.is-loading {
+  &.is-loading,
+  &[loading] {
     color: transparent;
     cursor: not-allowed;
 

@@ -287,7 +287,7 @@ $pagination-item-border-radius:         $border-radius-base !default;
 $pagination-item-border-width:          $border-width !default;
 $pagination-item-min-width:             ($line-height-computed + ($pagination-item-padding-base-y + $pagination-item-border-width) * 2) !default;
 $pagination-item-border-color:          $border-color !default;
-$pagination-item-color:                 $link-color !default;
+$pagination-item-color:                 $text-color !default;
 $pagination-item-hover-bg:              $grey-lightest !default;
 $pagination-item-active-color:          $color-white !default;
 $pagination-item-active-bg:             map-get($master-palette, 'primary') !default;

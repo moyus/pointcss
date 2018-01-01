@@ -21,6 +21,7 @@ Markup:
 }
 
 .nav__link {
+  position: relative;
   display: block;
   line-height: $line-height-base;
   font-size: $font-size-base;

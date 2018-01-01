@@ -1,14 +1,15 @@
 .img-fluid {
-  max-width: 100% !important;
-  height: auto !important;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .img-rounded {
-  border-radius: $border-radius-base !important;
+  border-radius: $border-radius-base;
 }
 
 .img-circle {
-  border-radius: 1993px !important;
+  border-radius: 1993px;
 }
 
 // embed

@@ -23,11 +23,11 @@ Markup:
 // Block
 .modal {
   position: fixed;
-  display: none;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  display: flex;
   padding: $modal-padding;
   z-index: $modal-zIndex;
   overflow: auto;
@@ -37,8 +37,8 @@ Markup:
   &::-webkit-scrollbar {
     display: none;
   }
-  &.is-active {
-    display: flex;
+  &.is-hidden {
+    display: none;
   }
 }
 
@@ -58,22 +58,19 @@ Markup:
 .modal__header {
   position: relative;
   flex-shrink: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: $modal-padding;
 }
 
 .modal__title {
-  flex: 1 1 0%;
-  min-width: 0;
   margin: 0;
   font-weight: 500;
   font-size: $modal-title-font-size;
-  @include oneline;
 }
 
 .modal__close {
+  position: absolute;
+  right: $modal-padding;
+  top: $modal-padding;
   font-size: 22px;
   line-height: 1;
   opacity: 0.75;

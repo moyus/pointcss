@@ -37,7 +37,8 @@
   // flex: 1 0 auto;
   display: flex;
   flex-wrap: wrap;
-
+  align-items: flex-start;
+  
   $prev-gutter: null;
   @each $breakpoint in map-keys($grid-breakpoints) {
     $gutter: map-get($grid-gutter-widths, $breakpoint);
@@ -144,13 +145,13 @@
     }
 
     @include media-breakpoint-up($breakpoint) {
-      .u-hiddenUp#{$suffix} {
+      .u-hidden-up#{$suffix} {
         display: none !important;
       }
     }
 
     @include media-breakpoint-down($breakpoint) {
-      .u-hiddenDown#{$suffix} {
+      .u-hidden-down#{$suffix} {
         display: none !important;
       }
     }

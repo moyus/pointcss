@@ -14,7 +14,8 @@
     background-color: mix($color-black, $background-color, $mix-level-1);
   }
 
-  &:active {
+  &:active,
+  &.is-active {
     color: $text-color;
     border-color: mix($color-black, $border-color, $mix-level-2);
     background-color: mix($color-black, $background-color, $mix-level-2);
@@ -33,7 +34,8 @@
     }
   }
 
-  &.is-loading {
+  &.is-loading,
+  &[loading] {
     color: transparent;
     &:after {
       border-left-color: $text-color !important;
@@ -60,7 +62,8 @@
     border-color: $border-color;
   }
   
-  &:active {
+  &:active,
+  &.is-active {
     color: $inverse-text-color;
     background-color: mix($color-black, $border-color, $mix-level-2);
     border-color: mix($color-black, $border-color, $mix-level-2);
@@ -79,7 +82,8 @@
   }
 
   // loading spinner
-  &.is-loading {
+  &.is-loading,
+  &[loading] {
     color: transparent;
     background-color: transparent;
     &:after {

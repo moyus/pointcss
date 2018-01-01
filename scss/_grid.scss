@@ -35,6 +35,13 @@ Markup:
   &.is-end {
     justify-content: flex-end;
   }
+  &.is-around {
+    justify-content: space-around;
+  }
+  &.is-between {
+    justify-content: space-between;
+  }
+
   &.is-top {
     align-items: flex-start;
   }
@@ -44,12 +51,10 @@ Markup:
   &.is-bottom {
     align-items: flex-end;
   }
-  &.is-around {
-    justify-content: space-around;
+  &.is-stretch {
+    align-items: stretch;
   }
-  &.is-between {
-    justify-content: space-between;
-  }
+
   &.is-reverse {
     flex-direction: row-reverse;
   }
