@@ -4,7 +4,7 @@
   "homepage": "http://point.moyu.io",
   "author": "moyu <moyuboy@gmail.com> (http://moyu.io)",
   "description": "A flexible CSS Framework for building modern responsive web apps",
-  "main": "scss/point.scss",
+  "main": "dist/point.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moyus/point.git"
