@@ -1,8 +1,8 @@
 /*
 Markup:
 <body class="is-masking">
-  <div class="modal {{modifier}}" role="dialog">
-    <section class="modal__content">
+  <div class="modal-container" role="dialog">
+    <section class="modal {{modifier}}">
       <header class="modal__header">
         <h4 class="modal__title">Modal Title</h4>
         <a role="button" class="modal__close"></a>
@@ -20,8 +20,8 @@ Markup:
 </body>
 */
 
-// Block
-.modal {
+// Container
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -42,8 +42,7 @@ Markup:
   }
 }
 
-// Elements
-.modal__content {
+.modal {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -92,16 +91,12 @@ Markup:
 }
 
 // Modifiers
-.modal--sm {
-  .modal__content {
-    max-width: $modal-width-sm;
-  }
+.modal.modal--sm {
+  max-width: $modal-width-sm;
 }
 
-.modal--lg {
-  .modal__content {
-    max-width: $modal-width-lg;
-  }
+.modal.modal--lg {
+  max-width: $modal-width-lg;
 }
 
 /*
