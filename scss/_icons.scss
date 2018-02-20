@@ -176,9 +176,9 @@
 .i-spinner {
   position: relative;
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  border-radius: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
   color: $color-black;
   opacity: 0.5;
   border: 2px solid currentColor;
@@ -196,23 +196,15 @@
   opacity: 0.5;
   position: relative;
   display: inline-block;
-  height: 2px;
   width: 18px;
-  margin: 6px 0;
-  background-color: currentColor;
+  height: 16px;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
   &:before {
+    display: block;
     content: '';
     position: absolute;
-    top: -6px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: currentColor;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    top: 6px;
+    top: 5px;
     left: 0;
     width: 100%;
     height: 2px;
