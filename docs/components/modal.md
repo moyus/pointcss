@@ -8,12 +8,12 @@ title: "Modal"
 - [Sizes](#sizes)
 
 ## Basic
-To **active** the modal, just add the `.is-active` state class on the `.modal` container.
+To **hide** the modal, just add the `.is-hidden` state class on the `.modal-container` wrapper.
 
 <button class="btn btn--primary js-modal-trigger u-mb-15" data-target="exampleModal">Launch modal</button>
 
-<div id="exampleModal" class="modal is-hidden">
-  <div class="modal__content">
+<div id="exampleModal" class="modal-container is-hidden">
+  <section class="modal">
     <header class="modal__header">
       <h4 class="modal__title">Modal Title</h4>
       <a role="button" class="modal__close js-modal-close">
@@ -27,13 +27,13 @@ To **active** the modal, just add the `.is-active` state class on the `.modal` c
         <button type="button" class="btn js-modal-close">Close</button>
         <button type="button" class="btn btn--primary">Ok</button>
     </footer>
-  </div>
+  </section>
 </div>
 
 ```html
 <body>
-  <div id="exampleModal" class="modal">
-    <div class="modal__content">
+  <div id="exampleModal" class="modal-container">
+    <section class="modal">
       <header class="modal__header">
         <h4 class="modal__title">Modal Title</h4>
         <a role="button" class="modal__close">
@@ -47,7 +47,7 @@ To **active** the modal, just add the `.is-active` state class on the `.modal` c
           <button type="button" class="btn">Close</button>
           <button type="button" class="btn btn--primary">Ok</button>
       </footer>
-    </div>
+    </section>
   </div>
 
   <div class="mask"></div>
@@ -59,15 +59,15 @@ Point does <strong>not</strong> include any JavaScript interaction with <strong>
 </div>
 
 ## Sizes
-Add `.modal--sm` or `.modal--lg` modifier class on `.modal` container to quickly change the size of modal content.
+Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly change the size of modal content.
 
 <div class="u-mb-15">
   <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="smModal">Small Modal</button>
   <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="lgModal">Large Modal</button>
 </div>
 
-<div id="smModal" class="modal modal--sm is-hidden">
-  <div class="modal__content">
+<div id="smModal" class="modal-container is-hidden">
+  <section class="modal modal--sm">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
       <a role="button" class="modal__close js-modal-close">
@@ -86,11 +86,11 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` container to quickly
         <button type="button" class="btn js-modal-close">Close</button>
         <button type="button" class="btn btn--primary">Ok</button>
     </footer>
-  </div>
+  </section>
 </div>
 
-<div id="lgModal" class="modal modal--lg is-hidden">
-  <div class="modal__content">
+<div id="lgModal" class="modal-container is-hidden">
+  <section class="modal modal--lg">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
       <a role="button" class="modal__close js-modal-close">
@@ -109,19 +109,19 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` container to quickly
         <button type="button" class="btn js-modal-close">Close</button>
         <button type="button" class="btn btn--primary">Ok</button>
     </footer>
-  </div>
+  </section>
 </div>
 
 ```html
-<div id="smModal" class="modal modal--sm">
-  <div class="modal__content">
+<div id="smModal" class="modal-container">
+  <section class="modal modal--sm">
     ...
-  </div>
+  </section>
 </div>
 
-<div id="lgModal" class="modal modal--lg">
-  <div class="modal__content">
+<div id="lgModal" class="modal-container">
+  <section class="modal modal--lg">
     ...
-  </div>
+  </section>
 </div>
 ```

@@ -22,7 +22,7 @@ Use flexbox to align items vertically.
   <div class="l-level__right">
     <div class="l-level__item">
       <form action="#" class="form-inline">
-        <div class="form-flex">
+        <div class="form-group">
           <input type="text" class="form-input" placeholder="Search...">
           <button class="form-addon btn btn--primary">Submit</button>
         </div>
@@ -44,7 +44,7 @@ Use flexbox to align items vertically.
   <div class="l-level__right">
     <div class="l-level__item">
       <form action="#" class="form-inline">
-        <div class="form-flex">
+        <div class="form-group">
           <input type="text" class="form-input" placeholder="Search...">
           <button class="form-addon btn btn--primary">Submit</button>
         </div>
@@ -68,12 +68,12 @@ first, so it can use `~` CSS selector to control siblings style.
     </div>
   </div>
   <div class="l-level__left">
-    <div class="u-fs-20">All <span class="u-fs-14 u-textMuted">34 projects</span></div>
+    <div class="u-fs-20">All <span class="u-fs-14 u-text-muted">34 projects</span></div>
   </div>
   <div class="l-level__right">
     <div class="l-level__item">
       <form action="#" class="form-inline">
-        <div class="form-group">
+        <div class="form-field">
           <select class="form-select">
             <option value="2016-01-25" selected="selected">Jul 25, 16</option>
             <option value="2016-01-26">Jul 26, 16</option>
@@ -96,12 +96,12 @@ first, so it can use `~` CSS selector to control siblings style.
     </div>
   </div>
   <div class="l-level__left">
-    <div class="u-fs-20">All <span class="u-fs-14 u-textMuted">34 projects</span></div>
+    <div class="u-fs-20">All <span class="u-fs-14 u-text-muted">34 projects</span></div>
   </div>
   <div class="l-level__right">
     <div class="l-level__item">
       <form action="#" class="form-inline">
-        <div class="form-group">
+        <div class="form-field">
           <select class="form-select">
             <option value="2016-01-25" selected="selected">Jul 25, 16</option>
             <option value="2016-01-26">Jul 26, 16</option>

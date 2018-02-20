@@ -85,15 +85,15 @@ Make buttons look loading by adding the `.is-loading` class to `.btn` element.
 Add `.btn--sm` or `.btn--lg` modifier class to quickly create different size button
 
 <div class="u-mb-15">
-  <button class="u-mb-5 btn btn--default btn--sm">Small Button</button>
-  <button class="u-mb-5 btn btn--default">Default Size</button>
-  <button class="u-mb-5 btn btn--default btn--lg">Large Button</button>
+  <button class="u-mb-5 btn btn--ghost btn--sm">Small Button</button>
+  <button class="u-mb-5 btn btn--ghost">Default Size</button>
+  <button class="u-mb-5 btn btn--ghost btn--lg">Large Button</button>
 </div>
 
 ```html
-<button class="btn btn--default btn--sm">Small Button</button>
-<button class="btn btn--default">Default Size</button>
-<button class="btn btn--default btn--lg">Large Button</button>
+<button class="btn btn--ghost btn--sm">Small Button</button>
+<button class="btn btn--ghost">Default Size</button>
+<button class="btn btn--ghost btn--lg">Large Button</button>
 ```
 
 ## Block

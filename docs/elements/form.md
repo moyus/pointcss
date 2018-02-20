@@ -11,7 +11,7 @@ title: "Form"
   - [Select](#select)
 - [States](#states)
 - [Sizes](#sizes)
-- [Group](#group)
+- [Field](#field)
 - [Flex](#flex)
 - [Inline](#inline)
 - [Horizontal](#horizontal)
@@ -22,55 +22,55 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 
 ### Input types
 <form class="form-horizontal">
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-2@md">Text</label>
     <div class="l-col-10@md">
       <input type="text" class="form-input" placeholder="Enter your name">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-2@md">Password</label>
     <div class="l-col-10@md">
       <input type="password" class="form-input" value="123456">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-2@md">Email</label>
     <div class="l-col-10@md">
       <input type="email" class="form-input" value="moyuboy@gmail.com">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-2@md">Url</label>
     <div class="l-col-10@md">
       <input type="url" class="form-input" value="https://github.com/moyus/point">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-2@md">Tel</label>
     <div class="l-col-10@md">
       <input type="tel" class="form-input" value="010-123456">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-2@md">Number</label>
     <div class="l-col-10@md">
       <input type="number" class="form-input" value="666">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-2@md">Color</label>
     <div class="l-col-10@md">
       <input type="color" class="form-input">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-2@md">Date</label>
     <div class="l-col-10@md">
       <input type="date" class="form-input">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-2@md">File</label>
     <div class="l-col-10@md">
       <input type="file" class="form-input">
@@ -92,7 +92,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 
 ### Checkbox & Radio
 
-<div class="form-group">
+<div class="form-field">
   <label class="form-label">Gender</label>
   <label class="form-radio">
     <input type="radio" name="gender">
@@ -107,7 +107,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 </div>
 
 ```html
-<div class="form-group">
+<div class="form-field">
   <label class="form-label">Gender</label>
   <label class="form-radio">
     <input type="radio" name="gender">
@@ -122,7 +122,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 </div>
 ```
 
-<div class="form-group">
+<div class="form-field">
   <label class="form-checkbox">
     <input type="checkbox" name="remember" />
     <span class="form-checkbox__indicator"></span>
@@ -131,7 +131,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 </div>
 
 ```html
-<div class="form-group">
+<div class="form-field">
   <label class="form-checkbox">
     <input type="checkbox" name="remember" />
     <span class="form-checkbox__indicator"></span>
@@ -140,7 +140,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 </div>
 ```
 
-<div class="form-group">
+<div class="form-field">
   <label class="form-switch">
     <input type="checkbox" name="light">
     <span class="form-switch__indicator"></span>
@@ -149,7 +149,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 </div>
 
 ```html
-<div class="form-group">
+<div class="form-field">
   <label class="form-switch">
     <input type="checkbox" name="light">
     <span class="form-switch__indicator"></span>
@@ -160,7 +160,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 
 ### Textarea
 
-<div class="form-group">
+<div class="form-field">
   <textarea class="form-textarea" rows="4"></textarea>
 </div>
 
@@ -170,7 +170,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 
 ### Select
 
-<div class="form-group">
+<div class="form-field">
   <select class="form-select">
     <option value="0" selected>Beijing</option>
     <option value="1">Washington</option>
@@ -180,7 +180,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
   </select>
 </div>
 
-<div class="form-group">
+<div class="form-field">
   <label class="form-label">Multiple select</label>
   <select class="form-select" multiple>
     <option value="0">Beijing</option>
@@ -192,7 +192,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 </div>
 
 ```html
-<div class="form-group">
+<div class="form-field">
   <select class="form-select">
     <option value="0" selected>Beijing</option>
     <option value="1">Washington</option>
@@ -202,7 +202,7 @@ There are six basic types of form element: `.form-input`, `.form-select`,
   </select>
 </div>
 
-<div class="form-group">
+<div class="form-field">
   <label class="form-label">Multiple select</label>
   <select class="form-select" multiple>
     <option value="0">Beijing</option>
@@ -215,24 +215,24 @@ There are six basic types of form element: `.form-input`, `.form-select`,
 ```
 
 ## States
-<div class="form-group">
+<div class="form-field">
     <label class="form-label">Read only field</label>
     <input type="text" class="form-input" value="23423" readonly>
 </div>
-<div class="form-group">
+<div class="form-field">
     <label class="form-label">Disabled field</label>
     <input type="text" class="form-input" value="you can't change me" disabled>
 </div>
-<div class="form-group">
+<div class="form-field">
     <label class="form-label">Success</label>
     <input type="text" class="form-input is-success">
 </div>
-<div class="form-group">
+<div class="form-field">
     <label class="form-label">Danger</label>
     <input type="text" class="form-input is-danger">
     <small class="form-help u-color-danger">you enter the wrong text！</small>
 </div>
-<div class="form-group">
+<div class="form-field">
     <label class="form-label">Warning</label>
     <input type="text" class="form-input is-warning">
 </div>
@@ -250,13 +250,13 @@ By adding `.form-input--sm` or `.form-input--lg` to `.form-input` element and `.
 
 <div class="l-row">
   <div class="l-col-6@sm">
-    <div class="form-group">
+    <div class="form-field">
       <label class="form-label">Small input</label>
       <input type="text" class="form-input form-input--sm" />
     </div>
   </div>
   <div class="l-col-6@sm">
-    <div class="form-group">
+    <div class="form-field">
       <label class="form-label">Small select</label>
       <select class="form-select form-select--sm">
         <option value="0" selected>Beijing</option>
@@ -270,13 +270,13 @@ By adding `.form-input--sm` or `.form-input--lg` to `.form-input` element and `.
 </div>
 <div class="l-row">
   <div class="l-col-6@sm">
-    <div class="form-group">
+    <div class="form-field">
       <label class="form-label">Default input</label>
       <input type="text" class="form-input">
     </div>
   </div>
   <div class="l-col-6@sm">
-    <div class="form-group">
+    <div class="form-field">
       <label class="form-label">Default select</label>
       <select class="form-select">
         <option value="0" selected>Beijing</option>
@@ -290,13 +290,13 @@ By adding `.form-input--sm` or `.form-input--lg` to `.form-input` element and `.
 </div>
 <div class="l-row">
   <div class="l-col-6@sm">
-    <div class="form-group">
+    <div class="form-field">
       <label class="form-label">Large input</label>
       <input type="text" class="form-input form-input--lg">
     </div>
   </div>
   <div class="l-col-6@sm">
-    <div class="form-group">
+    <div class="form-field">
       <label class="form-label">Large select</label>
       <select class="form-select form-select--lg">
         <option value="0" selected>Beijing</option>
@@ -319,56 +319,56 @@ By adding `.form-input--sm` or `.form-input--lg` to `.form-input` element and `.
 <select class="form-select form-select--lg"></select>
 ```
 
-## Group
+## Field
 In addation to basic form inputs, there are some other form elements can be grouped together.
 
-- `.form-group`
+- `.form-field`
   - `.form-label`
-  - `.form-flex`
+  - `.form-group`
     - form elements
   - `.form-help`
 
-<div class="form-group">
+<div class="form-field">
   <label class="form-label">Label text</label>
   <input type="text" class="form-input" placeholder="form input">
   <small class="form-help">Input description text...</small>
 </div>
 
 ```html
-<div class="form-group">
+<div class="form-field">
   <label class="form-label">Label text</label>
   <input type="text" class="form-input" placeholder="form input">
   <small class="form-help">Input description text...</small>
 </div>
 ```
 
-## Flex
+## Group
 Use flexbox to create input group.
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <span class="form-addon">http://example.com/users/</span>
     <input type="text" class="form-input">
   </div>
 </div>
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <input type="text" class="form-input">
     <span class="form-addon">@example.com</span>
   </div>
 </div>
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <span class="form-addon">$</span>
     <input type="text" class="form-input">
     <span class="form-addon">.00</span>
   </div>
 </div>
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <span class="form-addon">From</span>
     <input type="text" class="form-input">
     <span class="form-addon">To</span>
@@ -376,8 +376,8 @@ Use flexbox to create input group.
   </div>
 </div>
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <span class="form-addon">
       <input type="radio">
     </span>
@@ -385,8 +385,8 @@ Use flexbox to create input group.
   </div>
 </div>
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <input type="text" class="form-input">
     <span class="form-addon">
       <input type="checkbox">
@@ -395,30 +395,30 @@ Use flexbox to create input group.
 </div>
 
 ```html
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <span class="form-addon">http://example.com/users/</span>
     <input type="text" class="form-input">
   </div>
 </div>
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <input type="text" class="form-input">
     <span class="form-addon">@example.com</span>
   </div>
 </div>
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <span class="form-addon">$</span>
     <input type="text" class="form-input">
     <span class="form-addon">.00</span>
   </div>
 </div>
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <span class="form-addon">From</span>
     <input type="text" class="form-input">
     <span class="form-addon">To</span>
@@ -426,8 +426,8 @@ Use flexbox to create input group.
   </div>
 </div>
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <span class="form-addon">
       <input type="radio">
     </span>
@@ -435,8 +435,8 @@ Use flexbox to create input group.
   </div>
 </div>
 
-<div class="form-group">
-  <div class="form-flex">
+<div class="form-field">
+  <div class="form-group">
     <input type="text" class="form-input">
     <span class="form-addon">
       <input type="checkbox">
@@ -449,44 +449,44 @@ Use flexbox to create input group.
 Use the `.form-inline` class to display a series of group elements on a single horizontal row.
 
 <form class="form-inline u-mb-15">
-  <div class="form-group">
+  <div class="form-field">
     <label class="form-label">Username</label>
     <input type="text" class="form-input">
   </div>
-  <div class="form-group">
+  <div class="form-field">
     <label class="form-label">Password</label>
     <input type="password" class="form-input">
   </div>
-  <div class="form-group">
+  <div class="form-field">
     <label class="form-checkbox">
       <input type="checkbox">
       <span class="form-checkbox__indicator"></span>
       Remember me?
     </label>
   </div>
-  <div class="form-group">
+  <div class="form-field">
     <button type="button" class="btn btn--primary btn--outline">Login</button>
   </div>
 </form>
 
 ```html
 <form class="form-inline u-mb-15">
-  <div class="form-group">
+  <div class="form-field">
     <label class="form-label">Username</label>
     <input type="text" class="form-input">
   </div>
-  <div class="form-group">
+  <div class="form-field">
     <label class="form-label">Password</label>
     <input type="password" class="form-input">
   </div>
-  <div class="form-group">
+  <div class="form-field">
     <label class="form-checkbox">
       <input type="checkbox">
       <span class="form-checkbox__indicator"></span>
       Remember me?
     </label>
   </div>
-  <div class="form-group">
+  <div class="form-field">
     <button type="button" class="btn btn--primary btn--outline">Login</button>
   </div>
 </form>
@@ -496,19 +496,19 @@ Use the `.form-inline` class to display a series of group elements on a single h
 Use Grid System and `.form-horizontal` to create horizontal forms.
 
 <form class="form-horizontal u-mb-15">
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-3@md">Username</label>
     <div class="l-col-12 l-col-9@md">
       <input type="text" class="form-input">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-3@md">Password</label>
     <div class="l-col-12 l-col-9@md">
       <input type="password" class="form-input">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <div class="l-col-9@md l-col-offset-3@md">
       <label class="form-checkbox">
         <input type="checkbox">
@@ -517,7 +517,7 @@ Use Grid System and `.form-horizontal` to create horizontal forms.
       </label>
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <div class="l-col-9@md l-col-offset-3@md">
       <button type="button" class="btn btn--primary">Login</button>
     </div>
@@ -526,19 +526,19 @@ Use Grid System and `.form-horizontal` to create horizontal forms.
 
 ```html
 <form class="form-horizontal u-mb-15">
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-3@md">Username</label>
     <div class="l-col-12 l-col-9@md">
       <input type="text" class="form-input">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <label class="form-label l-col-3@md">Password</label>
     <div class="l-col-12 l-col-9@md">
       <input type="password" class="form-input">
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <div class="l-col-9@md l-col-offset-3@md">
       <label class="form-checkbox">
         <input type="checkbox">
@@ -547,7 +547,7 @@ Use Grid System and `.form-horizontal` to create horizontal forms.
       </label>
     </div>
   </div>
-  <div class="form-group l-row">
+  <div class="form-field l-row">
     <div class="l-col-9@md l-col-offset-3@md">
       <button type="button" class="btn btn--primary">Login</button>
     </div>

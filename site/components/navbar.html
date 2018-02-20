@@ -142,6 +142,7 @@
         <h1 id="navbar">Navbar</h1>
 <ul>
 <li><a href="#basic">Basic</a></li>
+<li><a href="#theme">Theme</a></li>
 </ul>
 <h2 id="basic">Basic</h2>
 <p>Structure:</p>
@@ -182,6 +183,49 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>Blog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</code></pre>
+<h2 id="theme">Theme</h2>
+<p>Chose <code>.navbar--light</code> for use with light background colors, or <code>.navbar--dark</code> for dark background colors.</p>
+<div class="u-mb-15">
+  <nav class="navbar navbar--light u-bg-primary">
+    <div class="navbar__start">
+        <a role="button" class="navbar__item navbar__brand">Point</a>
+    </div>
+    <div class="navbar__end">
+      <a role="button" class="navbar__item">Home</a>
+      <a role="button" class="navbar__item">About</a>
+      <a role="button" class="navbar__item">Work</a>
+      <a role="button" class="navbar__item">Shop</a>
+      <a role="button" class="navbar__item">Blog</a>
+      <a role="button" class="navbar__item">Contact</a>
+    </div>
+  </nav>
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar navbar--light u-bg-primary"</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</code></pre>
+<hr>
+<div class="u-mb-15">
+  <nav class="navbar navbar--dark" style="background-color: #333;">
+    <div class="navbar__start">
+        <a role="button" class="navbar__item navbar__brand">Point</a>
+    </div>
+    <div class="navbar__end">
+      <a role="button" class="navbar__item">Home</a>
+      <a role="button" class="navbar__item">About</a>
+      <a role="button" class="navbar__item">Work</a>
+      <a role="button" class="navbar__item">Shop</a>
+      <a role="button" class="navbar__item">Blog</a>
+      <a role="button" class="navbar__item">Contact</a>
+    </div>
+  </nav>
+</div>
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar navbar--dark"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color: #333;"</span>&gt;</span>
+  ...
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 </code></pre>
 

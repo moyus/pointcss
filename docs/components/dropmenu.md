@@ -9,7 +9,7 @@ title: "Dropmenu"
 - [Toggle](#toggle)
 
 ## Basic
-Dropmenus are list of links, it's very useful for actions.
+Dropmenus are list of links, it's very useful for user actions.
 
 <div class="u-mb-15">
   <ul class="dropmenu">
