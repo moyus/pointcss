@@ -108,7 +108,7 @@ $level-item-margin-x:                   $space-inline-l !default;
 
 // Form
 // -----------------------------------------------------------------------------
-$form-group-margin-bottom:              $space-stack-base !default;
+$form-field-margin-bottom:              $space-stack-base !default;
 $form-label-margin-bottom:              $space-stack-xs !default;
 $form-help-margin-top:                  $space-stack-xs !default;
 $form-input-padding-y:                  $space-squish-base-y !default;
@@ -227,6 +227,7 @@ $mask-bg:                               rgba($color-black,.5) !default;
 $nav-menus-item-margin-y:               $space-stack-xxs !default;
 $nav-menus-link-border-radius-sm:       $border-radius-sm !default;
 $nav-menus-link-border-radius-base:     $border-radius-base !default;
+$nav-menus-link-border-radius-lg:       $border-radius-base !default;
 $nav-menus-link-color:                  $text-color !default;
 $nav-menus-link-hover-bg:               $grey-lightest !default;
 $nav-menus-link-active-color:           $color-white !default;
@@ -242,6 +243,7 @@ $nav-menus-divider-color:               $divider-color !default;
 $nav-pills-item-margin-x:               $space-inline-s !default;
 $nav-pills-link-border-radius-sm:       $border-radius-sm !default;
 $nav-pills-link-border-radius-base:     $border-radius-base !default;
+$nav-pills-link-border-radius-lg:       $border-radius-base !default;
 $nav-pills-link-color:                  $text-color !default;
 $nav-pills-link-hover-bg:               $grey-lightest !default;
 $nav-pills-link-active-color:           $color-white !default;
@@ -258,6 +260,7 @@ $nav-tabs-border-width:                 $border-width !default;
 $nav-tabs-item-margin-x:                $space-inline-s !default;
 $nav-tabs-link-border-radius-sm:        $border-radius-sm !default;
 $nav-tabs-link-border-radius-base:      $border-radius-base !default;
+$nav-tabs-link-border-radius-lg:        $border-radius-base !default;
 $nav-tabs-link-border-width:            $border-width !default;
 $nav-tabs-link-border-color:            $border-color !default;
 $nav-tabs-link-color:                   $muted-color !default;
