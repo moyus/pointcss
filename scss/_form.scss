@@ -1,16 +1,4 @@
-/*
-Markup:
-<div class="form-group">
-  <label class="form-label">Age</label>
-  <div class="form-flex">
-    <input class="form-input" />
-    <span class="form-addon">Years</span>
-  </div>
-  <p class="form-help">Enter your age.</p>
-</div> 
-*/
-
-// Elements
+// Controls
 // -----------------------------------------------------------------------------
 .form-input,
 .form-select,
@@ -44,16 +32,6 @@ Markup:
     opacity: 1;
   }
 
-  &[readonly],
-  &[disabled] {
-    background-color: $form-input-bg-disabled;
-    opacity: 1;
-  }
-  &:disabled,
-  &[disabled] {
-    cursor: not-allowed;
-  }
-
   &.is-success {
     border-color: $color-success;
   }
@@ -64,6 +42,25 @@ Markup:
     border-color: $color-warning;
   }
 
+  &.is-flat {
+    &,
+    &:focus,
+    &:active {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+
+.form-input,
+.form-textarea {
+  &:disabled {
+    color: $muted-color;
+    border-color: $form-input-bg-disabled;
+    background: $form-input-bg-disabled;
+    opacity: 1;
+    cursor: not-allowed;
+  }
 }
 
 // input
@@ -88,7 +85,24 @@ select.form-select {
 
   &:not([multiple]) {
     padding-right: 24px;
-    background: $form-input-bg #{$icon-arrow-down} right center no-repeat;
+    background-color: $form-input-bg;
+    background-image: linear-gradient(0, rgba($color-black, 0.03) 0%, rgba($color-black, 0) 100%), #{$icon-arrow-down};
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 0, right center;
+  }
+
+  &:disabled {
+    color: $muted-color;
+    border-color: $form-input-bg-disabled !important;
+    background: $form-input-bg-disabled;
+    opacity: 1;
+    cursor: not-allowed;
+    &:not([multiple]) {
+      background-color: $form-input-bg-disabled;
+      background-image: #{$icon-arrow-down};
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
   }
 
   &[multiple] {
@@ -97,6 +111,7 @@ select.form-select {
     option {
       padding: $form-input-padding-y $form-input-padding-x;
       border-radius: $form-input-border-radius;
+      margin-bottom: $space-stack-xxs;
     }
   }
 
@@ -123,17 +138,9 @@ select.form-select {
     padding: $space-squish-l-y $space-squish-l-x;
     height: round(($space-squish-l-y + $form-input-border-width) * 2 + 1.5 * $font-size-lg);
   }
-
 }
 
-/*
-Checkbox Markup:
-<label class="form-checkbox">
-  <input type="checkbox" />
-  <span class="form-checkbox__indicator"></span>
-  Remember Me?
-</label>
-*/
+// checkbox
 .form-checkbox {
   position: relative;
   display: inline-block;
@@ -185,19 +192,7 @@ Checkbox Markup:
   }
 }
 
-/*
-Radio Markup:
-<label class="form-radio">
-  <input type="radio" name="gender" />
-  <span class="form-radio__indicator" checked></span>
-  Male
-</label>
-<label class="form-radio">
-  <input type="radio" name="gender" />
-  <span class="form-radio__indicator"></span>
-  Female
-</label>
-*/
+// radio
 .form-radio {
   position: relative;
   display: inline-block;
@@ -249,14 +244,7 @@ Radio Markup:
   }
 }
 
-/*
-Switch Markup:
-<label class="form-switch">
-  <input type="checkbox" name="mailme" />
-  <span class="form-switch__indicator"></span>
-  Turn the light on
-</label>
-*/
+// switch
 .form-switch {
   position: relative;
   display: inline-block;
@@ -317,22 +305,53 @@ Switch Markup:
   }
 }
 
-// Group Set
+// wrapper
+.form-control {
+  position: relative;
+  color: $form-input-color;
+  &.has-icon-start {
+    .form-control__icon-start {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 15;
+    }
+    .form-input {
+      padding-left: 34px;
+    }
+  }
+  &.has-icon-end {
+    .form-control__icon-end {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translate(50%, -50%);
+      z-index: 20;
+    }
+    .form-input {
+      padding-right: 34px;
+    }
+  }
+}
+
+// Field
 // -----------------------------------------------------------------------------
-.form-group {
-  margin-bottom: $form-group-margin-bottom;
+.form-field {
+  text-align: left;
+  margin-bottom: $form-field-margin-bottom;
 }
 
 .form-label {
   display: block;
   color: $heading-color;
-  margin-bottom: $form-label-margin-bottom;
+  margin: 0 0 $form-label-margin-bottom 0;
 }
 
 .form-help {
   display: block;
   color: $muted-color;
-  margin-top: $form-help-margin-top;
+  margin: $form-help-margin-top 0 0 0;
 }
 
 .form-addon {
@@ -348,7 +367,7 @@ Switch Markup:
   }
 }
 
-.form-static {
+.form-plain {
   display: block;
   width: 100%;
   padding: $form-input-padding-y 0;
@@ -357,13 +376,41 @@ Switch Markup:
   color: $form-input-color;
 }
 
-.form-flex {
+// Controls Group
+// -----------------------------------------------------------------------------
+.form-group {
   display: flex;
   align-items: stretch;
   
+  > .form-control {
+    .form-input,
+    .form-select {
+      border-radius: 0;
+    }
+
+    &:nth-child(n+2) {
+      margin-left: (0 - $form-input-border-width);
+    }
+
+    &:first-child {
+      .form-input,
+      .form-select {
+        border-radius: $form-input-border-radius 0 0 $form-input-border-radius;
+      }
+    }
+
+    &:last-child {
+      .form-input,
+      .form-select {
+        border-radius: 0 $form-input-border-radius $form-input-border-radius 0;
+      }
+    }
+  }
+
   > .form-input,
   > .form-select,
-  > .form-addon {
+  > .form-addon,
+  > .btn {
     border-radius: 0;
 
     &:nth-child(n+2) {
@@ -377,6 +424,11 @@ Switch Markup:
     &:last-child {
       border-radius: 0 $form-input-border-radius $form-input-border-radius 0;
     }
+  }
+
+  > .form-control {
+    flex: 1;
+    z-index: 15;
   }
 
   > .form-input,
@@ -393,6 +445,10 @@ Switch Markup:
     &.btn {
       z-index: 15;
     }
+  }
+
+  > .btn {
+    z-index: 15;
   }
 
 }
@@ -412,7 +468,7 @@ Switch Markup:
   align-items: center;
   flex-wrap: wrap;
 
-  .form-group {
+  .form-field {
     margin-bottom: 0;
     &:not(:last-child) {
       margin-right: $space-inline-l;
@@ -421,19 +477,24 @@ Switch Markup:
 
   .form-label {
     display: inline-block;
-    margin: 0 $space-inline-s 0 0;
+    margin: 0 $space-inline-m 0 0;
     font-size: $font-size-base;
     line-height: $line-height-base;
     padding-top: $form-input-padding-y;
     padding-bottom: $form-input-padding-y;
   }
 
-  .form-input {
+  .form-control {
+    display: inline-block;
+  }
+
+  .form-input,
+  .form-select {
     display: inline-block;
     width: auto;
   }
 
-  .form-flex {
+  .form-group {
     display: inline-flex;
   }
 
