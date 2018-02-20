@@ -2,7 +2,7 @@
   "site": {
     "title": "Point",
     "url": "/",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "A flexible CSS Framework for building modern responsive web apps",
     "keywords": "css,sass,flexbox,responsive,front-end,mobile-first,framework,web",
     "download": "https://github.com/moyus/point/releases",

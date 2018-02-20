@@ -1,6 +1,6 @@
 /*
  * Point
- * version: 1.0.0
+ * version: 1.2.0
  * url: http://point.moyu.io
  * Copyright 2017 moyu
  * Licensed under MIT (https://github.com/moyus/point/blob/master/LICENSE)
@@ -904,6 +904,10 @@ Button Group Markup:
   margin-top: -8px;
 }
 
+.btn i {
+  vertical-align: middle;
+}
+
 .btn--ghost {
   color: #333333;
   border-color: #ddd;
@@ -1446,17 +1450,6 @@ fieldset[disabled] .btn--warning.btn--outline:active {
   width: 100%;
 }
 
-/*
-Markup:
-<div class="form-group">
-  <label class="form-label">Age</label>
-  <div class="form-flex">
-    <input class="form-input" />
-    <span class="form-addon">Years</span>
-  </div>
-  <p class="form-help">Enter your age.</p>
-</div> 
-*/
 .form-input,
 .form-select,
 .form-textarea {
@@ -1517,23 +1510,6 @@ Markup:
   opacity: 1;
 }
 
-.form-input[readonly], .form-input[disabled],
-.form-select[readonly],
-.form-select[disabled],
-.form-textarea[readonly],
-.form-textarea[disabled] {
-  background-color: #f5f5f5;
-  opacity: 1;
-}
-
-.form-input:disabled, .form-input[disabled],
-.form-select:disabled,
-.form-select[disabled],
-.form-textarea:disabled,
-.form-textarea[disabled] {
-  cursor: not-allowed;
-}
-
 .form-input.is-success,
 .form-select.is-success,
 .form-textarea.is-success {
@@ -1550,6 +1526,26 @@ Markup:
 .form-select.is-warning,
 .form-textarea.is-warning {
   border-color: #ff9800;
+}
+
+.form-input.is-flat, .form-input.is-flat:focus, .form-input.is-flat:active,
+.form-select.is-flat,
+.form-select.is-flat:focus,
+.form-select.is-flat:active,
+.form-textarea.is-flat,
+.form-textarea.is-flat:focus,
+.form-textarea.is-flat:active {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.form-input:disabled,
+.form-textarea:disabled {
+  color: #888888;
+  border-color: #f5f5f5;
+  background: #f5f5f5;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .form-input {
@@ -1572,7 +1568,27 @@ select.form-select::-ms-expand {
 
 select.form-select:not([multiple]) {
   padding-right: 24px;
-  background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='6' viewBox='0 1 8 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%239E9E9E' d='M0 0h8L4 5z' fill-rule='evenodd'/%3E%3C/svg%3E") right center no-repeat;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(0, rgba(0, 0, 0, 0.03) 0%, transparent 100%), url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='6' viewBox='0 1 8 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%239E9E9E' d='M0 0h8L4 5z' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-image: -o-linear-gradient(0, rgba(0, 0, 0, 0.03) 0%, transparent 100%), url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='6' viewBox='0 1 8 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%239E9E9E' d='M0 0h8L4 5z' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.03) 0%, transparent 100%), url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='6' viewBox='0 1 8 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%239E9E9E' d='M0 0h8L4 5z' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, right center;
+}
+
+select.form-select:disabled {
+  color: #888888;
+  border-color: #f5f5f5 !important;
+  background: #f5f5f5;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+select.form-select:disabled:not([multiple]) {
+  background-color: #f5f5f5;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='6' viewBox='0 1 8 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%239E9E9E' d='M0 0h8L4 5z' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 select.form-select[multiple] {
@@ -1583,6 +1599,7 @@ select.form-select[multiple] {
 select.form-select[multiple] option {
   padding: 6px 12px;
   border-radius: 3px;
+  margin-bottom: 2px;
 }
 
 select.form-select:hover {
@@ -1607,14 +1624,6 @@ select.form-select:hover {
   height: 42px;
 }
 
-/*
-Checkbox Markup:
-<label class="form-checkbox">
-  <input type="checkbox" />
-  <span class="form-checkbox__indicator"></span>
-  Remember Me?
-</label>
-*/
 .form-checkbox {
   position: relative;
   display: inline-block;
@@ -1661,19 +1670,6 @@ Checkbox Markup:
   background-color: #7872ff;
 }
 
-/*
-Radio Markup:
-<label class="form-radio">
-  <input type="radio" name="gender" />
-  <span class="form-radio__indicator" checked></span>
-  Male
-</label>
-<label class="form-radio">
-  <input type="radio" name="gender" />
-  <span class="form-radio__indicator"></span>
-  Female
-</label>
-*/
 .form-radio {
   position: relative;
   display: inline-block;
@@ -1721,14 +1717,6 @@ Radio Markup:
   background-color: #7872ff;
 }
 
-/*
-Switch Markup:
-<label class="form-switch">
-  <input type="checkbox" name="mailme" />
-  <span class="form-switch__indicator"></span>
-  Turn the light on
-</label>
-*/
 .form-switch {
   position: relative;
   display: inline-block;
@@ -1791,20 +1779,54 @@ Switch Markup:
           transform: translateX(24px);
 }
 
-.form-group {
+.form-control {
+  position: relative;
+  color: #333333;
+}
+
+.form-control.has-icon-start .form-control__icon-start {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 15;
+}
+
+.form-control.has-icon-start .form-input {
+  padding-left: 34px;
+}
+
+.form-control.has-icon-end .form-control__icon-end {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  -webkit-transform: translate(50%, -50%);
+       -o-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  z-index: 20;
+}
+
+.form-control.has-icon-end .form-input {
+  padding-right: 34px;
+}
+
+.form-field {
+  text-align: left;
   margin-bottom: 16px;
 }
 
 .form-label {
   display: block;
   color: #333333;
-  margin-bottom: 4px;
+  margin: 0 0 4px 0;
 }
 
 .form-help {
   display: block;
   color: #888888;
-  margin-top: 4px;
+  margin: 4px 0 0 0;
 }
 
 .form-addon {
@@ -1827,7 +1849,7 @@ Switch Markup:
   background-color: #f5f5f5;
 }
 
-.form-static {
+.form-plain {
   display: block;
   width: 100%;
   padding: 6px 0;
@@ -1836,7 +1858,7 @@ Switch Markup:
   color: #333333;
 }
 
-.form-flex {
+.form-group {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1847,32 +1869,63 @@ Switch Markup:
           align-items: stretch;
 }
 
-.form-flex > .form-input,
-.form-flex > .form-select,
-.form-flex > .form-addon {
+.form-group > .form-control .form-input,
+.form-group > .form-control .form-select {
   border-radius: 0;
 }
 
-.form-flex > .form-input:nth-child(n+2),
-.form-flex > .form-select:nth-child(n+2),
-.form-flex > .form-addon:nth-child(n+2) {
+.form-group > .form-control:nth-child(n+2) {
   margin-left: -1px;
 }
 
-.form-flex > .form-input:first-child,
-.form-flex > .form-select:first-child,
-.form-flex > .form-addon:first-child {
+.form-group > .form-control:first-child .form-input,
+.form-group > .form-control:first-child .form-select {
   border-radius: 3px 0 0 3px;
 }
 
-.form-flex > .form-input:last-child,
-.form-flex > .form-select:last-child,
-.form-flex > .form-addon:last-child {
+.form-group > .form-control:last-child .form-input,
+.form-group > .form-control:last-child .form-select {
   border-radius: 0 3px 3px 0;
 }
 
-.form-flex > .form-input,
-.form-flex > .form-select {
+.form-group > .form-input,
+.form-group > .form-select,
+.form-group > .form-addon,
+.form-group > .btn {
+  border-radius: 0;
+}
+
+.form-group > .form-input:nth-child(n+2),
+.form-group > .form-select:nth-child(n+2),
+.form-group > .form-addon:nth-child(n+2),
+.form-group > .btn:nth-child(n+2) {
+  margin-left: -1px;
+}
+
+.form-group > .form-input:first-child,
+.form-group > .form-select:first-child,
+.form-group > .form-addon:first-child,
+.form-group > .btn:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.form-group > .form-input:last-child,
+.form-group > .form-select:last-child,
+.form-group > .form-addon:last-child,
+.form-group > .btn:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.form-group > .form-control {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1 1 0%;
+  z-index: 15;
+}
+
+.form-group > .form-input,
+.form-group > .form-select {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
@@ -1880,16 +1933,20 @@ Switch Markup:
   z-index: 10;
 }
 
-.form-flex > .form-input:focus,
-.form-flex > .form-select:focus {
+.form-group > .form-input:focus,
+.form-group > .form-select:focus {
   z-index: 20;
 }
 
-.form-flex > .form-addon {
+.form-group > .form-addon {
   z-index: 5;
 }
 
-.form-flex > .form-addon.btn {
+.form-group > .form-addon.btn {
+  z-index: 15;
+}
+
+.form-group > .btn {
   z-index: 15;
 }
 
@@ -1913,29 +1970,34 @@ Switch Markup:
           flex-wrap: wrap;
 }
 
-.form-inline .form-group {
+.form-inline .form-field {
   margin-bottom: 0;
 }
 
-.form-inline .form-group:not(:last-child) {
+.form-inline .form-field:not(:last-child) {
   margin-right: 16px;
 }
 
 .form-inline .form-label {
   display: inline-block;
-  margin: 0 4px 0 0;
+  margin: 0 8px 0 0;
   font-size: 14px;
   line-height: 1.42857143;
   padding-top: 6px;
   padding-bottom: 6px;
 }
 
-.form-inline .form-input {
+.form-inline .form-control {
+  display: inline-block;
+}
+
+.form-inline .form-input,
+.form-inline .form-select {
   display: inline-block;
   width: auto;
 }
 
-.form-inline .form-flex {
+.form-inline .form-group {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2055,7 +2117,8 @@ Markup:
   background-color: rgba(0, 0, 0, 0.8);
   white-space: nowrap;
   left: 50%;
-  bottom: calc(100% + 5px);
+  bottom: 100%;
+  margin-bottom: 5px;
   -webkit-transform: translateX(-50%);
        -o-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -2501,9 +2564,9 @@ Markup:
 .i-spinner {
   position: relative;
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  border-radius: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
   color: #000;
   opacity: 0.5;
   border: 2px solid currentColor;
@@ -2524,26 +2587,17 @@ Markup:
   opacity: 0.5;
   position: relative;
   display: inline-block;
-  height: 2px;
   width: 18px;
-  margin: 6px 0;
-  background-color: currentColor;
+  height: 16px;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
 }
 
 .i-menu:before {
+  display: block;
   content: '';
   position: absolute;
-  top: -6px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: currentColor;
-}
-
-.i-menu:after {
-  content: '';
-  position: absolute;
-  top: 6px;
+  top: 5px;
   left: 0;
   width: 100%;
   height: 2px;
@@ -3915,6 +3969,7 @@ Markup:
   display: block;
   line-height: 1.42857143;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .nav__link[disabled], .nav__link.is-disabled {
@@ -3922,64 +3977,64 @@ Markup:
   cursor: not-allowed;
 }
 
-.nav--menus > .nav__item:not(:last-child) {
+.nav.nav--menus > .nav__item:not(:last-child) {
   margin-bottom: 2px;
 }
 
-.nav--menus > .nav__item > .nav__link {
+.nav.nav--menus > .nav__item > .nav__link {
   color: #333333;
   padding: 6px 12px;
   border-radius: 3px;
 }
 
-.nav--menus > .nav__item > .nav__link:hover {
+.nav.nav--menus > .nav__item > .nav__link:hover {
   background-color: #f5f5f5;
 }
 
-.nav--menus > .nav__item > .nav__link.is-active {
+.nav.nav--menus > .nav__item > .nav__link.is-active {
   color: #fff;
   background-color: #7872ff;
 }
 
-.nav--menus > .nav__divider {
+.nav.nav--menus > .nav__divider {
   height: 1px;
   margin-top: 4px;
   margin-bottom: 4px;
   background-color: #e5e5e5;
 }
 
-.nav--menus .nav--menus {
+.nav.nav--menus .nav--menus {
   margin: 2px 0 2px 8px;
 }
 
-.nav--pills {
+.nav.nav--pills {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.nav--pills > .nav__item:not(:last-child) {
+.nav.nav--pills > .nav__item:not(:last-child) {
   margin-right: 4px;
 }
 
-.nav--pills > .nav__item > .nav__link {
+.nav.nav--pills > .nav__item > .nav__link {
   color: #333333;
   text-align: center;
   padding: 6px 12px;
   border-radius: 3px;
 }
 
-.nav--pills > .nav__item > .nav__link:hover {
+.nav.nav--pills > .nav__item > .nav__link:hover {
   background-color: #f5f5f5;
 }
 
-.nav--pills > .nav__item > .nav__link.is-active {
+.nav.nav--pills > .nav__item > .nav__link.is-active {
   color: #fff;
   background-color: #7872ff;
 }
 
-.nav--tabs {
+.nav.nav--tabs {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3987,47 +4042,67 @@ Markup:
   border-bottom: 1px solid #ddd;
 }
 
-.nav--tabs > .nav__item {
+.nav.nav--tabs > .nav__item {
   margin-bottom: -1px;
 }
 
-.nav--tabs > .nav__item:not(:last-child) {
+.nav.nav--tabs > .nav__item:not(:last-child) {
   margin-right: 4px;
 }
 
-.nav--tabs > .nav__item > .nav__link {
+.nav.nav--tabs > .nav__item > .nav__link {
   color: #888888;
   padding: 6px 12px;
   border-radius: 3px 3px 0 0;
   border: 1px solid transparent;
 }
 
-.nav--tabs > .nav__item > .nav__link:hover {
+.nav.nav--tabs > .nav__item > .nav__link:hover {
   color: #333333;
 }
 
-.nav--tabs > .nav__item > .nav__link.is-active {
+.nav.nav--tabs > .nav__item > .nav__link.is-active {
   color: #333333;
   border-color: #ddd #ddd #fff;
   background-color: #fff;
 }
 
-.nav--sm.nav--menus > .nav__item > .nav__link {
+.nav.nav--sm > .nav__item > .nav__link {
   font-size: 12px;
+}
+
+.nav.nav--sm.nav--menus > .nav__item > .nav__link {
   padding: 4px 8px;
   border-radius: 2px;
 }
 
-.nav--sm.nav--pills > .nav__item > .nav__link {
-  font-size: 12px;
+.nav.nav--sm.nav--pills > .nav__item > .nav__link {
   padding: 4px 8px;
   border-radius: 2px;
 }
 
-.nav--sm.nav--tabs > .nav__item > .nav__link {
-  font-size: 12px;
+.nav.nav--sm .nav--tabs > .nav__item > .nav__link {
   padding: 4px 8px;
   border-radius: 2px 2px 0 0;
+}
+
+.nav.nav--lg > .nav__item > .nav__link {
+  font-size: 16px;
+}
+
+.nav.nav--lg.nav--menus > .nav__item > .nav__link {
+  padding: 8px 16px;
+  border-radius: 3px;
+}
+
+.nav.nav--lg.nav--pills > .nav__item > .nav__link {
+  padding: 8px 16px;
+  border-radius: 3px;
+}
+
+.nav.nav--lg .nav--tabs > .nav__item > .nav__link {
+  padding: 8px 16px;
+  border-radius: 3px 3px 0 0;
 }
 
 /*
@@ -4093,11 +4168,6 @@ Markup:
           justify-content: flex-end;
 }
 
-.navbar__brand {
-  font-size: 28px;
-  line-height: 1.2;
-}
-
 .navbar__item {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
@@ -4123,36 +4193,25 @@ Markup:
   margin-right: 16px;
 }
 
-.nav.navbar__nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+.navbar__brand {
+  font-size: 20px;
+  line-height: 1.2;
 }
 
-.nav.navbar__nav > .nav__item:not(:last-child) {
-  margin-right: 32px;
+.navbar.navbar--dark {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.nav.navbar__nav > .nav__item > .nav__link {
-  display: block;
+.navbar.navbar--dark .navbar__item {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.navbar--dark .navbar__item {
-  color: rgba(255, 255, 255, 0.9);
+.navbar.navbar--light {
+  color: rgba(255, 255, 255, 0.85);
 }
 
-.navbar--dark .nav.navbar__nav > .nav__item > .nav__link {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.navbar--dark .navbar__form .form-input {
-  border: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+.navbar.navbar--light .navbar__item {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /*
@@ -4420,8 +4479,8 @@ span.pagination__item {
 /*
 Markup:
 <body class="is-masking">
-  <div class="modal {{modifier}}" role="dialog">
-    <section class="modal__content">
+  <div class="modal-container" role="dialog">
+    <section class="modal {{modifier}}">
       <header class="modal__header">
         <h4 class="modal__title">Modal Title</h4>
         <a role="button" class="modal__close"></a>
@@ -4438,7 +4497,7 @@ Markup:
   <div class="mask"></div>
 </body>
 */
-.modal {
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -4456,15 +4515,15 @@ Markup:
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.modal::-webkit-scrollbar {
+.modal-container::-webkit-scrollbar {
   display: none;
 }
 
-.modal.is-hidden {
+.modal-container.is-hidden {
   display: none;
 }
 
-.modal__content {
+.modal {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4529,11 +4588,11 @@ Markup:
   text-align: right;
 }
 
-.modal--sm .modal__content {
+.modal.modal--sm {
   max-width: 480px;
 }
 
-.modal--lg .modal__content {
+.modal.modal--lg {
   max-width: 900px;
 }
 
