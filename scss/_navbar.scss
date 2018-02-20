@@ -36,11 +36,6 @@ Markup:
 }
 
 // Elements
-.navbar__brand {
-  font-size: 28px;
-  line-height: 1.2;
-}
-
 .navbar__item {
   flex: 0 0 auto;
   display: inline-flex;
@@ -53,37 +48,22 @@ Markup:
   }
 }
 
-.nav.navbar__nav {
-  display: flex;
-  align-items: center;
-  > .nav__item {
-    &:not(:last-child) {
-      margin-right: 32px;
-    }
-    > .nav__link {
-      display: block;
-    }
-  }
+.navbar__brand {
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 // Modifiers
-.navbar--dark {
+.navbar.navbar--dark {
+  color: rgba($color-white, 0.5);
   .navbar__item {
-    color: rgba($color-white, 0.9);
+    color: rgba($color-white, 0.5);
   }
+}
 
-  .nav.navbar__nav {
-    > .nav__item {
-      > .nav__link {
-        color: rgba($color-white, 0.9);
-      }
-    }
-  }
-
-  .navbar__form {
-    .form-input {
-      border: 0;
-      background-color: rgba($color-white, 0.9);
-    }
+.navbar.navbar--light {
+  color: rgba($color-white, 0.85);
+  .navbar__item {
+    color: rgba($color-white, 0.85);
   }
 }
