@@ -25,6 +25,7 @@ Markup:
   display: block;
   line-height: $line-height-base;
   font-size: $font-size-base;
+  cursor: pointer;
   &[disabled],
   &.is-disabled {
     opacity: .65;
@@ -33,7 +34,7 @@ Markup:
 }
 
 // Modifiers
-.nav--menus {
+.nav.nav--menus {
   > .nav__item {
     &:not(:last-child) {
       margin-bottom: $nav-menus-item-margin-y;
@@ -64,7 +65,7 @@ Markup:
   }
 }
 
-.nav--pills {
+.nav.nav--pills {
   display: flex;
   > .nav__item {
     &:not(:last-child) {
@@ -86,7 +87,7 @@ Markup:
   }
 }
 
-.nav--tabs {
+.nav.nav--tabs {
   display: flex;
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
   > .nav__item {
@@ -111,32 +112,73 @@ Markup:
   }
 }
 
-.nav--sm.nav--menus {
+// sizes
+.nav.nav--sm {
   > .nav__item {
     > .nav__link {
       font-size: $font-size-sm;
-      padding: $nav-menus-link-padding-sm-y $nav-menus-link-padding-sm-x;
-      border-radius: $nav-menus-link-border-radius-sm;
+    }
+  }
+
+  &.nav--menus {
+    > .nav__item {
+      > .nav__link {
+        padding: $nav-menus-link-padding-sm-y $nav-menus-link-padding-sm-x;
+        border-radius: $nav-menus-link-border-radius-sm;
+      }
+    }
+  }
+
+  &.nav--pills {
+    > .nav__item {
+      > .nav__link {
+        padding: $nav-pills-link-padding-sm-y $nav-pills-link-padding-sm-x;
+        border-radius: $nav-pills-link-border-radius-sm;
+      }
+    }
+  }
+
+  .nav--tabs {
+    > .nav__item {
+      > .nav__link {
+        padding: $nav-tabs-link-padding-sm-y $nav-tabs-link-padding-sm-x;
+        border-radius: $nav-tabs-link-border-radius-sm $nav-tabs-link-border-radius-sm 0 0;
+      }
     }
   }
 }
 
-.nav--sm.nav--pills {
+.nav.nav--lg {
   > .nav__item {
     > .nav__link {
-      font-size: $font-size-sm;
-      padding: $nav-pills-link-padding-sm-y $nav-pills-link-padding-sm-x;
-      border-radius: $nav-pills-link-border-radius-sm;
+      font-size: $font-size-lg;
     }
   }
-}
 
-.nav--sm.nav--tabs {
-  > .nav__item {
-    > .nav__link {
-      font-size: $font-size-sm;
-      padding: $nav-tabs-link-padding-sm-y $nav-tabs-link-padding-sm-x;
-      border-radius: $nav-tabs-link-border-radius-sm $nav-tabs-link-border-radius-sm 0 0;
+  &.nav--menus {
+    > .nav__item {
+      > .nav__link {
+        padding: $nav-menus-link-padding-lg-y $nav-menus-link-padding-lg-x;
+        border-radius: $nav-menus-link-border-radius-lg;
+      }
+    }
+  }
+
+  &.nav--pills {
+    > .nav__item {
+      > .nav__link {
+        padding: $nav-pills-link-padding-lg-y $nav-pills-link-padding-lg-x;
+        border-radius: $nav-pills-link-border-radius-lg;
+      }
+    }
+  }
+
+  .nav--tabs {
+    > .nav__item {
+      > .nav__link {
+        padding: $nav-tabs-link-padding-lg-y $nav-tabs-link-padding-lg-x;
+        border-radius: $nav-tabs-link-border-radius-lg $nav-tabs-link-border-radius-lg 0 0;
+      }
     }
   }
 }
