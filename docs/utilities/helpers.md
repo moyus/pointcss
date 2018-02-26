@@ -8,7 +8,8 @@ title: "Helpers"
 - [Colors](#colors)
 - [Spaces](#spaces)
 - [Text](#text)
-- [Appearance](#appearance)
+- [Border](#border)
+- [Display](#display)
 - [Flexbox](#flexbox)
 
 ## Colors
@@ -43,6 +44,30 @@ Change text color or background color.
           <td><span class="u-color-warning">Lorem ipsum dolor sit amet.</span></td>
       </tr>
       <tr>
+          <td><code>.u-color-grey-darkest</code></td>
+          <td><span class="u-color-grey-darkest">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-color-grey-dark</code></td>
+          <td><span class="u-color-grey-dark">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-color-grey</code></td>
+          <td><span class="u-color-grey">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-color-grey-light</code></td>
+          <td><span class="u-color-grey-light">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-color-grey-lighter</code></td>
+          <td><span class="u-color-grey-lighter">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-color-grey-lightest</code></td>
+          <td><span class="u-color-grey-lightest">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
           <td><code>.u-bg-primary</code></td>
           <td><span class="u-bg-primary u-pr-60 u-pb-5"></span></td>
       </tr>
@@ -61,6 +86,30 @@ Change text color or background color.
       <tr>
           <td><code>.u-bg-warning</code></td>
           <td><span class="u-bg-warning u-pr-60 u-pb-5"></span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-grey-darkest</code></td>
+          <td><span class="u-bg-grey-darkest u-pr-60 u-pb-5"></span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-grey-dark</code></td>
+          <td><span class="u-bg-grey-dark u-pr-60 u-pb-5"></span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-grey</code></td>
+          <td><span class="u-bg-grey u-pr-60 u-pb-5"></span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-grey-light</code></td>
+          <td><span class="u-bg-grey-light u-pr-60 u-pb-5"></span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-grey-lighter</code></td>
+          <td><span class="u-bg-grey-lighter u-pr-60 u-pb-5"></span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bg-grey-lightest</code></td>
+          <td><span class="u-bg-grey-lightest u-pr-60 u-pb-5"></span></td>
       </tr>
   </tbody>
 </table>
@@ -148,6 +197,14 @@ Space step is 5px, start from 0, end at 60px
       </tr>
   </thead>
   <tbody>
+      <tr>
+          <td><code>.u-bold</code></td>
+          <td><span class="u-bold">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
+      <tr>
+          <td><code>.u-bolder</code></td>
+          <td><span class="u-bolder">Lorem ipsum dolor sit amet.</span></td>
+      </tr>
       <tr>
           <td><code>.u-text-muted</code></td>
           <td><span class="u-text-muted">Lorem ipsum dolor sit amet.</span></td>
@@ -247,7 +304,47 @@ Space step is 5px, start from 0, end at 60px
   </tbody>
 </table>
 
-## Appearance
+## Border
+<table class="table table--bordered">
+  <thead>
+      <tr>
+          <th>Class</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>.u-border-(side)-(width)</code></td>
+          <td>
+            size: <code>t</code>: top, <code>l</code>: left, <code>b</code>: bottom, <code>r</code>: right, <code>all</code>
+            <br />
+            width: <code>0</code>: 0px, <code>1</code>: 1px, <code>2</code>: 2px, <code>4</code>: 4px, <code>8</code>: 8px
+        </td>
+      </tr>
+      <tr>
+          <td><code>u-rounded-sm</code></td>
+          <td><code>border-radius: 2px !important;</code></td>
+      </tr>
+      <tr>
+          <td><code>u-rounded</code></td>
+          <td><code>border-radius: 3px !important;</code></td>
+      </tr>
+      <tr>
+          <td><code>u-rounded-lg</code></td>
+          <td><code>border-radius: 5px !important;</code></td>
+      </tr>
+      <tr>
+          <td><code>u-circle</code></td>
+          <td><code>border-radius: 9999px !important;</code></td>
+      </tr>
+      <tr>
+          <td><code>u-sharp</code></td>
+          <td><code>border-radius: 0 !important;</code></td>
+      </tr>
+  </tbody>
+</table>
+
+## Display
 <table class="table table--bordered">
   <thead>
       <tr>
@@ -308,6 +405,14 @@ Space step is 5px, start from 0, end at 60px
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><code>.u-flex</code></td>
+            <td><code>display: flex !important;align-items: center;</code></td>
+        </tr>
+        <tr>
+            <td><code>.u-inline-flex</code></td>
+            <td><code>display: inline-flex !important;align-items: center;</code></td>
+        </tr>
         <tr>
             <td><code>.u-flex-0</code></td>
             <td><code>flex: 0 0 auto !important;</code></td>
