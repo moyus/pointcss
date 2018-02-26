@@ -17,14 +17,13 @@ Markup:
     border-top: $table-border-width solid $table-border-color;
   }
 
-  thead {
-    th, td {
-      border-top: 0;
-    }
+  thead th {
+    border-top: 0;
+    border-bottom: 2px solid $table-border-color;
   }
 
   tbody + tbody {
-    margin-top: $table-body-margin-top;
+    border-top: 2px solid $table-border-color;
   }
 }
 
@@ -47,6 +46,10 @@ Markup:
 
 .table--bordered {
   border: $table-border-width solid $table-border-color;
+
+  thead th {
+    border-bottom: $table-border-width solid $table-border-color;
+  }
 
   th,
   td {
