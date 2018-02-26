@@ -2,6 +2,10 @@
 .u-m0 {
   margin: 0 !important;
 }
+.u-m-auto {
+  margin: auto !important;
+}
+
 @include loop-space(t, 5, 12, margin, "u-mt");
 @include loop-space(r, 5, 12, margin, "u-mr");
 @include loop-space(b, 5, 12, margin, "u-mb");

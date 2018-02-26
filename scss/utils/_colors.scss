@@ -5,6 +5,24 @@
 .u-bg-white {
   background-color: $color-white !important;
 }
+.u-bg-grey-darkest {
+  background-color: $grey-darkest !important;
+}
+.u-bg-grey-dark {
+  background-color: $grey-dark !important;
+}
+.u-bg-grey {
+  background-color: $grey-base !important;
+}
+.u-bg-grey-light {
+  background-color: $grey-light !important;
+}
+.u-bg-grey-lighter {
+  background-color: $grey-lighter !important;
+}
+.u-bg-grey-lightest {
+  background-color: $grey-lightest !important;
+}
 
 @each $modifier, $color in $master-palette {
   .u-bg-#{$modifier} {
@@ -21,6 +39,24 @@
 }
 .u-color-muted {
   color: $muted-color !important;
+}
+.u-color-grey-darkest {
+  color: $grey-darkest !important;
+}
+.u-color-grey-dark {
+  color: $grey-dark !important;
+}
+.u-color-grey {
+  color: $grey-base !important;
+}
+.u-color-grey-light {
+  color: $grey-light !important;
+}
+.u-color-grey-lighter {
+  color: $grey-lighter !important;
+}
+.u-color-grey-lightest {
+  color: $grey-lightest !important;
 }
 
 @each $modifier, $color in $master-palette {

@@ -1,0 +1,30 @@
+$positions: (t: 'top', l: 'left', b: 'bottom', r: 'right', all: '');
+$sizes: (0, 1, 2, 4, 8);
+
+@each $key, $prop in $positions {
+  @if $key != all {
+    $prop: '-' + $prop
+  }
+
+  @each $width in $sizes {
+    .u-border-#{$key}-#{$width} {
+      border#{$prop}: #{$width}px !important;
+    }
+  }
+}
+
+.u-rounded-sm {
+  border-radius: $border-radius-sm !important;
+}
+.u-rounded {
+  border-radius: $border-radius-base !important;
+}
+.u-rounded-lg {
+  border-radius: $border-radius-lg !important;
+}
+.u-circle {
+  border-radius: 9999px !important;
+}
+.u-sharp {
+  border-radius: 0 !important;
+}

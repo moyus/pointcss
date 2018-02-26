@@ -1,3 +1,11 @@
+.u-flex {
+  display: flex !important;
+  align-items: center;
+}
+.u-inline-flex {
+  display: inline-flex !important;
+  align-items: center;
+}
 .u-flex-0 {
   flex: 0 0 auto !important;
 }
