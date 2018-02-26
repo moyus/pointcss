@@ -1,6 +1,6 @@
 /*
  * Point
- * version: 1.2.0
+ * version: 1.2.1
  * url: http://point.moyu.io
  * Copyright 2017 moyu
  * Licensed under MIT (https://github.com/moyus/point/blob/master/LICENSE)
@@ -38,9 +38,10 @@
 
 // Utils
 @import 'scss/utils/animations'; 
-@import 'scss/utils/appearance';
+@import 'scss/utils/display';
 @import 'scss/utils/clearfix'; 
 @import 'scss/utils/colors'; 
 @import 'scss/utils/flex'; 
 @import 'scss/utils/spaces'; 
 @import 'scss/utils/text'; 
+@import 'scss/utils/border';
