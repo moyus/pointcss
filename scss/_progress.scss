@@ -1,85 +1,79 @@
 /*
 Markup:
-<progress value="0.5" class="progress {{modifier}}" /> 
+<div class="progress {{modifier}}">
+  <div class="progress__bar"></div>
+</div>
 */
 
-// Block
+// block
 .progress {
   position: relative;
   display: block;
   width: 100%;
   height: $progress-height-base;
   border: none;
-  border-radius: ($progress-height-lg / 2);
-  margin: 0 0 $progress-margin-bottom 0;
-  appearance: none;
-  overflow: hidden;
-}
-
-.progress[value]::-ms-fill {
-  border: none;
-  background-color: $progress-bar-bg-color-default;
-}
-
-.progress[value]::-webkit-progress-bar {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: $progress-height-lg;
   background-color: $progress-bg-color;
-}
-.progress[value]::-webkit-progress-value {
-  background-color: $progress-bar-bg-color-default;
-}
+  overflow: hidden;
 
-.progress[value]::-moz-progress-bar {
-  background-color: $progress-bar-bg-color-default;
-}
-
-// Modifiers
-.progress--striped {
-  &[value]::-webkit-progress-value {
-    background-image: -webkit-linear-gradient( 45deg,
-      rgba(255,255,255,.15) 25%, transparent 25%,
-      transparent 50%, rgba(255,255,255,.15) 50%,
-      rgba(255,255,255,.15) 75%, transparent 75%,
-      transparent
-    );
-    background-size: $progress-height-base $progress-height-base;
-  }
-  &[value]::-moz-progress-bar {
-    background-image: -moz-linear-gradient( 45deg,
-      rgba(255,255,255,.15) 25%, transparent 25%,
-      transparent 50%, rgba(255,255,255,.15) 50%,
-      rgba(255,255,255,.15) 75%, transparent 75%,
-      transparent
-    );
-    background-size: $progress-height-base $progress-height-base;
+  &__bar {
+    position: relative;
+    float: left;
+    width: 0%;
+    max-width: 100%;
+    height: 100%;
+    background-color: $progress-bar-bg-color-default;
   }
 }
 
+// modifiers
 @each $modifier, $value in $master-palette {
-  .progress--#{$modifier} {
-    @include progress-variant($value)
+  .progress.progress--#{$modifier} {
+    .progress__bar {
+      background-color: $value;
+    }
   }
 }
 
-.progress--sm {
+.progress.progress--sm {
   height: $progress-height-sm;
-  .progress--striped {
-    &[value]::-webkit-progress-value {
-      background-size: $progress-height-sm $progress-height-sm;
-    }
-    &[value]::-moz-progress-bar {
-      background-size: $progress-height-sm $progress-height-sm;
+}
+
+.progress.progress--lg {
+  height: $progress-height-lg;
+}
+
+// state
+.progress.is-active {
+  .progress__bar {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $color-white;
+      animation: progress-active 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
     }
   }
 }
 
-.progress--lg {
-  height: $progress-height-lg;
-  .progress--striped {
-    &[value]::-webkit-progress-value {
-      background-size: $progress-height-lg $progress-height-lg;
-    }
-    &[value]::-moz-progress-bar {
-      background-size: $progress-height-lg $progress-height-lg;
-    }
+@keyframes progress-active {
+  0% {
+    opacity: 0.1;
+    width: 0;
+  }
+
+  20% {
+    opacity: 0.5;
+    width: 0;
+  }
+
+  100% {
+    opacity: 0;
+    width: 100%;
   }
 }
