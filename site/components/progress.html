@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Note | Point</title>
+  <title> Progress | Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
   <link rel="stylesheet" href="/css/point.css?v=130">
@@ -139,70 +139,77 @@
       </aside>
       <!-- END .site-sidebar -->
       <main id="main" class="site-main c-content" role="main">
-        <h1 id="note">Note</h1>
+        <h1 id="progress">Progress</h1>
 <ul>
-<li><a href="#basic">Basic</a></li>
 <li><a href="#types">Types</a></li>
+<li><a href="#sizes">Sizes</a></li>
+<li><a href="#state">State</a></li>
 </ul>
-<h2 id="basic">Basic</h2>
-<p>Note component provide prompt messages in a page for users to take notice.</p>
-<div class="note has-close">
-  <a role="button" class="note__close">
-    <i class="i-remove"></i>
-  </a>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-  </p>
-</div>
-
-<pre><code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"note"</span>&gt;
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
-&lt;<span class="hljs-regexp">/div&gt;</span>
-</code></pre>
 <h2 id="types">Types</h2>
-<p>By adding the following modifier classes on <code>.note</code> container to quick create different styled <strong>Note*</strong>:</p>
-<ul>
-<li><code>note--info</code></li>
-<li><code>note--danger</code></li>
-<li><code>note--success</code></li>
-<li><code>note--warning</code></li>
-</ul>
-<div class="note note--info">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-  </p>
-</div>
-<div class="note note--danger">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-  </p>
-</div>
-<div class="note note--success">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-  </p>
-</div>
-<div class="note note--warning">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-  </p>
+<div class="u-mb-15">
+  <div class="progress">
+    <div class="progress__bar" style="width: 50%;"></div>
+  </div>
+  <div class="progress progress--primary" value="0.3">
+    <div class="progress__bar" style="width: 30%;"></div>
+  </div>
+  <div class="progress progress--info" value="0.45">
+    <div class="progress__bar" style="width: 45%;"></div>
+  </div>
+  <div class="progress progress--danger" value="0.6">
+    <div class="progress__bar" style="width: 60%;"></div>
+  </div>
+  <div class="progress progress--warning" value="0.8">
+    <div class="progress__bar" style="width: 80%;"></div>
+  </div>
 </div>
 
-<pre><code class="lang-html">&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"note note--info"</span>&gt;
-  <span class="hljs-comment">// ...</span>
-&lt;/div&gt;
-&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"note note--danger"</span>&gt;
-  <span class="hljs-comment">// ...</span>
-&lt;/div&gt;
-&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"note note--success"</span>&gt;
-  <span class="hljs-comment">// ...</span>
-&lt;/div&gt;
-&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"note note--warning"</span>&gt;
-  <span class="hljs-comment">// ...</span>
-&lt;/div&gt;
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 50%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--primary"</span> value=<span class="hljs-string">"0.3"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 30%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--info"</span> value=<span class="hljs-string">"0.45"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 45%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--danger"</span> value=<span class="hljs-string">"0.6"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 60%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--warning"</span> value=<span class="hljs-string">"0.8"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 80%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
+<h2 id="sizes">Sizes</h2>
+<p>Fancy smaller or larger progress? Add <code>.progress--sm</code> or <code>.progress--lg</code> modifier
+class for additional sizes.</p>
+<div class="u-mb-15">
+  <div class="progress progress--sm">
+    <div class="progress__bar" style="width: 15%;"></div>
+  </div>
+  <div class="progress">
+    <div class="progress__bar" style="width: 30%;"></div>
+  </div>
+  <div class="progress progress--lg">
+    <div class="progress__bar" style="width: 60%;"></div>
+  </div>
+</div>
+
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--sm"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 15%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 30%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--lg"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 60%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<h2 id="state">State</h2>
+<p>By adding <code>.is-active</code> modifier class to create animated progress.</p>
+<div class="progress is-active">
+  <div class="progress__bar" style="width: 60%;"></div>
+</div>
 
 
       </main>

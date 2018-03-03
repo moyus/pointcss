@@ -11,6 +11,7 @@ title: "Tables"
 - [Responsive](#responsive)
 
 ## Basic
+
 Applying `.table` class on `table` element to quick create a styled table.
 
 <table class="table">

@@ -4,6 +4,12 @@ title: "Icons"
 ---
 
 # Icons
+
+- [Types](#types)
+- [Vertical Align](#vertical-align)
+
+## Types
+
 Icon set made with pure css code, no dependencies.
 
 **Default**:
@@ -109,4 +115,20 @@ Icon set made with pure css code, no dependencies.
 <i class="i-menu i-menu--light"></i>
 <i class="i-plus i-plus--light"></i>
 <!-- END LIGHT ICONS -->
+```
+
+## Vertical Align
+
+use `.i-text` to create true vertical align icon with text. The icon child must use `<i>` tag or `<svg>`.
+
+<span class="i-text">
+  <i class="i-plus"></i>
+  <span>New project<span>
+</span>
+
+```html
+<span class="i-text">
+  <i class="i-plus"></i>
+  <span>New project<span>
+</span>
 ```

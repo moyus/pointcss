@@ -7,7 +7,7 @@ title: "Helpers"
 
 - [Colors](#colors)
 - [Spaces](#spaces)
-- [Text](#text)
+- [Typography](#typography)
 - [Border](#border)
 - [Display](#display)
 - [Flexbox](#flexbox)
@@ -128,110 +128,171 @@ Space step is 5px, start from 0, end at 60px
       <tr>
           <td><code>.u-mt-*</code></td>
           <td>
-              <code>.u-mt-0</code> is <code>margin-top: 0 !important;</code>
+              <code>.u-mt-0</code> is <code>margin-top: 0;</code>
           </td>
       </tr>
       <tr>
           <td><code>.u-mb-*</code></td>
           <td>
-              <code>.u-mb-5</code> is <code>margin-bottom: 5px !important;</code>
+              <code>.u-mb-5</code> is <code>margin-bottom: 5px;</code>
           </td>
       </tr>
       <tr>
           <td><code>.u-ml-*</code></td>
           <td>
-              <code>.u-ml-10</code> is <code>margin-left: 10px !important;</code>
+              <code>.u-ml-10</code> is <code>margin-left: 10px;</code>
           </td>
       </tr>
       <tr>
           <td><code>.u-mr-*</code></td>
           <td>
-              <code>.u-mr-15</code> is <code>margin-right: 15px !important;</code>
+              <code>.u-mr-15</code> is <code>margin-right: 15px;</code>
           </td>
       </tr>
       <tr>
           <td><code>.u-m-*</code></td>
           <td>
-              <code>.u-m-20</code> is <code>margin: 20px !important;</code>
+              <code>.u-m-20</code> is <code>margin: 20px;</code>
           </td>
       </tr>
       <tr>
           <td><code>.u-pt-*</code></td>
           <td>
-              <code>.u-pt-0</code> is <code>padding-top: 0 !important;</code>
+              <code>.u-pt-0</code> is <code>padding-top: 0;</code>
           </td>
       </tr>
       <tr>
           <td><code>.u-pb-*</code></td>
           <td>
-              <code>.u-pb-5</code> is <code>padding-bottom: 5px !important;</code>
+              <code>.u-pb-5</code> is <code>padding-bottom: 5px;</code>
           </td>
       </tr>
       <tr>
           <td><code>.u-pl-*</code></td>
           <td>
-              <code>.u-pl-10</code> is <code>padding-left: 10px !important;</code>
+              <code>.u-pl-10</code> is <code>padding-left: 10px;</code>
           </td>
       </tr>
       <tr>
           <td><code>.u-pr-*</code></td>
           <td>
-              <code>.u-pr-15</code> is <code>padding-right: 15px !important;</code>
+              <code>.u-pr-15</code> is <code>padding-right: 15px;</code>
           </td>
       </tr>
       <tr>
           <td><code>.u-p-*</code></td>
           <td>
-              <code>.u-p-20</code> is <code>padding: 20px !important;</code>
+              <code>.u-p-20</code> is <code>padding: 20px;</code>
           </td>
       </tr>
   </tbody>
 </table>
 
-## Text
+## Typography
+
 <table class="table table--bordered">
   <thead>
       <tr>
-          <th>Class</th>
-          <th>Example</th>
+          <th style="width: 180px;">Class</th>
+          <th>Description</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td><code>.u-bold</code></td>
-          <td><span class="u-bold">Lorem ipsum dolor sit amet.</span></td>
+          <td><code>.u-font-thin</code></td>
+          <td><code>font-weight: 200;</code></td>
       </tr>
       <tr>
-          <td><code>.u-bolder</code></td>
-          <td><span class="u-bolder">Lorem ipsum dolor sit amet.</span></td>
+          <td><code>.u-font-light</code></td>
+          <td><code>font-weight: 300;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-font-normal</code></td>
+          <td><code>font-weight: normal;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-font-medium</code></td>
+          <td><code>font-weight: 500;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-font-bold</code></td>
+          <td><code>font-weight: bold;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-leading-none</code></td>
+          <td><code>line-height: 1.15;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-leading-tight</code></td>
+          <td><code>line-height: 1.25;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-leading-normal</code></td>
+          <td><code>line-height: 1.5;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-leading-loose</code></td>
+          <td><code>line-height: 2;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-text-truncated</code></td>
+          <td><code>max-width: 100%;word-wrap: normal;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-text-break</code></td>
+          <td><code>white-space: normal;word-wrap: break-word;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-text-nowrap</code></td>
+          <td><code>white-space: nowrap;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-italic</code></td>
+          <td><code>font-style: italic;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-roman</code></td>
+          <td><code>font-style: normal;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-uppercase</code></td>
+          <td><code>text-transform: uppercase;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-lowercase</code></td>
+          <td><code>text-transform: lowercase;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-capitalize</code></td>
+          <td><code>text-transform: capitalize;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-normalcase</code></td>
+          <td><code>text-transform: none;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-underline</code></td>
+          <td><code>text-transform: underline;</code></td>
+      </tr>
+      <tr>
+          <td><code>.u-line-through</code></td>
+          <td><span class="u-line-through">Lorem ipsum dolor sit amet.</span></td>
       </tr>
       <tr>
           <td><code>.u-text-muted</code></td>
           <td><span class="u-text-muted">Lorem ipsum dolor sit amet.</span></td>
       </tr>
       <tr>
-          <td><code>.u-text-center</code></td>
+          <td><code>.u-text-center[@(sm, md, lg)]</code></td>
           <td><div class="u-text-center">Lorem ipsum dolor sit amet.</div></td>
       </tr>
       <tr>
-          <td><code>.u-text-right</code></td>
+          <td><code>.u-text-right[@(sm, md, lg)]</code></td>
           <td><div class="u-text-right">Lorem ipsum dolor sit amet.</div></td>
       </tr>
       <tr>
           <td><code>.u-text-left</code></td>
           <td><div class="u-text-left">Lorem ipsum dolor sit amet.</div></td>
-      </tr>
-      <tr>
-          <td><code>.u-text-truncated</code></td>
-          <td><div class="u-text-truncated" style="width: 100px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, velit?</div></td>
-      </tr>
-      <tr>
-          <td><code>.u-text-break</code></td>
-          <td><div class="u-text-break" style="width: 100px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, velit?</div></td>
-      </tr>
-      <tr>
-          <td><code>.u-text-nowrap</code></td>
-          <td><div class="u-text-nowrap" style="width: 100px;">Lorem ipsum dolor sit amet</div></td>
       </tr>
       <tr>
           <td><code>.u-h1</code></td>
@@ -323,23 +384,23 @@ Space step is 5px, start from 0, end at 60px
       </tr>
       <tr>
           <td><code>u-rounded-sm</code></td>
-          <td><code>border-radius: 2px !important;</code></td>
+          <td><code>border-radius: 2px;</code></td>
       </tr>
       <tr>
           <td><code>u-rounded</code></td>
-          <td><code>border-radius: 3px !important;</code></td>
+          <td><code>border-radius: 3px;</code></td>
       </tr>
       <tr>
           <td><code>u-rounded-lg</code></td>
-          <td><code>border-radius: 5px !important;</code></td>
+          <td><code>border-radius: 5px;</code></td>
       </tr>
       <tr>
           <td><code>u-circle</code></td>
-          <td><code>border-radius: 9999px !important;</code></td>
+          <td><code>border-radius: 9999px;</code></td>
       </tr>
       <tr>
           <td><code>u-sharp</code></td>
-          <td><code>border-radius: 0 !important;</code></td>
+          <td><code>border-radius: 0;</code></td>
       </tr>
   </tbody>
 </table>
@@ -355,19 +416,19 @@ Space step is 5px, start from 0, end at 60px
   <tbody>
       <tr>
           <td><code>.u-block</code></td>
-          <td><code>display: block !important;</code></td>
+          <td><code>display: block;</code></td>
       </tr>
       <tr>
           <td><code>u-center-block</code></td>
-          <td><code>display: block !important;</code>, <code>margin-left: auto !important;</code>, <code>margin-right: auto !important;</code></td>
+          <td><code>display: block;</code>, <code>margin-left: auto;</code>, <code>margin-right: auto;</code></td>
       </tr>
       <tr>
           <td><code>.u-inline</code></td>
-          <td><code>display: inline !important;</code></td>
+          <td><code>display: inline;</code></td>
       </tr>
       <tr>
           <td><code>.u-inline-block</code></td>
-          <td><code>display: inline-block !important;</code></td>
+          <td><code>display: inline-block;</code></td>
       </tr>
       <tr>
           <td><code>.u-fl</code></td>
@@ -376,6 +437,10 @@ Space step is 5px, start from 0, end at 60px
       <tr>
           <td><code>.u-fr</code></td>
           <td>Float an element to the right</td>
+      </tr>
+      <tr>
+          <td><code>.u-fn</code></td>
+          <td>Remove float</td>
       </tr>
       <tr>
           <td><code>.u-clearfix</code></td>
@@ -407,19 +472,23 @@ Space step is 5px, start from 0, end at 60px
     <tbody>
         <tr>
             <td><code>.u-flex</code></td>
-            <td><code>display: flex !important;align-items: center;</code></td>
+            <td><code>display: flex;align-items: center;</code></td>
         </tr>
         <tr>
             <td><code>.u-inline-flex</code></td>
-            <td><code>display: inline-flex !important;align-items: center;</code></td>
+            <td><code>display: inline-flex;align-items: center;</code></td>
+        </tr>
+        <tr>
+            <td><code>.u-stack-flex</code></td>
+            <td><code>display: flex;align-items: center;flex-direction: column;</code></td>
         </tr>
         <tr>
             <td><code>.u-flex-0</code></td>
-            <td><code>flex: 0 0 auto !important;</code></td>
+            <td><code>flex: 0 0 auto;</code></td>
         </tr>
         <tr>
             <td><code>.u-flex-1</code></td>
-            <td><code>flex: 1 1 auto !important;</code></td>
+            <td><code>flex: 1 1 auto;</code></td>
         </tr>
     </tbody>
 </table>
