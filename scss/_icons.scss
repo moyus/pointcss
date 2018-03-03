@@ -269,3 +269,17 @@
     opacity: 0.9;
   }
 }
+
+.i-text {
+  display: inline-flex;
+  align-items: center;
+  > i,
+  > svg {
+    &:first-child {
+      margin-right: $space-inline-base;
+    }
+    &:last-child {
+      margin-left: $space-inline-base;
+    }
+  }
+}
