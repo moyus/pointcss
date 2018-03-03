@@ -1,11 +1,11 @@
 /*
 Markup:
 <div class="l-level">
-  <div class="l-level__left">
+  <div class="l-level__center">
     <div class="l-level__item">...</div>
     ...
   </div>
-  <div class="l-level__center">
+  <div class="l-level__left">
     <div class="l-level__item">...</div>
     ...
   </div>
@@ -20,17 +20,13 @@ Markup:
 .l-level {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  margin-top: -5px; // [1]
-  margin-bottom: -5px; // [1]
 
   > .l-level__item {
     flex: 1 1 0%;
     text-align: center;
-    margin-top: 5px; // [1]
-    margin-bottom: 5px; // [1]
   }
 }
 
@@ -40,9 +36,11 @@ Markup:
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 5px; // [1]
-  margin-bottom: 5px; // [1]
 
+  &:only-child {
+    width: 100%;
+  }
+  
   > .l-level__item:not(:last-child) {
     margin-right: $level-item-margin-x;
   }
