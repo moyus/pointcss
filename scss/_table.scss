@@ -8,7 +8,8 @@ Markup:
 .table {
   width: 100%;
   padding: 0;
-  margin: 0 0 $table-margin-bottom 0;
+  margin: 0;
+  border-collapse: collapse;
 
   th, td {
     text-align: left;
@@ -18,8 +19,7 @@ Markup:
   }
 
   thead th {
-    border-top: 0;
-    border-bottom: 2px solid $table-border-color;
+    background-color: $table-accent-bg;
   }
 
   tbody + tbody {
@@ -27,45 +27,32 @@ Markup:
   }
 }
 
-.table--striped {
-  th,
-  td {
-    border: 0;
-  }
-
-  thead {
-    tr {
-      background-color: $table-thead-accent-bg;
-    }
-  }
-
+// modifiers
+.table.table--striped {
+  > tr:nth-of-type(even),
   tbody tr:nth-of-type(even) {
     background-color: $table-strip-bg;
   }
 }
 
-.table--bordered {
-  border: $table-border-width solid $table-border-color;
-
-  thead th {
-    border-bottom: $table-border-width solid $table-border-color;
-  }
-
+.table.table--bordered {
   th,
   td {
     border: $table-border-width solid $table-border-color;
   }
 }
 
-.table--hover {
-  tbody tr:hover {
+.table.table--hover {
+  tbody tr:hover,
+  > tr:hover {
     background-color: $table-hover-color;
   }
 }
 
 @media (max-width: map-get($grid-breakpoints, 'md')) {
   .table--responsive {
-    thead {
+    thead,
+    tfoot {
       display: none;
     }
 
@@ -86,6 +73,5 @@ Markup:
         content: attr(data-label);
       }
     }
-
   }
 }

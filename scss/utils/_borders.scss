@@ -8,7 +8,7 @@ $sizes: (0, 1, 2, 4, 8);
 
   @each $width in $sizes {
     .u-border-#{$key}-#{$width} {
-      border#{$prop}: #{$width}px !important;
+      border#{$prop}: #{$width}px solid $border-color !important;
     }
   }
 }

@@ -73,7 +73,6 @@ $body-color:                            $text-color !default;
 
 $link-color:                            #0073AA !default;
 $link-decoration:                       none !default;
-$link-hover-color:                      darken($link-color, 10%) !default;
 $link-hover-decoration:                 none !default;
 
 // Grid
@@ -147,15 +146,14 @@ $button-height-computed:                round(($button-padding-base-y + $button-
 
 // Table
 // -----------------------------------------------------------------------------
-$table-margin-bottom:                   $space-stack-base !default;
 $table-body-margin-top:                 $space-stack-s !default;
 $table-td-padding-y:                    $space-squish-l-y !default;
 $table-td-padding-x:                    $space-squish-l-x !default;
 $table-border-width:                    $border-width !default;
 $table-border-color:                    $border-color !default;
-$table-thead-accent-bg:                 $grey-lightest !default;
+$table-accent-bg:                       $grey-lightest !default;
 $table-strip-bg:                        $grey-lightest !default;
-$table-hover-color:                     darken($grey-lightest, 2%) !default;
+$table-hover-color:                     $grey-lightest !default;
 
 // Progress
 // -----------------------------------------------------------------------------
@@ -185,7 +183,6 @@ $hint-border-radius:                    0 !default;
 
 // List
 // -----------------------------------------------------------------------------
-$list-margin-bottom:                    $space-stack-base !default;
 $list-item-padding-y-sm:                $space-squish-base-y !default;
 $list-item-padding-x-sm:                $space-squish-base-x !default;
 $list-item-padding-y-base:              $space-squish-l-y !default;

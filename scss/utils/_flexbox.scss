@@ -1,11 +1,19 @@
 .u-flex {
   display: flex !important;
-  align-items: center;
+  align-items: center !important;
 }
+
 .u-inline-flex {
   display: inline-flex !important;
-  align-items: center;
+  align-items: center !important;
 }
+
+.u-stack-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+}
+
 .u-flex-0 {
   flex: 0 0 auto !important;
 }

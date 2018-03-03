@@ -2,6 +2,7 @@
   display: block !important;
 }
 
+.u-cb,
 .u-center-block {
   display: block !important;
   margin-left: auto !important;
@@ -22,4 +23,13 @@
 
 .u-fl {
   float: left !important;
+}
+
+.u-fn {
+  float: none !important;
+}
+
+.u-cf,
+.u-clearfix {
+  @include clearfix;
 }
