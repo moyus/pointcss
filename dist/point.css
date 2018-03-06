@@ -1,6 +1,6 @@
 /*
  * Point
- * version: 1.3.0
+ * version: 1.3.1
  * url: http://point.moyu.io
  * Copyright 2017-2018 moyu
  * Licensed under MIT (https://github.com/moyus/point/blob/master/LICENSE)
@@ -2250,7 +2250,6 @@ Markup:
   display: block;
   width: 100%;
   height: 8px;
-  border: none;
   margin-top: 8px;
   margin-bottom: 8px;
   border-radius: 12px;
@@ -4504,7 +4503,7 @@ Markup:
   display: -ms-flexbox;
   display: flex;
   padding: 16px;
-  z-index: 800;
+  z-index: 700;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
@@ -4606,7 +4605,7 @@ Markup:
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 600;
+  z-index: 300;
 }
 
 body.is-masking {
