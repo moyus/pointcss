@@ -74,7 +74,7 @@ gulp.task('docs:scss', function () {
     .pipe(browserSync.stream())
 })
 
-gulp.task('docs:serve', function (done) {
+gulp.task('serve', function (done) {
   browserSync.init({
     "server": {
       "baseDir": "./site"
@@ -124,6 +124,6 @@ gulp.task('watch', function () {
 /**
  * Scripts
  */
-gulp.task('default', gulp.series('build', 'report'))
-gulp.task('docs', gulp.series('docs:scss', 'docs:assets', 'docs:nunjucks', 'docs:serve'))
-gulp.task('dev', gulp.series('build', 'docs', 'watch'))
+gulp.task('docs', gulp.series('docs:scss', 'docs:assets', 'docs:nunjucks'))
+gulp.task('dev', gulp.series('build', 'docs', 'serve', 'watch'))
+gulp.task('default', gulp.series('build', 'docs', 'report'))
