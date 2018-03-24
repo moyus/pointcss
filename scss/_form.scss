@@ -427,13 +427,13 @@ select.form-select {
   }
 
   > .form-control {
-    flex: 1;
+    flex: 1 1 0%;
     z-index: 15;
   }
 
   > .form-input,
   > .form-select {
-    flex: 1;
+    flex: 1 1 0%;
     z-index: 10;
     &:focus {
       z-index: 20;
