@@ -10,16 +10,12 @@ Markup:
 
 // Block
 .box {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   margin-bottom: $box-margin-bottom;
   border-radius: $box-border-radius;
 }
 
 // Elements
 .box__header {
-  flex-shrink: 0;
   color: $box-header-color;
   font-size: $font-size-base;
   line-height: 1.2;
@@ -30,7 +26,6 @@ Markup:
 }
 
 .box__body {
-  flex: 1 1 0%;
   border: $box-border-width solid $box-border-color;
   border-top: 0;
   padding: $box-padding-x;
