@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Badges | Point</title>
+  <title> Breadcrumb | Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
   <link rel="stylesheet" href="/css/point.css?v=133">
-  <link rel="stylesheet" href="/css/docs.css?v=133">
+  <link rel="stylesheet" href="/css/style.css?v=133">
   <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <header class="site-topbar">
       <nav class="navbar site-navigation">
         <div class="navbar__start">
-          <a href="/" class="navbar__item navbar__brand">
+          <a href="/getting-started" class="navbar__item navbar__brand">
             <svg width="32px" height="32px" class="u-mr-10" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <path d="M10,0 L50,0 L50,0 C77.6142375,-5.07265313e-15 100,22.3857625 100,50 L100,90 C100,95.5228475 95.5228475,100 90,100 L50,100 C22.3857625,100 3.38176876e-15,77.6142375 0,50 L0,10 L0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 L10,0 Z M50,85 C69.3299662,85 85,69.3299662 85,50 C85,30.6700338 69.3299662,15 50,15 C30.6700338,15 15,30.6700338 15,50 C15,69.3299662 30.6700338,85 50,85 Z M50,70 C38.954305,70 30,61.045695 30,50 C30,38.954305 38.954305,30 50,30 C61.045695,30 70,38.954305 70,50 C70,61.045695 61.045695,70 50,70 Z" fill="#7872FF"></path>
             </svg>
@@ -25,11 +25,9 @@
         </div>
         <!-- END .navbar__left -->
         <div class="navbar__end">
-          <a href="/getting-started" class="navbar__item">Documentation</a>
-          <a href="https://github.com/moyus/point" class="navbar__item">Github</a>
-          <a href="http://cover.20theme.com" class="navbar__item">Cover</a>
+          <div class="navbar__item">v1.3.3</div>
           <div class="navbar__item">
-            <a href="https://github.com/moyus/point/releases" class="btn btn--outline btn--primary">Download</a>
+            <a href="https://github.com/moyus/point" class="btn btn--outline btn--primary">Github</a>
           </div>
         </div>
         <!-- END .navbar__right -->
@@ -139,54 +137,32 @@
       </aside>
       <!-- END .site-sidebar -->
       <main id="main" class="site-main c-content" role="main">
-        <h1 id="badges">Badges</h1>
-<ul>
-<li><a href="#types">Types</a></li>
-<li><a href="#links">Links</a></li>
-</ul>
-<h2 id="types">Types</h2>
+        <h1 id="breadcrumb">Breadcrumb</h1>
 <div class="u-mb-15">
-    <span class="badge u-mb-5">Badge label</span>
-    <span class="badge badge--primary u-mb-5">Primary</span>
-    <span class="badge badge--info u-mb-5">Info</span>
-    <span class="badge badge--success u-mb-5">Success</span>
-    <span class="badge badge--danger u-mb-5">Danger</span>
-    <span class="badge badge--warning u-mb-5">Warning</span>
+  <ul class="breadcrumb">
+    <li class="breadcrumb__item">
+      <a href="#" class="breadcrumb__link">Home</a>
+    </li>
+    <li class="breadcrumb__item">
+      <a href="#" class="breadcrumb__link">Library</a>
+    </li>
+    <li class="breadcrumb__item">
+      Book
+    </li>
+  </ul>
 </div>
 
-<div>Empty badges:</div>
-<div class="u-mb-15">
-    <span class="badge"></span>
-    <span class="badge badge--primary"></span>
-    <span class="badge badge--info"></span>
-    <span class="badge badge--success"></span>
-    <span class="badge badge--danger"></span>
-    <span class="badge badge--warning"></span>
-</div>
-
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge"</span>&gt;</span>Badge label<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge badge--primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge badge--info"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge badge--success"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge badge--danger"</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge badge--warning"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-</code></pre>
-<h2 id="links">Links</h2>
-<div class="u-mb-15">
-    <a class="badge u-mb-5">Badge</a>
-    <a class="badge badge--primary u-mb-5">Primary</a>
-    <a class="badge badge--info u-mb-5">Info</a>
-    <a class="badge badge--success u-mb-5">Success</a>
-    <a class="badge badge--danger u-mb-5">Danger</a>
-    <a class="badge badge--warning u-mb-5">Warning</a>
-</div>
-
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge"</span>&gt;</span>Badge<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge badge--primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge badge--info"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge badge--success"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge badge--danger"</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge badge--warning"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb__link"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb__link"</span>&gt;</span>Library<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb__item"</span>&gt;</span>
+    Book
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 </code></pre>
 
 

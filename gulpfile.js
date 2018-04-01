@@ -45,7 +45,7 @@ gulp.task('build', function () {
     }).on('error', sass.logError))
     .pipe(postcss(postCssOpts))
     .pipe(gulp.dest('./dist'))
-    .pipe(gulp.dest('./site/css'))
+    .pipe(gulp.dest('./docs/css'))
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist'))
@@ -62,43 +62,43 @@ gulp.task('report', function () {
     }))
 })
 
-// Docs Tasks
-gulp.task('docs:scss', function () {
-  return gulp.src('./docs/scss/docs.scss')
+// Docs Site Tasks
+gulp.task('site:scss', function () {
+  return gulp.src('./site/scss/style.scss')
     .pipe(sass({
       outputStyle: 'expanded',
       precision: 8
     }).on('error', sass.logError))
     .pipe(postcss(postCssOpts))
-    .pipe(gulp.dest('./site/css'))
+    .pipe(gulp.dest('./docs/css'))
     .pipe(browserSync.stream())
 })
 
 gulp.task('serve', function (done) {
   browserSync.init({
     "server": {
-      "baseDir": "./site"
+      "baseDir": "./docs"
     }
   })
   done()
 })
 
-gulp.task('docs:nunjucks', function () {
+gulp.task('site:nunjucks', function () {
   return gulp.src([
-      'docs/index.html',
-      'docs/**/*.md'
+      'site/index.html',
+      'site/**/*.md'
     ])
     .pipe(nunjucksRender({
-      "path": ["./docs/_templates"],
-      data: 'docs/data.json'
+      "path": ["./site/_templates"],
+      data: 'site/data.json'
     }))
-    .pipe(gulp.dest('./site'))
+    .pipe(gulp.dest('./docs'))
     .on('end', browserSync.reload)
 })
 
-gulp.task('docs:assets', function () {
-  return gulp.src('./docs/assets/**/*')
-      .pipe(gulp.dest('./site'))
+gulp.task('site:assets', function () {
+  return gulp.src('./site/assets/**/*')
+      .pipe(gulp.dest('./docs'))
 })
 
 /**
@@ -110,20 +110,20 @@ gulp.task('watch', function () {
     './scss/**/*.scss'
   ], gulp.series('build'))
 
-  gulp.watch('./docs/scss/*.scss', gulp.series('docs:scss'))
+  gulp.watch('./site/scss/*.scss', gulp.series('site:scss'))
 
   gulp.watch([
-    './docs/index.html',
-    './docs/_templates/*',
-    './docs/**/*.md'
-  ], gulp.series('docs:nunjucks'))
+    './site/index.html',
+    './site/_templates/*',
+    './site/**/*.md'
+  ], gulp.series('site:nunjucks'))
   
-  gulp.watch(['./docs/assets/**/*'], gulp.series('docs:assets'))
+  gulp.watch(['./site/assets/**/*'], gulp.series('site:assets'))
 })
 
 /**
  * Scripts
  */
-gulp.task('docs', gulp.series('docs:scss', 'docs:assets', 'docs:nunjucks'))
-gulp.task('dev', gulp.series('build', 'docs', 'serve', 'watch'))
-gulp.task('default', gulp.series('build', 'docs', 'report'))
+gulp.task('site', gulp.series('site:scss', 'site:assets', 'site:nunjucks'))
+gulp.task('dev', gulp.series('build', 'site', 'serve', 'watch'))
+gulp.task('default', gulp.series('build', 'site', 'report'))

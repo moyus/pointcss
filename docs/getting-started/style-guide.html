@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Getting started | Point</title>
+  <title> Style Guide | Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
   <link rel="stylesheet" href="/css/point.css?v=133">
-  <link rel="stylesheet" href="/css/docs.css?v=133">
+  <link rel="stylesheet" href="/css/style.css?v=133">
   <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <header class="site-topbar">
       <nav class="navbar site-navigation">
         <div class="navbar__start">
-          <a href="/" class="navbar__item navbar__brand">
+          <a href="/getting-started" class="navbar__item navbar__brand">
             <svg width="32px" height="32px" class="u-mr-10" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <path d="M10,0 L50,0 L50,0 C77.6142375,-5.07265313e-15 100,22.3857625 100,50 L100,90 C100,95.5228475 95.5228475,100 90,100 L50,100 C22.3857625,100 3.38176876e-15,77.6142375 0,50 L0,10 L0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 L10,0 Z M50,85 C69.3299662,85 85,69.3299662 85,50 C85,30.6700338 69.3299662,15 50,15 C30.6700338,15 15,30.6700338 15,50 C15,69.3299662 30.6700338,85 50,85 Z M50,70 C38.954305,70 30,61.045695 30,50 C30,38.954305 38.954305,30 50,30 C61.045695,30 70,38.954305 70,50 C70,61.045695 61.045695,70 50,70 Z" fill="#7872FF"></path>
             </svg>
@@ -25,11 +25,9 @@
         </div>
         <!-- END .navbar__left -->
         <div class="navbar__end">
-          <a href="/getting-started" class="navbar__item">Documentation</a>
-          <a href="https://github.com/moyus/point" class="navbar__item">Github</a>
-          <a href="http://cover.20theme.com" class="navbar__item">Cover</a>
+          <div class="navbar__item">v1.3.3</div>
           <div class="navbar__item">
-            <a href="https://github.com/moyus/point/releases" class="btn btn--outline btn--primary">Download</a>
+            <a href="https://github.com/moyus/point" class="btn btn--outline btn--primary">Github</a>
           </div>
         </div>
         <!-- END .navbar__right -->
@@ -139,64 +137,62 @@
       </aside>
       <!-- END .site-sidebar -->
       <main id="main" class="site-main c-content" role="main">
-        <h1 id="getting-started">Getting started</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Point is a flexible CSS Framework for building modern responsive web apps.</p>
+        <h1 id="style-guide">Style Guide</h1>
+<p>In order to create a more transparent UI code, <strong>Point</strong> introduced some great code styles from the community.</p>
+<h2 id="bem">BEM</h2>
+<p><strong>Point</strong> relies on <a href="http://getbem.com/">BEM</a> to create structured class names.</p>
+<pre><code class="lang-html">&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"box box--info"</span>&gt;
+  &lt;header <span class="hljs-keyword">class</span>=<span class="hljs-string">"box__header"</span>&gt;Tip&lt;/header&gt;
+  &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"box__body"</span>&gt;
+    <span class="hljs-comment">// ...</span>
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="namespaces">Namespaces</h2>
+<p>By prefixing some classes with a certain string can explain what kind of job it does.</p>
+<table class="table table--bordered">
+  <thead>
+    <tr>
+      <th>Prefix</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.l-<em></code></td>
+      <td>Layout</td>
+      <td><code>.l-row</code>, <code>.l-col</code></td>
+    </tr>
+    <tr>
+      <td><code>.is-</em></code>, <code>.has-<em></code></td>
+      <td>State</td>
+      <td><code>.is-active</code>, <code>.has-children</code></td>
+    </tr>
+    <tr>
+      <td><code>.js-</em></code></td>
+      <td>JavaScript hooks</td>
+      <td><code>.js-nav</code></td>
+    </tr>
+    <tr>
+      <td><code>.form-<em></code></td>
+      <td>Form related element</td>
+      <td><code>.form-input</code></td>
+    </tr>
+    <tr>
+      <td><code>.u-</em></code></td>
+      <td>Utilities</td>
+      <td><code>.u-color-primary</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="responsive-suffixes">Responsive Suffixes</h2>
+<p><code>*@&lt;breakpoint&gt;</code> tell us <em>&#39;when at this breakpoint, use this class&#39;</em>. Some examples:</p>
 <ul>
-<li>Built with Flexbox</li>
-<li>Mobile-First</li>
-<li>BEM, Namespaces, Modular, Beautiful code</li>
-<li>12KB minified and gzipped</li>
+<li><code>.u-hidden-up@md</code>: a utility class to hide things when at <code>md</code> breakpoint and up.</li>
+<li><code>.l-col-6@sm</code>: change column&#39;s size to half of it&#39;s parent when at <code>sm</code> breakpoint and up</li>
 </ul>
-<h2 id="setup">Setup</h2>
-<p>There are 3 ways to start</p>
-<h3 id="install-with-yarn">Install with Yarn</h3>
-<pre><code class="lang-sh">yarn <span class="hljs-keyword">add</span><span class="bash"> point-sass</span>
-</code></pre>
-<h3 id="install-with-npm">Install with NPM</h3>
-<pre><code class="lang-sh">npm install <span class="hljs-built_in">point</span>-sass --<span class="hljs-built_in">save</span>
-</code></pre>
-<h3 id="direct-script-include">Direct <code>&lt;script&gt;</code> Include</h3>
-<p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/point.min.css&quot; /&gt;</code></p>
-<h2 id="customize">Customize</h2>
-<p>Point is coded in <a href="http://sass-lang.com/">SASS</a>, If you&#39;re familiar with it, You can continue.</p>
-<h3 id="1-install-the-dependence">1. Install the dependence</h3>
-<pre><code class="lang-sh">yarn <span class="hljs-keyword">add</span><span class="bash"> point-sass --dev</span>
-</code></pre>
-<h3 id="2-set-your-variables">2. Set your variables</h3>
-<p>you can reference all initial variables in <code>scss/_vars.scss</code></p>
-<pre><code class="lang-scss"><span class="hljs-variable">$master-palette</span>: (
-  primary: <span class="hljs-number">#e74c3c</span>
-);
-
-<span class="hljs-variable">$link-color</span>: <span class="hljs-number">#e74c3c</span>;
-</code></pre>
-<h3 id="3-import-point-at-the-end-of-your-code">3. Import Point at the end of your code</h3>
-<pre><code class="lang-scss"><span class="hljs-variable">$master-palette</span>: (
-  primary: <span class="hljs-number">#e74c3c</span>
-);
-
-<span class="hljs-variable">$link-color</span>: <span class="hljs-number">#e74c3c</span>;
-
-<span class="hljs-comment">// Your code</span>
-
-@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/point-sass/point"</span>
-</code></pre>
-<h2 id="browser-support">Browser Support</h2>
-<p>Point uses <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> for CSS
-reset and <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to make styles
-compatible with earlier browser versions. For best user experience, these
-browsers are recommended:</p>
-<ul>
-<li>Chrome</li>
-<li>Firefox</li>
-<li>Safari</li>
-<li>Opera</li>
-<li>Microsoft Edge</li>
-<li>Internet Explorer 10+</li>
-</ul>
-<h2 id="copyright-and-license">Copyright and license</h2>
-<p>Code copyright 2017 moyu. Code released under <a href="https://github.com/moyus/point/blob/master/LICENSE">the MIT license</a>.</p>
 
 
       </main>

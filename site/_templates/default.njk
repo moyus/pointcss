@@ -8,7 +8,7 @@
   <meta name="description" content="{{ site.description }}">
   <meta name="keywords" content="{{ site.keywords }}">
   <link rel="stylesheet" href="{{site.url}}css/point.css?v={{site.version | replace('.', '')}}">
-  <link rel="stylesheet" href="{{site.url}}css/docs.css?v={{site.version | replace('.', '')}}">
+  <link rel="stylesheet" href="{{site.url}}css/style.css?v={{site.version | replace('.', '')}}">
   <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <header class="site-topbar">
       <nav class="navbar site-navigation">
         <div class="navbar__start">
-          <a href="{{site.url}}" class="navbar__item navbar__brand">
+          <a href="{{site.url}}getting-started" class="navbar__item navbar__brand">
             <svg width="32px" height="32px" class="u-mr-10" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <path d="M10,0 L50,0 L50,0 C77.6142375,-5.07265313e-15 100,22.3857625 100,50 L100,90 C100,95.5228475 95.5228475,100 90,100 L50,100 C22.3857625,100 3.38176876e-15,77.6142375 0,50 L0,10 L0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 L10,0 Z M50,85 C69.3299662,85 85,69.3299662 85,50 C85,30.6700338 69.3299662,15 50,15 C30.6700338,15 15,30.6700338 15,50 C15,69.3299662 30.6700338,85 50,85 Z M50,70 C38.954305,70 30,61.045695 30,50 C30,38.954305 38.954305,30 50,30 C61.045695,30 70,38.954305 70,50 C70,61.045695 61.045695,70 50,70 Z" fill="#7872FF"></path>
             </svg>
@@ -25,11 +25,9 @@
         </div>
         <!-- END .navbar__left -->
         <div class="navbar__end">
-          <a href="{{site.url}}getting-started" class="navbar__item">Documentation</a>
-          <a href="{{site.github}}" class="navbar__item">Github</a>
-          <a href="http://cover.20theme.com" class="navbar__item">Cover</a>
+          <div class="navbar__item">v{{site.version}}</div>
           <div class="navbar__item">
-            <a href="{{site.download}}" class="btn btn--outline btn--primary">Download</a>
+            <a href="{{site.github}}" class="btn btn--outline btn--primary">Github</a>
           </div>
         </div>
         <!-- END .navbar__right -->

@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Hint | Point</title>
+  <title> Progress | Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
   <link rel="stylesheet" href="/css/point.css?v=133">
-  <link rel="stylesheet" href="/css/docs.css?v=133">
+  <link rel="stylesheet" href="/css/style.css?v=133">
   <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <header class="site-topbar">
       <nav class="navbar site-navigation">
         <div class="navbar__start">
-          <a href="/" class="navbar__item navbar__brand">
+          <a href="/getting-started" class="navbar__item navbar__brand">
             <svg width="32px" height="32px" class="u-mr-10" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <path d="M10,0 L50,0 L50,0 C77.6142375,-5.07265313e-15 100,22.3857625 100,50 L100,90 C100,95.5228475 95.5228475,100 90,100 L50,100 C22.3857625,100 3.38176876e-15,77.6142375 0,50 L0,10 L0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 L10,0 Z M50,85 C69.3299662,85 85,69.3299662 85,50 C85,30.6700338 69.3299662,15 50,15 C30.6700338,15 15,30.6700338 15,50 C15,69.3299662 30.6700338,85 50,85 Z M50,70 C38.954305,70 30,61.045695 30,50 C30,38.954305 38.954305,30 50,30 C61.045695,30 70,38.954305 70,50 C70,61.045695 61.045695,70 50,70 Z" fill="#7872FF"></path>
             </svg>
@@ -25,11 +25,9 @@
         </div>
         <!-- END .navbar__left -->
         <div class="navbar__end">
-          <a href="/getting-started" class="navbar__item">Documentation</a>
-          <a href="https://github.com/moyus/point" class="navbar__item">Github</a>
-          <a href="http://cover.20theme.com" class="navbar__item">Cover</a>
+          <div class="navbar__item">v1.3.3</div>
           <div class="navbar__item">
-            <a href="https://github.com/moyus/point/releases" class="btn btn--outline btn--primary">Download</a>
+            <a href="https://github.com/moyus/point" class="btn btn--outline btn--primary">Github</a>
           </div>
         </div>
         <!-- END .navbar__right -->
@@ -139,63 +137,77 @@
       </aside>
       <!-- END .site-sidebar -->
       <main id="main" class="site-main c-content" role="main">
-        <h1 id="hint">Hint</h1>
+        <h1 id="progress">Progress</h1>
 <ul>
-<li><a href="#basic">Basic</a></li>
+<li><a href="#types">Types</a></li>
 <li><a href="#sizes">Sizes</a></li>
-<li><a href="#position">Position</a></li>
+<li><a href="#state">State</a></li>
 </ul>
-<h2 id="basic">Basic</h2>
-<p>Hint is built with pure css code. It can be apply on any elements who&#39;s
-<code>overflow</code> is not hidden and <code>position</code> is not undefined.</p>
-<div class="u-mb-15 u-textCenter">
-  <button class="btn btn--info hint u-mb-15" data-hint="I'm always here!">Hover Me</button>
+<h2 id="types">Types</h2>
+<div class="u-mb-15">
+  <div class="progress">
+    <div class="progress__bar" style="width: 50%;"></div>
+  </div>
+  <div class="progress progress--primary" value="0.3">
+    <div class="progress__bar" style="width: 30%;"></div>
+  </div>
+  <div class="progress progress--info" value="0.45">
+    <div class="progress__bar" style="width: 45%;"></div>
+  </div>
+  <div class="progress progress--danger" value="0.6">
+    <div class="progress__bar" style="width: 60%;"></div>
+  </div>
+  <div class="progress progress--warning" value="0.8">
+    <div class="progress__bar" style="width: 80%;"></div>
+  </div>
 </div>
 
-<pre><code class="lang-html">&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint"</span> <span class="hljs-meta">data</span>-hint=<span class="hljs-string">"I'm always here!"</span>&gt;Hover Me&lt;/<span class="hljs-keyword">button&gt;</span>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 50%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--primary"</span> value=<span class="hljs-string">"0.3"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 30%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--info"</span> value=<span class="hljs-string">"0.45"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 45%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--danger"</span> value=<span class="hljs-string">"0.6"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 60%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--warning"</span> value=<span class="hljs-string">"0.8"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 80%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
 <h2 id="sizes">Sizes</h2>
-<p>By default, Hint will always remain single-line. you can change this behavior by
-adding <code>.hint--sm</code>, <code>.hint--md</code> or <code>.hint--lg</code> modifier class.</p>
-<div class="l-row u-textCenter">
-  <div class="l-col-4@md">
-    <button class="btn btn--info hint hint--sm u-mb-15" data-hint="Lorem ipsum dolor sit amet.">Small Hint</button>
+<p>Fancy smaller or larger progress? Add <code>.progress--sm</code> or <code>.progress--lg</code> modifier
+class for additional sizes.</p>
+<div class="u-mb-15">
+  <div class="progress progress--sm">
+    <div class="progress__bar" style="width: 15%;"></div>
   </div>
-  <div class="l-col-4@md">
-    <button class="btn btn--info hint hint--md u-mb-15" data-hint="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione!">Medium Hint</button>
+  <div class="progress">
+    <div class="progress__bar" style="width: 30%;"></div>
   </div>
-  <div class="l-col-4@md">
-    <button class="btn btn--info hint hint--lg u-mb-15" data-hint="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, illo recusandae dolorem magni odit.">Large Hint</button>
-  </div>
-</div>
-
-<pre><code class="lang-html">&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint hint--sm"</span> <span class="hljs-meta">data</span>-hint=<span class="hljs-string">"Lorem ipsum dolor sit amet."</span>&gt;Small Hint&lt;/<span class="hljs-keyword">button&gt;
-</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint hint--md"</span> <span class="hljs-meta">data</span>-hint=<span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione!"</span>&gt;Medium Hint&lt;/<span class="hljs-keyword">button&gt;
-</span>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"btn btn--info hint hint--lg"</span> <span class="hljs-meta">data</span>-hint=<span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, illo recusandae dolorem magni odit."</span>&gt;Large Hint&lt;/<span class="hljs-keyword">button&gt;</span>
-</code></pre>
-<h2 id="position">Position</h2>
-<p>Hint use top as default position. By adding <code>.hint--right</code>, <code>.hint--bottom</code> or
-<code>.hint--left</code> modifier class to change hint position.</p>
-<div class="l-row u-textCenter">
-  <div class="l-col-6@sm l-col-3@md">
-    <button class="btn btn--info hint u-mb-15" data-hint="Hello, There!">Hover me!</button>
-  </div>
-  <div class="l-col-6@sm l-col-3@md">
-    <button class="btn btn--info hint hint--right u-mb-15" data-hint="Hello, There!">Hover me!</button>
-  </div>
-  <div class="l-col-6@sm l-col-3@md">
-    <button class="btn btn--info hint hint--bottom u-mb-15" data-hint="Hello, There!">Hover me!</button>
-  </div>
-  <div class="l-col-6@sm l-col-3@md">
-    <button class="btn btn--info hint hint--left u-mb-15" data-hint="Hello, There!">Hover me!</button>
+  <div class="progress progress--lg">
+    <div class="progress__bar" style="width: 60%;"></div>
   </div>
 </div>
 
-<pre><code class="lang-html">&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint"</span> data-hint=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint hint--right"</span> data-hint=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint hint--bottom"</span> data-hint=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"btn btn--info hint hint--left"</span> data-hint=<span class="hljs-string">"Hello, There!"</span>&gt;Hover me!<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--sm"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 15%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 30%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress progress--lg"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"progress__bar"</span> style=<span class="hljs-string">"width: 60%;"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
+<h2 id="state">State</h2>
+<p>By adding <code>.is-active</code> modifier class to create animated progress.</p>
+<div class="progress is-active">
+  <div class="progress__bar" style="width: 60%;"></div>
+</div>
 
 
       </main>
