@@ -10,7 +10,7 @@ title: "Level"
 ## Basic
 Use flexbox to align items vertically.
 
-<div class="l-level u-mb-15">
+<div class="l-level l-level--break@md u-mb-15">
   <div class="l-level__left">
     <a href="#" class="l-level__item btn btn--success btn--smart">Add</a>
     <a href="#" class="l-level__item">All</a>
@@ -32,7 +32,7 @@ Use flexbox to align items vertically.
 </div>
 
 ```html
-<div class="l-level">
+<div class="l-level l-level--break@md">
   <div class="l-level__left">
     <a href="#" class="l-level__item btn btn--success btn--smart">Add</a>
     <a href="#" class="l-level__item">All</a>
@@ -59,7 +59,7 @@ Use flexbox to align items vertically.
 If you want to create 3-colums level, you must place `.l-level__center` in
 first, so it can use `~` CSS selector to control siblings style.
 
-<div class="l-level u-mb-15">
+<div class="l-level l-level--break@md u-mb-15">
   <div class="l-level__center">
     <div class="btn-group">
       <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
@@ -87,7 +87,7 @@ first, so it can use `~` CSS selector to control siblings style.
 </div>
 
 ```html
-<div class="l-level">
+<div class="l-level l-level--break@md">
   <div class="l-level__center">
     <div class="btn-group">
       <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
