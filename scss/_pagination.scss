@@ -1,19 +1,5 @@
-/*
-Markup:
-<nav class="pagination" role="pagination">
-  <a href="#" class="pagination__item">Prev</a>
-  <a href="#" class="pagination__item">1</a>
-  <a href="#" class="pagination__item">2</a>
-  <span class="pagination__item">...<span>
-  <a href="#" class="pagination__item">7</a>
-  <a href="#" class="pagination__item is-active">8</a>
-  <a href="#" class="pagination__item">9</a>
-  <span class="pagination__item">...<span>
-  <a href="#" class="pagination__item">15</a>
-  <a href="#" class="pagination__item">Next</a>
-</nav>
-*/
-
+/* ## Pagination
+---------------------------------*/
 // Block
 .pagination {
   display: flex;

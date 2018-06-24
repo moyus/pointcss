@@ -1,42 +1,5 @@
-/*
-Markup:
-<div class="dropdown {{modifier}}">
-  <div class="btn-group">
-    <button class="btn btn--primary">Actions</button>
-    <button class="btn btn--primary dropdown__toggle">
-      <i class="i-caret"></i>
-    </button>
-    <ul class="dropmenu">
-      <li class="dropmenu__item">
-        <a href="#" class="dropmenu__link">Save as draft</a>
-      </li>
-      <li class="dropmenu__item">
-        <a href="#" class="dropmenu__link">Publish</a>
-      </li>
-      <li class="dropmenu__item has-submenu">
-        <a href="#" class="dropmenu__link">Scheduled</a>
-        <ul class="dropmenu">
-          <li class="dropmenu__item">
-            <a href="#" class="dropmenu__link">Tomorrow</a>
-          </li>
-          <li class="dropmenu__item">
-            <a href="#" class="dropmenu__link">Saturday</a>
-          </li>
-          <li class="dropmenu__item">
-            <a href="#" class="dropmenu__link">Next Monday</a>
-          </li>
-        </ul>
-      </li>
-      <li class="dropmenu__divider"></li>
-      <li class="dropmenu__item">
-        <a href="#" class="dropmenu__link">Delete</a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-*/
-
+/* ## Dropmenu
+---------------------------------*/
 // Block
 .dropmenu {
   position: relative;
@@ -92,7 +55,8 @@ Markup:
   }
 }
 
-// container
+/* ## Dropdown
+---------------------------------*/
 .dropdown {
   position: relative;
   display: inline-flex;

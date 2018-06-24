@@ -1,13 +1,5 @@
-/*
-Markup:
-<div class="box {{modifier}}">
-  <header class="box__header">Box Title</header>
-  <div class="box__body">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, nisi?
-  </div>
-</div>
-*/
-
+/* ## Box
+---------------------------------*/
 // Block
 .box {
   margin-bottom: $box-margin-bottom;

@@ -1,5 +1,5 @@
-// Controls
-// -----------------------------------------------------------------------------
+/* ## Form
+---------------------------------*/
 .form-input,
 .form-select,
 .form-textarea {
@@ -179,15 +179,20 @@ select.form-select {
 }
 
 .form-checkbox input[type="checkbox"] {
-  &:disabled {
+  &:focus {
     + .form-checkbox__indicator {
-      opacity: 0.75;
-      background-color: $form-input-bg-disabled;
+      border-color: $form-input-active-border-color;
     }
   }
   &:checked {
     + .form-checkbox__indicator::after {
       background-color: map-get($master-palette, 'primary');
+    }
+  }
+  &:disabled {
+    + .form-checkbox__indicator {
+      opacity: 0.75;
+      background-color: $form-input-bg-disabled;
     }
   }
 }
@@ -231,15 +236,20 @@ select.form-select {
 }
 
 .form-radio input[type="radio"] {
-  &:disabled {
+  &:focus {
     + .form-radio__indicator {
-      opacity: 0.75;
-      background-color: $form-input-bg-disabled;
+      border-color: $form-input-active-border-color;
     }
   }
   &:checked {
     + .form-radio__indicator:after {
       background-color: map-get($master-palette, 'primary');
+    }
+  }
+  &:disabled {
+    + .form-radio__indicator {
+      opacity: 0.75;
+      background-color: $form-input-bg-disabled;
     }
   }
 }
@@ -289,18 +299,18 @@ select.form-select {
 }
 
 .form-switch input[type="checkbox"] {
-  &:disabled {
-    ~ .form-switch__indicator {
-      opacity: .75;
-      cursor: not-allowed;
-    }
-  }
   &:checked {
     ~ .form-switch__indicator {
       background-color: $form-switch-active-color;
       &::after {
         transform: translateX(24px); // 48 - 2*2 - 20
       }
+    }
+  }
+  &:disabled {
+    ~ .form-switch__indicator {
+      opacity: .75;
+      cursor: not-allowed;
     }
   }
 }

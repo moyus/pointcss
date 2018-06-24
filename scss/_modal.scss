@@ -1,25 +1,5 @@
-/*
-Markup:
-<body class="is-masking">
-  <div class="modal-container" role="dialog">
-    <section class="modal {{modifier}}">
-      <header class="modal__header">
-        <h4 class="modal__title">Modal Title</h4>
-        <a role="button" class="modal__close"></a>
-      </header>
-      <div class="modal__body">
-
-      </div>
-      <footer class="modal__footer">
-
-      </footer>
-    </section>
-  </div>
-  
-  <div class="mask"></div>
-</body>
-*/
-
+/* ## Modal
+---------------------------------*/
 // Container
 .modal-container {
   position: fixed;

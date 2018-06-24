@@ -1,11 +1,5 @@
-/*
-Markup:
-<div class="note has-close {{modifier}}">
-  <a role="button" class="note__close">&times;</a>
-  ...
-</note>
-*/
-
+/* ## Note
+---------------------------------*/
 // Block
 .note {
   position: relative;
@@ -35,7 +29,7 @@ Markup:
   top: $note-padding;
   right: 10px;
   font-size: $font-size-lg;
-  line-height: 1;
+  line-height: 1.15;
   cursor: pointer;
   opacity: 0.3;
 }

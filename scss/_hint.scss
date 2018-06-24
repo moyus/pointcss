@@ -1,8 +1,5 @@
-/*
-Markup:
-<button class="btn hint {{modifier}}" data-hint="Are you sure?">Save</button> 
-*/
-
+/* ## Hint
+---------------------------------*/
 .hint {
   position: relative; // absolute or fixed
   overflow: visible;

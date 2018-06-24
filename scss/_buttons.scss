@@ -1,15 +1,5 @@
-/*
-Button Markup:
-<button class="btn {{modifier}}">Save</button>
-
-Button Group Markup:
-<div class="btn-group">
-  <button class="btn {{modifier}}">Stop</button>
-  <button class="btn {{modifier}}">Play</button>
-  <button class="btn {{modifier}}">Pause</button>
-</div>
-*/
-
+/* ## Button
+---------------------------------*/
 .btn {
   position: relative;
   display: inline-block;
@@ -110,7 +100,8 @@ Button Group Markup:
   width: 100%;
 }
 
-// Button Group
+/* ## Button Group
+---------------------------------*/
 .btn-group {
   display: inline-flex;
   .btn {
