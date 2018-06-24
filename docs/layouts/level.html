@@ -7,8 +7,8 @@
   <title> Level | Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
-  <link rel="stylesheet" href="https://moyus.github.io/point/css/point.css?v=133">
-  <link rel="stylesheet" href="https://moyus.github.io/point/css/style.css?v=133">
+  <link rel="stylesheet" href="https://moyus.github.io/point/css/point.css?v=140">
+  <link rel="stylesheet" href="https://moyus.github.io/point/css/style.css?v=140">
   <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
 </head>
 <body>
@@ -25,7 +25,7 @@
         </div>
         <!-- END .navbar__left -->
         <div class="navbar__end">
-          <div class="navbar__item">v1.3.3</div>
+          <div class="navbar__item">v1.4.0</div>
           <div class="navbar__item">
             <a href="https://github.com/moyus/point" class="btn btn--outline btn--primary">Github</a>
           </div>
@@ -147,7 +147,7 @@
 </ul>
 <h2 id="basic">Basic</h2>
 <p>Use flexbox to align items vertically.</p>
-<div class="l-level u-mb-15">
+<div class="l-level l-level--break@md u-mb-15">
   <div class="l-level__left">
     <a href="#" class="l-level__item btn btn--success btn--smart">Add</a>
     <a href="#" class="l-level__item">All</a>
@@ -168,7 +168,7 @@
   </div>
 </div>
 
-<pre><code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"l-level"</span>&gt;
+<pre><code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"l-level l-level--break@md"</span>&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level__left"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level__item btn btn--success btn--smart"</span>&gt;</span>Add<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level__item"</span>&gt;</span>All<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -192,7 +192,7 @@
 <hr>
 <p>If you want to create 3-colums level, you must place <code>.l-level__center</code> in
 first, so it can use <code>~</code> CSS selector to control siblings style.</p>
-<div class="l-level u-mb-15">
+<div class="l-level l-level--break@md u-mb-15">
   <div class="l-level__center">
     <div class="btn-group">
       <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
@@ -219,7 +219,7 @@ first, so it can use <code>~</code> CSS selector to control siblings style.</p>
   </div>
 </div>
 
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level"</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level l-level--break@md"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-level__center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary btn--outline"</span>&gt;</span>ALL PROJECTS<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
