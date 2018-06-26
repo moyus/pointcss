@@ -13,7 +13,8 @@
     border-top: $table-border-width solid $table-border-color;
   }
 
-  thead th {
+  thead th,
+  tfoot th {
     background-color: $table-accent-bg;
   }
 
