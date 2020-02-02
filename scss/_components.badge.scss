@@ -1,0 +1,40 @@
+/* ## Badge
+---------------------------------*/
+.badge {
+  display: inline-block;
+  padding: $spacing-inset-xs;
+  font-size: $text-size-sm;
+  line-height: $line-height-tight;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 1993px;
+  vertical-align: middle;
+  @include badge-variant($grey-mute, $grey-light);
+
+  &:empty {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+  }
+
+}
+
+.badge--primary {
+  @include badge-variant($white, $color-primary)
+}
+
+.badge--danger {
+  @include badge-variant($white, $color-danger)
+}
+
+.badge--success {
+  @include badge-variant($white, $color-success)
+}
+
+.badge--info {
+  @include badge-variant($white, $color-info)
+}
+
+.badge--warning {
+  @include badge-variant($white, $color-warning)
+}

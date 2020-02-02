@@ -1,0 +1,22 @@
+/* ## Breadcrumb
+---------------------------------*/
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: $grey-mute;
+  @include clearfix;
+}
+
+.breadcrumb__item {
+  float: left;
+  color: $grey-mute;
+  &:nth-child(n+2) {
+    &:before {
+      content: '/';
+      padding-left: 8px;
+      padding-right: 8px;
+      color: $grey-mute;
+    }
+  }
+}

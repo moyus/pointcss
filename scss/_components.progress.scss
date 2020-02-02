@@ -1,0 +1,93 @@
+/* ## Progress
+---------------------------------*/
+.progress {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 8px;
+  margin-top: $spacing-stack-base;
+  margin-bottom: $spacing-stack-base;
+  border-radius: 1993px;
+  background-color: $grey-light;
+  overflow: hidden;
+
+  &__bar {
+    position: relative;
+    float: left;
+    width: 0%;
+    max-width: 100%;
+    height: 100%;
+    background-color: $grey-base;
+  }
+
+  &.is-active {
+    .progress__bar {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $white;
+        animation: progress-active 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+      }
+    }
+  }
+}
+
+
+.progress--sm {
+  height: 4px;
+}
+
+.progress--lg {
+  height: 12px;
+}
+
+.progress--primary {
+  .progress__bar {
+    background-color: $color-primary;
+  }
+}
+
+.progress--danger {
+  .progress__bar {
+    background-color: $color-danger;
+  }
+}
+
+.progress--info {
+  .progress__bar {
+    background-color: $color-info;
+  }
+}
+
+.progress--success {
+  .progress__bar {
+    background-color: $color-success;
+  }
+}
+
+.progress--warning {
+  .progress__bar {
+    background-color: $color-warning;
+  }
+}
+
+@keyframes progress-active {
+  0% {
+    opacity: 0.1;
+    width: 0;
+  }
+
+  20% {
+    opacity: 0.5;
+    width: 0;
+  }
+
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}

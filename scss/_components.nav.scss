@@ -1,0 +1,151 @@
+/* ## Nav
+---------------------------------*/
+.nav {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: $grey-base;
+}
+
+.nav__item {
+  position: relative;
+  color: inherit;
+}
+
+.nav__link {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  line-height: $line-height-tight;
+  font-size: $text-size-base;
+  color: inherit;
+
+  &[disabled],
+  &.is-disabled {
+    opacity: .3;
+    cursor: not-allowed;
+  }
+
+}
+
+.nav.nav--sm {
+  > .nav__item {
+    > .nav__link {
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+.nav.nav--lg {
+  > .nav__item {
+    > .nav__link {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+.nav.nav--dark {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.nav.nav--menus {
+  display: flex;
+  flex-direction: column;
+
+  > .nav__item {
+    &:not(:last-child) {
+      margin-bottom: $spacing-stack-xs;
+    }
+
+    > .nav__link {
+      color: $grey-mute;
+      text-align: center;
+      padding: 0.375em 0.75em;
+      border-radius: $border-radius-base;
+
+      &:hover {
+        background-color: $grey-light;
+      }
+
+      &.is-active {
+        color: $white;
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  .nav--menus {
+    margin: 0 0 0 $spacing-stack-md;
+  }
+}
+
+.nav.nav--pills {
+  display: flex;
+
+  > .nav__item {
+    &:not(:last-child) {
+      margin-right: $spacing-stack-sm;
+    }
+  
+    > .nav__link {
+      color: $grey-mute;
+      text-align: center;
+      padding: 0.375em 0.75em;
+      border-radius: $border-radius-base;
+
+      &:hover {
+        background-color: $grey-light;
+      }
+  
+      &.is-active {
+        color: $white;
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+
+.nav.nav--tabs {
+  display: flex;
+  &::after {
+    content: '';
+    flex: 1 1 0%;
+    height: 1px;
+    background-color: $grey-weak;
+  }
+
+  > .nav__item {
+    flex: 0 0 auto;
+    margin-bottom: -1px;
+    &:not(:last-child) {
+      padding-right: $spacing-stack-xs;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: $spacing-stack-xs;
+        height: 1px;
+        background-color: $grey-weak;
+      }
+    }
+  
+    > .nav__link {
+      color: $grey-mute;
+      padding: 0.375em 0.75em;
+      border-radius: $border-radius-base $border-radius-base 0 0;
+      border: 1px solid transparent;
+
+      &:hover {
+        color: $grey-base;
+      }
+
+      &.is-active {
+        color: $grey-base;
+        border-color: $grey-weak $grey-weak transparent $grey-weak;
+      }
+    }
+  }
+}

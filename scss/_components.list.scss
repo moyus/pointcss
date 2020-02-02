@@ -1,0 +1,105 @@
+/* ## List
+---------------------------------*/
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list__item,
+.list__link {
+  position: relative;
+  display: block;
+  padding-top: $spacing-stack-base;
+  padding-bottom: $spacing-stack-base;
+  background-color: $white;
+
+  &:not(:first-child) {
+    border-top: 1px solid $grey-weak;
+  }
+
+}
+
+.list__link {
+  cursor: pointer;
+  color: inherit;
+
+  &:hover {
+    background-color: $grey-light;
+  }
+
+  &.is-active {
+    color: $white;
+    background-color: $color-primary;
+  }
+}
+
+.list--sm {
+  .list__item,
+  .list__link {
+    padding-top: $spacing-stack-sm;
+    padding-bottom: $spacing-stack-sm;
+  }
+
+  &.list--bordered,
+  &.list--inset {
+    .list__item {
+      padding-left: $spacing-stack-sm;
+      padding-right: $spacing-stack-sm;
+    }
+  }
+}
+
+.list--lg {
+  .list__item,
+  .list__link {
+    padding-top: $spacing-stack-lg;
+    padding-bottom: $spacing-stack-lg;
+  }
+
+  &.list--bordered,
+  &.list--inset {
+    .list__item,
+    .list__link {
+      padding-left: $spacing-stack-lg;
+      padding-right: $spacing-stack-lg;
+    }
+  }
+}
+
+.list--inset {
+  .list__item,
+  .list__link {
+    padding-left: $spacing-stack-base;
+      padding-right: $spacing-stack-base;
+  }
+}
+
+.list--bordered {
+  .list__item,
+  .list__link {
+    padding: $spacing-stack-base;
+    border: 1px solid $grey-weak;
+    margin-bottom: -1px;
+
+    &:first-child {
+      border-top-left-radius: $border-radius-base;
+      border-top-right-radius: $border-radius-base;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom-left-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
+    }
+  }
+}
+
+.list--transparent {
+  .list__item,
+  .list__link {
+    background-color: transparent;
+  }
+}
+
+

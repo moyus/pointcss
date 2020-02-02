@@ -1,10 +1,10 @@
-# Point
+# pointcss
 A flexible CSS Framework for building modern responsive web apps.
 
 - Built with Flexbox
 - Mobile-First
 - BEM, Namespaces, Modular, Beautiful code
-- 12KB minified and gzipped
+- 10KB minified and gzipped
 
 ## Setup
 There are 3 ways to start

@@ -1,0 +1,191 @@
+/* ## Button
+---------------------------------*/
+$button-border-width: 1px;
+$button-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacing-squish-base, 1)  + 2 * $button-border-width;
+
+.btn {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: $spacing-squish-base;
+  font-size: $text-size-base;
+  line-height: $line-height-normal;
+  color: $grey-mute;
+  height: $button-height-computed;
+  min-width: $button-height-computed;
+  border: $button-border-width solid transparent;
+  border-radius: $border-radius-base;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  text-align: center;
+  background: none;
+  box-shadow: none;
+  appearance: none;
+
+  &.btn--outline {
+    @include btn-outline-variant($grey-base, $grey-mute);
+  }
+
+  &.is-loading {
+    color: transparent;
+    cursor: not-allowed;
+
+    &:after {
+      animation: spin-around 500ms infinite linear;
+      border: 2px solid $grey-mute;
+      border-radius: 50%;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      content: "";
+      display: block;
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    opacity: .3;
+    cursor: not-allowed;
+  }
+
+}
+
+.btn.btn--black {
+  @include btn-variant($white, $black);
+  &.btn--outline {
+    @include btn-outline-variant($white, $black);
+  }
+}
+
+.btn.btn--white {
+  @include btn-variant($grey-base, $white);
+  &.btn--outline {
+    @include btn-outline-variant($grey-base, $white);
+  }
+}
+
+.btn.btn--primary {
+  @include btn-variant($white, $color-primary);
+  &.btn--outline {
+    @include btn-outline-variant($white, $color-primary);
+  }
+}
+
+.btn.btn--danger {
+  @include btn-variant($white, $color-danger);
+  &.btn--outline {
+    @include btn-outline-variant($white, $color-danger);
+  }
+}
+
+.btn.btn--success {
+  @include btn-variant($white, $color-success);
+  &.btn--outline {
+    @include btn-outline-variant($white, $color-success);
+  }
+}
+
+.btn.btn--info {
+  @include btn-variant($white, $color-info);
+  &.btn--outline {
+    @include btn-outline-variant($white, $color-info);
+  }
+}
+
+.btn.btn--warning {
+  @include btn-variant($white, $color-warning);
+  &.btn--outline {
+    @include btn-outline-variant($white, $color-warning);
+  }
+}
+
+.btn.btn--loose {
+  padding-left: $spacing-5;
+  padding-right: $spacing-5;
+}
+
+.btn.btn--sm {
+  $button-height-computed: $text-size-sm * $line-height-normal + 2 * nth($spacing-squish-sm, 1)  + 2 * $button-border-width;
+
+  font-size: $text-size-sm;
+  border-radius: $border-radius-sm;
+  padding: $spacing-squish-sm;
+  height: $button-height-computed;
+  min-width: $button-height-computed;
+
+  &.btn--loose {
+    padding-left: $spacing-5;
+    padding-right: $spacing-5;
+  }
+
+}
+
+.btn.btn--lg {
+  $button-height-computed: $text-size-lg * $line-height-normal + 2 * nth($spacing-squish-lg, 1)  + 2 * $button-border-width;
+
+  font-size: $text-size-lg;
+  border-radius: $border-radius-lg;
+  padding: $spacing-squish-lg;
+  height: $button-height-computed;
+  min-width: $button-height-computed;
+
+  &.btn--loose {
+    padding-left: $spacing-7;
+    padding-right: $spacing-7;
+  }
+
+}
+
+.btn.btn--block {
+  display: block;
+  width: 100%;
+}
+
+/* ## Button Group
+---------------------------------*/
+.btn-group {
+  display: inline-flex;
+
+  .btn {
+    flex: 1 0 auto;
+
+    &.is-active {
+      z-index: 15;
+    }
+
+    &:not(:first-of-type) {
+      margin-left: - $button-border-width;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:last-of-type) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+}
+
+@keyframes spin-around {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

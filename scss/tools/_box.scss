@@ -1,0 +1,13 @@
+// box variant
+// -----------------------------------------------------------------------------
+@mixin box-variant($text-color, $border-color, $background-color) {
+  .box__header {
+    color: $text-color;
+    background-color: $background-color;
+    border-color: $border-color;
+  }
+
+  .box__body {
+    border-color: $border-color;
+  }
+}

@@ -1,0 +1,90 @@
+/* ## Table
+---------------------------------*/
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  caption-side: top;
+}
+
+th {
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+
+  th, td {
+    text-align: left;
+    padding: $spacing-squish-base;
+    vertical-align: middle;
+    border-top: 1px solid $grey-thin;
+  }
+
+  thead th,
+  tfoot th {
+    background-color: $grey-light;
+  }
+
+  tbody + tbody {
+    border-top: 2px solid $grey-weak;
+  }
+}
+
+// modifiers
+.table.table--striped {
+  > tr:nth-of-type(even),
+  tbody tr:nth-of-type(even) {
+    background-color: $grey-light;
+  }
+}
+
+.table.table--bordered {
+  th,
+  td {
+    border: 1px solid $grey-thin;
+  }
+}
+
+.table.table--hover {
+  tbody tr:hover,
+  > tr:hover {
+    background-color: shade-color($grey-light, 1);
+  }
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+  $suffix: "\\@#{$breakpoint}";
+
+  @include media-breakpoint-down($breakpoint) {
+    .table--collapse#{$suffix} {
+      thead,
+      tfoot {
+        display: none;
+      }
+  
+      tr {
+        display: block;
+        &:not(:last-child) {
+          border-bottom: 3px solid $grey-weak;
+        }
+      }
+  
+      th, td {
+        display: block;
+        width: 100% !important;
+        text-align: right;
+        &:before {
+          float: left;
+          color: $grey-mute;
+          content: attr(data-label);
+        }
+      }
+    }
+  }
+}

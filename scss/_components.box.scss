@@ -1,0 +1,41 @@
+/* ## Box
+---------------------------------*/
+.box {
+  margin-bottom: $spacing-stack-lg;
+  border-radius: $border-radius-base;
+}
+
+.box__header {
+  color: $grey-base;
+  font-size: $text-size-base;
+  line-height: $line-height-tight;
+  padding: $spacing-squish-lg;
+  border: 1px solid $grey-thin;
+  border-radius: $border-radius-base $border-radius-base 0 0;
+  background-color: $grey-light;
+}
+
+.box__body {
+  border: 1px solid $grey-thin;
+  border-top: 0;
+  border-radius: 0 0 $border-radius-base;
+  background-color: $white;
+}
+
+.box__inner {
+  padding: $spacing-inset-base;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+@each $modifier, $value in $box-palette {
+  .box--#{$modifier} {
+    @include box-variant(map-get($value, 'text'), map-get($value, 'border'), map-get($value, 'bg'))
+  }
+}

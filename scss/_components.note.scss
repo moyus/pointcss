@@ -1,0 +1,27 @@
+/* ## Note
+---------------------------------*/
+// block
+.note {
+  position: relative;
+  border-radius: $border-radius-base;
+  padding: $spacing-stack-lg;
+  margin-bottom: $spacing-stack-lg;
+  color: $grey-base;
+  border: 1px solid $grey-light;
+  background-color: $grey-light;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// modifiers
+@each $modifier, $value in $note-palette {
+  .note--#{$modifier} {
+    @include note-variant(map-get($value, 'text'), map-get($value, 'border'), map-get($value, 'bg'))
+  }
+}

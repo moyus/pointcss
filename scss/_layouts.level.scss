@@ -1,0 +1,77 @@
+/* ## Level
+---------------------------------*/
+.level {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > .level__item {
+    flex-grow: 1;
+  }
+}
+
+.level__start,
+.level__center,
+.level__end {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &:only-child {
+    width: 100%;
+  }
+  
+  > .level__item:not(:last-child) {
+    margin-right: $spacing-stack-base;
+  }
+  
+}
+
+.level__start {
+  order: 1;
+  justify-content: flex-start;
+}
+
+.level__center {
+  order: 2;
+  justify-content: center;
+}
+
+.level__end {
+  order: 3;
+  justify-content: flex-end;
+}
+
+.level__center ~ .level__start,
+.level__center ~ .level__end {
+  flex: 1 0 0%;
+}
+
+.level__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+  $suffix: "\\@#{$breakpoint}";
+
+  @include media-breakpoint-down($breakpoint) {
+    .level--collapse#{$suffix} {
+      display: block;
+      .level__item:not(:last-child) {
+        margin: 0 0 $spacing-stack-sm 0;
+      }
+      .level__start,
+      .level__end,
+      .level__center {
+        flex-direction: column;
+        justify-content: center;
+        &:not(:last-child) {
+          margin-bottom: $spacing-stack-base;
+        }
+      }
+    }
+  }
+}

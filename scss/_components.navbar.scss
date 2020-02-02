@@ -1,0 +1,56 @@
+/* ## Navbar
+---------------------------------*/
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  height: $navbar-height;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.navbar__start {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.navbar__end {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.navbar__brand {
+  font-size: $font-size-xl;
+  line-height: $line-height-tight;
+}
+
+.navbar__item {
+  flex: 0 0 auto;
+  color: $navbar-color;
+  font-size: $navbar-font-size;
+  &:not(:last-child) {
+    margin-right: $navbar-item-margin-x;
+  }
+}
+
+.navbar__link {
+  color: inherit;
+}
+
+.navbar.navbar--dark {
+  color: rgba(255,255,255, 0.5);
+  .navbar__item {
+    color: rgba(255,255,255, 0.5);
+  }
+}
+
+.navbar.navbar--light {
+  color: rgba(255,255,255, 0.85);
+  .navbar__item {
+    color: rgba(255,255,255, 0.85);
+  }
+}

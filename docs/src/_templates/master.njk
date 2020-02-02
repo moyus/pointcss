@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %} {{page.title}} - {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <link rel="stylesheet" href="{{site.url}}css/point.css?v={{site.version | replace('.', '')}}">
+  <link rel="stylesheet" href="{{site.url}}css/style.css?v={{site.version | replace('.', '')}}">
+  <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+</head>
+<body>
+  <div id="docs" class="site">
+    <header class="site-topbar">
+      <nav class="navbar site-navigation">
+        <div class="navbar__start">
+          <a href="{{site.url}}getting-started" class="navbar__item navbar__brand">
+            pointcss
+          </a>
+        </div>
+        <!-- END .navbar__left -->
+        <div class="navbar__end">
+          <div class="navbar__item">v{{site.version}}</div>
+          <div class="navbar__item">
+            <a href="{{site.github}}" class="btn btn--outline btn--primary">Github</a>
+          </div>
+        </div>
+        <!-- END .navbar__right -->
+      </nav>
+    </header>
+    <!-- END .site -->
+    <div class="site-content">
+      <aside class="site-sidebar">
+        {% include "menus.html" %}
+      </aside>
+      <!-- END .site-sidebar -->
+      <main id="main" class="site-main" role="main">
+        {% block content %}{% endblock %}
+      </main>
+      <!-- END #main -->
+    </div>
+    <!-- END .site-content -->
+    <footer id="colophon" class="site-footer" role="contentinfo">
+      <p>Designed and built by <a href="{{site.author}}">moyu</a></p>
+      <p>Licensed under the <a href="{{site.license}}">MIT License</a>.</p>
+    </footer>
+  </div>
+  <script src="{{site.url}}js/main.js"></script>
+</body>
+</html>

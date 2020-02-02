@@ -1,90 +1,166 @@
-@import 'vars-space';
-@import 'vars-zindex';
-
-// Colors
+// Color
 // -----------------------------------------------------------------------------
-$master-palette: (
-  primary: #7872ff,  // your brand digital color
-  info: #3381FF,
-  success: #4caf50,
-  danger: #f44336,
-  warning: #ff9800,
-  // shine: #e91e63, you can add more
-) !default;
+$color-primary:                         #636AFF; // primary
+$color-danger:                          #ff2d20; // negative
+$color-success:                         #15CD72; // positive
+$color-info:                            #0069ff; // accent
+$color-warning:                         #ED6E33; // warning
 
-$color-primary:                         map-get($master-palette, 'primary') !default;
-$grey-darkest:                          #161616 !default;
-$grey-dark:                             #333333 !default; // text, heading
-$grey-base:                             #4D4C4C !default;
-                                        // #676767
-                                        // #80807F
-                                        // #969696
-                                        // #B2B2B2
-                                        // #CBCACA
-$grey-light:                            #888888 !default; // meta, help, muted
-$grey-lighter:                          #e4e4e3 !default; // disabled
-$grey-lightest:                         #f5f5f5 !default; // bg, hover-bg
+$black:                                 #000000 !default; // for color mix
+$grey-base:                             #212121 !default; // heading, text
+$grey-mute:                             #616161 !default; // secondary text, icon
+$grey-thin:                             #b0b0b0 !default; // border, icon
+$grey-weak:                             #dddddd !default; // divider, border
+$grey-shade:                            #e3e4e3 !default; // disabled state
+$grey-light:                            #f7f7f7 !default; // white space area
+$white:                                 #ffffff !default; // for color mix
 
-$color-black:                           #000 !default;
-$color-white:                           #fff !default;
+// Index
+// -----------------------------------------------------------------------------
+$zIndex-1: 100;
+$zIndex-2: 200;
+$zIndex-3: 300;
+$zIndex-4: 400;
+$zIndex-5: 500;
+$zIndex-6: 600;
+$zIndex-7: 700;
+$zIndex-8: 800;
+$zIndex-9: 900;
 
-// colors used for form validation etc.
-$color-success:                         #4caf50 !default;
-$color-danger:                          #f44336 !default;
-$color-warning:                         #ff9800 !default;
+// Spacing
+// -----------------------------------------------------------------------------
+$spacing-1:                             2px !default;
+$spacing-2:                             4px !default;
+$spacing-3:                             8px !default;
+$spacing-4:                             12px !default;
+$spacing-5:                             16px !default;
+$spacing-6:                             24px !default;
+$spacing-7:                             32px !default;
+$spacing-8:                             48px !default;
+$spacing-9:                             64px !default;
+$spacing-base:                          $spacing-3 !default;
 
-$divider-color:                         #e5e5e5 !default;
-$border-color:                          #ddd !default;
-$border-width:                          1px !default;
+// square inset
+$spacing-inset-xs:                      4px !default;
+$spacing-inset-sm:                      8px !default;
+$spacing-inset-md:                      16px !default;
+$spacing-inset-lg:                      32px !default;
+$spacing-inset-xl:                      64px !default;
+$spacing-inset-base:                    $spacing-inset-md !default;
+
+// squish inset
+$spacing-squish-xs:                     (2px 4px) !default;
+$spacing-squish-sm:                     (4px 8px) !default;
+$spacing-squish-md:                     (6px 12px) !default; // 0.375em 0.75em;
+$spacing-squish-lg:                     (8px 16px) !default;
+$spacing-squish-xl:                     (12px 24px) !default;
+$spacing-squish-base:                   $spacing-squish-md !default;
+
+// stack
+$spacing-stack-xs:                      2px !default;
+$spacing-stack-sm:                      4px !default;
+$spacing-stack-md:                      8px !default;
+$spacing-stack-lg:                      16px !default;
+$spacing-stack-xl:                      24px !default;
+$spacing-stack-base:                    $spacing-stack-md !default;
+
+
+// Base
+// -----------------------------------------------------------------------------
+// paragraph, label
+$font-size-xs:                          12px;
+$font-size-sm:                          14px;
+$font-size-md:                          16px;
+$font-size-lg:                          18px;
+// heading, display
+$font-size-xl:                          20px;
+$font-size-2xl:                         24px;
+$font-size-3xl:                         28px;
+$font-size-4xl:                         32px;
+$font-size-5xl:                         36px;
+$font-size-6xl:                         48px;
+$font-size-7xl:                         64px;
+$font-size-8xl:                         72px;
+$font-size-9xl:                         96px;
+
+$line-height-tight:                     1.25;
+$line-height-compact:                   1.375;
+$line-height-normal:                    1.5;
+$line-height-relaxed:                   1.625;
+$line-height-loose:                     2;
+
+$font-weight-light:                     300;
+$font-weight-normal:                    400;
+$font-weight-medium:                    500;
+$font-weight-semi:                      600;
+$font-weight-bold:                      700;
+$font-weight-base:                      $font-weight-normal;
+
+$font-family-display:                   'Open Sans', 'Roboto', 'Helvetica', sans-serif;
+$font-family-base:                      -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+
+$h1-font-size:                          $font-size-5xl;
+$h2-font-size:                          $font-size-4xl;
+$h3-font-size:                          $font-size-3xl;
+$h4-font-size:                          $font-size-2xl;
+$h5-font-size:                          $font-size-xl;
+$h6-font-size:                          $font-size-lg;
+
+$heading-font-weight:                   $font-weight-medium;
+$heading-line-height:                   $line-height-tight;
+$heading-margin-top:                    $spacing-6;
+$heading-margin-bottom:                 $spacing-5;
+
+$display-xs-font-size:                  $font-size-6xl;
+$display-sm-font-size:                  $font-size-7xl;
+$display-md-font-size:                  $font-size-8xl;
+$display-lg-font-size:                  $font-size-9xl;
+
+$display-font-weight:                   $font-weight-light;
+$display-line-height:                   $line-height-tight;
+
+$text-size-xs:                          $font-size-xs;
+$text-size-sm:                          $font-size-sm;
+$text-size-md:                          $font-size-md;
+$text-size-lg:                          $font-size-lg;
+$text-size-base:                        $text-size-md;
+$text-line-height:                      $line-height-normal;
+$text-font-weight:                      $font-weight-normal;
+
+$body-text-color:                       $grey-base;
+$body-font-size:                        $text-size-base;
+$body-line-height:                      $text-line-height;
+$body-font-family:                      $font-family-base;
+$body-bg:                               $white;
+$link-color:                            $color-primary;
+
+// Border
 $border-radius-sm:                      2px !default;
-$border-radius-base:                    3px !default;
+$border-radius-md:                      3px !default;
 $border-radius-lg:                      5px !default;
+$border-radius-base:                    3px !default;
 
-// color transformations
-$mix-level-4:                           40% !default;
-$mix-level-3:                           20% !default;
-$mix-level-2:                           10% !default;
-$mix-level-1:                           5% !default;
+// Table
+// $table-body-margin-top:                 $space-stack-s !default;
+// $table-td-padding-y:                    $space-squish-l-y !default;
+// $table-td-padding-x:                    $space-squish-l-x !default;
+// $table-border-width:                    $border-width !default;
+// $table-border-color:                    $border-color !default;
+// $table-accent-bg:                       $grey-lightest !default;
+// $table-strip-bg:                        $grey-lightest !default;
+// $table-hover-color:                     $grey-lightest !default;
 
-// Typography
+// Components
 // -----------------------------------------------------------------------------
-$heading-color:                         $grey-dark !default;
-$text-color:                            $grey-dark !default;
-$muted-color:                           $grey-light !default;
-
-$heading-line-height:                   1.2  !default;
-$fontSize-h1:                           32px !default;
-$fontSize-h2:                           28px !default;
-$fontSize-h3:                           24px !default;
-$fontSize-h4:                           20px !default;
-$fontSize-h5:                           18px !default;
-$fontSize-h6:                           14px !default;
-
-$font-size-base:                        14px !default; // default text size of body, elements, components
-$font-size-lg:                          16px !default; // large text size of elements, components
-$font-size-sm:                          12px !default; // small text size of meta-text, elements, components
-
-$line-height-base:                      1.42857143 !default;
-$line-height-computed:                  round($font-size-base * $line-height-base); // 20px
-
-$body-font-family:                      "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", sans-serif !default;
-$body-bg:                               $color-white !default;
-$body-color:                            $text-color !default;
-
-$link-color:                            #0073AA !default;
-$link-decoration:                       none !default;
-$link-hover-decoration:                 none !default;
-
 // Grid
-// -----------------------------------------------------------------------------
 $grid-columns:                          12 !default;
-$grid-gutter-width-base:                20px !default;
+$grid-gutter-width:                     16px !default;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 768px,
-  md: 1024px,
-  lg: 1200px,
+  sm: 768px, // mobile, tablet
+  md: 1000px, // desktop
+  lg: 1200px,  // large screen
 ) !default;
 
 $container-max-widths: (
@@ -94,226 +170,185 @@ $container-max-widths: (
   lg: 1180px
 ) !default;
 
-$grid-gutter-widths: (
-  xs: $grid-gutter-width-base, // 20px
-  sm: $grid-gutter-width-base, // 20px
-  md: $grid-gutter-width-base, // 20px
-  lg: $grid-gutter-width-base, // 20px
-) !default;
-
-// Level
-// -----------------------------------------------------------------------------
-$level-item-margin-x:                   $space-inline-l !default;
-
 // Form
-// -----------------------------------------------------------------------------
-$form-field-margin-bottom:              $space-stack-base !default;
-$form-label-margin-bottom:              $space-stack-xs !default;
-$form-help-margin-top:                  $space-stack-xs !default;
-$form-input-padding-y:                  $space-squish-base-y !default;
-$form-input-padding-x:                  $space-squish-base-x !default;
+// $form-field-margin-bottom:              $space-stack-base !default;
+// $form-label-margin-bottom:              $space-stack-xs !default;
+// $form-help-margin-top:                  $space-stack-xs !default;
+// $form-input-padding-y:                  $space-squish-base-y !default;
+// $form-input-padding-x:                  $space-squish-base-x !default;
 
-$form-input-color:                      $text-color !default;
-$form-input-placeholder-color:          $muted-color !default;
-$form-input-bg:                         $color-white !default;
-$form-input-bg-disabled:                $grey-lightest !default;
-$form-input-active-border-color:        map-get($master-palette, 'primary') !default;
-$form-input-border-color:               #ccc !default;
-$form-input-border-width:               $border-width !default;
-$form-input-border-radius:              $border-radius-base !default;
-$form-input-addon-bg:                   $grey-lightest !default;
-$form-input-icon-padding:               $space-l !default;
-$form-checkbox-border-radius:           0 !default;
-$form-input-height-computed:            round(($form-input-padding-y + $form-input-border-width) * 2 + $line-height-computed); // 34px
-$form-switch-color:                     $color-white !default;
-$form-switch-bg-color:                  $grey-lighter !default;
-$form-switch-active-color:              $color-success !default;
+// $form-input-color:                      $text-color !default;
+// $form-input-placeholder-color:          $muted-color !default;
+// $form-input-bg:                         $color-white !default;
+// $form-input-bg-disabled:                $grey-lightest !default;
+// $form-input-active-border-color:        map-get($master-palette, 'primary') !default;
+// $form-input-border-color:               #ccc !default;
+// $form-input-border-width:               $border-width !default;
+// $form-input-border-radius:              $border-radius-base !default;
+// $form-input-addon-bg:                   $grey-lightest !default;
+// $form-input-icon-padding:               $space-l !default;
+// $form-checkbox-border-radius:           0 !default;
+// $form-input-height-computed:            round(($form-input-padding-y + $form-input-border-width) * 2 + $line-height-computed); // 34px
+// $form-switch-color:                     $color-white !default;
+// $form-switch-bg-color:                  $grey-lighter !default;
+// $form-switch-active-color:              $color-success !default;
 
-// Button
-// -----------------------------------------------------------------------------
-$button-default-color:                  $link-color !default;
-$button-border-radius-sm:               $border-radius-sm !default;
-$button-border-radius-base:             $border-radius-base !default;
-$button-border-radius-lg:               $border-radius-lg !default;
-$button-border-width:                   $border-width !default;
-$button-padding-sm-y:                   $space-squish-s-y !default;
-$button-padding-sm-x:                   $space-squish-s-x !default;
-$button-padding-base-y:                 $space-squish-base-y !default;
-$button-padding-base-x:                 $space-squish-base-x !default;
-$button-padding-lg-y:                   $space-squish-l-y !default;
-$button-padding-lg-x:                   $space-squish-l-x !default;
-$button-height-computed:                round(($button-padding-base-y + $button-border-width) * 2 + $line-height-computed); // 34px
+// // Button
+// $button-default-color:                  $link-color !default;
+// $button-border-radius-sm:               $border-radius-sm !default;
+// $button-border-radius-base:             $border-radius-base !default;
+// $button-border-radius-lg:               $border-radius-lg !default;
+// $button-border-width:                   $border-width !default;
+// $button-padding-sm-y:                   $space-squish-s-y !default;
+// $button-padding-sm-x:                   $space-squish-s-x !default;
+// $button-padding-base-y:                 $space-squish-base-y !default;
+// $button-padding-base-x:                 $space-squish-base-x !default;
+// $button-padding-lg-y:                   $space-squish-l-y !default;
+// $button-padding-lg-x:                   $space-squish-l-x !default;
+// $button-height-computed:                round(($button-padding-base-y + $button-border-width) * 2 + $line-height-computed); // 34px
 
-// Table
-// -----------------------------------------------------------------------------
-$table-body-margin-top:                 $space-stack-s !default;
-$table-td-padding-y:                    $space-squish-l-y !default;
-$table-td-padding-x:                    $space-squish-l-x !default;
-$table-border-width:                    $border-width !default;
-$table-border-color:                    $border-color !default;
-$table-accent-bg:                       $grey-lightest !default;
-$table-strip-bg:                        $grey-lightest !default;
-$table-hover-color:                     $grey-lightest !default;
 
-// Progress
-// -----------------------------------------------------------------------------
-$progress-height-sm:                    4px !default;
-$progress-height-base:                  8px !default;
-$progress-height-lg:                    12px !default;
-$progress-margin-bottom:                $space-stack-base !default;
-$progress-bg-color:                     $grey-lightest !default;
-$progress-bar-bg-color-default:         $color-success !default;
 
-// Badges
-// -----------------------------------------------------------------------------
-$badge-color-default:                   $text-color !default;
-$badge-bg-color-default:                $grey-lightest !default;
-$badge-padding-y-base:                  $space-squish-s-y !default;
-$badge-padding-x-base:                  $space-squish-s-x !default;
+// // Progress
+// // -----------------------------------------------------------------------------
+// $progress-height-sm:                    4px !default;
+// $progress-height-base:                  8px !default;
+// $progress-height-lg:                    12px !default;
+// $progress-margin-bottom:                $space-stack-base !default;
+// $progress-bg-color:                     $grey-lightest !default;
+// $progress-bar-bg-color-default:         $color-success !default;
 
-// Hint
-// -----------------------------------------------------------------------------
-$hint-color:                            #fff !default;
-$hint-font-size:                        14px !default;
-$hint-line-height:                      20px !default;
-$hint-bg-color:                         rgba(0,0,0,.8) !default;
-$hint-padding-y:                        $space-squish-s-y !default;
-$hint-padding-x:                        $space-squish-s-x !default;
-$hint-border-radius:                    0 !default;
+// // Badges
+// // -----------------------------------------------------------------------------
+// $badge-color-default:                   $text-color !default;
+// $badge-bg-color-default:                $grey-lightest !default;
+// $badge-padding-y-base:                  $space-squish-s-y !default;
+// $badge-padding-x-base:                  $space-squish-s-x !default;
 
-// List
-// -----------------------------------------------------------------------------
-$list-item-padding-y-sm:                $space-squish-base-y !default;
-$list-item-padding-x-sm:                $space-squish-base-x !default;
-$list-item-padding-y-base:              $space-squish-l-y !default;
-$list-item-padding-x-base:              $space-squish-l-x !default;
-$list-item-padding-y-lg:                $space-squish-xl-y !default;
-$list-item-padding-x-lg:                $space-squish-l-x !default;
-$list-item-bg-color:                    $color-white !default;
-$list-item-active-bg-color:             map-get($master-palette, 'primary') !default;
-$list-item-active-color:                $color-white !default;
-$list-border-width:                     $border-width !default;
-$list-border-color:                     $border-color !default;
-$list-border-radius:                    $border-radius-base !default;
-$list-item-hover-bg:                    $grey-lightest !default;
+// // Hint
+// // -----------------------------------------------------------------------------
+// $hint-color:                            #fff !default;
+// $hint-font-size:                        14px !default;
+// $hint-line-height:                      20px !default;
+// $hint-bg-color:                         rgba(0,0,0,.8) !default;
+// $hint-padding-y:                        $space-squish-s-y !default;
+// $hint-padding-x:                        $space-squish-s-x !default;
+// $hint-border-radius:                    0 !default;
 
-// Dropmenu
-// -----------------------------------------------------------------------------
-$dropmenu-bg-color:                     $color-white !default;
-$dropmenu-border-color:                 $border-color !default;
-$dropmenu-border-width:                 $border-width !default;
-$dropmenu-border-radius:                $border-radius-base !default;
-$dropmenu-min-width:                    160px !default;
-$dropmenu-gutter:                       $space-stack-xs !default;
-$dropmenu-link-padding-y:               $space-squish-base-y !default;
-$dropmenu-link-padding-x:               $space-squish-base-x !default;
+// // List
+// // -----------------------------------------------------------------------------
+// $list-item-padding-y-sm:                $space-squish-base-y !default;
+// $list-item-padding-x-sm:                $space-squish-base-x !default;
+// $list-item-padding-y-base:              $space-squish-l-y !default;
+// $list-item-padding-x-base:              $space-squish-l-x !default;
+// $list-item-padding-y-lg:                $space-squish-xl-y !default;
+// $list-item-padding-x-lg:                $space-squish-l-x !default;
+// $list-item-bg-color:                    $color-white !default;
+// $list-item-active-bg-color:             map-get($master-palette, 'primary') !default;
+// $list-item-active-color:                $color-white !default;
+// $list-border-width:                     $border-width !default;
+// $list-border-color:                     $border-color !default;
+// $list-border-radius:                    $border-radius-base !default;
+// $list-item-hover-bg:                    $grey-lightest !default;
+
+// // Dropmenu
+// // -----------------------------------------------------------------------------
+// $dropmenu-bg-color:                     $color-white !default;
+// $dropmenu-border-color:                 $border-color !default;
+// $dropmenu-border-width:                 $border-width !default;
+// $dropmenu-border-radius:                $border-radius-base !default;
+// $dropmenu-min-width:                    160px !default;
+// $dropmenu-gutter:                       $space-stack-xs !default;
+// $dropmenu-link-padding-y:               $space-squish-base-y !default;
+// $dropmenu-link-padding-x:               $space-squish-base-x !default;
 
 // Modal
 // -----------------------------------------------------------------------------
-$modal-width-sm:                        480px !default;
-$modal-width-base:                      600px !default;
-$modal-width-lg:                        900px !default;
-$modal-title-font-size:                 $font-size-lg;
-$modal-bg-color:                        $color-white !default;
-$modal-padding:                         $space-inset-base !default;
-$modal-border-radius:                   $border-radius-lg !default;
-$mask-bg:                               rgba($color-black,.5) !default;
+$modal-width-sm:                           480px !default;
+$modal-width-md:                           600px !default;
+$modal-width-lg:                           900px !default;
+$modal-width-base:                         $modal-width-md !default;
+$modal-title-font-size:                    $font-size-xl !default;
+$modal-zIndex:                             $zIndex-9 !default;
+$modal-bg-color:                           $white !default;
+$mask-zIndex:                              $zIndex-6 !default;
+$mask-bg-color:                            rgba($black,.5) !default;
+// // Nav
+// // -----------------------------------------------------------------------------
+// $nav-menus-item-margin-y:               $space-stack-xxs !default;
+// $nav-menus-link-border-radius-sm:       $border-radius-sm !default;
+// $nav-menus-link-border-radius-base:     $border-radius-base !default;
+// $nav-menus-link-border-radius-lg:       $border-radius-base !default;
+// $nav-menus-link-color:                  $text-color !default;
+// $nav-menus-link-hover-bg:               $grey-lightest !default;
+// $nav-menus-link-active-color:           $color-white !default;
+// $nav-menus-link-active-bg:              map-get($master-palette, 'primary') !default;
+// $nav-menus-link-padding-sm-y:           $space-squish-s-y !default;
+// $nav-menus-link-padding-sm-x:           $space-squish-s-x !default;
+// $nav-menus-link-padding-base-y:         $space-squish-base-y !default;
+// $nav-menus-link-padding-base-x:         $space-squish-base-x !default;
+// $nav-menus-link-padding-lg-y:           $space-squish-l-y !default;
+// $nav-menus-link-padding-lg-x:           $space-squish-l-x !default;
+// $nav-menus-divider-color:               $divider-color !default;
 
-// Nav
-// -----------------------------------------------------------------------------
-$nav-menus-item-margin-y:               $space-stack-xxs !default;
-$nav-menus-link-border-radius-sm:       $border-radius-sm !default;
-$nav-menus-link-border-radius-base:     $border-radius-base !default;
-$nav-menus-link-border-radius-lg:       $border-radius-base !default;
-$nav-menus-link-color:                  $text-color !default;
-$nav-menus-link-hover-bg:               $grey-lightest !default;
-$nav-menus-link-active-color:           $color-white !default;
-$nav-menus-link-active-bg:              map-get($master-palette, 'primary') !default;
-$nav-menus-link-padding-sm-y:           $space-squish-s-y !default;
-$nav-menus-link-padding-sm-x:           $space-squish-s-x !default;
-$nav-menus-link-padding-base-y:         $space-squish-base-y !default;
-$nav-menus-link-padding-base-x:         $space-squish-base-x !default;
-$nav-menus-link-padding-lg-y:           $space-squish-l-y !default;
-$nav-menus-link-padding-lg-x:           $space-squish-l-x !default;
-$nav-menus-divider-color:               $divider-color !default;
+// $nav-pills-item-margin-x:               $space-inline-s !default;
+// $nav-pills-link-border-radius-sm:       $border-radius-sm !default;
+// $nav-pills-link-border-radius-base:     $border-radius-base !default;
+// $nav-pills-link-border-radius-lg:       $border-radius-base !default;
+// $nav-pills-link-color:                  $text-color !default;
+// $nav-pills-link-hover-bg:               $grey-lightest !default;
+// $nav-pills-link-active-color:           $color-white !default;
+// $nav-pills-link-active-bg:              map-get($master-palette, 'primary') !default;
+// $nav-pills-link-padding-sm-y:           $space-squish-s-y !default;
+// $nav-pills-link-padding-sm-x:           $space-squish-s-x !default;
+// $nav-pills-link-padding-base-y:         $space-squish-base-y !default;
+// $nav-pills-link-padding-base-x:         $space-squish-base-x !default;
+// $nav-pills-link-padding-lg-y:           $space-squish-l-y !default;
+// $nav-pills-link-padding-lg-x:           $space-squish-l-x !default;
 
-$nav-pills-item-margin-x:               $space-inline-s !default;
-$nav-pills-link-border-radius-sm:       $border-radius-sm !default;
-$nav-pills-link-border-radius-base:     $border-radius-base !default;
-$nav-pills-link-border-radius-lg:       $border-radius-base !default;
-$nav-pills-link-color:                  $text-color !default;
-$nav-pills-link-hover-bg:               $grey-lightest !default;
-$nav-pills-link-active-color:           $color-white !default;
-$nav-pills-link-active-bg:              map-get($master-palette, 'primary') !default;
-$nav-pills-link-padding-sm-y:           $space-squish-s-y !default;
-$nav-pills-link-padding-sm-x:           $space-squish-s-x !default;
-$nav-pills-link-padding-base-y:         $space-squish-base-y !default;
-$nav-pills-link-padding-base-x:         $space-squish-base-x !default;
-$nav-pills-link-padding-lg-y:           $space-squish-l-y !default;
-$nav-pills-link-padding-lg-x:           $space-squish-l-x !default;
-
-$nav-tabs-border-color:                 $border-color !default;
-$nav-tabs-border-width:                 $border-width !default;
-$nav-tabs-item-margin-x:                $space-inline-s !default;
-$nav-tabs-link-border-radius-sm:        $border-radius-sm !default;
-$nav-tabs-link-border-radius-base:      $border-radius-base !default;
-$nav-tabs-link-border-radius-lg:        $border-radius-base !default;
-$nav-tabs-link-border-width:            $border-width !default;
-$nav-tabs-link-border-color:            $border-color !default;
-$nav-tabs-link-color:                   $muted-color !default;
-$nav-tabs-link-hover-color:             $text-color !default;
-$nav-tabs-link-active-color:            $heading-color !default;
-$nav-tabs-link-active-bg:               $color-white !default;
-$nav-tabs-link-padding-sm-y:            $space-squish-s-y !default;
-$nav-tabs-link-padding-sm-x:            $space-squish-s-x !default;
-$nav-tabs-link-padding-base-y:          $space-squish-base-y !default;
-$nav-tabs-link-padding-base-x:          $space-squish-base-x !default;
-$nav-tabs-link-padding-lg-y:            $space-squish-l-y !default;
-$nav-tabs-link-padding-lg-x:            $space-squish-l-x !default;
+// $nav-tabs-border-color:                 $border-color !default;
+// $nav-tabs-border-width:                 $border-width !default;
+// $nav-tabs-item-margin-x:                $space-inline-s !default;
+// $nav-tabs-link-border-radius-sm:        $border-radius-sm !default;
+// $nav-tabs-link-border-radius-base:      $border-radius-base !default;
+// $nav-tabs-link-border-radius-lg:        $border-radius-base !default;
+// $nav-tabs-link-border-width:            $border-width !default;
+// $nav-tabs-link-border-color:            $border-color !default;
+// $nav-tabs-link-color:                   $muted-color !default;
+// $nav-tabs-link-hover-color:             $text-color !default;
+// $nav-tabs-link-active-color:            $heading-color !default;
+// $nav-tabs-link-active-bg:               $color-white !default;
+// $nav-tabs-link-padding-sm-y:            $space-squish-s-y !default;
+// $nav-tabs-link-padding-sm-x:            $space-squish-s-x !default;
+// $nav-tabs-link-padding-base-y:          $space-squish-base-y !default;
+// $nav-tabs-link-padding-base-x:          $space-squish-base-x !default;
+// $nav-tabs-link-padding-lg-y:            $space-squish-l-y !default;
+// $nav-tabs-link-padding-lg-x:            $space-squish-l-x !default;
 
 // Navbar
 // -----------------------------------------------------------------------------
-$navbar-height:                         50px !default;
-$navbar-font-size:                      $font-size-base !default;
-$navbar-color:                          $text-color !default;
-$navbar-item-margin-x:                  $space-inline-l !default;
+$navbar-height:                            60px !default;
+$navbar-font-size:                         $text-size-base !default;
+$navbar-color:                             $grey-base !default;
+$navbar-item-margin-x:                     $spacing-stack-base !default;
 
+// // Pagination
+// // -----------------------------------------------------------------------------
+// $pagination-item-padding-base-y:        $space-squish-base-y !default;
+// $pagination-item-padding-base-x:        $space-squish-base-x !default;
+// $pagination-item-border-radius:         $border-radius-base !default;
+// $pagination-item-border-width:          $border-width !default;
+// $pagination-item-min-width:             ($line-height-computed + ($pagination-item-padding-base-y + $pagination-item-border-width) * 2) !default;
+// $pagination-item-border-color:          $border-color !default;
+// $pagination-item-color:                 $text-color !default;
+// $pagination-item-hover-bg:              $grey-lightest !default;
+// $pagination-item-active-color:          $color-white !default;
+// $pagination-item-active-bg:             map-get($master-palette, 'primary') !default;
+// $pagination-item-disabled-bg:           $grey-lightest !default;
+// $pagination-item-bg:                    $color-white !default;
 
-// Pagination
+// Note
 // -----------------------------------------------------------------------------
-$pagination-item-padding-base-y:        $space-squish-base-y !default;
-$pagination-item-padding-base-x:        $space-squish-base-x !default;
-$pagination-item-border-radius:         $border-radius-base !default;
-$pagination-item-border-width:          $border-width !default;
-$pagination-item-min-width:             ($line-height-computed + ($pagination-item-padding-base-y + $pagination-item-border-width) * 2) !default;
-$pagination-item-border-color:          $border-color !default;
-$pagination-item-color:                 $text-color !default;
-$pagination-item-hover-bg:              $grey-lightest !default;
-$pagination-item-active-color:          $color-white !default;
-$pagination-item-active-bg:             map-get($master-palette, 'primary') !default;
-$pagination-item-disabled-bg:           $grey-lightest !default;
-$pagination-item-bg:                    $color-white !default;
-
-// Note & Box
-// -----------------------------------------------------------------------------
-$box-margin-bottom:                     $space-stack-l !default;
-$box-padding-y:                         10px !default;
-$box-padding-x:                         10px !default;
-$box-header-color:                      $heading-color !default;
-$box-header-bg:                         $grey-lightest !default;
-$box-body-bg:                           $color-white !default;
-$box-border-width:                      $border-width !default;
-$box-border-color:                      $border-color !default;
-$box-border-radius:                     $border-radius-base !default;
-
-$note-color:                            $text-color !default;
-$note-bg-color:                         $grey-lightest !default;
-$note-border-color:                     transparent !default;
-$note-border-width:                     $border-width !default;
-$note-border-radius:                    $border-radius-base !default;
-$note-padding:                          $space-inset-base !default;
-$note-margin-bottom:                    $space-stack-l !default;
-
 $note-palette: (
   danger: (bg: #f2dede, border: #f2dede, text: #a94442),
   info: (bg: #d9edf7, border: #d9edf7, text: #31708f),
@@ -321,11 +356,11 @@ $note-palette: (
   warning: (bg: #fcf8e3, border: #fcf8e3, text: #8a6d3b)
 ) !default;
 
+// Box
+// -----------------------------------------------------------------------------
 $box-palette: (
   danger: (bg: #f2dede, border: #ebccd1, text: #a94442),
   info: (bg: #d9edf7, border: #bde2fb, text: #31708f),
   success: (bg: #dff0d8, border: #d6e9c6, text: #3c763d),
   warning: (bg: #fcf8e3, border: #faebcc, text: #8a6d3b)
 ) !default;
-
-$icon-arrow-down: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='6' viewBox='0 1 8 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%239E9E9E' d='M0 0h8L4 5z' fill-rule='evenodd'/%3E%3C/svg%3E") !default;

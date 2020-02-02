@@ -1,0 +1,245 @@
+/* ## Form
+---------------------------------*/
+$form-control-height-computed: $text-size-base * $text-line-height + nth($spacing-squish-base, 1) * 2 + 2px;
+
+.form-input,
+.form-select,
+.form-textarea {
+  display: block;
+  width: 100%;
+  padding: $spacing-squish-base;
+  color: $grey-base;
+  font-size: $text-size-base;
+  line-height: $text-line-height;
+  border: 1px solid $grey-thin;
+  border-radius: $border-radius-base;
+  background-color: $white;
+  box-shadow: none;
+  background-image: none;
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  // states
+  &:focus,
+  &:active,
+  &.is-focus,
+  &.is-active {
+    outline: none;
+    border-color: $color-primary;
+  }
+
+  &:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+    color: $grey-mute;
+    border-color: $grey-shade;
+    background-color: $grey-shade;
+  }
+
+  &::placeholder {
+    color: $grey-mute;
+    opacity: 1;
+  }
+
+  &.is-success {
+    border-color: $color-success;
+  }
+
+  &.is-danger {
+    border-color: $color-danger;
+  }
+
+  &.is-warning {
+    border-color: $color-warning;
+  }
+}
+
+// input
+.form-input {
+  height: $form-control-height-computed;
+}
+
+// file
+.form-input[type="file"] {
+  height: auto;
+}
+
+// select
+select.form-select {
+  cursor: pointer;
+
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+    display: none;
+  }
+
+  &:not([multiple]) {
+    padding-right: 24px;
+    background-color: $white;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23616161' d='M8.706 11.414l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71h-5.18c-.89 0-1.33 1.08-.7 1.71z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  &[multiple] {
+    padding: $spacing-inset-base;
+    height: auto;
+    option {
+      padding: $spacing-squish-base;
+      border-radius: $border-radius-base;
+      margin-bottom: $spacing-stack-xs;
+    }
+  }
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  &--sm {
+    font-size: $text-size-sm;
+    padding: $spacing-squish-sm;
+    height: $text-size-base * $text-line-height + nth($spacing-squish-sm, 1) * 2 + 2px;
+  }
+
+  &--lg {
+    font-size: $text-size-lg;
+    line-height: 1.5;
+    padding: $spacing-squish-lg;
+    height: $text-size-base * $text-line-height + nth($spacing-squish-lg, 1) * 2 + 2px;
+  }
+}
+
+// checkbox
+.form-checkbox {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 0;
+  border: 2px solid $grey-mute;
+  background-color: $white;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+
+  &:checked {
+    border: 0;
+    background-color: $color-primary;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+// radio
+.form-radio {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  border: 2px solid $grey-mute;
+  background-color: $white;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+
+  &:checked {
+    border: 0;
+    background-color: $color-primary;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+// Field
+// -----------------------------------------------------------------------------
+.form-field {
+  text-align: left;
+  margin-bottom: $spacing-stack-lg;
+}
+
+.form-label {
+  display: block;
+  color: $grey-base;
+  line-height: $line-height-compact;
+  margin: 0 0 $spacing-stack-sm 0;
+}
+
+.form-help {
+  display: block;
+  color: $grey-mute;
+  line-height: $line-height-compact;
+  margin: $spacing-stack-sm 0 0 0;
+}
+
+// Controls Group
+// -----------------------------------------------------------------------------
+.form-addon {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacing-squish-base;
+  color: $grey-base;
+  font-size: $text-size-base;
+  line-height: $text-line-height;
+  border-radius: $border-radius-base;
+  &:not(.btn) {
+    border: 1px solid $grey-thin;
+    background-color: $grey-light;
+  }
+}
+
+.form-group {
+  display: flex;
+  align-items: stretch;
+
+  > .form-input,
+  > .form-select,
+  > .form-addon,
+  > .btn {
+    border-radius: 0;
+
+    &:nth-child(n+2) {
+      margin-left: -1px;
+    }
+
+    &:first-child {
+      border-radius: $border-radius-base 0 0 $border-radius-base;
+    }
+
+    &:last-child {
+      border-radius: 0 $border-radius-base $border-radius-base 0;
+    }
+  }
+
+  > .form-input,
+  > .form-select {
+    flex: 1 1 0%;
+    z-index: 10;
+    &:focus {
+      z-index: 20;
+    }
+  }
+
+  > .form-addon {
+    z-index: 5;
+    &.btn {
+      z-index: 15;
+    }
+  }
+
+  > .btn {
+    z-index: 15;
+  }
+}
