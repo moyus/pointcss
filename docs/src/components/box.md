@@ -1,11 +1,12 @@
 ---
-layout: default
+layout: master
 title: "Box"
 ---
 
 # Box
-- [Basic](#basic)
-- [Types](#types)
+- [Box](#box)
+  - [Basic](#basic)
+  - [Types](#types)
 
 ## Basic
 Sometimes you have groups of content and need to put them in boxes. In those

@@ -1,14 +1,15 @@
 ---
-layout: default
+layout: master
 title: "Lists"
 ---
 
 # Lists
-- [Basic](#basic)
-- [Inset](#inset)
-- [Bordered](#bordered)
-- [Linked](#linked)
-- [Sizes](#sizes)
+- [Lists](#lists)
+  - [Basic](#basic)
+  - [Inset List](#inset-list)
+  - [Bordered List](#bordered-list)
+  - [Linked List](#linked-list)
+  - [Sizes](#sizes)
 
 ## Basic
 List component provide basic styled list, but it also can be extended to

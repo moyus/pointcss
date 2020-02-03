@@ -556,7 +556,7 @@ abbr[title] {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 1.25;
-  margin-top: 24px;
+  margin-top: 32px;
   margin-bottom: 16px;
 }
 
@@ -600,10 +600,10 @@ mark {
 hr {
   display: block;
   padding: 0;
-  margin: 16px 0;
+  margin: 48px 0;
   height: 0;
   border: 0;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #e5e5e5;
   box-sizing: content-box;
 }
 
@@ -643,7 +643,7 @@ dd {
 }
 
 blockquote {
-  border-left: 3px solid #dddddd;
+  border-left: 3px solid #e5e5e5;
   padding: 12px 24px;
   margin: 0 0 8px 0;
 }
@@ -726,7 +726,7 @@ th {
   text-align: left;
   padding: 6px 12px;
   vertical-align: middle;
-  border-top: 1px solid #b0b0b0;
+  border-top: 1px solid #dddddd;
 }
 
 .table thead th,
@@ -735,7 +735,7 @@ th {
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #e5e5e5;
 }
 
 .table.table--striped > tr:nth-of-type(even),
@@ -745,7 +745,7 @@ th {
 
 .table.table--bordered th,
 .table.table--bordered td {
-  border: 1px solid #b0b0b0;
+  border: 1px solid #dddddd;
 }
 
 .table.table--hover tbody tr:hover,
@@ -762,7 +762,7 @@ th {
     display: block;
   }
   .table--collapse\@xs tr:not(:last-child) {
-    border-bottom: 3px solid #dddddd;
+    border-bottom: 3px solid #e5e5e5;
   }
   .table--collapse\@xs th, .table--collapse\@xs td {
     display: block;
@@ -785,7 +785,7 @@ th {
     display: block;
   }
   .table--collapse\@sm tr:not(:last-child) {
-    border-bottom: 3px solid #dddddd;
+    border-bottom: 3px solid #e5e5e5;
   }
   .table--collapse\@sm th, .table--collapse\@sm td {
     display: block;
@@ -808,7 +808,7 @@ th {
     display: block;
   }
   .table--collapse\@md tr:not(:last-child) {
-    border-bottom: 3px solid #dddddd;
+    border-bottom: 3px solid #e5e5e5;
   }
   .table--collapse\@md th, .table--collapse\@md td {
     display: block;
@@ -832,7 +832,7 @@ th {
 }
 
 .table--collapse\@lg tr:not(:last-child) {
-  border-bottom: 3px solid #dddddd;
+  border-bottom: 3px solid #e5e5e5;
 }
 
 .table--collapse\@lg th, .table--collapse\@lg td {
@@ -1905,9 +1905,10 @@ th {
 ---------------------------------*/
 .badge {
   display: inline-block;
-  padding: 4px;
-  font-size: 14px;
+  padding: 4px 8px;
+  font-size: 12px;
   line-height: 1.25;
+  min-width: 23px;
   text-align: center;
   white-space: nowrap;
   border-radius: 1993px;
@@ -1931,6 +1932,7 @@ a.badge:active {
 }
 
 .badge:empty {
+  min-width: auto;
   width: 8px;
   height: 8px;
   padding: 0;
@@ -2789,7 +2791,7 @@ fieldset[disabled] .btn {
   color: #212121;
   font-size: 16px;
   line-height: 1.5;
-  border: 1px solid #b0b0b0;
+  border: 1px solid #dddddd;
   border-radius: 3px;
   background-color: #ffffff;
   box-shadow: none;
@@ -3015,7 +3017,7 @@ select.form-select[multiple] option {
 }
 
 .form-addon:not(.btn) {
-  border: 1px solid #b0b0b0;
+  border: 1px solid #dddddd;
   background-color: #f7f7f7;
 }
 
@@ -3496,13 +3498,13 @@ select.form-select[multiple] option {
   font-size: 16px;
   line-height: 1.25;
   padding: 8px 16px;
-  border: 1px solid #b0b0b0;
+  border: 1px solid #dddddd;
   border-radius: 3px 3px 0 0;
   background-color: #f7f7f7;
 }
 
 .box__body {
-  border: 1px solid #b0b0b0;
+  border: 1px solid #dddddd;
   border-top: 0;
   border-radius: 0 0 3px;
   background-color: #ffffff;
@@ -3655,7 +3657,7 @@ select.form-select[multiple] option {
 
 .list__item:not(:first-child),
 .list__link:not(:first-child) {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #e5e5e5;
 }
 
 .list__link {
@@ -3705,7 +3707,7 @@ select.form-select[multiple] option {
 .list--bordered .list__item,
 .list--bordered .list__link {
   padding: 8px;
-  border: 1px solid #dddddd;
+  border: 1px solid #e5e5e5;
   margin-bottom: -1px;
 }
 
@@ -3845,7 +3847,7 @@ select.form-select[multiple] option {
       -ms-flex: 1 1 0%;
           flex: 1 1;
   height: 1px;
-  background-color: #dddddd;
+  background-color: #e5e5e5;
 }
 
 .nav.nav--tabs > .nav__item {
@@ -3868,7 +3870,7 @@ select.form-select[multiple] option {
   bottom: 0;
   width: 2px;
   height: 1px;
-  background-color: #dddddd;
+  background-color: #e5e5e5;
 }
 
 .nav.nav--tabs > .nav__item > .nav__link {
@@ -3884,7 +3886,7 @@ select.form-select[multiple] option {
 
 .nav.nav--tabs > .nav__item > .nav__link.is-active {
   color: #212121;
-  border-color: #dddddd #dddddd transparent #dddddd;
+  border-color: #e5e5e5 #e5e5e5 transparent #e5e5e5;
 }
 
 /* ## Navbar
@@ -4044,7 +4046,7 @@ select.form-select[multiple] option {
 }
 
 .pagination__item.is-disabled {
-  color: #b0b0b0;
+  color: #dddddd;
   cursor: not-allowed;
 }
 
@@ -4056,7 +4058,7 @@ select.form-select[multiple] option {
 }
 
 .pagination--bordered .pagination__item {
-  border-color: #b0b0b0;
+  border-color: #dddddd;
   margin-left: -1px;
   background-color: #ffffff;
 }
@@ -4157,7 +4159,7 @@ select.form-select[multiple] option {
   right: 16px;
   top: 8px;
   font-size: 20px;
-  color: #b0b0b0;
+  color: #dddddd;
   line-height: 1;
   cursor: pointer;
   font-family: Helvetica, Arial, sans-serif;

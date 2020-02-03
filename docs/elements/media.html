@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Media - Point</title>
+  <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
+  <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
+  <link rel="stylesheet" href="http://localhost:3000/css/point.css?v=140">
+  <link rel="stylesheet" href="http://localhost:3000/css/style.css?v=140">
+  <link rel="stylesheet" href="http://localhost:3000/css/prism.css?v=140">
+</head>
+<body>
+  <div id="docs" class="site">
+    <aside class="site__sidebar">
+      <header class="site__header">
+        <a href="http://localhost:3000/getting-started" class="site__brand">
+          pointcss
+        </a>
+        <div>v1.4.0</div>
+      </header>
+      <nav id="sidenav" class="navigation">
+  <div class="navigation__group is-open">
+    <label class="navigation__label">GETTING STARTED</label>
+    <div class="navigation__content">
+      <a href="http://localhost:3000/" class="navigation__link is-active">Introduction</a>
+      <a href="http://localhost:3000/#installation" class="navigation__link">Installation</a>
+      <a href="http://localhost:3000/#customization" class="navigation__link">Customization</a>
+      <a href="http://localhost:3000/#browser-support" class="navigation__link">Browser Support</a>
+      <a href="http://localhost:3000/getting-started/style-guide.html" class="navigation__link">Style Guide</a>
+    </div>
+  </div>
+  <!-- END .navigation__group -->
+  <div class="navigation__group">
+    <label class="navigation__label">LAYOUTS</label>
+    <div class="navigation__content">
+      <a href="http://localhost:3000/layouts/flex-grid.html" class="navigation__link">Flex Grid</a>
+      <a href="http://localhost:3000/layouts/level.html" class="navigation__link">Level</a>
+      <a href="http://localhost:3000/layouts/bullet.html" class="navigation__link">Bullet</a>
+    </div>
+  </div>
+  <!-- END .navigation__group -->
+  <div class="navigation__group">
+    <label class="navigation__label">CONTENT</label>
+    <div class="navigation__content">
+      <a href="http://localhost:3000/content/typography.html" class="navigation__link">Typography</a>
+      <a href="http://localhost:3000/content/table.html" class="navigation__link">Table</a>
+      <a href="http://localhost:3000/content/image.html" class="navigation__link">Image</a>
+    </div>
+  </div>
+  <!-- END .navigation__group -->
+  <div class="navigation__group">
+    <label class="navigation__label">COMPONENTS</label>
+    <div class="navigation__content">
+      <a href="http://localhost:3000/components/badge.html" class="navigation__link">Badge</a>
+      <a href="http://localhost:3000/components/button.html" class="navigation__link">Button</a>
+      <a href="http://localhost:3000/components/form.html" class="navigation__link">Form</a>
+      <a href="http://localhost:3000/components/hint.html" class="navigation__link">Hint</a>
+      <a href="http://localhost:3000/components/icons.html" class="navigation__link">Icons</a>
+      <a href="http://localhost:3000/components/box.html" class="navigation__link">Box</a>
+      <a href="http://localhost:3000/components/note.html" class="navigation__link">Note</a>
+      <a href="http://localhost:3000/components/list.html" class="navigation__link">List</a>
+      <a href="http://localhost:3000/components/progress.html" class="navigation__link">Progress</a>
+      <a href="http://localhost:3000/components/nav.html" class="navigation__link">Nav</a>
+      <a href="http://localhost:3000/components/navbar.html" class="navigation__link">Navbar</a>
+      <a href="http://localhost:3000/components/breadcrumb.html" class="navigation__link">Breadcrumb</a>
+      <a href="http://localhost:3000/components/pagination.html" class="navigation__link">Pagination</a>
+      <a href="http://localhost:3000/components/modal.html" class="navigation__link">Modal</a>
+    </div>
+  </div>
+  <!-- END .navigation__group -->
+  <div class="navigation__group">
+    <label class="navigation__label">UTILITIES</label>
+    <div class="navigation__content">
+      <a href="http://localhost:3000/utilities/helpers.html" class="navigation__link">Helpers</a>
+    </div>
+  </div>
+  <!-- END .navigation__group -->
+</nav>
+
+      <footer id="colophon" class="site__footer" role="contentinfo">
+        <p>Designed and built by <a href="http://moyu.io">MOYU</a></p>
+        <p>Licensed under the <a href="https://github.com/moyus/point/blob/master/LICENSE">MIT License</a>.</p>
+      </footer>
+    </aside>
+    <!-- END .site__sidebar -->
+    <main id="main" class="site__main" role="main">
+      <article class="article">
+        <div class="article__content">
+          <h1 id="media"><span>Media</span></h1><ul>
+<li><a href="#fluid-image">Fluid image</a></li>
+<li><a href="#rounded-image">Rounded image</a></li>
+<li><a href="#circle-image">Circle Image</a></li>
+<li><a href="#fluid-embeds">Fluid embeds</a></li>
+</ul>
+<h2 id="fluid-image">
+    <a name="fluid-image" class="anchor" href="#fluid-image"></a>
+    Fluid image
+    </h2><p>Fluid image is made with <code>.img-fluid</code> class. <code>max-width: 100%;</code>, <code>height: auto;</code>
+area applied to the image so that it scales with the parent element.</p>
+<img data-src="holder.js/1000x400" class="img-fluid u-mb-15">
+
+<pre><code class="language-html">&lt;img src=&quot;...&quot; class=&quot;img-fluid&quot; /&gt;</code></pre>
+<h2 id="rounded-image">
+    <a name="rounded-image" class="anchor" href="#rounded-image"></a>
+    Rounded image
+    </h2><p>By add <code>.img-rounded</code> class to apply 3px border radius on image.</p>
+<img data-src="holder.js/200x200" class="img-rounded u-mb-15 u-centerBlock">
+
+<pre><code class="language-html">&lt;img src=&quot;...&quot; class=&quot;img-rounded&quot; /&gt;</code></pre>
+<h2 id="circle-image">
+    <a name="circle-image" class="anchor" href="#circle-image"></a>
+    Circle Image
+    </h2><p>Change image shape into circle by adding <code>.img-circle</code> class.</p>
+<img data-src="holder.js/200x200" class="img-circle u-mb-15 u-centerBlock">
+
+<pre><code class="language-html">&lt;img src=&quot;...&quot; class=&quot;img-circle&quot; /&gt;</code></pre>
+<h2 id="fluid-embeds">
+    <a name="fluid-embeds" class="anchor" href="#fluid-embeds"></a>
+    Fluid embeds
+    </h2><p>By placing <code>iframe</code>, <code>embed</code>, <code>video</code>, <code>object</code> into <code>.embed-fluid</code>
+container to quickly create 16x9 fluid embeds.</p>
+<div class="embed-fluid u-mb-15">
+    <iframe src="https://player.vimeo.com/video/160704576" width="640" height="427" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;embed-fluid&quot;&gt;
+   &lt;iframe src=&quot;https://player.vimeo.com/video/160704576&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+
+        </div>
+        <nav class="article__catalogue">
+          
+        </nav>
+      </article>
+    </main>
+    <!-- END .site__main -->
+  </div>
+  <script src="http://localhost:3000/js/prism.js"></script>
+  <script src="http://localhost:3000/js/main.js"></script>
+</body>
+</html>

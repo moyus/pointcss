@@ -2,9 +2,10 @@
 ---------------------------------*/
 .badge {
   display: inline-block;
-  padding: $spacing-inset-xs;
-  font-size: $text-size-sm;
+  padding: $spacing-squish-sm;
+  font-size: $font-size-xs;
   line-height: $line-height-tight;
+  min-width: $font-size-xs * $line-height-tight + nth($spacing-squish-sm, 1) * 2;
   text-align: center;
   white-space: nowrap;
   border-radius: 1993px;
@@ -12,6 +13,7 @@
   @include badge-variant($grey-mute, $grey-light);
 
   &:empty {
+    min-width: auto;
     width: 8px;
     height: 8px;
     padding: 0;

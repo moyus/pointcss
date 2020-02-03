@@ -8,6 +8,7 @@ const postcss = require('gulp-postcss')
 const autoprefixer = require('autoprefixer')
 const flexbugsFixes = require('postcss-flexbugs-fixes')
 const browserSync = require('browser-sync').create()
+const marked = require('marked')
 const nunjucksRender = require('gulp-nunjucks-md')
 
 const postCssOpts = [
@@ -15,11 +16,25 @@ const postCssOpts = [
   flexbugsFixes
 ]
 
+const renderer = new marked.Renderer();
+renderer.heading = function (text, level) {
+  const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+
+  if (level === 1) {
+    text = `<span>${text}</span>`
+  } else if (level === 2) {
+    text = `
+    <a name="${escapedText}" class="anchor" href="#${escapedText}"></a>
+    ${text}
+    `
+  }
+
+  return `<h${level} id="${escapedText}">${text}</h${level}>`;
+};
+
 nunjucksRender.setDefaults({
   marked: {
-    highlight: function (code) {
-      return require('highlight.js').highlightAuto(code).value
-    }
+    renderer
   }
 })
 
@@ -53,7 +68,7 @@ gulp.task('report', function () {
 })
 
 gulp.task('docs:scss', function () {
-  return gulp.src('./docs/src/scss/style.scss')
+  return gulp.src('./docs/src/style.scss')
     .pipe(sass({
       outputStyle: 'expanded',
       precision: 8
@@ -98,7 +113,7 @@ gulp.task('watch', function () {
     './scss/**/*.scss'
   ], gulp.series('build'))
 
-  gulp.watch('./docs/src/scss/*.scss', gulp.series('docs:scss'))
+  gulp.watch('./docs/src/style.scss', gulp.series('docs:scss'))
 
   gulp.watch([
     './docs/src/_templates/*',
@@ -113,4 +128,4 @@ gulp.task('watch', function () {
  */
 gulp.task('docs', gulp.series('docs:scss', 'docs:assets', 'docs:html'))
 gulp.task('dev', gulp.series('build', 'docs', 'serve', 'watch'))
-gulp.task('default', gulp.series('build', 'report'))
+gulp.task('default', gulp.series('build', 'docs', 'report'))

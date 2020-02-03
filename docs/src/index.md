@@ -1,45 +1,47 @@
 ---
-layout: default
+layout: master
 title: "Getting started"
+catalogue:
+  - Installation
+  - Customization
+  - Browser Support
+  - Copyright and License
 ---
 
-# Getting started
+# Introduction
+**pointcss** is a flexible CSS Framework for building modern responsive web apps.
 
-## Introduction
-pointcss is a flexible CSS Framework for building modern responsive web apps.
-
-- Built with Flexbox
-- Mobile-First
-- BEM, Namespaces, Modular, Beautiful code
-- 10KB minified and gzipped
+- Built with flexbox
+- Mobile friendly layout
+- **10KB** minified and gzipped
 
 ## Installation
-There are 3 ways to start
+There are 3 ways to get start
 
-### Install with Yarn
+### Yarn
 ```sh
-yarn add point-sass
+yarn add pointcass
 ```
 
-### Install with NPM
+### NPM
 ```sh
-npm install pointcss --save
+npm install pointcass --save
 ```
 
-### Direct `<script>` Include
-`<link rel="stylesheet" href="dist/point.min.css" />`
-
----
+### Download and use production file
+```html
+<link rel="stylesheet" href="dist/point.min.css" />
+```
 
 ## Customization
-pointcss is coded in [SASS](http://sass-lang.com/), If you're familiar with it, You can continue.
+**pointcss** is coded in [SASS](http://sass-lang.com/), If you're familiar with it, You can continue
 
-### 1. Install the dependence
+### Install the dependence
 ```sh
-yarn add point-sass --dev
+yarn add pointcss --dev
 ```
 
-### 2. Set your variables
+### Set your variables
 you can reference all initial variables in `scss/_variables.scss`
 ```scss
 $color-primary:                         #636AFF; // primary
@@ -50,7 +52,7 @@ $color-warning:                         #ED6E33; // warning
 ...
 ```
 
-### 3. Import pointcss at the end of your code
+### Import pointcss at the end of your code
 ```scss
 // overwrite variables
 $color-primary:                         #636AFF;
@@ -61,7 +63,7 @@ $color-primary:                         #636AFF;
 ```
 
 ## Browser Support
-pointcss uses [Normalize.css](https://necolas.github.io/normalize.css/) for CSS
+**pointcss** uses [Normalize.css](https://necolas.github.io/normalize.css/) for CSS
 reset and [Autoprefixer](https://github.com/postcss/autoprefixer) to make styles
 compatible with earlier browser versions. For best user experience, these
 browsers are recommended:
@@ -73,5 +75,8 @@ browsers are recommended:
 - Microsoft Edge
 - Internet Explorer 10+
 
-## Copyright and license
-Code copyright 2017-2020 moyu. Code released under [the MIT license](https://github.com/moyus/point/blob/master/LICENSE).
+## Copyright and License
+<p>
+  Designed and built by <a href="{{site.author}}">MOYU</a>.
+  Licensed under the <a href="{{site.license}}">MIT License</a>.
+</p>

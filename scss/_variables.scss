@@ -9,8 +9,8 @@ $color-warning:                         #ED6E33; // warning
 $black:                                 #000000 !default; // for color mix
 $grey-base:                             #212121 !default; // heading, text
 $grey-mute:                             #616161 !default; // secondary text, icon
-$grey-thin:                             #b0b0b0 !default; // border, icon
-$grey-weak:                             #dddddd !default; // divider, border
+$grey-thin:                             #dddddd !default; // border, icon
+$grey-weak:                             #e5e5e5 !default; // divider, border
 $grey-shade:                            #e3e4e3 !default; // disabled state
 $grey-light:                            #f7f7f7 !default; // white space area
 $white:                                 #ffffff !default; // for color mix
@@ -108,7 +108,7 @@ $h6-font-size:                          $font-size-lg;
 
 $heading-font-weight:                   $font-weight-medium;
 $heading-line-height:                   $line-height-tight;
-$heading-margin-top:                    $spacing-6;
+$heading-margin-top:                    $spacing-5 * 2;
 $heading-margin-bottom:                 $spacing-5;
 
 $display-xs-font-size:                  $font-size-6xl;

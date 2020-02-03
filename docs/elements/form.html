@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Form - Point</title>
+  <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
+  <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
+  <link rel="stylesheet" href="http://localhost:3000/css/point.css?v=140">
+  <link rel="stylesheet" href="http://localhost:3000/css/style.css?v=140">
+  <link rel="stylesheet" href="http://localhost:3000/css/prism.css?v=140">
+</head>
+<body>
+  <div id="docs" class="site">
+    <aside class="site__sidebar">
+      <header class="site__header">
+        <a href="http://localhost:3000/getting-started" class="site__brand">
+          pointcss
+        </a>
+        <div>v1.4.0</div>
+      </header>
+      <nav id="sidenav" class="navigation">
+  <div class="navigation__group is-open">
+    <label class="navigation__label">GETTING STARTED</label>
+    <div class="navigation__content">
+      <a href="http://localhost:3000/" class="navigation__link is-active">Introduction</a>
+      <a href="http://localhost:3000/#installation" class="navigation__link">Installation</a>
+      <a href="http://localhost:3000/#customization" class="navigation__link">Customization</a>
+      <a href="http://localhost:3000/#browser-support" class="navigation__link">Browser Support</a>
+      <a href="http://localhost:3000/getting-started/style-guide.html" class="navigation__link">Style Guide</a>
+    </div>
+  </div>
+  <!-- END .navigation__group -->
+  <div class="navigation__group">
+    <label class="navigation__label">LAYOUTS</label>
+    <div class="navigation__content">
+      <a href="http://localhost:3000/layouts/flex-grid.html" class="navigation__link">Flex Grid</a>
+      <a href="http://localhost:3000/layouts/level.html" class="navigation__link">Level</a>
+      <a href="http://localhost:3000/layouts/bullet.html" class="navigation__link">Bullet</a>
+    </div>
+  </div>
+  <!-- END .navigation__group -->
+  <div class="navigation__group">
+    <label class="navigation__label">CONTENT</label>
+    <div class="navigation__content">
+      <a href="http://localhost:3000/content/typography.html" class="navigation__link">Typography</a>
+      <a href="http://localhost:3000/content/table.html" class="navigation__link">Table</a>
+      <a href="http://localhost:3000/content/image.html" class="navigation__link">Image</a>
+    </div>
+  </div>
+  <!-- END .navigation__group -->
+  <div class="navigation__group">
+    <label class="navigation__label">COMPONENTS</label>
+    <div class="navigation__content">
+      <a href="http://localhost:3000/components/badge.html" class="navigation__link">Badge</a>
+      <a href="http://localhost:3000/components/button.html" class="navigation__link">Button</a>
+      <a href="http://localhost:3000/components/form.html" class="navigation__link">Form</a>
+      <a href="http://localhost:3000/components/hint.html" class="navigation__link">Hint</a>
+      <a href="http://localhost:3000/components/icons.html" class="navigation__link">Icons</a>
+      <a href="http://localhost:3000/components/box.html" class="navigation__link">Box</a>
+      <a href="http://localhost:3000/components/note.html" class="navigation__link">Note</a>
+      <a href="http://localhost:3000/components/list.html" class="navigation__link">List</a>
+      <a href="http://localhost:3000/components/progress.html" class="navigation__link">Progress</a>
+      <a href="http://localhost:3000/components/nav.html" class="navigation__link">Nav</a>
+      <a href="http://localhost:3000/components/navbar.html" class="navigation__link">Navbar</a>
+      <a href="http://localhost:3000/components/breadcrumb.html" class="navigation__link">Breadcrumb</a>
+      <a href="http://localhost:3000/components/pagination.html" class="navigation__link">Pagination</a>
+      <a href="http://localhost:3000/components/modal.html" class="navigation__link">Modal</a>
+    </div>
+  </div>
+  <!-- END .navigation__group -->
+  <div class="navigation__group">
+    <label class="navigation__label">UTILITIES</label>
+    <div class="navigation__content">
+      <a href="http://localhost:3000/utilities/helpers.html" class="navigation__link">Helpers</a>
+    </div>
+  </div>
+  <!-- END .navigation__group -->
+</nav>
+
+      <footer id="colophon" class="site__footer" role="contentinfo">
+        <p>Designed and built by <a href="http://moyu.io">MOYU</a></p>
+        <p>Licensed under the <a href="https://github.com/moyus/point/blob/master/LICENSE">MIT License</a>.</p>
+      </footer>
+    </aside>
+    <!-- END .site__sidebar -->
+    <main id="main" class="site__main" role="main">
+      <article class="article">
+        <div class="article__content">
+          <h1 id="form"><span>Form</span></h1><ul>
+<li><a href="#types">Types</a><ul>
+<li><a href="#inputs">Inputs</a></li>
+<li><a href="#checkbox-radio">Checkbox &amp; Radio</a></li>
+<li><a href="#textarea">Textarea</a></li>
+<li><a href="#select">Select</a></li>
+</ul>
+</li>
+<li><a href="#states">States</a></li>
+<li><a href="#sizes">Sizes</a></li>
+<li><a href="#field">Field</a></li>
+<li><a href="#flex">Flex</a></li>
+<li><a href="#inline">Inline</a></li>
+<li><a href="#horizontal">Horizontal</a></li>
+</ul>
+<h2 id="types">
+    <a name="types" class="anchor" href="#types"></a>
+    Types
+    </h2><p>There are six basic types of form element: <code>.form-input</code>, <code>.form-select</code>,
+<code>.form-checkbox</code>, <code>.form-radio</code>, <code>.form-switch</code>, <code>.form-textarea</code></p>
+<h3 id="input-types">Input types</h3><form class="form-horizontal">
+  <div class="form-field l-row">
+    <label class="form-label l-col-2@md">Text</label>
+    <div class="l-col-10@md">
+      <input type="text" class="form-input" placeholder="Enter your name">
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <label class="form-label l-col-2@md">Password</label>
+    <div class="l-col-10@md">
+      <input type="password" class="form-input" value="123456">
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <label class="form-label l-col-2@md">Email</label>
+    <div class="l-col-10@md">
+      <input type="email" class="form-input" value="moyuboy@gmail.com">
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <label class="form-label l-col-2@md">Url</label>
+    <div class="l-col-10@md">
+      <input type="url" class="form-input" value="https://github.com/moyus/point">
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <label class="form-label l-col-2@md">Tel</label>
+    <div class="l-col-10@md">
+      <input type="tel" class="form-input" value="010-123456">
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <label class="form-label l-col-2@md">Number</label>
+    <div class="l-col-10@md">
+      <input type="number" class="form-input" value="666">
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <label class="form-label l-col-2@md">Color</label>
+    <div class="l-col-10@md">
+      <input type="color" class="form-input">
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <label class="form-label l-col-2@md">Date</label>
+    <div class="l-col-10@md">
+      <input type="date" class="form-input">
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <label class="form-label l-col-2@md">File</label>
+    <div class="l-col-10@md">
+      <input type="file" class="form-input">
+    </div>
+  </div>
+</form>
+
+<pre><code class="language-html">&lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Enter your name&quot;&gt;
+&lt;input type=&quot;password&quot; class=&quot;form-input&quot; value=&quot;123456&quot;&gt;
+&lt;input type=&quot;email&quot; class=&quot;form-input&quot; value=&quot;moyuboy@gmail.com&quot;&gt;
+&lt;input type=&quot;url&quot; class=&quot;form-input&quot; value=&quot;https://github.com/moyus/point&quot;&gt;
+&lt;input type=&quot;tel&quot; class=&quot;form-input&quot; value=&quot;010-123456&quot;&gt;
+&lt;input type=&quot;number&quot; class=&quot;form-input&quot; value=&quot;666&quot;&gt;
+&lt;input type=&quot;color&quot; class=&quot;form-input&quot;&gt;
+&lt;input type=&quot;date&quot; class=&quot;form-input&quot;&gt;
+&lt;input type=&quot;file&quot; class=&quot;form-input&quot;&gt;</code></pre>
+<h3 id="checkbox-amp-radio">Checkbox &amp; Radio</h3><div class="form-field">
+  <label class="form-label">Gender</label>
+  <label class="form-radio">
+    <input type="radio" name="gender">
+    <span class="form-radio__indicator"></span>
+    Male
+  </label>
+  <label class="form-radio">
+    <input type="radio" name="gender">
+    <span class="form-radio__indicator"></span>
+    Female
+  </label>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
+  &lt;label class=&quot;form-label&quot;&gt;Gender&lt;/label&gt;
+  &lt;label class=&quot;form-radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;gender&quot;&gt;
+    &lt;span class=&quot;form-radio__indicator&quot;&gt;&lt;/span&gt;
+    Male
+  &lt;/label&gt;
+  &lt;label class=&quot;form-radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;gender&quot;&gt;
+    &lt;span class=&quot;form-radio__indicator&quot;&gt;&lt;/span&gt;
+    Female
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+<div class="form-field">
+  <label class="form-checkbox">
+    <input type="checkbox" name="remember" />
+    <span class="form-checkbox__indicator"></span>
+    Remember Me?
+  </label>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
+  &lt;label class=&quot;form-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;remember&quot; /&gt;
+    &lt;span class=&quot;form-checkbox__indicator&quot;&gt;&lt;/span&gt;
+    Remember Me?
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+<div class="form-field">
+  <label class="form-switch">
+    <input type="checkbox" name="light">
+    <span class="form-switch__indicator"></span>
+    Turn the light on
+  </label>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
+  &lt;label class=&quot;form-switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;light&quot;&gt;
+    &lt;span class=&quot;form-switch__indicator&quot;&gt;&lt;/span&gt;
+    Turn the light on
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+<h3 id="textarea">Textarea</h3><div class="form-field">
+  <textarea class="form-textarea" rows="4"></textarea>
+</div>
+
+<pre><code class="language-html">&lt;textarea class=&quot;form-textarea&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;</code></pre>
+<h3 id="select">Select</h3><div class="form-field">
+  <select class="form-select">
+    <option value="0" selected>Beijing</option>
+    <option value="1">Washington</option>
+    <option value="2">Tokyo</option>
+    <option value="3">London</option>
+    <option value="4">Paris</option>
+  </select>
+</div>
+
+<div class="form-field">
+  <label class="form-label">Multiple select</label>
+  <select class="form-select" multiple>
+    <option value="0">Beijing</option>
+    <option value="1">Washington</option>
+    <option value="2" selected>Tokyo</option>
+    <option value="3">London</option>
+    <option value="4">Paris</option>
+  </select>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
+  &lt;select class=&quot;form-select&quot;&gt;
+    &lt;option value=&quot;0&quot; selected&gt;Beijing&lt;/option&gt;
+    &lt;option value=&quot;1&quot;&gt;Washington&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Tokyo&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;London&lt;/option&gt;
+    &lt;option value=&quot;4&quot;&gt;Paris&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-field&quot;&gt;
+  &lt;label class=&quot;form-label&quot;&gt;Multiple select&lt;/label&gt;
+  &lt;select class=&quot;form-select&quot; multiple&gt;
+    &lt;option value=&quot;0&quot;&gt;Beijing&lt;/option&gt;
+    &lt;option value=&quot;1&quot;&gt;Washington&lt;/option&gt;
+    &lt;option value=&quot;2&quot; selected&gt;Tokyo&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;London&lt;/option&gt;
+    &lt;option value=&quot;4&quot;&gt;Paris&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+<h2 id="states">
+    <a name="states" class="anchor" href="#states"></a>
+    States
+    </h2><div class="form-field">
+    <label class="form-label">Read only field</label>
+    <input type="text" class="form-input" value="23423" readonly>
+</div>
+<div class="form-field">
+    <label class="form-label">Disabled field</label>
+    <input type="text" class="form-input" value="you can't change me" disabled>
+</div>
+<div class="form-field">
+    <label class="form-label">Success</label>
+    <input type="text" class="form-input is-success">
+</div>
+<div class="form-field">
+    <label class="form-label">Danger</label>
+    <input type="text" class="form-input is-danger">
+    <small class="form-help u-color-danger">you enter the wrong text！</small>
+</div>
+<div class="form-field">
+    <label class="form-label">Warning</label>
+    <input type="text" class="form-input is-warning">
+</div>
+
+<pre><code class="language-html">&lt;input type=&quot;text&quot; class=&quot;form-input&quot; value=&quot;23423&quot; readonly&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-input&quot; value=&quot;you can&#39;t change me&quot; disabled&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-input is-success&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-input is-danger&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-input is-warning&quot;&gt;</code></pre>
+<h2 id="sizes">
+    <a name="sizes" class="anchor" href="#sizes"></a>
+    Sizes
+    </h2><p>By adding <code>.form-input--sm</code> or <code>.form-input--lg</code> to <code>.form-input</code> element and <code>.form-select--sm</code> or <code>.form-select--lg</code> to <code>.form-select</code> element to change default sizes.</p>
+<div class="l-row">
+  <div class="l-col-6@sm">
+    <div class="form-field">
+      <label class="form-label">Small input</label>
+      <input type="text" class="form-input form-input--sm" />
+    </div>
+  </div>
+  <div class="l-col-6@sm">
+    <div class="form-field">
+      <label class="form-label">Small select</label>
+      <select class="form-select form-select--sm">
+        <option value="0" selected>Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="l-row">
+  <div class="l-col-6@sm">
+    <div class="form-field">
+      <label class="form-label">Default input</label>
+      <input type="text" class="form-input">
+    </div>
+  </div>
+  <div class="l-col-6@sm">
+    <div class="form-field">
+      <label class="form-label">Default select</label>
+      <select class="form-select">
+        <option value="0" selected>Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="l-row">
+  <div class="l-col-6@sm">
+    <div class="form-field">
+      <label class="form-label">Large input</label>
+      <input type="text" class="form-input form-input--lg">
+    </div>
+  </div>
+  <div class="l-col-6@sm">
+    <div class="form-field">
+      <label class="form-label">Large select</label>
+      <select class="form-select form-select--lg">
+        <option value="0" selected>Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<pre><code class="language-html">&lt;input type=&quot;text&quot; class=&quot;form-input form-input--sm&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-input form-input--lg&quot;&gt;
+
+&lt;select class=&quot;form-select form-select--sm&quot;&gt;&lt;/select&gt;
+&lt;select class=&quot;form-select&quot;&gt;&lt;/select&gt;
+&lt;select class=&quot;form-select form-select--lg&quot;&gt;&lt;/select&gt;</code></pre>
+<h2 id="field">
+    <a name="field" class="anchor" href="#field"></a>
+    Field
+    </h2><p>In addation to basic form inputs, there are some other form elements can be grouped together.</p>
+<ul>
+<li><code>.form-field</code><ul>
+<li><code>.form-label</code></li>
+<li><code>.form-group</code><ul>
+<li>form elements</li>
+</ul>
+</li>
+<li><code>.form-help</code></li>
+</ul>
+</li>
+</ul>
+<div class="form-field">
+  <label class="form-label">Label text</label>
+  <input type="text" class="form-input" placeholder="form input">
+  <small class="form-help">Input description text...</small>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
+  &lt;label class=&quot;form-label&quot;&gt;Label text&lt;/label&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;form input&quot;&gt;
+  &lt;small class=&quot;form-help&quot;&gt;Input description text...&lt;/small&gt;
+&lt;/div&gt;</code></pre>
+<h2 id="group">
+    <a name="group" class="anchor" href="#group"></a>
+    Group
+    </h2><p>Use flexbox to create input group.</p>
+<div class="form-field">
+  <div class="form-group">
+    <span class="form-addon">http://example.com/users/</span>
+    <input type="text" class="form-input">
+  </div>
+</div>
+
+<div class="form-field">
+  <div class="form-group">
+    <input type="text" class="form-input">
+    <span class="form-addon">@example.com</span>
+  </div>
+</div>
+
+<div class="form-field">
+  <div class="form-group">
+    <span class="form-addon">$</span>
+    <input type="text" class="form-input">
+    <span class="form-addon">.00</span>
+  </div>
+</div>
+
+<div class="form-field">
+  <div class="form-group">
+    <span class="form-addon">From</span>
+    <input type="text" class="form-input">
+    <span class="form-addon">To</span>
+    <input type="text" class="form-input">
+  </div>
+</div>
+
+<div class="form-field">
+  <div class="form-group">
+    <span class="form-addon">
+      <input type="radio">
+    </span>
+    <input type="text" class="form-input">
+  </div>
+</div>
+
+<div class="form-field">
+  <div class="form-group">
+    <input type="text" class="form-input">
+    <span class="form-addon">
+      <input type="checkbox">
+    </span>
+  </div>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;span class=&quot;form-addon&quot;&gt;http://example.com/users/&lt;/span&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-field&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
+    &lt;span class=&quot;form-addon&quot;&gt;@example.com&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-field&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;span class=&quot;form-addon&quot;&gt;$&lt;/span&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
+    &lt;span class=&quot;form-addon&quot;&gt;.00&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-field&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;span class=&quot;form-addon&quot;&gt;From&lt;/span&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
+    &lt;span class=&quot;form-addon&quot;&gt;To&lt;/span&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-field&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;span class=&quot;form-addon&quot;&gt;
+      &lt;input type=&quot;radio&quot;&gt;
+    &lt;/span&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-field&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
+    &lt;span class=&quot;form-addon&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2 id="inline">
+    <a name="inline" class="anchor" href="#inline"></a>
+    Inline
+    </h2><p>Use the <code>.form-inline</code> class to display a series of group elements on a single horizontal row.</p>
+<form class="form-inline u-mb-15">
+  <div class="form-field">
+    <label class="form-label">Username</label>
+    <input type="text" class="form-input">
+  </div>
+  <div class="form-field">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-input">
+  </div>
+  <div class="form-field">
+    <label class="form-checkbox">
+      <input type="checkbox">
+      <span class="form-checkbox__indicator"></span>
+      Remember me?
+    </label>
+  </div>
+  <div class="form-field">
+    <button type="button" class="btn btn--primary btn--outline">Login</button>
+  </div>
+</form>
+
+<pre><code class="language-html">&lt;form class=&quot;form-inline u-mb-15&quot;&gt;
+  &lt;div class=&quot;form-field&quot;&gt;
+    &lt;label class=&quot;form-label&quot;&gt;Username&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-field&quot;&gt;
+    &lt;label class=&quot;form-label&quot;&gt;Password&lt;/label&gt;
+    &lt;input type=&quot;password&quot; class=&quot;form-input&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-field&quot;&gt;
+    &lt;label class=&quot;form-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+      &lt;span class=&quot;form-checkbox__indicator&quot;&gt;&lt;/span&gt;
+      Remember me?
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-field&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn--primary btn--outline&quot;&gt;Login&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<h2 id="horizontal">
+    <a name="horizontal" class="anchor" href="#horizontal"></a>
+    Horizontal
+    </h2><p>Use Grid System and <code>.form-horizontal</code> to create horizontal forms.</p>
+<form class="form-horizontal u-mb-15">
+  <div class="form-field l-row">
+    <label class="form-label l-col-3@md">Username</label>
+    <div class="l-col-12 l-col-9@md">
+      <input type="text" class="form-input">
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <label class="form-label l-col-3@md">Password</label>
+    <div class="l-col-12 l-col-9@md">
+      <input type="password" class="form-input">
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <div class="l-col-9@md l-col-offset-3@md">
+      <label class="form-checkbox">
+        <input type="checkbox">
+        <span class="form-checkbox__indicator"></span>
+        Remember me?
+      </label>
+    </div>
+  </div>
+  <div class="form-field l-row">
+    <div class="l-col-9@md l-col-offset-3@md">
+      <button type="button" class="btn btn--primary">Login</button>
+    </div>
+  </div>
+</form>
+
+<pre><code class="language-html">&lt;form class=&quot;form-horizontal u-mb-15&quot;&gt;
+  &lt;div class=&quot;form-field l-row&quot;&gt;
+    &lt;label class=&quot;form-label l-col-3@md&quot;&gt;Username&lt;/label&gt;
+    &lt;div class=&quot;l-col-12 l-col-9@md&quot;&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-field l-row&quot;&gt;
+    &lt;label class=&quot;form-label l-col-3@md&quot;&gt;Password&lt;/label&gt;
+    &lt;div class=&quot;l-col-12 l-col-9@md&quot;&gt;
+      &lt;input type=&quot;password&quot; class=&quot;form-input&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-field l-row&quot;&gt;
+    &lt;div class=&quot;l-col-9@md l-col-offset-3@md&quot;&gt;
+      &lt;label class=&quot;form-checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;span class=&quot;form-checkbox__indicator&quot;&gt;&lt;/span&gt;
+        Remember me?
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-field l-row&quot;&gt;
+    &lt;div class=&quot;l-col-9@md l-col-offset-3@md&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn--primary&quot;&gt;Login&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+        </div>
+        <nav class="article__catalogue">
+          
+        </nav>
+      </article>
+    </main>
+    <!-- END .site__main -->
+  </div>
+  <script src="http://localhost:3000/js/prism.js"></script>
+  <script src="http://localhost:3000/js/main.js"></script>
+</body>
+</html>
