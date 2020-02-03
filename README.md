@@ -9,17 +9,17 @@ A flexible CSS Framework for building modern responsive web apps.
 ## Installation
 There are 3 ways to get start
 
-###### Yarn
+##### Yarn
 ```sh
 yarn add pointcass
 ```
 
-###### NPM
+##### NPM
 ```sh
 npm install pointcass --save
 ```
 
-###### Download and use production file
+##### Download and use production file
 ```html
 <link rel="stylesheet" href="dist/point.min.css" />
 ```
@@ -27,12 +27,12 @@ npm install pointcass --save
 ## Customization
 **pointcss** is coded in [SASS](http://sass-lang.com/), If you're familiar with it, You can continue
 
-###### Install the dependence
+##### Install the dependence
 ```sh
 yarn add pointcss --dev
 ```
 
-###### Set your variables
+##### Set your variables
 you can reference all initial variables in `scss/_variables.scss`
 ```scss
 $color-primary:                         #636AFF; // primary
@@ -43,7 +43,7 @@ $color-warning:                         #ED6E33; // warning
 ...
 ```
 
-###### Import pointcss at the end of your code
+##### Import pointcss at the end of your code
 ```scss
 // overwrite variables
 $color-primary:                         #636AFF;
