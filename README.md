@@ -1,6 +1,6 @@
 <img width="124" height="42" src="https://github.com/moyus/pointcss/raw/v2/docs/images/logo.svg?sanitize=true">
 
-A flexible CSS Framework for building modern responsive web apps.
+A lightweight and flexible CSS Framework for building modern responsive web apps.
 
 - Built with flexbox
 - Mobile friendly layout
