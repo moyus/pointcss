@@ -22,7 +22,7 @@
   }
   
   > .level__item:not(:last-child) {
-    margin-right: $spacing-stack-base;
+    margin-right: $spacing-stack-lg;
   }
   
 }
@@ -59,17 +59,14 @@
 
   @include media-breakpoint-down($breakpoint) {
     .level--collapse#{$suffix} {
-      display: block;
-      .level__item:not(:last-child) {
-        margin: 0 0 $spacing-stack-sm 0;
-      }
+      flex-direction: column;
+      justify-content: center;
+
       .level__start,
       .level__end,
       .level__center {
-        flex-direction: column;
-        justify-content: center;
         &:not(:last-child) {
-          margin-bottom: $spacing-stack-base;
+          margin-bottom: $spacing-stack-lg;
         }
       }
     }
