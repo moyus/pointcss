@@ -5,7 +5,7 @@ title: "Breadcrumb"
 
 # Breadcrumb
 
-<div class="u-mb-15">
+<div class="mb-5">
   <ul class="breadcrumb">
     <li class="breadcrumb__item">
       <a href="#" class="breadcrumb__link">Home</a>

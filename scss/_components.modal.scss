@@ -7,7 +7,7 @@
   right: 0;
   bottom: 0;
   display: flex;
-  padding: $spacing-5;
+  padding: $spacing-inset-md;
   z-index: $modal-zIndex;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -16,11 +16,6 @@
   &::-webkit-scrollbar {
     display: none;
   }
-
-  &.is-hidden {
-    display: none;
-  }
-
 }
 
 .modal {
@@ -31,14 +26,15 @@
   max-width: $modal-width-base;
   width: 100%;
   margin: auto;
-  background-color: $modal-bg-color;
+  background-color: $modal-bg;
   border-radius: $border-radius-lg;
+  box-shadow: 0 4px 6px rgba($black, .05);
 }
 
 .modal__header {
   position: relative;
   flex-shrink: 0;
-  padding: $spacing-3 $spacing-5;
+  padding: $spacing-inset-md;
 }
 
 .modal__title {
@@ -50,10 +46,10 @@
 
 .modal__close {
   position: absolute;
-  right: $spacing-5;
-  top: $spacing-3;
-  font-size: $font-size-xl;
-  color: $grey-thin;
+  right: $spacing-inset-md;
+  top: $spacing-inset-md;
+  font-size: $text-size-xl;
+  color: $grey-mute;
   line-height: 1;
   cursor: pointer;
   font-family: Helvetica, Arial, sans-serif;
@@ -61,7 +57,7 @@
 
 .modal__body {
   flex: 1 1 auto;
-  padding: $spacing-5;
+  padding: $spacing-inset-md;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
@@ -69,7 +65,7 @@
 
 .modal__footer {
   flex-shrink: 0;
-  padding: $spacing-3 $spacing-5;
+  padding: $spacing-inset-md;
   text-align: right;
 }
 
@@ -87,7 +83,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $mask-bg-color;
+  background-color: $mask-bg;
   z-index: $mask-zIndex;
 }
 

@@ -7,9 +7,8 @@
   &:before,
   &:after {
     position: absolute;
+    display: none;
     pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
     z-index: 15;
   }
 
@@ -27,25 +26,25 @@
   &:after {
     content: attr(data-hint);
     color: $white;
-    font-size: $text-size-base;
+    font-size: $text-size-sm;
     line-height: $line-height-compact;
     padding: $spacing-squish-sm;
     border-radius: $border-radius-sm;
     background-color: $black;
-    white-space: nowrap;
+    white-space: pre-wrap;
     left: 50%;
     bottom: 100%;
+    width: 160px;
     margin-bottom: 5px;
     transform: translateX(-50%);
   }
 
   &.hint--always,
   &:hover,
-  &:active {
+  &:focus {
     &:before,
     &:after {
-      opacity: 1;
-      visibility: visible;
+      display: block;
     }
 
     &:before {
@@ -64,17 +63,10 @@
   }
 }
 
-.hint--md {
-  &:after {
-    white-space: normal;
-    width: 160px;
-  }
-}
-
 .hint--lg {
   &:after {
     white-space: normal;
-    width: 260px;
+    width: 220px;
   }
 }
 

@@ -14,7 +14,7 @@
 </head>
 <body>
   <div id="docs" class="site">
-    <aside class="site__sidebar">
+    <div class="site__sidebar">
       <header class="site__header">
         <a href="http://localhost:3000/" class="site__brand">
           <svg width="140" height="48" xmlns="http://www.w3.org/2000/svg">
@@ -34,10 +34,10 @@
         </div>
       </header>
       <nav id="sidenav" class="navigation">
-  <div class="navigation__group is-open">
+  <div class="navigation__group">
     <label class="navigation__label">GETTING STARTED</label>
     <div class="navigation__content">
-      <a href="http://localhost:3000/" class="navigation__link is-active">Introduction</a>
+      <a href="http://localhost:3000/" class="navigation__link">Introduction</a>
       <a href="http://localhost:3000/#installation" class="navigation__link">Installation</a>
       <a href="http://localhost:3000/#customization" class="navigation__link">Customization</a>
       <a href="http://localhost:3000/#browser-support" class="navigation__link">Browser Support</a>
@@ -50,7 +50,6 @@
     <div class="navigation__content">
       <a href="http://localhost:3000/layouts/flex-grid.html" class="navigation__link">Flex Grid</a>
       <a href="http://localhost:3000/layouts/level.html" class="navigation__link">Level</a>
-      <a href="http://localhost:3000/layouts/bullet.html" class="navigation__link">Bullet</a>
     </div>
   </div>
   <!-- END .navigation__group -->
@@ -67,26 +66,30 @@
     <label class="navigation__label">COMPONENTS</label>
     <div class="navigation__content">
       <a href="http://localhost:3000/components/badge.html" class="navigation__link">Badge</a>
+      <a href="http://localhost:3000/components/box.html" class="navigation__link">Box</a>
+      <a href="http://localhost:3000/components/breadcrumb.html" class="navigation__link">Breadcrumb</a>
       <a href="http://localhost:3000/components/button.html" class="navigation__link">Button</a>
       <a href="http://localhost:3000/components/form.html" class="navigation__link">Form</a>
       <a href="http://localhost:3000/components/hint.html" class="navigation__link">Hint</a>
-      <a href="http://localhost:3000/components/icons.html" class="navigation__link">Icons</a>
-      <a href="http://localhost:3000/components/box.html" class="navigation__link">Box</a>
-      <a href="http://localhost:3000/components/note.html" class="navigation__link">Note</a>
       <a href="http://localhost:3000/components/list.html" class="navigation__link">List</a>
-      <a href="http://localhost:3000/components/progress.html" class="navigation__link">Progress</a>
+      <a href="http://localhost:3000/components/modal.html" class="navigation__link">Modal</a>
       <a href="http://localhost:3000/components/nav.html" class="navigation__link">Nav</a>
       <a href="http://localhost:3000/components/navbar.html" class="navigation__link">Navbar</a>
-      <a href="http://localhost:3000/components/breadcrumb.html" class="navigation__link">Breadcrumb</a>
+      <a href="http://localhost:3000/components/note.html" class="navigation__link">Note</a>
       <a href="http://localhost:3000/components/pagination.html" class="navigation__link">Pagination</a>
-      <a href="http://localhost:3000/components/modal.html" class="navigation__link">Modal</a>
+      <a href="http://localhost:3000/components/popover.html" class="navigation__link">Popover</a>
+      <a href="http://localhost:3000/components/progress.html" class="navigation__link">Progress</a>
     </div>
   </div>
   <!-- END .navigation__group -->
   <div class="navigation__group">
     <label class="navigation__label">UTILITIES</label>
     <div class="navigation__content">
-      <a href="http://localhost:3000/utilities/helpers.html" class="navigation__link">Helpers</a>
+      <a href="http://localhost:3000/utilities/color.html" class="navigation__link">Color</a>
+      <a href="http://localhost:3000/utilities/elevation.html" class="navigation__link">Elevation</a>
+      <a href="http://localhost:3000/utilities/layout.html" class="navigation__link">Layout</a>
+      <a href="http://localhost:3000/utilities/spacing.html" class="navigation__link">Spacing</a>
+      <a href="http://localhost:3000/utilities/text.html" class="navigation__link">Text</a>
     </div>
   </div>
   <!-- END .navigation__group -->
@@ -96,30 +99,26 @@
         <p>Designed and built by <a href="http://moyu.io">MOYU</a></p>
         <p>Licensed under the <a href="https://github.com/moyus/point/blob/master/LICENSE">MIT License</a></p>
       </footer>
-    </aside>
+    </div>
     <!-- END .site__sidebar -->
     <main id="main" class="site__main" role="main">
       <article class="article">
-        <div class="article__content">
-          <h1 id="level"><span>Level</span></h1><ul>
-<li><a href="#basic">Basic</a></li>
-<li><a href="#shrink">Shrink</a></li>
-</ul>
+        <h1 id="level"><span>Level</span></h1><p>horizontal layout with vertical center alignment.</p>
 <h2 id="basic">
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
-    </h2><p>Use flexbox to align items vertically.</p>
-<div class="l-level l-level--break@md u-mb-15">
-  <div class="l-level__left">
-    <a href="#" class="l-level__item btn btn--success btn--smart">Add</a>
-    <a href="#" class="l-level__item">All</a>
-    <a href="#" class="l-level__item">Publish</a>
-    <a href="#" class="l-level__item">Draft</a>
-    <a href="#" class="l-level__item">Pending</a>
-    <a href="#" class="l-level__item">Trash</a>
+    </h2><p>2-columns layout</p>
+<div class="level level-collapse@md">
+  <div class="level__start">
+    <a href="#" class="level__item btn btn--success btn--loose">Add</a>
+    <a href="#" class="level__item">All</a>
+    <a href="#" class="level__item">Publish</a>
+    <a href="#" class="level__item">Draft</a>
+    <a href="#" class="level__item">Pending</a>
+    <a href="#" class="level__item">Trash</a>
   </div>
-  <div class="l-level__right">
-    <div class="l-level__item">
+  <div class="level__end">
+    <div class="level__item">
       <form action="#" class="form-inline">
         <div class="form-group">
           <input type="text" class="form-input" placeholder="Search...">
@@ -130,17 +129,17 @@
   </div>
 </div>
 
-<pre><code class="language-html">&lt;div class=&quot;l-level l-level--break@md&quot;&gt;
-  &lt;div class=&quot;l-level__left&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;l-level__item btn btn--success btn--smart&quot;&gt;Add&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;l-level__item&quot;&gt;All&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;l-level__item&quot;&gt;Publish&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;l-level__item&quot;&gt;Draft&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;l-level__item&quot;&gt;Pending&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;l-level__item&quot;&gt;Trash&lt;/a&gt;
+<pre><code class="language-html">&lt;div class=&quot;level&quot;&gt;
+  &lt;div class=&quot;level__start&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item btn btn--success btn--loose&quot;&gt;Add&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;All&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Publish&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Draft&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Pending&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Trash&lt;/a&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-level__right&quot;&gt;
-    &lt;div class=&quot;l-level__item&quot;&gt;
+  &lt;div class=&quot;level__end&quot;&gt;
+    &lt;div class=&quot;level__item&quot;&gt;
       &lt;form action=&quot;#&quot; class=&quot;form-inline&quot;&gt;
         &lt;div class=&quot;form-group&quot;&gt;
           &lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Search...&quot;&gt;
@@ -150,71 +149,116 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<hr>
-<p>If you want to create 3-colums level, you must place <code>.l-level__center</code> in
+<p>If you want to create 3-colums layout, you must place <code>.level__center</code> in
 first, so it can use <code>~</code> CSS selector to control siblings style.</p>
-<div class="l-level l-level--break@md u-mb-15">
-  <div class="l-level__center">
+<div class="level level-collapse@md">
+  <div class="level__center">
     <div class="btn-group">
       <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
       <button class="btn btn--primary btn--outline">SHARED</button>
       <button class="btn btn--primary btn--outline">MEDIA FILES</button>
     </div>
   </div>
-  <div class="l-level__left">
+  <div class="level__start">
     <div class="u-fs-20">All <span class="u-fs-14 u-text-muted">34 projects</span></div>
   </div>
-  <div class="l-level__right">
-    <div class="l-level__item">
+  <div class="level__end">
+    <div class="level__item">
       <form action="#" class="form-inline">
-        <div class="form-field">
-          <select class="form-select">
-            <option value="2016-01-25" selected="selected">Jul 25, 16</option>
-            <option value="2016-01-26">Jul 26, 16</option>
-            <option value="2016-01-27">Jul 27, 16</option>
-            <option value="2016-01-28">Jul 28, 16</option>
-          </select>
-        </div>
+        <select class="form-select">
+          <option value="2016-01-25" selected="selected">Jul 25, 16</option>
+          <option value="2016-01-26">Jul 26, 16</option>
+          <option value="2016-01-27">Jul 27, 16</option>
+          <option value="2016-01-28">Jul 28, 16</option>
+        </select>
       </form>
     </div>
   </div>
 </div>
 
-<pre><code class="language-html">&lt;div class=&quot;l-level l-level--break@md&quot;&gt;
-  &lt;div class=&quot;l-level__center&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;level&quot;&gt;
+  &lt;div class=&quot;level__center&quot;&gt;
     &lt;div class=&quot;btn-group&quot;&gt;
       &lt;button class=&quot;btn btn--primary btn--outline&quot;&gt;ALL PROJECTS&lt;/button&gt;
       &lt;button class=&quot;btn btn--primary btn--outline&quot;&gt;SHARED&lt;/button&gt;
       &lt;button class=&quot;btn btn--primary btn--outline&quot;&gt;MEDIA FILES&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-level__left&quot;&gt;
+  &lt;div class=&quot;level__start&quot;&gt;
     &lt;div class=&quot;u-fs-20&quot;&gt;All &lt;span class=&quot;u-fs-14 u-text-muted&quot;&gt;34 projects&lt;/span&gt;&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-level__right&quot;&gt;
-    &lt;div class=&quot;l-level__item&quot;&gt;
+  &lt;div class=&quot;level__end&quot;&gt;
+    &lt;div class=&quot;level__item&quot;&gt;
       &lt;form action=&quot;#&quot; class=&quot;form-inline&quot;&gt;
-        &lt;div class=&quot;form-field&quot;&gt;
-          &lt;select class=&quot;form-select&quot;&gt;
-            &lt;option value=&quot;2016-01-25&quot; selected=&quot;selected&quot;&gt;Jul 25, 16&lt;/option&gt;
-            &lt;option value=&quot;2016-01-26&quot;&gt;Jul 26, 16&lt;/option&gt;
-            &lt;option value=&quot;2016-01-27&quot;&gt;Jul 27, 16&lt;/option&gt;
-            &lt;option value=&quot;2016-01-28&quot;&gt;Jul 28, 16&lt;/option&gt;
-          &lt;/select&gt;
+        &lt;select class=&quot;form-select&quot;&gt;
+          &lt;option value=&quot;2016-01-25&quot; selected=&quot;selected&quot;&gt;Jul 25, 16&lt;/option&gt;
+          &lt;option value=&quot;2016-01-26&quot;&gt;Jul 26, 16&lt;/option&gt;
+          &lt;option value=&quot;2016-01-27&quot;&gt;Jul 27, 16&lt;/option&gt;
+          &lt;option value=&quot;2016-01-28&quot;&gt;Jul 28, 16&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2 id="response">
+    <a name="response" class="anchor" href="#response"></a>
+    Response
+    </h2><p>When screen size can not wrap level component, you can manually collapse it by using <code>.level-collapse@&lt;breakpoint&gt;</code> modifier</p>
+<div class="level level-collapse@md">
+  <div class="level__start">
+    <a href="#" class="level__item btn btn--success btn--loose">Add</a>
+    <a href="#" class="level__item">All</a>
+    <a href="#" class="level__item">Publish</a>
+    <a href="#" class="level__item">Draft</a>
+    <a href="#" class="level__item">Pending</a>
+    <a href="#" class="level__item">Trash</a>
+  </div>
+  <div class="level__end">
+    <div class="level__item">
+      <form action="#" class="form-inline">
+        <div class="form-group">
+          <input type="text" class="form-input" placeholder="Search...">
+          <button class="form-addon btn btn--primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;level level-collapse@md&quot;&gt;
+  &lt;div class=&quot;level__start&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item btn btn--success btn--loose&quot;&gt;Add&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;All&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Publish&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Draft&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Pending&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Trash&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;level__end&quot;&gt;
+    &lt;div class=&quot;level__item&quot;&gt;
+      &lt;form action=&quot;#&quot; class=&quot;form-inline&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Search...&quot;&gt;
+          &lt;button class=&quot;form-addon btn btn--primary&quot;&gt;Submit&lt;/button&gt;
         &lt;/div&gt;
       &lt;/form&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-        </div>
-        <nav class="article__catalogue">
-          
-        </nav>
       </article>
     </main>
     <!-- END .site__main -->
+    <nav class="site__catalogue">
+      
+      <a href="#basic">Basic</a>
+      
+      <a href="#response">Response</a>
+      
+    </nav>
+    <!-- END .site__catalogue -->
   </div>
+  <!-- END .site -->
   <script src="http://localhost:3000/js/prism.js"></script>
   <script src="http://localhost:3000/js/main.js"></script>
 </body>

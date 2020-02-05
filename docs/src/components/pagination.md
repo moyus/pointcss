@@ -1,19 +1,18 @@
 ---
 layout: master
 title: "Pagination"
+catalogue:
+  - Basic
+  - Bordered
+  - Sizing
 ---
 
 # Pagination
-
-- [Basic](#basic)
-- [Bordered](#bordered)
-- [Sizes](#sizes)
+A reuseable and flexible navigation that lets users access pages of content.
 
 ## Basic
-Pagination component provide a reuseable and flexible navigation that lets
-users access pages of content.
 
-<div class="u-mb-15">
+<div class="mb-5">
   <nav class="pagination">
     <span class="pagination__item is-disabled">Previous</span>
     <em class="pagination__item is-active">1</em>
@@ -43,11 +42,11 @@ users access pages of content.
 </nav>
 ```
 
-## Bordered Pagination
-By adding `.pagination--bordered` modifier class on `.pagination`
-container to quick create bordered style pagination.
+## Bordered
 
-<div class="u-mb-15">
+By adding `.pagination--bordered` modifier class on `.pagination` container to quick create bordered style pagination
+
+<div class="mb-5">
   <nav class="pagination pagination--bordered">
     <span class="pagination__item is-disabled">Previous</span>
     <em class="pagination__item is-active">1</em>
@@ -77,10 +76,11 @@ container to quick create bordered style pagination.
 </nav>
 ```
 
-## Sizes
-Add `.pagination--sm` modifier class to quickly create small pagination.
+## Sizing
 
-<div class="u-mb-15">
+Add `.pagination--sm` modifier class to quickly create small pagination
+
+<div class="mb-5">
   <nav class="pagination pagination--sm">
     <a href="#" class="pagination__item">Previous</a>
     <em class="pagination__item is-active">1</em>
@@ -95,7 +95,7 @@ Add `.pagination--sm` modifier class to quickly create small pagination.
   </nav>
 </div>
 
-<div class="u-mb-15">
+<div class="mb-5">
   <nav class="pagination pagination--bordered pagination--sm">
     <a href="#" class="pagination__item">Previous</a>
     <em class="pagination__item is-active">1</em>

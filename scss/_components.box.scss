@@ -1,5 +1,7 @@
 /* ## Box
 ---------------------------------*/
+$box-border-width: 1px;
+
 .box {
   margin-bottom: $spacing-stack-lg;
   border-radius: $border-radius-base;
@@ -10,16 +12,26 @@
   font-size: $text-size-base;
   line-height: $line-height-tight;
   padding: $spacing-squish-lg;
-  border: 1px solid $grey-thin;
+  border: $box-border-width solid $grey-thin;
   border-radius: $border-radius-base $border-radius-base 0 0;
   background-color: $grey-light;
+
+  &:only-child {
+    border-radius: $border-radius-base;
+  }
 }
 
 .box__body {
-  border: 1px solid $grey-thin;
-  border-top: 0;
-  border-radius: 0 0 $border-radius-base;
+  border-style: solid;
+  border-color: $grey-thin;
+  border-width: 0 $box-border-width $box-border-width $box-border-width;
+  border-radius: 0 0 $border-radius-base $border-radius-base;
   background-color: $white;
+
+  &:only-child {
+    border-width: $box-border-width;
+    border-radius: $border-radius-base;
+  }
 }
 
 .box__inner {
@@ -37,5 +49,25 @@
 @each $modifier, $value in $box-palette {
   .box--#{$modifier} {
     @include box-variant(map-get($value, 'text'), map-get($value, 'border'), map-get($value, 'bg'))
+  }
+}
+
+// accordion
+details.box {
+  > summary.box__header {
+    cursor: pointer;
+    border-bottom-left-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
+    appearance: none;
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &[open] {
+    > summary.box__header {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 }

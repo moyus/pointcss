@@ -1,0 +1,3 @@
+@each $key, $value in $spacings {
+  @include make-spacing($key, $value);
+}

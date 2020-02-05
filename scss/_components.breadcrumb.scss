@@ -13,10 +13,10 @@
   color: $grey-mute;
   &:nth-child(n+2) {
     &:before {
-      content: '/';
-      padding-left: 8px;
-      padding-right: 8px;
-      color: $grey-mute;
+      content: '\0002f';
+      padding-left: $spacing-stack-md;
+      padding-right: $spacing-stack-md;
+      color: $grey-thin;
     }
   }
 }

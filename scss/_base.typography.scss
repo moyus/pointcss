@@ -17,7 +17,7 @@ h5 { font-size: $h5-font-size; }
 h6 { font-size: $h6-font-size; }
 
 p {
-  margin: 0 0 $spacing-stack-base 0;
+  margin: 0 0 $spacing-stack-lg 0;
 }
 
 ins,
@@ -46,34 +46,34 @@ a {
 
 // List
 ul, ol {
-  margin: 0 0 $spacing-stack-base 0;
+  margin: 0 0 $spacing-stack-lg 0;
   padding: 0 0 0 2em;
   ul, ol {
-    margin-bottom: $spacing-stack-sm;
+    margin-bottom: $spacing-stack-base;
   }
 }
 
 dl {
-  margin: 0 0 $spacing-stack-base 0;
+  margin: 0 0 $spacing-stack-lg 0;
 }
 
 dt {
   font-weight: bold;
-  margin: $spacing-stack-sm 0 0 0;
+  margin: $spacing-stack-base 0 0 0;
   &:first-child {
     margin-top: 0;
   }
 }
 
 dd {
-  margin-left: $spacing-stack-base;
+  margin-left: $spacing-stack-lg;
 }
 
 // Blockquote
 blockquote {
   border-left: 3px solid $grey-weak;
   padding: $spacing-squish-xl;
-  margin: 0 0 $spacing-stack-base 0;
+  margin: 0 0 $spacing-stack-lg 0;
 
   cite {
     color: $grey-mute;
@@ -84,42 +84,6 @@ blockquote {
   }
   > *:last-child {
     margin-bottom: 0;
-  }
-}
-
-// Code
-code, pre {
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: auto;
-  font-family: "Source Code Pro", "Hack", "Monaco", "Inconsolata", monospace;
-  line-height: $line-height-normal;
-}
-
-code {
-  background: #f5f7fa;
-  color: #ed6c63;
-  font-size: $text-size-sm;
-  font-weight: normal;
-  padding: 1px 3px 3px;
-}
-
-pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: $spacing-stack-base;
-  padding: $spacing-inset-md;
-  background: #f5f7fa;
-  color: #69707a;
-  font-size: $text-size-sm;
-  overflow: auto;
-
-  code {
-    color: inherit;
-    font-size: inherit;
-    padding: 0;
-    border-radius: 0;
-    white-space: pre-wrap;
-    background: transparent;
   }
 }
 

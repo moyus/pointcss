@@ -11,10 +11,10 @@ $button-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacin
   padding: $spacing-squish-base;
   font-size: $text-size-base;
   line-height: $line-height-normal;
-  color: $grey-mute;
+  color: $grey-base;
   height: $button-height-computed;
   min-width: $button-height-computed;
-  border: $button-border-width solid transparent;
+  border: $button-border-width solid $grey-thin;
   border-radius: $border-radius-base;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -23,10 +23,7 @@ $button-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacin
   background: none;
   box-shadow: none;
   appearance: none;
-
-  &.btn--outline {
-    @include btn-outline-variant($grey-base, $grey-mute);
-  }
+  background-color: $white;
 
   &.is-loading {
     color: transparent;

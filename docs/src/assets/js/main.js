@@ -49,14 +49,14 @@
     triggerEl.addEventListener('click', function (e) {
       e.preventDefault()
       Mask.show()
-      modal.classList.remove('is-hidden')
+      modal.classList.remove('hidden')
     })
 
     forEach(modalCloseEls, function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault()
         Mask.hide()
-        modal.classList.add('is-hidden')
+        modal.classList.add('hidden')
       })
     })
   }

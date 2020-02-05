@@ -14,7 +14,7 @@
 </head>
 <body>
   <div id="docs" class="site">
-    <aside class="site__sidebar">
+    <div class="site__sidebar">
       <header class="site__header">
         <a href="http://localhost:3000/" class="site__brand">
           <svg width="140" height="48" xmlns="http://www.w3.org/2000/svg">
@@ -34,10 +34,10 @@
         </div>
       </header>
       <nav id="sidenav" class="navigation">
-  <div class="navigation__group is-open">
+  <div class="navigation__group">
     <label class="navigation__label">GETTING STARTED</label>
     <div class="navigation__content">
-      <a href="http://localhost:3000/" class="navigation__link is-active">Introduction</a>
+      <a href="http://localhost:3000/" class="navigation__link">Introduction</a>
       <a href="http://localhost:3000/#installation" class="navigation__link">Installation</a>
       <a href="http://localhost:3000/#customization" class="navigation__link">Customization</a>
       <a href="http://localhost:3000/#browser-support" class="navigation__link">Browser Support</a>
@@ -50,7 +50,6 @@
     <div class="navigation__content">
       <a href="http://localhost:3000/layouts/flex-grid.html" class="navigation__link">Flex Grid</a>
       <a href="http://localhost:3000/layouts/level.html" class="navigation__link">Level</a>
-      <a href="http://localhost:3000/layouts/bullet.html" class="navigation__link">Bullet</a>
     </div>
   </div>
   <!-- END .navigation__group -->
@@ -67,26 +66,30 @@
     <label class="navigation__label">COMPONENTS</label>
     <div class="navigation__content">
       <a href="http://localhost:3000/components/badge.html" class="navigation__link">Badge</a>
+      <a href="http://localhost:3000/components/box.html" class="navigation__link">Box</a>
+      <a href="http://localhost:3000/components/breadcrumb.html" class="navigation__link">Breadcrumb</a>
       <a href="http://localhost:3000/components/button.html" class="navigation__link">Button</a>
       <a href="http://localhost:3000/components/form.html" class="navigation__link">Form</a>
       <a href="http://localhost:3000/components/hint.html" class="navigation__link">Hint</a>
-      <a href="http://localhost:3000/components/icons.html" class="navigation__link">Icons</a>
-      <a href="http://localhost:3000/components/box.html" class="navigation__link">Box</a>
-      <a href="http://localhost:3000/components/note.html" class="navigation__link">Note</a>
       <a href="http://localhost:3000/components/list.html" class="navigation__link">List</a>
-      <a href="http://localhost:3000/components/progress.html" class="navigation__link">Progress</a>
+      <a href="http://localhost:3000/components/modal.html" class="navigation__link">Modal</a>
       <a href="http://localhost:3000/components/nav.html" class="navigation__link">Nav</a>
       <a href="http://localhost:3000/components/navbar.html" class="navigation__link">Navbar</a>
-      <a href="http://localhost:3000/components/breadcrumb.html" class="navigation__link">Breadcrumb</a>
+      <a href="http://localhost:3000/components/note.html" class="navigation__link">Note</a>
       <a href="http://localhost:3000/components/pagination.html" class="navigation__link">Pagination</a>
-      <a href="http://localhost:3000/components/modal.html" class="navigation__link">Modal</a>
+      <a href="http://localhost:3000/components/popover.html" class="navigation__link">Popover</a>
+      <a href="http://localhost:3000/components/progress.html" class="navigation__link">Progress</a>
     </div>
   </div>
   <!-- END .navigation__group -->
   <div class="navigation__group">
     <label class="navigation__label">UTILITIES</label>
     <div class="navigation__content">
-      <a href="http://localhost:3000/utilities/helpers.html" class="navigation__link">Helpers</a>
+      <a href="http://localhost:3000/utilities/color.html" class="navigation__link">Color</a>
+      <a href="http://localhost:3000/utilities/elevation.html" class="navigation__link">Elevation</a>
+      <a href="http://localhost:3000/utilities/layout.html" class="navigation__link">Layout</a>
+      <a href="http://localhost:3000/utilities/spacing.html" class="navigation__link">Spacing</a>
+      <a href="http://localhost:3000/utilities/text.html" class="navigation__link">Text</a>
     </div>
   </div>
   <!-- END .navigation__group -->
@@ -96,26 +99,21 @@
         <p>Designed and built by <a href="http://moyu.io">MOYU</a></p>
         <p>Licensed under the <a href="https://github.com/moyus/point/blob/master/LICENSE">MIT License</a></p>
       </footer>
-    </aside>
+    </div>
     <!-- END .site__sidebar -->
     <main id="main" class="site__main" role="main">
       <article class="article">
-        <div class="article__content">
-          <h1 id="modal"><span>Modal</span></h1><ul>
-<li><a href="#basic">Basic</a></li>
-<li><a href="#sizes">Sizes</a></li>
-</ul>
+        <h1 id="modal"><span>Modal</span></h1><p>A floating layer to get user&#39;s feedback or display information.</p>
 <h2 id="basic">
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
-    </h2><p>To <strong>hide</strong> the modal, just add the <code>.is-hidden</code> state class on the <code>.modal-container</code> wrapper.</p>
-<p><button class="btn btn--primary js-modal-trigger u-mb-15" data-target="exampleModal">Launch modal</button></p>
-<div id="exampleModal" class="modal-container is-hidden">
+    </h2><p><button class="btn js-modal-trigger mb-5" data-target="exampleModal">Open Modal</button></p>
+<div id="exampleModal" class="modal-wrapper hidden">
   <section class="modal">
     <header class="modal__header">
       <h4 class="modal__title">Modal Title</h4>
       <a role="button" class="modal__close js-modal-close">
-        <i class="i-remove"></i>
+        <span aria-hidden="true">&times;</span>
       </a>
     </header>
     <div class="modal__body">
@@ -129,19 +127,19 @@
 </div>
 
 <pre><code class="language-html">&lt;body&gt;
-  &lt;div id=&quot;exampleModal&quot; class=&quot;modal-container&quot;&gt;
+  &lt;div id=&quot;exampleModal&quot; class=&quot;modal-wrapper&quot;&gt;
     &lt;section class=&quot;modal&quot;&gt;
       &lt;header class=&quot;modal__header&quot;&gt;
         &lt;h4 class=&quot;modal__title&quot;&gt;Modal Title&lt;/h4&gt;
-        &lt;a role=&quot;button&quot; class=&quot;modal__close&quot;&gt;
-          &lt;i class=&quot;i-remove&quot;&gt;&lt;/i&gt;
+        &lt;a role=&quot;button&quot; class=&quot;modal__close js-modal-close&quot;&gt;
+          &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
         &lt;/a&gt;
       &lt;/header&gt;
       &lt;div class=&quot;modal__body&quot;&gt;
           &quot;You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist.&quot;
       &lt;/div&gt;
       &lt;footer class=&quot;modal__footer&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Close&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn js-modal-close&quot;&gt;Close&lt;/button&gt;
           &lt;button type=&quot;button&quot; class=&quot;btn btn--primary&quot;&gt;Ok&lt;/button&gt;
       &lt;/footer&gt;
     &lt;/section&gt;
@@ -149,25 +147,27 @@
 
   &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<div class="note note--warning u-mt-40">
-Point does <strong>not</strong> include any JavaScript interaction with <strong>Modal</strong>. You need to implement the class toggle yourself.
+<div class="note note--warning my-5">
+  <p>
+    pointcss does <strong>not</strong> include any JavaScript interaction with <strong>Modal</strong>. You need to implement the class toggle by yourself.
+  </p>
 </div>
 
-<h2 id="sizes">
-    <a name="sizes" class="anchor" href="#sizes"></a>
-    Sizes
-    </h2><p>Add <code>.modal--sm</code> or <code>.modal--lg</code> modifier class on <code>.modal</code> element to quickly change the size of modal content.</p>
-<div class="u-mb-15">
-  <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="smModal">Small Modal</button>
-  <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="lgModal">Large Modal</button>
+<h2 id="sizing">
+    <a name="sizing" class="anchor" href="#sizing"></a>
+    Sizing
+    </h2><p>Add <code>.modal--sm</code> or <code>.modal--lg</code> modifier class on <code>.modal</code> element to quickly change the size of modal content</p>
+<div class="mb-5">
+  <button class="btn js-modal-trigger" data-target="smModal">Small Modal</button>
+  <button class="btn js-modal-trigger" data-target="lgModal">Large Modal</button>
 </div>
 
-<div id="smModal" class="modal-container is-hidden">
+<div id="smModal" class="modal-wrapper hidden">
   <section class="modal modal--sm">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
       <a role="button" class="modal__close js-modal-close">
-        <i class="i-remove"></i>
+        <span aria-hidden="true">&times;</span>
       </a>
     </header>
     <div class="modal__body">
@@ -185,12 +185,12 @@ Point does <strong>not</strong> include any JavaScript interaction with <strong>
   </section>
 </div>
 
-<div id="lgModal" class="modal-container is-hidden">
+<div id="lgModal" class="modal-wrapper hidden">
   <section class="modal modal--lg">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
       <a role="button" class="modal__close js-modal-close">
-        <i class="i-remove"></i>
+        <span aria-hidden="true">&times;</span>
       </a>
     </header>
     <div class="modal__body">
@@ -208,26 +208,31 @@ Point does <strong>not</strong> include any JavaScript interaction with <strong>
   </section>
 </div>
 
-<pre><code class="language-html">&lt;div id=&quot;smModal&quot; class=&quot;modal-container&quot;&gt;
+<pre><code class="language-html">&lt;div id=&quot;smModal&quot; class=&quot;modal-wrapper&quot;&gt;
   &lt;section class=&quot;modal modal--sm&quot;&gt;
     ...
   &lt;/section&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;lgModal&quot; class=&quot;modal-container&quot;&gt;
+&lt;div id=&quot;lgModal&quot; class=&quot;modal-wrapper&quot;&gt;
   &lt;section class=&quot;modal modal--lg&quot;&gt;
     ...
   &lt;/section&gt;
 &lt;/div&gt;</code></pre>
 
-        </div>
-        <nav class="article__catalogue">
-          
-        </nav>
       </article>
     </main>
     <!-- END .site__main -->
+    <nav class="site__catalogue">
+      
+      <a href="#basic">Basic</a>
+      
+      <a href="#sizing">Sizing</a>
+      
+    </nav>
+    <!-- END .site__catalogue -->
   </div>
+  <!-- END .site -->
   <script src="http://localhost:3000/js/prism.js"></script>
   <script src="http://localhost:3000/js/main.js"></script>
 </body>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Tables - Point</title>
+  <title> Table - Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
   <link rel="shortcut icon" href="http://localhost:3000/images/favicon.ico" />
@@ -14,7 +14,7 @@
 </head>
 <body>
   <div id="docs" class="site">
-    <aside class="site__sidebar">
+    <div class="site__sidebar">
       <header class="site__header">
         <a href="http://localhost:3000/" class="site__brand">
           <svg width="140" height="48" xmlns="http://www.w3.org/2000/svg">
@@ -34,10 +34,10 @@
         </div>
       </header>
       <nav id="sidenav" class="navigation">
-  <div class="navigation__group is-open">
+  <div class="navigation__group">
     <label class="navigation__label">GETTING STARTED</label>
     <div class="navigation__content">
-      <a href="http://localhost:3000/" class="navigation__link is-active">Introduction</a>
+      <a href="http://localhost:3000/" class="navigation__link">Introduction</a>
       <a href="http://localhost:3000/#installation" class="navigation__link">Installation</a>
       <a href="http://localhost:3000/#customization" class="navigation__link">Customization</a>
       <a href="http://localhost:3000/#browser-support" class="navigation__link">Browser Support</a>
@@ -50,7 +50,6 @@
     <div class="navigation__content">
       <a href="http://localhost:3000/layouts/flex-grid.html" class="navigation__link">Flex Grid</a>
       <a href="http://localhost:3000/layouts/level.html" class="navigation__link">Level</a>
-      <a href="http://localhost:3000/layouts/bullet.html" class="navigation__link">Bullet</a>
     </div>
   </div>
   <!-- END .navigation__group -->
@@ -67,26 +66,30 @@
     <label class="navigation__label">COMPONENTS</label>
     <div class="navigation__content">
       <a href="http://localhost:3000/components/badge.html" class="navigation__link">Badge</a>
+      <a href="http://localhost:3000/components/box.html" class="navigation__link">Box</a>
+      <a href="http://localhost:3000/components/breadcrumb.html" class="navigation__link">Breadcrumb</a>
       <a href="http://localhost:3000/components/button.html" class="navigation__link">Button</a>
       <a href="http://localhost:3000/components/form.html" class="navigation__link">Form</a>
       <a href="http://localhost:3000/components/hint.html" class="navigation__link">Hint</a>
-      <a href="http://localhost:3000/components/icons.html" class="navigation__link">Icons</a>
-      <a href="http://localhost:3000/components/box.html" class="navigation__link">Box</a>
-      <a href="http://localhost:3000/components/note.html" class="navigation__link">Note</a>
       <a href="http://localhost:3000/components/list.html" class="navigation__link">List</a>
-      <a href="http://localhost:3000/components/progress.html" class="navigation__link">Progress</a>
+      <a href="http://localhost:3000/components/modal.html" class="navigation__link">Modal</a>
       <a href="http://localhost:3000/components/nav.html" class="navigation__link">Nav</a>
       <a href="http://localhost:3000/components/navbar.html" class="navigation__link">Navbar</a>
-      <a href="http://localhost:3000/components/breadcrumb.html" class="navigation__link">Breadcrumb</a>
+      <a href="http://localhost:3000/components/note.html" class="navigation__link">Note</a>
       <a href="http://localhost:3000/components/pagination.html" class="navigation__link">Pagination</a>
-      <a href="http://localhost:3000/components/modal.html" class="navigation__link">Modal</a>
+      <a href="http://localhost:3000/components/popover.html" class="navigation__link">Popover</a>
+      <a href="http://localhost:3000/components/progress.html" class="navigation__link">Progress</a>
     </div>
   </div>
   <!-- END .navigation__group -->
   <div class="navigation__group">
     <label class="navigation__label">UTILITIES</label>
     <div class="navigation__content">
-      <a href="http://localhost:3000/utilities/helpers.html" class="navigation__link">Helpers</a>
+      <a href="http://localhost:3000/utilities/color.html" class="navigation__link">Color</a>
+      <a href="http://localhost:3000/utilities/elevation.html" class="navigation__link">Elevation</a>
+      <a href="http://localhost:3000/utilities/layout.html" class="navigation__link">Layout</a>
+      <a href="http://localhost:3000/utilities/spacing.html" class="navigation__link">Spacing</a>
+      <a href="http://localhost:3000/utilities/text.html" class="navigation__link">Text</a>
     </div>
   </div>
   <!-- END .navigation__group -->
@@ -96,23 +99,15 @@
         <p>Designed and built by <a href="http://moyu.io">MOYU</a></p>
         <p>Licensed under the <a href="https://github.com/moyus/point/blob/master/LICENSE">MIT License</a></p>
       </footer>
-    </aside>
+    </div>
     <!-- END .site__sidebar -->
     <main id="main" class="site__main" role="main">
       <article class="article">
-        <div class="article__content">
-          <h1 id="tables"><span>Tables</span></h1><ul>
-<li><a href="#basic">Basic</a></li>
-<li><a href="#striped">Striped</a></li>
-<li><a href="#hover">Hover</a></li>
-<li><a href="#bordered">Bordered</a></li>
-<li><a href="#responsive">Responsive</a></li>
-</ul>
-<h2 id="basic">
+        <h1 id="table"><span>Table</span></h1><h2 id="basic">
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
-    </h2><p>Applying <code>.table</code> class on <code>table</code> element to quick create a styled table.</p>
-<table class="table">
+    </h2><p>Applying <code>.table</code> class on <code>&lt;table&gt;</code> element to quick create a styled table.</p>
+<table class="table mb-5">
   <thead>
     <tr>
       <th>ID</th>
@@ -183,8 +178,8 @@
 <h2 id="striped">
     <a name="striped" class="anchor" href="#striped"></a>
     Striped
-    </h2><p>By adding <code>.table--striped</code> modifier class on <code>.table</code> element to quick create a striped table.</p>
-<table class="table table--striped">
+    </h2><p>By adding <code>.table--striped</code> modifier class on <code>&lt;table class=&quot;table&quot;&gt;</code> element to quick create a striped table.</p>
+<table class="table table--striped mb-5">
   <thead>
     <tr>
       <th>ID</th>
@@ -264,8 +259,8 @@
 <h2 id="hover">
     <a name="hover" class="anchor" href="#hover"></a>
     Hover
-    </h2><p>By adding <code>.table--hover</code> modifier class on <code>.table</code> element to quick create a table with hover effect.</p>
-<table class="table table--hover">
+    </h2><p>By adding <code>.table--hover</code> modifier class on <code>&lt;table class=&quot;table&quot;&gt;</code> element to quick create a table with hover effect.</p>
+<table class="table table--hover mb-5">
   <thead>
     <tr>
       <th>ID</th>
@@ -345,8 +340,8 @@
 <h2 id="bordered">
     <a name="bordered" class="anchor" href="#bordered"></a>
     Bordered
-    </h2><p>By adding <code>.table--bordered</code> modifier class on <code>.table</code> element to quick create a table with border.</p>
-<table class="table table--striped table--bordered">
+    </h2><p>By adding <code>.table--bordered</code> modifier class on <code>&lt;table class=&quot;table&quot;&gt;</code> element to quick create a table with border.</p>
+<table class="table table--bordered mb-5">
   <thead>
     <tr>
       <th>ID</th>
@@ -402,7 +397,7 @@
   </tbody>
 </table>
 
-<pre><code class="language-html">&lt;table class=&quot;table table--striped table--bordered&quot;&gt;
+<pre><code class="language-html">&lt;table class=&quot;table table--bordered&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;ID&lt;/th&gt;
@@ -423,15 +418,148 @@
     ...
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+<h2 id="spacing">
+    <a name="spacing" class="anchor" href="#spacing"></a>
+    Spacing
+    </h2><p>Use <code>.list--compact</code>, <code>.list--loose</code> modifier classes on <code>.list</code> container to change cell spacing</p>
+<table class="table table--bordered table--compact mb-5">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Boyle Monroe</td>
+      <td>29</td>
+      <td>male</td>
+      <td>QUANTALIA</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Leticia Lynn</td>
+      <td>30</td>
+      <td>female</td>
+      <td>UTARA</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Steele Le</td>
+      <td>24</td>
+      <td>male</td>
+      <td>TERSANKI</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Imelda Clarke</td>
+      <td>32</td>
+      <td>female</td>
+      <td>TALENDULA</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Eugenia Orr</td>
+      <td>30</td>
+      <td>female</td>
+      <td>OMNIGOG</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Ellis Brown</td>
+      <td>40</td>
+      <td>male</td>
+      <td>KANGLE</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table--bordered table--loose mb-5">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Boyle Monroe</td>
+      <td>29</td>
+      <td>male</td>
+      <td>QUANTALIA</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Leticia Lynn</td>
+      <td>30</td>
+      <td>female</td>
+      <td>UTARA</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Steele Le</td>
+      <td>24</td>
+      <td>male</td>
+      <td>TERSANKI</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Imelda Clarke</td>
+      <td>32</td>
+      <td>female</td>
+      <td>TALENDULA</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Eugenia Orr</td>
+      <td>30</td>
+      <td>female</td>
+      <td>OMNIGOG</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Ellis Brown</td>
+      <td>40</td>
+      <td>male</td>
+      <td>KANGLE</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre><code class="language-html">&lt;table class=&quot;table table--bordered table--compact&quot;&gt;
+  &lt;thead&gt;
+    ...
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class=&quot;table table--bordered table--loose&quot;&gt;
+  &lt;thead&gt;
+    ...
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
 <h2 id="responsive">
     <a name="responsive" class="anchor" href="#responsive"></a>
     Responsive
-    </h2><p>The responsive table below is made with pure css code.</p>
+    </h2><p>The responsive table below is made with pure css code</p>
 <ul>
-<li>First, add <code>.table--responsive</code> on <code>.table</code> element</li>
-<li>Then, add <code>data-label=&quot;column label&quot;</code> on each <code>td</code> element with every <code>tr</code> table row.</li>
+<li>First, add <code>.table--collapse@&lt;breakpoint&gt;</code> on <code>&lt;table class=&quot;table&quot;&gt;</code> element</li>
+<li>Then, add <code>data-label=&quot;column label&quot;</code> on each <code>&lt;td&gt;</code> element with every <code>&lt;tr&gt;</code> table row</li>
 </ul>
-<table class="table table--responsive">
+<table class="table table--collapse@md mb-5">
   <thead>
     <tr>
       <th>#</th>
@@ -490,7 +618,7 @@
   </tbody>
 </table>
 
-<pre><code class="language-html">&lt;table class=&quot;table table--responsive&quot;&gt;
+<pre><code class="language-html">&lt;table class=&quot;table table--collapse@md&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;#&lt;/th&gt;
@@ -523,14 +651,27 @@
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
 
-        </div>
-        <nav class="article__catalogue">
-          
-        </nav>
       </article>
     </main>
     <!-- END .site__main -->
+    <nav class="site__catalogue">
+      
+      <a href="#basic">Basic</a>
+      
+      <a href="#striped">Striped</a>
+      
+      <a href="#hover">Hover</a>
+      
+      <a href="#bordered">Bordered</a>
+      
+      <a href="#spacing">Spacing</a>
+      
+      <a href="#responsive">Responsive</a>
+      
+    </nav>
+    <!-- END .site__catalogue -->
   </div>
+  <!-- END .site -->
   <script src="http://localhost:3000/js/prism.js"></script>
   <script src="http://localhost:3000/js/main.js"></script>
 </body>

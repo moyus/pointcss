@@ -1,0 +1,39 @@
+pre,
+code,
+kbd,
+samp {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: "Source Code Pro", "Hack", "Monaco", "Inconsolata", monospace;
+  line-height: $line-height-normal;
+}
+
+code {
+  color: #ed6c63;
+  font-size: $text-size-sm;
+  font-weight: normal;
+  padding: 1px 3px 3px;
+  background: #f5f7fa;
+  word-wrap: break-word;
+}
+
+pre {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: $spacing-stack-lg;
+  padding: $spacing-inset-md;
+  background: #f5f7fa;
+  color: #69707a;
+  font-size: $text-size-sm;
+  overflow: auto;
+
+  code {
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+    border-radius: 0;
+    word-break: normal;
+    background: transparent;
+  }
+}

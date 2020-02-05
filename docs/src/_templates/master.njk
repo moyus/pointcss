@@ -14,7 +14,7 @@
 </head>
 <body>
   <div id="docs" class="site">
-    <aside class="site__sidebar">
+    <div class="site__sidebar">
       <header class="site__header">
         <a href="{{site.url}}" class="site__brand">
           <svg width="140" height="48" xmlns="http://www.w3.org/2000/svg">
@@ -38,22 +38,22 @@
         <p>Designed and built by <a href="{{site.author}}">MOYU</a></p>
         <p>Licensed under the <a href="{{site.license}}">MIT License</a></p>
       </footer>
-    </aside>
+    </div>
     <!-- END .site__sidebar -->
     <main id="main" class="site__main" role="main">
       <article class="article">
-        <div class="article__content">
-          {% block content %}{% endblock %}
-        </div>
-        <nav class="article__catalogue">
-          {% for item in page.catalogue %}
-          <a href="#{{ item | lower | replace(' ', '-') }}">{{ item }}</a>
-          {% endfor %}
-        </nav>
+        {% block content %}{% endblock %}
       </article>
     </main>
     <!-- END .site__main -->
+    <nav class="site__catalogue">
+      {% for item in page.catalogue %}
+      <a href="#{{ item | lower | replace(' ', '-') }}">{{ item }}</a>
+      {% endfor %}
+    </nav>
+    <!-- END .site__catalogue -->
   </div>
+  <!-- END .site -->
   <script src="{{site.url}}js/prism.js"></script>
   <script src="{{site.url}}js/main.js"></script>
 </body>

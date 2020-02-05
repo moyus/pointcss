@@ -14,7 +14,7 @@
 </head>
 <body>
   <div id="docs" class="site">
-    <aside class="site__sidebar">
+    <div class="site__sidebar">
       <header class="site__header">
         <a href="http://localhost:3000/" class="site__brand">
           <svg width="140" height="48" xmlns="http://www.w3.org/2000/svg">
@@ -34,10 +34,10 @@
         </div>
       </header>
       <nav id="sidenav" class="navigation">
-  <div class="navigation__group is-open">
+  <div class="navigation__group">
     <label class="navigation__label">GETTING STARTED</label>
     <div class="navigation__content">
-      <a href="http://localhost:3000/" class="navigation__link is-active">Introduction</a>
+      <a href="http://localhost:3000/" class="navigation__link">Introduction</a>
       <a href="http://localhost:3000/#installation" class="navigation__link">Installation</a>
       <a href="http://localhost:3000/#customization" class="navigation__link">Customization</a>
       <a href="http://localhost:3000/#browser-support" class="navigation__link">Browser Support</a>
@@ -50,7 +50,6 @@
     <div class="navigation__content">
       <a href="http://localhost:3000/layouts/flex-grid.html" class="navigation__link">Flex Grid</a>
       <a href="http://localhost:3000/layouts/level.html" class="navigation__link">Level</a>
-      <a href="http://localhost:3000/layouts/bullet.html" class="navigation__link">Bullet</a>
     </div>
   </div>
   <!-- END .navigation__group -->
@@ -67,26 +66,30 @@
     <label class="navigation__label">COMPONENTS</label>
     <div class="navigation__content">
       <a href="http://localhost:3000/components/badge.html" class="navigation__link">Badge</a>
+      <a href="http://localhost:3000/components/box.html" class="navigation__link">Box</a>
+      <a href="http://localhost:3000/components/breadcrumb.html" class="navigation__link">Breadcrumb</a>
       <a href="http://localhost:3000/components/button.html" class="navigation__link">Button</a>
       <a href="http://localhost:3000/components/form.html" class="navigation__link">Form</a>
       <a href="http://localhost:3000/components/hint.html" class="navigation__link">Hint</a>
-      <a href="http://localhost:3000/components/icons.html" class="navigation__link">Icons</a>
-      <a href="http://localhost:3000/components/box.html" class="navigation__link">Box</a>
-      <a href="http://localhost:3000/components/note.html" class="navigation__link">Note</a>
       <a href="http://localhost:3000/components/list.html" class="navigation__link">List</a>
-      <a href="http://localhost:3000/components/progress.html" class="navigation__link">Progress</a>
+      <a href="http://localhost:3000/components/modal.html" class="navigation__link">Modal</a>
       <a href="http://localhost:3000/components/nav.html" class="navigation__link">Nav</a>
       <a href="http://localhost:3000/components/navbar.html" class="navigation__link">Navbar</a>
-      <a href="http://localhost:3000/components/breadcrumb.html" class="navigation__link">Breadcrumb</a>
+      <a href="http://localhost:3000/components/note.html" class="navigation__link">Note</a>
       <a href="http://localhost:3000/components/pagination.html" class="navigation__link">Pagination</a>
-      <a href="http://localhost:3000/components/modal.html" class="navigation__link">Modal</a>
+      <a href="http://localhost:3000/components/popover.html" class="navigation__link">Popover</a>
+      <a href="http://localhost:3000/components/progress.html" class="navigation__link">Progress</a>
     </div>
   </div>
   <!-- END .navigation__group -->
   <div class="navigation__group">
     <label class="navigation__label">UTILITIES</label>
     <div class="navigation__content">
-      <a href="http://localhost:3000/utilities/helpers.html" class="navigation__link">Helpers</a>
+      <a href="http://localhost:3000/utilities/color.html" class="navigation__link">Color</a>
+      <a href="http://localhost:3000/utilities/elevation.html" class="navigation__link">Elevation</a>
+      <a href="http://localhost:3000/utilities/layout.html" class="navigation__link">Layout</a>
+      <a href="http://localhost:3000/utilities/spacing.html" class="navigation__link">Spacing</a>
+      <a href="http://localhost:3000/utilities/text.html" class="navigation__link">Text</a>
     </div>
   </div>
   <!-- END .navigation__group -->
@@ -96,124 +99,185 @@
         <p>Designed and built by <a href="http://moyu.io">MOYU</a></p>
         <p>Licensed under the <a href="https://github.com/moyus/point/blob/master/LICENSE">MIT License</a></p>
       </footer>
-    </aside>
+    </div>
     <!-- END .site__sidebar -->
     <main id="main" class="site__main" role="main">
       <article class="article">
-        <div class="article__content">
-          <h1 id="box"><span>Box</span></h1><ul>
-<li><a href="#box">Box</a><ul>
-<li><a href="#basic">Basic</a></li>
-<li><a href="#types">Types</a></li>
-</ul>
-</li>
-</ul>
+        <h1 id="box"><span>Box</span></h1><p>Group structured content into box.</p>
 <h2 id="basic">
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
-    </h2><p>Sometimes you have groups of content and need to put them in boxes. In those
-situations, try the Box component.</p>
-<div class="box">
+    </h2><section class="box">
   <header class="box__header">Box Title</header>
   <div class="box__body">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-    </p>
+    <div class="box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
   </div>
-</div>
+</section>
 
-<pre><code class="language-html">&lt;div class=&quot;box&quot;&gt;
+<pre><code class="language-html">&lt;section class=&quot;box&quot;&gt;
   &lt;header class=&quot;box__header&quot;&gt;Box Title&lt;/header&gt;
   &lt;div class=&quot;box__body&quot;&gt;
-    &lt;p&gt;
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-    &lt;/p&gt;
+    &lt;div class=&quot;box__inner&quot;&gt;
+      ...
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-<h2 id="types">
-    <a name="types" class="anchor" href="#types"></a>
-    Types
-    </h2><p>By adding the following modifier classes on <code>.box</code> container to quick create different styled Box</p>
+&lt;/section&gt;</code></pre>
+<h2 id="variants">
+    <a name="variants" class="anchor" href="#variants"></a>
+    Variants
+    </h2><p>By adding the following theme modifier classes on <code>.box</code> container to quick create different styled Box</p>
 <ul>
 <li><code>box--info</code></li>
 <li><code>box--danger</code></li>
 <li><code>box--success</code></li>
 <li><code>box--warning</code></li>
 </ul>
-<div class="box box--info">
+<section class="box box--info">
   <header class="box__header">Info Box</header>
   <div class="box__body">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-    </p>
+    <div class="box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
   </div>
-</div>
+</section>
 <!-- END .box -->
-<div class="box box--danger">
+<section class="box box--danger">
   <header class="box__header">Danger Box</header>
   <div class="box__body">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-    </p>
+    <div class="box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
   </div>
-</div>
+</section>
 <!-- END .box -->
-<div class="box box--success">
+<section class="box box--success">
   <header class="box__header">Success Box</header>
   <div class="box__body">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-    </p>
+    <div class="box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
   </div>
-</div>
+</section>
 <!-- END .box -->
-<div class="box box--warning">
+<section class="box box--warning">
   <header class="box__header">Warning Box</header>
   <div class="box__body">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-    </p>
+    <div class="box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
   </div>
-</div>
+</section>
 <!-- END .box -->
 
-<pre><code class="language-html">&lt;div class=&quot;box box--info&quot;&gt;
+<pre><code class="language-html">&lt;section class=&quot;box box--info&quot;&gt;
   &lt;header class=&quot;box__header&quot;&gt;Info Box&lt;/header&gt;
   &lt;div class=&quot;box__body&quot;&gt;
-    // ...
+    &lt;div class=&quot;box__inner&quot;&gt;
+      ...
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 &lt;!-- END .box --&gt;
-&lt;div class=&quot;box box--danger&quot;&gt;
+&lt;section class=&quot;box box--danger&quot;&gt;
   &lt;header class=&quot;box__header&quot;&gt;Danger Box&lt;/header&gt;
   &lt;div class=&quot;box__body&quot;&gt;
-    // ...
+    &lt;div class=&quot;box__inner&quot;&gt;
+      ...
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 &lt;!-- END .box --&gt;
-&lt;div class=&quot;box box--success&quot;&gt;
+&lt;section class=&quot;box box--success&quot;&gt;
   &lt;header class=&quot;box__header&quot;&gt;Success Box&lt;/header&gt;
   &lt;div class=&quot;box__body&quot;&gt;
-    // ...
+    &lt;div class=&quot;box__inner&quot;&gt;
+      ...
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 &lt;!-- END .box --&gt;
-&lt;div class=&quot;box box--warning&quot;&gt;
+&lt;section class=&quot;box box--warning&quot;&gt;
   &lt;header class=&quot;box__header&quot;&gt;Warning Box&lt;/header&gt;
   &lt;div class=&quot;box__body&quot;&gt;
-    // ...
+    &lt;div class=&quot;box__inner&quot;&gt;
+      ...
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 &lt;!-- END .box --&gt;</code></pre>
+<h2 id="accordion">
+    <a name="accordion" class="anchor" href="#accordion"></a>
+    Accordion
+    </h2><p>Pure HTML&amp;CSS accordion component without any JavaScript code</p>
+<details class="box">
+  <summary class="box__header">Accordion Box #1</summary>
+  <div class="box__body">
+    <div class="box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
+  </div>
+</details>
 
-        </div>
-        <nav class="article__catalogue">
-          
-        </nav>
+<details class="box">
+  <summary class="box__header">Accordion Box #2</summary>
+  <div class="box__body">
+    <div class="box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
+  </div>
+</details>
+
+<details class="box">
+  <summary class="box__header">Accordion Box #3</summary>
+  <div class="box__body">
+    <div class="box__inner">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
+      </p>
+    </div>
+  </div>
+</details>
+
+<pre><code class="language-html">&lt;details class=&quot;box&quot;&gt;
+  &lt;summary class=&quot;box__header&quot;&gt;Click Me&lt;/summary&gt;
+  &lt;div class=&quot;box__body&quot;&gt;
+    &lt;div class=&quot;box__inner&quot;&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;</code></pre>
+
       </article>
     </main>
     <!-- END .site__main -->
+    <nav class="site__catalogue">
+      
+      <a href="#basic">Basic</a>
+      
+      <a href="#variants">Variants</a>
+      
+      <a href="#accordion">Accordion</a>
+      
+    </nav>
+    <!-- END .site__catalogue -->
   </div>
+  <!-- END .site -->
   <script src="http://localhost:3000/js/prism.js"></script>
   <script src="http://localhost:3000/js/main.js"></script>
 </body>

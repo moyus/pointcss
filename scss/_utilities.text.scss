@@ -1,0 +1,59 @@
+.italic {
+  font-style: italic !important;
+}
+
+.no-italic {
+  font-style: normal !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.line-through {
+  text-decoration: line-through !important;
+}
+
+.truncate {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+@each $key, $value in $text-sizes {
+  .text-#{$key} {
+    font-size: $value !important;
+  }
+}
+
+@each $key, $value in $font-weights {
+  .font-#{$key} {
+    font-weight: $value !important;
+  }
+}
+
+@each $key, $value in $line-heights {
+  .line-#{$key} {
+    line-height:$value !important;
+  }
+}

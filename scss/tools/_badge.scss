@@ -4,18 +4,15 @@
   color: $text-color;
   background-color: $accent-color;
   
-  @at-root {
-    a#{&} {
-      cursor: pointer;
-      &:hover {
-        color: $text-color;
-        background-color: shade-color($accent-color, 1);
-      }
-      &:active {
-        color: $text-color;
-        background-color: shade-color($accent-color, 2);
-      }
+  &.badge--link {
+    cursor: pointer;
+    &:hover {
+      color: $text-color;
+      background-color: shade-color($accent-color, 1);
+    }
+    &:active {
+      color: $text-color;
+      background-color: shade-color($accent-color, 2);
     }
   }
-  
 }

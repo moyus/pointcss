@@ -1,8 +1,9 @@
 /* ## List
 ---------------------------------*/
 .list {
-  margin: 0;
+  position: relative;
   padding: 0;
+  margin: 0 0 $spacing-stack-lg;
   list-style: none;
 }
 
@@ -10,8 +11,8 @@
 .list__link {
   position: relative;
   display: block;
-  padding-top: $spacing-stack-base;
-  padding-bottom: $spacing-stack-base;
+  padding-top: nth($spacing-squish-md, 1);
+  padding-bottom: nth($spacing-squish-md, 1);
   background-color: $white;
 
   &:not(:first-child) {
@@ -27,58 +28,21 @@
   &:hover {
     background-color: $grey-light;
   }
-
-  &.is-active {
-    color: $white;
-    background-color: $color-primary;
-  }
-}
-
-.list--sm {
-  .list__item,
-  .list__link {
-    padding-top: $spacing-stack-sm;
-    padding-bottom: $spacing-stack-sm;
-  }
-
-  &.list--bordered,
-  &.list--inset {
-    .list__item {
-      padding-left: $spacing-stack-sm;
-      padding-right: $spacing-stack-sm;
-    }
-  }
-}
-
-.list--lg {
-  .list__item,
-  .list__link {
-    padding-top: $spacing-stack-lg;
-    padding-bottom: $spacing-stack-lg;
-  }
-
-  &.list--bordered,
-  &.list--inset {
-    .list__item,
-    .list__link {
-      padding-left: $spacing-stack-lg;
-      padding-right: $spacing-stack-lg;
-    }
-  }
 }
 
 .list--inset {
   .list__item,
   .list__link {
-    padding-left: $spacing-stack-base;
-      padding-right: $spacing-stack-base;
+    padding-left: nth($spacing-squish-md, 2);
+    padding-right: nth($spacing-squish-md, 2);
   }
 }
 
 .list--bordered {
   .list__item,
   .list__link {
-    padding: $spacing-stack-base;
+    padding-left: nth($spacing-squish-md, 2);
+    padding-right: nth($spacing-squish-md, 2);
     border: 1px solid $grey-weak;
     margin-bottom: -1px;
 
@@ -95,11 +59,34 @@
   }
 }
 
-.list--transparent {
+.list--compact {
   .list__item,
   .list__link {
-    background-color: transparent;
+    padding-top: nth($spacing-squish-sm, 1);
+    padding-bottom: nth($spacing-squish-sm, 1);
+  }
+
+  &.list--bordered,
+  &.list--inset {
+    .list__item {
+      padding-left: nth($spacing-squish-sm, 2);
+      padding-right: nth($spacing-squish-sm, 2);
+    }
   }
 }
 
+.list--loose {
+  .list__item,
+  .list__link {
+    padding-top: nth($spacing-squish-xl, 1);
+    padding-bottom: nth($spacing-squish-xl, 1);
+  }
 
+  &.list--bordered,
+  &.list--inset {
+    .list__item {
+      padding-left: nth($spacing-squish-xl, 2);
+      padding-right: nth($spacing-squish-xl, 2);
+    }
+  }
+}

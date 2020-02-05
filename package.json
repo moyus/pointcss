@@ -31,14 +31,13 @@
     "web"
   ],
   "browserslist": [
-    "Chrome >= 35",
-    "Firefox >= 38",
+    "Chrome >= 60",
+    "Firefox >= 60",
     "Edge >= 12",
-    "Explorer >= 10",
-    "iOS >= 8",
-    "Safari >= 8",
-    "Android >= 4",
-    "Opera >= 12"
+    "Explorer 11",
+    "iOS >= 10",
+    "Safari >= 10",
+    "Android >= 5"
   ],
   "scripts": {
     "start": "gulp dev",

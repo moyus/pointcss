@@ -21,22 +21,33 @@ th {
 
   th, td {
     text-align: left;
-    padding: $spacing-squish-base;
+    padding: $spacing-squish-md;
     vertical-align: middle;
-    border-top: 1px solid $grey-thin;
   }
 
-  thead th,
-  tfoot th {
-    background-color: $grey-light;
-  }
-
-  tbody + tbody {
-    border-top: 2px solid $grey-weak;
+  tbody {
+    th, td {
+      border-top: 1px solid $grey-thin;
+    }
   }
 }
 
-// modifiers
+.table.table--compact {
+  th, td {
+    text-align: left;
+    padding: $spacing-squish-sm;
+    vertical-align: middle;
+  }
+}
+
+.table.table--loose {
+  th, td {
+    text-align: left;
+    padding: $spacing-squish-xl;
+    vertical-align: middle;
+  }
+}
+
 .table.table--striped {
   > tr:nth-of-type(even),
   tbody tr:nth-of-type(even) {
@@ -54,7 +65,7 @@ th {
 .table.table--hover {
   tbody tr:hover,
   > tr:hover {
-    background-color: shade-color($grey-light, 1);
+    background-color: tint-color($grey-light, 1);
   }
 }
 

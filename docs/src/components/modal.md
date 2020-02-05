@@ -1,23 +1,25 @@
 ---
 layout: master
 title: "Modal"
+catalogue:
+  - Basic
+  - Sizing
 ---
 
 # Modal
-- [Basic](#basic)
-- [Sizes](#sizes)
+
+A floating layer to get user's feedback or display information.
 
 ## Basic
-To **hide** the modal, just add the `.is-hidden` state class on the `.modal-container` wrapper.
 
-<button class="btn btn--primary js-modal-trigger u-mb-15" data-target="exampleModal">Launch modal</button>
+<button class="btn js-modal-trigger mb-5" data-target="exampleModal">Open Modal</button>
 
-<div id="exampleModal" class="modal-container is-hidden">
+<div id="exampleModal" class="modal-wrapper hidden">
   <section class="modal">
     <header class="modal__header">
       <h4 class="modal__title">Modal Title</h4>
       <a role="button" class="modal__close js-modal-close">
-        <i class="i-remove"></i>
+        <span aria-hidden="true">&times;</span>
       </a>
     </header>
     <div class="modal__body">
@@ -32,19 +34,19 @@ To **hide** the modal, just add the `.is-hidden` state class on the `.modal-cont
 
 ```html
 <body>
-  <div id="exampleModal" class="modal-container">
+  <div id="exampleModal" class="modal-wrapper">
     <section class="modal">
       <header class="modal__header">
         <h4 class="modal__title">Modal Title</h4>
-        <a role="button" class="modal__close">
-          <i class="i-remove"></i>
+        <a role="button" class="modal__close js-modal-close">
+          <span aria-hidden="true">&times;</span>
         </a>
       </header>
       <div class="modal__body">
           "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
       </div>
       <footer class="modal__footer">
-          <button type="button" class="btn">Close</button>
+          <button type="button" class="btn js-modal-close">Close</button>
           <button type="button" class="btn btn--primary">Ok</button>
       </footer>
     </section>
@@ -54,24 +56,27 @@ To **hide** the modal, just add the `.is-hidden` state class on the `.modal-cont
 </div>
 ```
 
-<div class="note note--warning u-mt-40">
-Point does <strong>not</strong> include any JavaScript interaction with <strong>Modal</strong>. You need to implement the class toggle yourself.
+<div class="note note--warning my-5">
+  <p>
+    pointcss does <strong>not</strong> include any JavaScript interaction with <strong>Modal</strong>. You need to implement the class toggle by yourself.
+  </p>
 </div>
 
-## Sizes
-Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly change the size of modal content.
+## Sizing
 
-<div class="u-mb-15">
-  <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="smModal">Small Modal</button>
-  <button class="u-mb-5 btn btn--primary js-modal-trigger" data-target="lgModal">Large Modal</button>
+Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly change the size of modal content
+
+<div class="mb-5">
+  <button class="btn js-modal-trigger" data-target="smModal">Small Modal</button>
+  <button class="btn js-modal-trigger" data-target="lgModal">Large Modal</button>
 </div>
 
-<div id="smModal" class="modal-container is-hidden">
+<div id="smModal" class="modal-wrapper hidden">
   <section class="modal modal--sm">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
       <a role="button" class="modal__close js-modal-close">
-        <i class="i-remove"></i>
+        <span aria-hidden="true">&times;</span>
       </a>
     </header>
     <div class="modal__body">
@@ -89,12 +94,12 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly c
   </section>
 </div>
 
-<div id="lgModal" class="modal-container is-hidden">
+<div id="lgModal" class="modal-wrapper hidden">
   <section class="modal modal--lg">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
       <a role="button" class="modal__close js-modal-close">
-        <i class="i-remove"></i>
+        <span aria-hidden="true">&times;</span>
       </a>
     </header>
     <div class="modal__body">
@@ -113,13 +118,13 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly c
 </div>
 
 ```html
-<div id="smModal" class="modal-container">
+<div id="smModal" class="modal-wrapper">
   <section class="modal modal--sm">
     ...
   </section>
 </div>
 
-<div id="lgModal" class="modal-container">
+<div id="lgModal" class="modal-wrapper">
   <section class="modal modal--lg">
     ...
   </section>

@@ -1,31 +1,52 @@
 // Color
 // -----------------------------------------------------------------------------
-$color-primary:                         #636AFF; // primary
-$color-danger:                          #ff2d20; // negative
-$color-success:                         #15CD72; // positive
-$color-info:                            #0069ff; // accent
-$color-warning:                         #ED6E33; // warning
+$color-primary:                         #636AFF !default; // primary
+$color-danger:                          #ff2d20 !default; // negative
+$color-success:                         #15CD72 !default; // positive
+$color-info:                            #0069ff !default; // accent
+$color-warning:                         #ED6E33 !default; // warning
 
 $black:                                 #000000 !default; // for color mix
 $grey-base:                             #212121 !default; // heading, text
 $grey-mute:                             #616161 !default; // secondary text, icon
-$grey-thin:                             #dddddd !default; // border, icon
+$grey-thin:                             #dbdbdb !default; // border, icon
 $grey-weak:                             #e5e5e5 !default; // divider, border
-$grey-shade:                            #e3e4e3 !default; // disabled state
+$grey-shade:                            #eeeeee !default; // disabled state
 $grey-light:                            #f7f7f7 !default; // white space area
 $white:                                 #ffffff !default; // for color mix
 
+$grey-colors: (
+  black: $black,
+  white: $white,
+  grey: $grey-base,
+  mute: $grey-mute,
+  thin: $grey-thin,
+  weak: $grey-weak,
+  shade: $grey-shade,
+  light: $grey-light
+) !default;
+
+$theme-colors: (  
+  primary: $color-primary,
+  danger: $color-danger,
+  success: $color-success,
+  info: $color-info,
+  warning: $color-warning
+) !default;
+
+$colors: map-merge($grey-colors, $theme-colors);
+
 // Index
 // -----------------------------------------------------------------------------
-$zIndex-1: 100;
-$zIndex-2: 200;
-$zIndex-3: 300;
-$zIndex-4: 400;
-$zIndex-5: 500;
-$zIndex-6: 600;
-$zIndex-7: 700;
-$zIndex-8: 800;
-$zIndex-9: 900;
+$zIndex-1: 100 !default;
+$zIndex-2: 200 !default;
+$zIndex-3: 300 !default;
+$zIndex-4: 400 !default;
+$zIndex-5: 500 !default;
+$zIndex-6: 600 !default;
+$zIndex-7: 700 !default;
+$zIndex-8: 800 !default;
+$zIndex-9: 900 !default;
 
 // Spacing
 // -----------------------------------------------------------------------------
@@ -39,6 +60,19 @@ $spacing-7:                             32px !default;
 $spacing-8:                             48px !default;
 $spacing-9:                             64px !default;
 $spacing-base:                          $spacing-3 !default;
+
+$spacings: (
+  0: 0,
+  1: $spacing-1,
+  2: $spacing-2,
+  3: $spacing-3,
+  4: $spacing-4,
+  5: $spacing-5,
+  6: $spacing-6,
+  7: $spacing-7,
+  8: $spacing-8,
+  9: $spacing-9
+) !default;
 
 // square inset
 $spacing-inset-xs:                      4px !default;
@@ -68,90 +102,100 @@ $spacing-stack-base:                    $spacing-stack-md !default;
 // Base
 // -----------------------------------------------------------------------------
 // paragraph, label
-$font-size-xs:                          12px;
-$font-size-sm:                          14px;
-$font-size-md:                          16px;
-$font-size-lg:                          18px;
+$text-size-xs:                          12px;
+$text-size-sm:                          14px;
+$text-size-md:                          16px;
+$text-size-lg:                          18px;
 // heading, display
-$font-size-xl:                          20px;
-$font-size-2xl:                         24px;
-$font-size-3xl:                         28px;
-$font-size-4xl:                         32px;
-$font-size-5xl:                         36px;
-$font-size-6xl:                         48px;
-$font-size-7xl:                         64px;
-$font-size-8xl:                         72px;
-$font-size-9xl:                         96px;
+$text-size-xl:                          20px;
+$text-size-2xl:                         24px;
+$text-size-3xl:                         28px;
+$text-size-4xl:                         32px;
+$text-size-5xl:                         36px;
+$text-size-6xl:                         48px;
+$text-size-7xl:                         64px;
+$text-size-8xl:                         72px;
+$text-size-9xl:                         96px;
 
-$line-height-tight:                     1.25;
-$line-height-compact:                   1.375;
-$line-height-normal:                    1.5;
-$line-height-relaxed:                   1.625;
-$line-height-loose:                     2;
+$text-size-base:                        $text-size-md !default;
 
-$font-weight-light:                     300;
-$font-weight-normal:                    400;
-$font-weight-medium:                    500;
-$font-weight-semi:                      600;
-$font-weight-bold:                      700;
-$font-weight-base:                      $font-weight-normal;
+$text-sizes: (
+  xs: $text-size-xs,
+  sm: $text-size-sm,
+  md: $text-size-md,
+  lg: $text-size-lg,
+  xl: $text-size-xl,
+  2xl: $text-size-2xl,
+  3xl: $text-size-3xl,
+  4xl: $text-size-4xl,
+  5xl: $text-size-5xl,
+  6xl: $text-size-6xl,
+  7xl: $text-size-7xl,
+  8xl: $text-size-8xl,
+  9xl: $text-size-9xl
+) !default;
 
-$font-family-display:                   'Open Sans', 'Roboto', 'Helvetica', sans-serif;
-$font-family-base:                      -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+$line-height-tight:                     1.25 !default;
+$line-height-compact:                   1.375 !default;
+$line-height-normal:                    1.5 !default;
+$line-height-relaxed:                   1.625 !default;
+$line-height-loose:                     2 !default;
 
-$h1-font-size:                          $font-size-5xl;
-$h2-font-size:                          $font-size-4xl;
-$h3-font-size:                          $font-size-3xl;
-$h4-font-size:                          $font-size-2xl;
-$h5-font-size:                          $font-size-xl;
-$h6-font-size:                          $font-size-lg;
+$line-heights: (
+  tight: $line-height-tight,
+  compact: $line-height-compact,
+  normal: $line-height-normal,
+  relaxed: $line-height-relaxed,
+  loose: $line-height-loose
+) !default;
 
-$heading-font-weight:                   $font-weight-medium;
-$heading-line-height:                   $line-height-tight;
-$heading-margin-top:                    $spacing-5 * 2;
-$heading-margin-bottom:                 $spacing-5;
+$font-weight-light:                     300 !default;
+$font-weight-normal:                    400 !default;
+$font-weight-medium:                    500 !default;
+$font-weight-semi:                      600 !default;
+$font-weight-bold:                      700 !default;
+$font-weight-base:                      $font-weight-normal !default;
 
-$display-xs-font-size:                  $font-size-6xl;
-$display-sm-font-size:                  $font-size-7xl;
-$display-md-font-size:                  $font-size-8xl;
-$display-lg-font-size:                  $font-size-9xl;
+$font-weights: (
+  light: $font-weight-light,
+  normal: $font-weight-normal,
+  medium: $font-weight-medium,
+  semi: $font-weight-semi,
+  bold: $font-weight-bold
+) !default;
 
-$display-font-weight:                   $font-weight-light;
-$display-line-height:                   $line-height-tight;
+$font-family-display:                   'Open Sans', 'Roboto', 'Helvetica', sans-serif !default;
+$font-family-base:                      -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif !default;
 
-$text-size-xs:                          $font-size-xs;
-$text-size-sm:                          $font-size-sm;
-$text-size-md:                          $font-size-md;
-$text-size-lg:                          $font-size-lg;
-$text-size-base:                        $text-size-md;
-$text-line-height:                      $line-height-normal;
-$text-font-weight:                      $font-weight-normal;
+$h1-font-size:                          $text-size-5xl !default;
+$h2-font-size:                          $text-size-4xl !default;
+$h3-font-size:                          $text-size-3xl !default;
+$h4-font-size:                          $text-size-2xl !default;
+$h5-font-size:                          $text-size-xl !default;
+$h6-font-size:                          $text-size-lg !default;
 
-$body-text-color:                       $grey-base;
-$body-font-size:                        $text-size-base;
-$body-line-height:                      $text-line-height;
-$body-font-family:                      $font-family-base;
-$body-bg:                               $white;
-$link-color:                            $color-primary;
+$heading-font-weight:                   $font-weight-medium !default;
+$heading-line-height:                   $line-height-tight !default;
+$heading-margin-top:                    $spacing-5 * 2 !default;
+$heading-margin-bottom:                 $spacing-5 !default;
 
-// Border
-$border-radius-sm:                      2px !default;
-$border-radius-md:                      3px !default;
-$border-radius-lg:                      5px !default;
-$border-radius-base:                    3px !default;
-
-// Table
-// $table-body-margin-top:                 $space-stack-s !default;
-// $table-td-padding-y:                    $space-squish-l-y !default;
-// $table-td-padding-x:                    $space-squish-l-x !default;
-// $table-border-width:                    $border-width !default;
-// $table-border-color:                    $border-color !default;
-// $table-accent-bg:                       $grey-lightest !default;
-// $table-strip-bg:                        $grey-lightest !default;
-// $table-hover-color:                     $grey-lightest !default;
+$body-text-color:                       $grey-base !default;
+$body-text-size:                        $text-size-base !default;
+$body-line-height:                      $line-height-normal !default;
+$body-font-family:                      $font-family-base !default;
+$body-bg:                               $white !default;
+$link-color:                            $color-primary !default;
 
 // Components
 // -----------------------------------------------------------------------------
+$border-radius-sm:                      2px !default;
+$border-radius-md:                      3px !default;
+$border-radius-lg:                      5px !default;
+
+$border-radius-base:                    $border-radius-md !default;
+$border-width-base:                     1px !default;
+$fill-bg:                               $white !default;
+
 // Grid
 $grid-columns:                          12 !default;
 $grid-gutter-width:                     16px !default;
@@ -268,11 +312,11 @@ $modal-width-sm:                           480px !default;
 $modal-width-md:                           600px !default;
 $modal-width-lg:                           900px !default;
 $modal-width-base:                         $modal-width-md !default;
-$modal-title-font-size:                    $font-size-xl !default;
+$modal-title-font-size:                    $text-size-xl !default;
 $modal-zIndex:                             $zIndex-9 !default;
-$modal-bg-color:                           $white !default;
+$modal-bg:                                 $white !default;
 $mask-zIndex:                              $zIndex-6 !default;
-$mask-bg-color:                            rgba($black,.5) !default;
+$mask-bg:                                  rgba($black, 0.5) !default;
 // // Nav
 // // -----------------------------------------------------------------------------
 // $nav-menus-item-margin-y:               $space-stack-xxs !default;

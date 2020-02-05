@@ -1,54 +1,71 @@
 ---
 layout: master
 title: "Progress"
+catalogue:
+  - Basic
+  - Variants
+  - Sizing
+  - State
 ---
 
 # Progress
-- [Types](#types)
-- [Sizes](#sizes)
-- [State](#state)
 
-## Types
+## Basic
 
-<div class="u-mb-15">
-  <div class="progress">
-    <div class="progress__bar" style="width: 50%;"></div>
-  </div>
-  <div class="progress progress--primary" value="0.3">
-    <div class="progress__bar" style="width: 30%;"></div>
-  </div>
-  <div class="progress progress--info" value="0.45">
-    <div class="progress__bar" style="width: 45%;"></div>
-  </div>
-  <div class="progress progress--danger" value="0.6">
-    <div class="progress__bar" style="width: 60%;"></div>
-  </div>
-  <div class="progress progress--warning" value="0.8">
-    <div class="progress__bar" style="width: 80%;"></div>
-  </div>
+<div class="progress">
+  <div class="progress__bar" style="width: 50%;"></div>
 </div>
 
 ```html
 <div class="progress">
   <div class="progress__bar" style="width: 50%;"></div>
 </div>
-<div class="progress progress--primary" value="0.3">
+```
+
+## Variants
+
+<div class="progress progress--primary">
+  <div class="progress__bar" style="width: 20%;"></div>
+</div>
+<div class="progress progress--info">
   <div class="progress__bar" style="width: 30%;"></div>
 </div>
-<div class="progress progress--info" value="0.45">
-  <div class="progress__bar" style="width: 45%;"></div>
+<div class="progress">
+  <div class="progress__bar" style="width: 40%;"></div>
 </div>
-<div class="progress progress--danger" value="0.6">
+<div class="progress progress--danger">
+  <div class="progress__bar" style="width: 50%;"></div>
+</div>
+<div class="progress progress--success">
   <div class="progress__bar" style="width: 60%;"></div>
 </div>
-<div class="progress progress--warning" value="0.8">
+<div class="progress progress--warning">
+  <div class="progress__bar" style="width: 70%;"></div>
+</div>
+
+```html
+<div class="progress">
+  <div class="progress__bar" style="width: 50%;"></div>
+</div>
+<div class="progress progress--primary" >
+  <div class="progress__bar" style="width: 20%;"></div>
+</div>
+<div class="progress progress--info">
+  <div class="progress__bar" style="width: 40%;"></div>
+</div>
+<div class="progress progress--danger">
+  <div class="progress__bar" style="width: 55%;"></div>
+</div>
+<div class="progress progress--success">
+    <div class="progress__bar" style="width: 70%;"></div>
+  </div>
+<div class="progress progress--warning">
   <div class="progress__bar" style="width: 80%;"></div>
 </div>
 ```
 
-## Sizes
-Fancy smaller or larger progress? Add `.progress--sm` or `.progress--lg` modifier
-class for additional sizes.
+## Sizing
+Fancy smaller or larger progress? Add `.progress--sm` or `.progress--lg` modifier class for additional sizes.
 
 <div class="u-mb-15">
   <div class="progress progress--sm">

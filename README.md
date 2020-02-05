@@ -11,12 +11,12 @@ There are 3 ways to get start
 
 ##### Yarn
 ```sh
-yarn add pointcass
+yarn add pointcss
 ```
 
 ##### NPM
 ```sh
-npm install pointcass --save
+npm install pointcss --save
 ```
 
 ##### Download and use production file

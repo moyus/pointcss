@@ -11,22 +11,22 @@ body {
 ---------------------------------*/
 .site {
   display: flex;
+  align-items: flex-start;
   max-width: 1280px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .site__sidebar {
-  flex-shrink: 0;
   position: sticky;
   top: 0;
+  width: 220px;
+  flex: 0 0 220px;
   height: 100vh;
-  width: 240px;
   padding-right: 20px;
-  margin-right: 48px;
-  border-right: 1px solid $grey-weak;
+  margin-right: 40px;
   overflow: visible;
 
   &::before {
@@ -68,7 +68,7 @@ body {
 
 .site__footer {
   color: $grey-mute;
-  font-size: $font-size-xs;
+  font-size: $text-size-xs;
   line-height: $line-height-normal;
   a {
     color: $grey-base;
@@ -76,10 +76,34 @@ body {
 }
 
 .site__main {
+  flex: 1 1 820px;
+  max-width: 820px;
+  min-height: 1px;
   padding-top: $spacing-8;
   padding-bottom: $spacing-8;
 }
 
+.site__catalogue {
+  position: sticky;
+  top: $spacing-9;
+  width: 140px;
+  flex: 0 0 140px;
+  min-height: 1px;
+  margin-left: 40px;
+  padding-left: 20px;
+  border-left: 1px solid $grey-weak;
+  color: $grey-mute;
+  font-size: $text-size-xs;
+  line-height: $line-height-normal;
+
+  a {
+    display: block;
+    color: inherit;
+    &:hover {
+      color: $grey-base;
+    }
+  }
+}
 
 /* ## Navigation
 ---------------------------------*/
@@ -138,14 +162,6 @@ body {
 /* ## Article
 ---------------------------------*/
 .article {
-  display: flex;
-  align-items: flex-start;
-}
-
-.article__content {
-  flex: 1 1 0%;
-  font-size: $text-size-base;
-
   > h1 {
     position: relative;
     margin-top: 0;
@@ -186,7 +202,7 @@ body {
   }
 
   > h2 {
-    font-size: $font-size-2xl;
+    font-size: $text-size-2xl;
     margin-top: $spacing-stack-xl * 2;
     margin-bottom: $spacing-stack-xl;
   }
@@ -202,23 +218,30 @@ body {
   }
 }
 
-.article__catalogue {
-  position: sticky;
-  top: $spacing-9;
-  flex-shrink: 0;
-  width: 160px;
-  margin-left: $spacing-stack-xl;
-  padding-left: $spacing-stack-lg;
-  border-left: 1px solid $grey-weak;
-  color: $grey-mute;
-  font-size: $font-size-xs;
-  line-height: $line-height-normal;
+/* ## Elements
+---------------------------------*/
+.rect {
+  display: inline-block;
+  height: 30px;
+  min-width: 48px;
+  background-color: $grey-light;
+}
 
-  a {
-    display: block;
-    color: inherit;
-    &:hover {
-      color: $grey-base;
-    }
+.rect-box {
+  min-height: 42px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid $grey-weak;
+  background-color: $grey-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+  white-space: normal;
+  &.is-3 {
+    min-height: 3 * 42px;
+  }
+  &.is-2 {
+    min-height: 2 * 42px;
   }
 }

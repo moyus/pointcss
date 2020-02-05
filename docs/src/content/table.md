@@ -1,20 +1,22 @@
 ---
 layout: master
-title: "Tables"
+title: "Table"
+catalogue:
+  - Basic
+  - Striped
+  - Hover
+  - Bordered
+  - Spacing
+  - Responsive
 ---
 
-# Tables
-- [Basic](#basic)
-- [Striped](#striped)
-- [Hover](#hover)
-- [Bordered](#bordered)
-- [Responsive](#responsive)
+# Table
 
 ## Basic
 
-Applying `.table` class on `table` element to quick create a styled table.
+Applying `.table` class on `<table>` element to quick create a styled table.
 
-<table class="table">
+<table class="table mb-5">
   <thead>
     <tr>
       <th>ID</th>
@@ -86,9 +88,10 @@ Applying `.table` class on `table` element to quick create a styled table.
 ```
 
 ## Striped
-By adding `.table--striped` modifier class on `.table` element to quick create a striped table.
 
-<table class="table table--striped">
+By adding `.table--striped` modifier class on `<table class="table">` element to quick create a striped table.
+
+<table class="table table--striped mb-5">
   <thead>
     <tr>
       <th>ID</th>
@@ -167,10 +170,12 @@ By adding `.table--striped` modifier class on `.table` element to quick create a
   </tbody>
 </table>
 ```
-## Hover
-By adding `.table--hover` modifier class on `.table` element to quick create a table with hover effect.
 
-<table class="table table--hover">
+## Hover
+
+By adding `.table--hover` modifier class on `<table class="table">` element to quick create a table with hover effect.
+
+<table class="table table--hover mb-5">
   <thead>
     <tr>
       <th>ID</th>
@@ -251,9 +256,10 @@ By adding `.table--hover` modifier class on `.table` element to quick create a t
 ```
 
 ## Bordered
-By adding `.table--bordered` modifier class on `.table` element to quick create a table with border.
 
-<table class="table table--striped table--bordered">
+By adding `.table--bordered` modifier class on `<table class="table">` element to quick create a table with border.
+
+<table class="table table--bordered mb-5">
   <thead>
     <tr>
       <th>ID</th>
@@ -310,7 +316,7 @@ By adding `.table--bordered` modifier class on `.table` element to quick create 
 </table>
 
 ```html
-<table class="table table--striped table--bordered">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>ID</th>
@@ -333,13 +339,149 @@ By adding `.table--bordered` modifier class on `.table` element to quick create 
 </table>
 ```
 
+## Spacing
+
+Use `.list--compact`, `.list--loose` modifier classes on `.list` container to change cell spacing
+
+<table class="table table--bordered table--compact mb-5">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Boyle Monroe</td>
+      <td>29</td>
+      <td>male</td>
+      <td>QUANTALIA</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Leticia Lynn</td>
+      <td>30</td>
+      <td>female</td>
+      <td>UTARA</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Steele Le</td>
+      <td>24</td>
+      <td>male</td>
+      <td>TERSANKI</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Imelda Clarke</td>
+      <td>32</td>
+      <td>female</td>
+      <td>TALENDULA</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Eugenia Orr</td>
+      <td>30</td>
+      <td>female</td>
+      <td>OMNIGOG</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Ellis Brown</td>
+      <td>40</td>
+      <td>male</td>
+      <td>KANGLE</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table--bordered table--loose mb-5">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Boyle Monroe</td>
+      <td>29</td>
+      <td>male</td>
+      <td>QUANTALIA</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Leticia Lynn</td>
+      <td>30</td>
+      <td>female</td>
+      <td>UTARA</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Steele Le</td>
+      <td>24</td>
+      <td>male</td>
+      <td>TERSANKI</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Imelda Clarke</td>
+      <td>32</td>
+      <td>female</td>
+      <td>TALENDULA</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Eugenia Orr</td>
+      <td>30</td>
+      <td>female</td>
+      <td>OMNIGOG</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Ellis Brown</td>
+      <td>40</td>
+      <td>male</td>
+      <td>KANGLE</td>
+    </tr>
+  </tbody>
+</table>
+
+```html
+<table class="table table--bordered table--compact">
+  <thead>
+    ...
+  </thead>
+  <tbody>
+    ...
+  </tbody>
+</table>
+
+<table class="table table--bordered table--loose">
+  <thead>
+    ...
+  </thead>
+  <tbody>
+    ...
+  </tbody>
+</table>
+```
+
 ## Responsive
-The responsive table below is made with pure css code.
+The responsive table below is made with pure css code
 
-- First, add `.table--responsive` on <code>.table</code> element
-- Then, add `data-label="column label"` on each `td` element with every `tr` table row.
+- First, add `.table--collapse@<breakpoint>` on `<table class="table">` element
+- Then, add `data-label="column label"` on each `<td>` element with every `<tr>` table row
 
-<table class="table table--responsive">
+<table class="table table--collapse@md mb-5">
   <thead>
     <tr>
       <th>#</th>
@@ -399,7 +541,7 @@ The responsive table below is made with pure css code.
 </table>
 
 ```html
-<table class="table table--responsive">
+<table class="table table--collapse@md">
   <thead>
     <tr>
       <th>#</th>

@@ -1,0 +1,32 @@
+@mixin make-spacing($key, $value) {
+  $props: (
+    m: 'margin',
+    p: 'padding',
+  );
+
+  @each $prop-key, $prop-name in $props {
+    .#{$prop-key}l-#{$key} {
+      #{$prop-name}-left: #{$value} !important;
+    }
+    .#{$prop-key}t-#{$key} {
+      #{$prop-name}-top: #{$value} !important;
+    }
+    .#{$prop-key}r-#{$key} {
+      #{$prop-name}-right: #{$value} !important;
+    }
+    .#{$prop-key}b-#{$key} {
+      #{$prop-name}-bottom: #{$value} !important;
+    }
+    .#{$prop-key}x-#{$key} {
+      #{$prop-name}-left: #{$value} !important;
+      #{$prop-name}-right: #{$value} !important;
+    }
+    .#{$prop-key}y-#{$key} {
+      #{$prop-name}-top: #{$value} !important;
+      #{$prop-name}-bottom: #{$value} !important;
+    }
+    .#{$prop-key}-#{$key} {
+      #{$prop-name}: #{$value} !important;
+    }
+  }
+}

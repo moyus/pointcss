@@ -1,5 +1,8 @@
 /* ## Pagination
 ---------------------------------*/
+$pagination-border-width: 1px;
+$pagination-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacing-squish-base, 1)  + 2 * $pagination-border-width;
+
 .pagination {
   display: flex;
   flex-wrap: wrap;
@@ -8,13 +11,18 @@
 .pagination__item {
   position: relative;
   display: inline-block;
+  height: $pagination-height-computed;
+  min-width: $pagination-height-computed;;
   color: $grey-mute;
   font-size: $text-size-base;
-  line-height: $line-height-tight;
-  min-width: $text-size-base * $line-height-tight + nth($spacing-squish-base, 1) * 2;
+  line-height: $line-height-normal;
   padding: $spacing-squish-base;
   border-radius: $border-radius-base;
-  border: 1px solid transparent;
+  border: $pagination-border-width solid transparent;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  text-align: center;
   z-index: 5;
 
   &:hover {
@@ -36,9 +44,12 @@
 }
 
 .pagination--sm {
+  $pagination-height-computed: $text-size-sm * $line-height-normal + 2 * nth($spacing-squish-sm, 1)  + 2 * $pagination-border-width;
+
   .pagination__item {
-    min-width: $text-size-sm * $line-height-tight + nth($spacing-squish-sm, 1) * 2;
-    font-size: $font-size-sm;
+    height: $pagination-height-computed;
+    min-width: $pagination-height-computed;
+    font-size: $text-size-sm;
     padding: $spacing-squish-sm;
     border-radius: $border-radius-sm;
   }
@@ -70,6 +81,7 @@
 
     &.is-active {
       color: $white;
+      border-color: shade-color($color-primary, 1);
       background-color: $color-primary;
     }
 

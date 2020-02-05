@@ -3,9 +3,9 @@
 .badge {
   display: inline-block;
   padding: $spacing-squish-sm;
-  font-size: $font-size-xs;
+  font-size: $text-size-xs;
   line-height: $line-height-tight;
-  min-width: $font-size-xs * $line-height-tight + nth($spacing-squish-sm, 1) * 2;
+  min-width: $text-size-xs * $line-height-tight + nth($spacing-squish-sm, 1) * 2;
   text-align: center;
   white-space: nowrap;
   border-radius: 1993px;

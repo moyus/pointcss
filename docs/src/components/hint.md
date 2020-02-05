@@ -1,70 +1,68 @@
 ---
 layout: master
 title: "Hint"
+catalogue:
+  - Basic
+  - Sizing
+  - Position
 ---
 
 # Hint
-- [Basic](#basic)
-- [Sizes](#sizes)
-- [Position](#position)
 
 ## Basic
-Hint is built with pure css code. It can be apply on any elements who's
-`overflow` is not hidden and `position` is not undefined.
+Hint is built with pure css code. It can be apply on any elements who's `overflow` is not hidden and `position` is not undefined.
 
-<div class="u-mb-15 u-textCenter">
-  <button class="btn btn--info hint u-mb-15" data-hint="I'm always here!">Hover Me</button>
+<div class="mb-5">
+  <button class="btn hint" data-hint="I'm always here!">Hover Me</button>
 </div>
 
 ```html
-<button class="btn btn--info hint" data-hint="I'm always here!">Hover Me</button>
+<button class="btn hint" data-hint="I'm always here!">Hover Me</button>
 ```
 
-## Sizes
-By default, Hint will always remain single-line. you can change this behavior by
-adding `.hint--sm`, `.hint--md` or `.hint--lg` modifier class.
+## Sizing
+By default, Hint will always remain single-line. you can change this behavior by adding `.hint--sm` or `.hint--lg` modifier class.
 
-<div class="l-row u-textCenter">
-  <div class="l-col-4@md">
-    <button class="btn btn--info hint hint--sm u-mb-15" data-hint="Lorem ipsum dolor sit amet.">Small Hint</button>
+<div class="row text-center">
+  <div class="col-4@md">
+    <button class="btn hint hint--sm mb-5" data-hint="Lorem ipsum dolor sit amet.">Small sizing</button>
   </div>
-  <div class="l-col-4@md">
-    <button class="btn btn--info hint hint--md u-mb-15" data-hint="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione!">Medium Hint</button>
+  <div class="col-4@md">
+    <button class="btn hint mb-5" data-hint="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione!">Normal sizing</button>
   </div>
-  <div class="l-col-4@md">
-    <button class="btn btn--info hint hint--lg u-mb-15" data-hint="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, illo recusandae dolorem magni odit.">Large Hint</button>
+  <div class="col-4@md">
+    <button class="btn hint hint--lg mb-5" data-hint="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, illo recusandae dolorem magni odit.">Large sizing</button>
   </div>
 </div>
 
 ```html
-<button class="btn btn--info hint hint--sm" data-hint="Lorem ipsum dolor sit amet.">Small Hint</button>
-<button class="btn btn--info hint hint--md" data-hint="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione!">Medium Hint</button>
-<button class="btn btn--info hint hint--lg" data-hint="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, illo recusandae dolorem magni odit.">Large Hint</button>
+<button class="btn hint hint--sm" data-hint="Lorem ipsum dolor sit amet.">Small sizing</button>
+<button class="btn hint" data-hint="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione!">Normal sizing</button>
+<button class="btn hint hint--lg" data-hint="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, illo recusandae dolorem magni odit.">Large sizing</button>
 ```
 
 ## Position
 
-Hint use top as default position. By adding `.hint--right`, `.hint--bottom` or
-`.hint--left` modifier class to change hint position.
+Hint use top as default position. By adding `.hint--right`, `.hint--bottom` or `.hint--left` modifier class to change hint position.
 
-<div class="l-row u-textCenter">
-  <div class="l-col-6@sm l-col-3@md">
-    <button class="btn btn--info hint u-mb-15" data-hint="Hello, There!">Hover me!</button>
+<div class="row text-center">
+  <div class="col-6@sm col-3@md">
+    <button class="btn hint mb-5" data-hint="Hello, There!">Hover me!</button>
   </div>
-  <div class="l-col-6@sm l-col-3@md">
-    <button class="btn btn--info hint hint--right u-mb-15" data-hint="Hello, There!">Hover me!</button>
+  <div class="col-6@sm col-3@md">
+    <button class="btn hint hint--right mb-5" data-hint="Hello, There!">Hover me!</button>
   </div>
-  <div class="l-col-6@sm l-col-3@md">
-    <button class="btn btn--info hint hint--bottom u-mb-15" data-hint="Hello, There!">Hover me!</button>
+  <div class="col-6@sm col-3@md">
+    <button class="btn hint hint--bottom mb-5" data-hint="Hello, There!">Hover me!</button>
   </div>
-  <div class="l-col-6@sm l-col-3@md">
-    <button class="btn btn--info hint hint--left u-mb-15" data-hint="Hello, There!">Hover me!</button>
+  <div class="col-6@sm col-3@md">
+    <button class="btn hint hint--left mb-5" data-hint="Hello, There!">Hover me!</button>
   </div>
 </div>
 
 ```html
-<button class="btn btn--info hint" data-hint="Hello, There!">Hover me!</button>
-<button class="btn btn--info hint hint--right" data-hint="Hello, There!">Hover me!</button>
-<button class="btn btn--info hint hint--bottom" data-hint="Hello, There!">Hover me!</button>
-<button class="btn btn--info hint hint--left" data-hint="Hello, There!">Hover me!</button>
+<button class="btn hint" data-hint="Hello, There!">Hover me!</button>
+<button class="btn hint hint--right" data-hint="Hello, There!">Hover me!</button>
+<button class="btn hint hint--bottom" data-hint="Hello, There!">Hover me!</button>
+<button class="btn hint hint--left" data-hint="Hello, There!">Hover me!</button>
 ```
