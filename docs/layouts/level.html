@@ -103,27 +103,25 @@
     <!-- END .site__sidebar -->
     <main id="main" class="site__main" role="main">
       <article class="article">
-        <h1 id="level"><span>Level</span></h1><p>horizontal layout with vertical center alignment.</p>
+        <h1 id="level"><span>Level</span></h1><p>Horizontal layout with vertical center alignment.</p>
 <h2 id="basic">
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
     </h2><p>2-columns layout</p>
-<div class="level level-collapse@md">
+<div class="level level--collapse@md mb-5">
   <div class="level__start">
-    <a href="#" class="level__item btn btn--success btn--loose">Add</a>
-    <a href="#" class="level__item">All</a>
-    <a href="#" class="level__item">Publish</a>
-    <a href="#" class="level__item">Draft</a>
-    <a href="#" class="level__item">Pending</a>
-    <a href="#" class="level__item">Trash</a>
+    <button class="level__item btn btn--success btn--loose">Add</button>
+    <a role="button" class="level__item">All</a>
+    <a role="button" class="level__item">Publish</a>
+    <a role="button" class="level__item">Draft</a>
+    <a role="button" class="level__item">Pending</a>
+    <a role="button" class="level__item">Trash</a>
   </div>
   <div class="level__end">
     <div class="level__item">
-      <form action="#" class="form-inline">
-        <div class="form-group">
-          <input type="text" class="form-input" placeholder="Search...">
-          <button class="form-addon btn btn--primary">Submit</button>
-        </div>
+      <form class="inline-flex items-center">
+        <input type="text" class="form-input" placeholder="Search...">
+        <button type="button" class="btn btn--primary flex-no-shrink ml-3">Submit</button>
       </form>
     </div>
   </div>
@@ -131,7 +129,7 @@
 
 <pre><code class="language-html">&lt;div class=&quot;level&quot;&gt;
   &lt;div class=&quot;level__start&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;level__item btn btn--success btn--loose&quot;&gt;Add&lt;/a&gt;
+    &lt;button class=&quot;level__item btn btn--success btn--loose&quot;&gt;Add&lt;/button&gt;
     &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;All&lt;/a&gt;
     &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Publish&lt;/a&gt;
     &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Draft&lt;/a&gt;
@@ -140,31 +138,28 @@
   &lt;/div&gt;
   &lt;div class=&quot;level__end&quot;&gt;
     &lt;div class=&quot;level__item&quot;&gt;
-      &lt;form action=&quot;#&quot; class=&quot;form-inline&quot;&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Search...&quot;&gt;
-          &lt;button class=&quot;form-addon btn btn--primary&quot;&gt;Submit&lt;/button&gt;
-        &lt;/div&gt;
+      &lt;form class=&quot;inline-flex items-center&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Search...&quot;&gt;
+        &lt;button class=&quot;btn btn--primary flex-no-shrink ml-3&quot;&gt;Submit&lt;/button&gt;
       &lt;/form&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<p>If you want to create 3-colums layout, you must place <code>.level__center</code> in
-first, so it can use <code>~</code> CSS selector to control siblings style.</p>
-<div class="level level-collapse@md">
+<p>If you want to create 3-colums layout, you must place <code>.level__center</code> at first, so it can use <code>~</code> CSS selector to control siblings style</p>
+<div class="level level--collapse@md mb-5">
   <div class="level__center">
     <div class="btn-group">
-      <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
-      <button class="btn btn--primary btn--outline">SHARED</button>
-      <button class="btn btn--primary btn--outline">MEDIA FILES</button>
+      <button class="btn">ALL PROJECTS</button>
+      <button class="btn">SHARED</button>
+      <button class="btn">MEDIA FILES</button>
     </div>
   </div>
   <div class="level__start">
-    <div class="u-fs-20">All <span class="u-fs-14 u-text-muted">34 projects</span></div>
+    <div class="text-xl">All<span class="text-sm color-mute ml-3">34 projects</span></div>
   </div>
   <div class="level__end">
     <div class="level__item">
-      <form action="#" class="form-inline">
+      <form>
         <select class="form-select">
           <option value="2016-01-25" selected="selected">Jul 25, 16</option>
           <option value="2016-01-26">Jul 26, 16</option>
@@ -179,17 +174,17 @@ first, so it can use <code>~</code> CSS selector to control siblings style.</p>
 <pre><code class="language-html">&lt;div class=&quot;level&quot;&gt;
   &lt;div class=&quot;level__center&quot;&gt;
     &lt;div class=&quot;btn-group&quot;&gt;
-      &lt;button class=&quot;btn btn--primary btn--outline&quot;&gt;ALL PROJECTS&lt;/button&gt;
-      &lt;button class=&quot;btn btn--primary btn--outline&quot;&gt;SHARED&lt;/button&gt;
-      &lt;button class=&quot;btn btn--primary btn--outline&quot;&gt;MEDIA FILES&lt;/button&gt;
+      &lt;button class=&quot;btn&quot;&gt;ALL PROJECTS&lt;/button&gt;
+      &lt;button class=&quot;btn&quot;&gt;SHARED&lt;/button&gt;
+      &lt;button class=&quot;btn&quot;&gt;MEDIA FILES&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;level__start&quot;&gt;
-    &lt;div class=&quot;u-fs-20&quot;&gt;All &lt;span class=&quot;u-fs-14 u-text-muted&quot;&gt;34 projects&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;text-xl&quot;&gt;All&lt;span class=&quot;text-sm color-mute ml-3&quot;&gt;34 projects&lt;/span&gt;&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;level__end&quot;&gt;
     &lt;div class=&quot;level__item&quot;&gt;
-      &lt;form action=&quot;#&quot; class=&quot;form-inline&quot;&gt;
+      &lt;form&gt;
         &lt;select class=&quot;form-select&quot;&gt;
           &lt;option value=&quot;2016-01-25&quot; selected=&quot;selected&quot;&gt;Jul 25, 16&lt;/option&gt;
           &lt;option value=&quot;2016-01-26&quot;&gt;Jul 26, 16&lt;/option&gt;
@@ -200,34 +195,77 @@ first, so it can use <code>~</code> CSS selector to control siblings style.</p>
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<h2 id="response">
-    <a name="response" class="anchor" href="#response"></a>
-    Response
-    </h2><p>When screen size can not wrap level component, you can manually collapse it by using <code>.level-collapse@&lt;breakpoint&gt;</code> modifier</p>
-<div class="level level-collapse@md">
+<h2 id="evenly">
+    <a name="evenly" class="anchor" href="#evenly"></a>
+    Evenly
+    </h2><p>Direct place <code>.level__item</code> under <code>.level</code> container, will distribute spacing evenly</p>
+<div class="level mb-5">
+  <div class="level__item">
+    <span class="text-center">
+      <span class="block text-md color-mute line-compact">Message</span>
+      <em class="block text-3xl color-grey">10</em>
+    </span>
+  </div>
+  <div class="level__item">
+    <span class="text-center">
+      <span class="block text-md color-mute line-compact">Visitors</span>
+      <em class="block text-3xl color-grey">720</em>
+    </span>
+  </div>
+  <div class="level__item">
+    <span class="text-center">
+      <span class="block text-md color-mute line-compact">Users</span>
+      <em class="block text-3xl color-grey">320</em>
+    </span>
+  </div>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;level&quot;&gt;
+  &lt;div class=&quot;level__item&quot;&gt;
+    &lt;span class=&quot;text-center&quot;&gt;
+      &lt;span class=&quot;block text-md color-mute line-compact&quot;&gt;Message&lt;/span&gt;
+      &lt;em class=&quot;block text-3xl color-grey&quot;&gt;10&lt;/em&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;level__item&quot;&gt;
+    &lt;span class=&quot;text-center&quot;&gt;
+      &lt;span class=&quot;block text-md color-mute line-compact&quot;&gt;Visitors&lt;/span&gt;
+      &lt;em class=&quot;block text-3xl color-grey&quot;&gt;720&lt;/em&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;level__item&quot;&gt;
+    &lt;span class=&quot;text-center&quot;&gt;
+      &lt;span class=&quot;block text-md color-mute line-compact&quot;&gt;Users&lt;/span&gt;
+      &lt;em class=&quot;block text-3xl color-grey&quot;&gt;320&lt;/em&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2 id="responsive">
+    <a name="responsive" class="anchor" href="#responsive"></a>
+    Responsive
+    </h2><p>When screen size can not wrap level component, you can manually collapse it by using <code>.level--collapse@&lt;breakpoint&gt;</code> modifier</p>
+<div class="level level--collapse@md mb-5">
   <div class="level__start">
-    <a href="#" class="level__item btn btn--success btn--loose">Add</a>
-    <a href="#" class="level__item">All</a>
-    <a href="#" class="level__item">Publish</a>
-    <a href="#" class="level__item">Draft</a>
-    <a href="#" class="level__item">Pending</a>
-    <a href="#" class="level__item">Trash</a>
+    <button class="level__item btn btn--success btn--loose">Add</button>
+    <a role="button" class="level__item">All</a>
+    <a role="button" class="level__item">Publish</a>
+    <a role="button" class="level__item">Draft</a>
+    <a role="button" class="level__item">Pending</a>
+    <a role="button" class="level__item">Trash</a>
   </div>
   <div class="level__end">
     <div class="level__item">
-      <form action="#" class="form-inline">
-        <div class="form-group">
-          <input type="text" class="form-input" placeholder="Search...">
-          <button class="form-addon btn btn--primary">Submit</button>
-        </div>
+      <form action="#" class="inline-flex items-center">
+        <input type="text" class="form-input" placeholder="Search...">
+        <button class="btn btn--primary flex-no-shrink ml-3">Submit</button>
       </form>
     </div>
   </div>
 </div>
 
-<pre><code class="language-html">&lt;div class=&quot;level level-collapse@md&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;level level--collapse@md&quot;&gt;
   &lt;div class=&quot;level__start&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;level__item btn btn--success btn--loose&quot;&gt;Add&lt;/a&gt;
+    &lt;button class=&quot;level__item btn btn--success btn--loose&quot;&gt;Add&lt;/button&gt;
     &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;All&lt;/a&gt;
     &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Publish&lt;/a&gt;
     &lt;a href=&quot;#&quot; class=&quot;level__item&quot;&gt;Draft&lt;/a&gt;
@@ -236,11 +274,9 @@ first, so it can use <code>~</code> CSS selector to control siblings style.</p>
   &lt;/div&gt;
   &lt;div class=&quot;level__end&quot;&gt;
     &lt;div class=&quot;level__item&quot;&gt;
-      &lt;form action=&quot;#&quot; class=&quot;form-inline&quot;&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Search...&quot;&gt;
-          &lt;button class=&quot;form-addon btn btn--primary&quot;&gt;Submit&lt;/button&gt;
-        &lt;/div&gt;
+      &lt;form class=&quot;inline-flex items-center&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Search...&quot;&gt;
+        &lt;button class=&quot;btn btn--primary flex-no-shrink ml-3&quot;&gt;Submit&lt;/button&gt;
       &lt;/form&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -253,7 +289,9 @@ first, so it can use <code>~</code> CSS selector to control siblings style.</p>
       
       <a href="#basic">Basic</a>
       
-      <a href="#response">Response</a>
+      <a href="#evenly">Evenly</a>
+      
+      <a href="#responsive">Responsive</a>
       
     </nav>
     <!-- END .site__catalogue -->

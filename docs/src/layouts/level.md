@@ -3,32 +3,31 @@ layout: master
 title: "Level"
 catalogue:
   - Basic
-  - Response
+  - Evenly
+  - Responsive
 ---
 
 # Level
-horizontal layout with vertical center alignment.
+Horizontal layout with vertical center alignment.
 
 ## Basic
 
 2-columns layout
 
-<div class="level level-collapse@md">
+<div class="level level--collapse@md mb-5">
   <div class="level__start">
-    <a href="#" class="level__item btn btn--success btn--loose">Add</a>
-    <a href="#" class="level__item">All</a>
-    <a href="#" class="level__item">Publish</a>
-    <a href="#" class="level__item">Draft</a>
-    <a href="#" class="level__item">Pending</a>
-    <a href="#" class="level__item">Trash</a>
+    <button class="level__item btn btn--success btn--loose">Add</button>
+    <a role="button" class="level__item">All</a>
+    <a role="button" class="level__item">Publish</a>
+    <a role="button" class="level__item">Draft</a>
+    <a role="button" class="level__item">Pending</a>
+    <a role="button" class="level__item">Trash</a>
   </div>
   <div class="level__end">
     <div class="level__item">
-      <form action="#" class="form-inline">
-        <div class="form-group">
-          <input type="text" class="form-input" placeholder="Search...">
-          <button class="form-addon btn btn--primary">Submit</button>
-        </div>
+      <form class="inline-flex items-center">
+        <input type="text" class="form-input" placeholder="Search...">
+        <button type="button" class="btn btn--primary flex-no-shrink ml-3">Submit</button>
       </form>
     </div>
   </div>
@@ -37,7 +36,7 @@ horizontal layout with vertical center alignment.
 ```html
 <div class="level">
   <div class="level__start">
-    <a href="#" class="level__item btn btn--success btn--loose">Add</a>
+    <button class="level__item btn btn--success btn--loose">Add</button>
     <a href="#" class="level__item">All</a>
     <a href="#" class="level__item">Publish</a>
     <a href="#" class="level__item">Draft</a>
@@ -46,34 +45,31 @@ horizontal layout with vertical center alignment.
   </div>
   <div class="level__end">
     <div class="level__item">
-      <form action="#" class="form-inline">
-        <div class="form-group">
-          <input type="text" class="form-input" placeholder="Search...">
-          <button class="form-addon btn btn--primary">Submit</button>
-        </div>
+      <form class="inline-flex items-center">
+        <input type="text" class="form-input" placeholder="Search...">
+        <button class="btn btn--primary flex-no-shrink ml-3">Submit</button>
       </form>
     </div>
   </div>
 </div>
 ```
 
-If you want to create 3-colums layout, you must place `.level__center` in
-first, so it can use `~` CSS selector to control siblings style.
+If you want to create 3-colums layout, you must place `.level__center` at first, so it can use `~` CSS selector to control siblings style
 
-<div class="level level-collapse@md">
+<div class="level level--collapse@md mb-5">
   <div class="level__center">
     <div class="btn-group">
-      <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
-      <button class="btn btn--primary btn--outline">SHARED</button>
-      <button class="btn btn--primary btn--outline">MEDIA FILES</button>
+      <button class="btn">ALL PROJECTS</button>
+      <button class="btn">SHARED</button>
+      <button class="btn">MEDIA FILES</button>
     </div>
   </div>
   <div class="level__start">
-    <div class="u-fs-20">All <span class="u-fs-14 u-text-muted">34 projects</span></div>
+    <div class="text-xl">All<span class="text-sm color-mute ml-3">34 projects</span></div>
   </div>
   <div class="level__end">
     <div class="level__item">
-      <form action="#" class="form-inline">
+      <form>
         <select class="form-select">
           <option value="2016-01-25" selected="selected">Jul 25, 16</option>
           <option value="2016-01-26">Jul 26, 16</option>
@@ -89,17 +85,17 @@ first, so it can use `~` CSS selector to control siblings style.
 <div class="level">
   <div class="level__center">
     <div class="btn-group">
-      <button class="btn btn--primary btn--outline">ALL PROJECTS</button>
-      <button class="btn btn--primary btn--outline">SHARED</button>
-      <button class="btn btn--primary btn--outline">MEDIA FILES</button>
+      <button class="btn">ALL PROJECTS</button>
+      <button class="btn">SHARED</button>
+      <button class="btn">MEDIA FILES</button>
     </div>
   </div>
   <div class="level__start">
-    <div class="u-fs-20">All <span class="u-fs-14 u-text-muted">34 projects</span></div>
+    <div class="text-xl">All<span class="text-sm color-mute ml-3">34 projects</span></div>
   </div>
   <div class="level__end">
     <div class="level__item">
-      <form action="#" class="form-inline">
+      <form>
         <select class="form-select">
           <option value="2016-01-25" selected="selected">Jul 25, 16</option>
           <option value="2016-01-26">Jul 26, 16</option>
@@ -112,34 +108,81 @@ first, so it can use `~` CSS selector to control siblings style.
 </div>
 ```
 
-## Response
-When screen size can not wrap level component, you can manually collapse it by using `.level-collapse@<breakpoint>` modifier
+## Evenly
 
-<div class="level level-collapse@md">
+Direct place `.level__item` under `.level` container, will distribute spacing evenly
+
+<div class="level mb-5">
+  <div class="level__item">
+    <span class="text-center">
+      <span class="block text-md color-mute line-compact">Message</span>
+      <em class="block text-3xl color-grey">10</em>
+    </span>
+  </div>
+  <div class="level__item">
+    <span class="text-center">
+      <span class="block text-md color-mute line-compact">Visitors</span>
+      <em class="block text-3xl color-grey">720</em>
+    </span>
+  </div>
+  <div class="level__item">
+    <span class="text-center">
+      <span class="block text-md color-mute line-compact">Users</span>
+      <em class="block text-3xl color-grey">320</em>
+    </span>
+  </div>
+</div>
+
+```html
+<div class="level">
+  <div class="level__item">
+    <span class="text-center">
+      <span class="block text-md color-mute line-compact">Message</span>
+      <em class="block text-3xl color-grey">10</em>
+    </span>
+  </div>
+  <div class="level__item">
+    <span class="text-center">
+      <span class="block text-md color-mute line-compact">Visitors</span>
+      <em class="block text-3xl color-grey">720</em>
+    </span>
+  </div>
+  <div class="level__item">
+    <span class="text-center">
+      <span class="block text-md color-mute line-compact">Users</span>
+      <em class="block text-3xl color-grey">320</em>
+    </span>
+  </div>
+</div>
+```
+
+## Responsive
+
+When screen size can not wrap level component, you can manually collapse it by using `.level--collapse@<breakpoint>` modifier
+
+<div class="level level--collapse@md mb-5">
   <div class="level__start">
-    <a href="#" class="level__item btn btn--success btn--loose">Add</a>
-    <a href="#" class="level__item">All</a>
-    <a href="#" class="level__item">Publish</a>
-    <a href="#" class="level__item">Draft</a>
-    <a href="#" class="level__item">Pending</a>
-    <a href="#" class="level__item">Trash</a>
+    <button class="level__item btn btn--success btn--loose">Add</button>
+    <a role="button" class="level__item">All</a>
+    <a role="button" class="level__item">Publish</a>
+    <a role="button" class="level__item">Draft</a>
+    <a role="button" class="level__item">Pending</a>
+    <a role="button" class="level__item">Trash</a>
   </div>
   <div class="level__end">
     <div class="level__item">
-      <form action="#" class="form-inline">
-        <div class="form-group">
-          <input type="text" class="form-input" placeholder="Search...">
-          <button class="form-addon btn btn--primary">Submit</button>
-        </div>
+      <form action="#" class="inline-flex items-center">
+        <input type="text" class="form-input" placeholder="Search...">
+        <button class="btn btn--primary flex-no-shrink ml-3">Submit</button>
       </form>
     </div>
   </div>
 </div>
 
 ```html
-<div class="level level-collapse@md">
+<div class="level level--collapse@md">
   <div class="level__start">
-    <a href="#" class="level__item btn btn--success btn--loose">Add</a>
+    <button class="level__item btn btn--success btn--loose">Add</button>
     <a href="#" class="level__item">All</a>
     <a href="#" class="level__item">Publish</a>
     <a href="#" class="level__item">Draft</a>
@@ -148,11 +191,9 @@ When screen size can not wrap level component, you can manually collapse it by u
   </div>
   <div class="level__end">
     <div class="level__item">
-      <form action="#" class="form-inline">
-        <div class="form-group">
-          <input type="text" class="form-input" placeholder="Search...">
-          <button class="form-addon btn btn--primary">Submit</button>
-        </div>
+      <form class="inline-flex items-center">
+        <input type="text" class="form-input" placeholder="Search...">
+        <button class="btn btn--primary flex-no-shrink ml-3">Submit</button>
       </form>
     </div>
   </div>

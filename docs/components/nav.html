@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Navs - Point</title>
+  <title> Nav - Point</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-first,framework,web">
   <link rel="shortcut icon" href="http://localhost:3000/images/favicon.ico" />
@@ -103,35 +103,27 @@
     <!-- END .site__sidebar -->
     <main id="main" class="site__main" role="main">
       <article class="article">
-        <h1 id="navs"><span>Navs</span></h1><ul>
-<li><a href="#basic">Basic</a></li>
-<li><a href="#menus">Menus</a></li>
-<li><a href="#pills">Pills</a></li>
-<li><a href="#tabs">Tabs</a></li>
-</ul>
+        <h1 id="nav"><span>Nav</span></h1><p>Generic content navigation.</p>
 <h2 id="basic">
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
-    </h2><p>The basic <strong>Nav</strong> just remove default list style. You can easily extend it to create your own content navigation and keep the code style consistent.</p>
-<div class="u-mb-15">
-  <ul class="nav">
-    <li class="nav__item">
-      <a href="#" class="nav__link">Home</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Link</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Another Link</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link is-disabled">Disabled</a>
-    </li>
-  </ul>
-</div>
+    </h2><ul class="nav mb-5">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
 
 <pre><code class="language-html">&lt;ul class=&quot;nav&quot;&gt;
-  &lt;li class=&quot;nav__item&quot;&gt;
+  &lt;li class=&quot;nav__item is-active&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;nav__link&quot;&gt;Home&lt;/a&gt;
   &lt;/li&gt;
   &lt;li class=&quot;nav__item&quot;&gt;
@@ -144,83 +136,58 @@
     &lt;a href=&quot;#&quot; class=&quot;nav__link is-disabled&quot;&gt;Disabled&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-<h2 id="menus">
-    <a name="menus" class="anchor" href="#menus"></a>
-    Menus
-    </h2><div class="l-row">
-  <div class="l-col-6@md">
-    <ul class="nav nav--menus u-mb-15">
-      <li class="nav__item">
-        <a href="#" class="nav__link is-active">Home</a>
-      </li>
-      <li class="nav__item">
-        <a href="#" class="nav__link">Link</a>
-        <ul class="nav nav--menus nav--sm">
-          <li class="nav__item">
-            <a href="#" class="nav__link">SubItem 1</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">SubItem 2</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav__item">
-        <a href="#" class="nav__link">Another Link</a>
-      </li>
-      <li class="nav__divider"></li>
-      <li class="nav__item">
-        <a href="#" class="nav__link is-disabled">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</div>
+<h2 id="variants">
+    <a name="variants" class="anchor" href="#variants"></a>
+    Variants
+    </h2><h3 id="rails">Rails</h3><p>By adding <code>.nav--rails</code> modifier class on <code>.nav</code> element to create rails styled nav</p>
+<ul class="nav nav--rails mb-5">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
 
-<pre><code class="language-html">&lt;ul class=&quot;nav nav--menus&quot;&gt;
-  &lt;li class=&quot;nav__item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;nav__link is-active&quot;&gt;Home&lt;/a&gt;
+<pre><code class="language-html">&lt;ul class=&quot;nav nav--rails&quot;&gt;
+  &lt;li class=&quot;nav__item is-active&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;nav__link&quot;&gt;Home&lt;/a&gt;
   &lt;/li&gt;
   &lt;li class=&quot;nav__item&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;nav__link&quot;&gt;Link&lt;/a&gt;
-    &lt;ul class=&quot;nav nav--menus nav--sm&quot;&gt;
-      &lt;li class=&quot;nav__item&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;nav__link&quot;&gt;SubItem 1&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class=&quot;nav__item&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;nav__link&quot;&gt;SubItem 2&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li class=&quot;nav__item&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;nav__link&quot;&gt;Another Link&lt;/a&gt;
   &lt;/li&gt;
-  &lt;li class=&quot;nav__divider&quot;&gt;&lt;/li&gt;
   &lt;li class=&quot;nav__item&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;nav__link is-disabled&quot;&gt;Disabled&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-<h2 id="pills-nav">
-    <a name="pills-nav" class="anchor" href="#pills-nav"></a>
-    Pills Nav
-    </h2><div class="u-mb-15">
-  <ul class="nav nav--pills">
-    <li class="nav__item">
-      <a href="#" class="nav__link is-active">Home</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Link</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Another Link</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link is-disabled">Disabled</a>
-    </li>
-  </ul>
-</div>
+<h3 id="pills">Pills</h3><p>By adding <code>.nav--pills</code> modifier class on <code>.nav</code> element to create pills styled nav</p>
+<ul class="nav nav--pills mb-5">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
 
 <pre><code class="language-html">&lt;ul class=&quot;nav nav--pills&quot;&gt;
-  &lt;li class=&quot;nav__item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;nav__link is-active&quot;&gt;Home&lt;/a&gt;
+  &lt;li class=&quot;nav__item is-active&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;nav__link&quot;&gt;Home&lt;/a&gt;
   &lt;/li&gt;
   &lt;li class=&quot;nav__item&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;nav__link&quot;&gt;Link&lt;/a&gt;
@@ -232,29 +199,25 @@
     &lt;a href=&quot;#&quot; class=&quot;nav__link is-disabled&quot;&gt;Disabled&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-<h2 id="tabs-nav">
-    <a name="tabs-nav" class="anchor" href="#tabs-nav"></a>
-    Tabs Nav
-    </h2><div class="u-mb-15">
-  <ul class="nav nav--tabs">
-    <li class="nav__item">
-      <a href="#" class="nav__link is-active">Home</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Link</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Another Link</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link is-disabled">Disabled</a>
-    </li>
-  </ul>
-</div>
+<h3 id="tabs">Tabs</h3><p>By adding <code>.nav--tabs</code> modifier class on <code>.nav</code> element to create tabs styled nav</p>
+<ul class="nav nav--tabs mb-5">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
 
 <pre><code class="language-html">&lt;ul class=&quot;nav nav--tabs&quot;&gt;
-  &lt;li class=&quot;nav__item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;nav__link is-active&quot;&gt;Home&lt;/a&gt;
+  &lt;li class=&quot;nav__item is-active&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;nav__link&quot;&gt;Home&lt;/a&gt;
   &lt;/li&gt;
   &lt;li class=&quot;nav__item&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;nav__link&quot;&gt;Link&lt;/a&gt;
@@ -265,12 +228,164 @@
   &lt;li class=&quot;nav__item&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;nav__link is-disabled&quot;&gt;Disabled&lt;/a&gt;
   &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h2 id="sizing">
+    <a name="sizing" class="anchor" href="#sizing"></a>
+    Sizing
+    </h2><p>All variants can combile with sizing modifier classes to change nav size</p>
+<ul>
+<li><code>.nav--sm</code></li>
+<li><code>.nav--lg</code></li>
+</ul>
+<h5 id="small-sizing">Small sizing</h5><ul class="nav nav--sm mb-5">
+  <li class="nav__item">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+
+<pre><code class="language-html">&lt;ul class=&quot;nav nav--sm&quot;&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+<h5 id="normal-sizing">Normal sizing</h5><ul class="nav mb-5">
+  <li class="nav__item">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+
+<pre><code class="language-html">&lt;ul class=&quot;nav&quot;&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+<h5 id="large-sizing">Large sizing</h5><ul class="nav nav--lg mb-5">
+  <li class="nav__item">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+
+<pre><code class="language-html">&lt;ul class=&quot;nav nav--lg&quot;&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+<h2 id="placement">
+    <a name="placement" class="anchor" href="#placement"></a>
+    Placement
+    </h2><p>All variants can combile with position modifier classes to change nav placement</p>
+<ul>
+<li><code>.nav--start</code></li>
+<li><code>.nav--center</code></li>
+<li><code>.nav--end</code></li>
+<li><code>.nav--stretch</code></li>
+</ul>
+<h5 id="start">Start</h5><ul class="nav nav--start mb-5">
+  <li class="nav__item">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+
+<pre><code class="language-html">&lt;ul class=&quot;nav nav--start&quot;&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+<h5 id="center">Center</h5><ul class="nav nav--rails nav--center mb-5">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+
+<pre><code class="language-html">&lt;ul class=&quot;nav nav--rails nav--center&quot;&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+<h5 id="end">End</h5><ul class="nav nav--pills nav--end mb-5">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+
+<pre><code class="language-html">&lt;ul class=&quot;nav nav--pills nav--end&quot;&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+<h5 id="stretch">Stretch</h5><ul class="nav nav--tabs nav--stretch mb-5">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+
+<pre><code class="language-html">&lt;ul class=&quot;nav nav--tabs nav--stretch&quot;&gt;
+  ...
 &lt;/ul&gt;</code></pre>
 
       </article>
     </main>
     <!-- END .site__main -->
     <nav class="site__catalogue">
+      
+      <a href="#basic">Basic</a>
+      
+      <a href="#variants">Variants</a>
+      
+      <a href="#sizing">Sizing</a>
+      
+      <a href="#placement">Placement</a>
       
     </nav>
     <!-- END .site__catalogue -->
