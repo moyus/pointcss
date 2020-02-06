@@ -8,6 +8,8 @@ catalogue:
 
 # Dropdown
 
+Pure CSS interactive component for discoverable content.
+
 ## Basic
 
 <details class="dropdown">
@@ -31,6 +33,8 @@ catalogue:
 ```
 
 ## Position
+
+Use modifier classes below on `.dropdown` container to change content position
 
 - `.dropdown--tl`
 - `.dropdown--tr`
