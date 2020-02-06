@@ -5,16 +5,29 @@ const cssnano = require('gulp-cssnano')
 const sizereport = require('gulp-sizereport')
 const notify = require('gulp-notify')
 const postcss = require('gulp-postcss')
+const header = require('gulp-header')
+const del = require('del')
 const autoprefixer = require('autoprefixer')
 const flexbugsFixes = require('postcss-flexbugs-fixes')
 const browserSync = require('browser-sync').create()
 const marked = require('marked')
 const nunjucksRender = require('gulp-nunjucks-md')
+const pkg = require('./package.json')
+let isProd = true;
 
 const postCssOpts = [
   autoprefixer(),
   flexbugsFixes
 ]
+
+const banner = ['/*!',
+' * <%= pkg.name %>',
+' * @version v<%= pkg.version %>',
+' * @link <%= pkg.homepage %>',
+' * @author <%= pkg.author %>',
+' * @license <%= pkg.license %>',
+' */',
+''].join('\n');
 
 const renderer = new marked.Renderer();
 renderer.heading = function (text, level) {
@@ -49,6 +62,7 @@ gulp.task('build', function () {
       precision: 8
     }).on('error', sass.logError))
     .pipe(postcss(postCssOpts))
+    .pipe(header(banner, { pkg : pkg }))
     .pipe(gulp.dest('./dist'))
     .pipe(gulp.dest('./docs/css'))
     .pipe(cssnano())
@@ -88,12 +102,27 @@ gulp.task('serve', function (done) {
 })
 
 gulp.task('docs:html', function () {
+  if (isProd) {
+    del.sync(['docs/**', '!docs/src'])
+  }
+
   return gulp.src([
       'docs/src/**/*.md'
     ])
     .pipe(nunjucksRender({
       "path": ["docs/src/_templates"],
-      data: 'docs/src/data.json'
+      data: {
+        project: {
+          title: 'POINTCSS',
+          description: pkg.description,
+          url: isProd ? pkg.website : 'http://localhost:3000/',
+          github: pkg.homepage,
+          version: pkg.version,
+          keywords: pkg.keywords.join(','),
+          download: pkg.homepage + '/releases',
+          license: pkg.homepage + '/blob/master/LICENSE',
+        }
+      }
     }))
     .pipe(gulp.dest('./docs'))
     .on('end', browserSync.reload)
@@ -127,5 +156,11 @@ gulp.task('watch', function () {
  * Scripts
  */
 gulp.task('docs', gulp.series('docs:scss', 'docs:assets', 'docs:html'))
-gulp.task('dev', gulp.series('build', 'docs', 'serve', 'watch'))
+gulp.task('dev', gulp.series(
+  function (done) {
+    isProd = false
+    done()
+  },
+  'build', 'docs', 'serve', 'watch'
+))
 gulp.task('default', gulp.series('build', 'docs', 'report'))

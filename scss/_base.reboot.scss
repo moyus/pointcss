@@ -1,4 +1,4 @@
-/* ## Reboot
+/* ## Reboot - based on normalize.css
 ---------------------------------*/
 *,
 *::before,
@@ -13,9 +13,15 @@
 
 html {
   font-size: $text-size-base;
+  font-family: sans-serif; /* 1 */
+  line-height: 1.15; /* 2 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
 }
 
+
 body {
+  margin: 0;
   font-family: $body-font-family;
   color: $body-text-color;
   font-size: $body-text-size;
@@ -23,15 +29,156 @@ body {
   background: $body-bg;
 }
 
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main,
+details,
+menu {
+  display: block;
+}
+
 figure {
   margin: 0 0 $spacing-stack-base 0;
 }
 
 img {
+  border-style: none;
   vertical-align: middle;
 }
 
-// Form
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+
+  &:active,
+  &:hover {
+    outline-width: 0;
+  }
+}
+
+abbr[title] {
+  cursor: help;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: $line-height-tight;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
 fieldset {
   border: 0;
   padding: 0;
@@ -41,18 +188,35 @@ fieldset {
 
 legend {
   display: block;
-  width: 100%;
+  color: inherit;
+  max-width: 100%;
   padding: 0;
+  white-space: normal;
   margin: 0 0 $spacing-stack-xs 0;
 }
 
+progress {
+  display: block;
+}
+
 label {
-  display: inline-block;
+  display: block;
   margin: 0 0 $spacing-stack-xs 0;
 }
 
 textarea {
   resize: vertical;
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
 }
 
 input[type="date"],
@@ -61,7 +225,16 @@ input[type="time"] {
 }
 
 input[type="search"] {
-  -webkit-appearance: none;
+  &,
+  &::-webkit-search-cancel-button,
+  &:-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
 }
 
 input:-webkit-autofill {
@@ -80,19 +253,10 @@ textarea {
   touch-action: manipulation;
 }
 
-abbr[title] {
-  cursor: help;
-}
-
-[role="button"] {
-  cursor: pointer;
-}
-
 [hidden] {
   display: none !important;
 }
 
-[disabled],
-.is-disabled {
+[disabled] {
   cursor: not-allowed;
 }

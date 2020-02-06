@@ -9,14 +9,14 @@ catalogue:
 ---
 
 # Introduction
-**pointcss** is a flexible CSS Framework for building modern responsive web apps.
+A lightweight and flexible CSS Framework for building modern responsive web apps.
 
 - Built with flexbox
 - Mobile friendly layout
-- 10KB minified and gzipped
+- ~10KB minified and gzipped
 
 ## Installation
-There are 3 ways to get start
+There are 3 ways to get started
 
 ### Yarn
 ```sh
@@ -77,6 +77,6 @@ browsers are recommended:
 
 ## Copyright and License
 <p>
-  Designed and built by <a href="{{site.author}}">MOYU</a>.
-  Licensed under the <a href="{{site.license}}">MIT License</a>.
+  Designed and built by <a href="https://moyu.io" target="_blank">MOYU</a>.
+  Licensed under the <a href="{{project.license}}">MIT License</a>.
 </p>

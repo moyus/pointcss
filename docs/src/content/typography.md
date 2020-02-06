@@ -15,7 +15,7 @@ Default styles for headings, paragraphs, list, blockquote and other elements.
 ## Heading
 <table class="table table--bordered">
   <thead>
-    <tr>
+    <tr class="bg-light">
       <th>Heading</th>
       <th>Size</th>
     </tr>

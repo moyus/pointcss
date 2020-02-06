@@ -215,96 +215,25 @@ $container-max-widths: (
 ) !default;
 
 // Form
-// $form-field-margin-bottom:              $space-stack-base !default;
-// $form-label-margin-bottom:              $space-stack-xs !default;
-// $form-help-margin-top:                  $space-stack-xs !default;
-// $form-input-padding-y:                  $space-squish-base-y !default;
-// $form-input-padding-x:                  $space-squish-base-x !default;
+// -----------------------------------------------------------------------------
 
-// $form-input-color:                      $text-color !default;
-// $form-input-placeholder-color:          $muted-color !default;
-// $form-input-bg:                         $color-white !default;
-// $form-input-bg-disabled:                $grey-lightest !default;
-// $form-input-active-border-color:        map-get($master-palette, 'primary') !default;
-// $form-input-border-color:               #ccc !default;
-// $form-input-border-width:               $border-width !default;
-// $form-input-border-radius:              $border-radius-base !default;
-// $form-input-addon-bg:                   $grey-lightest !default;
-// $form-input-icon-padding:               $space-l !default;
-// $form-checkbox-border-radius:           0 !default;
-// $form-input-height-computed:            round(($form-input-padding-y + $form-input-border-width) * 2 + $line-height-computed); // 34px
-// $form-switch-color:                     $color-white !default;
-// $form-switch-bg-color:                  $grey-lighter !default;
-// $form-switch-active-color:              $color-success !default;
+// Button
+// -----------------------------------------------------------------------------
 
-// // Button
-// $button-default-color:                  $link-color !default;
-// $button-border-radius-sm:               $border-radius-sm !default;
-// $button-border-radius-base:             $border-radius-base !default;
-// $button-border-radius-lg:               $border-radius-lg !default;
-// $button-border-width:                   $border-width !default;
-// $button-padding-sm-y:                   $space-squish-s-y !default;
-// $button-padding-sm-x:                   $space-squish-s-x !default;
-// $button-padding-base-y:                 $space-squish-base-y !default;
-// $button-padding-base-x:                 $space-squish-base-x !default;
-// $button-padding-lg-y:                   $space-squish-l-y !default;
-// $button-padding-lg-x:                   $space-squish-l-x !default;
-// $button-height-computed:                round(($button-padding-base-y + $button-border-width) * 2 + $line-height-computed); // 34px
+// Progress
+// -----------------------------------------------------------------------------
 
+// Badge
+// -----------------------------------------------------------------------------
 
+// Hint
+// -----------------------------------------------------------------------------
 
-// // Progress
-// // -----------------------------------------------------------------------------
-// $progress-height-sm:                    4px !default;
-// $progress-height-base:                  8px !default;
-// $progress-height-lg:                    12px !default;
-// $progress-margin-bottom:                $space-stack-base !default;
-// $progress-bg-color:                     $grey-lightest !default;
-// $progress-bar-bg-color-default:         $color-success !default;
+// List
+// -----------------------------------------------------------------------------
 
-// // Badges
-// // -----------------------------------------------------------------------------
-// $badge-color-default:                   $text-color !default;
-// $badge-bg-color-default:                $grey-lightest !default;
-// $badge-padding-y-base:                  $space-squish-s-y !default;
-// $badge-padding-x-base:                  $space-squish-s-x !default;
-
-// // Hint
-// // -----------------------------------------------------------------------------
-// $hint-color:                            #fff !default;
-// $hint-font-size:                        14px !default;
-// $hint-line-height:                      20px !default;
-// $hint-bg-color:                         rgba(0,0,0,.8) !default;
-// $hint-padding-y:                        $space-squish-s-y !default;
-// $hint-padding-x:                        $space-squish-s-x !default;
-// $hint-border-radius:                    0 !default;
-
-// // List
-// // -----------------------------------------------------------------------------
-// $list-item-padding-y-sm:                $space-squish-base-y !default;
-// $list-item-padding-x-sm:                $space-squish-base-x !default;
-// $list-item-padding-y-base:              $space-squish-l-y !default;
-// $list-item-padding-x-base:              $space-squish-l-x !default;
-// $list-item-padding-y-lg:                $space-squish-xl-y !default;
-// $list-item-padding-x-lg:                $space-squish-l-x !default;
-// $list-item-bg-color:                    $color-white !default;
-// $list-item-active-bg-color:             map-get($master-palette, 'primary') !default;
-// $list-item-active-color:                $color-white !default;
-// $list-border-width:                     $border-width !default;
-// $list-border-color:                     $border-color !default;
-// $list-border-radius:                    $border-radius-base !default;
-// $list-item-hover-bg:                    $grey-lightest !default;
-
-// // Dropmenu
-// // -----------------------------------------------------------------------------
-// $dropmenu-bg-color:                     $color-white !default;
-// $dropmenu-border-color:                 $border-color !default;
-// $dropmenu-border-width:                 $border-width !default;
-// $dropmenu-border-radius:                $border-radius-base !default;
-// $dropmenu-min-width:                    160px !default;
-// $dropmenu-gutter:                       $space-stack-xs !default;
-// $dropmenu-link-padding-y:               $space-squish-base-y !default;
-// $dropmenu-link-padding-x:               $space-squish-base-x !default;
+// Dropdown
+// -----------------------------------------------------------------------------
 
 // Modal
 // -----------------------------------------------------------------------------
@@ -317,57 +246,9 @@ $modal-zIndex:                             $zIndex-9 !default;
 $modal-bg:                                 $white !default;
 $mask-zIndex:                              $zIndex-6 !default;
 $mask-bg:                                  rgba($black, 0.5) !default;
-// // Nav
-// // -----------------------------------------------------------------------------
-// $nav-menus-item-margin-y:               $space-stack-xxs !default;
-// $nav-menus-link-border-radius-sm:       $border-radius-sm !default;
-// $nav-menus-link-border-radius-base:     $border-radius-base !default;
-// $nav-menus-link-border-radius-lg:       $border-radius-base !default;
-// $nav-menus-link-color:                  $text-color !default;
-// $nav-menus-link-hover-bg:               $grey-lightest !default;
-// $nav-menus-link-active-color:           $color-white !default;
-// $nav-menus-link-active-bg:              map-get($master-palette, 'primary') !default;
-// $nav-menus-link-padding-sm-y:           $space-squish-s-y !default;
-// $nav-menus-link-padding-sm-x:           $space-squish-s-x !default;
-// $nav-menus-link-padding-base-y:         $space-squish-base-y !default;
-// $nav-menus-link-padding-base-x:         $space-squish-base-x !default;
-// $nav-menus-link-padding-lg-y:           $space-squish-l-y !default;
-// $nav-menus-link-padding-lg-x:           $space-squish-l-x !default;
-// $nav-menus-divider-color:               $divider-color !default;
 
-// $nav-pills-item-margin-x:               $space-inline-s !default;
-// $nav-pills-link-border-radius-sm:       $border-radius-sm !default;
-// $nav-pills-link-border-radius-base:     $border-radius-base !default;
-// $nav-pills-link-border-radius-lg:       $border-radius-base !default;
-// $nav-pills-link-color:                  $text-color !default;
-// $nav-pills-link-hover-bg:               $grey-lightest !default;
-// $nav-pills-link-active-color:           $color-white !default;
-// $nav-pills-link-active-bg:              map-get($master-palette, 'primary') !default;
-// $nav-pills-link-padding-sm-y:           $space-squish-s-y !default;
-// $nav-pills-link-padding-sm-x:           $space-squish-s-x !default;
-// $nav-pills-link-padding-base-y:         $space-squish-base-y !default;
-// $nav-pills-link-padding-base-x:         $space-squish-base-x !default;
-// $nav-pills-link-padding-lg-y:           $space-squish-l-y !default;
-// $nav-pills-link-padding-lg-x:           $space-squish-l-x !default;
-
-// $nav-tabs-border-color:                 $border-color !default;
-// $nav-tabs-border-width:                 $border-width !default;
-// $nav-tabs-item-margin-x:                $space-inline-s !default;
-// $nav-tabs-link-border-radius-sm:        $border-radius-sm !default;
-// $nav-tabs-link-border-radius-base:      $border-radius-base !default;
-// $nav-tabs-link-border-radius-lg:        $border-radius-base !default;
-// $nav-tabs-link-border-width:            $border-width !default;
-// $nav-tabs-link-border-color:            $border-color !default;
-// $nav-tabs-link-color:                   $muted-color !default;
-// $nav-tabs-link-hover-color:             $text-color !default;
-// $nav-tabs-link-active-color:            $heading-color !default;
-// $nav-tabs-link-active-bg:               $color-white !default;
-// $nav-tabs-link-padding-sm-y:            $space-squish-s-y !default;
-// $nav-tabs-link-padding-sm-x:            $space-squish-s-x !default;
-// $nav-tabs-link-padding-base-y:          $space-squish-base-y !default;
-// $nav-tabs-link-padding-base-x:          $space-squish-base-x !default;
-// $nav-tabs-link-padding-lg-y:            $space-squish-l-y !default;
-// $nav-tabs-link-padding-lg-x:            $space-squish-l-x !default;
+// Nav
+// -----------------------------------------------------------------------------
 
 // Navbar
 // -----------------------------------------------------------------------------
@@ -376,20 +257,9 @@ $navbar-font-size:                         $text-size-base !default;
 $navbar-color:                             $grey-base !default;
 $navbar-item-margin-x:                     $spacing-stack-base !default;
 
-// // Pagination
-// // -----------------------------------------------------------------------------
-// $pagination-item-padding-base-y:        $space-squish-base-y !default;
-// $pagination-item-padding-base-x:        $space-squish-base-x !default;
-// $pagination-item-border-radius:         $border-radius-base !default;
-// $pagination-item-border-width:          $border-width !default;
-// $pagination-item-min-width:             ($line-height-computed + ($pagination-item-padding-base-y + $pagination-item-border-width) * 2) !default;
-// $pagination-item-border-color:          $border-color !default;
-// $pagination-item-color:                 $text-color !default;
-// $pagination-item-hover-bg:              $grey-lightest !default;
-// $pagination-item-active-color:          $color-white !default;
-// $pagination-item-active-bg:             map-get($master-palette, 'primary') !default;
-// $pagination-item-disabled-bg:           $grey-lightest !default;
-// $pagination-item-bg:                    $color-white !default;
+// Pagination
+// -----------------------------------------------------------------------------
+
 
 // Note
 // -----------------------------------------------------------------------------

@@ -1,96 +1,173 @@
 ---
 layout: master
 title: "Navbar"
+catalogue:
+  - Basic
+  - Variants
 ---
 
 # Navbar
-- [Basic](#basic)
-- [Theme](#theme)
+
+A fundamental navigation component, you can extend it to fit a more complex situation.
 
 ## Basic
 
-Structure:
-- `.navbar`
-  -  `.navbar__start`, `.navbar__end`
-    - `.navbar__item`
-
-<div class="u-mb-15">
+<div class="mb-5">
   <nav class="navbar">
     <div class="navbar__start">
-        <a role="button" class="navbar__item navbar__brand">Point</a>
+      <a role="button" class="navbar__brand">
+        <img src="{{project.url}}/images/logo.svg" alt="pointcss" />
+      </a>
+      <div class="navbar__item is-active">
+        <a role="button" class="navbar__link">Home</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Content</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Components</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Utilities</a>
+      </div>
     </div>
     <div class="navbar__end">
-      <a role="button" class="navbar__item">Home</a>
-      <a role="button" class="navbar__item">About</a>
-      <a role="button" class="navbar__item">Work</a>
-      <a role="button" class="navbar__item">Shop</a>
-      <a role="button" class="navbar__item">Blog</a>
-      <a role="button" class="navbar__item">Contact</a>
+      <div class="navbar__item">
+        <div class="flex">
+          <button class="btn btn--loose">Sign up</button>
+        <button class="btn btn--primary btn--loose ml-3">Log in</button>
+        </div>
+      </div>
     </div>
   </nav>
 </div>
 
 ```html
 <nav class="navbar">
-  <div class="navbar__start">
-      <a role="button" class="navbar__item navbar__brand">Point</a>
-  </div>
-  <div class="navbar__end">
-    <a role="button" class="navbar__item">Home</a>
-    <a role="button" class="navbar__item">About</a>
-    <a role="button" class="navbar__item">Work</a>
-    <a role="button" class="navbar__item">Shop</a>
-    <a role="button" class="navbar__item">Blog</a>
-    <a role="button" class="navbar__item">Contact</a>
-  </div>
-</nav>
-```
-
-## Theme
-
-Chose `.navbar--light` for use with light background colors, or `.navbar--dark` for dark background colors.
-
-<div class="u-mb-15">
-  <nav class="navbar navbar--light u-bg-primary">
     <div class="navbar__start">
-        <a role="button" class="navbar__item navbar__brand">Point</a>
+      <a role="button" class="navbar__brand">
+        <img src="{{project.url}}/images/logo.svg" alt="pointcss" />
+      </a>
+      <div class="navbar__item is-active">
+        <a role="button" class="navbar__link">Home</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Content</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Components</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Utilities</a>
+      </div>
     </div>
     <div class="navbar__end">
-      <a role="button" class="navbar__item">Home</a>
-      <a role="button" class="navbar__item">About</a>
-      <a role="button" class="navbar__item">Work</a>
-      <a role="button" class="navbar__item">Shop</a>
-      <a role="button" class="navbar__item">Blog</a>
-      <a role="button" class="navbar__item">Contact</a>
+      <div class="navbar__item">
+        <div class="flex">
+          <button class="btn btn--loose">Sign up</button>
+        <button class="btn btn--primary btn--loose ml-3">Log in</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+```
+
+## Variants
+
+Choose `.navbar--light` for use with light background colors, or `.navbar--dark` for dark background colors
+
+<div class="mb-5">
+  <nav class="navbar navbar--dark px-5 bg-grey">
+    <div class="navbar__start">
+      <a role="button" class="navbar__brand">POINTCSS</a>
+      <div class="navbar__item is-active">
+        <a role="button" class="navbar__link">Home</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Content</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Components</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Utilities</a>
+      </div>
+    </div>
+    <div class="navbar__end">
+      <div class="navbar__item">
+        <div class="flex">
+          <button class="btn btn--loose">Sign up</button>
+        <button class="btn btn--primary btn--loose ml-3">Log in</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="mb-5">
+  <nav class="navbar navbar--dark px-5 bg-primary">
+    <div class="navbar__start">
+      <a role="button" class="navbar__brand">POINTCSS</a>
+      <div class="navbar__item is-active">
+        <a role="button" class="navbar__link">Home</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Content</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Components</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Utilities</a>
+      </div>
+    </div>
+    <div class="navbar__end">
+      <div class="navbar__item">
+        <div class="flex">
+          <button class="btn btn--loose">Sign up</button>
+        <button class="btn btn--primary btn--loose ml-3">Log in</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="mb-5">
+  <nav class="navbar navbar--light px-5 bg-light">
+    <div class="navbar__start">
+      <a role="button" class="navbar__brand">POINTCSS</a>
+      <div class="navbar__item is-active">
+        <a role="button" class="navbar__link">Home</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Content</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Components</a>
+      </div>
+      <div class="navbar__item">
+        <a role="button" class="navbar__link">Utilities</a>
+      </div>
+    </div>
+    <div class="navbar__end">
+      <div class="navbar__item">
+        <div class="flex">
+          <button class="btn btn--loose">Sign up</button>
+        <button class="btn btn--primary btn--loose ml-3">Log in</button>
+        </div>
+      </div>
     </div>
   </nav>
 </div>
 
 ```html
-<nav class="navbar navbar--light u-bg-primary">
+<nav class="navbar navbar--dark px-5 bg-grey">
   ...
 </nav>
-```
-
----
-<div class="u-mb-15">
-  <nav class="navbar navbar--dark" style="background-color: #333;">
-    <div class="navbar__start">
-        <a role="button" class="navbar__item navbar__brand">Point</a>
-    </div>
-    <div class="navbar__end">
-      <a role="button" class="navbar__item">Home</a>
-      <a role="button" class="navbar__item">About</a>
-      <a role="button" class="navbar__item">Work</a>
-      <a role="button" class="navbar__item">Shop</a>
-      <a role="button" class="navbar__item">Blog</a>
-      <a role="button" class="navbar__item">Contact</a>
-    </div>
-  </nav>
-</div>
-
-```html
-<nav class="navbar navbar--dark" style="background-color: #333;">
+<nav class="navbar navbar--dark px-5 bg-primary">
+  ...
+</nav>
+<nav class="navbar navbar--light px-5 bg-light">
   ...
 </nav>
 ```

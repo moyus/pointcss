@@ -30,53 +30,6 @@
       padding-right: 0;
     }
   }
-
-  &.is-start {
-    justify-content: flex-start;
-  }
-
-  &.is-center {
-    justify-content: center;
-  }
-
-  &.is-end {
-    justify-content: flex-end;
-  }
-
-  &.is-around {
-    justify-content: space-around;
-  }
-
-  &.is-between {
-    justify-content: space-between;
-  }
-
-  &.is-top {
-    align-items: flex-start;
-  }
-
-  &.is-middle {
-    align-items: center;
-  }
-
-  &.is-bottom {
-    align-items: flex-end;
-  }
-
-  &.is-stretch {
-    align-items: stretch;
-  }
-
-  &.is-reverse {
-    flex-direction: row-reverse;
-  }
-
-  &.is-column {
-    flex-direction: column;
-    &.is-reverse {
-      flex-direction: column-reverse;
-    }
-  }
 }
 
 @include make-grid-cols();

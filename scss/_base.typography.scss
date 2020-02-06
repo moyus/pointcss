@@ -20,6 +20,11 @@ p {
   margin: 0 0 $spacing-stack-lg 0;
 }
 
+sub,
+sup {
+  left: 0.1em;
+}
+
 ins,
 mark {
   background: #ffa;
@@ -35,7 +40,7 @@ hr {
   box-sizing: content-box;
 }
 
-// Link
+// link
 a {
   color: $link-color;
   text-decoration: none;
@@ -44,7 +49,7 @@ a {
   }
 }
 
-// List
+// list
 ul, ol {
   margin: 0 0 $spacing-stack-lg 0;
   padding: 0 0 0 2em;
@@ -69,7 +74,7 @@ dd {
   margin-left: $spacing-stack-lg;
 }
 
-// Blockquote
+// blockquote
 blockquote {
   border-left: 3px solid $grey-weak;
   padding: $spacing-squish-xl;
@@ -87,7 +92,44 @@ blockquote {
   }
 }
 
-sub,
-sup {
-  left: 0.1em;
+// code
+pre,
+code,
+kbd,
+samp {
+  font-size: 1em;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: "Source Code Pro", "Hack", "Monaco", "Inconsolata", monospace;
+  line-height: $line-height-normal;
+}
+
+code {
+  color: #ed6c63;
+  font-size: $text-size-sm;
+  font-weight: normal;
+  padding: 1px 3px 3px;
+  background: #f5f7fa;
+  word-wrap: break-word;
+}
+
+pre {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: $spacing-stack-lg;
+  padding: $spacing-inset-md;
+  background: #f5f7fa;
+  color: #69707a;
+  font-size: $text-size-sm;
+  overflow: auto;
+
+  code {
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+    border-radius: 0;
+    word-break: normal;
+    background: transparent;
+  }
 }

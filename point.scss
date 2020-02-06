@@ -1,19 +1,9 @@
-/*
- * pointcss
- * version: 2.0.0
- * url: https://github.com/moyus/pointcss
- * Copyright 2017-2020 MOYU
- * Licensed under MIT (https://github.com/moyus/pointcss/blob/master/LICENSE)
- */
-
 @import 'scss/variables';
 @import 'scss/tools';
 
 // Base
-@import 'scss/base.normalize';
 @import 'scss/base.reboot';
 @import 'scss/base.typography';
-@import 'scss/base.code';
 @import 'scss/base.table';
 @import 'scss/base.media';
 
@@ -23,19 +13,19 @@
 
 // Components
 @import 'scss/components.badge';
-@import 'scss/components.button'; 
-@import 'scss/components.hint'; 
-@import 'scss/components.form'; 
-@import 'scss/components.progress';
 @import 'scss/components.box'; 
-@import 'scss/components.note'; 
+@import 'scss/components.breadcrumb';
+@import 'scss/components.button'; 
+@import 'scss/components.dropdown';
+@import 'scss/components.form'; 
+@import 'scss/components.hint'; 
 @import 'scss/components.list';
+@import 'scss/components.modal';
 @import 'scss/components.nav';
 @import 'scss/components.navbar';
-@import 'scss/components.breadcrumb';
+@import 'scss/components.note'; 
 @import 'scss/components.pagination';
-@import 'scss/components.modal';
-@import 'scss/components.popover';
+@import 'scss/components.progress';
 
 // Utilities
 @import 'scss/utilities.color';

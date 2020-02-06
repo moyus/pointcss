@@ -4,10 +4,11 @@ A lightweight and flexible CSS Framework for building modern responsive web apps
 
 - Built with flexbox
 - Mobile friendly layout
-- **10KB** minified and gzipped
+- ~10KB minified and gzipped
 
 ## Installation
-There are 3 ways to get start
+
+There are 3 ways to get started
 
 ##### Yarn
 ```sh
@@ -67,4 +68,5 @@ browsers are recommended:
 - Internet Explorer 10+
 
 ## Copyright and License
-Designed and built by <a href="https://moyu.io">MOYU</a>. Licensed under the [MIT license](https://github.com/moyus/point/blob/master/LICENSE).
+- Designed and built by [MOYU](https://moyu.io)
+- Licensed under the [MIT license](https://github.com/moyus/point/blob/master/LICENSE)

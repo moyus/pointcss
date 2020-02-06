@@ -20,10 +20,8 @@ In order to create a more transparent UI code, **pointcss** introduced some grea
 
 ## Colors
 
+@TODO
+
 ## Spacing
 
-## Responsive Suffixes
-`*@<breakpoint>` tell us *'when at this breakpoint, use this class'*. Some examples:
-
-- `.u-hidden-up@md`: a utility class to hide things when at `md` breakpoint and up.
-- `.l-col-6@sm`: change column's size to half of it's parent when at `sm` breakpoint and up
+@TODO
