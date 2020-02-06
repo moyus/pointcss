@@ -101,11 +101,11 @@ gulp.task('serve', function (done) {
   done()
 })
 
-gulp.task('docs:html', function () {
-  if (isProd) {
-    del.sync(['docs/**', '!docs/src'])
-  }
+gulp.task('clean', function () {
+  return del(['docs/**', '!docs/src']);
+})
 
+gulp.task('docs:html', function () {
   return gulp.src([
       'docs/src/**/*.md'
     ])
@@ -163,4 +163,4 @@ gulp.task('dev', gulp.series(
   },
   'build', 'docs', 'serve', 'watch'
 ))
-gulp.task('default', gulp.series('build', 'docs', 'report'))
+gulp.task('default', gulp.series('clean', 'build', 'docs', 'report'))
