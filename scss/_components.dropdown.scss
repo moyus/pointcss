@@ -1,0 +1,132 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__trigger {
+  &::-webkit-details-marker {
+		display: none;
+	}
+}
+
+.dropdown__content {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  right: auto;
+  bottom: auto;
+  width: 200px;
+  padding: $spacing-inset-sm;
+  margin: $spacing-stack-sm 0 0 0;
+  border: 1px solid $grey-thin;
+  border-radius: $border-radius-base;
+  background-color: $white;
+  box-shadow: 0 4px 6px rgba($black, .05);
+
+  > * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dropdown--sm {
+  .popover__content {
+    width: 160px;
+  }
+}
+
+.dropdown--lg {
+  .popover__content {
+    width: 280px;
+  }
+}
+
+.dropdown--auto {
+  .popover__content {
+    width: auto;
+  }
+}
+
+.dropdown--bl {
+  .popover__content {
+    left: 0;
+    top: 100%;
+    right: auto;
+    bottom: auto;
+    margin: $spacing-stack-sm 0 0 0;
+  }
+}
+
+.dropdown--br {
+  .popover__content {
+    left: auto;
+    top: 100%;
+    right: 0;
+    bottom: auto;
+    margin: $spacing-stack-sm 0 0 0;
+  }
+}
+
+.dropdown--rt {
+  .popover__content {
+    left: 100%;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    margin: 0 0 0 $spacing-stack-sm;
+  }
+}
+
+.dropdown--rb {
+  .popover__content {
+    left: 100%;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    margin: 0 0 0 $spacing-stack-sm;
+  }
+}
+
+.dropdown--tl {
+  .popover__content {
+    left: 0;
+    top: auto;
+    right: auto;
+    bottom: 100%;
+    margin: 0 0 $spacing-stack-sm 0;
+  }
+}
+
+.dropdown--tr {
+  .popover__content {
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 100%;
+    margin: 0 0 $spacing-stack-sm 0;
+  }
+}
+
+.dropdown--lt {
+  .popover__content {
+    left: auto;
+    top: 0;
+    right: 100%;
+    bottom: auto;
+    margin: 0 $spacing-stack-sm 0 0;
+  }
+}
+
+.dropdown--lb {
+  .popover__content {
+    left: auto;
+    top: auto;
+    right: 100%;
+    bottom: 0;
+    margin: 0 $spacing-stack-sm 0 0;
+  }
+}
