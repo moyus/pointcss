@@ -12,12 +12,12 @@ There are 3 ways to get started
 
 ##### Yarn
 ```sh
-yarn add pointcss
+yarn add @moyu/pointcss
 ```
 
 ##### NPM
 ```sh
-npm install pointcss --save
+npm install @moyu/pointcss --save
 ```
 
 ##### Download and use production file
@@ -30,7 +30,7 @@ npm install pointcss --save
 
 ##### Install the dependence
 ```sh
-yarn add pointcss --dev
+yarn add @moyu/pointcss --dev
 ```
 
 ##### Set your variables
@@ -51,7 +51,7 @@ $color-primary:                         #636AFF;
 
 // your code
 
-@import "node_modules/pointcss/point"
+@import "node_modules/@moyu/pointcss/point"
 ```
 
 ## Browser Support
