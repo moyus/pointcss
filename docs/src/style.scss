@@ -147,7 +147,7 @@ body {
   color: $grey-mute;
   transition: transform ease 300ms, color ease 200ms;
   padding: $spacing-squish-sm;
-  border-radius: $border-radius-sm;
+  border-radius: $component-border-radius-sm;
 
   &:hover {
     color: $grey-dark;
