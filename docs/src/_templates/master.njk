@@ -8,9 +8,9 @@
   <meta name="description" content="{{ project.description }}">
   <meta name="keywords" content="{{ project.keywords }}">
   <link rel="shortcut icon" href="{{project.url}}/images/favicon.ico" />
-  <link rel="stylesheet" href="{{project.url}}/css/point.css?v={{project.version | replace('.', '')}}">
-  <link rel="stylesheet" href="{{project.url}}/css/style.css?v={{project.version | replace('.', '')}}">
-  <link rel="stylesheet" href="{{project.url}}/css/prism.css?v={{project.version | replace('.', '')}}">
+  <link rel="stylesheet" href="{{project.url}}/css/point.css?v={{project.version | replace('.', '') | replace('-', '')}}">
+  <link rel="stylesheet" href="{{project.url}}/css/style.css?v={{project.version | replace('.', '') | replace('-', '')}}">
+  <link rel="stylesheet" href="{{project.url}}/css/prism.css?v={{project.version | replace('.', '') | replace('-', '')}}">
 </head>
 <body>
   <div id="docs" class="site">
