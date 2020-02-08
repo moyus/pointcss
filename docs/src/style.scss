@@ -72,7 +72,7 @@ body {
   font-size: $text-size-xs;
   line-height: $line-height-normal;
   a {
-    color: $grey-base;
+    color: $grey-dark;
   }
 }
 
@@ -101,7 +101,7 @@ body {
     display: block;
     color: inherit;
     &:hover {
-      color: $grey-base;
+      color: $grey-dark;
     }
   }
 }
@@ -127,7 +127,7 @@ body {
 
 .navigation__label {
   cursor: pointer;
-  color: $grey-base;
+  color: $grey-dark;
   font-weight: $font-weight-medium;
   margin-bottom: $spacing-stack-sm;
   &::-webkit-details-marker {
@@ -150,7 +150,7 @@ body {
   border-radius: $border-radius-sm;
 
   &:hover {
-    color: $grey-base;
+    color: $grey-dark;
     transform: translateX(4px);
   }
 
