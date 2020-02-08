@@ -1,6 +1,6 @@
 /* ## Nav
 ---------------------------------*/
-$nav-border-width: 1px;
+$nav-border-width: $component-border-width !default;
 
 .nav {
   position: relative;
@@ -36,7 +36,7 @@ $nav-border-width: 1px;
   text-decoration: none;
 
   &:hover {
-    color: $grey-base;
+    color: $grey-dark;
   }
 
   &[disabled],
@@ -91,7 +91,7 @@ $nav-border-width: 1px;
   
     > .nav__link {
       padding: 0.375em 0.75em;
-      border-radius: $border-radius-base;
+      border-radius: $component-border-radius-base;
 
       &:hover {
         background-color: $grey-light;
@@ -138,12 +138,12 @@ $nav-border-width: 1px;
       border-style: solid;
       border-width: $nav-border-width $nav-border-width 0 $nav-border-width;
       border-color: transparent;
-      border-radius: $border-radius-base $border-radius-base 0 0;
+      border-radius: $component-border-radius-base $component-border-radius-base 0 0;
     }
 
     &.is-active {
       > .nav__link {
-        color: $grey-base;
+        color: $grey-dark;
         border-color: $grey-thin;
         background-color: $white;
       }

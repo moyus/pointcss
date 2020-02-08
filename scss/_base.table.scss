@@ -16,12 +16,12 @@ th {
 .table {
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0 0 $spacing-stack-md 0;
   border-collapse: collapse;
 
   th, td {
     text-align: left;
-    padding: $spacing-squish-md;
+    padding: $spacing-square-md;
     vertical-align: middle;
   }
 
@@ -35,7 +35,7 @@ th {
 .table.table--compact {
   th, td {
     text-align: left;
-    padding: $spacing-squish-sm;
+    padding: $spacing-square-sm;
     vertical-align: middle;
   }
 }
@@ -43,7 +43,7 @@ th {
 .table.table--loose {
   th, td {
     text-align: left;
-    padding: $spacing-squish-xl;
+    padding: $spacing-square-lg;
     vertical-align: middle;
   }
 }

@@ -16,7 +16,7 @@ catalogue:
 
 Applying `.table` class on `<table>` element to quick create a styled table.
 
-<table class="table mb-5">
+<table class="table">
   <thead>
     <tr>
       <th>ID</th>
@@ -91,7 +91,7 @@ Applying `.table` class on `<table>` element to quick create a styled table.
 
 By adding `.table--striped` modifier class on `<table class="table">` element to quick create a striped table.
 
-<table class="table table--striped mb-5">
+<table class="table table--striped">
   <thead>
     <tr>
       <th>ID</th>
@@ -175,7 +175,7 @@ By adding `.table--striped` modifier class on `<table class="table">` element to
 
 By adding `.table--hover` modifier class on `<table class="table">` element to quick create a table with hover effect.
 
-<table class="table table--hover mb-5">
+<table class="table table--hover">
   <thead>
     <tr>
       <th>ID</th>
@@ -259,7 +259,7 @@ By adding `.table--hover` modifier class on `<table class="table">` element to q
 
 By adding `.table--bordered` modifier class on `<table class="table">` element to quick create a table with border.
 
-<table class="table table--bordered mb-5">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>ID</th>
@@ -343,7 +343,7 @@ By adding `.table--bordered` modifier class on `<table class="table">` element t
 
 Use `.list--compact`, `.list--loose` modifier classes on `.list` container to change cell spacing
 
-<table class="table table--bordered table--compact mb-5">
+<table class="table table--bordered table--compact">
   <thead>
     <tr>
       <th>ID</th>
@@ -399,7 +399,7 @@ Use `.list--compact`, `.list--loose` modifier classes on `.list` container to ch
   </tbody>
 </table>
 
-<table class="table table--bordered table--loose mb-5">
+<table class="table table--bordered table--loose">
   <thead>
     <tr>
       <th>ID</th>
@@ -481,7 +481,7 @@ The responsive table below is made with pure css code
 - First, add `.table--collapse@<breakpoint>` on `<table class="table">` element
 - Then, add `data-label="column label"` on each `<td>` element with every `<tr>` table row
 
-<table class="table table--collapse@md mb-5">
+<table class="table table--collapse@md">
   <thead>
     <tr>
       <th>#</th>

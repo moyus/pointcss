@@ -1,23 +1,30 @@
 /* ## Box
 ---------------------------------*/
-$box-border-width: 1px;
+$box-border-width: $component-border-width;
+
+$box-palette: (
+  danger: (bg: #f2dede, border: #ebccd1, text: #a94442),
+  info: (bg: #d9edf7, border: #bde2fb, text: #31708f),
+  success: (bg: #dff0d8, border: #d6e9c6, text: #3c763d),
+  warning: (bg: #fcf8e3, border: #faebcc, text: #8a6d3b)
+) !default;
 
 .box {
   margin-bottom: $spacing-stack-lg;
-  border-radius: $border-radius-base;
+  border-radius: $component-border-radius-base;
 }
 
 .box__header {
-  color: $grey-base;
+  color: $grey-dark;
   font-size: $text-size-base;
   line-height: $line-height-tight;
-  padding: $spacing-squish-lg;
+  padding: $spacing-squish-md;
   border: $box-border-width solid $grey-thin;
-  border-radius: $border-radius-base $border-radius-base 0 0;
+  border-radius: $component-border-radius-base $component-border-radius-base 0 0;
   background-color: $grey-light;
 
   &:only-child {
-    border-radius: $border-radius-base;
+    border-radius: $component-border-radius-base;
   }
 }
 
@@ -25,17 +32,17 @@ $box-border-width: 1px;
   border-style: solid;
   border-color: $grey-thin;
   border-width: 0 $box-border-width $box-border-width $box-border-width;
-  border-radius: 0 0 $border-radius-base $border-radius-base;
+  border-radius: 0 0 $component-border-radius-base $component-border-radius-base;
   background-color: $white;
 
   &:only-child {
     border-width: $box-border-width;
-    border-radius: $border-radius-base;
+    border-radius: $component-border-radius-base;
   }
 }
 
 .box__inner {
-  padding: $spacing-inset-base;
+  padding: $spacing-square-md;
 
   > *:first-child {
     margin-top: 0;
@@ -56,8 +63,8 @@ $box-border-width: 1px;
 details.box {
   > summary.box__header {
     cursor: pointer;
-    border-bottom-left-radius: $border-radius-base;
-    border-bottom-right-radius: $border-radius-base;
+    border-bottom-left-radius: $component-border-radius-base;
+    border-bottom-right-radius: $component-border-radius-base;
     appearance: none;
     &::-webkit-details-marker {
       display: none;

@@ -1,7 +1,8 @@
 /* ## Pagination
 ---------------------------------*/
-$pagination-border-width: 1px;
-$pagination-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacing-squish-base, 1)  + 2 * $pagination-border-width;
+$pagination-border-width: 1px !default;
+$pagination-bg: $component-bg !default;
+$pagination-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacing-squish-sm, 1)  + 2 * $pagination-border-width;
 
 .pagination {
   display: flex;
@@ -16,8 +17,8 @@ $pagination-height-computed: $text-size-base * $line-height-normal + 2 * nth($sp
   color: $grey-mute;
   font-size: $text-size-base;
   line-height: $line-height-normal;
-  padding: $spacing-squish-base;
-  border-radius: $border-radius-base;
+  padding: $spacing-squish-sm;
+  border-radius: $component-border-radius-base;
   border: $pagination-border-width solid transparent;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -26,7 +27,7 @@ $pagination-height-computed: $text-size-base * $line-height-normal + 2 * nth($sp
   z-index: 5;
 
   &:hover {
-    color: $grey-base;
+    color: $grey-dark;
     background-color: $grey-light;
   }
 
@@ -44,14 +45,14 @@ $pagination-height-computed: $text-size-base * $line-height-normal + 2 * nth($sp
 }
 
 .pagination--sm {
-  $pagination-height-computed: $text-size-sm * $line-height-normal + 2 * nth($spacing-squish-sm, 1)  + 2 * $pagination-border-width;
+  $pagination-height-computed: $text-size-sm * $line-height-normal + 2 * nth($spacing-squish-xs, 1)  + 2 * $pagination-border-width;
 
   .pagination__item {
     height: $pagination-height-computed;
     min-width: $pagination-height-computed;
     font-size: $text-size-sm;
-    padding: $spacing-squish-sm;
-    border-radius: $border-radius-sm;
+    padding: $spacing-squish-xs;
+    border-radius: $component-border-radius-sm;
   }
 }
 
@@ -59,7 +60,7 @@ $pagination-height-computed: $text-size-base * $line-height-normal + 2 * nth($sp
   .pagination__item {
     border-color: $grey-thin;
     margin-left: -1px;
-    background-color: $white;
+    background-color: $pagination-bg;
 
     &:hover {
       background-color: $grey-light;

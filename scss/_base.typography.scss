@@ -1,8 +1,8 @@
 h1, h2, h3, h4, h5, h6 {
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
-  margin-top: $heading-margin-top;
-  margin-bottom: $heading-margin-bottom;
+  margin-top: $spacing-stack-lg;
+  margin-bottom: $spacing-stack-sm;
 
   small {
     color: $grey-mute;
@@ -17,7 +17,7 @@ h5 { font-size: $h5-font-size; }
 h6 { font-size: $h6-font-size; }
 
 p {
-  margin: 0 0 $spacing-stack-lg 0;
+  margin: 0 0 $spacing-stack-md 0;
 }
 
 sub,
@@ -33,7 +33,7 @@ mark {
 hr {
   display: block;
   padding: 0;
-  margin: $spacing-8 0;
+  margin: $spacing-stack-lg 0;
   height: 0;
   border: 0;
   border-top: 1px solid $grey-weak;
@@ -51,7 +51,7 @@ a {
 
 // list
 ul, ol {
-  margin: 0 0 $spacing-stack-lg 0;
+  margin: 0 0 $spacing-stack-md 0;
   padding: 0 0 0 2em;
   ul, ol {
     margin-bottom: $spacing-stack-base;
@@ -59,26 +59,26 @@ ul, ol {
 }
 
 dl {
-  margin: 0 0 $spacing-stack-lg 0;
+  margin: 0 0 $spacing-stack-md 0;
 }
 
 dt {
   font-weight: bold;
-  margin: $spacing-stack-base 0 0 0;
+  margin: $spacing-stack-md 0 0 0;
   &:first-child {
     margin-top: 0;
   }
 }
 
 dd {
-  margin-left: $spacing-stack-lg;
+  margin-left: $spacing-stack-md;
 }
 
 // blockquote
 blockquote {
-  border-left: 3px solid $grey-weak;
-  padding: $spacing-squish-xl;
-  margin: 0 0 $spacing-stack-lg 0;
+  border-left: 4px solid $grey-weak;
+  padding: $spacing-squish-lg;
+  margin: $spacing-stack-lg 0;
 
   cite {
     color: $grey-mute;
@@ -104,23 +104,24 @@ samp {
   line-height: $line-height-normal;
 }
 
-code {
-  color: #ed6c63;
-  font-size: $text-size-sm;
-  font-weight: normal;
-  padding: 1px 3px 3px;
-  background: #f5f7fa;
+code,
+kbd {
+  color: $code-color;
+  background: $code-bg;
+  font-size: 0.875em;
+  padding: .175em .25em;
+  border-radius: .175em;
   word-wrap: break-word;
 }
 
 pre {
   display: block;
   width: 100%;
-  margin-top: 0;
-  margin-bottom: $spacing-stack-lg;
-  padding: $spacing-inset-md;
-  background: #f5f7fa;
-  color: #69707a;
+  margin: 0 0 $spacing-stack-md 0;
+  padding: $spacing-square-md;
+  background: $grey-light;
+  color: $grey-dark;
+  border-radius: $component-border-radius-base;
   font-size: $text-size-sm;
   overflow: auto;
 

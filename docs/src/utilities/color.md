@@ -52,7 +52,7 @@ Utilities for controlling an element's text color and background color.
       <td><span class="color-black">Lorem ipsum dolor</span></td>
     </tr>
     <tr>
-      <td><code>.color-grey</code></td>
+      <td><code>.color-dark</code></td>
       <td><code>color: #212121;</code></td>
       <td><span class="color-grey">Lorem ipsum dolor</span></td>
     </tr>
@@ -131,9 +131,9 @@ Utilities for controlling an element's text color and background color.
       <td><span class="rect bg-black"></span></td>
     </tr>
     <tr>
-      <td><code>.bg-grey</code></td>
+      <td><code>.bg-dark</code></td>
       <td><code>background-color: #212121;</code></td>
-      <td><span class="rect bg-grey"></span></td>
+      <td><span class="rect bg-dark"></span></td>
     </tr>
     <tr>
       <td><code>.bg-mute</code></td>

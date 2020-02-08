@@ -16,10 +16,10 @@
   right: auto;
   bottom: auto;
   width: 200px;
-  padding: $spacing-inset-sm;
+  padding: $spacing-square-sm;
   margin: $spacing-stack-sm 0 0 0;
   border: 1px solid $grey-thin;
-  border-radius: $border-radius-base;
+  border-radius: $component-border-radius-base;
   background-color: $white;
   box-shadow: 0 4px 6px rgba($black, .05);
 

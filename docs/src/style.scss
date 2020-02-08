@@ -79,13 +79,13 @@ body {
   flex: 1 1 820px;
   max-width: 820px;
   min-height: 1px;
-  padding-top: $spacing-8;
-  padding-bottom: $spacing-8;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site__catalogue {
   position: sticky;
-  top: $spacing-9;
+  top: 32px;
   width: 140px;
   flex: 0 0 140px;
   min-height: 1px;
@@ -203,18 +203,10 @@ body {
 
   > h2 {
     font-size: $text-size-2xl;
-    margin-top: $spacing-stack-xl * 2;
-    margin-bottom: $spacing-stack-xl;
   }
 
   > h3, > h4, > h5, > h6 {
     font-size: $text-size-base;
-    margin-top: $spacing-stack-xl;
-    margin-bottom: $spacing-stack-md;
-  }
-
-  > p {
-    margin-bottom: $spacing-stack-xl;
   }
 }
 
@@ -222,9 +214,30 @@ body {
 ---------------------------------*/
 .rect {
   display: inline-block;
-  height: 30px;
-  min-width: 48px;
+  padding: $spacing-square-md;
   background-color: $grey-light;
+  &.is-2x {
+    padding: $spacing-square-lg;
+  }
+  &.is-3x {
+    padding: $spacing-square-xl;
+  }
+}
+
+.circle {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 1993px;
+  background-color: $grey-light;
+  &.is-2x {
+    width: 64px;
+    height: 64px;
+  }
+  &.is-3x {
+    width: 96px;
+    height: 96px;
+  }
 }
 
 .rect-box {

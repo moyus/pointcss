@@ -9,12 +9,12 @@ The `.container` width for each breakpoint is defined in `$container-max-widths`
 
 Those are the default values:
 
-<table class="table table--bordered">
+<table class="table">
   <thead>
-    <tr class="bg-light">
-      <th>breakpoint</th>
-      <th>max width</th>
-      <td>gutter</th>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Max width</th>
+      <th>Gutter</th>
     </tr>
   </thead>
   <tbody>

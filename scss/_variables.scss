@@ -7,7 +7,7 @@ $color-info:                            #0069ff !default; // accent
 $color-warning:                         #ED6E33 !default; // warning
 
 $black:                                 #000000 !default; // for color mix
-$grey-base:                             #212121 !default; // heading, text
+$grey-dark:                             #212121 !default; // heading, text
 $grey-mute:                             #616161 !default; // secondary text, icon
 $grey-thin:                             #dbdbdb !default; // border, icon
 $grey-weak:                             #e5e5e5 !default; // divider, border
@@ -18,7 +18,7 @@ $white:                                 #ffffff !default; // for color mix
 $grey-colors: (
   black: $black,
   white: $white,
-  grey: $grey-base,
+  dark: $grey-dark,
   mute: $grey-mute,
   thin: $grey-thin,
   weak: $grey-weak,
@@ -50,89 +50,81 @@ $zIndex-9: 900 !default;
 
 // Spacing
 // -----------------------------------------------------------------------------
-$spacing-1:                             2px !default;
-$spacing-2:                             4px !default;
-$spacing-3:                             8px !default;
-$spacing-4:                             12px !default;
-$spacing-5:                             16px !default;
-$spacing-6:                             24px !default;
-$spacing-7:                             32px !default;
-$spacing-8:                             48px !default;
-$spacing-9:                             64px !default;
-$spacing-base:                          $spacing-3 !default;
-
-$spacings: (
-  0: 0,
-  1: $spacing-1,
-  2: $spacing-2,
-  3: $spacing-3,
-  4: $spacing-4,
-  5: $spacing-5,
-  6: $spacing-6,
-  7: $spacing-7,
-  8: $spacing-8,
-  9: $spacing-9
-) !default;
-
 // square inset
-$spacing-inset-xs:                      4px !default;
-$spacing-inset-sm:                      8px !default;
-$spacing-inset-md:                      16px !default;
-$spacing-inset-lg:                      32px !default;
-$spacing-inset-xl:                      64px !default;
-$spacing-inset-base:                    $spacing-inset-md !default;
+$spacing-square-xs:                      4px !default;
+$spacing-square-sm:                      8px !default;
+$spacing-square-md:                      16px !default;
+$spacing-square-lg:                      24px !default;
+$spacing-square-xl:                      32px !default;
+$spacing-square-base:                    $spacing-square-md !default;
 
 // squish inset
-$spacing-squish-xs:                     (2px 4px) !default;
-$spacing-squish-sm:                     (4px 8px) !default;
-$spacing-squish-md:                     (6px 12px) !default; // 0.375em 0.75em;
-$spacing-squish-lg:                     (8px 16px) !default;
-$spacing-squish-xl:                     (12px 24px) !default;
+$spacing-squish-xs:                     (4px 8px) !default;
+$spacing-squish-sm:                     (6px 12px) !default;
+$spacing-squish-md:                     (8px 16px) !default;
+$spacing-squish-lg:                     (12px 24px) !default;
+$spacing-squish-xl:                     (16px 32px) !default;
 $spacing-squish-base:                   $spacing-squish-md !default;
 
 // stack
-$spacing-stack-xs:                      2px !default;
-$spacing-stack-sm:                      4px !default;
-$spacing-stack-md:                      8px !default;
-$spacing-stack-lg:                      16px !default;
-$spacing-stack-xl:                      24px !default;
+$spacing-stack-xxs:                     2px !default;
+$spacing-stack-xs:                      4px !default;
+$spacing-stack-sm:                      8px !default;
+$spacing-stack-md:                      16px !default;
+$spacing-stack-lg:                      24px !default;
+$spacing-stack-xl:                      32px !default;
+$spacing-stack-xxl:                     64px !default;
 $spacing-stack-base:                    $spacing-stack-md !default;
 
+$spacings: (
+  0: 0,
+  1: 2px,
+  2: 4px,
+  3: 6px,
+  4: 8px,
+  5: 12px,
+  6: 16px,
+  7: 24px,
+  8: 32px,
+  9: 64px,
+) !default;
 
 // Base
 // -----------------------------------------------------------------------------
-// paragraph, label
-$text-size-xs:                          12px;
-$text-size-sm:                          14px;
-$text-size-md:                          16px;
-$text-size-lg:                          18px;
-// heading, display
-$text-size-xl:                          20px;
-$text-size-2xl:                         24px;
-$text-size-3xl:                         28px;
-$text-size-4xl:                         32px;
-$text-size-5xl:                         36px;
-$text-size-6xl:                         48px;
-$text-size-7xl:                         64px;
-$text-size-8xl:                         72px;
-$text-size-9xl:                         96px;
-
-$text-size-base:                        $text-size-md !default;
+$text-size-xs:                          12px !default;
+$text-size-sm:                          14px !default;
+$text-size-md:                          16px !default;
+$text-size-lg:                          18px !default;
+$text-size-xl:                          20px !default;
+$text-size-2xl:                         24px !default;
+$text-size-3xl:                         28px !default;
+$text-size-4xl:                         32px !default;
+$text-size-5xl:                         36px !default;
+$text-size-6xl:                         48px !default;
+$text-size-7xl:                         64px !default;
+$text-size-8xl:                         72px !default;
+$text-size-9xl:                         96px !default;
+$text-size-base:                        16px !default;
 
 $text-sizes: (
-  xs: $text-size-xs,
-  sm: $text-size-sm,
-  md: $text-size-md,
+  // display
+  display-lg: $text-size-7xl,
+  display-md: $text-size-6xl,
+  display-sm: $text-size-5xl,
+  // title
+  title-xl: $text-size-4xl,
+  title-lg: $text-size-3xl,
+  title-md: $text-size-2xl,
+  title-sm: $text-size-xl,
+  title-xs: $text-size-lg,
+  // base
   lg: $text-size-lg,
-  xl: $text-size-xl,
-  2xl: $text-size-2xl,
-  3xl: $text-size-3xl,
-  4xl: $text-size-4xl,
-  5xl: $text-size-5xl,
-  6xl: $text-size-6xl,
-  7xl: $text-size-7xl,
-  8xl: $text-size-8xl,
-  9xl: $text-size-9xl
+  md: $text-size-md,
+  sm: $text-size-sm,
+  // meta
+  meta-lg: $text-size-md,
+  meta-sm:  $text-size-sm,
+  meta-xs:  $text-size-xs
 ) !default;
 
 $line-height-tight:                     1.25 !default;
@@ -164,39 +156,30 @@ $font-weights: (
   bold: $font-weight-bold
 ) !default;
 
-$font-family-display:                   'Open Sans', 'Roboto', 'Helvetica', sans-serif !default;
 $font-family-base:                      -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif !default;
 
-$h1-font-size:                          $text-size-5xl !default;
-$h2-font-size:                          $text-size-4xl !default;
-$h3-font-size:                          $text-size-3xl !default;
-$h4-font-size:                          $text-size-2xl !default;
-$h5-font-size:                          $text-size-xl !default;
-$h6-font-size:                          $text-size-lg !default;
+$h1-font-size:                          $text-size-4xl !default;
+$h2-font-size:                          $text-size-3xl !default;
+$h3-font-size:                          $text-size-2xl !default;
+$h4-font-size:                          $text-size-xl !default;
+$h5-font-size:                          $text-size-lg !default;
+$h6-font-size:                          $text-size-md !default;
 
-$heading-font-weight:                   $font-weight-medium !default;
+$heading-font-weight:                   $font-weight-semi !default;
 $heading-line-height:                   $line-height-tight !default;
-$heading-margin-top:                    $spacing-5 * 2 !default;
-$heading-margin-bottom:                 $spacing-5 !default;
 
-$body-text-color:                       $grey-base !default;
+$body-text-color:                       $grey-dark !default;
 $body-text-size:                        $text-size-base !default;
 $body-line-height:                      $line-height-normal !default;
 $body-font-family:                      $font-family-base !default;
 $body-bg:                               $white !default;
+
 $link-color:                            $color-primary !default;
-
-// Components
-// -----------------------------------------------------------------------------
-$border-radius-sm:                      2px !default;
-$border-radius-md:                      3px !default;
-$border-radius-lg:                      5px !default;
-
-$border-radius-base:                    $border-radius-md !default;
-$border-width-base:                     1px !default;
-$fill-bg:                               $white !default;
+$code-color:                            #d73e48 !default;
+$code-bg:                               #fcf2f2 !default;
 
 // Grid
+// -----------------------------------------------------------------------------
 $grid-columns:                          12 !default;
 $grid-gutter-width:                     16px !default;
 
@@ -214,67 +197,11 @@ $container-max-widths: (
   lg: 1180px
 ) !default;
 
-// Form
+// Components
 // -----------------------------------------------------------------------------
-
-// Button
-// -----------------------------------------------------------------------------
-
-// Progress
-// -----------------------------------------------------------------------------
-
-// Badge
-// -----------------------------------------------------------------------------
-
-// Hint
-// -----------------------------------------------------------------------------
-
-// List
-// -----------------------------------------------------------------------------
-
-// Dropdown
-// -----------------------------------------------------------------------------
-
-// Modal
-// -----------------------------------------------------------------------------
-$modal-width-sm:                           480px !default;
-$modal-width-md:                           600px !default;
-$modal-width-lg:                           900px !default;
-$modal-width-base:                         $modal-width-md !default;
-$modal-title-font-size:                    $text-size-xl !default;
-$modal-zIndex:                             $zIndex-9 !default;
-$modal-bg:                                 $white !default;
-$mask-zIndex:                              $zIndex-6 !default;
-$mask-bg:                                  rgba($black, 0.5) !default;
-
-// Nav
-// -----------------------------------------------------------------------------
-
-// Navbar
-// -----------------------------------------------------------------------------
-$navbar-height:                            60px !default;
-$navbar-font-size:                         $text-size-base !default;
-$navbar-color:                             $grey-base !default;
-$navbar-item-margin-x:                     $spacing-stack-base !default;
-
-// Pagination
-// -----------------------------------------------------------------------------
-
-
-// Note
-// -----------------------------------------------------------------------------
-$note-palette: (
-  danger: (bg: #f2dede, border: #f2dede, text: #a94442),
-  info: (bg: #d9edf7, border: #d9edf7, text: #31708f),
-  success: (bg: #dff0d8, border: #dff0d8, text: #3c763d),
-  warning: (bg: #fcf8e3, border: #fcf8e3, text: #8a6d3b)
-) !default;
-
-// Box
-// -----------------------------------------------------------------------------
-$box-palette: (
-  danger: (bg: #f2dede, border: #ebccd1, text: #a94442),
-  info: (bg: #d9edf7, border: #bde2fb, text: #31708f),
-  success: (bg: #dff0d8, border: #d6e9c6, text: #3c763d),
-  warning: (bg: #fcf8e3, border: #faebcc, text: #8a6d3b)
-) !default;
+$component-border-radius-sm:                      2px !default;
+$component-border-radius-md:                      3px !default;
+$component-border-radius-lg:                      5px !default;
+$component-border-radius-base:                    $component-border-radius-md !default;
+$component-border-width:                          1px !default;
+$component-bg:                                    $white !default;

@@ -1,5 +1,7 @@
 /* ## List
 ---------------------------------*/
+$list-bg: $component-bg !default;
+
 .list {
   position: relative;
   padding: 0;
@@ -11,9 +13,9 @@
 .list__link {
   position: relative;
   display: block;
-  padding-top: nth($spacing-squish-md, 1);
-  padding-bottom: nth($spacing-squish-md, 1);
-  background-color: $white;
+  padding-top: nth($spacing-squish-lg, 1);
+  padding-bottom: nth($spacing-squish-lg, 1);
+  background-color: $list-bg;
 
   &:not(:first-child) {
     border-top: 1px solid $grey-weak;
@@ -33,28 +35,28 @@
 .list--inset {
   .list__item,
   .list__link {
-    padding-left: nth($spacing-squish-md, 2);
-    padding-right: nth($spacing-squish-md, 2);
+    padding-left: nth($spacing-squish-lg, 2);
+    padding-right: nth($spacing-squish-lg, 2);
   }
 }
 
 .list--bordered {
   .list__item,
   .list__link {
-    padding-left: nth($spacing-squish-md, 2);
-    padding-right: nth($spacing-squish-md, 2);
+    padding-left: nth($spacing-squish-lg, 2);
+    padding-right: nth($spacing-squish-lg, 2);
     border: 1px solid $grey-weak;
     margin-bottom: -1px;
 
     &:first-child {
-      border-top-left-radius: $border-radius-base;
-      border-top-right-radius: $border-radius-base;
+      border-top-left-radius: $component-border-radius-base;
+      border-top-right-radius: $component-border-radius-base;
     }
 
     &:last-child {
       margin-bottom: 0;
-      border-bottom-left-radius: $border-radius-base;
-      border-bottom-right-radius: $border-radius-base;
+      border-bottom-left-radius: $component-border-radius-base;
+      border-bottom-right-radius: $component-border-radius-base;
     }
   }
 }
@@ -62,15 +64,15 @@
 .list--compact {
   .list__item,
   .list__link {
-    padding-top: nth($spacing-squish-sm, 1);
-    padding-bottom: nth($spacing-squish-sm, 1);
+    padding-top: nth($spacing-squish-md, 1);
+    padding-bottom: nth($spacing-squish-md, 1);
   }
 
   &.list--bordered,
   &.list--inset {
     .list__item {
-      padding-left: nth($spacing-squish-sm, 2);
-      padding-right: nth($spacing-squish-sm, 2);
+      padding-left: nth($spacing-squish-md, 2);
+      padding-right: nth($spacing-squish-md, 2);
     }
   }
 }

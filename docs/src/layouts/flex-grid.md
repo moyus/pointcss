@@ -166,9 +166,9 @@ Use `.col-*@<breakpoint>` column class to create responsive grid layout, etc: `.
 
 ### Breakpoints
 
-<table class="table table--bordered">
+<table class="table">
   <thead>
-    <tr class="bg-light">
+    <tr>
       <th>breakpoint</th>
       <th>value</th>
     </tr>

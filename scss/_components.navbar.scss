@@ -1,5 +1,10 @@
 /* ## Navbar
 ---------------------------------*/
+$navbar-height:                            60px !default;
+$navbar-font-size:                         $text-size-base !default;
+$navbar-color:                             $grey-dark !default;
+$navbar-item-margin-x:                     $spacing-stack-base !default;
+
 .navbar {
   position: relative;
   display: flex;
@@ -33,7 +38,7 @@
 
   &.is-active {
     > .navbar__link {
-      color: $grey-base;
+      color: $grey-dark;
       font-weight: $font-weight-medium;
     }
   }
@@ -47,7 +52,7 @@
 .navbar__brand {
   font-size: $text-size-xl;
   line-height: $line-height-tight;
-  color: $grey-base;
+  color: $grey-dark;
   margin-right: $spacing-stack-xl;
 }
 

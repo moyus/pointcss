@@ -100,8 +100,16 @@ Utilities for controlling text styles.
   </thead>
   <tbody>
     <tr>
-      <td><code>.text-xs</code></td>
+      <td><code>.text-meta-xs</code></td>
       <td><code>font-size: 12px;</code></td>
+    </tr>
+    <tr>
+      <td><code>.text-meta-sm</code></td>
+      <td><code>font-size: 14px;</code></td>
+    </tr>
+    <tr>
+      <td><code>.text-meta-lg</code></td>
+      <td><code>font-size: 16px;</code></td>
     </tr>
     <tr>
       <td><code>.text-sm</code></td>
@@ -116,40 +124,36 @@ Utilities for controlling text styles.
       <td><code>font-size: 18px;</code></td>
     </tr>
     <tr>
-      <td><code>.text-xl</code></td>
+      <td><code>.text-title-xs</code></td>
+      <td><code>font-size: 18px;</code></td>
+    </tr>
+    <tr>
+      <td><code>.text-title-sm</code></td>
       <td><code>font-size: 20px;</code></td>
     </tr>
     <tr>
-      <td><code>.text-2xl</code></td>
+      <td><code>.text-title-md</code></td>
       <td><code>font-size: 24px;</code></td>
     </tr>
     <tr>
-      <td><code>.text-3xl</code></td>
+      <td><code>.text-title-lg</code></td>
       <td><code>font-size: 28px;</code></td>
     </tr>
     <tr>
-      <td><code>.text-4xl</code></td>
+      <td><code>.text-title-xl</code></td>
       <td><code>font-size: 32px;</code></td>
     </tr>
     <tr>
-      <td><code>.text-5xl</code></td>
+      <td><code>.text-display-sm</code></td>
       <td><code>font-size: 36px;</code></td>
     </tr>
     <tr>
-      <td><code>.text-6xl</code></td>
+      <td><code>.text-display-md</code></td>
       <td><code>font-size: 48px;</code></td>
     </tr>
     <tr>
-      <td><code>.text-7xl</code></td>
+      <td><code>.text-display-lg</code></td>
       <td><code>font-size: 64px;</code></td>
-    </tr>
-    <tr>
-      <td><code>.text-8xl</code></td>
-      <td><code>font-size: 72px;</code></td>
-    </tr>
-    <tr>
-      <td><code>.text-9xl</code></td>
-      <td><code>font-size: 96px;</code></td>
     </tr>
   </tbody>
 </table>

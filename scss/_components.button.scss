@@ -1,21 +1,22 @@
 /* ## Button
 ---------------------------------*/
-$button-border-width: 1px;
-$button-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacing-squish-base, 1)  + 2 * $button-border-width;
+$btn-border-width: $component-border-width !default;
+$btn-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacing-squish-sm, 1)  + 2 * $btn-border-width;
+$enable-btn-focus-box-shadow: true;
 
 .btn {
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  padding: $spacing-squish-base;
+  padding: $spacing-squish-sm;
   font-size: $text-size-base;
   line-height: $line-height-normal;
-  color: $grey-base;
-  height: $button-height-computed;
-  min-width: $button-height-computed;
-  border: $button-border-width solid $grey-thin;
-  border-radius: $border-radius-base;
+  height: $btn-height-computed;
+  min-width: $btn-height-computed;
+  border-width: $btn-border-width;
+  border-style: solid;
+  border-radius: $component-border-radius-base;
   white-space: nowrap;
   text-overflow: ellipsis;
   text-decoration: none;
@@ -23,7 +24,6 @@ $button-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacin
   background: none;
   box-shadow: none;
   appearance: none;
-  background-color: $white;
 
   &.is-loading {
     color: transparent;
@@ -31,10 +31,8 @@ $button-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacin
 
     &:after {
       animation: spin-around 500ms infinite linear;
-      border: 2px solid $grey-mute;
+      border: 2px solid transparent;
       border-radius: 50%;
-      border-right-color: transparent;
-      border-top-color: transparent;
       content: "";
       display: block;
       height: 16px;
@@ -45,8 +43,19 @@ $button-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacin
       margin-left: -8px;
       margin-top: -8px;
     }
-
   }
+
+  @include btn-variant(
+    $background: $white,
+    $border: $grey-thin,
+    $color: $grey-dark,
+    $hover-background: $grey-light,
+    $hover-border: $grey-thin,
+    $hover-color: $grey-dark,
+    $active-background: shade-color($grey-light, 1),
+    $active-border: shade-color($grey-thin, 1),
+    $active-color: $grey-dark
+  );
 
   &[disabled],
   fieldset[disabled] & {
@@ -57,89 +66,58 @@ $button-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacin
 }
 
 .btn.btn--black {
-  @include btn-variant($white, $black);
+  @include btn-variant($black);
   &.btn--outline {
-    @include btn-outline-variant($white, $black);
+    @include btn-outline-variant($black);
+  }
+}
+
+.btn.btn--dark {
+  @include btn-variant($grey-dark);
+  &.btn--outline {
+    @include btn-outline-variant($grey-dark);
   }
 }
 
 .btn.btn--white {
-  @include btn-variant($grey-base, $white);
+  @include btn-variant($white);
   &.btn--outline {
-    @include btn-outline-variant($grey-base, $white);
+    @include btn-outline-variant($white);
   }
 }
 
-.btn.btn--primary {
-  @include btn-variant($white, $color-primary);
-  &.btn--outline {
-    @include btn-outline-variant($white, $color-primary);
+@each $name, $color in $theme-colors {
+  .btn.btn--#{$name} {
+    @include btn-variant($color);
+    &.btn--outline {
+      @include btn-outline-variant($color);
+    }
   }
-}
-
-.btn.btn--danger {
-  @include btn-variant($white, $color-danger);
-  &.btn--outline {
-    @include btn-outline-variant($white, $color-danger);
-  }
-}
-
-.btn.btn--success {
-  @include btn-variant($white, $color-success);
-  &.btn--outline {
-    @include btn-outline-variant($white, $color-success);
-  }
-}
-
-.btn.btn--info {
-  @include btn-variant($white, $color-info);
-  &.btn--outline {
-    @include btn-outline-variant($white, $color-info);
-  }
-}
-
-.btn.btn--warning {
-  @include btn-variant($white, $color-warning);
-  &.btn--outline {
-    @include btn-outline-variant($white, $color-warning);
-  }
-}
-
-.btn.btn--loose {
-  padding-left: $spacing-5;
-  padding-right: $spacing-5;
 }
 
 .btn.btn--sm {
-  $button-height-computed: $text-size-sm * $line-height-normal + 2 * nth($spacing-squish-sm, 1)  + 2 * $button-border-width;
+  $btn-height-computed: $text-size-sm * $line-height-normal + 2 * nth($spacing-squish-xs, 1)  + 2 * $btn-border-width;
 
   font-size: $text-size-sm;
-  border-radius: $border-radius-sm;
-  padding: $spacing-squish-sm;
-  height: $button-height-computed;
-  min-width: $button-height-computed;
-
-  &.btn--loose {
-    padding-left: $spacing-5;
-    padding-right: $spacing-5;
-  }
-
+  border-radius: $component-border-radius-sm;
+  padding: $spacing-squish-xs;
+  height: $btn-height-computed;
+  min-width: $btn-height-computed;
 }
 
 .btn.btn--lg {
-  $button-height-computed: $text-size-lg * $line-height-normal + 2 * nth($spacing-squish-lg, 1)  + 2 * $button-border-width;
+  $btn-height-computed: $text-size-lg * $line-height-normal + 2 * nth($spacing-squish-md, 1)  + 2 * $btn-border-width;
 
   font-size: $text-size-lg;
-  border-radius: $border-radius-lg;
-  padding: $spacing-squish-lg;
-  height: $button-height-computed;
-  min-width: $button-height-computed;
+  border-radius: $component-border-radius-lg;
+  padding: $spacing-squish-md;
+  height: $btn-height-computed;
+  min-width: $btn-height-computed;
+}
 
-  &.btn--loose {
-    padding-left: $spacing-7;
-    padding-right: $spacing-7;
-  }
-
+.btn.btn--loose {
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .btn.btn--block {
@@ -160,7 +138,7 @@ $button-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacin
     }
 
     &:not(:first-of-type) {
-      margin-left: - $button-border-width;
+      margin-left: - $btn-border-width;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }

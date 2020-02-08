@@ -1,5 +1,14 @@
 /* ## Modal
 ---------------------------------*/
+$modal-width-sm:                           480px !default;
+$modal-width-md:                           600px !default;
+$modal-width-lg:                           900px !default;
+$modal-bg:                                 $component-bg !default;
+$modal-title-font-size:                    $text-size-xl !default;
+$modal-zIndex:                             $zIndex-9 !default;
+$mask-zIndex:                              $zIndex-6 !default;
+$mask-bg:                                  rgba($black, 0.5) !default;
+
 .modal-wrapper {
   position: fixed;
   top: 0;
@@ -7,7 +16,7 @@
   right: 0;
   bottom: 0;
   display: flex;
-  padding: $spacing-inset-md;
+  padding: $spacing-square-md;
   z-index: $modal-zIndex;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -23,18 +32,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: $modal-width-base;
+  max-width: $modal-width-md;
   width: 100%;
   margin: auto;
   background-color: $modal-bg;
-  border-radius: $border-radius-lg;
+  border-radius: $component-border-radius-lg;
   box-shadow: 0 4px 6px rgba($black, .05);
 }
 
 .modal__header {
   position: relative;
   flex-shrink: 0;
-  padding: $spacing-inset-md;
+  padding: $spacing-square-md;
 }
 
 .modal__title {
@@ -46,8 +55,8 @@
 
 .modal__close {
   position: absolute;
-  right: $spacing-inset-md;
-  top: $spacing-inset-md;
+  right: $spacing-square-md;
+  top: $spacing-square-md;
   font-size: $text-size-xl;
   color: $grey-mute;
   line-height: 1;
@@ -57,7 +66,7 @@
 
 .modal__body {
   flex: 1 1 auto;
-  padding: $spacing-inset-md;
+  padding: $spacing-square-md;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
@@ -65,7 +74,7 @@
 
 .modal__footer {
   flex-shrink: 0;
-  padding: $spacing-inset-md;
+  padding: $spacing-square-md;
   text-align: right;
 }
 

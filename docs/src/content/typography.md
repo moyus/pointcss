@@ -10,43 +10,19 @@ catalogue:
 ---
 
 # Typography
+
 Default styles for headings, paragraphs, list, blockquote and other elements.
 
 ## Heading
-<table class="table table--bordered">
-  <thead>
-    <tr class="bg-light">
-      <th>Heading</th>
-      <th>Size</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><h1>Heading 1</h1></td>
-      <td>36px</td>
-    </tr>
-    <tr>
-      <td><h2>Heading 2</h2></td>
-      <td>32px</td>
-    </tr>
-    <tr>
-      <td><h3>Heading 3</h3></td>
-      <td>28px</td>
-    </tr>
-    <tr>
-      <td><h4>Heading 4</h4></td>
-      <td>24px</td>
-    </tr>
-    <tr>
-      <td><h5>Heading 5</h5></td>
-      <td>20px</td>
-    </tr>
-    <tr>
-      <td><h6>Heading 6</h6></td>
-      <td>18px</td>
-    </tr>
-  </tbody>
-</table>
+
+<div>
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+</div>
 
 ## Paragraph
 <p>
@@ -74,55 +50,51 @@ Default styles for headings, paragraphs, list, blockquote and other elements.
 </p>
 
 ## List
-<div class="l-row">
-  <div class="l-col-4@md">
+<ul>
+  <li>item 1</li>
+  <li>
+    item 2
     <ul>
-      <li>item 1</li>
-      <li>
-        item 2
-        <ul>
-          <li>child item 1</li>
-          <li>child item 2</li>
-          <li>child item 3</li>
-        </ul>
-      </li>
-      <li>item 3</li>
+      <li>child item 1</li>
+      <li>child item 2</li>
+      <li>child item 3</li>
     </ul>
-  </div>
-  <div class="l-col-4@md">
+  </li>
+  <li>item 3</li>
+</ul>
+
+<ol>
+  <li>item 1</li>
+  <li>
+    item 2
     <ol>
-      <li>item 1</li>
-      <li>
-        item 2
-        <ol>
-          <li>child item 1</li>
-          <li>child item 2</li>
-          <li>child item 3</li>
-        </ol>
-      </li>
-      <li>item 3</li>
+      <li>child item 1</li>
+      <li>child item 2</li>
+      <li>child item 3</li>
     </ol>
-  </div>
-  <div class="l-col-4@md">
-    <dl>
-      <dt>Date:</dt>
-      <dd>2016/11/11</dd>
-      <dt>Version:</dt>
-      <dd>1.0.0</dd>
-      <dt>Compatible Browsers</dt>
-      <dd>Chrome，Safari，FireFox，IE9+</dd>
-    </dl>
-  </div>
-</div>
+  </li>
+  <li>item 3</li>
+</ol>
+
+<dl>
+  <dt>Date:</dt>
+  <dd>2016/11/11</dd>
+  <dt>Version:</dt>
+  <dd>1.0.0</dd>
+  <dt>Compatible Browsers</dt>
+  <dd>Chrome，Safari，FireFox，IE9+</dd>
+</dl>
 
 ## Blockquote
+
 <blockquote>
   <p>It is the working man who is the happy man. It is the idle man who is the miserable man</p>
   <cite>- Source</cite>
 </blockquote>
 
 ## Others
-<table class="table table--bordered table--striped">
+
+<table class="table">
   <thead>
     <tr>
       <th>Element</th>
@@ -131,48 +103,48 @@ Default styles for headings, paragraphs, list, blockquote and other elements.
   </thead>
   <tbody>
     <tr>
-        <td><code>&lt;a&gt;</code></td>
-        <td><a href="#">Link</a></td>
+      <td><code>&lt;a&gt;</code></td>
+      <td><a href="#">Link</a></td>
     </tr>
     <tr>
-        <td><code>&lt;strong&gt;</code></td>
-        <td><strong>Ultricies</strong></td>
+      <td><code>&lt;strong&gt;</code></td>
+      <td><strong>Ultricies</strong></td>
     </tr>
     <tr>
-        <td><code>&lt;em&gt;</code></td>
-        <td><em>Dolor</em></td>
+      <td><code>&lt;em&gt;</code></td>
+      <td><em>Dolor</em></td>
     </tr>
     <tr>
-        <td><code>&lt;code&gt;</code></td>
-        <td>Nibh Etiam</td>
+      <td><code>&lt;code&gt;</code></td>
+      <td>Nibh Etiam</td>
     </tr>
     <tr>
-        <td><code>&lt;del&gt;</code></td>
-        <td><del>Vestibulum Amet Porta</del></td>
+      <td><code>&lt;del&gt;</code></td>
+      <td><del>Vestibulum Amet Porta</del></td>
     </tr>
     <tr>
-        <td><code>&lt;ins&gt;</code></td>
-        <td><ins>Dapibus Risus</ins></td>
+      <td><code>&lt;ins&gt;</code></td>
+      <td><ins>Dapibus Risus</ins></td>
     </tr>
     <tr>
-        <td><code>&lt;mark&gt;</code></td>
-        <td><mark>Vulputate Venenatis</mark></td>
+      <td><code>&lt;mark&gt;</code></td>
+      <td><mark>Vulputate Venenatis</mark></td>
     </tr>
     <tr>
-        <td><code>&lt;q&gt;</code></td>
-        <th><q>Consectetur Ultricies Etiam Amet Tellus</q></th>
+      <td><code>&lt;q&gt;</code></td>
+      <th><q>Consectetur Ultricies Etiam Amet Tellus</q></th>
     </tr>
     <tr>
-        <td><code>&lt;small&gt;</code></td>
-        <td><small>Inceptos Etiam Ornare</small></td>
+      <td><code>&lt;small&gt;</code></td>
+      <td><small>Inceptos Etiam Ornare</small></td>
     </tr>
     <tr>
-        <td><code>&lt;dfn&gt;</code></td>
-        <td>Ridiculus Ornare <dfn title="Ornare Elit Vehicula">Bibendum</dfn></td>
+      <td><code>&lt;dfn&gt;</code></td>
+      <td>Ridiculus Ornare <dfn title="Ornare Elit Vehicula">Bibendum</dfn></td>
     </tr>
     <tr>
-        <td><code>&lt;abbr&gt;</code></td>
-        <td>Commodo Cursus <abbr title="Ornare Elit Vehicula">Condimentum</abbr></td>
+      <td><code>&lt;abbr&gt;</code></td>
+      <td>Commodo Cursus <abbr title="Ornare Elit Vehicula">Condimentum</abbr></td>
     </tr>
   </tbody>
 </table>

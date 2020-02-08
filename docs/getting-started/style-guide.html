@@ -25,7 +25,7 @@
               <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
             </svg>
           </a>
-          <span>v2.0.0-alpha.2</span>
+          <span>v2.0.0-alpha.3</span>
         </div>
       </header>
       <nav id="sidenav" class="navigation">
@@ -99,11 +99,11 @@
     <!-- END .site__sidebar -->
     <main id="main" class="site__main" role="main">
       <article class="article">
-        <h1 id="style-guide"><span>Style Guide</span></h1><p>In order to create a more transparent UI code, <strong>pointcss</strong> introduced some great design principles and code styles from the community.</p>
+        <h1 id="style-guide"><span>Style Guide</span></h1><p>In order to create a more transparent UI code, we introduced some great design principles and code styles from the community.</p>
 <h2 id="bem">
     <a name="bem" class="anchor" href="#bem"></a>
     BEM
-    </h2><p><strong>pointcss</strong> relies on <a href="http://getbem.com/">BEM</a> to create structured class names.</p>
+    </h2><p>Use <a href="http://getbem.com/">BEM</a> to create structured class names.</p>
 <pre><code class="language-html">&lt;div class=&quot;box box--info&quot;&gt;
   &lt;header class=&quot;box__header&quot;&gt;Tip&lt;/header&gt;
   &lt;div class=&quot;box__body&quot;&gt;
@@ -113,16 +113,407 @@
 <h2 id="colors">
     <a name="colors" class="anchor" href="#colors"></a>
     Colors
-    </h2><p>@TODO</p>
+    </h2><h3 id="theme-colors">Theme Colors</h3><table class="table table--loose">
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Name</th>
+      <th>Hex</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-primary"></span>
+      </td>
+      <td>
+        <span class="text-lg">Primary</span>
+      </td>
+      <td>#636AFF</td>
+      <td>
+        Brand color
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-info"></span>
+      </td>
+      <td>
+        <span class="text-lg">Info</span>
+      </td>
+      <td>#0069FF</td>
+      <td>
+        Accent color
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-success"></span>
+      </td>
+      <td>
+        <span class="text-lg">Success</span>
+      </td>
+      <td>#15CD72</td>
+      <td>
+        Positive color
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-danger"></span>
+      </td>
+      <td>
+        <span class="text-lg">Danger</span>
+      </td>
+      <td>#FF2D20</td>
+      <td>
+        Negative color
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-warning"></span>
+      </td>
+      <td>
+        <span class="text-lg">Warning</span>
+      </td>
+      <td>#ED6E33</td>
+      <td>
+        Warning color
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="grey-colors">Grey Colors</h3><table class="table table--loose">
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Name</th>
+      <th>Hex</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-black"></span>
+      </td>
+      <td>
+        <span class="text-lg">Black</span>
+      </td>
+      <td>#000000</td>
+      <td>
+        Use Black to shade colors or add shadows with transparency
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-dark"></span>
+      </td>
+      <td>
+        <span class="text-lg">Dark</span>
+      </td>
+      <td>#212121</td>
+      <td>
+        Primary color for heading, body text
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-mute"></span>
+      </td>
+      <td>
+        <span class="text-lg">Mute</span>
+      </td>
+      <td>#616161</td>
+      <td>
+        Secondary color for text, meta info, icons
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-thin"></span>
+      </td>
+      <td>
+        <span class="text-lg">Thin</span>
+      </td>
+      <td>#DBDBDB</td>
+      <td>
+        Color for borders, form controls, icons
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-weak"></span>
+      </td>
+      <td>
+        <span class="text-lg">Weak</span>
+      </td>
+      <td>#E5E5E5</td>
+      <td>
+        Color for lines, cards
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-shade"></span>
+      </td>
+      <td>
+        <span class="text-lg">Shade</span>
+      </td>
+      <td>#EEEEEE</td>
+      <td>
+        Color for disabled state
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-light"></span>
+      </td>
+      <td>
+        <span class="text-lg">Light</span>
+      </td>
+      <td>#F7F7F7</td>
+      <td>
+        Color for backgrounds
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="circle is-2x shadow-lg bg-white"></span>
+      </td>
+      <td>
+        <span class="text-lg">White</span>
+      </td>
+      <td>#FFFFFF</td>
+      <td>
+        Use White to tint colors, white text on dark backgrounds
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="spacing">
     <a name="spacing" class="anchor" href="#spacing"></a>
     Spacing
-    </h2><p>@TODO</p>
+    </h2><p>Use spacing to create layouts that feels comfortable</p>
+<table class="table table--loose">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Properties</th>
+      <th>Exammple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="7">
+        <div class="text-title-xs font-medium">Stack</div>
+        <div class="text-meta-md color-mute">Spacing for horizontal or vertical stack layouts</div>
+      </td>
+      <td>xxs: 2px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-1"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>xs: 4px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-2"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>sm: 8px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-4"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>md: 16px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-6"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>lg: 24px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-7"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>xl: 32px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-8"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>xxl: 64px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-9"></span>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="5">
+        <div class="text-title-xs font-medium">Square</div>
+        <div class="text-meta-md color-mute">Spacing for square inset box layouts</div>
+      </td>
+      <td>xs: 4px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-2"><span class="rect"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>sm: 8px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-4"><span class="rect"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>md: 16px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-6"><span class="rect"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>lg: 32px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-8"><span class="rect"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>xl: 64px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger p-9"><span class="rect"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="6">
+        <div class="text-title-xs font-medium">Squish</div>
+        <div class="text-meta-md color-mute">Spacing for squish inset box layouts</div>
+      </td>
+    </tr>
+    <tr>
+      <td>xs: 4px, 8px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger py-2 px-4"><span class="rect"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>sm: 6, 12px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger py-3 px-5"><span class="rect"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>md: 8px, 16px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger py-4 px-6"><span class="rect"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>lg: 12px, 24px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger py-5 px-7"><span class="rect"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td>xl: 16px, 32px</td>
+      <td class="text-right">
+        <span class="inline-flex bg-danger py-6 px-8"><span class="rect"></span></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="text">
+    <a name="text" class="anchor" href="#text"></a>
+    Text
+    </h2><table class="table table--loose">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Properties</th>
+      <th class="text-right">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3">Display</th>
+      <td>lg: 64px</td>
+      <td class="text-right"><span class="text-display-lg line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <td>md: 48px</td>
+      <td class="text-right"><span class="text-display-md line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <td>sm: 36px</td>
+      <td class="text-right"><span class="text-display-sm line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <th rowspan="5">Title</th>
+      <td>xl: 32px</td>
+      <td class="text-right"><span class="text-title-xl line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <td>lg: 28px</td>
+      <td class="text-right"><span class="text-title-lg line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <td>md: 24px</td>
+      <td class="text-right"><span class="text-title-md line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <td>sm: 20px</td>
+      <td class="text-right"><span class="text-title-sm line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <td>xs: 18px</td>
+      <td class="text-right"><span class="text-title-xs line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <th rowspan="3">Base</th>
+      <td>lg: 18px</td>
+      <td class="text-right"><span class="text-lg line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <td>md: 16px</td>
+      <td class="text-right"><span class="text-md line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <td>sm: 14px</td>
+      <td class="text-right"><span class="text-sm line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <th rowspan="3">Meta</th>
+      <td>lg: 16px</td>
+      <td class="text-right"><span class="text-meta-lg line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <td>md: 14px</td>
+      <td class="text-right"><span class="text-meta-sm line-relaxed">Lorem</span></td>
+    </tr>
+    <tr>
+      <td>sm: 12px</td>
+      <td class="text-right"><span class="text-meta-xs line-relaxed">Lorem</span></td>
+    </tr>
+  </tbody>
+</table>
 
       </article>
     </main>
     <!-- END .site__main -->
     <nav class="site__catalogue">
+      
+      <a href="#bem">BEM</a>
+      
+      <a href="#colors">Colors</a>
+      
+      <a href="#spacing">Spacing</a>
+      
+      <a href="#text">Text</a>
       
     </nav>
     <!-- END .site__catalogue -->

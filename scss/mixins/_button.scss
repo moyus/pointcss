@@ -1,0 +1,101 @@
+// button variant
+// -----------------------------------------------------------------------------
+@mixin btn-variant(
+  $background,
+  $border: $background,
+  $color: round-color($background),
+  $hover-background: shade-color($background, 1),
+  $hover-border: shade-color($border, 1),
+  $hover-color: round-color($hover-background),
+  $active-background: shade-color($background, 2),
+  $active-border: shade-color($border, 2),
+  $active-color: round-color($active-background)
+) {
+  & {
+    color: $color;
+    border-color: $border;
+    background-color: $background;
+  }
+
+  &:hover {
+    color: $hover-color;
+    border-color: $hover-border;
+    background-color: $hover-background;
+  }
+
+  @if $enable-btn-focus-box-shadow {
+    &:focus,
+    &.is-focused {
+      box-shadow: 0 0 0 2px rgba($active-background, 0.25);
+    }
+  }
+
+  &:active,
+  &.is-actived {
+    color: $active-color;
+    border-color: $active-border;
+    background-color: $active-background;
+  }
+
+  &.is-loading,
+  &[loading] {
+    
+    &,
+    &:active,
+    &:hover {
+      color: transparent;
+    }
+
+    &:after {
+      border-left-color: $color;
+      border-bottom-color: $color;
+    }
+  }
+}
+
+
+@mixin btn-outline-variant(
+  $color,
+  $border: $color,
+  $hover-color: round-color($color),
+  $hover-border: shade-color($color, 1),
+  $hover-background: shade-color($color, 1),
+  $active-color: round-color($color),
+  $active-border: shade-color($color, 2),
+  $active-background: shade-color($color, 2),
+) {
+  & {
+    color: $color;
+    background-color: transparent;
+    border-color: $border;
+  }
+  
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+  
+  &:active,
+  &.is-active {
+    color: $active-color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  &.is-loading,
+  &[loading] {
+    
+    &,
+    &:active,
+    &:hover {
+      color: transparent;
+      background-color: transparent;
+    }
+
+    &:after {
+      border-left-color: $color;
+      border-bottom-color: $color;
+    }
+  }
+}

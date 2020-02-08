@@ -19,7 +19,6 @@ html {
   -webkit-text-size-adjust: 100%; /* 3 */
 }
 
-
 body {
   margin: 0;
   font-family: $body-font-family;
@@ -142,7 +141,7 @@ select,
 textarea {
   font-family: sans-serif;
   font-size: 100%;
-  line-height: $line-height-tight;
+  line-height: $line-height-normal;
   margin: 0;
 }
 
@@ -192,7 +191,7 @@ legend {
   max-width: 100%;
   padding: 0;
   white-space: normal;
-  margin: 0 0 $spacing-stack-xs 0;
+  margin: 0 0 $spacing-stack-sm 0;
 }
 
 progress {
@@ -235,10 +234,6 @@ input[type="search"] {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
-}
-
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px $white inset;
 }
 
 a,

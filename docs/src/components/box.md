@@ -37,10 +37,10 @@ Group structured content into box.
 ## Variants
 By adding the following theme modifier classes on <code>.box</code> container to quick create different styled Box
 
-- `box--info`
-- `box--danger`
-- `box--success`
-- `box--warning`
+- `.box--info`
+- `.box--danger`
+- `.box--success`
+- `.box--warning`
 
 <section class="box box--info">
   <header class="box__header">Info Box</header>
