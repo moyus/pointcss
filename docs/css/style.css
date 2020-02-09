@@ -25,6 +25,7 @@ body {
   height: 100vh;
   padding-right: 20px;
   margin-right: 40px;
+  background-color: #fafbfc;
   overflow: visible;
 }
 
@@ -103,6 +104,48 @@ body {
 
 .site__catalogue a:hover {
   color: #212121;
+}
+
+.site__navbar {
+  display: none;
+  padding: 8px 10px;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+@media (max-width: 1199px) {
+  .site {
+    display: block;
+  }
+  .site__sidebar {
+    position: fixed;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-right: 0;
+    z-index: 15;
+    transition: transform 300ms ease;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .site__sidebar.is-open {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transform: translate(220px, 0);
+  }
+  .site__navbar {
+    display: block;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .site__main {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto;
+  }
+  .site__catalogue {
+    display: none;
+  }
 }
 
 /* ## Navigation
@@ -262,4 +305,25 @@ body {
 
 .rect-box.is-2 {
   min-height: 84px;
+}
+
+.icon-menu {
+  position: relative;
+  color: #212121;
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+
+.icon-menu:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
 }

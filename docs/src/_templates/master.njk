@@ -14,7 +14,7 @@
 </head>
 <body>
   <div id="docs" class="site">
-    <div class="site__sidebar">
+    <div id="sidebar" class="site__sidebar">
       <header class="site__header">
         <a href="{{project.url}}" class="site__brand">
           <img src="{{project.url}}/images/logo.svg" alt="pointcss" />
@@ -35,6 +35,23 @@
       </footer>
     </div>
     <!-- END .site__sidebar -->
+    <header class="site__navbar">
+      <div class="navbar">
+        <div class="navbar__left">
+          <a href="{{project.url}}" class="navbar__brand">
+            <img src="{{project.url}}/images/logo.svg" alt="pointcss" />
+          </a>
+        </div>
+        <div class="navbar__right">
+          <button class="btn js-sidebar-trigger">
+            <span class="flex items-center">
+              <i class="icon-menu"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- END .site__navbar -->
     <main id="main" class="site__main" role="main">
       <article class="article">
         {% block content %}{% endblock %}

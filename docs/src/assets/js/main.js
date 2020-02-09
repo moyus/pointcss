@@ -20,6 +20,14 @@
     })
   })
   
+  $sidebarEl = document.getElementById('sidebar')
+  forEach(document.getElementsByClassName('js-sidebar-trigger'), function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      $sidebarEl.classList.toggle('is-open');
+    })
+  })
+  
   /*----------------------------------------------------------------------------*/
   /* Modal
   /*----------------------------------------------------------------------------*/

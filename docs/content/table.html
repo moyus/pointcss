@@ -8,13 +8,13 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha3">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha3">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha3">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha4">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha4">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha4">
 </head>
 <body>
   <div id="docs" class="site">
-    <div class="site__sidebar">
+    <div id="sidebar" class="site__sidebar">
       <header class="site__header">
         <a href="https://moyus.github.io/pointcss" class="site__brand">
           <img src="https://moyus.github.io/pointcss/images/logo.svg" alt="pointcss" />
@@ -25,7 +25,7 @@
               <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
             </svg>
           </a>
-          <span>v2.0.0-alpha.3</span>
+          <span>v2.0.0-alpha.4</span>
         </div>
       </header>
       <nav id="sidenav" class="navigation">
@@ -97,6 +97,23 @@
       </footer>
     </div>
     <!-- END .site__sidebar -->
+    <header class="site__navbar">
+      <div class="navbar">
+        <div class="navbar__left">
+          <a href="https://moyus.github.io/pointcss" class="navbar__brand">
+            <img src="https://moyus.github.io/pointcss/images/logo.svg" alt="pointcss" />
+          </a>
+        </div>
+        <div class="navbar__right">
+          <button class="btn js-sidebar-trigger">
+            <span class="flex items-center">
+              <i class="icon-menu"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- END .site__navbar -->
     <main id="main" class="site__main" role="main">
       <article class="article">
         <h1 id="table"><span>Table</span></h1><h2 id="basic">
