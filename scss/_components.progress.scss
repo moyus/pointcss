@@ -1,12 +1,14 @@
 /* ## Progress
 ---------------------------------*/
+$progress-height-sm: 4px !default;
+$progress-height-md: 8px !default;
+$progress-height-lg: 12px !default;
+
 .progress {
   position: relative;
   display: block;
   width: 100%;
-  height: 8px;
-  margin-top: $spacing-stack-base;
-  margin-bottom: $spacing-stack-base;
+  height: $progress-height-md;
   border-radius: 1993px;
   background-color: $grey-light;
   overflow: hidden;
@@ -17,7 +19,7 @@
     width: 0%;
     max-width: 100%;
     height: 100%;
-    background-color: $grey-dark;
+    background-color: $grey-mute;
   }
 
   &.is-active {
@@ -38,40 +40,18 @@
 
 
 .progress--sm {
-  height: 4px;
+  height: $progress-height-sm;
 }
 
 .progress--lg {
-  height: 12px;
+  height: $progress-height-lg;
 }
 
-.progress--primary {
-  .progress__bar {
-    background-color: $color-primary;
-  }
-}
-
-.progress--danger {
-  .progress__bar {
-    background-color: $color-danger;
-  }
-}
-
-.progress--info {
-  .progress__bar {
-    background-color: $color-info;
-  }
-}
-
-.progress--success {
-  .progress__bar {
-    background-color: $color-success;
-  }
-}
-
-.progress--warning {
-  .progress__bar {
-    background-color: $color-warning;
+@each $name, $color in $theme-colors {
+  .progress--#{$name} {
+    .progress__bar {
+      background-color: $color;
+    }
   }
 }
 

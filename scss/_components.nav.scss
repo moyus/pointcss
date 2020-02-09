@@ -1,6 +1,14 @@
 /* ## Nav
 ---------------------------------*/
+$nav-border-radius: $component-border-radius-md !default;
 $nav-border-width: $component-border-width !default;
+$nav-border-color: $grey-thin !default;
+$nav-color: $grey-mute !default;
+$nav-hover-color: $grey-dark !default;
+$nav-font-size-sm: $text-size-sm !default;
+$nav-font-size-md: $text-size-md !default;
+$nav-font-size-lg: $text-size-lg !default;
+$nav-tabs-active-bg: $component-bg !default;
 
 .nav {
   position: relative;
@@ -14,7 +22,7 @@ $nav-border-width: $component-border-width !default;
   position: relative;
 
   &:not(:last-child) {
-    margin: 0 $spacing-stack-lg 0 0;
+    margin: 0 $spacing-stack-md 0 0;
   }
 
   &.is-active {
@@ -27,8 +35,8 @@ $nav-border-width: $component-border-width !default;
 .nav__link {
   cursor: pointer;
   display: block;
-  color: $grey-mute;
-  font-size: $text-size-md;
+  color: $nav-color;
+  font-size: $nav-font-size-md;
   line-height: $line-height-normal;
   text-align: center;
   white-space: nowrap;
@@ -36,7 +44,7 @@ $nav-border-width: $component-border-width !default;
   text-decoration: none;
 
   &:hover {
-    color: $grey-dark;
+    color: $nav-hover-color;
   }
 
   &[disabled],
@@ -50,7 +58,7 @@ $nav-border-width: $component-border-width !default;
 .nav.nav--sm {
   > .nav__item {
     > .nav__link {
-      font-size: $text-size-sm;
+      font-size: $nav-font-size-sm;
     }
   }
 }
@@ -58,7 +66,7 @@ $nav-border-width: $component-border-width !default;
 .nav.nav--lg {
   > .nav__item {
     > .nav__link {
-      font-size: $text-size-lg;
+      font-size: $nav-font-size-lg;
     }
   }
 }
@@ -86,12 +94,12 @@ $nav-border-width: $component-border-width !default;
 .nav.nav--pills {
   > .nav__item {
     &:not(:last-child) {
-      margin-right: $spacing-stack-sm;
+      margin-right: $spacing-stack-xs;
     }
   
     > .nav__link {
       padding: 0.375em 0.75em;
-      border-radius: $component-border-radius-base;
+      border-radius: $nav-border-radius;
 
       &:hover {
         background-color: $grey-light;
@@ -108,9 +116,13 @@ $nav-border-width: $component-border-width !default;
 }
 
 .nav.nav--rails {
-  border-bottom: $nav-border-width solid $grey-thin;
+  border-bottom: $nav-border-width solid $nav-border-color;
 
   > .nav__item {
+    &:not(:last-child) {
+      margin-right: $spacing-stack-xs;
+    }
+
     > .nav__link {
       margin: 0 0 (0 - $nav-border-width) 0;
       padding: 0.375em 0.75em;
@@ -125,11 +137,11 @@ $nav-border-width: $component-border-width !default;
 }
 
 .nav.nav--tabs {
-  border-bottom: $nav-border-width solid $grey-thin;
+  border-bottom: $nav-border-width solid $nav-border-color;
 
   > .nav__item {
     &:not(:last-child) {
-      margin-right: $spacing-stack-sm;
+      margin-right: $spacing-stack-xxs;
     }
 
     > .nav__link {
@@ -138,14 +150,14 @@ $nav-border-width: $component-border-width !default;
       border-style: solid;
       border-width: $nav-border-width $nav-border-width 0 $nav-border-width;
       border-color: transparent;
-      border-radius: $component-border-radius-base $component-border-radius-base 0 0;
+      border-radius: $component-border-radius-md $component-border-radius-md 0 0;
     }
 
     &.is-active {
       > .nav__link {
         color: $grey-dark;
-        border-color: $grey-thin;
-        background-color: $white;
+        border-color: $nav-border-color;
+        background-color: $nav-tabs-active-bg;
       }
     }
   }

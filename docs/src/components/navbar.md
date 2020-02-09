@@ -12,7 +12,7 @@ A fundamental navigation component, you can extend it to fit a more complex situ
 
 ## Basic
 
-<div class="mb-5">
+<div class="mb-6">
   <nav class="navbar">
     <div class="navbar__start">
       <a role="button" class="navbar__brand">
@@ -34,8 +34,8 @@ A fundamental navigation component, you can extend it to fit a more complex situ
     <div class="navbar__end">
       <div class="navbar__item">
         <div class="flex">
-          <button class="btn btn--loose">Sign up</button>
-        <button class="btn btn--primary btn--loose ml-3">Log in</button>
+          <button class="btn">Sign up</button>
+        <button class="btn btn--primary ml-3">Log in</button>
         </div>
       </div>
     </div>
@@ -76,8 +76,8 @@ A fundamental navigation component, you can extend it to fit a more complex situ
 
 Choose `.navbar--light` for use with light background colors, or `.navbar--dark` for dark background colors
 
-<div class="mb-5">
-  <nav class="navbar navbar--dark px-5 bg-grey">
+<div class="mb-6">
+  <nav class="navbar navbar--dark px-5 bg-dark">
     <div class="navbar__start">
       <a role="button" class="navbar__brand">POINTCSS</a>
       <div class="navbar__item is-active">
@@ -96,15 +96,15 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
     <div class="navbar__end">
       <div class="navbar__item">
         <div class="flex">
-          <button class="btn btn--loose">Sign up</button>
-        <button class="btn btn--primary btn--loose ml-3">Log in</button>
+          <button class="btn btn--white btn--outline">Sign up</button>
+          <button class="btn btn--white btn--outline ml-3">Log in</button>
         </div>
       </div>
     </div>
   </nav>
 </div>
 
-<div class="mb-5">
+<div class="mb-6">
   <nav class="navbar navbar--dark px-5 bg-primary">
     <div class="navbar__start">
       <a role="button" class="navbar__brand">POINTCSS</a>
@@ -124,15 +124,15 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
     <div class="navbar__end">
       <div class="navbar__item">
         <div class="flex">
-          <button class="btn btn--loose">Sign up</button>
-        <button class="btn btn--primary btn--loose ml-3">Log in</button>
+          <button class="btn btn--white btn--outline">Sign up</button>
+          <button class="btn btn--white btn--outline ml-3">Log in</button>
         </div>
       </div>
     </div>
   </nav>
 </div>
 
-<div class="mb-5">
+<div class="mb-6">
   <nav class="navbar navbar--light px-5 bg-light">
     <div class="navbar__start">
       <a role="button" class="navbar__brand">POINTCSS</a>
@@ -152,8 +152,8 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
     <div class="navbar__end">
       <div class="navbar__item">
         <div class="flex">
-          <button class="btn btn--loose">Sign up</button>
-        <button class="btn btn--primary btn--loose ml-3">Log in</button>
+          <button class="btn">Sign up</button>
+        <button class="btn btn--primary ml-3">Log in</button>
         </div>
       </div>
     </div>
@@ -161,7 +161,7 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
 </div>
 
 ```html
-<nav class="navbar navbar--dark px-5 bg-grey">
+<nav class="navbar navbar--dark px-5 bg-dark">
   ...
 </nav>
 <nav class="navbar navbar--dark px-5 bg-primary">

@@ -1,11 +1,21 @@
 /* ## List
 ---------------------------------*/
 $list-bg: $component-bg !default;
+$list-margin-bottom: $spacing-stack-md !default;
+$list-padding-sm: $spacing-squish-xs !default;
+$list-padding-md: $spacing-squish-sm !default;
+$list-padding-lg: $spacing-squish-lg !default;
+$list-border-width: $component-border-width !default;
+$list-border-radius-sm: $component-border-radius-sm !default;
+$list-border-radius-md: $component-border-radius-md !default;
+$list-border-radius-lg: $component-border-radius-lg !default;
+$list-border-color: $grey-weak !default;
+$list-hover-color: $grey-light !default;
 
 .list {
   position: relative;
   padding: 0;
-  margin: 0 0 $spacing-stack-lg;
+  margin: 0 0 $list-margin-bottom 0;
   list-style: none;
 }
 
@@ -13,12 +23,12 @@ $list-bg: $component-bg !default;
 .list__link {
   position: relative;
   display: block;
-  padding-top: nth($spacing-squish-lg, 1);
-  padding-bottom: nth($spacing-squish-lg, 1);
+  padding-top: nth($list-padding-md, 1);
+  padding-bottom: nth($list-padding-md, 1);
   background-color: $list-bg;
 
   &:not(:first-child) {
-    border-top: 1px solid $grey-weak;
+    border-top: 1px solid $list-border-color;
   }
 
 }
@@ -28,67 +38,91 @@ $list-bg: $component-bg !default;
   color: inherit;
 
   &:hover {
-    background-color: $grey-light;
+    background-color: $list-hover-color;
   }
 }
 
 .list--inset {
   .list__item,
   .list__link {
-    padding-left: nth($spacing-squish-lg, 2);
-    padding-right: nth($spacing-squish-lg, 2);
+    padding-left: nth($list-padding-md, 2);
+    padding-right: nth($list-padding-md, 2);
   }
 }
 
 .list--bordered {
   .list__item,
   .list__link {
-    padding-left: nth($spacing-squish-lg, 2);
-    padding-right: nth($spacing-squish-lg, 2);
-    border: 1px solid $grey-weak;
-    margin-bottom: -1px;
+    padding-left: nth($list-padding-md, 2);
+    padding-right: nth($list-padding-md, 2);
+    border: $list-border-width solid $list-border-color;
+    margin-bottom: (0 - $list-border-width);
 
     &:first-child {
-      border-top-left-radius: $component-border-radius-base;
-      border-top-right-radius: $component-border-radius-base;
+      border-top-left-radius: $list-border-radius-md;
+      border-top-right-radius: $list-border-radius-md;
     }
 
     &:last-child {
       margin-bottom: 0;
-      border-bottom-left-radius: $component-border-radius-base;
-      border-bottom-right-radius: $component-border-radius-base;
+      border-bottom-left-radius: $list-border-radius-md;
+      border-bottom-right-radius: $list-border-radius-md;
     }
   }
 }
 
-.list--compact {
+.list--sm {
   .list__item,
   .list__link {
-    padding-top: nth($spacing-squish-md, 1);
-    padding-bottom: nth($spacing-squish-md, 1);
+    padding-top: nth($list-padding-sm, 1);
+    padding-bottom: nth($list-padding-sm, 1);
   }
 
   &.list--bordered,
   &.list--inset {
-    .list__item {
-      padding-left: nth($spacing-squish-md, 2);
-      padding-right: nth($spacing-squish-md, 2);
+    .list__item,
+    .list__link {
+      padding-left: nth($list-padding-sm, 2);
+      padding-right: nth($list-padding-sm, 2);
+
+      &:first-child {
+        border-top-left-radius: $list-border-radius-sm;
+        border-top-right-radius: $list-border-radius-sm;
+      }
+  
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom-left-radius: $list-border-radius-sm;
+        border-bottom-right-radius: $list-border-radius-sm;
+      }
     }
   }
 }
 
-.list--loose {
+.list--lg {
   .list__item,
   .list__link {
-    padding-top: nth($spacing-squish-xl, 1);
-    padding-bottom: nth($spacing-squish-xl, 1);
+    padding-top: nth($list-padding-lg, 1);
+    padding-bottom: nth($list-padding-lg, 1);
   }
 
   &.list--bordered,
   &.list--inset {
-    .list__item {
-      padding-left: nth($spacing-squish-xl, 2);
-      padding-right: nth($spacing-squish-xl, 2);
+    .list__item,
+    .list__link {
+      padding-left: nth($list-padding-lg, 2);
+      padding-right: nth($list-padding-lg, 2);
+
+      &:first-child {
+        border-top-left-radius: $list-border-radius-lg;
+        border-top-right-radius: $list-border-radius-lg;
+      }
+  
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom-left-radius: $list-border-radius-lg;
+        border-bottom-right-radius: $list-border-radius-lg;
+      }
     }
   }
 }

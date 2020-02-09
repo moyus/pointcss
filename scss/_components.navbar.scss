@@ -3,7 +3,8 @@
 $navbar-height:                            60px !default;
 $navbar-font-size:                         $text-size-base !default;
 $navbar-color:                             $grey-dark !default;
-$navbar-item-margin-x:                     $spacing-stack-base !default;
+$navbar-font-size:                         $text-size-md !default;
+$navbar-item-spacing:                      $spacing-stack-lg !default;
 
 .navbar {
   position: relative;
@@ -29,31 +30,33 @@ $navbar-item-margin-x:                     $spacing-stack-base !default;
 .navbar__item {
   position: relative;
   flex: 0 0 auto;
-  color: $grey-mute;
-  font-size: $text-size-md;
+  color: $navbar-color;
+  font-size: $navbar-font-size;
 
   &:not(:last-child) {
-    margin-right: $spacing-stack-lg;
-  }
-
-  &.is-active {
-    > .navbar__link {
-      color: $grey-dark;
-      font-weight: $font-weight-medium;
-    }
+    margin-right: $navbar-item-spacing;
   }
 }
 
 .navbar__link {
   display: block;
-  color: inherit;
+  color: rgba($navbar-color, 0.75);
+  &:hover {
+    color: rgba($navbar-color, 0.85);
+  }
+}
+
+.navbar__item.is-active > .navbar__link,
+.navbar__link.is-active {
+  color: $navbar-color;
+  font-weight: $font-weight-medium;
 }
 
 .navbar__brand {
-  font-size: $text-size-xl;
+  font-size: $navbar-font-size * 1.25;
   line-height: $line-height-tight;
-  color: $grey-dark;
-  margin-right: $spacing-stack-xl;
+  color: $navbar-color;
+  margin-right: $navbar-item-spacing * 1.25;
 }
 
 .navbar.navbar--dark {
@@ -62,26 +65,40 @@ $navbar-item-margin-x:                     $spacing-stack-base !default;
   }
 
   .navbar__item {
+    color: $white;
+  }
+
+  .navbar__link {
     color: rgba($white, 0.5);
-    &.is-active {
-      > .navbar__link {
-        color: $white;
-      }
+    &:hover {
+      color: rgba($white, 0.65);
     }
+  }
+
+  .navbar__item.is-active > .navbar__link,
+  .navbar__link.is-active {
+    color: $white;
   }
 }
 
 .navbar.navbar--light {
   .navbar__brand {
-    color: black;
+    color: $black;
   }
 
   .navbar__item {
+    color: $black;
+  }
+
+  .navbar__link {
     color: rgba($black, 0.65);
-    &.is-active {
-      > .navbar__link {
-        color: $black;
-      }
+    &:hover {
+      color: rgba($black, 0.85);
     }
+  }
+
+  .navbar__item.is-active > .navbar__link,
+  .navbar__link.is-active {
+    color: $black;
   }
 }

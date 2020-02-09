@@ -14,7 +14,7 @@ Generic content navigation.
 
 ## Basic
 
-<ul class="nav mb-5">
+<ul class="nav mb-6">
   <li class="nav__item is-active">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -52,7 +52,7 @@ Generic content navigation.
 
 By adding `.nav--rails` modifier class on `.nav` element to create rails styled nav
 
-<ul class="nav nav--rails mb-5">
+<ul class="nav nav--rails mb-6">
   <li class="nav__item is-active">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -88,7 +88,7 @@ By adding `.nav--rails` modifier class on `.nav` element to create rails styled 
 
 By adding `.nav--pills` modifier class on `.nav` element to create pills styled nav
 
-<ul class="nav nav--pills mb-5">
+<ul class="nav nav--pills mb-6">
   <li class="nav__item is-active">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -124,7 +124,7 @@ By adding `.nav--pills` modifier class on `.nav` element to create pills styled 
 
 By adding `.nav--tabs` modifier class on `.nav` element to create tabs styled nav
 
-<ul class="nav nav--tabs mb-5">
+<ul class="nav nav--tabs mb-6">
   <li class="nav__item is-active">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -165,7 +165,7 @@ All variants can combile with sizing modifier classes to change nav size
 
 ##### Small sizing
 
-<ul class="nav nav--sm mb-5">
+<ul class="nav nav--sm mb-6">
   <li class="nav__item">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -188,7 +188,7 @@ All variants can combile with sizing modifier classes to change nav size
 
 ##### Normal sizing
 
-<ul class="nav mb-5">
+<ul class="nav mb-6">
   <li class="nav__item">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -211,7 +211,7 @@ All variants can combile with sizing modifier classes to change nav size
 
 ##### Large sizing
 
-<ul class="nav nav--lg mb-5">
+<ul class="nav nav--lg mb-6">
   <li class="nav__item">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -243,7 +243,7 @@ All variants can combile with position modifier classes to change nav placement
 
 ##### Start
 
-<ul class="nav nav--start mb-5">
+<ul class="nav nav--start mb-6">
   <li class="nav__item">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -266,7 +266,7 @@ All variants can combile with position modifier classes to change nav placement
 
 ##### Center
 
-<ul class="nav nav--rails nav--center mb-5">
+<ul class="nav nav--rails nav--center mb-6">
   <li class="nav__item is-active">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -289,7 +289,7 @@ All variants can combile with position modifier classes to change nav placement
 
 ##### End
 
-<ul class="nav nav--pills nav--end mb-5">
+<ul class="nav nav--pills nav--end mb-6">
   <li class="nav__item is-active">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -312,7 +312,7 @@ All variants can combile with position modifier classes to change nav placement
 
 ##### Stretch
 
-<ul class="nav nav--tabs nav--stretch mb-5">
+<ul class="nav nav--tabs nav--stretch mb-6">
   <li class="nav__item is-active">
     <a href="#" class="nav__link">Home</a>
   </li>

@@ -1,8 +1,18 @@
 /* ## Pagination
 ---------------------------------*/
 $pagination-border-width: 1px !default;
+$pagination-border-color: $grey-thin !default;
 $pagination-bg: $component-bg !default;
-$pagination-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacing-squish-sm, 1)  + 2 * $pagination-border-width;
+$pagination-border-radius-sm: $component-border-radius-sm !default;
+$pagination-border-radius-md: $component-border-radius-md !default;
+$pagination-border-radius-lg: $component-border-radius-lg !default;
+$pagination-font-size-sm: $text-size-sm !default;
+$pagination-font-size-md: $text-size-md !default;
+$pagination-font-size-lg: $text-size-lg !default;
+$pagination-padding-sm: $spacing-squish-xs !default;
+$pagination-padding-md: $spacing-squish-sm !default;
+$pagination-padding-lg: $spacing-squish-md !default;
+$pagination-height-computed: $pagination-font-size-md * $line-height-normal + 2 * nth($pagination-padding-md, 1)  + 2 * $pagination-border-width;
 
 .pagination {
   display: flex;
@@ -15,10 +25,10 @@ $pagination-height-computed: $text-size-base * $line-height-normal + 2 * nth($sp
   height: $pagination-height-computed;
   min-width: $pagination-height-computed;;
   color: $grey-mute;
-  font-size: $text-size-base;
+  font-size: $pagination-font-size-md;
   line-height: $line-height-normal;
-  padding: $spacing-squish-sm;
-  border-radius: $component-border-radius-base;
+  padding: $pagination-padding-md;
+  border-radius: $pagination-border-radius-md;
   border: $pagination-border-width solid transparent;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -45,21 +55,33 @@ $pagination-height-computed: $text-size-base * $line-height-normal + 2 * nth($sp
 }
 
 .pagination--sm {
-  $pagination-height-computed: $text-size-sm * $line-height-normal + 2 * nth($spacing-squish-xs, 1)  + 2 * $pagination-border-width;
+  $pagination-height-computed: $pagination-font-size-sm * $line-height-normal + 2 * nth($pagination-padding-sm, 1)  + 2 * $pagination-border-width;
 
   .pagination__item {
     height: $pagination-height-computed;
     min-width: $pagination-height-computed;
-    font-size: $text-size-sm;
-    padding: $spacing-squish-xs;
-    border-radius: $component-border-radius-sm;
+    font-size: $pagination-font-size-sm;
+    padding: $pagination-padding-sm;
+    border-radius: $pagination-border-radius-sm;
+  }
+}
+
+.pagination--lg {
+  $pagination-height-computed: $pagination-font-size-lg * $line-height-normal + 2 * nth($pagination-padding-lg, 1)  + 2 * $pagination-border-width;
+
+  .pagination__item {
+    height: $pagination-height-computed;
+    min-width: $pagination-height-computed;
+    font-size: $pagination-font-size-lg;
+    padding: $pagination-padding-lg;
+    border-radius: $pagination-border-radius-lg;
   }
 }
 
 .pagination--bordered {
   .pagination__item {
-    border-color: $grey-thin;
-    margin-left: -1px;
+    border-color: $pagination-border-color;
+    margin-left: (0 - $pagination-border-width);
     background-color: $pagination-bg;
 
     &:hover {

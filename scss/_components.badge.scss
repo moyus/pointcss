@@ -1,41 +1,31 @@
 /* ## Badge
 ---------------------------------*/
+$badge-font-size: $text-size-xs !default;
+$badge-padding: $spacing-squish-sm !default;
+$badge-empty-size: 8px !default;
+
 .badge {
   display: inline-block;
-  padding: $spacing-squish-sm;
-  font-size: $text-size-xs;
+  padding: $badge-padding;
+  font-size: $badge-font-size;
   line-height: $line-height-tight;
   text-align: center;
   white-space: nowrap;
   border-radius: 1993px;
   vertical-align: middle;
-  @include badge-variant($grey-mute, $grey-light);
+
+  @include badge-variant($grey-light, $grey-mute);
 
   &:empty {
     min-width: auto;
-    width: 8px;
-    height: 8px;
+    width: $badge-empty-size;
+    height: $badge-empty-size;
     padding: 0;
   }
-
 }
 
-.badge--primary {
-  @include badge-variant($white, $color-primary)
-}
-
-.badge--danger {
-  @include badge-variant($white, $color-danger)
-}
-
-.badge--success {
-  @include badge-variant($white, $color-success)
-}
-
-.badge--info {
-  @include badge-variant($white, $color-info)
-}
-
-.badge--warning {
-  @include badge-variant($white, $color-warning)
+@each $name, $color in $theme-colors {
+  .badge--#{$name} {
+    @include badge-variant($color)
+  }
 }

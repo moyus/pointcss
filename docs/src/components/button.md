@@ -22,7 +22,7 @@ catalogue:
 
 ## Variants
 
-<div class="mb-5">
+<div class="mb-6">
   <button class="btn btn--primary">Primary</button>
   <button class="btn btn--info">Info</button>
   <button class="btn btn--success">Success</button>
@@ -48,7 +48,7 @@ catalogue:
 
 By adding the `.btn--outline` modifier class on any predefined button element to remove background color
 
-<div class="mb-5">
+<div class="mb-6">
   <button class="btn btn--outline btn--primary">Primary</button>
   <button class="btn btn--outline btn--info">Info</button>
   <button class="btn btn--outline btn--success">Success</button>
@@ -72,7 +72,7 @@ By adding the `.btn--outline` modifier class on any predefined button element to
 
 ## State
 
-<div class="mb-5">
+<div class="mb-6">
   <button class="btn" disabled>Disabled</button>
   <button class="btn btn--primary" disabled>Disabled</button>
   <button class="btn btn--primary btn--outline" disabled>Disabled</button>
@@ -87,7 +87,7 @@ By adding the `.btn--outline` modifier class on any predefined button element to
 
 ##### Loading
 
-<div class="mb-5">
+<div class="mb-6">
   <button class="btn btn--loose is-loading">Loading</button>
   <button class="btn btn--primary btn--loose is-loading" disabled>Loading</button>
 </div>
@@ -101,7 +101,7 @@ By adding the `.btn--outline` modifier class on any predefined button element to
 
 Add `.btn--sm` or `.btn--lg` modifier class to quickly create different size button
 
-<div class="mb-5">
+<div class="mb-6">
   <button class="btn btn--sm">Small Button</button>
   <button class="btn">Default Size</button>
   <button class="btn btn--lg">Large Button</button>
@@ -117,7 +117,7 @@ Add `.btn--sm` or `.btn--lg` modifier class to quickly create different size but
 
 By adding `.btn--block` modifier class to quickly create block level button
 
-<div class="mb-5">
+<div class="mb-6">
   <button class="btn btn--block btn--lg">Block Button</button>
 </div>
 
@@ -129,7 +129,7 @@ By adding `.btn--block` modifier class to quickly create block level button
 
 Buttons can be grouped by placing multiple `.btn` elements into a `.btn-group` container element
 
-<div class="mb-5">
+<div class="mb-6">
   <div class="btn-group">
     <button class="btn">Left</button>
     <button class="btn">Middle</button>

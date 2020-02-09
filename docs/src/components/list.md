@@ -6,7 +6,7 @@ catalogue:
   - Inset
   - Bordered
   - Linked
-  - Spacing
+  - Sizing
 ---
 
 # List
@@ -123,11 +123,11 @@ To quick create linkify list by using `<a>` tag and child `.list__link` class.
 </div>
 ```
 
-## Spacing
+## Sizing
 
-Use `.list--compact`, `.list--loose` modifier classes on `.list` container to change item spacing
+Use `.list--sm`, `.list--lg` modifier classes on `.list` container to change size
 
-<ul class="list list--bordered list--compact">
+<ul class="list list--bordered list--sm">
   <li class="list__item">1. Active</li>
   <li class="list__item">2. Dapibus ac facilisis in</li>
   <li class="list__item">3. Morbi leo risus</li>
@@ -143,7 +143,7 @@ Use `.list--compact`, `.list--loose` modifier classes on `.list` container to ch
   <li class="list__item">5. Vestibulum at eros</li>
 </ul>
 
-<ul class="list list--bordered list--loose">
+<ul class="list list--bordered list--lg">
   <li class="list__item">1. Active</li>
   <li class="list__item">2. Dapibus ac facilisis in</li>
   <li class="list__item">3. Morbi leo risus</li>
@@ -152,7 +152,7 @@ Use `.list--compact`, `.list--loose` modifier classes on `.list` container to ch
 </ul>
 
 ```html
-<ul class="list list--bordered list--compact">
+<ul class="list list--bordered list--sm">
   <li class="list__item">1. Active</li>
   <li class="list__item">2. Dapibus ac facilisis in</li>
   <li class="list__item">3. Morbi leo risus</li>
@@ -168,7 +168,7 @@ Use `.list--compact`, `.list--loose` modifier classes on `.list` container to ch
   <li class="list__item">5. Vestibulum at eros</li>
 </ul>
 
-<ul class="list list--bordered list--loose">
+<ul class="list list--bordered list--lg">
   <li class="list__item">1. Active</li>
   <li class="list__item">2. Dapibus ac facilisis in</li>
   <li class="list__item">3. Morbi leo risus</li>

@@ -43,7 +43,7 @@ menu {
 }
 
 figure {
-  margin: 0 0 $spacing-stack-base 0;
+  margin: 0 0 $spacing-stack-md 0;
 }
 
 img {
@@ -176,6 +176,10 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+
+[role="button"] {
+  cursor: pointer;
 }
 
 fieldset {

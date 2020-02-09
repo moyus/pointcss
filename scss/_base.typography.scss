@@ -54,7 +54,7 @@ ul, ol {
   margin: 0 0 $spacing-stack-md 0;
   padding: 0 0 0 2em;
   ul, ol {
-    margin-bottom: $spacing-stack-base;
+    margin-bottom: $spacing-stack-md;
   }
 }
 
@@ -121,7 +121,7 @@ pre {
   padding: $spacing-square-md;
   background: $grey-light;
   color: $grey-dark;
-  border-radius: $component-border-radius-base;
+  border-radius: $component-border-radius-md;
   font-size: $text-size-sm;
   overflow: auto;
 

@@ -1,21 +1,22 @@
 /* ## Note
 ---------------------------------*/
-$note-palette: (
-  danger: (bg: #f2dede, border: #f2dede, text: #a94442),
-  info: (bg: #d9edf7, border: #d9edf7, text: #31708f),
-  success: (bg: #dff0d8, border: #dff0d8, text: #3c763d),
-  warning: (bg: #fcf8e3, border: #fcf8e3, text: #8a6d3b)
+$note-border-radius: $component-border-radius-md !default;
+$note-padding: $spacing-square-md !default;
+$note-margin-bottom: $spacing-stack-md !default;
+$note-colors: (
+  danger: (bg: #f2dede, color: #a94442),
+  info: (bg: #d9edf7, color: #31708f),
+  success: (bg: #dff0d8, color: #3c763d),
+  warning: (bg: #fcf8e3, color: #8a6d3b)
 ) !default;
 
 // block
 .note {
   position: relative;
-  border-radius: $component-border-radius-base;
-  padding: $spacing-square-md;
-  margin-bottom: $spacing-stack-lg;
-  color: $grey-dark;
-  border: 1px solid $grey-light;
-  background-color: $grey-light;
+  border-radius: $note-border-radius;
+  padding: $note-padding;
+  margin-bottom: $note-margin-bottom;
+  @include note-variant($grey-light, $grey-dark);
 
   > *:first-child {
     margin-top: 0;
@@ -27,8 +28,8 @@ $note-palette: (
 }
 
 // modifiers
-@each $modifier, $value in $note-palette {
-  .note--#{$modifier} {
-    @include note-variant(map-get($value, 'text'), map-get($value, 'border'), map-get($value, 'bg'))
+@each $name, $value in $note-colors {
+  .note--#{$name} {
+    @include note-variant(map-get($value, 'bg'), map-get($value, 'color'))
   }
 }

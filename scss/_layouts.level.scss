@@ -1,5 +1,7 @@
 /* ## Level
 ---------------------------------*/
+$level-item-spacing: $spacing-stack-md !default;
+
 .level {
   display: flex;
   align-items: center;
@@ -22,7 +24,7 @@
   }
   
   > .level__item:not(:last-child) {
-    margin-right: $spacing-stack-lg;
+    margin-right: $level-item-spacing;
   }
   
 }
@@ -66,7 +68,7 @@
       .level__end,
       .level__center {
         &:not(:last-child) {
-          margin-bottom: $spacing-stack-lg;
+          margin-bottom: $spacing-stack-md;
         }
       }
     }

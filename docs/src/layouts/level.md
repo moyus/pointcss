@@ -14,7 +14,7 @@ Horizontal layout with vertical center alignment.
 
 2-columns layout
 
-<div class="level level--collapse@md mb-5">
+<div class="level level--collapse@md mb-6">
   <div class="level__start">
     <button class="level__item btn btn--success btn--loose">Add</button>
     <a role="button" class="level__item">All</a>
@@ -56,7 +56,7 @@ Horizontal layout with vertical center alignment.
 
 If you want to create 3-colums layout, you must place `.level__center` at first, so it can use `~` CSS selector to control siblings style
 
-<div class="level level--collapse@md mb-5">
+<div class="level level--collapse@md mb-6">
   <div class="level__center">
     <div class="btn-group">
       <button class="btn">ALL PROJECTS</button>
@@ -112,23 +112,23 @@ If you want to create 3-colums layout, you must place `.level__center` at first,
 
 Direct place `.level__item` under `.level` container, will distribute spacing evenly
 
-<div class="level mb-5">
+<div class="level mb-6">
   <div class="level__item">
     <span class="text-center">
-      <span class="block text-md color-mute line-compact">Message</span>
-      <em class="block text-3xl color-grey">10</em>
+      <span class="block text-meta-md color-mute line-compact">Message</span>
+      <em class="block text-title-md color-dark">10</em>
     </span>
   </div>
   <div class="level__item">
     <span class="text-center">
-      <span class="block text-md color-mute line-compact">Visitors</span>
-      <em class="block text-3xl color-grey">720</em>
+      <span class="block text-meta-md color-mute line-compact">Visitors</span>
+      <em class="block text-title-md color-dark">720</em>
     </span>
   </div>
   <div class="level__item">
     <span class="text-center">
-      <span class="block text-md color-mute line-compact">Users</span>
-      <em class="block text-3xl color-grey">320</em>
+      <span class="block text-meta-md color-mute line-compact">Users</span>
+      <em class="block text-title-md color-dark">320</em>
     </span>
   </div>
 </div>
@@ -137,20 +137,20 @@ Direct place `.level__item` under `.level` container, will distribute spacing ev
 <div class="level">
   <div class="level__item">
     <span class="text-center">
-      <span class="block text-md color-mute line-compact">Message</span>
-      <em class="block text-3xl color-grey">10</em>
+      <span class="block text-meta-md color-mute line-compact">Message</span>
+      <em class="block text-title-md color-dark">10</em>
     </span>
   </div>
   <div class="level__item">
     <span class="text-center">
-      <span class="block text-md color-mute line-compact">Visitors</span>
-      <em class="block text-3xl color-grey">720</em>
+      <span class="block text-meta-md color-mute line-compact">Visitors</span>
+      <em class="block text-title-md color-dark">720</em>
     </span>
   </div>
   <div class="level__item">
     <span class="text-center">
-      <span class="block text-md color-mute line-compact">Users</span>
-      <em class="block text-3xl color-grey">320</em>
+      <span class="block text-meta-md color-mute line-compact">Users</span>
+      <em class="block text-title-md color-dark">320</em>
     </span>
   </div>
 </div>
@@ -160,7 +160,7 @@ Direct place `.level__item` under `.level` container, will distribute spacing ev
 
 When screen size can not wrap level component, you can manually collapse it by using `.level--collapse@<breakpoint>` modifier
 
-<div class="level level--collapse@md mb-5">
+<div class="level level--collapse@md mb-6">
   <div class="level__start">
     <button class="level__item btn btn--success btn--loose">Add</button>
     <a role="button" class="level__item">All</a>

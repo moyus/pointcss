@@ -56,15 +56,13 @@ $spacing-square-sm:                      8px !default;
 $spacing-square-md:                      16px !default;
 $spacing-square-lg:                      24px !default;
 $spacing-square-xl:                      32px !default;
-$spacing-square-base:                    $spacing-square-md !default;
 
 // squish inset
 $spacing-squish-xs:                     (4px 8px) !default;
 $spacing-squish-sm:                     (6px 12px) !default;
 $spacing-squish-md:                     (8px 16px) !default;
-$spacing-squish-lg:                     (12px 24px) !default;
-$spacing-squish-xl:                     (16px 32px) !default;
-$spacing-squish-base:                   $spacing-squish-md !default;
+$spacing-squish-lg:                     (12px 16px) !default;
+$spacing-squish-xl:                     (16px 24px) !default;
 
 // stack
 $spacing-stack-xxs:                     2px !default;
@@ -74,7 +72,6 @@ $spacing-stack-md:                      16px !default;
 $spacing-stack-lg:                      24px !default;
 $spacing-stack-xl:                      32px !default;
 $spacing-stack-xxl:                     64px !default;
-$spacing-stack-base:                    $spacing-stack-md !default;
 
 $spacings: (
   0: 0,
@@ -123,8 +120,8 @@ $text-sizes: (
   sm: $text-size-sm,
   // meta
   meta-lg: $text-size-md,
-  meta-sm:  $text-size-sm,
-  meta-xs:  $text-size-xs
+  meta-md:  $text-size-sm,
+  meta-sm:  $text-size-xs
 ) !default;
 
 $line-height-tight:                     1.25 !default;
@@ -202,6 +199,5 @@ $container-max-widths: (
 $component-border-radius-sm:                      2px !default;
 $component-border-radius-md:                      3px !default;
 $component-border-radius-lg:                      5px !default;
-$component-border-radius-base:                    $component-border-radius-md !default;
 $component-border-width:                          1px !default;
 $component-bg:                                    $white !default;

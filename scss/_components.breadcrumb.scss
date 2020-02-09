@@ -1,5 +1,7 @@
 /* ## Breadcrumb
 ---------------------------------*/
+$breadcrumb-item-spacing: $spacing-stack-md !default;
+
 .breadcrumb {
   margin: 0;
   padding: 0;
@@ -11,11 +13,12 @@
 .breadcrumb__item {
   float: left;
   color: $grey-mute;
+
   &:nth-child(n+2) {
     &:before {
       content: '\0002f';
-      padding-left: $spacing-stack-md;
-      padding-right: $spacing-stack-md;
+      padding-left: $breadcrumb-item-spacing;
+      padding-right: $breadcrumb-item-spacing;
       color: $grey-thin;
     }
   }

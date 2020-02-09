@@ -1,5 +1,14 @@
 /* ## Hint
 ---------------------------------*/
+$hint-color: $white !default;
+$hint-bg: $black !default;
+$hint-font-size: $text-size-sm !default;
+$hint-padding: $spacing-squish-sm !default;
+$hint-border-radius: $component-border-radius-sm !default;
+$hint-width-sm: 120px !default;
+$hint-width-md: 160px !default;
+$hint-width-lg: 220px !default;
+
 .hint {
   position: relative; // absolute or fixed
   overflow: visible;
@@ -20,22 +29,21 @@
     left: calc(50% - 5px);
     bottom: 100%;
     border-width: 5px 5px 0 5px;
-    border-color: $black transparent transparent transparent;
+    border-color: $hint-bg transparent transparent transparent;
   }
 
   &:after {
     content: attr(data-hint);
-    color: $white;
-    font-size: $text-size-sm;
+    color:$hint-color;
+    font-size: $hint-font-size;
+    padding: $hint-padding;
     line-height: $line-height-compact;
-    padding: $spacing-squish-sm;
-    border-radius: $component-border-radius-sm;
-    background-color: $black;
+    border-radius: $hint-border-radius;
+    background-color: $hint-bg;
     white-space: pre-wrap;
     left: 50%;
-    bottom: 100%;
-    width: 160px;
-    margin-bottom: 5px;
+    bottom: calc(100% + 5px);
+    width: $hint-width-md;
     transform: translateX(-50%);
   }
 
@@ -58,15 +66,13 @@
 
 .hint--sm {
   &:after {
-    white-space: normal;
-    width: 120px;
+    width: $hint-width-sm;
   }
 }
 
 .hint--lg {
   &:after {
-    white-space: normal;
-    width: 220px;
+    width: $hint-width-lg;
   }
 }
 
@@ -99,7 +105,6 @@
       transform: translateX(-4px) translateY(-50%);
     }
   }
-
 }
 
 .hint--right {
@@ -131,7 +136,6 @@
       transform: translateX(4px) translateY(-50%);
     }
   }
-
 }
 
 .hint--bottom {
@@ -163,5 +167,4 @@
       transform: translateX(-50%) translateY(4px);
     }
   }
-
 }

@@ -1,14 +1,13 @@
 // note variant
 // -----------------------------------------------------------------------------
-@mixin note-variant($text-color, $border-color, $background-color) {
-  color: $text-color;
-  border-color: $border-color;
-  background-color: $background-color;
+@mixin note-variant($background, $color: round-color($background)) {
+  color: $color;
+  background-color: $background,;
 
   a {
-    color: shade-color($text-color, 2);
+    color: shade-color($color, 2);
     &:hover {
-      color: shade-color($text-color, 2);
+      color: shade-color($color, 3);
     }
   }
 }

@@ -19,6 +19,10 @@ Utilities for controlling an element's padding and margin.
   </thead>
   <tbody>
     <tr>
+      <td><code>0</code></td>
+      <td>0</td>
+    </tr>
+    <tr>
       <td><code>1</code></td>
       <td>2px</td>
     </tr>
@@ -28,27 +32,27 @@ Utilities for controlling an element's padding and margin.
     </tr>
     <tr>
       <td><code>3</code></td>
-      <td>8px</td>
+      <td>6px</td>
     </tr>
     <tr>
       <td><code>4</code></td>
-      <td>12px</td>
+      <td>8px</td>
     </tr>
     <tr>
       <td><code>5</code></td>
-      <td>16px</td>
+      <td>12px</td>
     </tr>
     <tr>
       <td><code>6</code></td>
-      <td>24px</td>
+      <td>16px</td>
     </tr>
     <tr>
       <td><code>7</code></td>
-      <td>32px</td>
+      <td>24px</td>
     </tr>
     <tr>
       <td><code>8</code></td>
-      <td>48px</td>
+      <td>32px</td>
     </tr>
     <tr>
       <td><code>9</code></td>

@@ -1,30 +1,35 @@
 /* ## Box
 ---------------------------------*/
-$box-border-width: $component-border-width;
-
-$box-palette: (
-  danger: (bg: #f2dede, border: #ebccd1, text: #a94442),
-  info: (bg: #d9edf7, border: #bde2fb, text: #31708f),
-  success: (bg: #dff0d8, border: #d6e9c6, text: #3c763d),
-  warning: (bg: #fcf8e3, border: #faebcc, text: #8a6d3b)
+$box-border-width: $component-border-width !default;
+$box-border-radius: $component-border-radius-md !default;
+$box-margin-bottom: $spacing-stack-lg !default;
+$box-title-size: $text-size-base !default;
+$box-header-padding: $spacing-squish-md !default;
+$box-inner-padding: $spacing-square-md !default;
+$box-bg: $component-bg !default;
+$box-colors: (
+  danger: (bg: #f2dede, border: #ebccd1, color: #a94442),
+  info: (bg: #d9edf7, border: #bde2fb, color: #31708f),
+  success: (bg: #dff0d8, border: #d6e9c6, color: #3c763d),
+  warning: (bg: #fcf8e3, border: #faebcc, color: #8a6d3b)
 ) !default;
 
 .box {
-  margin-bottom: $spacing-stack-lg;
-  border-radius: $component-border-radius-base;
+  margin-bottom: $box-margin-bottom;
+  border-radius: $box-border-radius;
 }
 
 .box__header {
   color: $grey-dark;
-  font-size: $text-size-base;
+  font-size: $box-title-size;
   line-height: $line-height-tight;
-  padding: $spacing-squish-md;
+  padding: $box-header-padding;
   border: $box-border-width solid $grey-thin;
-  border-radius: $component-border-radius-base $component-border-radius-base 0 0;
+  border-radius: $box-border-radius $box-border-radius 0 0;
   background-color: $grey-light;
 
   &:only-child {
-    border-radius: $component-border-radius-base;
+    border-radius: $box-border-radius;
   }
 }
 
@@ -32,17 +37,17 @@ $box-palette: (
   border-style: solid;
   border-color: $grey-thin;
   border-width: 0 $box-border-width $box-border-width $box-border-width;
-  border-radius: 0 0 $component-border-radius-base $component-border-radius-base;
-  background-color: $white;
+  border-radius: 0 0 $box-border-radius $box-border-radius;
+  background-color: $box-bg;
 
   &:only-child {
     border-width: $box-border-width;
-    border-radius: $component-border-radius-base;
+    border-radius: $box-border-radius;
   }
 }
 
 .box__inner {
-  padding: $spacing-square-md;
+  padding: $box-inner-padding;
 
   > *:first-child {
     margin-top: 0;
@@ -53,9 +58,9 @@ $box-palette: (
 
 }
 
-@each $modifier, $value in $box-palette {
-  .box--#{$modifier} {
-    @include box-variant(map-get($value, 'text'), map-get($value, 'border'), map-get($value, 'bg'))
+@each $name, $value in $box-colors {
+  .box--#{$name} {
+    @include box-variant(map-get($value, 'color'), map-get($value, 'border'), map-get($value, 'bg'))
   }
 }
 
@@ -63,8 +68,8 @@ $box-palette: (
 details.box {
   > summary.box__header {
     cursor: pointer;
-    border-bottom-left-radius: $component-border-radius-base;
-    border-bottom-right-radius: $component-border-radius-base;
+    border-bottom-left-radius: $box-border-radius;
+    border-bottom-right-radius: $box-border-radius;
     appearance: none;
     &::-webkit-details-marker {
       display: none;

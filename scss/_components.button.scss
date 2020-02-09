@@ -1,22 +1,30 @@
 /* ## Button
 ---------------------------------*/
+$btn-border-radius: $component-border-radius-md !default;
 $btn-border-width: $component-border-width !default;
-$btn-height-computed: $text-size-base * $line-height-normal + 2 * nth($spacing-squish-sm, 1)  + 2 * $btn-border-width;
-$enable-btn-focus-box-shadow: true;
+$btn-line-height: $line-height-normal !default;
+$btn-font-size-sm: $text-size-sm !default;
+$btn-font-size-md: $text-size-md !default;
+$btn-font-size-lg: $text-size-lg !default;
+$btn-padding-sm: $spacing-squish-xs !default;
+$btn-padding-md: $spacing-squish-sm !default;
+$btn-padding-lg: $spacing-squish-md !default;
+$enable-btn-focus-box-shadow: true !default;
+$btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-padding-md, 1)  + 2 * $btn-border-width;
 
 .btn {
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  padding: $spacing-squish-sm;
-  font-size: $text-size-base;
+  padding: $btn-padding-md;
+  font-size: $btn-font-size-md;
   line-height: $line-height-normal;
   height: $btn-height-computed;
   min-width: $btn-height-computed;
   border-width: $btn-border-width;
   border-style: solid;
-  border-radius: $component-border-radius-base;
+  border-radius: $btn-border-radius;
   white-space: nowrap;
   text-overflow: ellipsis;
   text-decoration: none;
@@ -31,22 +39,22 @@ $enable-btn-focus-box-shadow: true;
 
     &:after {
       animation: spin-around 500ms infinite linear;
-      border: 2px solid transparent;
+      border: 0.125em solid transparent;
       border-radius: 50%;
       content: "";
       display: block;
-      height: 16px;
-      width: 16px;
+      height: 1em;
+      width: 1em;
       position: absolute;
       left: 50%;
       top: 50%;
-      margin-left: -8px;
-      margin-top: -8px;
+      margin-left: -.5em;
+      margin-top: -.5em;
     }
   }
 
   @include btn-variant(
-    $background: $white,
+    $background: $component-bg,
     $border: $grey-thin,
     $color: $grey-dark,
     $hover-background: $grey-light,
@@ -96,21 +104,21 @@ $enable-btn-focus-box-shadow: true;
 }
 
 .btn.btn--sm {
-  $btn-height-computed: $text-size-sm * $line-height-normal + 2 * nth($spacing-squish-xs, 1)  + 2 * $btn-border-width;
+  $btn-height-computed: $btn-font-size-sm * $btn-line-height + 2 * nth($btn-padding-sm, 1)  + 2 * $btn-border-width;
 
-  font-size: $text-size-sm;
-  border-radius: $component-border-radius-sm;
-  padding: $spacing-squish-xs;
+  font-size: $btn-font-size-sm;
+  border-radius: $btn-border-radius;
+  padding: $btn-padding-sm;
   height: $btn-height-computed;
   min-width: $btn-height-computed;
 }
 
 .btn.btn--lg {
-  $btn-height-computed: $text-size-lg * $line-height-normal + 2 * nth($spacing-squish-md, 1)  + 2 * $btn-border-width;
+  $btn-height-computed: $btn-font-size-lg * $btn-line-height + 2 * nth($btn-padding-lg, 1)  + 2 * $btn-border-width;
 
-  font-size: $text-size-lg;
-  border-radius: $component-border-radius-lg;
-  padding: $spacing-squish-md;
+  font-size: $btn-font-size-lg;
+  border-radius: $btn-border-radius;
+  padding: $btn-padding-lg;
   height: $btn-height-computed;
   min-width: $btn-height-computed;
 }

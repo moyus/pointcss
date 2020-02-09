@@ -10,7 +10,7 @@ catalogue:
 # Badge
 
 ## Basic
-<div class="mb-5">
+<div class="mb-6">
   <span class="badge">Badge label</span>
 </div>
 
@@ -20,7 +20,7 @@ catalogue:
 
 ## Variants
 
-<div class="mb-5">
+<div class="mb-6">
   <span class="badge badge--primary">Primary</span>
   <span class="badge badge--info">Info</span>
   <span class="badge badge--success">Success</span>
@@ -38,7 +38,7 @@ catalogue:
 
 ##### Empty badge
 
-<div class="mb-5">
+<div class="mb-6">
   <span class="badge"></span>
   <span class="badge badge--primary"></span>
   <span class="badge badge--info"></span>
@@ -58,7 +58,7 @@ catalogue:
 
 ## Linked
 
-<div class="mb-5">
+<div class="mb-6">
     <a class="badge badge--link">Badge</a>
     <a class="badge badge--primary badge--link">Primary</a>
     <a class="badge badge--info badge--link">Info</a>

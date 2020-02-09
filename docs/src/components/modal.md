@@ -12,7 +12,7 @@ A floating layer to get user's feedback or display information.
 
 ## Basic
 
-<button class="btn js-modal-trigger mb-5" data-target="exampleModal">Open Modal</button>
+<button class="btn js-modal-trigger mb-6" data-target="exampleModal">Open Modal</button>
 
 <div id="exampleModal" class="modal-wrapper hidden">
   <section class="modal">
@@ -66,7 +66,7 @@ A floating layer to get user's feedback or display information.
 
 Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly change the size of modal content
 
-<div class="mb-5">
+<div class="mb-6">
   <button class="btn js-modal-trigger" data-target="smModal">Small Modal</button>
   <button class="btn js-modal-trigger" data-target="lgModal">Large Modal</button>
 </div>

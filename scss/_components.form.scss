@@ -1,23 +1,39 @@
 /* ## Form
 ---------------------------------*/
+$form-control-border-color:             $grey-thin !default;
 $form-control-border-width:             $component-border-width !default;
+$form-control-border-radius:            $component-border-radius-md !default;
 $form-control-bg:                       $component-bg !default;
-$enable-form-focus-box-shadow:          true !default;
+$form-control-line-height:              $line-height-normal !default;
+$form-control-font-size-sm:             $text-size-sm !default;
+$form-control-font-size-md:             $text-size-md !default;
+$form-control-font-size-lg:             $text-size-lg !default;
+$form-control-padding-sm:               $spacing-squish-xs !default;
+$form-control-padding-md:               $spacing-squish-sm !default;
+$form-control-padding-lg:               $spacing-squish-md !default;
+$form-control-placeholder-color:        $grey-mute !default;
+$form-control-disabled-color:           $grey-mute !default;
+$form-control-disabled-bg:              $grey-shade !default;
 $form-checkbox-size:                    16px !default;
 $form-radio-size:                       16px !default;
-$form-control-height-computed:          $text-size-base * $line-height-normal + nth($spacing-squish-sm, 1) * 2 + 2px;
+$form-field-margin-bottom:              $spacing-stack-md !default;
+$enable-form-focus-box-shadow:          true !default;
+$form-control-height-computed:          $form-control-font-size-md * $form-control-line-height + nth($form-control-padding-md, 1) * 2 + $form-control-border-width * 2;
+
+$icon-caret:                            "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23" + str-slice("#{$grey-thin}", 2) + "' d='M8.706 11.414l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71h-5.18c-.89 0-1.33 1.08-.7 1.71z'/%3E%3C/svg%3E" !default;
+$icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23" + str-slice("#{$form-control-bg}", 2) + "' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e" !default;
 
 .form-input,
 .form-select,
 .form-textarea {
   display: block;
   width: 100%;
-  padding: $spacing-squish-sm;
   color: $grey-dark;
-  font-size: $text-size-base;
-  line-height: $line-height-normal;
-  border: 1px solid $grey-thin;
-  border-radius: $component-border-radius-base;
+  padding: $form-control-padding-md;
+  font-size: $form-control-font-size-md;
+  line-height: $form-control-line-height;
+  border: $form-control-border-width solid $form-control-border-color;
+  border-radius: $form-control-border-radius;
   background-color: $form-control-bg;
   outline: none;
   box-shadow: none;
@@ -29,7 +45,7 @@ $form-control-height-computed:          $text-size-base * $line-height-normal + 
   // states
   &:hover,
   &.is-hovered {
-    border-color: shade-color($grey-thin, 2);
+    border-color: shade-color($form-control-border-color, 1);
   }
 
   &:focus,
@@ -43,15 +59,15 @@ $form-control-height-computed:          $text-size-base * $line-height-normal + 
   &:disabled {
     opacity: 1;
     cursor: not-allowed;
-    color: $grey-mute !important;
-    border-color: $grey-shade !important;
-    background-color: $grey-shade !important;
+    color: $form-control-disabled-color !important;
+    border-color: $form-control-disabled-bg !important;
+    background-color: $form-control-disabled-bg !important;
     box-shadow: none !important;
   }
 
   &::placeholder {
     opacity: 1;
-    color: $grey-mute;
+    color: $form-control-placeholder-color;
   }
 
   &.is-success {
@@ -128,7 +144,7 @@ select.form-select {
   &:not([multiple]) {
     padding-right: 32px;
     background-color: $form-control-bg;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23616161' d='M8.706 11.414l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71h-5.18c-.89 0-1.33 1.08-.7 1.71z'/%3E%3C/svg%3E");
+    background-image: url(#{$icon-caret});
     background-repeat: no-repeat;
     background-position: right center;
   }
@@ -149,16 +165,19 @@ select.form-select {
 .form-select,
 .form-textarea {
   &--sm {
-    font-size: $text-size-sm;
-    padding: $spacing-squish-xs;
-    height: $text-size-base * $line-height-normal + nth($spacing-squish-xs, 1) * 2 + 2px;
+    $form-control-height-computed: $form-control-font-size-sm * $form-control-line-height + nth($form-control-padding-sm, 1) * 2 + $form-control-border-width * 2;
+
+    font-size: $form-control-font-size-sm;
+    padding: $form-control-padding-sm;
+    height: $form-control-height-computed;
   }
 
   &--lg {
-    font-size: $text-size-lg;
-    line-height: 1.5;
-    padding: $spacing-squish-md;
-    height: $text-size-base * $line-height-normal + nth($spacing-squish-md, 1) * 2 + 2px;
+    $form-control-height-computed: $form-control-font-size-lg * $form-control-line-height + nth($form-control-padding-lg, 1) * 2 + $form-control-border-width * 2;
+
+    font-size: $form-control-font-size-lg;
+    padding: $form-control-padding-lg;
+    height: $form-control-height-computed;
   }
 }
 
@@ -172,7 +191,7 @@ select.form-select {
   width: $form-checkbox-size;
   height: $form-checkbox-size;
   border-radius: 0;
-  border: $form-control-border-width solid $grey-thin;
+  border: $form-control-border-width solid $form-control-border-color;
   background-color: $form-control-bg;
   padding: 0;
   margin: 0;
@@ -181,10 +200,32 @@ select.form-select {
   &:checked {
     border: 0;
     background-color: $color-primary;
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+    background-image: url("#{$icon-check}");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &.is-hovered {
+    border-color: shade-color($form-control-border-color, 1);
+  }
+
+  &:focus,
+  &.is-focused {
+    border-color: $color-primary;
+    @if $enable-form-focus-box-shadow {
+      box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
+    }
+  }
+
+  &:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+    color: $form-control-disabled-color !important;
+    border-color: $form-control-disabled-bg !important;
+    background-color: $form-control-disabled-bg !important;
+    box-shadow: none !important;
   }
 }
 
@@ -198,7 +239,7 @@ select.form-select {
   width: $form-radio-size;
   height: $form-radio-size;
   border-radius: 1993px;
-  border: $form-control-border-width solid $grey-thin;
+  border: $form-control-border-width solid $form-control-border-color;
   background-color: $form-control-bg;
   padding: 0;
   margin: 0;
@@ -206,18 +247,40 @@ select.form-select {
 
   &:checked {
     border: 0;
-    background-color: $color-primary;
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: $form-control-bg;
+    box-shadow: inset 0 0 0 ($form-radio-size / 3) $color-primary;
+  }
+
+  &:hover,
+  &.is-hovered {
+    border-color: shade-color($form-control-border-color, 1);
+  }
+
+  &:focus,
+  &.is-focused {
+    border-color: $color-primary;
+    @if $enable-form-focus-box-shadow {
+      box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
+      &:checked {
+        box-shadow: inset 0 0 0 ($form-radio-size / 3) $color-primary, 0 0 0 2px rgba($color-primary, 0.25);
+      }
+    }
+  }
+
+  &:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+    color: $form-control-disabled-color !important;
+    border-color: $form-control-disabled-bg !important;
+    background-color: $form-control-disabled-bg !important;
+    box-shadow: none !important;
   }
 }
 
 // Field
 .form-field {
   text-align: left;
-  margin-bottom: $spacing-stack-lg;
+  margin-bottom: $form-field-margin-bottom;
 }
 
 .form-label {
@@ -238,13 +301,14 @@ select.form-select {
 .form-addon {
   display: inline-flex;
   align-items: center;
-  padding: $spacing-squish-sm;
   color: $grey-dark;
   font-size: $text-size-base;
   line-height: $line-height-normal;
-  border-radius: $component-border-radius-base;
+  padding: $spacing-squish-sm;
+  border-radius: $form-control-border-radius;
+
   &:not(.btn) {
-    border: 1px solid $grey-thin;
+    border: $form-control-border-width solid $form-control-border-color;
     background-color: $grey-light;
   }
 }
@@ -260,15 +324,15 @@ select.form-select {
     border-radius: 0;
 
     &:nth-child(n+2) {
-      margin-left: -1px;
+      margin-left: (0 - $form-control-border-width);
     }
 
     &:first-child {
-      border-radius: $component-border-radius-base 0 0 $component-border-radius-base;
+      border-radius: $form-control-border-width 0 0 $form-control-border-width;
     }
 
     &:last-child {
-      border-radius: 0 $component-border-radius-base $component-border-radius-base 0;
+      border-radius: 0 $form-control-border-width $form-control-border-width 0;
     }
   }
 

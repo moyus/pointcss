@@ -1,3 +1,16 @@
+/* ## Dropdown
+---------------------------------*/
+$drodown-stack-spacing: $spacing-stack-sm !default;
+$dropdown-padding: $spacing-square-sm !default;
+$dropdown-bg: $component-bg !default;
+$dropdown-border-color: $grey-thin !default;
+$dropdown-border-radius: $component-border-radius-md !default;
+$dropdown-border-width: $component-border-width !default;
+$dropdown-width-sm: 160px !default;
+$dropdown-width-md: 200px !default;
+$dropdown-width-lg: 280px !default;
+$enable-dropdown-box-shadow: true !default;
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -15,13 +28,16 @@
   top: 100%;
   right: auto;
   bottom: auto;
-  width: 200px;
-  padding: $spacing-square-sm;
-  margin: $spacing-stack-sm 0 0 0;
-  border: 1px solid $grey-thin;
-  border-radius: $component-border-radius-base;
-  background-color: $white;
-  box-shadow: 0 4px 6px rgba($black, .05);
+  width: $dropdown-width-md;
+  padding: $dropdown-padding;
+  margin: $drodown-stack-spacing 0 0 0;
+  border: $dropdown-border-width solid $dropdown-border-color;
+  border-radius: $dropdown-border-radius;
+  background-color: $dropdown-bg;
+
+  @if $enable-dropdown-box-shadow {
+    box-shadow: 0 4px 6px rgba($black, .05);
+  }
 
   > * {
     &:first-child {
@@ -35,13 +51,13 @@
 
 .dropdown--sm {
   .popover__content {
-    width: 160px;
+    width: $dropdown-width-sm;
   }
 }
 
 .dropdown--lg {
   .popover__content {
-    width: 280px;
+    width: $dropdown-width-lg;
   }
 }
 
@@ -57,7 +73,7 @@
     top: 100%;
     right: auto;
     bottom: auto;
-    margin: $spacing-stack-sm 0 0 0;
+    margin: $drodown-stack-spacing 0 0 0;
   }
 }
 
@@ -67,7 +83,7 @@
     top: 100%;
     right: 0;
     bottom: auto;
-    margin: $spacing-stack-sm 0 0 0;
+    margin: $drodown-stack-spacing 0 0 0;
   }
 }
 
@@ -77,7 +93,7 @@
     top: 0;
     right: auto;
     bottom: auto;
-    margin: 0 0 0 $spacing-stack-sm;
+    margin: 0 0 0 $drodown-stack-spacing;
   }
 }
 
@@ -87,7 +103,7 @@
     top: auto;
     right: auto;
     bottom: 0;
-    margin: 0 0 0 $spacing-stack-sm;
+    margin: 0 0 0 $drodown-stack-spacing;
   }
 }
 
@@ -97,7 +113,7 @@
     top: auto;
     right: auto;
     bottom: 100%;
-    margin: 0 0 $spacing-stack-sm 0;
+    margin: 0 0 $drodown-stack-spacing 0;
   }
 }
 
@@ -107,7 +123,7 @@
     top: auto;
     right: 0;
     bottom: 100%;
-    margin: 0 0 $spacing-stack-sm 0;
+    margin: 0 0 $drodown-stack-spacing 0;
   }
 }
 
@@ -117,7 +133,7 @@
     top: 0;
     right: 100%;
     bottom: auto;
-    margin: 0 $spacing-stack-sm 0 0;
+    margin: 0 $drodown-stack-spacing 0 0;
   }
 }
 
@@ -127,6 +143,6 @@
     top: auto;
     right: 100%;
     bottom: 0;
-    margin: 0 $spacing-stack-sm 0 0;
+    margin: 0 $drodown-stack-spacing 0 0;
   }
 }

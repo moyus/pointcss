@@ -3,6 +3,7 @@
 $modal-width-sm:                           480px !default;
 $modal-width-md:                           600px !default;
 $modal-width-lg:                           900px !default;
+$modal-border-radius:                      $component-border-radius-lg !default;
 $modal-bg:                                 $component-bg !default;
 $modal-title-font-size:                    $text-size-xl !default;
 $modal-zIndex:                             $zIndex-9 !default;
@@ -36,7 +37,7 @@ $mask-bg:                                  rgba($black, 0.5) !default;
   width: 100%;
   margin: auto;
   background-color: $modal-bg;
-  border-radius: $component-border-radius-lg;
+  border-radius: $modal-border-radius;
   box-shadow: 0 4px 6px rgba($black, .05);
 }
 
