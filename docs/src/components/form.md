@@ -302,7 +302,7 @@ The `.form-select` class is mean to be used on `<select></select>` HTML element
 ##### Sizing
 
 <div class="form-field">
-  <select class="form-select form-select--small">
+  <select class="form-select form-select--sm">
     <option>Small sizing</option>
     <option value="0">Beijing</option>
     <option value="1">Washington</option>
@@ -436,7 +436,7 @@ The `.form-radio` class is mean to be used on `<input type="radio">` HTML elemen
   <label for="gender" class="form-label">Gender</label>
   <div class="flex items-center">
     <label class="inline-flex items-center mr-5">
-      <input type="radio" name="gender" class="form-radio" checked disabled>
+      <input type="radio" name="gender" class="form-radio" checked>
       <span class="ml-3">Male</span>
     </label>
     <label class="inline-flex items-center">
@@ -468,7 +468,7 @@ The `.form-checkbox` class is mean to be used on `<input type="checkbox">` HTML 
 
 <div class="form-field">
   <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox" name="remember" checked disabled id="remember">
+    <input type="checkbox" class="form-checkbox" name="remember" id="remember">
     <span class="ml-3">Remember Me?</span>
   </label>
 </div>

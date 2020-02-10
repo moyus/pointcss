@@ -13,7 +13,7 @@ A lightweight and flexible CSS Framework for building modern responsive web apps
 
 - Built with flexbox
 - Mobile friendly layout
-- ~10KB minified and gzipped
+- ~12KB minified and gzipped
 
 ## Installation
 There are 3 ways to get started

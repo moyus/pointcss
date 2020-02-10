@@ -1,6 +1,6 @@
 /*!
  * @moyu/pointcss
- * @version v2.0.0-alpha.4
+ * @version v2.0.0-alpha.5
  * @link https://github.com/moyus/pointcss
  * @author moyu <moyuboy@gmail.com> (https://moyu.io)
  * @license MIT
@@ -21,13 +21,9 @@
 html {
   font-size: 16px;
   font-family: sans-serif;
-  /* 1 */
   line-height: 1.15;
-  /* 2 */
   -ms-text-size-adjust: 100%;
-  /* 3 */
   -webkit-text-size-adjust: 100%;
-  /* 3 */
 }
 
 body {
@@ -2199,6 +2195,7 @@ fieldset[disabled] .btn {
 .form-textarea {
   display: block;
   width: 100%;
+  height: 38px;
   color: #212121;
   padding: 6px 12px;
   font-size: 16px;
@@ -2211,7 +2208,8 @@ fieldset[disabled] .btn {
   background-image: none;
   background-clip: padding-box;
   -webkit-appearance: none;
-  -moz-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .form-input:hover, .form-input.is-hovered,
@@ -2319,46 +2317,49 @@ fieldset[disabled] .btn {
   box-shadow: 0 0 0 2px rgba(237, 110, 51, 0.25);
 }
 
-.form-input {
-  height: 38px;
-}
-
 .form-input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
 }
 
 .form-input[type="file"] {
   height: auto;
+  min-height: 38px;
 }
 
-select.form-select {
+.form-select {
   cursor: pointer;
 }
 
-select.form-select::-ms-expand {
+.form-select::-ms-expand {
   background-color: transparent;
   border: 0;
   display: none;
 }
 
-select.form-select:not([multiple]) {
+.form-select:not([multiple]) {
   padding-right: 32px;
   background-color: #ffffff;
-  background-image: url(data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23dbdbdb' d='M8.706 11.414l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71h-5.18c-.89 0-1.33 1.08-.7 1.71z'/%3E%3C/svg%3E);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23616161' d='M8.706 11.414l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71h-5.18c-.89 0-1.33 1.08-.7 1.71z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right center;
 }
 
-select.form-select[multiple] {
+.form-select[multiple] {
   padding-left: 0;
   padding-right: 0;
   height: auto;
+  min-height: 38px;
 }
 
-select.form-select[multiple] option {
+.form-select[multiple] option {
   border-radius: 0;
   padding: 6px 12px;
   margin-bottom: 4px;
+}
+
+.form-textarea {
+  height: auto;
+  min-height: 38px;
 }
 
 .form-input--sm,
@@ -2369,12 +2370,52 @@ select.form-select[multiple] option {
   height: 31px;
 }
 
+.form-input--sm.form-input[type="file"],
+.form-select--sm.form-input[type="file"],
+.form-textarea--sm.form-input[type="file"] {
+  min-height: 31px;
+}
+
+.form-input--sm.form-select[multiple],
+.form-select--sm.form-select[multiple],
+.form-textarea--sm.form-select[multiple] {
+  height: auto;
+  min-height: 31px;
+}
+
+.form-input--sm.form-textarea,
+.form-select--sm.form-textarea,
+.form-textarea--sm.form-textarea {
+  height: auto;
+  min-height: 31px;
+}
+
 .form-input--lg,
 .form-select--lg,
 .form-textarea--lg {
   font-size: 18px;
   padding: 8px 16px;
   height: 45px;
+}
+
+.form-input--lg.form-input[type="file"],
+.form-select--lg.form-input[type="file"],
+.form-textarea--lg.form-input[type="file"] {
+  min-height: 45px;
+}
+
+.form-input--lg.form-select[multiple],
+.form-select--lg.form-select[multiple],
+.form-textarea--lg.form-select[multiple] {
+  height: auto;
+  min-height: 45px;
+}
+
+.form-input--lg.form-textarea,
+.form-select--lg.form-textarea,
+.form-textarea--lg.form-textarea {
+  height: auto;
+  min-height: 45px;
 }
 
 .form-checkbox {
@@ -2525,14 +2566,14 @@ select.form-select[multiple] option {
 .form-group > .form-select:first-child,
 .form-group > .form-addon:first-child,
 .form-group > .btn:first-child {
-  border-radius: 1px 0 0 1px;
+  border-radius: 3px 0 0 3px;
 }
 
 .form-group > .form-input:last-child,
 .form-group > .form-select:last-child,
 .form-group > .form-addon:last-child,
 .form-group > .btn:last-child {
-  border-radius: 0 1px 1px 0;
+  border-radius: 0 3px 3px 0;
 }
 
 .form-group > .form-input,
