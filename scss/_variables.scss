@@ -16,22 +16,22 @@ $grey-light:                            #f7f7f7 !default; // white space area
 $white:                                 #ffffff !default; // for color mix
 
 $grey-colors: (
-  black: $black,
-  white: $white,
-  dark: $grey-dark,
-  mute: $grey-mute,
-  thin: $grey-thin,
-  weak: $grey-weak,
-  shade: $grey-shade,
-  light: $grey-light
+  "black": $black,
+  "white": $white,
+  "dark": $grey-dark,
+  "mute": $grey-mute,
+  "thin": $grey-thin,
+  "weak": $grey-weak,
+  "shade": $grey-shade,
+  "light": $grey-light
 ) !default;
 
 $theme-colors: (  
-  primary: $color-primary,
-  danger: $color-danger,
-  success: $color-success,
-  info: $color-info,
-  warning: $color-warning
+  "primary": $color-primary,
+  "danger": $color-danger,
+  "success": $color-success,
+  "info": $color-info,
+  "warning": $color-warning
 ) !default;
 
 $colors: map-merge($grey-colors, $theme-colors);
@@ -74,16 +74,16 @@ $spacing-stack-xl:                      32px !default;
 $spacing-stack-xxl:                     64px !default;
 
 $spacings: (
-  0: 0,
-  1: 2px,
-  2: 4px,
-  3: 6px,
-  4: 8px,
-  5: 12px,
-  6: 16px,
-  7: 24px,
-  8: 32px,
-  9: 64px,
+  "0": 0,
+  "1": 2px,
+  "2": 4px,
+  "3": 6px,
+  "4": 8px,
+  "5": 12px,
+  "6": 16px,
+  "7": 24px,
+  "8": 32px,
+  "9": 64px,
 ) !default;
 
 // Base
@@ -103,25 +103,44 @@ $text-size-8xl:                         72px !default;
 $text-size-9xl:                         96px !default;
 $text-size-base:                        16px !default;
 
+// display
+$text-display-lg:                       $text-size-7xl !default;
+$text-display-md:                       $text-size-6xl !default;
+$text-display-sm:                       $text-size-5xl !default;
+// title
+$text-title-xl:                         $text-size-4xl !default;
+$text-title-lg:                         $text-size-3xl !default;
+$text-title-md:                         $text-size-2xl !default;
+$text-title-sm:                         $text-size-xl !default;
+$text-title-xs:                         $text-size-lg !default;
+// base
+$text-lg:                               $text-size-lg !default;
+$text-md:                               $text-size-md !default;
+$text-sm:                               $text-size-sm !default;
+// meta
+$text-meta-lg:                          $text-size-md !default;
+$text-meta-md:                          $text-size-sm !default;
+$text-meta-sm:                          $text-size-xs !default;
+
 $text-sizes: (
   // display
-  display-lg: $text-size-7xl,
-  display-md: $text-size-6xl,
-  display-sm: $text-size-5xl,
+  "display-lg": $text-display-lg,
+  "display-md": $text-display-md,
+  "display-sm": $text-display-sm,
   // title
-  title-xl: $text-size-4xl,
-  title-lg: $text-size-3xl,
-  title-md: $text-size-2xl,
-  title-sm: $text-size-xl,
-  title-xs: $text-size-lg,
+  "title-xl": $text-title-xl,
+  "title-lg": $text-title-lg,
+  "title-md": $text-title-md,
+  "title-sm": $text-title-sm,
+  "title-xs": $text-title-xs,
   // base
-  lg: $text-size-lg,
-  md: $text-size-md,
-  sm: $text-size-sm,
+  "lg:" $text-lg,
+  "md:" $text-md,
+  "sm:" $text-sm,
   // meta
-  meta-lg: $text-size-md,
-  meta-md:  $text-size-sm,
-  meta-sm:  $text-size-xs
+  "meta-lg": $text-meta-lg,
+  "meta-md": $text-meta-md,
+  "meta-sm": $text-meta-sm
 ) !default;
 
 $line-height-tight:                     1.25 !default;
@@ -131,11 +150,11 @@ $line-height-relaxed:                   1.625 !default;
 $line-height-loose:                     2 !default;
 
 $line-heights: (
-  tight: $line-height-tight,
-  compact: $line-height-compact,
-  normal: $line-height-normal,
-  relaxed: $line-height-relaxed,
-  loose: $line-height-loose
+  "tight": $line-height-tight,
+  "compact": $line-height-compact,
+  "normal": $line-height-normal,
+  "relaxed": $line-height-relaxed,
+  "loose": $line-height-loose
 ) !default;
 
 $font-weight-light:                     300 !default;
@@ -146,11 +165,11 @@ $font-weight-bold:                      700 !default;
 $font-weight-base:                      $font-weight-normal !default;
 
 $font-weights: (
-  light: $font-weight-light,
-  normal: $font-weight-normal,
-  medium: $font-weight-medium,
-  semi: $font-weight-semi,
-  bold: $font-weight-bold
+  "light": $font-weight-light,
+  "normal": $font-weight-normal,
+  "medium": $font-weight-medium,
+  "semi": $font-weight-semi,
+  "bold": $font-weight-bold
 ) !default;
 
 $font-family-base:                      -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif !default;
@@ -181,23 +200,23 @@ $grid-columns:                          12 !default;
 $grid-gutter-width:                     16px !default;
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 768px, // mobile, tablet
-  md: 1000px, // desktop
-  lg: 1200px,  // large screen
+  "xs": 0,
+  "sm": 768px, // mobile, tablet
+  "md": 1000px, // desktop
+  "lg": 1200px,  // large screen
 ) !default;
 
 $container-max-widths: (
-  xs: 100%,
-  sm: 100%,
-  md: 980px,
-  lg: 1180px
+  "xs": 100%,
+  "sm": 100%,
+  "md": 980px,
+  "lg": 1180px
 ) !default;
 
 // Components
 // -----------------------------------------------------------------------------
-$component-border-radius-sm:                      2px !default;
-$component-border-radius-md:                      3px !default;
-$component-border-radius-lg:                      5px !default;
-$component-border-width:                          1px !default;
-$component-bg:                                    $white !default;
+$component-border-radius-sm:             2px !default;
+$component-border-radius-md:             3px !default;
+$component-border-radius-lg:             5px !default;
+$component-border-width:                 1px !default;
+$component-bg:                           $white !default;
