@@ -1,4 +1,4 @@
-<img width="124" height="42" src="https://github.com/moyus/pointcss/raw/v2/docs/images/logo.svg?sanitize=true">
+<img width="124" height="42" src="https://github.com/moyus/pointcss/raw/master/docs/images/logo.svg?sanitize=true">
 
 A lightweight and flexible CSS Framework for building modern responsive web apps.
 
