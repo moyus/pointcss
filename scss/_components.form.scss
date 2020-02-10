@@ -20,7 +20,7 @@ $form-field-margin-bottom:              $spacing-stack-md !default;
 $enable-form-focus-box-shadow:          true !default;
 $form-control-height-computed:          $form-control-font-size-md * $form-control-line-height + nth($form-control-padding-md, 1) * 2 + $form-control-border-width * 2;
 
-$icon-caret:                            "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23" + str-slice("#{$grey-thin}", 2) + "' d='M8.706 11.414l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71h-5.18c-.89 0-1.33 1.08-.7 1.71z'/%3E%3C/svg%3E" !default;
+$icon-caret:                            "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23" + str-slice("#{$grey-mute}", 2) + "' d='M8.706 11.414l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71h-5.18c-.89 0-1.33 1.08-.7 1.71z'/%3E%3C/svg%3E" !default;
 $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23" + str-slice("#{$form-control-bg}", 2) + "' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e" !default;
 
 .form-input,
@@ -28,6 +28,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
 .form-textarea {
   display: block;
   width: 100%;
+  height: $form-control-height-computed;
   color: $grey-dark;
   padding: $form-control-padding-md;
   font-size: $form-control-font-size-md;
@@ -39,8 +40,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
   box-shadow: none;
   background-image: none;
   background-clip: padding-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none;
 
   // states
   &:hover,
@@ -120,19 +120,18 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
 
 // input
 .form-input {
-  height: $form-control-height-computed;
   &:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px $form-control-bg inset;
   }
-}
 
-// file
-.form-input[type="file"] {
-  height: auto;
+  &[type="file"] {
+    height: auto;
+    min-height: $form-control-height-computed;
+  }
 }
 
 // select
-select.form-select {
+.form-select {
   cursor: pointer;
 
   &::-ms-expand {
@@ -144,7 +143,7 @@ select.form-select {
   &:not([multiple]) {
     padding-right: 32px;
     background-color: $form-control-bg;
-    background-image: url(#{$icon-caret});
+    background-image: url("#{$icon-caret}");
     background-repeat: no-repeat;
     background-position: right center;
   }
@@ -153,6 +152,7 @@ select.form-select {
     padding-left: 0;
     padding-right: 0;
     height: auto;
+    min-height: $form-control-height-computed;
     option {
       border-radius: 0;
       padding: $spacing-squish-sm;
@@ -161,6 +161,13 @@ select.form-select {
   }
 }
 
+// textarea
+.form-textarea {
+  height: auto;
+  min-height: $form-control-height-computed;
+}
+
+// sizing
 .form-input,
 .form-select,
 .form-textarea {
@@ -170,6 +177,20 @@ select.form-select {
     font-size: $form-control-font-size-sm;
     padding: $form-control-padding-sm;
     height: $form-control-height-computed;
+
+    &.form-input[type="file"] {
+      min-height: $form-control-height-computed;
+    }
+
+    &.form-select[multiple] {
+      height: auto;
+      min-height: $form-control-height-computed;
+    }
+
+    &.form-textarea {
+      height: auto;
+      min-height: $form-control-height-computed;
+    }
   }
 
   &--lg {
@@ -178,6 +199,20 @@ select.form-select {
     font-size: $form-control-font-size-lg;
     padding: $form-control-padding-lg;
     height: $form-control-height-computed;
+
+    &.form-input[type="file"] {
+      min-height: $form-control-height-computed;
+    }
+
+    &.form-select[multiple] {
+      height: auto;
+      min-height: $form-control-height-computed;
+    }
+
+    &.form-textarea {
+      height: auto;
+      min-height: $form-control-height-computed;
+    }
   }
 }
 
@@ -328,11 +363,11 @@ select.form-select {
     }
 
     &:first-child {
-      border-radius: $form-control-border-width 0 0 $form-control-border-width;
+      border-radius: $form-control-border-radius 0 0 $form-control-border-radius;
     }
 
     &:last-child {
-      border-radius: 0 $form-control-border-width $form-control-border-width 0;
+      border-radius: 0 $form-control-border-radius $form-control-border-radius 0;
     }
   }
 
