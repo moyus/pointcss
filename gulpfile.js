@@ -107,7 +107,7 @@ gulp.task('clean', function () {
 
 gulp.task('docs:html', function () {
   return gulp.src([
-      'docs/src/**/*.md'
+      'docs/src/content/*.md'
     ])
     .pipe(nunjucksRender({
       "path": ["docs/src/_templates"],
@@ -129,7 +129,7 @@ gulp.task('docs:html', function () {
 })
 
 gulp.task('docs:assets', function () {
-  return gulp.src('./docs/src/assets/**/*')
+  return gulp.src('./docs/src/_assets/**/*')
       .pipe(gulp.dest('./docs'))
 })
 

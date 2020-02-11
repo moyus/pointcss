@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Getting started - POINTCSS</title>
+  <title> Spacing - POINTCSS</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
@@ -117,72 +117,66 @@
       <!-- END .site__sidebar -->
       <main id="main" class="site__main" role="main">
         <article class="article">
-          <h1 id="introduction"><span>Introduction</span></h1><p>A lightweight and flexible CSS Framework for building modern responsive web apps.</p>
+          <h1 id="spacing"><span>Spacing</span></h1><p>Utilities for controlling an element&#39;s padding and margin.</p>
 <ul>
-<li>Built with flexbox</li>
-<li>Mobile friendly layout</li>
-<li>~12KB minified and gzipped</li>
+<li><code>.p{t|r|b|l|x|y}-{size}</code> for padding</li>
+<li><code>.m{t|r|b|l|x|y}-{size}</code> for margin</li>
 </ul>
-<h2 id="installation">
-    <a name="installation" class="anchor" href="#installation"></a>
-    Installation
-    </h2><p>There are 3 ways to get started</p>
-<h3 id="yarn">Yarn</h3><pre><code class="language-sh">yarn add @moyu/pointcss</code></pre>
-<h3 id="npm">NPM</h3><pre><code class="language-sh">npm install @moyu/pointcss --save</code></pre>
-<h3 id="download-and-use-production-file">Download and use production file</h3><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/point.min.css&quot; /&gt;</code></pre>
-<h2 id="customization">
-    <a name="customization" class="anchor" href="#customization"></a>
-    Customization
-    </h2><p><strong>pointcss</strong> is coded in <a href="http://sass-lang.com/">SASS</a>, If you&#39;re familiar with it, You can continue</p>
-<h3 id="install-the-dependence">Install the dependence</h3><pre><code class="language-sh">yarn add @moyu/pointcss --dev</code></pre>
-<h3 id="set-your-variables">Set your variables</h3><p>you can reference all initial variables in <code>scss/_variables.scss</code></p>
-<pre><code class="language-scss">$color-primary:                         #636AFF; // primary
-$color-danger:                          #ff2d20; // negative
-$color-success:                         #15CD72; // positive
-$color-info:                            #0069ff; // accent
-$color-warning:                         #ED6E33; // warning
-...</code></pre>
-<h3 id="import-pointcss-at-the-end-of-your-code">Import pointcss at the end of your code</h3><pre><code class="language-scss">// overwrite variables
-$color-primary:                         #636AFF;
-
-// your code
-
-@import &quot;node_modules/@moyu/pointcss/point&quot;</code></pre>
-<h2 id="browser-support">
-    <a name="browser-support" class="anchor" href="#browser-support"></a>
-    Browser Support
-    </h2><p><strong>pointcss</strong> uses <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> for CSS
-reset and <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to make styles
-compatible with earlier browser versions. For best user experience, these
-browsers are recommended:</p>
-<ul>
-<li>Chrome</li>
-<li>Firefox</li>
-<li>Safari</li>
-<li>Opera</li>
-<li>Microsoft Edge</li>
-<li>Internet Explorer 10+</li>
-</ul>
-<h2 id="copyright-and-license">
-    <a name="copyright-and-license" class="anchor" href="#copyright-and-license"></a>
-    Copyright and License
-    </h2><p>
-  Designed and built by <a href="https://moyu.io" target="_blank">MOYU</a>.
-  Licensed under the <a href="https://github.com/moyus/pointcss/blob/master/LICENSE">MIT License</a>.
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Size</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>0</code></td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td><code>1</code></td>
+      <td>2px</td>
+    </tr>
+    <tr>
+      <td><code>2</code></td>
+      <td>4px</td>
+    </tr>
+    <tr>
+      <td><code>3</code></td>
+      <td>6px</td>
+    </tr>
+    <tr>
+      <td><code>4</code></td>
+      <td>8px</td>
+    </tr>
+    <tr>
+      <td><code>5</code></td>
+      <td>12px</td>
+    </tr>
+    <tr>
+      <td><code>6</code></td>
+      <td>16px</td>
+    </tr>
+    <tr>
+      <td><code>7</code></td>
+      <td>24px</td>
+    </tr>
+    <tr>
+      <td><code>8</code></td>
+      <td>32px</td>
+    </tr>
+    <tr>
+      <td><code>9</code></td>
+      <td>64px</td>
+    </tr>
+  </tbody>
+</table>
 
         </article>
       </main>
       <!-- END .site__main -->
       <nav class="site__catalogue">
-        
-        <a href="#installation">Installation</a>
-        
-        <a href="#customization">Customization</a>
-        
-        <a href="#browser-support">Browser Support</a>
-        
-        <a href="#copyright-and-license">Copyright and License</a>
         
       </nav>
       <!-- END .site__catalogue -->

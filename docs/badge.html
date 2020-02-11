@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Getting started - POINTCSS</title>
+  <title> Badge - POINTCSS</title>
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
@@ -117,72 +117,74 @@
       <!-- END .site__sidebar -->
       <main id="main" class="site__main" role="main">
         <article class="article">
-          <h1 id="introduction"><span>Introduction</span></h1><p>A lightweight and flexible CSS Framework for building modern responsive web apps.</p>
-<ul>
-<li>Built with flexbox</li>
-<li>Mobile friendly layout</li>
-<li>~12KB minified and gzipped</li>
-</ul>
-<h2 id="installation">
-    <a name="installation" class="anchor" href="#installation"></a>
-    Installation
-    </h2><p>There are 3 ways to get started</p>
-<h3 id="yarn">Yarn</h3><pre><code class="language-sh">yarn add @moyu/pointcss</code></pre>
-<h3 id="npm">NPM</h3><pre><code class="language-sh">npm install @moyu/pointcss --save</code></pre>
-<h3 id="download-and-use-production-file">Download and use production file</h3><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/point.min.css&quot; /&gt;</code></pre>
-<h2 id="customization">
-    <a name="customization" class="anchor" href="#customization"></a>
-    Customization
-    </h2><p><strong>pointcss</strong> is coded in <a href="http://sass-lang.com/">SASS</a>, If you&#39;re familiar with it, You can continue</p>
-<h3 id="install-the-dependence">Install the dependence</h3><pre><code class="language-sh">yarn add @moyu/pointcss --dev</code></pre>
-<h3 id="set-your-variables">Set your variables</h3><p>you can reference all initial variables in <code>scss/_variables.scss</code></p>
-<pre><code class="language-scss">$color-primary:                         #636AFF; // primary
-$color-danger:                          #ff2d20; // negative
-$color-success:                         #15CD72; // positive
-$color-info:                            #0069ff; // accent
-$color-warning:                         #ED6E33; // warning
-...</code></pre>
-<h3 id="import-pointcss-at-the-end-of-your-code">Import pointcss at the end of your code</h3><pre><code class="language-scss">// overwrite variables
-$color-primary:                         #636AFF;
+          <h1 id="badge"><span>Badge</span></h1><h2 id="basic">
+    <a name="basic" class="anchor" href="#basic"></a>
+    Basic
+    </h2><div class="mb-6">
+  <span class="badge">Badge label</span>
+</div>
 
-// your code
+<pre><code class="language-html">&lt;span class=&quot;badge&quot;&gt;Badge label&lt;/span&gt;</code></pre>
+<h2 id="variants">
+    <a name="variants" class="anchor" href="#variants"></a>
+    Variants
+    </h2><div class="mb-6">
+  <span class="badge badge--primary">Primary</span>
+  <span class="badge badge--info">Info</span>
+  <span class="badge badge--success">Success</span>
+  <span class="badge badge--danger">Danger</span>
+  <span class="badge badge--warning">Warning</span>
+</div>
 
-@import &quot;node_modules/@moyu/pointcss/point&quot;</code></pre>
-<h2 id="browser-support">
-    <a name="browser-support" class="anchor" href="#browser-support"></a>
-    Browser Support
-    </h2><p><strong>pointcss</strong> uses <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> for CSS
-reset and <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to make styles
-compatible with earlier browser versions. For best user experience, these
-browsers are recommended:</p>
-<ul>
-<li>Chrome</li>
-<li>Firefox</li>
-<li>Safari</li>
-<li>Opera</li>
-<li>Microsoft Edge</li>
-<li>Internet Explorer 10+</li>
-</ul>
-<h2 id="copyright-and-license">
-    <a name="copyright-and-license" class="anchor" href="#copyright-and-license"></a>
-    Copyright and License
-    </h2><p>
-  Designed and built by <a href="https://moyu.io" target="_blank">MOYU</a>.
-  Licensed under the <a href="https://github.com/moyus/pointcss/blob/master/LICENSE">MIT License</a>.
-</p>
+<pre><code class="language-html">&lt;span class=&quot;badge badge--primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;badge badge--info&quot;&gt;Info&lt;/span&gt;
+&lt;span class=&quot;badge badge--success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;badge badge--danger&quot;&gt;Danger&lt;/span&gt;
+&lt;span class=&quot;badge badge--warning&quot;&gt;Warning&lt;/span&gt;</code></pre>
+<h5 id="empty-badge">Empty badge</h5><div class="mb-6">
+  <span class="badge"></span>
+  <span class="badge badge--primary"></span>
+  <span class="badge badge--info"></span>
+  <span class="badge badge--success"></span>
+  <span class="badge badge--danger"></span>
+  <span class="badge badge--warning"></span>
+</div>
+
+<pre><code class="language-html">&lt;span class=&quot;badge&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;badge badge--primary&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;badge badge--info&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;badge badge--success&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;badge badge--danger&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;badge badge--warning&quot;&gt;&lt;/span&gt;</code></pre>
+<h2 id="linked">
+    <a name="linked" class="anchor" href="#linked"></a>
+    Linked
+    </h2><div class="mb-6">
+    <a class="badge badge--link">Badge</a>
+    <a class="badge badge--primary badge--link">Primary</a>
+    <a class="badge badge--info badge--link">Info</a>
+    <a class="badge badge--success badge--link">Success</a>
+    <a class="badge badge--danger badge--link">Danger</a>
+    <a class="badge badge--warning badge--link">Warning</a>
+</div>
+
+<pre><code class="language-html">&lt;a class=&quot;badge badge--link&quot;&gt;Badge&lt;/a&gt;
+&lt;a class=&quot;badge badge--primary badge--link&quot;&gt;Primary&lt;/a&gt;
+&lt;a class=&quot;badge badge--info badge--link&quot;&gt;Info&lt;/a&gt;
+&lt;a class=&quot;badge badge--success badge--link&quot;&gt;Success&lt;/a&gt;
+&lt;a class=&quot;badge badge--danger badge--link&quot;&gt;Danger&lt;/a&gt;
+&lt;a class=&quot;badge badge--warning badge--link&quot;&gt;Warning&lt;/a&gt;</code></pre>
 
         </article>
       </main>
       <!-- END .site__main -->
       <nav class="site__catalogue">
         
-        <a href="#installation">Installation</a>
+        <a href="#basic">Basic</a>
         
-        <a href="#customization">Customization</a>
+        <a href="#variants">Variants</a>
         
-        <a href="#browser-support">Browser Support</a>
-        
-        <a href="#copyright-and-license">Copyright and License</a>
+        <a href="#linked">Linked</a>
         
       </nav>
       <!-- END .site__catalogue -->
