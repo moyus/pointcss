@@ -34,9 +34,9 @@
 }
 
 @mixin media-breakpoint-down($name) {
-  $max: breakpoint-max($name);
-  @if $max {
-    @media (max-width: $max) {
+  $min: breakpoint-min($name);
+  @if $min {
+    @media (max-width: ($min - 1px)) {
       @content;
     }
   } @else {

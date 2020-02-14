@@ -71,10 +71,6 @@
 
 
 @mixin make-hidden-utils() {
-  .hidden {
-    display: none !important;
-  }
-
   @each $breakpoint, $value in $grid-breakpoints {
     $suffix: "";
 
@@ -83,13 +79,13 @@
     }
 
     @include media-breakpoint-up($breakpoint) {
-      .hidden-up#{$suffix} {
+      .hidden#{$suffix} {
         display: none !important;
       }
     }
 
     @include media-breakpoint-down($breakpoint) {
-      .hidden-down#{$suffix} {
+      .hidden-until#{$suffix} {
         display: none !important;
       }
     }
