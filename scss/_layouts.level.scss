@@ -59,18 +59,21 @@ $level-item-spacing: $spacing-stack-md !default;
 @each $breakpoint, $value in $grid-breakpoints {
   $suffix: "\\@#{$breakpoint}";
 
-  @include media-breakpoint-down($breakpoint) {
-    .level--collapse#{$suffix} {
-      flex-direction: column;
-      justify-content: center;
-
-      .level__start,
-      .level__end,
-      .level__center {
-        &:not(:last-child) {
-          margin-bottom: $spacing-stack-md;
+  @if $value > 0 {
+    @include media-breakpoint-down($breakpoint) {
+      .level#{$suffix} {
+        flex-direction: column;
+        justify-content: center;
+  
+        .level__start,
+        .level__end,
+        .level__center {
+          &:not(:last-child) {
+            margin-bottom: $spacing-stack-md;
+          }
         }
       }
     }
   }
+
 }

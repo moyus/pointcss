@@ -72,30 +72,33 @@ th {
 @each $breakpoint, $value in $grid-breakpoints {
   $suffix: "\\@#{$breakpoint}";
 
-  @include media-breakpoint-down($breakpoint) {
-    .table--collapse#{$suffix} {
-      thead,
-      tfoot {
-        display: none;
-      }
-  
-      tr {
-        display: block;
-        &:not(:last-child) {
-          border-bottom: 3px solid $grey-weak;
+  @if $value > 0 {
+    @include media-breakpoint-down($breakpoint) {
+      .table#{$suffix} {
+        thead,
+        tfoot {
+          display: none;
         }
-      }
-  
-      th, td {
-        display: block;
-        width: 100% !important;
-        text-align: right;
-        &:before {
-          float: left;
-          color: $grey-mute;
-          content: attr(data-label);
+    
+        tr {
+          display: block;
+          &:not(:last-child) {
+            border-bottom: 3px solid $grey-weak;
+          }
+        }
+    
+        th, td {
+          display: block;
+          width: 100% !important;
+          text-align: right;
+          &:before {
+            float: left;
+            color: $grey-mute;
+            content: attr(data-label);
+          }
         }
       }
     }
   }
+  
 }
