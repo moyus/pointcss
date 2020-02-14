@@ -200,8 +200,8 @@ $grid-columns:                          12 !default;
 $grid-gutter-width:                     16px !default;
 
 $grid-breakpoints: (
-  "xs": 0,
-  "sm": 768px, // mobile, tablet
+  "xs": 0, // mobile
+  "sm": 768px, // tablet
   "md": 1000px, // desktop
   "lg": 1200px,  // large screen
 ) !default;
