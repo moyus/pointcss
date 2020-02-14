@@ -1,6 +1,6 @@
 /*!
  * @moyu/pointcss
- * @version v2.0.0-alpha.5
+ * @version v2.0.0-alpha.6
  * @link https://github.com/moyus/pointcss
  * @author moyu <moyuboy@gmail.com> (https://moyu.io)
  * @license MIT
@@ -477,22 +477,22 @@ th {
 }
 
 @media (max-width: 767px) {
-  .table--collapse\@xs thead,
-  .table--collapse\@xs tfoot {
+  .table\@sm thead,
+  .table\@sm tfoot {
     display: none;
   }
-  .table--collapse\@xs tr {
+  .table\@sm tr {
     display: block;
   }
-  .table--collapse\@xs tr:not(:last-child) {
+  .table\@sm tr:not(:last-child) {
     border-bottom: 3px solid #e5e5e5;
   }
-  .table--collapse\@xs th, .table--collapse\@xs td {
+  .table\@sm th, .table\@sm td {
     display: block;
     width: 100% !important;
     text-align: right;
   }
-  .table--collapse\@xs th:before, .table--collapse\@xs td:before {
+  .table\@sm th:before, .table\@sm td:before {
     float: left;
     color: #616161;
     content: attr(data-label);
@@ -500,22 +500,22 @@ th {
 }
 
 @media (max-width: 999px) {
-  .table--collapse\@sm thead,
-  .table--collapse\@sm tfoot {
+  .table\@md thead,
+  .table\@md tfoot {
     display: none;
   }
-  .table--collapse\@sm tr {
+  .table\@md tr {
     display: block;
   }
-  .table--collapse\@sm tr:not(:last-child) {
+  .table\@md tr:not(:last-child) {
     border-bottom: 3px solid #e5e5e5;
   }
-  .table--collapse\@sm th, .table--collapse\@sm td {
+  .table\@md th, .table\@md td {
     display: block;
     width: 100% !important;
     text-align: right;
   }
-  .table--collapse\@sm th:before, .table--collapse\@sm td:before {
+  .table\@md th:before, .table\@md td:before {
     float: left;
     color: #616161;
     content: attr(data-label);
@@ -523,51 +523,26 @@ th {
 }
 
 @media (max-width: 1199px) {
-  .table--collapse\@md thead,
-  .table--collapse\@md tfoot {
+  .table\@lg thead,
+  .table\@lg tfoot {
     display: none;
   }
-  .table--collapse\@md tr {
+  .table\@lg tr {
     display: block;
   }
-  .table--collapse\@md tr:not(:last-child) {
+  .table\@lg tr:not(:last-child) {
     border-bottom: 3px solid #e5e5e5;
   }
-  .table--collapse\@md th, .table--collapse\@md td {
+  .table\@lg th, .table\@lg td {
     display: block;
     width: 100% !important;
     text-align: right;
   }
-  .table--collapse\@md th:before, .table--collapse\@md td:before {
+  .table\@lg th:before, .table\@lg td:before {
     float: left;
     color: #616161;
     content: attr(data-label);
   }
-}
-
-.table--collapse\@lg thead,
-.table--collapse\@lg tfoot {
-  display: none;
-}
-
-.table--collapse\@lg tr {
-  display: block;
-}
-
-.table--collapse\@lg tr:not(:last-child) {
-  border-bottom: 3px solid #e5e5e5;
-}
-
-.table--collapse\@lg th, .table--collapse\@lg td {
-  display: block;
-  width: 100% !important;
-  text-align: right;
-}
-
-.table--collapse\@lg th:before, .table--collapse\@lg td:before {
-  float: left;
-  color: #616161;
-  content: attr(data-label);
 }
 
 /* ## Media
@@ -1058,48 +1033,44 @@ th {
   display: none !important;
 }
 
-.hidden-up {
+.hidden-until {
   display: none !important;
 }
 
-@media (max-width: 767px) {
-  .hidden-down {
-    display: none !important;
-  }
-}
-
 @media (min-width: 768px) {
-  .hidden-up\@sm {
+  .hidden\@sm {
     display: none !important;
   }
 }
 
-@media (max-width: 999px) {
-  .hidden-down\@sm {
+@media (max-width: 767px) {
+  .hidden-until\@sm {
     display: none !important;
   }
 }
 
 @media (min-width: 1000px) {
-  .hidden-up\@md {
+  .hidden\@md {
     display: none !important;
   }
 }
 
-@media (max-width: 1199px) {
-  .hidden-down\@md {
+@media (max-width: 999px) {
+  .hidden-until\@md {
     display: none !important;
   }
 }
 
 @media (min-width: 1200px) {
-  .hidden-up\@lg {
+  .hidden\@lg {
     display: none !important;
   }
 }
 
-.hidden-down\@lg {
-  display: none !important;
+@media (max-width: 1199px) {
+  .hidden-until\@lg {
+    display: none !important;
+  }
 }
 
 /* ## Level
@@ -1162,50 +1133,39 @@ th {
 }
 
 @media (max-width: 767px) {
-  .level--collapse\@xs {
+  .level\@sm {
     flex-direction: column;
     justify-content: center;
   }
-  .level--collapse\@xs .level__start:not(:last-child),
-  .level--collapse\@xs .level__end:not(:last-child),
-  .level--collapse\@xs .level__center:not(:last-child) {
+  .level\@sm .level__start:not(:last-child),
+  .level\@sm .level__end:not(:last-child),
+  .level\@sm .level__center:not(:last-child) {
     margin-bottom: 16px;
   }
 }
 
 @media (max-width: 999px) {
-  .level--collapse\@sm {
+  .level\@md {
     flex-direction: column;
     justify-content: center;
   }
-  .level--collapse\@sm .level__start:not(:last-child),
-  .level--collapse\@sm .level__end:not(:last-child),
-  .level--collapse\@sm .level__center:not(:last-child) {
+  .level\@md .level__start:not(:last-child),
+  .level\@md .level__end:not(:last-child),
+  .level\@md .level__center:not(:last-child) {
     margin-bottom: 16px;
   }
 }
 
 @media (max-width: 1199px) {
-  .level--collapse\@md {
+  .level\@lg {
     flex-direction: column;
     justify-content: center;
   }
-  .level--collapse\@md .level__start:not(:last-child),
-  .level--collapse\@md .level__end:not(:last-child),
-  .level--collapse\@md .level__center:not(:last-child) {
+  .level\@lg .level__start:not(:last-child),
+  .level\@lg .level__end:not(:last-child),
+  .level\@lg .level__center:not(:last-child) {
     margin-bottom: 16px;
   }
-}
-
-.level--collapse\@lg {
-  flex-direction: column;
-  justify-content: center;
-}
-
-.level--collapse\@lg .level__start:not(:last-child),
-.level--collapse\@lg .level__end:not(:last-child),
-.level--collapse\@lg .level__center:not(:last-child) {
-  margin-bottom: 16px;
 }
 
 /* ## Badge

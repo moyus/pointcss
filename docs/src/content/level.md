@@ -14,7 +14,7 @@ Horizontal layout with vertical center alignment.
 
 2-columns layout
 
-<div class="level level--collapse@md mb-6">
+<div class="level mb-6">
   <div class="level__start">
     <button class="level__item btn btn--success btn--loose">Add</button>
     <a role="button" class="level__item">All</a>
@@ -56,7 +56,7 @@ Horizontal layout with vertical center alignment.
 
 If you want to create 3-colums layout, you must place `.level__center` at first, so it can use `~` CSS selector to control siblings style
 
-<div class="level level--collapse@md mb-6">
+<div class="level mb-6">
   <div class="level__center">
     <div class="btn-group">
       <button class="btn">ALL PROJECTS</button>
@@ -158,9 +158,9 @@ Direct place `.level__item` under `.level` container, will distribute spacing ev
 
 ## Responsive
 
-When screen size can not wrap level component, you can manually collapse it by using `.level--collapse@<breakpoint>` modifier
+By default, level will stay horizontal layout across all breakpoints, if you want to collapse it below a breakpoint, add the `.level@<breakpoint>` modifier on `.level` container
 
-<div class="level level--collapse@md mb-6">
+<div class="level level@md mb-6">
   <div class="level__start">
     <button class="level__item btn btn--success btn--loose">Add</button>
     <a role="button" class="level__item">All</a>
@@ -180,7 +180,7 @@ When screen size can not wrap level component, you can manually collapse it by u
 </div>
 
 ```html
-<div class="level level--collapse@md">
+<div class="level level@md">
   <div class="level__start">
     <button class="level__item btn btn--success btn--loose">Add</button>
     <a href="#" class="level__item">All</a>

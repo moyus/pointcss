@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha5">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha5">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha5">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha6">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha6">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha6">
 </head>
 <body>
   <div id="docs" class="site">
@@ -22,9 +22,9 @@
     </a>
   </div>
   <div class="navbar__end">
-    <div class="navbar__item">
+    <div class="navbar__item hidden-until@lg">
       <div class="site__metadata">
-        <span>v2.0.0-alpha.5</span>
+        <span>v2.0.0-alpha.6</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -32,7 +32,7 @@
         </a>
       </div>
     </div>
-    <div class="navbar__item hidden-up@lg">
+    <div class="navbar__item hidden@lg">
       <button class="btn js-sidebar-trigger">
         <span class="flex items-center">
           <i class="icon-menu"></i>
@@ -568,12 +568,12 @@
 <h2 id="responsive">
     <a name="responsive" class="anchor" href="#responsive"></a>
     Responsive
-    </h2><p>The responsive table below is made with pure css code</p>
+    </h2><p>By default, table will stay it layout across all breakpoints, if you want to collapse it below a breakpoint</p>
 <ul>
-<li>First, add <code>.table--collapse@&lt;breakpoint&gt;</code> on <code>&lt;table class=&quot;table&quot;&gt;</code> element</li>
+<li>First, add the <code>.table@&lt;breakpoint&gt;</code> modifier on <code>.table</code> container</li>
 <li>Then, add <code>data-label=&quot;column label&quot;</code> on each <code>&lt;td&gt;</code> element with every <code>&lt;tr&gt;</code> table row</li>
 </ul>
-<table class="table table--collapse@md">
+<table class="table table@md">
   <thead>
     <tr>
       <th>#</th>
@@ -632,7 +632,7 @@
   </tbody>
 </table>
 
-<pre><code class="language-html">&lt;table class=&quot;table table--collapse@md&quot;&gt;
+<pre><code class="language-html">&lt;table class=&quot;table table@md&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;#&lt;/th&gt;

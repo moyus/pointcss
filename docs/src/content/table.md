@@ -476,12 +476,13 @@ Use `.list--compact`, `.list--loose` modifier classes on `.list` container to ch
 ```
 
 ## Responsive
-The responsive table below is made with pure css code
 
-- First, add `.table--collapse@<breakpoint>` on `<table class="table">` element
+By default, table will stay it layout across all breakpoints, if you want to collapse it below a breakpoint
+
+- First, add the `.table@<breakpoint>` modifier on `.table` container
 - Then, add `data-label="column label"` on each `<td>` element with every `<tr>` table row
 
-<table class="table table--collapse@md">
+<table class="table table@md">
   <thead>
     <tr>
       <th>#</th>
@@ -541,7 +542,7 @@ The responsive table below is made with pure css code
 </table>
 
 ```html
-<table class="table table--collapse@md">
+<table class="table table@md">
   <thead>
     <tr>
       <th>#</th>
