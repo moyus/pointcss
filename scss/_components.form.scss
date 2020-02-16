@@ -20,7 +20,7 @@ $form-field-margin-bottom:              $spacing-stack-md !default;
 $enable-form-focus-box-shadow:          true !default;
 $form-control-height-computed:          $form-control-font-size-md * $form-control-line-height + nth($form-control-padding-md, 1) * 2 + $form-control-border-width * 2;
 
-$icon-caret:                            "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23" + str-slice("#{$grey-mute}", 2) + "' d='M8.706 11.414l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71h-5.18c-.89 0-1.33 1.08-.7 1.71z'/%3E%3C/svg%3E" !default;
+$icon-caret:                            "data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23" + str-slice("#{$grey-mute}", 2) + "' d='M9.987 10.635L7.751 8.41 7 9.136l2.988 2.865L13 9.124l-.746-.724z'/%3E%3C/svg%3E" !default;
 $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23" + str-slice("#{$form-control-bg}", 2) + "' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e" !default;
 
 .form-input,
