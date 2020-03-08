@@ -1,0 +1,43 @@
+.border-top, .border-y {
+  border-top: $component-border-width solid $grey-thin !important;
+}
+
+.border-right, .border-x {
+  border-right: $component-border-width solid $grey-thin !important;
+}
+
+.border-bottom, .border-y {
+  border-bottom: $component-border-width solid $grey-thin !important;
+}
+
+.border-left, .border-x {
+  border-left: $component-border-width solid $grey-thin !important;
+}
+
+.border-all {
+  border: $component-border-width solid $grey-thin !important;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.rounded-sm {
+  border-radius: $component-border-radius-sm !important;
+}
+
+.rounded-md, .rounded {
+  border-radius: $component-border-radius-md !important;
+}
+
+.rounded-lg {
+  border-radius: $component-border-radius-lg !important;
+}
+
+.rounded-full {
+  border-radius: 1993px !important;
+}
+
+.rounded-none {
+  border-radius: 0 !important;
+}
