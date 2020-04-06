@@ -73,13 +73,6 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
 
 }
 
-.btn.btn--black {
-  @include btn-variant($black);
-  &.btn--outline {
-    @include btn-outline-variant($black);
-  }
-}
-
 .btn.btn--dark {
   @include btn-variant($grey-dark);
   &.btn--outline {
