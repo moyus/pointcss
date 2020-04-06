@@ -32,7 +32,7 @@ th {
   }
 }
 
-.table.table--compact {
+.table.table--small {
   th, td {
     text-align: left;
     padding: $spacing-square-sm;
@@ -40,7 +40,7 @@ th {
   }
 }
 
-.table.table--loose {
+.table.table--large {
   th, td {
     text-align: left;
     padding: $spacing-square-lg;

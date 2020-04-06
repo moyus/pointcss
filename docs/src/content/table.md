@@ -6,7 +6,7 @@ catalogue:
   - Striped
   - Hover
   - Bordered
-  - Spacing
+  - Size
   - Responsive
 ---
 
@@ -339,11 +339,11 @@ By adding `.table--bordered` modifier class on `<table class="table">` element t
 </table>
 ```
 
-## Spacing
+## Size
 
-Use `.list--compact`, `.list--loose` modifier classes on `.list` container to change cell spacing
+Use `.list--small` or `.list--large` modifier classes on `.list` container to change cell spacing
 
-<table class="table table--bordered table--compact">
+<table class="table table--bordered table--small">
   <thead>
     <tr>
       <th>ID</th>
@@ -399,7 +399,7 @@ Use `.list--compact`, `.list--loose` modifier classes on `.list` container to ch
   </tbody>
 </table>
 
-<table class="table table--bordered table--loose">
+<table class="table table--bordered table--large">
   <thead>
     <tr>
       <th>ID</th>
@@ -456,7 +456,7 @@ Use `.list--compact`, `.list--loose` modifier classes on `.list` container to ch
 </table>
 
 ```html
-<table class="table table--bordered table--compact">
+<table class="table table--bordered table--small">
   <thead>
     ...
   </thead>
@@ -465,7 +465,7 @@ Use `.list--compact`, `.list--loose` modifier classes on `.list` container to ch
   </tbody>
 </table>
 
-<table class="table table--bordered table--loose">
+<table class="table table--bordered table--large">
   <thead>
     ...
   </thead>
