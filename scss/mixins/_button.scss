@@ -17,17 +17,16 @@
     background-color: $background;
   }
 
-  &:hover {
+  &:hover,
+  &.is-hovered {
     color: $hover-color;
     border-color: $hover-border;
     background-color: $hover-background;
   }
 
-  @if $enable-btn-focus-box-shadow {
-    &:focus,
-    &.is-focused {
-      box-shadow: 0 0 0 2px rgba($active-background, 0.25);
-    }
+  &:focus,
+  &.is-focused {
+    box-shadow: 0 0 0 2px rgba($active-background, 0.25);
   }
 
   &:active,
@@ -53,6 +52,58 @@
   }
 }
 
+@mixin btn-light-variant(
+  $color,
+  $border: tint-color($color, 11),
+  $background: tint-color($color, 11),
+  $hover-color: $color,
+  $hover-border: tint-color($color, 10),
+  $hover-background: tint-color($color, 10),
+  $active-color: $color,
+  $active-border: tint-color($color, 9),
+  $active-background: tint-color($color, 9),
+) {
+  & {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+  }
+  
+  &:hover,
+  &.is-hovered {
+    color: $hover-color;
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+
+  &:focus,
+  &.is-focused {
+    box-shadow: 0 0 0 2px tint-color($color, 6);
+  }
+
+  &:active,
+  &.is-active {
+    color: $active-color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  &.is-loading,
+  &[loading] {
+    
+    &,
+    &:active,
+    &:hover {
+      color: transparent;
+      background-color: transparent;
+    }
+
+    &:after {
+      border-left-color: $color;
+      border-bottom-color: $color;
+    }
+  }
+}
 
 @mixin btn-outline-variant(
   $color,
@@ -70,7 +121,8 @@
     border-color: $border;
   }
   
-  &:hover {
+  &:hover,
+  &.is-hovered {
     color: $hover-color;
     background-color: $hover-background;
     border-color: $hover-border;

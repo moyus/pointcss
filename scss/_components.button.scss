@@ -9,7 +9,6 @@ $btn-font-size-lg: $text-size-lg !default;
 $btn-padding-sm: $spacing-squish-xs !default;
 $btn-padding-md: $spacing-squish-sm !default;
 $btn-padding-lg: $spacing-squish-md !default;
-$enable-btn-focus-box-shadow: true !default;
 $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-padding-md, 1)  + 2 * $btn-border-width;
 
 .btn {
@@ -92,6 +91,9 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
     @include btn-variant($color);
     &.btn--outline {
       @include btn-outline-variant($color);
+    }
+    &.btn--light {
+      @include btn-light-variant($color);
     }
   }
 }
