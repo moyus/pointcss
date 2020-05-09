@@ -1,11 +1,4 @@
-@mixin full-bg() {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@mixin oneline() {
-  max-width: 100%;
+@mixin truncate() {
   word-wrap: normal;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -17,7 +10,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-@mixin embed-ratio($width, $height) {
+@mixin embed($width, $height) {
   position: relative;
   display: block;
   width: 100%;

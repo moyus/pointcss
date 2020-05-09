@@ -6,7 +6,7 @@
   @return mix(black, $color, $level * 8%);
 }
 
-@function round-color($color, $dark: $grey-dark, $light: $white) {
+@function invert-color($color, $dark: $grey-dark, $light: $white) {
   $r: red($color);
   $g: green($color);
   $b: blue($color);

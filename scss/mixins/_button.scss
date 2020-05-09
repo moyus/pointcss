@@ -3,13 +3,13 @@
 @mixin btn-variant(
   $background,
   $border: $background,
-  $color: round-color($background),
+  $color: invert-color($background),
   $hover-background: shade-color($background, 1),
   $hover-border: shade-color($border, 1),
-  $hover-color: round-color($hover-background),
+  $hover-color: invert-color($hover-background),
   $active-background: shade-color($background, 2),
   $active-border: shade-color($border, 2),
-  $active-color: round-color($active-background)
+  $active-color: invert-color($active-background)
 ) {
   & {
     color: $color;
@@ -57,10 +57,10 @@
 @mixin btn-outline-variant(
   $color,
   $border: $color,
-  $hover-color: round-color($color),
+  $hover-color: invert-color($color),
   $hover-border: shade-color($color, 1),
   $hover-background: shade-color($color, 1),
-  $active-color: round-color($color),
+  $active-color: invert-color($color),
   $active-border: shade-color($color, 2),
   $active-background: shade-color($color, 2),
 ) {

@@ -7,5 +7,5 @@
 }
 
 .embed-fluid {
-  @include embed-ratio(16, 9);
+  @include embed(16, 9);
 }

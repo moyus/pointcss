@@ -1,6 +1,6 @@
 // note variant
 // -----------------------------------------------------------------------------
-@mixin note-variant($background, $color: round-color($background)) {
+@mixin note-variant($background, $color: invert-color($background)) {
   color: $color;
   background-color: $background,;
 
