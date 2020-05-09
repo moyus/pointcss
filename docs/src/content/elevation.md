@@ -41,15 +41,15 @@ Utilities for controlling an element's effect.
     </tr>
     <tr>
       <td><code>.shadow-sm</code></td>
-      <td><code>box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07)</code></td>
+      <td><code>box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08)</code></td>
     </tr>
     <tr>
       <td><code>.shadow-md</code></td>
-      <td><code>box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05)</code></td>
+      <td><code>box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04)</code></td>
     </tr>
     <tr>
       <td><code>.shadow-lg</code></td>
-      <td><code>box-shadow: 0 8px 12px rgba(0, 0, 0, 0.05)</code></td>
+      <td><code>box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.04)</code></td>
     </tr>
   </tbody>
 </table>
