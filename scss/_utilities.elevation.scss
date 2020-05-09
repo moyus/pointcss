@@ -24,13 +24,13 @@
 
 
 .shadow-sm {
-  box-shadow: 0 1px 2px rgba($black, .07) !important;
+  box-shadow: $shadow-sm !important;
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px rgba($black, .05) !important;
+  box-shadow: $shadow-md !important;
 }
 
 .shadow-lg {
-  box-shadow: 0 8px 12px rgba($black, .05) !important;
+  box-shadow: $shadow-lg !important;
 }
