@@ -1,5 +1,8 @@
 <img width="124" height="42" src="https://github.com/moyus/pointcss/raw/master/docs/images/logo.svg?sanitize=true">
 
+![npm (scoped)](https://img.shields.io/npm/v/@moyu/pointcss?style=flat-square)
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@moyu/pointcss?style=flat-square)
+
 A lightweight and flexible CSS Framework for building modern responsive web apps.
 
 - Built with flexbox
