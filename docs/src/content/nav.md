@@ -48,42 +48,6 @@ Generic content navigation.
 
 ## Variants
 
-### Rails
-
-By adding `.nav--rails` modifier class on `.nav` element to create rails styled nav
-
-<ul class="nav nav--rails mb-6">
-  <li class="nav__item is-active">
-    <a href="#" class="nav__link">Home</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Another Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link is-disabled">Disabled</a>
-  </li>
-</ul>
-
-```html
-<ul class="nav nav--rails">
-  <li class="nav__item is-active">
-    <a href="#" class="nav__link">Home</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Another Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link is-disabled">Disabled</a>
-  </li>
-</ul>
-```
-
 ### Pills
 
 By adding `.nav--pills` modifier class on `.nav` element to create pills styled nav

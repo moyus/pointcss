@@ -115,7 +115,7 @@ $nav-tabs-active-bg: $component-bg !default;
   }
 }
 
-.nav.nav--rails {
+.nav.nav--tabs {
   border-bottom: $nav-border-width solid $nav-border-color;
 
   > .nav__item {
@@ -131,33 +131,6 @@ $nav-tabs-active-bg: $component-bg !default;
     &.is-active {
       > .nav__link {
         border-bottom: $nav-border-width solid $color-primary;
-      }
-    }
-  }
-}
-
-.nav.nav--tabs {
-  border-bottom: $nav-border-width solid $nav-border-color;
-
-  > .nav__item {
-    &:not(:last-child) {
-      margin-right: $spacing-stack-xxs;
-    }
-
-    > .nav__link {
-      margin: 0 0 (0 - $nav-border-width) 0;
-      padding: 0.375em 0.75em;
-      border-style: solid;
-      border-width: $nav-border-width $nav-border-width 0 $nav-border-width;
-      border-color: transparent;
-      border-radius: $component-border-radius-md $component-border-radius-md 0 0;
-    }
-
-    &.is-active {
-      > .nav__link {
-        color: $grey-dark;
-        border-color: $nav-border-color;
-        background-color: $nav-tabs-active-bg;
       }
     }
   }
