@@ -42,6 +42,26 @@ catalogue:
 <button class="btn btn--white">White</button>
 ```
 
+##### Light
+
+By adding the `.btn--light` modifier class on any predefined button element to create light background button
+
+<div class="mb-6">
+  <button class="btn btn--light btn--primary">Primary</button>
+  <button class="btn btn--light btn--info">Info</button>
+  <button class="btn btn--light btn--success">Success</button>
+  <button class="btn btn--light btn--danger">Danger</button>
+  <button class="btn btn--light btn--warning">Warning</button>
+</div>
+
+```html
+<button class="btn btn--light btn--primary">Primary</button>
+<button class="btn btn--light btn--info">Info</button>
+<button class="btn btn--light btn--success">Success</button>
+<button class="btn btn--light btn--danger">Danger</button>
+<button class="btn btn--light btn--warning">Warning</button>
+```
+
 ##### Outline
 
 By adding the `.btn--outline` modifier class on any predefined button element to remove background color
