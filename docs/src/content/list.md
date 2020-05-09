@@ -82,7 +82,7 @@ By adding the `.list--inset` modifier class on `.list` container to create a ins
 ```
 
 ## Bordered
-By adding the `.list--bordered` modifier class on `.list` container, you can easily create a borderd list style.
+By adding the `.list--bordered` modifier class on `.list` container, you can easily create a borderd list style or remove all borders by adding the `.list--borderless` modifier class.
 
 <ul class="list list--bordered">
   <li class="list__item">1. Active</li>
@@ -92,8 +92,24 @@ By adding the `.list--bordered` modifier class on `.list` container, you can eas
   <li class="list__item">5. Vestibulum at eros</li>
 </ul>
 
+<ul class="list list--borderless">
+  <li class="list__item">1. Active</li>
+  <li class="list__item">2. Dapibus ac facilisis in</li>
+  <li class="list__item">3. Morbi leo risus</li>
+  <li class="list__item">4. Disabled</li>
+  <li class="list__item">5. Vestibulum at eros</li>
+</ul>
+
 ```html
 <ul class="list list--bordered">
+  <li class="list__item">1. Active</li>
+  <li class="list__item">2. Dapibus ac facilisis in</li>
+  <li class="list__item">3. Morbi leo risus</li>
+  <li class="list__item">4. Disabled</li>
+  <li class="list__item">5. Vestibulum at eros</li>
+</ul>
+
+<ul class="list list--borderless">
   <li class="list__item">1. Active</li>
   <li class="list__item">2. Dapibus ac facilisis in</li>
   <li class="list__item">3. Morbi leo risus</li>
@@ -107,7 +123,7 @@ To quick create linkify list by using `<a>` tag and child `.list__link` class.
 
 <div class="list list--bordered list--lg">
   <a class="list__link">1. Dapibus ac facilisis in</a>
-  <a class="list__link">2. Active</a>
+  <a class="list__link is-active">2. Active</a>
   <a class="list__link">3. Morbi leo risus</a>
   <a class="list__link">4. Disabled</a>
   <a class="list__link">5. Vestibulum at eros</a>
@@ -116,7 +132,7 @@ To quick create linkify list by using `<a>` tag and child `.list__link` class.
 ```html
 <div class="list list--bordered list--lg">
   <a class="list__link">1. Dapibus ac facilisis in</a>
-  <a class="list__link">2. Active</a>
+  <a class="list__link is-active">2. Active</a>
   <a class="list__link">3. Morbi leo risus</a>
   <a class="list__link">4. Disabled</a>
   <a class="list__link">5. Vestibulum at eros</a>

@@ -12,6 +12,7 @@ $list-border-radius-lg: $component-border-radius-lg !default;
 $list-border-color: $grey-weak !default;
 $list-hover-color: $grey-light !default;
 
+// Elements
 .list {
   position: relative;
   padding: 0;
@@ -30,7 +31,6 @@ $list-hover-color: $grey-light !default;
   &:not(:first-child) {
     border-top: 1px solid $list-border-color;
   }
-
 }
 
 .list__link {
@@ -42,6 +42,7 @@ $list-hover-color: $grey-light !default;
   }
 }
 
+// Modifiers
 .list--inset {
   .list__item,
   .list__link {
@@ -123,6 +124,27 @@ $list-hover-color: $grey-light !default;
         border-bottom-left-radius: $list-border-radius-lg;
         border-bottom-right-radius: $list-border-radius-lg;
       }
+    }
+  }
+}
+
+.list--borderless {
+  .list__item,
+  .list__link {
+    border: none;
+  }
+}
+
+// States
+.list__item,
+.list__link {
+  &.is-active {
+    &,
+    &:hover {
+      color: invert-color($color-primary);
+      background-color: $color-primary;
+      border-color: $color-primary;
+      z-index: 2;
     }
   }
 }
