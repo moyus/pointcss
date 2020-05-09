@@ -5,6 +5,7 @@ $modal-width-md:                           600px !default;
 $modal-width-lg:                           900px !default;
 $modal-border-radius:                      $component-border-radius-lg !default;
 $modal-bg:                                 $component-bg !default;
+$modal-shadow:                             $shadow-lg !default;
 $modal-title-font-size:                    $text-size-xl !default;
 $modal-zIndex:                             $zIndex-9 !default;
 $mask-zIndex:                              $zIndex-6 !default;
@@ -38,7 +39,7 @@ $mask-bg:                                  rgba($black, 0.5) !default;
   margin: auto;
   background-color: $modal-bg;
   border-radius: $modal-border-radius;
-  box-shadow: 0 4px 6px rgba($black, .05);
+  box-shadow: $modal-shadow;
 }
 
 .modal__header {
@@ -70,7 +71,6 @@ $mask-bg:                                  rgba($black, 0.5) !default;
   padding: $spacing-square-md;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
 }
 
 .modal__footer {
