@@ -1,15 +1,12 @@
 /* ## Dropdown
 ---------------------------------*/
 $drodown-stack-spacing: $spacing-stack-sm !default;
-$dropdown-padding: $spacing-square-sm !default;
 $dropdown-bg: $component-bg !default;
-$dropdown-border-color: $grey-thin !default;
+$dropdown-shadow: $shadow-md !default;
 $dropdown-border-radius: $component-border-radius-md !default;
-$dropdown-border-width: $component-border-width !default;
 $dropdown-width-sm: 160px !default;
 $dropdown-width-md: 200px !default;
 $dropdown-width-lg: 280px !default;
-$enable-dropdown-box-shadow: true !default;
 
 .dropdown {
   position: relative;
@@ -29,15 +26,11 @@ $enable-dropdown-box-shadow: true !default;
   right: auto;
   bottom: auto;
   width: $dropdown-width-md;
-  padding: $dropdown-padding;
+  padding: $dropdown-border-radius 0;
   margin: $drodown-stack-spacing 0 0 0;
-  border: $dropdown-border-width solid $dropdown-border-color;
   border-radius: $dropdown-border-radius;
   background-color: $dropdown-bg;
-
-  @if $enable-dropdown-box-shadow {
-    box-shadow: 0 4px 6px rgba($black, .05);
-  }
+  box-shadow: $dropdown-shadow;
 
   > * {
     &:first-child {
