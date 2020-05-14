@@ -53,3 +53,17 @@ Utilities for controlling an element's effect.
     </tr>
   </tbody>
 </table>
+
+<div class="bg-light py-9">
+  <div class="level">
+    <div class="level__item">
+      <div class="rounded-md bg-white py-8 px-9 shadow-sm">sm</div>
+    </div>
+    <div class="level__item">
+      <div class="rounded-md bg-white py-8 px-9 shadow-md">md</div>
+    </div>
+    <div class="level__item">
+      <div class="rounded-md bg-white py-8 px-9 shadow-lg">lg</div>
+    </div>
+  </div>
+</div>

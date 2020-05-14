@@ -6,6 +6,7 @@ catalogue:
   - Input
   - Select
   - Textarea
+  - Range
   - Radio
   - Checkbox
   - Layouts
@@ -426,6 +427,18 @@ The `.form-textarea` class is mean to be used on `<textarea></textarea>` HTML el
 <textarea class="form-textarea form-textarea--sm" rows="4"></textarea>
 <textarea class="form-textarea" rows="4"></textarea>
 <textarea class="form-textarea form-textarea--lg" rows="4"></textarea>
+```
+
+## Range
+The `.form-range` class is mean to be used on `<input type="range">` HTML element
+
+<div class="form-field">
+  <label for="gender" class="form-label">Quantity</label>
+  <input type="range" name="quantity" class="form-range" min="1" max="100" step="1" value="10">
+</div>
+
+```html
+<input type="range" name="quantity" class="form-range" min="1" max="100" step="1" value="10">
 ```
 
 ## Radio

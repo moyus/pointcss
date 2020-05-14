@@ -1,6 +1,6 @@
 /*!
  * @moyu/pointcss
- * @version v2.0.0-alpha.7
+ * @version v2.0.0-alpha.8
  * @link https://github.com/moyus/pointcss
  * @author moyu <moyuboy@gmail.com> (https://moyu.io)
  * @license MIT
@@ -581,34 +581,6 @@ th {
 
 /* ## Grid
 ---------------------------------*/
-.container {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 8px;
-  padding-right: 8px;
-  width: 100%;
-  max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 1000px) {
-  .container {
-    max-width: 980px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1180px;
-  }
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -1070,6 +1042,36 @@ th {
 @media (max-width: 1199px) {
   .hidden-until\@lg {
     display: none !important;
+  }
+}
+
+/* ## Container
+---------------------------------*/
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: 980px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1180px;
   }
 }
 
@@ -2161,7 +2163,7 @@ fieldset[disabled] .btn {
   margin: 8px 0 0 0;
   border-radius: 3px;
   background-color: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown__content > *:first-child {
@@ -2569,6 +2571,38 @@ fieldset[disabled] .btn {
   box-shadow: none !important;
 }
 
+.form-range {
+  display: block;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 9999px;
+  color: #212121;
+  background-color: #dbdbdb;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+.form-range:focus {
+  outline: none;
+  color: #636AFF;
+}
+
+.form-range::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 9999px;
+  background-color: currentColor;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .form-field {
   text-align: left;
   margin-bottom: 16px;
@@ -2953,7 +2987,7 @@ fieldset[disabled] .btn {
   margin: auto;
   background-color: #ffffff;
   border-radius: 5px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.2);
 }
 
 .modal__header {
@@ -3638,15 +3672,15 @@ body.is-masking {
 }
 
 .shadow-sm {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 
 .shadow-md {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.1) !important;
 }
 
 .shadow-lg {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.2) !important;
 }
 
 .block {
