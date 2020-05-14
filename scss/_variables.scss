@@ -196,9 +196,9 @@ $code-bg:                               #fcf2f2 !default;
 
 // Elevation
 // -----------------------------------------------------------------------------
-$shadow-sm:                             0 1px 2px rgba($black, .08) !default;
-$shadow-md:                             0 2px 6px rgba($black, .08), 0 0 0 1px rgba($black, 0.04) !default;
-$shadow-lg:                             0 4px 16px rgba($black, 0.2), 0 0 0 1px rgba($black, 0.04) !default;
+$shadow-sm:                             0 1px 3px rgba($black, 0.1) !default;
+$shadow-md:                             0 4px 16px -2px rgba($black, 0.1) !default;
+$shadow-lg:                             0 16px 40px -8px rgba($black, 0.2) !default;
 
 // Grid
 // -----------------------------------------------------------------------------
@@ -212,6 +212,7 @@ $grid-breakpoints: (
   "lg": 1200px,  // large screen
 ) !default;
 
+$container-padding:                     16px !default;
 $container-max-widths: (
   "xs": 100%,
   "sm": 100%,
