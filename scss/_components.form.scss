@@ -14,6 +14,8 @@ $form-control-padding-lg:               $spacing-squish-md !default;
 $form-control-placeholder-color:        $grey-mute !default;
 $form-control-disabled-color:           $grey-mute !default;
 $form-control-disabled-bg:              $grey-shade !default;
+$form-range-color:                      $color-primary !default;
+$form-range-bg:                         $grey-thin !default;
 $form-checkbox-size:                    16px !default;
 $form-radio-size:                       16px !default;
 $form-field-margin-bottom:              $spacing-stack-md !default;
@@ -309,6 +311,38 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
     border-color: $form-control-disabled-bg !important;
     background-color: $form-control-disabled-bg !important;
     box-shadow: none !important;
+  }
+}
+
+// Range
+.form-range {
+  display: block;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 9999px;
+  color: $grey-dark;
+  background-color: $form-range-bg;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+    color: $form-range-color;
+  }
+
+  &::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    border: 0;
+    border-radius: 9999px;
+    background-color: currentColor;
+    -webkit-appearance: none;
+    appearance: none;
   }
 }
 
