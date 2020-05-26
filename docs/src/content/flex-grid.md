@@ -6,6 +6,7 @@ catalogue:
   - Responsive
   - Offset
   - Flex
+  - Utility
 ---
 
 # Flex Grid
@@ -342,3 +343,68 @@ Specify some column's width, leaving rest space to create equal-width columns
     </div>
 </div>
 ```
+
+## Utility
+
+For faster mobile-friendly development, use built-in responsive utility classes for showing and hiding content by device via media query.
+
+<table class="table table--bordered u-mb-15">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Small</th>
+      <th>Medium</th>
+      <th>Large</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.hidden</code></td>
+      <td>Hidden</td>
+      <td>Hidden</td>
+      <td>Hidden</td>
+    </tr>
+    <tr>
+      <td><code>.hidden@sm</code></td>
+      <td>Hidden</td>
+      <td>Hidden</td>
+      <td>Hidden</td>
+    </tr>
+    <tr>
+      <td><code>.hidden@md</code></td>
+      <td><span class="badge badge--primary">Visible</span></td>
+      <td>Hidden</td>
+      <td>Hidden</td>
+    </tr>
+    <tr>
+      <td><code>.hidden@lg</code></td>
+      <td><span class="badge badge--primary">Visible</span></td>
+      <td><span class="badge badge--primary">Visible</span></td>
+      <td>Hidden</td>
+    </tr>
+    <tr>
+      <td><code>.shown</code></td>
+      <td><span class="badge badge--primary">Visible</span></td>
+      <td><span class="badge badge--primary">Visible</span></td>
+      <td><span class="badge badge--primary">Visible</span></td>
+    </tr>
+    <tr>
+      <td><code>.shown@sm</code></td>
+      <td><span class="badge badge--primary">Visible</span></td>
+      <td><span class="badge badge--primary">Visible</span></td>
+      <td><span class="badge badge--primary">Visible</span></td>
+    </tr>
+    <tr>
+      <td><code>.shown@md</code></td>
+      <td>Hidden</td>
+      <td><span class="badge badge--primary">Visible</span></td>
+      <td><span class="badge badge--primary">Visible</span></td>
+    </tr>
+    <tr>
+      <td><code>.shown@lg</code></td>
+      <td>Hidden</td>
+      <td>Hidden</td>
+      <td><span class="badge badge--primary">Visible</span></td>
+    </tr>
+  </tbody>
+</table>
