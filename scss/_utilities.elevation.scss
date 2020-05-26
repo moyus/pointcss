@@ -2,26 +2,21 @@
   opacity: 0 !important;
 }
 
-.opacity-30 {
-  opacity: .3 !important;
+.opacity-25 {
+  opacity: .25 !important;
 }
 
 .opacity-50 {
   opacity: .5 !important;
 }
 
-.opacity-65 {
-  opacity: .65 !important;
-}
-
-.opacity-85 {
-  opacity: .85 !important;
+.opacity-75 {
+  opacity: .75 !important;
 }
 
 .opacity-100 {
   opacity: 1 !important;
 }
-
 
 .shadow-sm {
   box-shadow: $shadow-sm !important;
@@ -33,4 +28,8 @@
 
 .shadow-lg {
   box-shadow: $shadow-lg !important;
+}
+
+.shadonw-none {
+  box-shadow: none !important;
 }
