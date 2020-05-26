@@ -11,7 +11,7 @@ $form-control-font-size-lg:             $text-size-lg !default;
 $form-control-padding-sm:               $spacing-squish-xs !default;
 $form-control-padding-md:               $spacing-squish-sm !default;
 $form-control-padding-lg:               $spacing-squish-md !default;
-$form-control-placeholder-color:        $grey-mute !default;
+$form-control-placeholder-color:        rgba($grey-mute, 0.75) !default;
 $form-control-disabled-color:           $grey-mute !default;
 $form-control-disabled-bg:              $grey-shade !default;
 $form-range-color:                      $color-primary !default;
@@ -227,7 +227,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
   flex-shrink: 0;
   width: $form-checkbox-size;
   height: $form-checkbox-size;
-  border-radius: 0;
+  border-radius: $form-control-border-radius;
   border: $form-control-border-width solid $form-control-border-color;
   background-color: $form-control-bg;
   padding: 0;
