@@ -85,8 +85,10 @@
     }
 
     @include media-breakpoint-down($breakpoint) {
-      .hidden-until#{$suffix} {
-        display: none !important;
+      @if $value > 0 {
+        .shown#{$suffix} {
+          display: none !important;
+        }
       }
     }
   }
