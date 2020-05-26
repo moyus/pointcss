@@ -2,17 +2,21 @@
 // -----------------------------------------------------------------------------
 @mixin badge-variant(
   $background,
+  $border: $background,
   $color: invert-color($background)
 ) {
   color: $color;
+  border-color: $border;
   background-color: $background;
-  
+
   &.badge--link {
     cursor: pointer;
     &:hover {
+      border-color: shade-color($background, 1);
       background-color: shade-color($background, 1);
     }
     &:active {
+      border-color: shade-color($background, 2);
       background-color: shade-color($background, 2);
     }
   }

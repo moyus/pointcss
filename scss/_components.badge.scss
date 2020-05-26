@@ -1,22 +1,22 @@
 /* ## Badge
 ---------------------------------*/
 $badge-font-size: $text-meta-sm !default;
-$badge-padding: 8px !default;
 $badge-empty-size: 8px !default;
 
 .badge {
   display: inline-block;
-  padding: 0 $badge-padding;
+  padding: .25em .5em;
   font-size: $badge-font-size;
-  line-height: $line-height-loose;
+  line-height: 1;
   text-align: center;
   white-space: nowrap;
   border-radius: 1993px;
+  border: 1px solid transparent;
   vertical-align: middle;
   text-overflow: ellipsis;
   overflow: hidden;
 
-  @include badge-variant($grey-light, $grey-mute);
+  @include badge-variant($component-bg, $grey-thin, $grey-dark);
 
   &:empty {
     min-width: auto;
@@ -27,9 +27,25 @@ $badge-empty-size: 8px !default;
 }
 
 // theme
+.badge.badge--black {
+  @include badge-variant($black);
+}
+
+.badge.badge--dark {
+  @include badge-variant($grey-dark);
+}
+
+.badge.badge--light {
+  @include badge-variant($grey-light);
+}
+
+.badge.badge--white {
+  @include badge-variant($white);
+}
+
 @each $name, $color in $theme-colors {
   .badge.badge--#{$name} {
-    @include badge-variant($color)
+    @include badge-variant($color);
   }
 }
 
