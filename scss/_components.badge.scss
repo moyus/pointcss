@@ -1,18 +1,20 @@
 /* ## Badge
 ---------------------------------*/
-$badge-font-size: $text-size-xs !default;
-$badge-padding: $spacing-squish-sm !default;
+$badge-font-size: $text-meta-sm !default;
+$badge-padding: 8px !default;
 $badge-empty-size: 8px !default;
 
 .badge {
   display: inline-block;
-  padding: $badge-padding;
+  padding: 0 $badge-padding;
   font-size: $badge-font-size;
-  line-height: $line-height-tight;
+  line-height: $line-height-loose;
   text-align: center;
   white-space: nowrap;
   border-radius: 1993px;
   vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
   @include badge-variant($grey-light, $grey-mute);
 
@@ -24,8 +26,38 @@ $badge-empty-size: 8px !default;
   }
 }
 
+// theme
 @each $name, $color in $theme-colors {
-  .badge--#{$name} {
+  .badge.badge--#{$name} {
     @include badge-variant($color)
   }
+}
+
+// position
+.badge.badge--lt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.badge.badge--rt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.badge.badge--bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+}
+
+.badge.badge--br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
 }
