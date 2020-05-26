@@ -72,10 +72,39 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
 
 }
 
+.btn.btn--text {
+  text-decoration: underline;
+  @include btn-variant(
+    $background: transparent,
+    $border: transparent,
+    $color: $grey-dark,
+    $hover-background: $grey-light,
+    $hover-border: $grey-light,
+    $hover-color: $grey-dark,
+    $active-background: shade-color($grey-light, 1),
+    $active-border: shade-color($grey-light, 1),
+    $active-color: $grey-dark
+  );
+}
+
+.btn.btn--black {
+  @include btn-variant($black);
+  &.btn--outline {
+    @include btn-outline-variant($black);
+  }
+}
+
 .btn.btn--dark {
   @include btn-variant($grey-dark);
   &.btn--outline {
     @include btn-outline-variant($grey-dark);
+  }
+}
+
+.btn.btn--light {
+  @include btn-variant($grey-light);
+  &.btn--outline {
+    @include btn-outline-variant($grey-light);
   }
 }
 
