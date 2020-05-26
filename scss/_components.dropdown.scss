@@ -7,6 +7,7 @@ $dropdown-border-radius: $component-border-radius-md !default;
 $dropdown-width-sm: 160px !default;
 $dropdown-width-md: 200px !default;
 $dropdown-width-lg: 280px !default;
+$dropdown-content-zIndex: $zIndex-1 !default;
 
 .dropdown {
   position: relative;
@@ -31,6 +32,7 @@ $dropdown-width-lg: 280px !default;
   border-radius: $dropdown-border-radius;
   background-color: $dropdown-bg;
   box-shadow: $dropdown-shadow;
+  z-index: $dropdown-content-zIndex;
 
   > * {
     &:first-child {
@@ -43,25 +45,25 @@ $dropdown-width-lg: 280px !default;
 }
 
 .dropdown--sm {
-  .popover__content {
+  .dropdown__content {
     width: $dropdown-width-sm;
   }
 }
 
 .dropdown--lg {
-  .popover__content {
+  .dropdown__content {
     width: $dropdown-width-lg;
   }
 }
 
 .dropdown--auto {
-  .popover__content {
+  .dropdown__content {
     width: auto;
   }
 }
 
 .dropdown--bl {
-  .popover__content {
+  .dropdown__content {
     left: 0;
     top: 100%;
     right: auto;
@@ -71,7 +73,7 @@ $dropdown-width-lg: 280px !default;
 }
 
 .dropdown--br {
-  .popover__content {
+  .dropdown__content {
     left: auto;
     top: 100%;
     right: 0;
@@ -81,7 +83,7 @@ $dropdown-width-lg: 280px !default;
 }
 
 .dropdown--rt {
-  .popover__content {
+  .dropdown__content {
     left: 100%;
     top: 0;
     right: auto;
@@ -91,7 +93,7 @@ $dropdown-width-lg: 280px !default;
 }
 
 .dropdown--rb {
-  .popover__content {
+  .dropdown__content {
     left: 100%;
     top: auto;
     right: auto;
@@ -101,7 +103,7 @@ $dropdown-width-lg: 280px !default;
 }
 
 .dropdown--tl {
-  .popover__content {
+  .dropdown__content {
     left: 0;
     top: auto;
     right: auto;
@@ -111,7 +113,7 @@ $dropdown-width-lg: 280px !default;
 }
 
 .dropdown--tr {
-  .popover__content {
+  .dropdown__content {
     left: auto;
     top: auto;
     right: 0;
@@ -121,7 +123,7 @@ $dropdown-width-lg: 280px !default;
 }
 
 .dropdown--lt {
-  .popover__content {
+  .dropdown__content {
     left: auto;
     top: 0;
     right: 100%;
@@ -131,7 +133,7 @@ $dropdown-width-lg: 280px !default;
 }
 
 .dropdown--lb {
-  .popover__content {
+  .dropdown__content {
     left: auto;
     top: auto;
     right: 100%;

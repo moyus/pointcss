@@ -64,7 +64,11 @@ $level-item-spacing: $spacing-stack-md !default;
       .level#{$suffix} {
         flex-direction: column;
         justify-content: center;
-  
+        
+        .level__item:not(:last-child) {
+          margin-bottom: $spacing-stack-sm;
+        }
+
         .level__start,
         .level__end,
         .level__center {
