@@ -197,8 +197,8 @@ $code-bg:                               #fcf2f2 !default;
 // Elevation
 // -----------------------------------------------------------------------------
 $shadow-sm:                             0 1px 3px rgba($black, 0.1) !default;
-$shadow-md:                             0 4px 16px -2px rgba($black, 0.1) !default;
-$shadow-lg:                             0 16px 40px -8px rgba($black, 0.2) !default;
+$shadow-md:                             0 6px 16px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.05) !default;
+$shadow-lg:                             0 8px 28px rgba($black, 0.2), 0 0 0 1px rgba($black, 0.05) !default;
 
 // Grid
 // -----------------------------------------------------------------------------
@@ -223,7 +223,7 @@ $container-max-widths: (
 // Components
 // -----------------------------------------------------------------------------
 $component-border-radius-sm:             2px !default;
-$component-border-radius-md:             3px !default;
-$component-border-radius-lg:             5px !default;
+$component-border-radius-md:             4px !default;
+$component-border-radius-lg:             6px !default;
 $component-border-width:                 1px !default;
 $component-bg:                           $white !default;
