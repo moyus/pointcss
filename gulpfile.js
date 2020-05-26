@@ -115,7 +115,7 @@ gulp.task('docs:html', function () {
         project: {
           title: 'POINTCSS',
           description: pkg.description,
-          url: isProd ? pkg.website : 'http://localhost:3000/',
+          url: isProd ? pkg.website : 'http://localhost:3000',
           github: pkg.homepage,
           version: pkg.version,
           keywords: pkg.keywords.join(','),
