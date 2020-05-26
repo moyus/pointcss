@@ -92,9 +92,6 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
     &.btn--outline {
       @include btn-outline-variant($color);
     }
-    &.btn--light {
-      @include btn-light-variant($color);
-    }
   }
 }
 
