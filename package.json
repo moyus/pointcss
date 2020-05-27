@@ -1,11 +1,11 @@
 {
   "name": "@moyu/pointcss",
-  "version": "2.0.0-alpha.9",
+  "version": "2.0.0-alpha.10",
   "website": "https://moyus.github.io/pointcss",
   "homepage": "https://github.com/moyus/pointcss",
   "author": "moyu <moyuboy@gmail.com> (https://moyu.io)",
   "description": "A flexible CSS Framework for building modern responsive web apps",
-  "main": "dist/point.css",
+  "main": "dist/point.min.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moyus/pointcss.git"
