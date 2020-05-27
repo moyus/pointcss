@@ -59,8 +59,8 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
     $hover-background: $grey-light,
     $hover-border: $grey-thin,
     $hover-color: $grey-dark,
-    $active-background: shade-color($grey-light, 1),
-    $active-border: shade-color($grey-thin, 1),
+    $active-background: darken($grey-light, 5%),
+    $active-border: darken($grey-thin, 5%),
     $active-color: $grey-dark
   );
 
@@ -72,7 +72,7 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
 
 }
 
-.btn.btn--text {
+.btn.btn--link {
   text-decoration: underline;
   @include btn-variant(
     $background: transparent,
@@ -81,8 +81,8 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
     $hover-background: $grey-light,
     $hover-border: $grey-light,
     $hover-color: $grey-dark,
-    $active-background: shade-color($grey-light, 1),
-    $active-border: shade-color($grey-light, 1),
+    $active-background: darken($grey-light, 5%),
+    $active-border: darken($grey-light, 5%),
     $active-color: $grey-dark
   );
 }

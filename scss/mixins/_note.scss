@@ -2,12 +2,12 @@
 // -----------------------------------------------------------------------------
 @mixin note-variant($background, $color: invert-color($background)) {
   color: $color;
-  background-color: $background,;
+  background-color: $background;
 
   a {
-    color: shade-color($color, 2);
+    color: inherit;
     &:hover {
-      color: shade-color($color, 3);
+      color: inherit;
     }
   }
 }

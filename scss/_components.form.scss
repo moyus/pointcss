@@ -47,7 +47,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
   // states
   &:hover,
   &.is-hovered {
-    border-color: shade-color($form-control-border-color, 1);
+    border-color: darken($form-control-border-color, 2.5%);
   }
 
   &:focus,
@@ -245,7 +245,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
 
   &:hover,
   &.is-hovered {
-    border-color: shade-color($form-control-border-color, 1);
+    border-color: darken($form-control-border-color, 2.5%);
   }
 
   &:focus,
@@ -290,7 +290,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
 
   &:hover,
   &.is-hovered {
-    border-color: shade-color($form-control-border-color, 1);
+    border-color: darken($form-control-border-color, 2.5%);
   }
 
   &:focus,

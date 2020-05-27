@@ -1,17 +1,62 @@
+@function math-pow($number, $exp) {
+  $value: 1;
+
+  @if ($exp > 0) {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  } @else if ($exp < 0) {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+
+  @return $value;
+}
+  
+
+@function luminance($color) {
+  $rgb: (
+    "red": red($color),
+    "green": green($color),
+    "blue": blue($color)
+  );
+
+  @each $name, $value in $rgb {
+    $value: $value / 255;
+    $value: if($value < .03928, $value / 12.92, math-pow(($value + .055) / 1.055, 2));
+    $rgb: map-merge($rgb, ($name: $value));
+  }
+
+  @return (map-get($rgb, "red") * .2126) + (map-get($rgb, "green") * .7152) + (map-get($rgb, "blue") * .0722);
+}
+
 @function tint-color($color, $level) {
-  @return mix(white, $color, $level * 8%);
+  @return mix($white, $color, $level * 8%);
 }
 
 @function shade-color($color, $level) {
-  @return mix(black, $color, $level * 8%);
+  @return mix($black, $color, $level * 8%);
 }
 
-@function invert-color($color, $dark: $grey-dark, $light: $white) {
-  $r: red($color);
-  $g: green($color);
-  $b: blue($color);
+@function invert-color($color, $dark: rgba($black, 0.75), $light: $white) {
+  $luminance: luminance($color);
 
-  $value: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+  @return if($luminance > 0.55, $dark, $light);
+}
 
-  @return if($value >= 150, $dark, $light);
+@function light-color($color) {
+  $target: 96%;
+  $lightness: lightness($color);
+
+  @return change-color($color, $lightness: max($target, $lightness));
+}
+
+@function dark-color($color) {
+  $base: 29%;
+  $luminance: luminance($color);
+  $delta: (0.53 - $luminance);
+  $target: round($base + $delta * 53);
+
+  @return change-color($color, $lightness: max($base, $target));
 }

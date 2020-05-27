@@ -4,12 +4,12 @@
   $background,
   $border: $background,
   $color: invert-color($background),
-  $hover-background: shade-color($background, 1),
-  $hover-border: shade-color($border, 1),
-  $hover-color: invert-color($hover-background),
-  $active-background: shade-color($background, 2),
-  $active-border: shade-color($border, 2),
-  $active-color: invert-color($active-background)
+  $hover-background: darken($background, 2.5%),
+  $hover-border: darken($border, 2.5%),
+  $hover-color: invert-color($background),
+  $active-background: darken($background, 5%),
+  $active-border: darken($border, 5%),
+  $active-color: invert-color($background)
 ) {
   & {
     color: $color;
@@ -54,14 +54,14 @@
 
 @mixin btn-light-variant(
   $color,
-  $border: tint-color($color, 11),
-  $background: tint-color($color, 11),
+  $border: light-color($color),
+  $background: light-color($color),
   $hover-color: $color,
-  $hover-border: tint-color($color, 10),
-  $hover-background: tint-color($color, 10),
+  $hover-border: darken(light-color($color), 2.5%),
+  $hover-background: darken(light-color($color), 2.5%),
   $active-color: $color,
-  $active-border: tint-color($color, 9),
-  $active-background: tint-color($color, 9),
+  $active-border: darken(light-color($color), 5%),
+  $active-background: darken(light-color($color), 5%),
 ) {
   & {
     color: $color;
@@ -78,7 +78,7 @@
 
   &:focus,
   &.is-focused {
-    box-shadow: 0 0 0 2px tint-color($color, 6);
+    box-shadow: 0 0 0 2px rgba($active-color, 0.25);
   }
 
   &:active,
@@ -112,8 +112,8 @@
   $hover-border: $color,
   $hover-background: $color,
   $active-color: invert-color($color),
-  $active-border: shade-color($color, 2),
-  $active-background: shade-color($color, 2),
+  $active-border: darken($color, 5%),
+  $active-background: darken($color, 5%),
 ) {
   & {
     color: $color;

@@ -7,12 +7,6 @@ $box-title-size: $text-size-base !default;
 $box-header-padding: $spacing-squish-md !default;
 $box-inner-padding: $spacing-square-md !default;
 $box-bg: $component-bg !default;
-$box-colors: (
-  "danger": (bg: #f2dede, border: #ebccd1, color: #a94442),
-  "info": (bg: #d9edf7, border: #bde2fb, color: #31708f),
-  "success": (bg: #dff0d8, border: #d6e9c6, color: #3c763d),
-  "warning": (bg: #fcf8e3, border: #faebcc, color: #8a6d3b)
-) !default;
 
 .box {
   margin-bottom: $box-margin-bottom;
@@ -58,9 +52,13 @@ $box-colors: (
 
 }
 
-@each $name, $value in $box-colors {
-  .box--#{$name} {
-    @include box-variant(map-get($value, 'color'), map-get($value, 'border'), map-get($value, 'bg'))
+@each $name, $color in $theme-colors {
+  .box.box--#{$name} {
+    @include box-variant(
+      $background: tint-color($color, 11),
+      $border: tint-color($color, 9),
+      $color: shade-color($color, 6)
+    );
   }
 }
 

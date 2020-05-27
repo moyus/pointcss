@@ -12,12 +12,12 @@
   &.badge--link {
     cursor: pointer;
     &:hover {
-      border-color: shade-color($background, 1);
-      background-color: shade-color($background, 1);
+      border-color: darken($background, 2.5%);
+      background-color: darken($background, 2.5%);
     }
     &:active {
-      border-color: shade-color($background, 2);
-      background-color: shade-color($background, 2);
+      border-color: darken($background, 5%);
+      background-color: darken($background, 5%);
     }
   }
 }
