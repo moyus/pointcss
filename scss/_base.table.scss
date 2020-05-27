@@ -21,7 +21,7 @@ th {
 
   th, td {
     text-align: left;
-    padding: $spacing-square-md;
+    padding: $spacing-square-sm;
     vertical-align: middle;
   }
 
@@ -32,18 +32,18 @@ th {
   }
 }
 
-.table.table--small {
+.table.table--sm {
   th, td {
     text-align: left;
-    padding: $spacing-square-sm;
+    padding: $spacing-square-xs;
     vertical-align: middle;
   }
 }
 
-.table.table--large {
+.table.table--lg {
   th, td {
     text-align: left;
-    padding: $spacing-square-lg;
+    padding: $spacing-square-md;
     vertical-align: middle;
   }
 }
@@ -65,7 +65,7 @@ th {
 .table.table--hover {
   tbody tr:hover,
   > tr:hover {
-    background-color: tint-color($grey-light, 1);
+    background-color: darken($grey-light, 2.5%);
   }
 }
 

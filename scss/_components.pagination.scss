@@ -3,9 +3,7 @@
 $pagination-border-width: 1px !default;
 $pagination-border-color: $grey-thin !default;
 $pagination-bg: $component-bg !default;
-$pagination-border-radius-sm: $component-border-radius-sm !default;
-$pagination-border-radius-md: $component-border-radius-md !default;
-$pagination-border-radius-lg: $component-border-radius-lg !default;
+$pagination-border-radius: $component-border-radius-md !default;
 $pagination-font-size-sm: $text-size-sm !default;
 $pagination-font-size-md: $text-size-md !default;
 $pagination-font-size-lg: $text-size-lg !default;
@@ -28,7 +26,7 @@ $pagination-height-computed: $pagination-font-size-md * $line-height-normal + 2 
   font-size: $pagination-font-size-md;
   line-height: $line-height-normal;
   padding: $pagination-padding-md;
-  border-radius: $pagination-border-radius-md;
+  border-radius: $pagination-border-radius;
   border: $pagination-border-width solid transparent;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -62,7 +60,7 @@ $pagination-height-computed: $pagination-font-size-md * $line-height-normal + 2 
     min-width: $pagination-height-computed;
     font-size: $pagination-font-size-sm;
     padding: $pagination-padding-sm;
-    border-radius: $pagination-border-radius-sm;
+    border-radius: $pagination-border-radius;
   }
 }
 
@@ -74,7 +72,7 @@ $pagination-height-computed: $pagination-font-size-md * $line-height-normal + 2 
     min-width: $pagination-height-computed;
     font-size: $pagination-font-size-lg;
     padding: $pagination-padding-lg;
-    border-radius: $pagination-border-radius-lg;
+    border-radius: $pagination-border-radius;
   }
 }
 
@@ -104,7 +102,7 @@ $pagination-height-computed: $pagination-font-size-md * $line-height-normal + 2 
 
     &.is-active {
       color: $white;
-      border-color: shade-color($color-primary, 1);
+      border-color: darken($color-primary, 5%);
       background-color: $color-primary;
     }
 

@@ -6,9 +6,7 @@ $list-padding-sm: $spacing-squish-xs !default;
 $list-padding-md: $spacing-squish-sm !default;
 $list-padding-lg: $spacing-squish-lg !default;
 $list-border-width: $component-border-width !default;
-$list-border-radius-sm: $component-border-radius-sm !default;
-$list-border-radius-md: $component-border-radius-md !default;
-$list-border-radius-lg: $component-border-radius-lg !default;
+$list-border-radius: $component-border-radius-md !default;
 $list-border-color: $grey-weak !default;
 $list-hover-color: $grey-light !default;
 
@@ -60,14 +58,14 @@ $list-hover-color: $grey-light !default;
     margin-bottom: (0 - $list-border-width);
 
     &:first-child {
-      border-top-left-radius: $list-border-radius-md;
-      border-top-right-radius: $list-border-radius-md;
+      border-top-left-radius: $list-border-radius;
+      border-top-right-radius: $list-border-radius;
     }
 
     &:last-child {
       margin-bottom: 0;
-      border-bottom-left-radius: $list-border-radius-md;
-      border-bottom-right-radius: $list-border-radius-md;
+      border-bottom-left-radius: $list-border-radius;
+      border-bottom-right-radius: $list-border-radius;
     }
   }
 }
@@ -87,14 +85,14 @@ $list-hover-color: $grey-light !default;
       padding-right: nth($list-padding-sm, 2);
 
       &:first-child {
-        border-top-left-radius: $list-border-radius-sm;
-        border-top-right-radius: $list-border-radius-sm;
+        border-top-left-radius: $list-border-radius;
+        border-top-right-radius: $list-border-radius;
       }
   
       &:last-child {
         margin-bottom: 0;
-        border-bottom-left-radius: $list-border-radius-sm;
-        border-bottom-right-radius: $list-border-radius-sm;
+        border-bottom-left-radius: $list-border-radius;
+        border-bottom-right-radius: $list-border-radius;
       }
     }
   }
@@ -115,14 +113,14 @@ $list-hover-color: $grey-light !default;
       padding-right: nth($list-padding-lg, 2);
 
       &:first-child {
-        border-top-left-radius: $list-border-radius-lg;
-        border-top-right-radius: $list-border-radius-lg;
+        border-top-left-radius: $list-border-radius;
+        border-top-right-radius: $list-border-radius;
       }
   
       &:last-child {
         margin-bottom: 0;
-        border-bottom-left-radius: $list-border-radius-lg;
-        border-bottom-right-radius: $list-border-radius-lg;
+        border-bottom-left-radius: $list-border-radius;
+        border-bottom-right-radius: $list-border-radius;
       }
     }
   }
