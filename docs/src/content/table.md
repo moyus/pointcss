@@ -341,9 +341,9 @@ By adding `.table--bordered` modifier class on `<table class="table">` element t
 
 ## Size
 
-Use `.list--small` or `.list--large` modifier classes on `.list` container to change cell spacing
+Use `.table--sm` or `.table--lg` modifier classes on `.table` container to change cell spacing
 
-<table class="table table--bordered table--small">
+<table class="table table--bordered table--sm">
   <thead>
     <tr>
       <th>ID</th>
@@ -399,7 +399,7 @@ Use `.list--small` or `.list--large` modifier classes on `.list` container to ch
   </tbody>
 </table>
 
-<table class="table table--bordered table--large">
+<table class="table table--bordered table--lg">
   <thead>
     <tr>
       <th>ID</th>
@@ -456,7 +456,7 @@ Use `.list--small` or `.list--large` modifier classes on `.list` container to ch
 </table>
 
 ```html
-<table class="table table--bordered table--small">
+<table class="table table--bordered table--sm">
   <thead>
     ...
   </thead>
@@ -465,7 +465,7 @@ Use `.list--small` or `.list--large` modifier classes on `.list` container to ch
   </tbody>
 </table>
 
-<table class="table table--bordered table--large">
+<table class="table table--bordered table--lg">
   <thead>
     ...
   </thead>

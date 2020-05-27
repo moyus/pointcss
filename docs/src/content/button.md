@@ -28,8 +28,11 @@ catalogue:
   <button class="btn btn--success">Success</button>
   <button class="btn btn--danger">Danger</button>
   <button class="btn btn--warning">Warning</button>
+  <button class="btn btn--black">Black</button>
   <button class="btn btn--dark">Dark</button>
+  <button class="btn btn--light">Light</button>
   <button class="btn btn--white">White</button>
+  <button class="btn btn--link">Link</button>
 </div>
 
 ```html
@@ -38,8 +41,11 @@ catalogue:
 <button class="btn btn--success">Success</button>
 <button class="btn btn--danger">Danger</button>
 <button class="btn btn--warning">Warning</button>
+<button class="btn btn--black">Black</button>
 <button class="btn btn--dark">Dark</button>
+<button class="btn btn--light">Light</button>
 <button class="btn btn--white">White</button>
+<button class="btn btn--link">Link</button>
 ```
 
 ##### Outline
@@ -52,7 +58,9 @@ By adding the `.btn--outline` modifier class on any predefined button element to
   <button class="btn btn--outline btn--success">Success</button>
   <button class="btn btn--outline btn--danger">Danger</button>
   <button class="btn btn--outline btn--warning">Warning</button>
+  <button class="btn btn--outline btn--black">Black</button>
   <button class="btn btn--outline btn--dark">Dark</button>
+  <button class="btn btn--outline btn--light">Light</button>
   <button class="btn btn--outline btn--white">White</button>
 </div>
 
@@ -62,7 +70,9 @@ By adding the `.btn--outline` modifier class on any predefined button element to
 <button class="btn btn--outline btn--success">Success</button>
 <button class="btn btn--outline btn--danger">Danger</button>
 <button class="btn btn--outline btn--warning">Warning</button>
+<button class="btn btn--outline btn--black">Black</button>
 <button class="btn btn--outline btn--dark">Dark</button>
+<button class="btn btn--outline btn--light">Light</button>
 <button class="btn btn--outline btn--white">White</button>
 ```
 

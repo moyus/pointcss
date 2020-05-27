@@ -49,6 +49,10 @@ catalogue:
   <span class="badge badge--success">Success</span>
   <span class="badge badge--danger">Danger</span>
   <span class="badge badge--warning">Warning</span>
+  <span class="badge badge--black">Black</span>
+  <span class="badge badge--dark">Dark</span>
+  <span class="badge badge--light">Light</span>
+  <span class="badge badge--white">White</span>
 </div>
 
 ```html
@@ -57,6 +61,10 @@ catalogue:
 <span class="badge badge--success">Success</span>
 <span class="badge badge--danger">Danger</span>
 <span class="badge badge--warning">Warning</span>
+<span class="badge badge--black">Black</span>
+<span class="badge badge--dark">Dark</span>
+<span class="badge badge--light">Light</span>
+<span class="badge badge--white">White</span>
 ```
 
 ##### Empty badge
