@@ -1,14 +1,25 @@
 /* ## Nav
 ---------------------------------*/
-$nav-border-radius: $component-border-radius-md !default;
-$nav-border-width: $component-border-width !default;
-$nav-border-color: $grey-thin !default;
-$nav-color: $grey-mute !default;
-$nav-hover-color: $grey-dark !default;
-$nav-font-size-sm: $text-size-sm !default;
-$nav-font-size-md: $text-size-md !default;
-$nav-font-size-lg: $text-size-lg !default;
-$nav-tabs-active-bg: $component-bg !default;
+$nav-item-color: $grey-mute !default;
+$nav-item-gutter: $spacing-stack-md !default;
+$nav-item-hover-color: $grey-dark !default;
+$nav-item-active-color: $color-primary !default;
+
+$nav-tabs-item-gutter: $spacing-stack-xs !default;
+$nav-tabs-item-padding: 0.375em 0.75em !default;
+$nav-tabs-item-border-width: $component-border-width !default;
+$nav-tabs-item-border-color: $grey-thin !default;
+$nav-tabs-item-hover-color: $grey-dark !default;
+$nav-tabs-item-hover-border-color: $grey-dark !default;
+$nav-tabs-item-active-color: $color-primary !default;
+$nav-tabs-item-active-border-color: $color-primary !default;
+
+$nav-pills-item-gutter: $spacing-stack-xs !default;
+$nav-pills-item-padding: 0.375em 0.75em !default;
+$nav-pills-item-border-radius: $component-border-radius-md !default;
+$nav-pills-item-hover-bg: $grey-light !default;
+$nav-pills-item-active-bg: $color-primary !default;
+$nav-pills-item-active-color: invert-color($color-primary) !default;
 
 .nav {
   position: relative;
@@ -16,27 +27,21 @@ $nav-tabs-active-bg: $component-bg !default;
   padding: 0;
   list-style: none;
   display: flex;
+  font-size: $text-size-md;
 }
 
 .nav__item {
   position: relative;
 
   &:not(:last-child) {
-    margin: 0 $spacing-stack-md 0 0;
-  }
-
-  &.is-active {
-    > .nav__link {
-      color: $color-primary;
-    }
+    margin: 0 $nav-item-gutter 0 0;
   }
 }
 
 .nav__link {
   cursor: pointer;
   display: block;
-  color: $nav-color;
-  font-size: $nav-font-size-md;
+  color: $nav-item-color;
   line-height: $line-height-normal;
   text-align: center;
   white-space: nowrap;
@@ -44,7 +49,7 @@ $nav-tabs-active-bg: $component-bg !default;
   text-decoration: none;
 
   &:hover {
-    color: $nav-hover-color;
+    color: $nav-item-hover-color;
   }
 
   &[disabled],
@@ -53,24 +58,21 @@ $nav-tabs-active-bg: $component-bg !default;
     cursor: not-allowed;
   }
 
+  &.is-active {
+    color: $nav-item-active-color;
+  }
 }
 
+// size modifiers
 .nav.nav--sm {
-  > .nav__item {
-    > .nav__link {
-      font-size: $nav-font-size-sm;
-    }
-  }
+  font-size: $text-size-sm;
 }
 
 .nav.nav--lg {
-  > .nav__item {
-    > .nav__link {
-      font-size: $nav-font-size-lg;
-    }
-  }
+  font-size: $text-size-lg;
 }
 
+// layout modifiers
 .nav.nav--start {
   justify-content: flex-start;
 }
@@ -85,52 +87,58 @@ $nav-tabs-active-bg: $component-bg !default;
 
 .nav.nav--stretch {
   justify-content: space-around;
-
   > .nav__item {
     flex: 1 1 0%;
   }
 }
 
+// variant modifiers
 .nav.nav--pills {
   > .nav__item {
     &:not(:last-child) {
-      margin-right: $spacing-stack-xs;
+      margin-right: $nav-pills-item-gutter;
     }
   
     > .nav__link {
-      padding: 0.375em 0.75em;
-      border-radius: $nav-border-radius;
+      padding: $nav-pills-item-padding;
+      border-radius: $nav-pills-item-border-radius;
 
       &:hover {
-        background-color: $grey-light;
+        background-color: $nav-pills-item-hover-bg;
       }
     }
 
     &.is-active {
       > .nav__link {
-        color: $white;
-        background-color: $color-primary;
+        color: $nav-pills-item-active-color;
+        background-color: $nav-pills-item-active-bg;
       }
     }
   }
 }
 
 .nav.nav--tabs {
-  border-bottom: $nav-border-width solid $nav-border-color;
+  border-bottom: $nav-tabs-item-border-width solid $nav-tabs-item-border-color;
 
   > .nav__item {
     &:not(:last-child) {
-      margin-right: $spacing-stack-xs;
+      margin-right: $nav-tabs-item-gutter;
     }
 
     > .nav__link {
-      margin: 0 0 (0 - $nav-border-width) 0;
-      padding: 0.375em 0.75em;
+      padding: $nav-tabs-item-padding;
+      margin: 0 0 (0 - $nav-tabs-item-border-width) 0;
+      border-bottom: $nav-tabs-item-border-width solid transparent;
+      &:hover {
+        color: $nav-tabs-item-hover-color;
+        border-color: $nav-tabs-item-hover-border-color;
+      }
     }
 
     &.is-active {
       > .nav__link {
-        border-bottom: $nav-border-width solid $color-primary;
+        color: $nav-tabs-item-active-color;
+        border-color: $nav-tabs-item-active-border-color;
       }
     }
   }
