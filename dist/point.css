@@ -1,6 +1,6 @@
 /*!
  * @moyu/pointcss
- * @version v2.0.0-alpha.10
+ * @version v2.0.0-alpha.11
  * @link https://github.com/moyus/pointcss
  * @author moyu <moyuboy@gmail.com> (https://moyu.io)
  * @license MIT
@@ -3187,6 +3187,142 @@ body.is-masking {
   overflow: hidden;
 }
 
+/* ## Menu
+---------------------------------*/
+.menu {
+  font-size: 16px;
+}
+
+.menu__heading {
+  font-size: 0.75em;
+  line-height: 1.25;
+  color: #616161;
+  margin-bottom: 4px;
+}
+
+.menu__list {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__list:last-child {
+  margin-bottom: 0;
+}
+
+.menu__item {
+  position: relative;
+  margin: 2px 0;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5em 0.75em;
+  border-radius: 4px;
+  color: #212121;
+  cursor: pointer;
+}
+
+.menu__link:hover {
+  background-color: #f7f7f7;
+}
+
+.menu__link.is-active {
+  color: #ffffff;
+  background-color: #636AFF;
+}
+
+.menu__icon {
+  flex: 0 0 auto;
+  width: 20px;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.menu__label {
+  flex: 1 1 auto;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu__after {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 8px;
+}
+
+.menu__divider {
+  margin: 16px 0;
+  height: 1px;
+  border: none;
+  background-color: #dbdbdb;
+}
+
+.menu__item .menu__list {
+  display: none;
+  font-size: 0.875em;
+  margin: 4px 0 8px 16px;
+  padding: 0 0 0 8px;
+  border-left: 1px solid #e5e5e5;
+}
+
+.menu__item.is-active > .menu__list {
+  display: block;
+}
+
+.menu.menu--sm {
+  font-size: 14px;
+}
+
+.menu.menu--lg {
+  font-size: 18px;
+}
+
+.menu.menu--dark .menu__heading {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.menu.menu--dark .menu__link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.menu.menu--dark .menu__link:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.menu.menu--dark .menu__divider {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu.menu--dark .menu__item .menu__list {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu.menu--light .menu__link {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.menu.menu--light .menu__link:hover {
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu.menu--light .menu__divider {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu.menu--light .menu__item .menu__list {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
 /* ## Nav
 ---------------------------------*/
 .nav {
@@ -3195,6 +3331,7 @@ body.is-masking {
   padding: 0;
   list-style: none;
   display: flex;
+  font-size: 16px;
 }
 
 .nav__item {
@@ -3205,15 +3342,10 @@ body.is-masking {
   margin: 0 16px 0 0;
 }
 
-.nav__item.is-active > .nav__link {
-  color: #636AFF;
-}
-
 .nav__link {
   cursor: pointer;
   display: block;
   color: #616161;
-  font-size: 16px;
   line-height: 1.5;
   text-align: center;
   white-space: nowrap;
@@ -3230,11 +3362,15 @@ body.is-masking {
   cursor: not-allowed;
 }
 
-.nav.nav--sm > .nav__item > .nav__link {
+.nav__link.is-active {
+  color: #636AFF;
+}
+
+.nav.nav--sm {
   font-size: 14px;
 }
 
-.nav.nav--lg > .nav__item > .nav__link {
+.nav.nav--lg {
   font-size: 18px;
 }
 
@@ -3285,12 +3421,19 @@ body.is-masking {
 }
 
 .nav.nav--tabs > .nav__item > .nav__link {
-  margin: 0 0 -1px 0;
   padding: 0.375em 0.75em;
+  margin: 0 0 -1px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.nav.nav--tabs > .nav__item > .nav__link:hover {
+  color: #212121;
+  border-color: #212121;
 }
 
 .nav.nav--tabs > .nav__item.is-active > .nav__link {
-  border-bottom: 1px solid #636AFF;
+  color: #636AFF;
+  border-color: #636AFF;
 }
 
 /* ## Navbar
@@ -3666,7 +3809,7 @@ body.is-masking {
   border-left: 1px solid #dbdbdb !important;
 }
 
-.border-all {
+.border {
   border: 1px solid #dbdbdb !important;
 }
 
