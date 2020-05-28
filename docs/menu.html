@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Menu - POINTCSS</title>
+  <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
+  <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
+  <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha11">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha11">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha11">
+</head>
+<body>
+  <div id="docs" class="site">
+    <header class="site__header">
+      <div class="navbar site__navbar">
+  <div class="navbar__start">
+    <a href="https://moyus.github.io/pointcss" class="navbar__brand">
+      <img src="https://moyus.github.io/pointcss/images/logo.svg" alt="pointcss" />
+    </a>
+  </div>
+  <div class="navbar__end">
+    <div class="navbar__item hidden-until@lg">
+      <div class="site__metadata">
+        <span>v2.0.0-alpha.11</span>
+        <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+            <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="navbar__item hidden@lg">
+      <button class="btn js-sidebar-trigger">
+        <span class="flex items-center">
+          <i class="icon-menu"></i>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+    </header>
+    <!-- END .site__header -->
+    <div class="site__content">
+      <div id="sidebar" class="site__sidebar">
+        <nav id="navigation" class="menu">
+  <ul class="menu__list">
+    <li class="menu__item"> 
+      <a class="menu__link">GETTING STARTED</a>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss" class="menu__link">Introduction</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/#installation" class="menu__link">Installation</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/#customization" class="menu__link">Customization</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/#browser-support" class="menu__link">Browser Support</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/style-guide.html" class="menu__link">Style Guide</a>
+        </li>
+      </ul>
+    <li>
+
+    <li class="menu__item">
+      <a class="menu__link">CONTENT</a>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/typography.html" class="menu__link">Typography</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/table.html" class="menu__link">Table</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/media.html" class="menu__link">Media</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="menu__item">
+      <a class="menu__link">LAYOUTS</a>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/container.html" class="menu__link">Container</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/flex-grid.html" class="menu__link">Flex Grid</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/level.html" class="menu__link">Level</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="menu__item">
+      <a class="menu__link">COMPONENTS</a>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/badge.html" class="menu__link">Badge</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/box.html" class="menu__link">Box</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/breadcrumb.html" class="menu__link">Breadcrumb</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/button.html" class="menu__link">Button</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/dropdown.html" class="menu__link">Dropdown</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/form.html" class="menu__link">Form</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/hint.html" class="menu__link">Hint</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/list.html" class="menu__link">List</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/modal.html" class="menu__link">Modal</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/menu.html" class="menu__link">Menu</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/nav.html" class="menu__link">Nav</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/navbar.html" class="menu__link">Navbar</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/note.html" class="menu__link">Note</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/pagination.html" class="menu__link">Pagination</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/progress.html" class="menu__link">Progress</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="menu__item">
+      <a class="menu__link">UTILITIES</a>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/color.html" class="menu__link">Color</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/effect.html" class="menu__link">Effect</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/layout.html" class="menu__link">Layout</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/spacing.html" class="menu__link">Spacing</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://moyus.github.io/pointcss/text.html" class="menu__link">Text</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+        <footer id="colophon" class="site__footer" role="contentinfo">
+          <div>Designed and built by <a href="https://moyu.io" target="_blank">MOYU</a></div>
+          <div>Licensed under the <a href="https://github.com/moyus/pointcss/blob/master/LICENSE">MIT License</a></div>
+        </footer>
+      </div>
+      <!-- END .site__sidebar -->
+      <main id="main" class="site__main" role="main">
+        <article class="article">
+          <h1 id="menu"><span>Menu</span></h1><p>Provide vertical navigation for content.</p>
+<h2 id="basic">
+    <a name="basic" class="anchor" href="#basic"></a>
+    Basic
+    </h2><div class="row">
+  <div class="col-4@lg col-5@md">
+    <aside class="menu">
+      <p class="menu__heading">OVERVIEW</p>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇺🇳</span>
+            <span class="menu__label">Dashboard</span>
+            <span class="menu__after">
+              <span class="badge badge--danger">13</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <p class="menu__heading">UI ELEMENTS</p>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇱</span>
+            <span class="menu__label">Content</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Typography</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Table</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Media</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item is-active">
+          <a class="menu__link">
+            <span class="menu__icon">🇩🇿</span>
+            <span class="menu__label">Components</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Alert</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Badge</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Button</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇫</span>
+            <span class="menu__label">Form</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Control</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Layout</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Validation</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇷</span>
+            <span class="menu__label">Chart</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">D3</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Peity</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Highcharts</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇪</span>
+            <span class="menu__label">Pages</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Sign In</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Sign Up</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Forgot Password</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">404</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">500</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p class="menu__heading">LABELS</p>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">
+              <span class="badge badge--primary"></span>
+            </span>
+            <span class="menu__label">Primary</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">
+              <span class="badge badge--info"></span>
+            </span>
+            <span class="menu__label">Info</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">
+              <span class="badge badge--success"></span>
+            </span>
+            <span class="menu__label">Success</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">
+              <span class="badge badge--danger"></span>
+            </span>
+            <span class="menu__label">Danger</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">
+              <span class="badge badge--warning"></span>
+            </span>
+            <span class="menu__label">Warning</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <div class="col-8@lg col-7@md">
+
+<pre><code class="language-html">&lt;aside class=&quot;menu&quot;&gt;
+  &lt;p class=&quot;menu__heading&quot;&gt;OVERVIEW&lt;/p&gt;
+  &lt;ul class=&quot;menu__list&quot;&gt;
+    &lt;li class=&quot;menu__item&quot;&gt;
+      &lt;a class=&quot;menu__link&quot;&gt;
+        &lt;span class=&quot;menu__icon&quot;&gt;🇺🇳&lt;/span&gt;
+        &lt;span class=&quot;menu__label&quot;&gt;Dashboard&lt;/span&gt;
+        &lt;span class=&quot;menu__after&quot;&gt;
+          &lt;span class=&quot;badge badge--danger&quot;&gt;13&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p class=&quot;menu__heading&quot;&gt;UI ELEMENTS&lt;/p&gt;
+  &lt;ul class=&quot;menu__list&quot;&gt;
+    &lt;li class=&quot;menu__item&quot;&gt;
+      &lt;a class=&quot;menu__link&quot;&gt;
+        &lt;span class=&quot;menu__icon&quot;&gt;🇦🇱&lt;/span&gt;
+        &lt;span class=&quot;menu__label&quot;&gt;Content&lt;/span&gt;
+        &lt;span class=&quot;menu__after&quot;&gt;&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;ul class=&quot;menu__list&quot;&gt;
+        &lt;li class=&quot;menu__item&quot;&gt;
+          &lt;a class=&quot;menu__link&quot;&gt;Typography&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menu__item&quot;&gt;
+          &lt;a class=&quot;menu__link&quot;&gt;Table&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menu__item&quot;&gt;
+          &lt;a class=&quot;menu__link&quot;&gt;Media&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+  ...
+&lt;/aside&gt;</code></pre>
+  </div>
+</div>
+
+<h2 id="variant">
+    <a name="variant" class="anchor" href="#variant"></a>
+    Variant
+    </h2><p>Create a dark background menu by adding <code>.menu--dark</code> modifier class on <code>.menu</code> container.</p>
+<div class="row">
+  <div class="col-4@lg col-5@md">
+    <aside class="menu menu--dark bg-dark p-4">
+      <p class="menu__heading">OVERVIEW</p>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇺🇳</span>
+            <span class="menu__label">Dashboard</span>
+            <span class="menu__after">
+              <span class="badge badge--danger">13</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <p class="menu__heading">UI ELEMENTS</p>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇱</span>
+            <span class="menu__label">Content</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Typography</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Table</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Media</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇩🇿</span>
+            <span class="menu__label">Components</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Alert</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Badge</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Button</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇫</span>
+            <span class="menu__label">Form</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Control</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Layout</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Validation</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇷</span>
+            <span class="menu__label">Chart</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">D3</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Peity</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Highcharts</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇪</span>
+            <span class="menu__label">Pages</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Sign In</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Sign Up</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Forgot Password</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">404</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">500</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <div class="col-8@lg col-7@md">
+
+<pre><code class="language-html">&lt;aside class=&quot;menu menu--dark bg-dark p-4&quot;&gt;
+  &lt;p class=&quot;menu__heading&quot;&gt;OVERVIEW&lt;/p&gt;
+  &lt;ul class=&quot;menu__list&quot;&gt;
+    &lt;li class=&quot;menu__item&quot;&gt;
+      &lt;a class=&quot;menu__link&quot;&gt;
+        &lt;span class=&quot;menu__icon&quot;&gt;🇺🇳&lt;/span&gt;
+        &lt;span class=&quot;menu__label&quot;&gt;Dashboard&lt;/span&gt;
+        &lt;span class=&quot;menu__after&quot;&gt;
+          &lt;span class=&quot;badge badge--danger&quot;&gt;13&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  ...
+&lt;/aside&gt;</code></pre>
+  </div>
+</div>
+
+<p>Create a light background menu by adding <code>.menu--light</code> modifier class on <code>.menu</code> container.</p>
+<div class="row">
+  <div class="col-4@lg col-5@md">
+    <aside class="menu menu--light bg-light p-4">
+      <p class="menu__heading">OVERVIEW</p>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇺🇳</span>
+            <span class="menu__label">Dashboard</span>
+            <span class="menu__after">
+              <span class="badge badge--danger">13</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <p class="menu__heading">UI ELEMENTS</p>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇱</span>
+            <span class="menu__label">Content</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Typography</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Table</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Media</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇩🇿</span>
+            <span class="menu__label">Components</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Alert</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Badge</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Button</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇫</span>
+            <span class="menu__label">Form</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Control</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Layout</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Validation</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇷</span>
+            <span class="menu__label">Chart</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">D3</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Peity</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Highcharts</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇪</span>
+            <span class="menu__label">Pages</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Sign In</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Sign Up</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Forgot Password</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">404</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">500</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <div class="col-8@lg col-7@md">
+
+<pre><code class="language-html">&lt;aside class=&quot;menu menu--light bg-light p-4&quot;&gt;
+  &lt;p class=&quot;menu__heading&quot;&gt;OVERVIEW&lt;/p&gt;
+  &lt;ul class=&quot;menu__list&quot;&gt;
+    &lt;li class=&quot;menu__item&quot;&gt;
+      &lt;a class=&quot;menu__link&quot;&gt;
+        &lt;span class=&quot;menu__icon&quot;&gt;🇺🇳&lt;/span&gt;
+        &lt;span class=&quot;menu__label&quot;&gt;Dashboard&lt;/span&gt;
+        &lt;span class=&quot;menu__after&quot;&gt;
+          &lt;span class=&quot;badge badge--danger&quot;&gt;13&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  ...
+&lt;/aside&gt;</code></pre>
+  </div>
+</div>
+
+<h2 id="size">
+    <a name="size" class="anchor" href="#size"></a>
+    Size
+    </h2><p>You can create s small size of menu by adding <code>.menu--sm</code> on <code>.menu</code> container.</p>
+<div class="row">
+  <div class="col-4@lg col-5@md">
+    <aside class="menu menu--sm border rounded shadow-sm p-5">
+      <p class="menu__heading">OVERVIEW</p>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇺🇳</span>
+            <span class="menu__label">Dashboard</span>
+            <span class="menu__after">
+              <span class="badge badge--danger">13</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <p class="menu__heading">UI ELEMENTS</p>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇱</span>
+            <span class="menu__label">Content</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Typography</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Table</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Media</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇩🇿</span>
+            <span class="menu__label">Components</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Alert</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Badge</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Button</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇫</span>
+            <span class="menu__label">Form</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Control</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Layout</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Validation</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇷</span>
+            <span class="menu__label">Chart</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">D3</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Peity</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Highcharts</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">
+            <span class="menu__icon">🇦🇪</span>
+            <span class="menu__label">Pages</span>
+            <span class="menu__after"></span>
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link">Sign In</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Sign Up</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">Forgot Password</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">404</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link">500</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <div class="col-8@lg col-7@md">
+
+<pre><code class="language-html">&lt;aside class=&quot;menu menu--sm border rounded shadow-sm p-5&quot;&gt;
+  &lt;p class=&quot;menu__heading&quot;&gt;OVERVIEW&lt;/p&gt;
+  &lt;ul class=&quot;menu__list&quot;&gt;
+    &lt;li class=&quot;menu__item&quot;&gt;
+      &lt;a class=&quot;menu__link&quot;&gt;
+        &lt;span class=&quot;menu__icon&quot;&gt;🇺🇳&lt;/span&gt;
+        &lt;span class=&quot;menu__label&quot;&gt;Dashboard&lt;/span&gt;
+        &lt;span class=&quot;menu__after&quot;&gt;
+          &lt;span class=&quot;badge badge--danger&quot;&gt;13&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  ...
+&lt;/aside&gt;</code></pre>
+  </div>
+</div>
+
+        </article>
+      </main>
+      <!-- END .site__main -->
+      <nav class="site__catalogue">
+        
+        <a href="#basic">Basic</a>
+        
+        <a href="#variant">Variant</a>
+        
+        <a href="#size">Size</a>
+        
+      </nav>
+      <!-- END .site__catalogue -->
+    </div>
+    <!-- END .site__content -->
+  </div>
+  <!-- END .site -->
+  <script src="https://moyus.github.io/pointcss/js/prism.js"></script>
+  <script src="https://moyus.github.io/pointcss/js/main.js"></script>
+</body>
+</html>

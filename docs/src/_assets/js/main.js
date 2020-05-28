@@ -12,14 +12,17 @@
   /*----------------------------------------------------------------------------*/
   /* Navigation
   /*----------------------------------------------------------------------------*/
-  forEach(document.getElementsByClassName('navigation'), function (nav) {
-    nav.addEventListener('click', function (e) {
-      if (e.target.classList.contains('navigation__label')) {
-        e.target.parentNode.classList.toggle('is-open')
-      }
-    })
+  forEach(document.getElementsByClassName('menu__link'), function (menu) {
+    const sibling = menu.nextElementSibling;
+
+    if (sibling && sibling.classList.contains('menu__list')) {
+      menu.addEventListener('click', function (e) {
+        e.preventDefault()
+        menu.parentNode.classList.toggle('is-active')
+      })
+    }
   })
-  
+
   $sidebarEl = document.getElementById('sidebar')
   forEach(document.getElementsByClassName('js-sidebar-trigger'), function (el) {
     el.addEventListener('click', function (e) {

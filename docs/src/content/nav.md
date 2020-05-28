@@ -3,14 +3,14 @@ layout: master
 title: "Nav"
 catalogue:
   - Basic
-  - Variants
+  - Layout
+  - Variant
   - Sizing
-  - Placement
 ---
 
 # Nav
 
-Generic content navigation.
+Provide horizontal navigation for content.
 
 ## Basic
 
@@ -46,13 +46,51 @@ Generic content navigation.
 </ul>
 ```
 
-## Variants
+## Layout
 
-### Pills
+##### Align center
 
-By adding `.nav--pills` modifier class on `.nav` element to create pills styled nav
+Add `.nav--center` modifier class on `.nav` container.
 
-<ul class="nav nav--pills mb-6">
+<ul class="nav nav--center mb-6">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+
+##### Align end
+
+Add `.nav--end` modifier class on `.nav` container.
+
+<ul class="nav nav--end mb-6">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+
+##### Stretch
+
+Add `.nav--stretch` modifier class on `.nav` container.
+
+<ul class="nav nav--stretch mb-6">
   <li class="nav__item is-active">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -68,7 +106,14 @@ By adding `.nav--pills` modifier class on `.nav` element to create pills styled 
 </ul>
 
 ```html
-<ul class="nav nav--pills">
+<ul class="nav nav--stretch">
+  ...
+</ul>
+```
+
+### Align between
+
+<ul class="nav nav--between mb-6">
   <li class="nav__item is-active">
     <a href="#" class="nav__link">Home</a>
   </li>
@@ -82,11 +127,12 @@ By adding `.nav--pills` modifier class on `.nav` element to create pills styled 
     <a href="#" class="nav__link is-disabled">Disabled</a>
   </li>
 </ul>
-```
+
+## Variant
 
 ### Tabs
 
-By adding `.nav--tabs` modifier class on `.nav` element to create tabs styled nav
+By adding `.nav--tabs` modifier class on `.nav` element to create tabs styled nav list.
 
 <ul class="nav nav--tabs mb-6">
   <li class="nav__item is-active">
@@ -120,6 +166,42 @@ By adding `.nav--tabs` modifier class on `.nav` element to create tabs styled na
 </ul>
 ```
 
+### Pills
+
+By adding `.nav--pills` modifier class on `.nav` element to create pills styled nav list.
+
+<ul class="nav nav--pills mb-6">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+
+```html
+<ul class="nav nav--pills">
+  <li class="nav__item is-active">
+    <a href="#" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link">Another Link</a>
+  </li>
+  <li class="nav__item">
+    <a href="#" class="nav__link is-disabled">Disabled</a>
+  </li>
+</ul>
+```
+
 ## Sizing
 
 All variants can combile with sizing modifier classes to change nav size
@@ -127,7 +209,7 @@ All variants can combile with sizing modifier classes to change nav size
 - `.nav--sm`
 - `.nav--lg`
 
-##### Small sizing
+##### Small
 
 <ul class="nav nav--sm mb-6">
   <li class="nav__item">
@@ -150,7 +232,7 @@ All variants can combile with sizing modifier classes to change nav size
 </ul>
 ```
 
-##### Normal sizing
+##### Normal
 
 <ul class="nav mb-6">
   <li class="nav__item">
@@ -173,7 +255,7 @@ All variants can combile with sizing modifier classes to change nav size
 </ul>
 ```
 
-##### Large sizing
+##### Large
 
 <ul class="nav nav--lg mb-6">
   <li class="nav__item">
@@ -192,107 +274,6 @@ All variants can combile with sizing modifier classes to change nav size
 
 ```html
 <ul class="nav nav--lg">
-  ...
-</ul>
-```
-
-## Placement
-
-All variants can combile with position modifier classes to change nav placement
-
-- `.nav--start`
-- `.nav--center`
-- `.nav--end`
-- `.nav--stretch`
-
-##### Start
-
-<ul class="nav nav--start mb-6">
-  <li class="nav__item">
-    <a href="#" class="nav__link">Home</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Another Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link is-disabled">Disabled</a>
-  </li>
-</ul>
-
-```html
-<ul class="nav nav--start">
-  ...
-</ul>
-```
-
-##### Center
-
-<ul class="nav nav--rails nav--center mb-6">
-  <li class="nav__item is-active">
-    <a href="#" class="nav__link">Home</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Another Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link is-disabled">Disabled</a>
-  </li>
-</ul>
-
-```html
-<ul class="nav nav--rails nav--center">
-  ...
-</ul>
-```
-
-##### End
-
-<ul class="nav nav--pills nav--end mb-6">
-  <li class="nav__item is-active">
-    <a href="#" class="nav__link">Home</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Another Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link is-disabled">Disabled</a>
-  </li>
-</ul>
-
-```html
-<ul class="nav nav--pills nav--end">
-  ...
-</ul>
-```
-
-##### Stretch
-
-<ul class="nav nav--tabs nav--stretch mb-6">
-  <li class="nav__item is-active">
-    <a href="#" class="nav__link">Home</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Another Link</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link is-disabled">Disabled</a>
-  </li>
-</ul>
-
-```html
-<ul class="nav nav--tabs nav--stretch">
   ...
 </ul>
 ```
