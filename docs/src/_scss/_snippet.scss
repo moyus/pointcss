@@ -1,0 +1,28 @@
+.snippet {
+  border: 2px solid $grey-light;
+  margin-bottom: $spacing-stack-md;
+}
+
+.snippet__preview {
+  padding: 16px;
+}
+
+.snippet__source {
+  padding: 16px;
+  background-color: $grey-light;
+
+  .code-toolbar {
+    .toolbar {
+      top: -12px;
+      right: -8px;
+    }
+  }
+
+  pre,
+  pre[class*="language-"] {
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    background-color: none;
+  }
+}

@@ -1,0 +1,50 @@
+/* ## Article
+---------------------------------*/
+.article {
+  > h1 {
+    position: relative;
+    margin-top: 0;
+
+    span {
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        right: 0;
+        height: 8px;
+        background-color: tint-color($color-primary, 11);
+        z-index: -1;
+      }
+    }
+  }
+
+  > h2 {
+    position: relative;
+
+    &:hover .anchor {
+      display: block;
+    }
+    
+    .anchor {
+      position: absolute;
+      display: none;
+      color: $color-primary;
+      right: 100%;
+      padding-right: $spacing-stack-sm;
+      &::after {
+        content: '#';
+      }
+    }
+  }
+
+  > h2 {
+    font-size: $text-size-2xl;
+  }
+
+  > h3, > h4, > h5, > h6 {
+    font-size: $text-size-base;
+  }
+}

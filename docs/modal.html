@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha11">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha12">
 </head>
 <body>
   <div id="docs" class="site">
@@ -24,7 +24,7 @@
   <div class="navbar__end">
     <div class="navbar__item hidden-until@lg">
       <div class="site__metadata">
-        <span>v2.0.0-alpha.11</span>
+        <span>v2.0.0-alpha.12</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -185,24 +185,11 @@
 <h2 id="basic">
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
-    </h2><p><button class="btn js-modal-trigger mb-6" data-target="exampleModal">Open Modal</button></p>
-<div id="exampleModal" class="modal-wrapper hidden">
-  <section class="modal">
-    <header class="modal__header">
-      <h4 class="modal__title">Modal Title</h4>
-      <a role="button" class="modal__close js-modal-close">
-        <span aria-hidden="true">&times;</span>
-      </a>
-    </header>
-    <div class="modal__body">
-        "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
-    </div>
-    <footer class="modal__footer">
-        <button type="button" class="btn js-modal-close">Close</button>
-        <button type="button" class="btn btn--primary">Ok</button>
-    </footer>
-  </section>
-</div>
+    </h2><section class="snippet">
+  <div class="snippet__preview">
+    <button class="btn js-modal-trigger" data-target="exampleModal">Open Modal</button>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;body&gt;
   &lt;div id=&quot;exampleModal&quot; class=&quot;modal-wrapper&quot;&gt;
@@ -225,6 +212,27 @@
 
   &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+  </div>
+</section>
+
+<div id="exampleModal" class="modal-wrapper hidden">
+  <section class="modal">
+    <header class="modal__header">
+      <h4 class="modal__title">Modal Title</h4>
+      <a role="button" class="modal__close js-modal-close">
+        <span aria-hidden="true">&times;</span>
+      </a>
+    </header>
+    <div class="modal__body">
+        "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
+    </div>
+    <footer class="modal__footer">
+        <button type="button" class="btn js-modal-close">Close</button>
+        <button type="button" class="btn btn--primary">Ok</button>
+    </footer>
+  </section>
+</div>
+
 <div class="note note--warning my-5">
   <p>
     pointcss does <strong>not</strong> include any JavaScript interaction with <strong>Modal</strong>. You need to implement the class toggle by yourself.
@@ -235,10 +243,27 @@
     <a name="sizing" class="anchor" href="#sizing"></a>
     Sizing
     </h2><p>Add <code>.modal--sm</code> or <code>.modal--lg</code> modifier class on <code>.modal</code> element to quickly change the size of modal content</p>
-<div class="mb-6">
-  <button class="btn js-modal-trigger" data-target="smModal">Small Modal</button>
-  <button class="btn js-modal-trigger" data-target="lgModal">Large Modal</button>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <button class="btn js-modal-trigger" data-target="smModal">Small Modal</button>
+    <button class="btn js-modal-trigger" data-target="lgModal">Large Modal</button>
+  </div>
+  <div class="snippet__source">
+
+
+<pre><code class="language-html">&lt;div id=&quot;smModal&quot; class=&quot;modal-wrapper&quot;&gt;
+  &lt;section class=&quot;modal modal--sm&quot;&gt;
+    ...
+  &lt;/section&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;lgModal&quot; class=&quot;modal-wrapper&quot;&gt;
+  &lt;section class=&quot;modal modal--lg&quot;&gt;
+    ...
+  &lt;/section&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</section>
 
 <div id="smModal" class="modal-wrapper hidden">
   <section class="modal modal--sm">
@@ -285,18 +310,6 @@
     </footer>
   </section>
 </div>
-
-<pre><code class="language-html">&lt;div id=&quot;smModal&quot; class=&quot;modal-wrapper&quot;&gt;
-  &lt;section class=&quot;modal modal--sm&quot;&gt;
-    ...
-  &lt;/section&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;lgModal&quot; class=&quot;modal-wrapper&quot;&gt;
-  &lt;section class=&quot;modal modal--lg&quot;&gt;
-    ...
-  &lt;/section&gt;
-&lt;/div&gt;</code></pre>
 
         </article>
       </main>

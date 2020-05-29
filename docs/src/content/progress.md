@@ -3,7 +3,7 @@ layout: master
 title: "Progress"
 catalogue:
   - Basic
-  - Variants
+  - Variant
   - Sizing
   - State
 ---
@@ -12,9 +12,13 @@ catalogue:
 
 ## Basic
 
-<div class="progress mb-6">
-  <div class="progress__bar" style="width: 50%;"></div>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="progress">
+      <div class="progress__bar" style="width: 50%;"></div>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 ```html
 <div class="progress">
@@ -22,26 +26,33 @@ catalogue:
 </div>
 ```
 
-## Variants
+  </div>
+</section>
 
-<div class="progress progress--primary mb-6">
-  <div class="progress__bar" style="width: 20%;"></div>
-</div>
-<div class="progress progress--info mb-6">
-  <div class="progress__bar" style="width: 30%;"></div>
-</div>
-<div class="progress mb-6">
-  <div class="progress__bar" style="width: 40%;"></div>
-</div>
-<div class="progress progress--danger mb-6">
-  <div class="progress__bar" style="width: 50%;"></div>
-</div>
-<div class="progress progress--success mb-6">
-  <div class="progress__bar" style="width: 60%;"></div>
-</div>
-<div class="progress progress--warning mb-6">
-  <div class="progress__bar" style="width: 70%;"></div>
-</div>
+## Variant
+
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="progress progress--primary mb-6">
+      <div class="progress__bar" style="width: 20%;"></div>
+    </div>
+    <div class="progress progress--info mb-6">
+      <div class="progress__bar" style="width: 30%;"></div>
+    </div>
+    <div class="progress mb-6">
+      <div class="progress__bar" style="width: 40%;"></div>
+    </div>
+    <div class="progress progress--danger mb-6">
+      <div class="progress__bar" style="width: 50%;"></div>
+    </div>
+    <div class="progress progress--success mb-6">
+      <div class="progress__bar" style="width: 60%;"></div>
+    </div>
+    <div class="progress progress--warning">
+      <div class="progress__bar" style="width: 70%;"></div>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 ```html
 <div class="progress">
@@ -64,18 +75,25 @@ catalogue:
 </div>
 ```
 
+  </div>
+</section>
+
 ## Sizing
 Fancy smaller or larger progress? Add `.progress--sm` or `.progress--lg` modifier class for additional sizes.
 
-<div class="progress progress--sm mb-6">
-  <div class="progress__bar" style="width: 15%;"></div>
-</div>
-<div class="progress mb-6">
-  <div class="progress__bar" style="width: 30%;"></div>
-</div>
-<div class="progress progress--lg mb-6">
-  <div class="progress__bar" style="width: 60%;"></div>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="progress progress--sm mb-6">
+      <div class="progress__bar" style="width: 15%;"></div>
+    </div>
+    <div class="progress mb-6">
+      <div class="progress__bar" style="width: 30%;"></div>
+    </div>
+    <div class="progress progress--lg">
+      <div class="progress__bar" style="width: 60%;"></div>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 ```html
 <div class="progress progress--sm">
@@ -89,9 +107,25 @@ Fancy smaller or larger progress? Add `.progress--sm` or `.progress--lg` modifie
 </div>
 ```
 
+  </div>
+</section>
+
 ## State
 By adding `.is-active` modifier class to create animated progress.
 
-<div class="progress mb-6 is-active">
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="progress is-active">
+      <div class="progress__bar" style="width: 60%;"></div>
+    </div>
+  </div>
+  <div class="snippet__source">
+
+```html
+<div class="progress is-active">
   <div class="progress__bar" style="width: 60%;"></div>
 </div>
+```
+
+  </div>
+</section>

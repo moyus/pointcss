@@ -7,7 +7,7 @@ title: "Layout"
 
 Utilities for controlling an element's layout.
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Class</th>

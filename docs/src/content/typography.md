@@ -94,7 +94,7 @@ Default styles for headings, paragraphs, list, blockquote and other elements.
 
 ## Others
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Element</th>

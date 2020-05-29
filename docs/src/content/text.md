@@ -16,7 +16,7 @@ Utilities for controlling text styles.
 
 ## Text Align
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Class</th>
@@ -45,7 +45,7 @@ Utilities for controlling text styles.
 
 ## Text Decoration
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Class</th>
@@ -70,7 +70,7 @@ Utilities for controlling text styles.
 
 ## Font Style
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Class</th>
@@ -91,7 +91,7 @@ Utilities for controlling text styles.
 
 ## Font Size
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Class</th>
@@ -160,7 +160,7 @@ Utilities for controlling text styles.
 
 ## Font Weight
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Class</th>
@@ -193,7 +193,7 @@ Utilities for controlling text styles.
 
 ## Line Height
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Class</th>

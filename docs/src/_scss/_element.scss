@@ -1,0 +1,68 @@
+/* ## Element
+---------------------------------*/
+.rect {
+  display: inline-block;
+  padding: $spacing-square-md;
+  background-color: $grey-light;
+  &.is-2x {
+    padding: $spacing-square-lg;
+  }
+  &.is-3x {
+    padding: $spacing-square-xl;
+  }
+}
+
+.circle {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 1993px;
+  background-color: $grey-light;
+  &.is-2x {
+    width: 64px;
+    height: 64px;
+  }
+  &.is-3x {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+.rect-box {
+  min-height: 42px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid $grey-weak;
+  background-color: $grey-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+  white-space: normal;
+  &.is-3 {
+    min-height: 3 * 42px;
+  }
+  &.is-2 {
+    min-height: 2 * 42px;
+  }
+}
+
+.icon-menu {
+  position: relative;
+  color: $grey-dark;
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+  }
+}

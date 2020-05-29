@@ -10,7 +10,7 @@ Utilities for controlling an element's padding and margin.
 - `.p{t|r|b|l|x|y}-{size}` for padding
 - `.m{t|r|b|l|x|y}-{size}` for margin
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Size</th>

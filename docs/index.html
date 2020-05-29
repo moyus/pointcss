@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha11">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha12">
 </head>
 <body>
   <div id="docs" class="site">
@@ -24,7 +24,7 @@
   <div class="navbar__end">
     <div class="navbar__item hidden-until@lg">
       <div class="site__metadata">
-        <span>v2.0.0-alpha.11</span>
+        <span>v2.0.0-alpha.12</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -191,26 +191,26 @@
     <a name="installation" class="anchor" href="#installation"></a>
     Installation
     </h2><p>There are 3 ways to get started</p>
-<h3 id="yarn">Yarn</h3><pre><code class="language-sh">yarn add @moyu/pointcss</code></pre>
-<h3 id="npm">NPM</h3><pre><code class="language-sh">npm install @moyu/pointcss --save</code></pre>
-<h3 id="download-and-use-production-file">Download and use production file</h3><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/point.min.css&quot; /&gt;</code></pre>
+<h5 id="yarn">Yarn</h5><pre><code class="language-sh">yarn add @moyu/pointcss</code></pre>
+<h5 id="npm">NPM</h5><pre><code class="language-sh">npm install @moyu/pointcss --save</code></pre>
+<h5 id="download-and-use-production-file">Download and use production file</h5><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/point.min.css&quot; /&gt;</code></pre>
 <h2 id="customization">
     <a name="customization" class="anchor" href="#customization"></a>
     Customization
     </h2><p><strong>pointcss</strong> is coded in <a href="http://sass-lang.com/">SASS</a>, If you&#39;re familiar with it, You can continue</p>
-<h3 id="install-the-dependence">Install the dependence</h3><pre><code class="language-sh">yarn add @moyu/pointcss --dev</code></pre>
-<h3 id="set-your-variables">Set your variables</h3><p>you can reference all initial variables in <code>scss/_variables.scss</code></p>
+<h5 id="install-the-dependence">Install the dependence</h5><pre><code class="language-sh">yarn add @moyu/pointcss --dev</code></pre>
+<h5 id="set-your-variables">Set your variables</h5><p>you can reference all initial variables in <code>scss/_variables.scss</code></p>
 <pre><code class="language-scss">$color-primary:                         #636AFF; // primary
 $color-danger:                          #ff2d20; // negative
 $color-success:                         #15CD72; // positive
 $color-info:                            #0069ff; // accent
 $color-warning:                         #ED6E33; // warning
 ...</code></pre>
-<h3 id="import-pointcss-at-the-end-of-your-code">Import pointcss at the end of your code</h3><pre><code class="language-scss">// overwrite variables
+<h5 id="import-pointcss-at-the-end-of-your-code">Import pointcss at the end of your code</h5><pre><code class="language-scss">// overwrite variables
 $color-primary:                         #636AFF;
 
 // your code
-
+// ...
 @import &quot;node_modules/@moyu/pointcss/point&quot;</code></pre>
 <h2 id="browser-support">
     <a name="browser-support" class="anchor" href="#browser-support"></a>

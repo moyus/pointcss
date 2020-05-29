@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha11">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha12">
 </head>
 <body>
   <div id="docs" class="site">
@@ -24,7 +24,7 @@
   <div class="navbar__end">
     <div class="navbar__item hidden-until@lg">
       <div class="site__metadata">
-        <span>v2.0.0-alpha.11</span>
+        <span>v2.0.0-alpha.12</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -185,27 +185,31 @@
 <h2 id="basic">
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
-    </h2><form>
-  <div class="form-field">
-    <label class="form-label">Email</label>
-    <input type="email" class="form-input" placeholder="Enter Email" />
-    <small class="form-help">Please provide a valid email address.</small>
+    </h2><section class="snippet">
+  <div class="snippet__preview">
+    <form>
+      <div class="form-field">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" placeholder="Enter Email" />
+        <small class="form-help">Please provide a valid email address.</small>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-input" />
+        <div class="form-help"></div>
+      </div>
+      <div class="form-field">
+        <label class="flex items-center">
+          <input type="checkbox" class="form-checkbox" name="remember" id="remember">
+          <span class="ml-3">Remember Me?</span>
+        </label>
+      </div>
+      <div class="form-field">
+        <button class="btn">Submit</button>
+      </div>
+    </form>
   </div>
-  <div class="form-field">
-    <label class="form-label">Password</label>
-    <input type="password" class="form-input" />
-    <div class="form-help"></div>
-  </div>
-  <div class="form-field">
-    <label class="flex items-center">
-      <input type="checkbox" class="form-checkbox" name="remember" id="remember">
-      <span class="ml-3">Remember Me?</span>
-    </label>
-  </div>
-  <div class="form-field">
-    <button class="btn">Submit</button>
-  </div>
-</form>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;form&gt;
   &lt;div class=&quot;form-field&quot;&gt;
@@ -228,37 +232,44 @@
     &lt;button class=&quot;btn&quot;&gt;Submit&lt;/button&gt;
   &lt;/div&gt;
 &lt;/form&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="input">
     <a name="input" class="anchor" href="#input"></a>
     Input
     </h2><p>The <code>.form-input</code> class is mean to be used on <code>&lt;input&gt;</code> HTML element</p>
-<div class="form-field">
-  <input type="text" class="form-input" placeholder="Text input">
-</div>
-<div class="form-field">
-  <input type="password" class="form-input" value="123456">
-</div>
-<div class="form-field">
-  <input type="email" class="form-input" value="moyuboy@gmail.com">
-</div>
-<div class="form-field">
-  <input type="url" class="form-input" value="https://github.com/moyus/point">
-</div>
-<div class="form-field">
-  <input type="tel" class="form-input" value="010-123456">
-</div>
-<div class="form-field">
-  <input type="number" class="form-input" value="666">
-</div>
-<div class="form-field">
-  <input type="color" class="form-input">
-</div>
-<div class="form-field">
-  <input type="date" class="form-input">
-</div>
-<div class="form-field">
-  <input type="file" class="form-input">
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <input type="text" class="form-input" placeholder="Text input">
+    </div>
+    <div class="form-field">
+      <input type="password" class="form-input" value="123456">
+    </div>
+    <div class="form-field">
+      <input type="email" class="form-input" value="moyuboy@gmail.com">
+    </div>
+    <div class="form-field">
+      <input type="url" class="form-input" value="https://github.com/moyus/point">
+    </div>
+    <div class="form-field">
+      <input type="tel" class="form-input" value="010-123456">
+    </div>
+    <div class="form-field">
+      <input type="number" class="form-input" value="666">
+    </div>
+    <div class="form-field">
+      <input type="color" class="form-input">
+    </div>
+    <div class="form-field">
+      <input type="date" class="form-input">
+    </div>
+    <div class="form-field">
+      <input type="file" class="form-input">
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Text input&quot;&gt;
 &lt;input type=&quot;password&quot; class=&quot;form-input&quot; value=&quot;123456&quot;&gt;
@@ -269,30 +280,37 @@
 &lt;input type=&quot;color&quot; class=&quot;form-input&quot;&gt;
 &lt;input type=&quot;date&quot; class=&quot;form-input&quot;&gt;
 &lt;input type=&quot;file&quot; class=&quot;form-input&quot;&gt;</code></pre>
-<h5 id="state">State</h5><div class="form-field">
-  <input type="text" class="form-input" placeholder="Normal state">
-</div>
-<div class="form-field">
-  <input type="text" class="form-input is-hovered" placeholder="Hovered state">
-</div>
-<div class="form-field">
-  <input type="text" class="form-input is-focused" placeholder="Focused state">
-</div>
-<div class="form-field">
-  <input type="text" class="form-input" readonly placeholder="Readonly state">
-</div>
-<div class="form-field">
-  <input type="text" class="form-input" disabled placeholder="Disabled state">
-</div>
-<div class="form-field">
-  <input type="text" class="form-input is-danger" placeholder="Negative state">
-</div>
-<div class="form-field">
-  <input type="text" class="form-input is-success" placeholder="Positive state">
-</div>
-<div class="form-field">
-  <input type="text" class="form-input is-warning" placeholder="Warning state">
-</div>
+  </div>
+</section>
+
+<h5 id="state">State</h5><section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <input type="text" class="form-input" placeholder="Normal state">
+    </div>
+    <div class="form-field">
+      <input type="text" class="form-input is-hovered" placeholder="Hovered state">
+    </div>
+    <div class="form-field">
+      <input type="text" class="form-input is-focused" placeholder="Focused state">
+    </div>
+    <div class="form-field">
+      <input type="text" class="form-input" readonly placeholder="Readonly state">
+    </div>
+    <div class="form-field">
+      <input type="text" class="form-input" disabled placeholder="Disabled state">
+    </div>
+    <div class="form-field">
+      <input type="text" class="form-input is-danger" placeholder="Negative state">
+    </div>
+    <div class="form-field">
+      <input type="text" class="form-input is-success" placeholder="Positive state">
+    </div>
+    <div class="form-field">
+      <input type="text" class="form-input is-warning" placeholder="Warning state">
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Normal state&quot;&gt;
 &lt;input type=&quot;text&quot; class=&quot;form-input is-hovered&quot; placeholder=&quot;Hovered state&quot;&gt;
@@ -302,44 +320,57 @@
 &lt;input type=&quot;text&quot; class=&quot;form-input is-danger&quot; placeholder=&quot;Negative state&quot;&gt;
 &lt;input type=&quot;text&quot; class=&quot;form-input is-success&quot; placeholder=&quot;Positive state&quot;&gt;
 &lt;input type=&quot;text&quot; class=&quot;form-input is-warning&quot; placeholder=&quot;Warning state&quot;&gt;</code></pre>
-<h5 id="sizing">Sizing</h5><div class="form-field">
-  <input type="text" class="form-input form-input--sm" placeholder="Small sizing">
-</div>
-<div class="form-field">
-  <input type="text" class="form-input form-input" placeholder="Normal sizing">
-</div>
-<div class="form-field">
-  <input type="text" class="form-input form-input--lg" placeholder="Large sizing">
-</div>
+  </div>
+</section>
+
+<h5 id="sizing">Sizing</h5><section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <input type="text" class="form-input form-input--sm" placeholder="Small sizing">
+    </div>
+    <div class="form-field">
+      <input type="text" class="form-input form-input" placeholder="Normal sizing">
+    </div>
+    <div class="form-field">
+      <input type="text" class="form-input form-input--lg" placeholder="Large sizing">
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;input type=&quot;text&quot; class=&quot;form-input form-input--sm&quot; placeholder=&quot;Small sizing&quot;&gt;
 &lt;input type=&quot;text&quot; class=&quot;form-input form-input&quot; placeholder=&quot;Normal sizing&quot;&gt;
 &lt;input type=&quot;text&quot; class=&quot;form-input form-input--lg&quot; placeholder=&quot;Large sizing&quot;&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="select">
     <a name="select" class="anchor" href="#select"></a>
     Select
     </h2><p>The <code>.form-select</code> class is mean to be used on <code>&lt;select&gt;&lt;/select&gt;</code> HTML element</p>
-<div class="form-field">
-  <label class="form-label">Single</label>
-  <select class="form-select">
-    <option value="0" selected>Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
-
-<div class="form-field">
-  <label class="form-label">Multiple</label>
-  <select class="form-select" multiple>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2" selected>Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <label class="form-label">Single</label>
+      <select class="form-select">
+        <option value="0" selected>Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Multiple</label>
+      <select class="form-select" multiple>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2" selected>Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
   &lt;label class=&quot;form-label&quot;&gt;Single&lt;/label&gt;
@@ -362,82 +393,83 @@
     &lt;option value=&quot;4&quot;&gt;Paris&lt;/option&gt;
   &lt;/select&gt;
 &lt;/div&gt;</code></pre>
-<h5 id="state">State</h5><div class="form-field">
-  <select class="form-select">
-    <option>Normal state</option>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
+  </div>
+</section>
 
-<div class="form-field">
-  <select class="form-select is-hovered">
-    <option>Hovered state</option>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
-
-<div class="form-field">
-  <select class="form-select is-focused">
-    <option>Focused state</option>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
-
-<div class="form-field">
-  <select class="form-select" disabled>
-    <option>Disabled state</option>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
-
-<div class="form-field">
-  <select class="form-select is-success">
-    <option>Success state</option>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
-
-<div class="form-field">
-  <select class="form-select is-danger">
-    <option>Danger state</option>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
-
-<div class="form-field">
-  <select class="form-select is-warning">
-    <option>Warning state</option>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
+<h5 id="state">State</h5><section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <select class="form-select">
+        <option>Normal state</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <select class="form-select is-hovered">
+        <option>Hovered state</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <select class="form-select is-focused">
+        <option>Focused state</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <select class="form-select" disabled>
+        <option>Disabled state</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <select class="form-select is-success">
+        <option>Success state</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <select class="form-select is-danger">
+        <option>Danger state</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <select class="form-select is-warning">
+        <option>Warning state</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;select class=&quot;form-select&quot;&gt;...&lt;/select&gt;
 &lt;select class=&quot;form-select is-hovered&quot;&gt;...&lt;/select&gt;
@@ -446,90 +478,102 @@
 &lt;select class=&quot;form-select is-success&quot;&gt;...&lt;/select&gt;
 &lt;select class=&quot;form-select is-danger&quot;&gt;...&lt;/select&gt;
 &lt;select class=&quot;form-select is-warning&quot;&gt;...&lt;/select&gt;</code></pre>
-<h5 id="sizing">Sizing</h5><div class="form-field">
-  <select class="form-select form-select--sm">
-    <option>Small sizing</option>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
+  </div>
+</section>
 
-<div class="form-field">
-  <select class="form-select">
-    <option>Normal sizing</option>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
-
-<div class="form-field">
-  <select class="form-select form-select--lg">
-    <option>Large sizing</option>
-    <option value="0">Beijing</option>
-    <option value="1">Washington</option>
-    <option value="2">Tokyo</option>
-    <option value="3">London</option>
-    <option value="4">Paris</option>
-  </select>
-</div>
+<h5 id="sizing">Sizing</h5><section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <select class="form-select form-select--sm">
+        <option>Small sizing</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <select class="form-select">
+        <option>Normal sizing</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <select class="form-select form-select--lg">
+        <option>Large sizing</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;select class=&quot;form-select form-select--sm&quot;&gt;...&lt;/select&gt;
 &lt;select class=&quot;form-select&quot;&gt;...&lt;/select&gt;
 &lt;select class=&quot;form-select form-select--lg&quot;&gt;...&lt;/select&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="textarea">
     <a name="textarea" class="anchor" href="#textarea"></a>
     Textarea
     </h2><p>The <code>.form-textarea</code> class is mean to be used on <code>&lt;textarea&gt;&lt;/textarea&gt;</code> HTML element</p>
-<div class="form-field">
-  <textarea class="form-textarea" rows="4"></textarea>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <textarea class="form-textarea" rows="4"></textarea>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;textarea class=&quot;form-textarea&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;</code></pre>
-<h5 id="state">State</h5><div class="form-field">
-  <label class="form-label">Normal state</label>
-  <textarea class="form-textarea" rows="2"></textarea>
-</div>
+  </div>
+</section>
 
-<div class="form-field">
-  <label class="form-label">Hovered state</label>
-  <textarea class="form-textarea is-hovered" rows="2"></textarea>
-</div>
-
-<div class="form-field">
-  <label class="form-label">Focused state</label>
-  <textarea class="form-textarea is-focused" rows="2"></textarea>
-</div>
-
-<div class="form-field">
-  <label class="form-label">Readonly state</label>
-  <textarea class="form-textarea" readonly rows="2"></textarea>
-</div>
-
-<div class="form-field">
-  <label class="form-label">Disabled state</label>
-  <textarea class="form-textarea" disabled rows="2"></textarea>
-</div>
-
-<div class="form-field">
-  <label class="form-label">Success state</label>
-  <textarea class="form-textarea is-success" rows="2"></textarea>
-</div>
-
-<div class="form-field">
-  <label class="form-label">Danger state</label>
-  <textarea class="form-textarea is-danger" rows="2"></textarea>
-</div>
-
-<div class="form-field">
-  <label class="form-label">Warning state</label>
-  <textarea class="form-textarea is-warning" rows="2"></textarea>
-</div>
+<h5 id="state">State</h5><section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <label class="form-label">Normal state</label>
+      <textarea class="form-textarea" rows="2"></textarea>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Hovered state</label>
+      <textarea class="form-textarea is-hovered" rows="2"></textarea>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Focused state</label>
+      <textarea class="form-textarea is-focused" rows="2"></textarea>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Readonly state</label>
+      <textarea class="form-textarea" readonly rows="2"></textarea>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Disabled state</label>
+      <textarea class="form-textarea" disabled rows="2"></textarea>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Success state</label>
+      <textarea class="form-textarea is-success" rows="2"></textarea>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Danger state</label>
+      <textarea class="form-textarea is-danger" rows="2"></textarea>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Warning state</label>
+      <textarea class="form-textarea is-warning" rows="2"></textarea>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;textarea class=&quot;form-textarea&quot; rows=&quot;2&quot;&gt;&lt;/textarea&gt;
 &lt;textarea class=&quot;form-textarea is-hovered&quot; rows=&quot;2&quot;&gt;&lt;/textarea&gt;
@@ -539,51 +583,70 @@
 &lt;textarea class=&quot;form-textarea is-success&quot; rows=&quot;2&quot;&gt;&lt;/textarea&gt;
 &lt;textarea class=&quot;form-textarea is-danger&quot; rows=&quot;2&quot;&gt;&lt;/textarea&gt;
 &lt;textarea class=&quot;form-textarea is-warning&quot; rows=&quot;2&quot;&gt;&lt;/textarea&gt;</code></pre>
-<h5 id="sizing">Sizing</h5><div class="form-field">
-  <label class="form-label">Small sizing</label>
-  <textarea class="form-textarea form-textarea--sm" rows="4"></textarea>
-</div>
+  </div>
+</section>
 
-<div class="form-field">
-  <label class="form-label">Normal state</label>
-  <textarea class="form-textarea" rows="4"></textarea>
-</div>
-
-<div class="form-field">
-  <label class="form-label">Large sizing</label>
-  <textarea class="form-textarea form-textarea--lg" rows="4"></textarea>
-</div>
+<h5 id="sizing">Sizing</h5><section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <label class="form-label">Small sizing</label>
+      <textarea class="form-textarea form-textarea--sm" rows="4"></textarea>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Normal state</label>
+      <textarea class="form-textarea" rows="4"></textarea>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Large sizing</label>
+      <textarea class="form-textarea form-textarea--lg" rows="4"></textarea>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;textarea class=&quot;form-textarea form-textarea--sm&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;
 &lt;textarea class=&quot;form-textarea&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;
 &lt;textarea class=&quot;form-textarea form-textarea--lg&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="range">
     <a name="range" class="anchor" href="#range"></a>
     Range
     </h2><p>The <code>.form-range</code> class is mean to be used on <code>&lt;input type=&quot;range&quot;&gt;</code> HTML element</p>
-<div class="form-field">
-  <label for="gender" class="form-label">Quantity</label>
-  <input type="range" name="quantity" class="form-range" min="1" max="100" step="1" value="10">
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <label for="gender" class="form-label">Quantity</label>
+      <input type="range" name="quantity" class="form-range" min="1" max="100" step="1" value="10">
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;input type=&quot;range&quot; name=&quot;quantity&quot; class=&quot;form-range&quot; min=&quot;1&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;10&quot;&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="radio">
     <a name="radio" class="anchor" href="#radio"></a>
     Radio
     </h2><p>The <code>.form-radio</code> class is mean to be used on <code>&lt;input type=&quot;radio&quot;&gt;</code> HTML element</p>
-<div class="form-field">
-  <label for="gender" class="form-label">Gender</label>
-  <div class="flex items-center">
-    <label class="inline-flex items-center mr-5">
-      <input type="radio" name="gender" class="form-radio" checked>
-      <span class="ml-3">Male</span>
-    </label>
-    <label class="inline-flex items-center">
-      <input type="radio" name="gender" class="form-radio">
-      <span class="ml-3">Female</span>
-    </label>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <label for="gender" class="form-label">Gender</label>
+      <div class="flex items-center">
+        <label class="inline-flex items-center mr-5">
+          <input type="radio" name="gender" class="form-radio" checked>
+          <span class="ml-3">Male</span>
+        </label>
+        <label class="inline-flex items-center">
+          <input type="radio" name="gender" class="form-radio">
+          <span class="ml-3">Female</span>
+        </label>
+      </div>
+    </div>
   </div>
-</div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
   &lt;label for=&quot;gender&quot; class=&quot;form-label&quot;&gt;Gender&lt;/label&gt;
@@ -598,16 +661,23 @@
     &lt;/label&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="checkbox">
     <a name="checkbox" class="anchor" href="#checkbox"></a>
     Checkbox
     </h2><p>The <code>.form-checkbox</code> class is mean to be used on <code>&lt;input type=&quot;checkbox&quot;&gt;</code> HTML element</p>
-<div class="form-field">
-  <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox" name="remember" id="remember">
-    <span class="ml-3">Remember Me?</span>
-  </label>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <label class="flex items-center">
+        <input type="checkbox" class="form-checkbox" name="remember" id="remember">
+        <span class="ml-3">Remember Me?</span>
+      </label>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
   &lt;label class=&quot;flex items-center&quot;&gt;
@@ -615,70 +685,79 @@
     &lt;span class=&quot;ml-3&quot;&gt;Remember Me?&lt;/span&gt;
   &lt;/label&gt;
 &lt;/div&gt;</code></pre>
-<h2 id="layouts">
-    <a name="layouts" class="anchor" href="#layouts"></a>
-    Layouts
+  </div>
+</section>
+
+<h2 id="layout">
+    <a name="layout" class="anchor" href="#layout"></a>
+    Layout
     </h2><h5 id="field">Field</h5><p>Add structure to basic styled form controls</p>
-<div class="form-field">
-  <label class="form-label">Label text</label>
-  <input type="text" class="form-input" placeholder="Form control">
-  <small class="form-help">Some description text here...</small>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <label class="form-label">Label text</label>
+      <input type="text" class="form-input" placeholder="Form control">
+      <small class="form-help">Some description text here...</small>
+    </div>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
   &lt;label class=&quot;form-label&quot;&gt;Label text&lt;/label&gt;
   &lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Form control&quot;&gt;
   &lt;small class=&quot;form-help&quot;&gt;Some description text here...&lt;/small&gt;
 &lt;/div&gt;</code></pre>
+  </div>
+</section>
+
 <h5 id="group">Group</h5><p>Group form controls on a single line</p>
-<div class="form-field">
-  <div class="form-group">
-    <span class="form-addon">http://example.com/users/</span>
-    <input type="text" class="form-input">
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="form-field">
+      <div class="form-group">
+        <span class="form-addon">http://example.com/users/</span>
+        <input type="text" class="form-input">
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="form-group">
+        <input type="text" class="form-input">
+        <span class="form-addon">@example.com</span>
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="form-group">
+        <span class="form-addon">$</span>
+        <input type="text" class="form-input">
+        <span class="form-addon">.00</span>
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="form-group">
+        <span class="form-addon">From</span>
+        <input type="date" class="form-input">
+        <span class="form-addon">To</span>
+        <input type="date" class="form-input">
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="form-group">
+        <span class="form-addon">
+          <input type="radio" class="form-radio">
+        </span>
+        <input type="text" class="form-input">
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="form-group">
+        <input type="text" class="form-input">
+        <span class="form-addon">
+          <input type="checkbox" class="form-checkbox">
+        </span>
+      </div>
+    </div>
   </div>
-</div>
-
-<div class="form-field">
-  <div class="form-group">
-    <input type="text" class="form-input">
-    <span class="form-addon">@example.com</span>
-  </div>
-</div>
-
-<div class="form-field">
-  <div class="form-group">
-    <span class="form-addon">$</span>
-    <input type="text" class="form-input">
-    <span class="form-addon">.00</span>
-  </div>
-</div>
-
-<div class="form-field">
-  <div class="form-group">
-    <span class="form-addon">From</span>
-    <input type="date" class="form-input">
-    <span class="form-addon">To</span>
-    <input type="date" class="form-input">
-  </div>
-</div>
-
-<div class="form-field">
-  <div class="form-group">
-    <span class="form-addon">
-      <input type="radio" class="form-radio">
-    </span>
-    <input type="text" class="form-input">
-  </div>
-</div>
-
-<div class="form-field">
-  <div class="form-group">
-    <input type="text" class="form-input">
-    <span class="form-addon">
-      <input type="checkbox" class="form-checkbox">
-    </span>
-  </div>
-</div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
   &lt;div class=&quot;form-group&quot;&gt;
@@ -728,58 +807,72 @@
     &lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+  </div>
+</section>
+
 <h5 id="inline">Inline</h5><p>Use flex utility classes to display a series of group elements on a single row</p>
-<form class="inline-flex items-center mb-4">
-  <input type="text" class="form-input">
-  <button type="button" class="ml-3 btn btn--primary flex-no-shrink">Search</button>
-</form>
+<section class="snippet">
+  <div class="snippet__preview">
+    <form class="inline-flex items-center">
+      <input type="text" class="form-input">
+      <button type="button" class="ml-3 btn btn--primary flex-no-shrink">Search</button>
+    </form>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;form class=&quot;inline-flex items-center&quot;&gt;
   &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
   &lt;button type=&quot;button&quot; class=&quot;ml-3 btn btn--primary flex-no-shrink&quot;&gt;Search&lt;/button&gt;
 &lt;/form&gt;</code></pre>
+  </div>
+</section>
+
 <h5 id="horizontal">Horizontal</h5><p>Use Grid classes to create horizontal forms</p>
-<form class="mb-4">
-  <div class="row">
-    <div class="col-3@md">
-      <span class="form-label mt-3 hidden-down@md">Username</span>
-    </div>
-    <div class="col-9@md">
-      <div class="form-field">
-        <label class="form-label hidden-up@md">Username</label>
-        <input type="text" class="form-input">
+<section class="snippet">
+  <div class="snippet__preview">
+    <form>
+      <div class="row">
+        <div class="col-3@md">
+          <span class="form-label mt-3 hidden-down@md">Username</span>
+        </div>
+        <div class="col-9@md">
+          <div class="form-field">
+            <label class="form-label hidden-up@md">Username</label>
+            <input type="text" class="form-input">
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-3@md">
-      <span class="form-label mt-3 hidden-down@md">Password</span>
-    </div>
-    <div class="col-9@md">
-      <div class="form-field">
-        <label class="form-label hidden-up@md">Password</label>
-        <input type="password" class="form-input">
+      <div class="row">
+        <div class="col-3@md">
+          <span class="form-label mt-3 hidden-down@md">Password</span>
+        </div>
+        <div class="col-9@md">
+          <div class="form-field">
+            <label class="form-label hidden-up@md">Password</label>
+            <input type="password" class="form-input">
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row is-center">
-    <div class="col-9@md col-offset-3@md">
-      <div class="form-field">
-        <label class="inline-flex items-center">
-          <input type="checkbox" class="form-checkbox">
-          <span class="ml-3">Remember me?</span>
-        </label>
+      <div class="row is-center">
+        <div class="col-9@md col-offset-3@md">
+          <div class="form-field">
+            <label class="inline-flex items-center">
+              <input type="checkbox" class="form-checkbox">
+              <span class="ml-3">Remember me?</span>
+            </label>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-9@md col-offset-3@md">
-      <div class="form-field">
-        <button type="button" class="btn btn--primary">Login</button>
+      <div class="row">
+        <div class="col-9@md col-offset-3@md">
+          <div class="form-field">
+            <button type="button" class="btn btn--primary">Login</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
-</form>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;form&gt;
   &lt;div class=&quot;row&quot;&gt;
@@ -822,6 +915,8 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;</code></pre>
+  </div>
+</section>
 
         </article>
       </main>
@@ -842,7 +937,7 @@
         
         <a href="#checkbox">Checkbox</a>
         
-        <a href="#layouts">Layouts</a>
+        <a href="#layout">Layout</a>
         
       </nav>
       <!-- END .site__catalogue -->

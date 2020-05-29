@@ -12,7 +12,7 @@ Utilities for controlling an element's text color and background color.
 
 ## Text Color
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Class</th>
@@ -91,7 +91,7 @@ Utilities for controlling an element's text color and background color.
 
 ## Background Color
 
-<table class="table">
+<table class="table table--bordered">
   <thead>
     <tr>
       <th>Class</th>

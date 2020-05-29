@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha11">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha12">
 </head>
 <body>
   <div id="docs" class="site">
@@ -24,7 +24,7 @@
   <div class="navbar__end">
     <div class="navbar__item hidden-until@lg">
       <div class="site__metadata">
-        <span>v2.0.0-alpha.11</span>
+        <span>v2.0.0-alpha.12</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -186,24 +186,28 @@
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
     </h2><p>2-columns layout</p>
-<div class="level mb-6">
-  <div class="level__start">
-    <button class="level__item btn btn--success btn--loose">Add</button>
-    <a role="button" class="level__item">All</a>
-    <a role="button" class="level__item">Publish</a>
-    <a role="button" class="level__item">Draft</a>
-    <a role="button" class="level__item">Pending</a>
-    <a role="button" class="level__item">Trash</a>
-  </div>
-  <div class="level__end">
-    <div class="level__item">
-      <form class="inline-flex items-center">
-        <input type="text" class="form-input" placeholder="Search...">
-        <button type="button" class="btn btn--primary flex-no-shrink ml-3">Submit</button>
-      </form>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="level">
+      <div class="level__start">
+        <button class="level__item btn btn--success btn--loose">Add</button>
+        <a role="button" class="level__item">All</a>
+        <a role="button" class="level__item">Publish</a>
+        <a role="button" class="level__item">Draft</a>
+        <a role="button" class="level__item">Pending</a>
+        <a role="button" class="level__item">Trash</a>
+      </div>
+      <div class="level__end">
+        <div class="level__item">
+          <form class="inline-flex items-center">
+            <input type="text" class="form-input" placeholder="Search...">
+            <button type="button" class="btn btn--primary flex-no-shrink ml-3">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;level&quot;&gt;
   &lt;div class=&quot;level__start&quot;&gt;
@@ -223,31 +227,38 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+  </div>
+</section>
+
 <p>If you want to create 3-colums layout, you must place <code>.level__center</code> at first, so it can use <code>~</code> CSS selector to control siblings style</p>
-<div class="level mb-6">
-  <div class="level__center">
-    <div class="btn-group">
-      <button class="btn">ALL PROJECTS</button>
-      <button class="btn">SHARED</button>
-      <button class="btn">MEDIA FILES</button>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="level">
+      <div class="level__center">
+        <div class="btn-group">
+          <button class="btn">ALL PROJECTS</button>
+          <button class="btn">SHARED</button>
+          <button class="btn">MEDIA FILES</button>
+        </div>
+      </div>
+      <div class="level__start">
+        <div class="text-xl">All<span class="text-sm color-mute ml-3">34 projects</span></div>
+      </div>
+      <div class="level__end">
+        <div class="level__item">
+          <form>
+            <select class="form-select">
+              <option value="2016-01-25" selected="selected">Jul 25, 16</option>
+              <option value="2016-01-26">Jul 26, 16</option>
+              <option value="2016-01-27">Jul 27, 16</option>
+              <option value="2016-01-28">Jul 28, 16</option>
+            </select>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="level__start">
-    <div class="text-xl">All<span class="text-sm color-mute ml-3">34 projects</span></div>
-  </div>
-  <div class="level__end">
-    <div class="level__item">
-      <form>
-        <select class="form-select">
-          <option value="2016-01-25" selected="selected">Jul 25, 16</option>
-          <option value="2016-01-26">Jul 26, 16</option>
-          <option value="2016-01-27">Jul 27, 16</option>
-          <option value="2016-01-28">Jul 28, 16</option>
-        </select>
-      </form>
-    </div>
-  </div>
-</div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;level&quot;&gt;
   &lt;div class=&quot;level__center&quot;&gt;
@@ -273,30 +284,37 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="evenly">
     <a name="evenly" class="anchor" href="#evenly"></a>
     Evenly
     </h2><p>Direct place <code>.level__item</code> under <code>.level</code> container, will distribute spacing evenly</p>
-<div class="level mb-6">
-  <div class="level__item">
-    <span class="text-center">
-      <span class="block text-meta-md color-mute line-compact">Message</span>
-      <em class="block text-title-md color-dark">10</em>
-    </span>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="level">
+      <div class="level__item">
+        <span class="text-center">
+          <span class="block text-meta-md color-mute line-compact">Message</span>
+          <em class="block text-title-md color-dark">10</em>
+        </span>
+      </div>
+      <div class="level__item">
+        <span class="text-center">
+          <span class="block text-meta-md color-mute line-compact">Visitors</span>
+          <em class="block text-title-md color-dark">720</em>
+        </span>
+      </div>
+      <div class="level__item">
+        <span class="text-center">
+          <span class="block text-meta-md color-mute line-compact">Users</span>
+          <em class="block text-title-md color-dark">320</em>
+        </span>
+      </div>
+    </div>
   </div>
-  <div class="level__item">
-    <span class="text-center">
-      <span class="block text-meta-md color-mute line-compact">Visitors</span>
-      <em class="block text-title-md color-dark">720</em>
-    </span>
-  </div>
-  <div class="level__item">
-    <span class="text-center">
-      <span class="block text-meta-md color-mute line-compact">Users</span>
-      <em class="block text-title-md color-dark">320</em>
-    </span>
-  </div>
-</div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;level&quot;&gt;
   &lt;div class=&quot;level__item&quot;&gt;
@@ -318,28 +336,35 @@
     &lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="responsive">
     <a name="responsive" class="anchor" href="#responsive"></a>
     Responsive
     </h2><p>By default, level will stay horizontal layout across all breakpoints, if you want to collapse it below a breakpoint, add the <code>.level@&lt;breakpoint&gt;</code> modifier on <code>.level</code> container</p>
-<div class="level level@md mb-6">
-  <div class="level__start">
-    <button class="level__item btn btn--success btn--loose">Add</button>
-    <a role="button" class="level__item">All</a>
-    <a role="button" class="level__item">Publish</a>
-    <a role="button" class="level__item">Draft</a>
-    <a role="button" class="level__item">Pending</a>
-    <a role="button" class="level__item">Trash</a>
-  </div>
-  <div class="level__end">
-    <div class="level__item">
-      <form action="#" class="inline-flex items-center">
-        <input type="text" class="form-input" placeholder="Search...">
-        <button class="btn btn--primary flex-no-shrink ml-3">Submit</button>
-      </form>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="level level@md">
+      <div class="level__start">
+        <button class="level__item btn btn--success btn--loose">Add</button>
+        <a role="button" class="level__item">All</a>
+        <a role="button" class="level__item">Publish</a>
+        <a role="button" class="level__item">Draft</a>
+        <a role="button" class="level__item">Pending</a>
+        <a role="button" class="level__item">Trash</a>
+      </div>
+      <div class="level__end">
+        <div class="level__item">
+          <form action="#" class="inline-flex items-center">
+            <input type="text" class="form-input" placeholder="Search...">
+            <button class="btn btn--primary flex-no-shrink ml-3">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;level level@md&quot;&gt;
   &lt;div class=&quot;level__start&quot;&gt;
@@ -359,6 +384,8 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+  </div>
+</section>
 
         </article>
       </main>

@@ -1,9 +1,3 @@
-body {
-  width: 100%;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-
 /* ## Site
 ---------------------------------*/
 .site__header {
@@ -138,58 +132,7 @@ body {
   }
 }
 
-/* ## Article
----------------------------------*/
-.article > h1 {
-  position: relative;
-  margin-top: 0;
-}
-
-.article > h1 span {
-  position: relative;
-}
-
-.article > h1 span::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 4px;
-  left: 0;
-  right: 0;
-  height: 8px;
-  background-color: #ecedff;
-  z-index: -1;
-}
-
-.article > h2 {
-  position: relative;
-}
-
-.article > h2:hover .anchor {
-  display: block;
-}
-
-.article > h2 .anchor {
-  position: absolute;
-  display: none;
-  color: #636AFF;
-  right: 100%;
-  padding-right: 8px;
-}
-
-.article > h2 .anchor::after {
-  content: '#';
-}
-
-.article > h2 {
-  font-size: 24px;
-}
-
-.article > h3, .article > h4, .article > h5, .article > h6 {
-  font-size: 16px;
-}
-
-/* ## Elements
+/* ## Element
 ---------------------------------*/
 .rect {
   display: inline-block;
@@ -263,4 +206,82 @@ body {
   width: 100%;
   height: 2px;
   background-color: currentColor;
+}
+
+/* ## Article
+---------------------------------*/
+.article > h1 {
+  position: relative;
+  margin-top: 0;
+}
+
+.article > h1 span {
+  position: relative;
+}
+
+.article > h1 span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-color: #ecedff;
+  z-index: -1;
+}
+
+.article > h2 {
+  position: relative;
+}
+
+.article > h2:hover .anchor {
+  display: block;
+}
+
+.article > h2 .anchor {
+  position: absolute;
+  display: none;
+  color: #636AFF;
+  right: 100%;
+  padding-right: 8px;
+}
+
+.article > h2 .anchor::after {
+  content: '#';
+}
+
+.article > h2 {
+  font-size: 24px;
+}
+
+.article > h3, .article > h4, .article > h5, .article > h6 {
+  font-size: 16px;
+}
+
+.snippet {
+  border: 2px solid #f7f7f7;
+  margin-bottom: 16px;
+}
+
+.snippet__preview {
+  padding: 16px;
+}
+
+.snippet__source {
+  padding: 16px;
+  background-color: #f7f7f7;
+}
+
+.snippet__source .code-toolbar .toolbar {
+  top: -12px;
+  right: -8px;
+}
+
+.snippet__source pre,
+.snippet__source pre[class*="language-"] {
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  background-color: none;
 }

@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha11">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha12">
 </head>
 <body>
   <div id="docs" class="site">
@@ -24,7 +24,7 @@
   <div class="navbar__end">
     <div class="navbar__item hidden-until@lg">
       <div class="site__metadata">
-        <span>v2.0.0-alpha.11</span>
+        <span>v2.0.0-alpha.12</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -185,54 +185,58 @@
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
     </h2><p>Applying <code>.table</code> class on <code>&lt;table&gt;</code> element to quick create a styled table.</p>
-<table class="table">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Task</th>
-      <th>Completed</th>
-      <th>User</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Lorem ipsum dolor sit amet.</td>
-      <td><code>Yes</code></td>
-      <td>Jan Don</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Ipsum dolor sit amet, consectetur.</td>
-      <td><code>Yes</code></td>
-      <td>Leticia Lynn</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Dolor sit amet, consectetur adipisicing elit. Corporis, veniam!</td>
-      <td><code>Yes</code></td>
-      <td>Steele Le</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Consectetur adipisicing elit. Cupiditate, maxime!</td>
-      <td><code>No</code></td>
-      <td>Imelda Clarke</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Dicta expedita cum in. Aspernatur quasi, enim.</td>
-      <td><code>Yes</code></td>
-      <td>Eugenia Orr</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Voluptates natus, et, nisi facere at.</td>
-      <td><code>No</code></td>
-      <td>Ellis Brown</td>
-    </tr>
-  </tbody>
-</table>
+<section class="snippet">
+  <div class="snippet__preview">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Task</th>
+          <th>Completed</th>
+          <th>User</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td><code>Yes</code></td>
+          <td>Jan Don</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Ipsum dolor sit amet, consectetur.</td>
+          <td><code>Yes</code></td>
+          <td>Leticia Lynn</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Dolor sit amet, consectetur adipisicing elit. Corporis, veniam!</td>
+          <td><code>Yes</code></td>
+          <td>Steele Le</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Consectetur adipisicing elit. Cupiditate, maxime!</td>
+          <td><code>No</code></td>
+          <td>Imelda Clarke</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Dicta expedita cum in. Aspernatur quasi, enim.</td>
+          <td><code>Yes</code></td>
+          <td>Eugenia Orr</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Voluptates natus, et, nisi facere at.</td>
+          <td><code>No</code></td>
+          <td>Ellis Brown</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;table class=&quot;table&quot;&gt;
   &lt;thead&gt;
@@ -253,65 +257,72 @@
     ...
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="striped">
     <a name="striped" class="anchor" href="#striped"></a>
     Striped
     </h2><p>By adding <code>.table--striped</code> modifier class on <code>&lt;table class=&quot;table&quot;&gt;</code> element to quick create a striped table.</p>
-<table class="table table--striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Gender</th>
-      <th>Company</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Boyle Monroe</td>
-      <td>29</td>
-      <td>male</td>
-      <td>QUANTALIA</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Leticia Lynn</td>
-      <td>30</td>
-      <td>female</td>
-      <td>UTARA</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Steele Le</td>
-      <td>24</td>
-      <td>male</td>
-      <td>TERSANKI</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Imelda Clarke</td>
-      <td>32</td>
-      <td>female</td>
-      <td>TALENDULA</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Eugenia Orr</td>
-      <td>30</td>
-      <td>female</td>
-      <td>OMNIGOG</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Ellis Brown</td>
-      <td>40</td>
-      <td>male</td>
-      <td>KANGLE</td>
-    </tr>
-  </tbody>
-</table>
+<section class="snippet">
+  <div class="snippet__preview">
+    <table class="table table--striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Boyle Monroe</td>
+          <td>29</td>
+          <td>male</td>
+          <td>QUANTALIA</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Leticia Lynn</td>
+          <td>30</td>
+          <td>female</td>
+          <td>UTARA</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Steele Le</td>
+          <td>24</td>
+          <td>male</td>
+          <td>TERSANKI</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Imelda Clarke</td>
+          <td>32</td>
+          <td>female</td>
+          <td>TALENDULA</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Eugenia Orr</td>
+          <td>30</td>
+          <td>female</td>
+          <td>OMNIGOG</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Ellis Brown</td>
+          <td>40</td>
+          <td>male</td>
+          <td>KANGLE</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;table class=&quot;table table--striped&quot;&gt;
   &lt;thead&gt;
@@ -334,65 +345,72 @@
     ...
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="hover">
     <a name="hover" class="anchor" href="#hover"></a>
     Hover
     </h2><p>By adding <code>.table--hover</code> modifier class on <code>&lt;table class=&quot;table&quot;&gt;</code> element to quick create a table with hover effect.</p>
-<table class="table table--hover">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Gender</th>
-      <th>Company</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Boyle Monroe</td>
-      <td>29</td>
-      <td>male</td>
-      <td>QUANTALIA</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Leticia Lynn</td>
-      <td>30</td>
-      <td>female</td>
-      <td>UTARA</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Steele Le</td>
-      <td>24</td>
-      <td>male</td>
-      <td>TERSANKI</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Imelda Clarke</td>
-      <td>32</td>
-      <td>female</td>
-      <td>TALENDULA</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Eugenia Orr</td>
-      <td>30</td>
-      <td>female</td>
-      <td>OMNIGOG</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Ellis Brown</td>
-      <td>40</td>
-      <td>male</td>
-      <td>KANGLE</td>
-    </tr>
-  </tbody>
-</table>
+<section class="snippet">
+  <div class="snippet__preview">
+    <table class="table table--hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Boyle Monroe</td>
+          <td>29</td>
+          <td>male</td>
+          <td>QUANTALIA</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Leticia Lynn</td>
+          <td>30</td>
+          <td>female</td>
+          <td>UTARA</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Steele Le</td>
+          <td>24</td>
+          <td>male</td>
+          <td>TERSANKI</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Imelda Clarke</td>
+          <td>32</td>
+          <td>female</td>
+          <td>TALENDULA</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Eugenia Orr</td>
+          <td>30</td>
+          <td>female</td>
+          <td>OMNIGOG</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Ellis Brown</td>
+          <td>40</td>
+          <td>male</td>
+          <td>KANGLE</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;table class=&quot;table table--hover&quot;&gt;
   &lt;thead&gt;
@@ -415,65 +433,72 @@
     ...
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="bordered">
     <a name="bordered" class="anchor" href="#bordered"></a>
     Bordered
     </h2><p>By adding <code>.table--bordered</code> modifier class on <code>&lt;table class=&quot;table&quot;&gt;</code> element to quick create a table with border.</p>
-<table class="table table--bordered">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Gender</th>
-      <th>Company</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Boyle Monroe</td>
-      <td>29</td>
-      <td>male</td>
-      <td>QUANTALIA</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Leticia Lynn</td>
-      <td>30</td>
-      <td>female</td>
-      <td>UTARA</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Steele Le</td>
-      <td>24</td>
-      <td>male</td>
-      <td>TERSANKI</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Imelda Clarke</td>
-      <td>32</td>
-      <td>female</td>
-      <td>TALENDULA</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Eugenia Orr</td>
-      <td>30</td>
-      <td>female</td>
-      <td>OMNIGOG</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Ellis Brown</td>
-      <td>40</td>
-      <td>male</td>
-      <td>KANGLE</td>
-    </tr>
-  </tbody>
-</table>
+<section class="snippet">
+  <div class="snippet__preview">
+    <table class="table table--bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Boyle Monroe</td>
+          <td>29</td>
+          <td>male</td>
+          <td>QUANTALIA</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Leticia Lynn</td>
+          <td>30</td>
+          <td>female</td>
+          <td>UTARA</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Steele Le</td>
+          <td>24</td>
+          <td>male</td>
+          <td>TERSANKI</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Imelda Clarke</td>
+          <td>32</td>
+          <td>female</td>
+          <td>TALENDULA</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Eugenia Orr</td>
+          <td>30</td>
+          <td>female</td>
+          <td>OMNIGOG</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Ellis Brown</td>
+          <td>40</td>
+          <td>male</td>
+          <td>KANGLE</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;table class=&quot;table table--bordered&quot;&gt;
   &lt;thead&gt;
@@ -496,121 +521,72 @@
     ...
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
-<h2 id="size">
-    <a name="size" class="anchor" href="#size"></a>
-    Size
-    </h2><p>Use <code>.table--sm</code> or <code>.table--lg</code> modifier classes on <code>.table</code> container to change cell spacing</p>
-<table class="table table--bordered table--sm">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Gender</th>
-      <th>Company</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Boyle Monroe</td>
-      <td>29</td>
-      <td>male</td>
-      <td>QUANTALIA</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Leticia Lynn</td>
-      <td>30</td>
-      <td>female</td>
-      <td>UTARA</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Steele Le</td>
-      <td>24</td>
-      <td>male</td>
-      <td>TERSANKI</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Imelda Clarke</td>
-      <td>32</td>
-      <td>female</td>
-      <td>TALENDULA</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Eugenia Orr</td>
-      <td>30</td>
-      <td>female</td>
-      <td>OMNIGOG</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Ellis Brown</td>
-      <td>40</td>
-      <td>male</td>
-      <td>KANGLE</td>
-    </tr>
-  </tbody>
-</table>
+  </div>
+</section>
 
-<table class="table table--bordered table--lg">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Gender</th>
-      <th>Company</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Boyle Monroe</td>
-      <td>29</td>
-      <td>male</td>
-      <td>QUANTALIA</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Leticia Lynn</td>
-      <td>30</td>
-      <td>female</td>
-      <td>UTARA</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Steele Le</td>
-      <td>24</td>
-      <td>male</td>
-      <td>TERSANKI</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Imelda Clarke</td>
-      <td>32</td>
-      <td>female</td>
-      <td>TALENDULA</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Eugenia Orr</td>
-      <td>30</td>
-      <td>female</td>
-      <td>OMNIGOG</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Ellis Brown</td>
-      <td>40</td>
-      <td>male</td>
-      <td>KANGLE</td>
-    </tr>
-  </tbody>
-</table>
+<h2 id="sizing">
+    <a name="sizing" class="anchor" href="#sizing"></a>
+    Sizing
+    </h2><p>Use <code>.table--sm</code> or <code>.table--lg</code> modifier classes on <code>.table</code> container to change cell spacing</p>
+<section class="snippet">
+  <div class="snippet__preview">
+    <table class="table table--bordered table--sm">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Boyle Monroe</td>
+          <td>29</td>
+          <td>male</td>
+          <td>QUANTALIA</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Leticia Lynn</td>
+          <td>30</td>
+          <td>female</td>
+          <td>UTARA</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Steele Le</td>
+          <td>24</td>
+          <td>male</td>
+          <td>TERSANKI</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Imelda Clarke</td>
+          <td>32</td>
+          <td>female</td>
+          <td>TALENDULA</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Eugenia Orr</td>
+          <td>30</td>
+          <td>female</td>
+          <td>OMNIGOG</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Ellis Brown</td>
+          <td>40</td>
+          <td>male</td>
+          <td>KANGLE</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;table class=&quot;table table--bordered table--sm&quot;&gt;
   &lt;thead&gt;
@@ -619,9 +595,71 @@
   &lt;tbody&gt;
     ...
   &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+</section>
 
-&lt;table class=&quot;table table--bordered table--lg&quot;&gt;
+<section class="snippet">
+  <div class="snippet__preview">
+    <table class="table table--bordered table--lg">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Boyle Monroe</td>
+          <td>29</td>
+          <td>male</td>
+          <td>QUANTALIA</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Leticia Lynn</td>
+          <td>30</td>
+          <td>female</td>
+          <td>UTARA</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Steele Le</td>
+          <td>24</td>
+          <td>male</td>
+          <td>TERSANKI</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Imelda Clarke</td>
+          <td>32</td>
+          <td>female</td>
+          <td>TALENDULA</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Eugenia Orr</td>
+          <td>30</td>
+          <td>female</td>
+          <td>OMNIGOG</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Ellis Brown</td>
+          <td>40</td>
+          <td>male</td>
+          <td>KANGLE</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="snippet__source">
+
+<pre><code class="language-html">&lt;table class=&quot;table table--bordered table--lg&quot;&gt;
   &lt;thead&gt;
     ...
   &lt;/thead&gt;
@@ -629,6 +667,9 @@
     ...
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="responsive">
     <a name="responsive" class="anchor" href="#responsive"></a>
     Responsive
@@ -637,64 +678,68 @@
 <li>First, add the <code>.table@&lt;breakpoint&gt;</code> modifier on <code>.table</code> container</li>
 <li>Then, add <code>data-label=&quot;column label&quot;</code> on each <code>&lt;td&gt;</code> element with every <code>&lt;tr&gt;</code> table row</li>
 </ul>
-<table class="table table@md">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Project</th>
-      <th>Status</th>
-      <th>Author</th>
-      <th>Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th data-label="#">1</th>
-      <td data-label="Activity">tortor sollicitudin mi sit amet</td>
-      <td data-label="Status">
-        <span class="tag tag--info">Publish</span>
-      </td>
-      <td data-label="Author">Amanda Pena</td>
-      <td data-label="Date">2016-09-22</td>
-    </tr>
-    <tr>
-      <th data-label="#">2</th>
-      <td data-label="Activity">platea dictumst maecenas ut massa</td>
-      <td data-label="Status">
-        <span class="tag tag--info">Publish</span>
-      </td>
-      <td data-label="Author">Juliette Mayo</td>
-      <td data-label="Date">2016-09-20</td>
-    </tr>
-    <tr>
-      <th data-label="#">3</th>
-      <td data-label="Activity">proin leo odio porttitor id consequat in</td>
-      <td data-label="Status">
-        <span class="tag tag--default">Draft</span>
-      </td>
-      <td data-label="Author">Juliette Mayo</td>
-      <td data-label="Date">2016-09-19</td>
-    </tr>
-    <tr>
-      <th data-label="#">4</th>
-      <td data-label="Activity">etiam justo etiam pretium</td>
-      <td data-label="Status">
-        <span class="tag tag--warning">Pendding</span>
-      </td>
-      <td data-label="Author">Audra Moody</td>
-      <td data-label="Date">2016-09-15</td>
-    </tr>
-    <tr>
-      <th data-label="#">5</th>
-      <td data-label="Activity">nulla mollis molestie lorem quisque ut erat</td>
-      <td data-label="Status">
-        <span class="tag tag--info">Publish</span>
-      </td>
-      <td data-label="Author">    Esmeralda Malone</td>
-      <td data-label="Date">2016-09-10</td>
-    </tr>
-  </tbody>
-</table>
+<section class="snippet">
+  <div class="snippet__preview">
+    <table class="table table@md">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Project</th>
+          <th>Status</th>
+          <th>Author</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th data-label="#">1</th>
+          <td data-label="Activity">tortor sollicitudin mi sit amet</td>
+          <td data-label="Status">
+            <span class="tag tag--info">Publish</span>
+          </td>
+          <td data-label="Author">Amanda Pena</td>
+          <td data-label="Date">2016-09-22</td>
+        </tr>
+        <tr>
+          <th data-label="#">2</th>
+          <td data-label="Activity">platea dictumst maecenas ut massa</td>
+          <td data-label="Status">
+            <span class="tag tag--info">Publish</span>
+          </td>
+          <td data-label="Author">Juliette Mayo</td>
+          <td data-label="Date">2016-09-20</td>
+        </tr>
+        <tr>
+          <th data-label="#">3</th>
+          <td data-label="Activity">proin leo odio porttitor id consequat in</td>
+          <td data-label="Status">
+            <span class="tag tag--default">Draft</span>
+          </td>
+          <td data-label="Author">Juliette Mayo</td>
+          <td data-label="Date">2016-09-19</td>
+        </tr>
+        <tr>
+          <th data-label="#">4</th>
+          <td data-label="Activity">etiam justo etiam pretium</td>
+          <td data-label="Status">
+            <span class="tag tag--warning">Pendding</span>
+          </td>
+          <td data-label="Author">Audra Moody</td>
+          <td data-label="Date">2016-09-15</td>
+        </tr>
+        <tr>
+          <th data-label="#">5</th>
+          <td data-label="Activity">nulla mollis molestie lorem quisque ut erat</td>
+          <td data-label="Status">
+            <span class="tag tag--info">Publish</span>
+          </td>
+          <td data-label="Author">    Esmeralda Malone</td>
+          <td data-label="Date">2016-09-10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;table class=&quot;table table@md&quot;&gt;
   &lt;thead&gt;
@@ -728,6 +773,8 @@
     ...
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+  </div>
+</section>
 
         </article>
       </main>
@@ -742,7 +789,7 @@
         
         <a href="#bordered">Bordered</a>
         
-        <a href="#size">Size</a>
+        <a href="#sizing">Sizing</a>
         
         <a href="#responsive">Responsive</a>
         

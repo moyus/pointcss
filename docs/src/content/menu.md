@@ -4,7 +4,7 @@ title: "Menu"
 catalogue:
   - Basic
   - Variant
-  - Size
+  - Sizing
 ---
 
 # Menu
@@ -13,8 +13,8 @@ Provide vertical navigation for content.
 
 ## Basic
 
-<div class="row">
-  <div class="col-4@lg col-5@md">
+<section class="snippet row row--stretch">
+  <div class="snippet__preview col-4@lg col-5@md">
     <aside class="menu">
       <p class="menu__heading">OVERVIEW</p>
       <ul class="menu__list">
@@ -172,7 +172,7 @@ Provide vertical navigation for content.
       </ul>
     </aside>
   </div>
-  <div class="col-8@lg col-7@md">
+  <div class="snippet__source col-8@lg col-7@md">
 
 ```html
 <aside class="menu">
@@ -215,15 +215,17 @@ Provide vertical navigation for content.
 ```
 
   </div>
-</div>
+</section>
 
 ## Variant
 
+##### Dark
+
 Create a dark background menu by adding `.menu--dark` modifier class on `.menu` container.
 
-<div class="row">
-  <div class="col-4@lg col-5@md">
-    <aside class="menu menu--dark bg-dark p-4">
+<section class="snippet row row--stretch">
+  <div class="snippet__preview col-4@lg col-5@md">
+    <aside class="menu menu--dark bg-dark p-5">
       <p class="menu__heading">OVERVIEW</p>
       <ul class="menu__list">
         <li class="menu__item">
@@ -337,10 +339,10 @@ Create a dark background menu by adding `.menu--dark` modifier class on `.menu` 
       </ul>
     </aside>
   </div>
-  <div class="col-8@lg col-7@md">
+  <div class="snippet__source col-8@lg col-7@md">
 
 ```html
-<aside class="menu menu--dark bg-dark p-4">
+<aside class="menu menu--dark bg-dark p-5">
   <p class="menu__heading">OVERVIEW</p>
   <ul class="menu__list">
     <li class="menu__item">
@@ -358,13 +360,15 @@ Create a dark background menu by adding `.menu--dark` modifier class on `.menu` 
 ```
 
   </div>
-</div>
+</section>
+
+##### Light
 
 Create a light background menu by adding `.menu--light` modifier class on `.menu` container.
 
-<div class="row">
-  <div class="col-4@lg col-5@md">
-    <aside class="menu menu--light bg-light p-4">
+<section class="snippet row row--stretch">
+  <div class="snippet__preview col-4@lg col-5@md">
+    <aside class="menu menu--light bg-light p-5">
       <p class="menu__heading">OVERVIEW</p>
       <ul class="menu__list">
         <li class="menu__item">
@@ -478,10 +482,10 @@ Create a light background menu by adding `.menu--light` modifier class on `.menu
       </ul>
     </aside>
   </div>
-  <div class="col-8@lg col-7@md">
+  <div class="snippet__source col-8@lg col-7@md">
 
 ```html
-<aside class="menu menu--light bg-light p-4">
+<aside class="menu menu--light bg-light p-5">
   <p class="menu__heading">OVERVIEW</p>
   <ul class="menu__list">
     <li class="menu__item">
@@ -499,14 +503,14 @@ Create a light background menu by adding `.menu--light` modifier class on `.menu
 ```
 
   </div>
-</div>
+</section>
 
-## Size
+## Sizing
 
 You can create s small size of menu by adding `.menu--sm` on `.menu` container.
 
-<div class="row">
-  <div class="col-4@lg col-5@md">
+<section class="snippet row row--stretch">
+  <div class="snippet__preview col-4@lg col-5@md">
     <aside class="menu menu--sm border rounded shadow-sm p-5">
       <p class="menu__heading">OVERVIEW</p>
       <ul class="menu__list">
@@ -621,7 +625,7 @@ You can create s small size of menu by adding `.menu--sm` on `.menu` container.
       </ul>
     </aside>
   </div>
-  <div class="col-8@lg col-7@md">
+  <div class="snippet__source col-8@lg col-7@md">
 
 ```html
 <aside class="menu menu--sm border rounded shadow-sm p-5">
@@ -642,4 +646,4 @@ You can create s small size of menu by adding `.menu--sm` on `.menu` container.
 ```
 
   </div>
-</div>
+</section>

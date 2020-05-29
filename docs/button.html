@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha11">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha12">
 </head>
 <body>
   <div id="docs" class="site">
@@ -24,7 +24,7 @@
   <div class="navbar__end">
     <div class="navbar__item hidden-until@lg">
       <div class="site__metadata">
-        <span>v2.0.0-alpha.11</span>
+        <span>v2.0.0-alpha.12</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -184,23 +184,33 @@
           <h1 id="button"><span>Button</span></h1><h2 id="basic">
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
-    </h2><p><button class="btn">Button</button></p>
+    </h2><section class="snippet">
+  <div class="snippet__preview">
+    <button class="btn">Button</button>
+  </div>
+  <div class="snippet__source">
+
 <pre><code class="language-html">&lt;button class=&quot;btn&quot;&gt;Button&lt;/button&gt;</code></pre>
-<h2 id="variants">
-    <a name="variants" class="anchor" href="#variants"></a>
-    Variants
-    </h2><div class="mb-6">
-  <button class="btn btn--primary">Primary</button>
-  <button class="btn btn--info">Info</button>
-  <button class="btn btn--success">Success</button>
-  <button class="btn btn--danger">Danger</button>
-  <button class="btn btn--warning">Warning</button>
-  <button class="btn btn--black">Black</button>
-  <button class="btn btn--dark">Dark</button>
-  <button class="btn btn--light">Light</button>
-  <button class="btn btn--white">White</button>
-  <button class="btn btn--link">Link</button>
-</div>
+  </div>
+</section>
+
+<h2 id="variant">
+    <a name="variant" class="anchor" href="#variant"></a>
+    Variant
+    </h2><section class="snippet">
+  <div class="snippet__preview">
+    <button class="btn btn--primary">Primary</button>
+    <button class="btn btn--info">Info</button>
+    <button class="btn btn--success">Success</button>
+    <button class="btn btn--danger">Danger</button>
+    <button class="btn btn--warning">Warning</button>
+    <button class="btn btn--black">Black</button>
+    <button class="btn btn--dark">Dark</button>
+    <button class="btn btn--light">Light</button>
+    <button class="btn btn--white">White</button>
+    <button class="btn btn--link">Link</button>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;button class=&quot;btn btn--primary&quot;&gt;Primary&lt;/button&gt;
 &lt;button class=&quot;btn btn--info&quot;&gt;Info&lt;/button&gt;
@@ -212,18 +222,23 @@
 &lt;button class=&quot;btn btn--light&quot;&gt;Light&lt;/button&gt;
 &lt;button class=&quot;btn btn--white&quot;&gt;White&lt;/button&gt;
 &lt;button class=&quot;btn btn--link&quot;&gt;Link&lt;/button&gt;</code></pre>
+  </div>
+</section>
+
 <h5 id="outline">Outline</h5><p>By adding the <code>.btn--outline</code> modifier class on any predefined button element to remove background color</p>
-<div class="mb-6">
-  <button class="btn btn--outline btn--primary">Primary</button>
-  <button class="btn btn--outline btn--info">Info</button>
-  <button class="btn btn--outline btn--success">Success</button>
-  <button class="btn btn--outline btn--danger">Danger</button>
-  <button class="btn btn--outline btn--warning">Warning</button>
-  <button class="btn btn--outline btn--black">Black</button>
-  <button class="btn btn--outline btn--dark">Dark</button>
-  <button class="btn btn--outline btn--light">Light</button>
-  <button class="btn btn--outline btn--white">White</button>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <button class="btn btn--outline btn--primary">Primary</button>
+    <button class="btn btn--outline btn--info">Info</button>
+    <button class="btn btn--outline btn--success">Success</button>
+    <button class="btn btn--outline btn--danger">Danger</button>
+    <button class="btn btn--outline btn--warning">Warning</button>
+    <button class="btn btn--outline btn--black">Black</button>
+    <button class="btn btn--outline btn--dark">Dark</button>
+    <button class="btn btn--outline btn--light">Light</button>
+    <button class="btn btn--outline btn--white">White</button>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;button class=&quot;btn btn--outline btn--primary&quot;&gt;Primary&lt;/button&gt;
 &lt;button class=&quot;btn btn--outline btn--info&quot;&gt;Info&lt;/button&gt;
@@ -234,65 +249,91 @@
 &lt;button class=&quot;btn btn--outline btn--dark&quot;&gt;Dark&lt;/button&gt;
 &lt;button class=&quot;btn btn--outline btn--light&quot;&gt;Light&lt;/button&gt;
 &lt;button class=&quot;btn btn--outline btn--white&quot;&gt;White&lt;/button&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="state">
     <a name="state" class="anchor" href="#state"></a>
     State
-    </h2><div class="mb-6">
-  <button class="btn" disabled>Disabled</button>
-  <button class="btn btn--primary" disabled>Disabled</button>
-  <button class="btn btn--primary btn--outline" disabled>Disabled</button>
-</div>
-
+    </h2><section class="snippet">
+  <div class="snippet__preview">
+    <button class="btn" disabled>Disabled</button>
+    <button class="btn btn--primary" disabled>Disabled</button>
+    <button class="btn btn--primary btn--outline" disabled>Disabled</button>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;button class=&quot;btn&quot; disabled&gt;Disabled&lt;/button&gt;
 &lt;button class=&quot;btn btn--primary&quot; disabled&gt;Disabled&lt;/button&gt;
 &lt;button class=&quot;btn btn--primary btn--outline&quot; disabled&gt;Disabled&lt;/button&gt;</code></pre>
-<h5 id="loading">Loading</h5><div class="mb-6">
-  <button class="btn btn--loose is-loading">Loading</button>
-  <button class="btn btn--primary btn--loose is-loading" disabled>Loading</button>
-</div>
+  </div>
+</section>
+
+<h5 id="loading">Loading</h5><section class="snippet">
+  <div class="snippet__preview">
+    <button class="btn btn--loose is-loading">Loading</button>
+    <button class="btn btn--primary btn--loose is-loading" disabled>Loading</button>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;button class=&quot;btn btn--loose is-loading&quot;&gt;Loading&lt;/button&gt;
 &lt;button class=&quot;btn btn--primary btn--loose is-loading&quot; disabled&gt;Loading&lt;/button&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="sizing">
     <a name="sizing" class="anchor" href="#sizing"></a>
     Sizing
     </h2><p>Add <code>.btn--sm</code> or <code>.btn--lg</code> modifier class to quickly create different size button</p>
-<div class="mb-6">
-  <button class="btn btn--sm">Small Button</button>
-  <button class="btn">Default Size</button>
-  <button class="btn btn--lg">Large Button</button>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <button class="btn btn--sm">Small Button</button>
+    <button class="btn">Default Size</button>
+    <button class="btn btn--lg">Large Button</button>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;button class=&quot;btn btn--sm&quot;&gt;Small Button&lt;/button&gt;
 &lt;button class=&quot;btn&quot;&gt;Default Size&lt;/button&gt;
 &lt;button class=&quot;btn btn--lg&quot;&gt;Large Button&lt;/button&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="block">
     <a name="block" class="anchor" href="#block"></a>
     Block
     </h2><p>By adding <code>.btn--block</code> modifier class to quickly create block level button</p>
-<div class="mb-6">
-  <button class="btn btn--block btn--lg">Block Button</button>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <button class="btn btn--block btn--lg">Block Button</button>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;button class=&quot;btn btn--block btn--lg&quot;&gt;Block Button&lt;/button&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="group">
     <a name="group" class="anchor" href="#group"></a>
     Group
     </h2><p>Buttons can be grouped by placing multiple <code>.btn</code> elements into a <code>.btn-group</code> container element</p>
-<div class="mb-6">
-  <div class="btn-group">
-    <button class="btn">Left</button>
-    <button class="btn">Middle</button>
-    <button class="btn">Right</button>
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="btn-group">
+      <button class="btn">Left</button>
+      <button class="btn">Middle</button>
+      <button class="btn">Right</button>
+    </div>
   </div>
-</div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;btn-group&quot;&gt;
   &lt;button class=&quot;btn&quot;&gt;Left&lt;/button&gt;
   &lt;button class=&quot;btn&quot;&gt;Middle&lt;/button&gt;
   &lt;button class=&quot;btn&quot;&gt;Right&lt;/button&gt;
 &lt;/div&gt;</code></pre>
+  </div>
+</section>
 
         </article>
       </main>
@@ -301,7 +342,7 @@
         
         <a href="#basic">Basic</a>
         
-        <a href="#variants">Variants</a>
+        <a href="#variant">Variant</a>
         
         <a href="#state">State</a>
         

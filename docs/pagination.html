@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha11">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha11">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha12">
 </head>
 <body>
   <div id="docs" class="site">
@@ -24,7 +24,7 @@
   <div class="navbar__end">
     <div class="navbar__item hidden-until@lg">
       <div class="site__metadata">
-        <span>v2.0.0-alpha.11</span>
+        <span>v2.0.0-alpha.12</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -185,20 +185,22 @@
 <h2 id="basic">
     <a name="basic" class="anchor" href="#basic"></a>
     Basic
-    </h2><div class="mb-6">
-  <nav class="pagination">
-    <span class="pagination__item is-disabled">Previous</span>
-    <em class="pagination__item is-active">1</em>
-    <a href="#" class="pagination__item">2</a>
-    <a href="#" class="pagination__item">3</a>
-    <a href="#" class="pagination__item">4</a>
-    <a href="#" class="pagination__item">5</a>
-    <span class="pagination__item">...</span>
-    <a href="#" class="pagination__item">99</a>
-    <a href="#" class="pagination__item">100</a>
-    <a href="#" class="pagination__item">Next</a>
-  </nav>
-</div>
+    </h2><section class="snippet">
+  <div class="snippet__preview">
+    <nav class="pagination">
+      <span class="pagination__item is-disabled">Previous</span>
+      <em class="pagination__item is-active">1</em>
+      <a href="#" class="pagination__item">2</a>
+      <a href="#" class="pagination__item">3</a>
+      <a href="#" class="pagination__item">4</a>
+      <a href="#" class="pagination__item">5</a>
+      <span class="pagination__item">...</span>
+      <a href="#" class="pagination__item">99</a>
+      <a href="#" class="pagination__item">100</a>
+      <a href="#" class="pagination__item">Next</a>
+    </nav>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;nav class=&quot;pagination&quot;&gt;
   &lt;span class=&quot;pagination__item is-disabled&quot;&gt;Previous&lt;/span&gt;
@@ -212,24 +214,29 @@
   &lt;a href=&quot;#&quot; class=&quot;pagination__item&quot;&gt;100&lt;/a&gt;
   &lt;a href=&quot;#&quot; class=&quot;pagination__item&quot;&gt;Next&lt;/a&gt;
 &lt;/nav&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="bordered">
     <a name="bordered" class="anchor" href="#bordered"></a>
     Bordered
     </h2><p>By adding <code>.pagination--bordered</code> modifier class on <code>.pagination</code> container to quick create bordered style pagination</p>
-<div class="mb-6">
-  <nav class="pagination pagination--bordered">
-    <span class="pagination__item is-disabled">Previous</span>
-    <em class="pagination__item is-active">1</em>
-    <a href="#" class="pagination__item">2</a>
-    <a href="#" class="pagination__item">3</a>
-    <a href="#" class="pagination__item">4</a>
-    <a href="#" class="pagination__item">5</a>
-    <span class="pagination__item is-disabled">...</span>
-    <a href="#" class="pagination__item">99</a>
-    <a href="#" class="pagination__item">100</a>
-    <a href="#" class="pagination__item">Next</a>
-  </nav>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <nav class="pagination pagination--bordered">
+      <span class="pagination__item is-disabled">Previous</span>
+      <em class="pagination__item is-active">1</em>
+      <a href="#" class="pagination__item">2</a>
+      <a href="#" class="pagination__item">3</a>
+      <a href="#" class="pagination__item">4</a>
+      <a href="#" class="pagination__item">5</a>
+      <span class="pagination__item is-disabled">...</span>
+      <a href="#" class="pagination__item">99</a>
+      <a href="#" class="pagination__item">100</a>
+      <a href="#" class="pagination__item">Next</a>
+    </nav>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;nav class=&quot;pagination pagination--bordered&quot;&gt;
   &lt;span class=&quot;pagination__item is-disabled&quot;&gt;Previous&lt;/span&gt;
@@ -243,66 +250,81 @@
   &lt;a href=&quot;#&quot; class=&quot;pagination__item&quot;&gt;100&lt;/a&gt;
   &lt;a href=&quot;#&quot; class=&quot;pagination__item&quot;&gt;Next&lt;/a&gt;
 &lt;/nav&gt;</code></pre>
+  </div>
+</section>
+
 <h2 id="sizing">
     <a name="sizing" class="anchor" href="#sizing"></a>
     Sizing
     </h2><p>Add <code>.pagination--sm</code> or <code>.pagination--lg</code> modifier class to quickly create different size pagination</p>
-<div class="mb-6">
-  <nav class="pagination pagination--bordered pagination--sm">
-    <a href="#" class="pagination__item">Previous</a>
-    <em class="pagination__item is-active">1</em>
-    <a href="#" class="pagination__item">2</a>
-    <a href="#" class="pagination__item">3</a>
-    <a href="#" class="pagination__item">4</a>
-    <a href="#" class="pagination__item">5</a>
-    <span class="pagination__item">...</span>
-    <a href="#" class="pagination__item">99</a>
-    <a href="#" class="pagination__item">100</a>
-    <a href="#" class="pagination__item">Next</a>
-  </nav>
-</div>
-
-<div class="mb-6">
-  <nav class="pagination pagination--bordered">
-    <a href="#" class="pagination__item">Previous</a>
-    <em class="pagination__item is-active">1</em>
-    <a href="#" class="pagination__item">2</a>
-    <a href="#" class="pagination__item">3</a>
-    <a href="#" class="pagination__item">4</a>
-    <a href="#" class="pagination__item">5</a>
-    <span class="pagination__item">...</span>
-    <a href="#" class="pagination__item">99</a>
-    <a href="#" class="pagination__item">100</a>
-    <a href="#" class="pagination__item">Next</a>
-  </nav>
-</div>
-
-<div class="mb-6">
-  <nav class="pagination pagination--bordered pagination--lg">
-    <a href="#" class="pagination__item">Previous</a>
-    <em class="pagination__item is-active">1</em>
-    <a href="#" class="pagination__item">2</a>
-    <a href="#" class="pagination__item">3</a>
-    <a href="#" class="pagination__item">4</a>
-    <a href="#" class="pagination__item">5</a>
-    <span class="pagination__item">...</span>
-    <a href="#" class="pagination__item">99</a>
-    <a href="#" class="pagination__item">100</a>
-    <a href="#" class="pagination__item">Next</a>
-  </nav>
-</div>
+<section class="snippet">
+  <div class="snippet__preview">
+    <nav class="pagination pagination--bordered pagination--sm">
+      <a href="#" class="pagination__item">Previous</a>
+      <em class="pagination__item is-active">1</em>
+      <a href="#" class="pagination__item">2</a>
+      <a href="#" class="pagination__item">3</a>
+      <a href="#" class="pagination__item">4</a>
+      <a href="#" class="pagination__item">5</a>
+      <span class="pagination__item">...</span>
+      <a href="#" class="pagination__item">99</a>
+      <a href="#" class="pagination__item">100</a>
+      <a href="#" class="pagination__item">Next</a>
+    </nav>
+  </div>
+  <div class="snippet__source">
 
 <pre><code class="language-html">&lt;nav class=&quot;pagination pagination--bordered pagination--sm&quot;&gt;
   ...
-&lt;/nav&gt;
+&lt;/nav&gt;</code></pre>
+  </div>
+</section>
 
-&lt;nav class=&quot;pagination pagination--bordered&quot;&gt;
-  ...
-&lt;/nav&gt;
+<section class="snippet">
+  <div class="snippet__preview">
+    <nav class="pagination pagination--bordered">
+      <a href="#" class="pagination__item">Previous</a>
+      <em class="pagination__item is-active">1</em>
+      <a href="#" class="pagination__item">2</a>
+      <a href="#" class="pagination__item">3</a>
+      <a href="#" class="pagination__item">4</a>
+      <a href="#" class="pagination__item">5</a>
+      <span class="pagination__item">...</span>
+      <a href="#" class="pagination__item">99</a>
+      <a href="#" class="pagination__item">100</a>
+      <a href="#" class="pagination__item">Next</a>
+    </nav>
+  </div>
+  <div class="snippet__source">
 
-&lt;nav class=&quot;pagination pagination--bordered pagination--lg&quot;&gt;
+<pre><code class="language-html">&lt;nav class=&quot;pagination pagination--bordered&quot;&gt;
   ...
 &lt;/nav&gt;</code></pre>
+  </div>
+</section>
+
+<section class="snippet">
+  <div class="snippet__preview">
+    <nav class="pagination pagination--bordered pagination--lg">
+      <a href="#" class="pagination__item">Previous</a>
+      <em class="pagination__item is-active">1</em>
+      <a href="#" class="pagination__item">2</a>
+      <a href="#" class="pagination__item">3</a>
+      <a href="#" class="pagination__item">4</a>
+      <a href="#" class="pagination__item">5</a>
+      <span class="pagination__item">...</span>
+      <a href="#" class="pagination__item">99</a>
+      <a href="#" class="pagination__item">100</a>
+      <a href="#" class="pagination__item">Next</a>
+    </nav>
+  </div>
+  <div class="snippet__source">
+
+<pre><code class="language-html">&lt;nav class=&quot;pagination pagination--bordered pagination--lg&quot;&gt;
+  ...
+&lt;/nav&gt;</code></pre>
+  </div>
+</section>
 
         </article>
       </main>

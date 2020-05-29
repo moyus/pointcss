@@ -29,7 +29,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
 
 ### Theme Colors
 
-<table class="table table--loose">
+<table class="table">
   <thead>
     <tr>
       <th>Color</th>
@@ -41,7 +41,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
   <tbody>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-primary"></span>
+        <span class="circle is-2x shadow-md bg-primary"></span>
       </td>
       <td>
         <span class="text-lg">Primary</span>
@@ -53,7 +53,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-info"></span>
+        <span class="circle is-2x shadow-md bg-info"></span>
       </td>
       <td>
         <span class="text-lg">Info</span>
@@ -65,7 +65,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-success"></span>
+        <span class="circle is-2x shadow-md bg-success"></span>
       </td>
       <td>
         <span class="text-lg">Success</span>
@@ -77,7 +77,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-danger"></span>
+        <span class="circle is-2x shadow-md bg-danger"></span>
       </td>
       <td>
         <span class="text-lg">Danger</span>
@@ -89,7 +89,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-warning"></span>
+        <span class="circle is-2x shadow-md bg-warning"></span>
       </td>
       <td>
         <span class="text-lg">Warning</span>
@@ -104,7 +104,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
 
 ### Grey Colors
 
-<table class="table table--loose">
+<table class="table">
   <thead>
     <tr>
       <th>Color</th>
@@ -116,7 +116,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
   <tbody>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-black"></span>
+        <span class="circle is-2x shadow-md bg-black"></span>
       </td>
       <td>
         <span class="text-lg">Black</span>
@@ -128,7 +128,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-dark"></span>
+        <span class="circle is-2x shadow-md bg-dark"></span>
       </td>
       <td>
         <span class="text-lg">Dark</span>
@@ -140,7 +140,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-mute"></span>
+        <span class="circle is-2x shadow-md bg-mute"></span>
       </td>
       <td>
         <span class="text-lg">Mute</span>
@@ -152,7 +152,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-thin"></span>
+        <span class="circle is-2x shadow-md bg-thin"></span>
       </td>
       <td>
         <span class="text-lg">Thin</span>
@@ -164,7 +164,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-weak"></span>
+        <span class="circle is-2x shadow-md bg-weak"></span>
       </td>
       <td>
         <span class="text-lg">Weak</span>
@@ -176,7 +176,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-shade"></span>
+        <span class="circle is-2x shadow-md bg-shade"></span>
       </td>
       <td>
         <span class="text-lg">Shade</span>
@@ -188,7 +188,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-light"></span>
+        <span class="circle is-2x shadow-md bg-light"></span>
       </td>
       <td>
         <span class="text-lg">Light</span>
@@ -200,7 +200,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
     </tr>
     <tr>
       <td>
-        <span class="circle is-2x shadow-lg bg-white"></span>
+        <span class="circle is-2x shadow-md bg-white"></span>
       </td>
       <td>
         <span class="text-lg">White</span>
@@ -217,7 +217,7 @@ Use [BEM](http://getbem.com/) to create structured class names.
 
 Use spacing to create layouts that feels comfortable
 
-<table class="table table--loose">
+<table class="table">
   <thead>
     <tr>
       <th>Type</th>
@@ -347,7 +347,7 @@ Use spacing to create layouts that feels comfortable
 
 ## Text
 
-<table class="table table--loose">
+<table class="table">
   <thead>
     <tr>
       <th>Type</th>
