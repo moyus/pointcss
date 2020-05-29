@@ -1,6 +1,6 @@
 /*!
  * @moyu/pointcss
- * @version v2.0.0-alpha.11
+ * @version v2.0.0-alpha.12
  * @link https://github.com/moyus/pointcss
  * @author moyu <moyuboy@gmail.com> (https://moyu.io)
  * @license MIT
@@ -430,6 +430,7 @@ caption {
 
 th {
   text-align: left;
+  font-weight: 500;
 }
 
 .table {
@@ -469,6 +470,10 @@ th {
 .table.table--bordered th,
 .table.table--bordered td {
   border: 1px solid #dbdbdb;
+}
+
+.table.table--bordered th {
+  background-color: #f7f7f7;
 }
 
 .table.table--hover tbody tr:hover,
@@ -589,12 +594,16 @@ th {
   margin-right: -8px;
 }
 
-.row.no-gutters {
+.row.row--stretch {
+  align-items: stretch;
+}
+
+.row.row--gutterless {
   margin-left: 0;
   margin-right: 0;
 }
 
-.row.no-gutters > [class*="col"] {
+.row.row--gutterless > [class*="col"] {
   padding-left: 0;
   padding-right: 0;
 }
@@ -1682,6 +1691,10 @@ fieldset[disabled] .btn {
   border-bottom-color: #212121;
 }
 
+.btn.btn--icon {
+  width: 38px;
+}
+
 .btn.btn--black {
   color: #ffffff;
   border-color: #000000;
@@ -2221,12 +2234,20 @@ fieldset[disabled] .btn {
   min-width: 31px;
 }
 
+.btn.btn--sm.btn--icon {
+  width: 31px;
+}
+
 .btn.btn--lg {
   font-size: 18px;
   border-radius: 4px;
   padding: 8px 16px;
   height: 45px;
   min-width: 45px;
+}
+
+.btn.btn--lg.btn--icon {
+  width: 45px;
 }
 
 .btn.btn--loose {
@@ -3138,18 +3159,33 @@ fieldset[disabled] .btn {
   margin: 0;
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 .modal__close {
+  cursor: pointer;
   position: absolute;
   right: 16px;
   top: 16px;
-  font-size: 20px;
-  color: #616161;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
   line-height: 1;
-  cursor: pointer;
+  color: #616161;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal__close:hover {
+  background-color: #f1f1f1;
+}
+
+.modal__close:active {
+  background-color: #eaeaea;
 }
 
 .modal__body {
