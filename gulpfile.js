@@ -82,7 +82,7 @@ gulp.task('report', function () {
 })
 
 gulp.task('docs:scss', function () {
-  return gulp.src('./docs/src/style.scss')
+  return gulp.src('./docs/src/_scss/style.scss')
     .pipe(sass({
       outputStyle: 'expanded',
       precision: 8
@@ -142,14 +142,13 @@ gulp.task('watch', function () {
     './scss/**/*.scss'
   ], gulp.series('build'))
 
-  gulp.watch('./docs/src/style.scss', gulp.series('docs:scss'))
-
   gulp.watch([
     './docs/src/_templates/*',
     './docs/src/**/*.md'
   ], gulp.series('docs:html'))
-  
-  gulp.watch(['./docs/src/assets/**/*'], gulp.series('docs:assets'))
+
+  gulp.watch('./docs/src/_scss/**/*.scss', gulp.series('docs:scss'))
+  gulp.watch(['./docs/src/_assets/**/*'], gulp.series('docs:assets'))
 })
 
 /**
