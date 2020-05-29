@@ -4,9 +4,11 @@ $modal-width-sm:                           480px !default;
 $modal-width-md:                           600px !default;
 $modal-width-lg:                           900px !default;
 $modal-border-radius:                      $component-border-radius-lg !default;
+$modal-content-padding:                    $spacing-square-md !default;
 $modal-bg:                                 $component-bg !default;
 $modal-shadow:                             $shadow-lg !default;
-$modal-title-font-size:                    $text-size-xl !default;
+$modal-title-font-size:                    $text-title-sm !default;
+$modal-title-line-height:                  $line-height-normal !default;
 $modal-zIndex:                             $zIndex-9 !default;
 $mask-zIndex:                              $zIndex-6 !default;
 $mask-bg:                                  rgba($black, 0.5) !default;
@@ -52,30 +54,44 @@ $mask-bg:                                  rgba($black, 0.5) !default;
   margin: 0;
   font-weight: $font-weight-medium;
   font-size: $modal-title-font-size;
-  line-height: $line-height-tight;
+  line-height: $modal-title-line-height;
 }
 
 .modal__close {
-  position: absolute;
-  right: $spacing-square-md;
-  top: $spacing-square-md;
-  font-size: $text-size-xl;
-  color: $grey-mute;
-  line-height: 1;
   cursor: pointer;
+  position: absolute;
+  right: $modal-content-padding;
+  top: $modal-content-padding;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  line-height: 1;
+  color: $grey-mute;
+  font-size: $text-size-xl;
+  border-radius: $component-border-radius-md;
+  background-color: $grey-light;
   font-family: Helvetica, Arial, sans-serif;
+
+  &:hover {
+    background-color: darken($grey-light, 2.5%);
+  }
+  &:active {
+    background-color: darken($grey-light, 5%);
+  }
 }
 
 .modal__body {
   flex: 1 1 auto;
-  padding: $spacing-square-md;
+  padding: $modal-content-padding;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 
 .modal__footer {
   flex-shrink: 0;
-  padding: $spacing-square-md;
+  padding: $modal-content-padding;
   text-align: right;
 }
 

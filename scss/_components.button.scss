@@ -87,6 +87,10 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
   );
 }
 
+.btn.btn--icon {
+  width: $btn-height-computed;
+}
+
 .btn.btn--black {
   @include btn-variant($black);
   &.btn--outline {
@@ -132,6 +136,10 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
   padding: $btn-padding-sm;
   height: $btn-height-computed;
   min-width: $btn-height-computed;
+
+  &.btn--icon {
+    width: $btn-height-computed;
+  }
 }
 
 .btn.btn--lg {
@@ -142,6 +150,10 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
   padding: $btn-padding-lg;
   height: $btn-height-computed;
   min-width: $btn-height-computed;
+
+  &.btn--icon {
+    width: $btn-height-computed;
+  }
 }
 
 .btn.btn--loose {

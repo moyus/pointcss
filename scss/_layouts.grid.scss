@@ -6,14 +6,18 @@
   align-items: flex-start;
   margin-left: ($grid-gutter-width / -2);
   margin-right: ($grid-gutter-width / -2);
+}
 
-  &.no-gutters {
-    margin-left: 0;
-    margin-right: 0;
-    > [class*="col"] {
-      padding-left: 0;
-      padding-right: 0;
-    }
+.row.row--stretch {
+  align-items: stretch;
+}
+
+.row.row--gutterless {
+  margin-left: 0;
+  margin-right: 0;
+  > [class*="col"] {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

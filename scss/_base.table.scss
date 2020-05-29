@@ -11,6 +11,7 @@ caption {
 
 th {
   text-align: left;
+  font-weight: $font-weight-medium;
 }
 
 .table {
@@ -59,6 +60,10 @@ th {
   th,
   td {
     border: 1px solid $grey-thin;
+  }
+
+  th {
+    background-color: $grey-light;
   }
 }
 
