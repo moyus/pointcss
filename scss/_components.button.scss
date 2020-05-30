@@ -89,6 +89,14 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
 
 .btn.btn--icon {
   width: $btn-height-computed;
+  height: $btn-height-computed;
+  padding: 0;
+  > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .btn.btn--black {
