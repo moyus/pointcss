@@ -31,34 +31,22 @@
     if (!this.trigger) {
       throw Error('Trigger element does not exist!')
     }
-    
-    var targetId          = this.trigger.dataset.target
-    var toggleServiceName = this.trigger.dataset.toggle
-    var enterServiceName  = this.trigger.dataset.enter
-    var leaveServiceName  = this.trigger.dataset.leave
 
-    if (
-      typeof toggleServiceName !== 'undefined' ||
-      typeof enterServiceName !== 'undefined' ||
-      typeof leaveServiceName !== 'undefined'
-    ) {
-      if (toggleServiceName) {
-        this.type = 'toggle'
-        this.service = Toggle.services[toggleServiceName]
-      } else if (leaveServiceName) {
-        this.type = 'leave'
-        this.service = Toggle.services[leaveServiceName]
-      } else if (enterServiceName) {
-        this.type = 'enter'
-        this.service = Toggle.services[enterServiceName]
-      }
-    } else {
+    var dataset = this.trigger.dataset
+
+    if ('leave' in dataset) {
+      this.type = 'leave'
+      this.service = !dataset.leave ? Toggle.services.default : Toggle.services[dataset.leave]
+    } else if ('enter' in dataset) {
+      this.type = 'enter'
+      this.service = !dataset.enter ? Toggle.services.default : Toggle.services[dataset.enter]
+    } else if ('toggle' in dataset) {
       this.type = 'toggle'
-      this.service = Toggle.services.default
+      this.service = !dataset.toggle ? Toggle.services.default : Toggle.services[dataset.toggle]
     }
 
-    if (typeof targetId !== 'undefined') {
-      this.target = document.getElementById(targetId)
+    if (dataset.target) {
+      this.target = document.getElementById(dataset.target)
     } else {
       this.target = this.trigger
     }
