@@ -1,6 +1,6 @@
 {
   "name": "@moyu/pointcss",
-  "version": "2.0.0-alpha.12",
+  "version": "2.0.0-alpha.13",
   "website": "https://moyus.github.io/pointcss",
   "homepage": "https://github.com/moyus/pointcss",
   "author": "moyu <moyuboy@gmail.com> (https://moyu.io)",
@@ -58,6 +58,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sizereport": "^1.2.1",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
     "marked": "^0.8.0",
     "postcss-flexbugs-fixes": "^4.1.0"
   }
