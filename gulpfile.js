@@ -2,6 +2,7 @@ const gulp = require('gulp')
 const sass = require('gulp-sass')
 const rename = require('gulp-rename')
 const cssnano = require('gulp-cssnano')
+const uglify = require('gulp-uglify')
 const sizereport = require('gulp-sizereport')
 const notify = require('gulp-notify')
 const postcss = require('gulp-postcss')
@@ -54,7 +55,7 @@ nunjucksRender.setDefaults({
 /**
  * Build
  */
-gulp.task('build', function () {
+gulp.task('build:css', function () {
 
   return gulp.src('./point.scss')
     .pipe(sass({
@@ -68,20 +69,23 @@ gulp.task('build', function () {
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist'))
-    .pipe(notify('pointcss build successfully.'))
+    .pipe(notify('css build successfully.'))
 })
 
-/**
- * Size Report
- */
-gulp.task('report', function () {
-  return gulp.src('./dist/*')
-    .pipe(sizereport({
-      gzip: true
-    }))
+gulp.task('build:js', function () {
+
+  return gulp.src('./js/point.js')
+    .pipe(header(banner, { pkg : pkg }))
+    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./docs/js'))
+    .pipe(uglify())
+    .pipe(header(banner, { pkg : pkg }))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./dist'))
+    .pipe(notify('js build successfully.'))
 })
 
-gulp.task('docs:scss', function () {
+gulp.task('docs:css', function () {
   return gulp.src('./docs/src/_scss/style.scss')
     .pipe(sass({
       outputStyle: 'expanded',
@@ -90,19 +94,6 @@ gulp.task('docs:scss', function () {
     .pipe(postcss(postCssOpts))
     .pipe(gulp.dest('./docs/css'))
     .pipe(browserSync.stream())
-})
-
-gulp.task('serve', function (done) {
-  browserSync.init({
-    "server": {
-      "baseDir": "./docs"
-    }
-  })
-  done()
-})
-
-gulp.task('clean', function () {
-  return del(['docs/**', '!docs/src']);
 })
 
 gulp.task('docs:html', function () {
@@ -130,31 +121,59 @@ gulp.task('docs:html', function () {
 
 gulp.task('docs:assets', function () {
   return gulp.src('./docs/src/_assets/**/*')
-      .pipe(gulp.dest('./docs'))
+    .pipe(gulp.dest('./docs'))
 })
 
 /**
- * Watcher
+ * Dev
  */
+gulp.task('serve', function (done) {
+  browserSync.init({
+    "server": {
+      "baseDir": "./docs"
+    }
+  })
+  done()
+})
+
 gulp.task('watch', function () {
   gulp.watch([
     './point.scss',
     './scss/**/*.scss'
-  ], gulp.series('build'))
+  ], gulp.series('build:css'))
+
+  gulp.watch([
+    './js/**/*.js'
+  ], gulp.series('build:js'))
 
   gulp.watch([
     './docs/src/_templates/*',
     './docs/src/**/*.md'
   ], gulp.series('docs:html'))
 
-  gulp.watch('./docs/src/_scss/**/*.scss', gulp.series('docs:scss'))
+  gulp.watch('./docs/src/_scss/**/*.scss', gulp.series('docs:css'))
   gulp.watch(['./docs/src/_assets/**/*'], gulp.series('docs:assets'))
+})
+
+/**
+ * Common
+ */
+gulp.task('report', function () {
+  return gulp.src('./dist/*')
+    .pipe(sizereport({
+      gzip: true
+    }))
+})
+
+gulp.task('clean', function () {
+  return del(['docs/**', '!docs/src']);
 })
 
 /**
  * Scripts
  */
-gulp.task('docs', gulp.series('docs:scss', 'docs:assets', 'docs:html'))
+gulp.task('build', gulp.series('build:css', 'build:js'))
+gulp.task('docs', gulp.series('docs:css', 'docs:assets', 'docs:html'))
 gulp.task('dev', gulp.series(
   function (done) {
     isProd = false
