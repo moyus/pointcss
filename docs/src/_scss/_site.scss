@@ -113,7 +113,7 @@
     z-index: 15;
     transition: transform 300ms ease;
 
-    &.is-open {
+    &.is-active {
       box-shadow: 0 0 20px rgba($black, 0.1);
       transform: translate(220px, 0);
     }

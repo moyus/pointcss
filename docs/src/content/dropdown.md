@@ -15,7 +15,7 @@ Pure CSS interactive component for discoverable content.
 <section class="snippet">
   <div class="snippet__preview">
     <details class="dropdown">
-      <summary class="btn dropdown__trigger">Click Me</summary>
+      <summary class="btn dropdown__toggle">Click Me</summary>
       <div class="dropdown__content">
         <nav class="list list--inset list--borderless m-0">
           <a role="button" class="list__link">Item #1</a>
@@ -30,7 +30,7 @@ Pure CSS interactive component for discoverable content.
 
 ```html
 <details class="dropdown">
-  <summary class="btn dropdown__trigger">Click Me</summary>
+  <summary class="btn dropdown__toggle">Click Me</summary>
   <div class="dropdown__content">
     <nav class="list list--inset list--borderless m-0">
       <a role="button" class="list__link">Item #1</a>
@@ -63,7 +63,7 @@ Use modifier classes below on `.dropdown` container to change the content positi
     <div class="level level@md">
       <div class="level__item">
         <details class="dropdown dropdown--tl">
-          <summary class="btn dropdown__trigger">Click Me</summary>
+          <summary class="btn dropdown__toggle">Click Me</summary>
           <div class="dropdown__content">
             <nav class="list list--inset list--borderless m-0">
               <a role="button" class="list__link">Item #1</a>
@@ -76,7 +76,7 @@ Use modifier classes below on `.dropdown` container to change the content positi
       </div>
       <div class="level__item">
         <details class="dropdown dropdown--rt">
-          <summary class="btn dropdown__trigger">Click Me</summary>
+          <summary class="btn dropdown__toggle">Click Me</summary>
           <div class="dropdown__content">
             <nav class="list list--inset list--borderless m-0">
               <a role="button" class="list__link">Item #1</a>
@@ -89,7 +89,7 @@ Use modifier classes below on `.dropdown` container to change the content positi
       </div>
       <div class="level__item">
         <details class="dropdown dropdown--bl">
-          <summary class="btn dropdown__trigger">Click Me</summary>
+          <summary class="btn dropdown__toggle">Click Me</summary>
           <div class="dropdown__content">
             <nav class="list list--inset list--borderless m-0">
               <a role="button" class="list__link">Item #1</a>
@@ -101,9 +101,9 @@ Use modifier classes below on `.dropdown` container to change the content positi
         </details>
       </div>
       <div class="level__item">
-        <details class="dropdown dropdown--lt">
-          <summary class="btn dropdown__trigger">Click Me</summary>
-          <div class="dropdown__content">
+        <div class="dropdown dropdown--lt">
+          <button class="btn dropdown__toggle" data-toggle="dropdown">Click Me</button>
+          <div class="dropdown__content hidden">
             <nav class="list list--inset list--borderless m-0">
               <a role="button" class="list__link">Item #1</a>
               <a role="button" class="list__link">Item #2</a>
@@ -111,7 +111,7 @@ Use modifier classes below on `.dropdown` container to change the content positi
               <a role="button" class="list__link">Item #4</a>
             </nav>
           </div>
-        </details>
+        </div>
       </div>
     </div>
   </div>

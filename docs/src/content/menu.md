@@ -15,7 +15,7 @@ Provide vertical navigation for content.
 
 <section class="snippet row row--stretch">
   <div class="snippet__preview col-4@lg col-5@md">
-    <aside class="menu">
+    <aside class="menu" data-toggle="menu">
       <p class="menu__heading">OVERVIEW</p>
       <ul class="menu__list">
         <li class="menu__item">
@@ -225,7 +225,7 @@ Create a dark background menu by adding `.menu--dark` modifier class on `.menu` 
 
 <section class="snippet row row--stretch">
   <div class="snippet__preview col-4@lg col-5@md">
-    <aside class="menu menu--dark bg-dark p-5">
+    <aside class="menu menu--dark bg-dark p-5" data-toggle="menu">
       <p class="menu__heading">OVERVIEW</p>
       <ul class="menu__list">
         <li class="menu__item">
@@ -368,7 +368,7 @@ Create a light background menu by adding `.menu--light` modifier class on `.menu
 
 <section class="snippet row row--stretch">
   <div class="snippet__preview col-4@lg col-5@md">
-    <aside class="menu menu--light bg-light p-5">
+    <aside class="menu menu--light bg-light p-5" data-toggle="menu">
       <p class="menu__heading">OVERVIEW</p>
       <ul class="menu__list">
         <li class="menu__item">
@@ -511,7 +511,7 @@ You can create s small size of menu by adding `.menu--sm` on `.menu` container.
 
 <section class="snippet row row--stretch">
   <div class="snippet__preview col-4@lg col-5@md">
-    <aside class="menu menu--sm border rounded shadow-sm p-5">
+    <aside class="menu menu--sm border rounded shadow-sm p-5" data-toggle="menu">
       <p class="menu__heading">OVERVIEW</p>
       <ul class="menu__list">
         <li class="menu__item">

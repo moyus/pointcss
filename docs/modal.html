@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha12">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha12">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha12">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha13">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha13">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha13">
 </head>
 <body>
   <div id="docs" class="site">
@@ -22,9 +22,9 @@
     </a>
   </div>
   <div class="navbar__end">
-    <div class="navbar__item hidden-until@lg">
+    <div class="navbar__item shown@lg">
       <div class="site__metadata">
-        <span>v2.0.0-alpha.12</span>
+        <span>v2.0.0-alpha.13</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="navbar__item hidden@lg">
-      <button class="btn js-sidebar-trigger">
+      <button class="btn btn--icon" data-toggle data-target="sidebar">
         <span class="flex items-center">
           <i class="icon-menu"></i>
         </span>
@@ -46,7 +46,7 @@
     <!-- END .site__header -->
     <div class="site__content">
       <div id="sidebar" class="site__sidebar">
-        <nav id="navigation" class="menu">
+        <nav id="navigation" class="menu" data-toggle="menu">
   <ul class="menu__list">
     <li class="menu__item"> 
       <a class="menu__link">GETTING STARTED</a>
@@ -187,50 +187,48 @@
     Basic
     </h2><section class="snippet">
   <div class="snippet__preview">
-    <button class="btn js-modal-trigger" data-target="exampleModal">Open Modal</button>
+    <button class="btn" data-toggle="modal" data-target="example-modal">Open Modal</button>
   </div>
   <div class="snippet__source">
 
-<pre><code class="language-html">&lt;body&gt;
-  &lt;div id=&quot;exampleModal&quot; class=&quot;modal-wrapper&quot;&gt;
-    &lt;section class=&quot;modal&quot;&gt;
+<pre><code class="language-html">&lt;body class=&quot;is-masking&quot;&gt;
+  &lt;div id=&quot;example-modal&quot; class=&quot;modal modal--mask&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+    &lt;div class=&quot;modal__content&quot; role=&quot;document&quot;&gt;
       &lt;header class=&quot;modal__header&quot;&gt;
         &lt;h4 class=&quot;modal__title&quot;&gt;Modal Title&lt;/h4&gt;
-        &lt;a role=&quot;button&quot; class=&quot;modal__close js-modal-close&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;modal__close&quot;&gt;
           &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
-        &lt;/a&gt;
+        &lt;/button&gt;
       &lt;/header&gt;
       &lt;div class=&quot;modal__body&quot;&gt;
           &quot;You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist.&quot;
       &lt;/div&gt;
       &lt;footer class=&quot;modal__footer&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn js-modal-close&quot;&gt;Close&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Close&lt;/button&gt;
           &lt;button type=&quot;button&quot; class=&quot;btn btn--primary&quot;&gt;Ok&lt;/button&gt;
       &lt;/footer&gt;
-    &lt;/section&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-
-  &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
   </div>
 </section>
 
-<div id="exampleModal" class="modal-wrapper hidden">
-  <section class="modal">
+<div id="example-modal" class="modal modal--mask hidden" tabindex="-1" role="dialog">
+  <div class="modal__content" role="document">
     <header class="modal__header">
       <h4 class="modal__title">Modal Title</h4>
-      <a role="button" class="modal__close js-modal-close">
+      <button type="button" class="modal__close" data-leave="modal" data-target="example-modal">
         <span aria-hidden="true">&times;</span>
-      </a>
+      </button>
     </header>
     <div class="modal__body">
         "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
     </div>
     <footer class="modal__footer">
-        <button type="button" class="btn js-modal-close">Close</button>
+        <button type="button" class="btn" data-leave="modal" data-target="example-modal">Close</button>
         <button type="button" class="btn btn--primary">Ok</button>
     </footer>
-  </section>
+  </div>
 </div>
 
 <div class="note note--warning my-5">
@@ -245,33 +243,33 @@
     </h2><p>Add <code>.modal--sm</code> or <code>.modal--lg</code> modifier class on <code>.modal</code> element to quickly change the size of modal content</p>
 <section class="snippet">
   <div class="snippet__preview">
-    <button class="btn js-modal-trigger" data-target="smModal">Small Modal</button>
-    <button class="btn js-modal-trigger" data-target="lgModal">Large Modal</button>
+    <button class="btn js-modal-trigger" data-toggle="modal" data-target="sm-modal">Small Modal</button>
+    <button class="btn js-modal-trigger" data-toggle="modal" data-target="lg-modal">Large Modal</button>
   </div>
   <div class="snippet__source">
 
 
-<pre><code class="language-html">&lt;div id=&quot;smModal&quot; class=&quot;modal-wrapper&quot;&gt;
-  &lt;section class=&quot;modal modal--sm&quot;&gt;
+<pre><code class="language-html">&lt;div id=&quot;sm-modal&quot; class=&quot;modal modal--mask modal--sm&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+  &lt;div class=&quot;modal__content&quot; role=&quot;document&quot;&gt;
     ...
-  &lt;/section&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;lgModal&quot; class=&quot;modal-wrapper&quot;&gt;
-  &lt;section class=&quot;modal modal--lg&quot;&gt;
+&lt;div id=&quot;lg-modal&quot; class=&quot;modal modal--mask modal--lg&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+  &lt;div class=&quot;modal__content&quot; role=&quot;document&quot;&gt;
     ...
-  &lt;/section&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
   </div>
 </section>
 
-<div id="smModal" class="modal-wrapper hidden">
-  <section class="modal modal--sm">
+<div id="sm-modal" class="modal modal--mask modal--sm hidden" tabindex="-1" role="dialog">
+  <div class="modal__content" role="document">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
-      <a role="button" class="modal__close js-modal-close">
+      <button type="button" class="modal__close" data-leave="modal" data-target="sm-modal">
         <span aria-hidden="true">&times;</span>
-      </a>
+      </button>
     </header>
     <div class="modal__body">
       Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est
@@ -282,19 +280,19 @@
       consectetur.
     </div>
     <footer class="modal__footer">
-        <button type="button" class="btn js-modal-close">Close</button>
+        <button type="button" class="btn" data-leave="modal" data-target="sm-modal">Close</button>
         <button type="button" class="btn btn--primary">Ok</button>
     </footer>
-  </section>
+  </div>
 </div>
 
-<div id="lgModal" class="modal-wrapper hidden">
-  <section class="modal modal--lg">
+<div id="lg-modal" class="modal modal--mask modal--lg hidden" tabindex="-1" role="dialog">
+  <div class="modal__content" role="document">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
-      <a role="button" class="modal__close js-modal-close">
+      <button type="button" class="modal__close" data-leave="modal" data-target="lg-modal">
         <span aria-hidden="true">&times;</span>
-      </a>
+      </button>
     </header>
     <div class="modal__body">
       Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est
@@ -305,10 +303,10 @@
       consectetur.
     </div>
     <footer class="modal__footer">
-        <button type="button" class="btn js-modal-close">Close</button>
-        <button type="button" class="btn btn--primary">Ok</button>
+      <button type="button" class="btn" data-leave="modal" data-target="lg-modal">Close</button>
+      <button type="button" class="btn btn--primary">Ok</button>
     </footer>
-  </section>
+  </div>
 </div>
 
         </article>
@@ -327,6 +325,6 @@
   </div>
   <!-- END .site -->
   <script src="https://moyus.github.io/pointcss/js/prism.js"></script>
-  <script src="https://moyus.github.io/pointcss/js/main.js"></script>
+  <script src="https://moyus.github.io/pointcss/js/point.js"></script>
 </body>
 </html>

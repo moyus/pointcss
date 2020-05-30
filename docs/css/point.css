@@ -1,6 +1,6 @@
 /*!
  * @moyu/pointcss
- * @version v2.0.0-alpha.12
+ * @version v2.0.0-alpha.13
  * @link https://github.com/moyus/pointcss
  * @author moyu <moyuboy@gmail.com> (https://moyu.io)
  * @license MIT
@@ -2306,7 +2306,7 @@ fieldset[disabled] .btn {
   display: inline-block;
 }
 
-.dropdown__trigger::-webkit-details-marker {
+.dropdown__toggle::-webkit-details-marker {
   display: none;
 }
 
@@ -3118,7 +3118,7 @@ fieldset[disabled] .btn {
 
 /* ## Modal
 ---------------------------------*/
-.modal-wrapper {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -3132,11 +3132,11 @@ fieldset[disabled] .btn {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.modal-wrapper::-webkit-scrollbar {
+.modal::-webkit-scrollbar {
   display: none;
 }
 
-.modal {
+.modal__content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -3175,9 +3175,15 @@ fieldset[disabled] .btn {
   line-height: 1;
   color: #616161;
   font-size: 20px;
+  margin: 0;
+  padding: 0;
+  border: 0;
   border-radius: 4px;
   background-color: #f7f7f7;
   font-family: Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .modal__close:hover {
@@ -3201,11 +3207,15 @@ fieldset[disabled] .btn {
   text-align: right;
 }
 
-.modal.modal--sm {
+.modal.modal--mask {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.modal--sm .modal__content {
   max-width: 480px;
 }
 
-.modal.modal--lg {
+.modal.modal--lg .modal__content {
   max-width: 900px;
 }
 

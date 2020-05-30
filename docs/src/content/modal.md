@@ -14,53 +14,51 @@ A floating layer to get user's feedback or display information.
 
 <section class="snippet">
   <div class="snippet__preview">
-    <button class="btn js-modal-trigger" data-target="exampleModal">Open Modal</button>
+    <button class="btn" data-toggle="modal" data-target="example-modal">Open Modal</button>
   </div>
   <div class="snippet__source">
 
 ```html
-<body>
-  <div id="exampleModal" class="modal-wrapper">
-    <section class="modal">
+<body class="is-masking">
+  <div id="example-modal" class="modal modal--mask" tabindex="-1" role="dialog">
+    <div class="modal__content" role="document">
       <header class="modal__header">
         <h4 class="modal__title">Modal Title</h4>
-        <a role="button" class="modal__close js-modal-close">
+        <button type="button" class="modal__close">
           <span aria-hidden="true">&times;</span>
-        </a>
+        </button>
       </header>
       <div class="modal__body">
           "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
       </div>
       <footer class="modal__footer">
-          <button type="button" class="btn js-modal-close">Close</button>
+          <button type="button" class="btn">Close</button>
           <button type="button" class="btn btn--primary">Ok</button>
       </footer>
-    </section>
+    </div>
   </div>
-
-  <div class="mask"></div>
 </div>
 ```
 
   </div>
 </section>
 
-<div id="exampleModal" class="modal-wrapper hidden">
-  <section class="modal">
+<div id="example-modal" class="modal modal--mask hidden" tabindex="-1" role="dialog">
+  <div class="modal__content" role="document">
     <header class="modal__header">
       <h4 class="modal__title">Modal Title</h4>
-      <a role="button" class="modal__close js-modal-close">
+      <button type="button" class="modal__close" data-leave="modal" data-target="example-modal">
         <span aria-hidden="true">&times;</span>
-      </a>
+      </button>
     </header>
     <div class="modal__body">
         "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
     </div>
     <footer class="modal__footer">
-        <button type="button" class="btn js-modal-close">Close</button>
+        <button type="button" class="btn" data-leave="modal" data-target="example-modal">Close</button>
         <button type="button" class="btn btn--primary">Ok</button>
     </footer>
-  </section>
+  </div>
 </div>
 
 <div class="note note--warning my-5">
@@ -75,36 +73,36 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly c
 
 <section class="snippet">
   <div class="snippet__preview">
-    <button class="btn js-modal-trigger" data-target="smModal">Small Modal</button>
-    <button class="btn js-modal-trigger" data-target="lgModal">Large Modal</button>
+    <button class="btn js-modal-trigger" data-toggle="modal" data-target="sm-modal">Small Modal</button>
+    <button class="btn js-modal-trigger" data-toggle="modal" data-target="lg-modal">Large Modal</button>
   </div>
   <div class="snippet__source">
 
 
 ```html
-<div id="smModal" class="modal-wrapper">
-  <section class="modal modal--sm">
+<div id="sm-modal" class="modal modal--mask modal--sm" tabindex="-1" role="dialog">
+  <div class="modal__content" role="document">
     ...
-  </section>
+  </div>
 </div>
 
-<div id="lgModal" class="modal-wrapper">
-  <section class="modal modal--lg">
+<div id="lg-modal" class="modal modal--mask modal--lg" tabindex="-1" role="dialog">
+  <div class="modal__content" role="document">
     ...
-  </section>
+  </div>
 </div>
 ```
 
   </div>
 </section>
 
-<div id="smModal" class="modal-wrapper hidden">
-  <section class="modal modal--sm">
+<div id="sm-modal" class="modal modal--mask modal--sm hidden" tabindex="-1" role="dialog">
+  <div class="modal__content" role="document">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
-      <a role="button" class="modal__close js-modal-close">
+      <button type="button" class="modal__close" data-leave="modal" data-target="sm-modal">
         <span aria-hidden="true">&times;</span>
-      </a>
+      </button>
     </header>
     <div class="modal__body">
       Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est
@@ -115,19 +113,19 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly c
       consectetur.
     </div>
     <footer class="modal__footer">
-        <button type="button" class="btn js-modal-close">Close</button>
+        <button type="button" class="btn" data-leave="modal" data-target="sm-modal">Close</button>
         <button type="button" class="btn btn--primary">Ok</button>
     </footer>
-  </section>
+  </div>
 </div>
 
-<div id="lgModal" class="modal-wrapper hidden">
-  <section class="modal modal--lg">
+<div id="lg-modal" class="modal modal--mask modal--lg hidden" tabindex="-1" role="dialog">
+  <div class="modal__content" role="document">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
-      <a role="button" class="modal__close js-modal-close">
+      <button type="button" class="modal__close" data-leave="modal" data-target="lg-modal">
         <span aria-hidden="true">&times;</span>
-      </a>
+      </button>
     </header>
     <div class="modal__body">
       Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est
@@ -138,8 +136,8 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly c
       consectetur.
     </div>
     <footer class="modal__footer">
-        <button type="button" class="btn js-modal-close">Close</button>
-        <button type="button" class="btn btn--primary">Ok</button>
+      <button type="button" class="btn" data-leave="modal" data-target="lg-modal">Close</button>
+      <button type="button" class="btn btn--primary">Ok</button>
     </footer>
-  </section>
+  </div>
 </div>
