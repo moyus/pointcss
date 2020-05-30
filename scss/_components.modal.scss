@@ -13,7 +13,7 @@ $modal-zIndex:                             $zIndex-9 !default;
 $mask-zIndex:                              $zIndex-6 !default;
 $mask-bg:                                  rgba($black, 0.5) !default;
 
-.modal-wrapper {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +31,7 @@ $mask-bg:                                  rgba($black, 0.5) !default;
   }
 }
 
-.modal {
+.modal__content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -70,9 +70,13 @@ $mask-bg:                                  rgba($black, 0.5) !default;
   line-height: 1;
   color: $grey-mute;
   font-size: $text-size-xl;
+  margin: 0;
+  padding: 0;
+  border: 0;
   border-radius: $component-border-radius-md;
   background-color: $grey-light;
   font-family: Helvetica, Arial, sans-serif;
+  appearance: none;
 
   &:hover {
     background-color: darken($grey-light, 2.5%);
@@ -95,12 +99,20 @@ $mask-bg:                                  rgba($black, 0.5) !default;
   text-align: right;
 }
 
+.modal.modal--mask {
+  background-color: rgba($black, 0.5);
+}
+
 .modal.modal--sm {
-  max-width: $modal-width-sm;
+  .modal__content {
+    max-width: $modal-width-sm;
+  }
 }
 
 .modal.modal--lg {
-  max-width: $modal-width-lg;
+  .modal__content {
+    max-width: $modal-width-lg;
+  }
 }
 
 .mask {

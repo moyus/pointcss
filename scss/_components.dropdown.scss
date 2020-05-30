@@ -14,7 +14,7 @@ $dropdown-content-zIndex: $zIndex-1 !default;
   display: inline-block;
 }
 
-.dropdown__trigger {
+.dropdown__toggle {
   &::-webkit-details-marker {
 		display: none;
 	}
