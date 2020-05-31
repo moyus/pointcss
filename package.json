@@ -1,6 +1,6 @@
 {
   "name": "@moyu/pointcss",
-  "version": "2.0.0-alpha.13",
+  "version": "2.0.0-alpha.14",
   "website": "https://moyus.github.io/pointcss",
   "homepage": "https://github.com/moyus/pointcss",
   "author": "moyu <moyuboy@gmail.com> (https://moyu.io)",
@@ -38,7 +38,7 @@
     "Explorer 11",
     "iOS >= 10",
     "Safari >= 10",
-    "Android >= 5"
+    "Android >= 6"
   ],
   "scripts": {
     "start": "gulp dev",
