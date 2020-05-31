@@ -1,25 +1,25 @@
 /* ## Nav
 ---------------------------------*/
-$nav-item-color: $grey-mute !default;
-$nav-item-gutter: $spacing-stack-md !default;
-$nav-item-hover-color: $grey-dark !default;
-$nav-item-active-color: $color-primary !default;
+$nav-color: $grey-mute !default;
+$nav-gutter: $spacing-stack-md !default;
+$nav-hover-color: $grey-dark !default;
+$nav-active-color: $color-primary !default;
 
-$nav-tabs-item-gutter: $spacing-stack-xs !default;
-$nav-tabs-item-padding: 0.375em 0.75em !default;
-$nav-tabs-item-border-width: $component-border-width !default;
-$nav-tabs-item-border-color: $grey-thin !default;
-$nav-tabs-item-hover-color: $grey-dark !default;
-$nav-tabs-item-hover-border-color: $grey-dark !default;
-$nav-tabs-item-active-color: $color-primary !default;
-$nav-tabs-item-active-border-color: $color-primary !default;
+$nav-tabs-line-color: $grey-weak !default;
+$nav-tabs-gutter: $spacing-stack-xs !default;
+$nav-tabs-padding: 0.375em 0.75em !default;
+$nav-tabs-border-width: $shape-border-width !default;
+$nav-tabs-hover-color: $grey-dark !default;
+$nav-tabs-hover-border-color: $grey-dark !default;
+$nav-tabs-active-color: $color-primary !default;
+$nav-tabs-active-border-color: $color-primary !default;
 
-$nav-pills-item-gutter: $spacing-stack-xs !default;
-$nav-pills-item-padding: 0.375em 0.75em !default;
-$nav-pills-item-border-radius: $component-border-radius-md !default;
-$nav-pills-item-hover-bg: $grey-light !default;
-$nav-pills-item-active-bg: $color-primary !default;
-$nav-pills-item-active-color: invert-color($color-primary) !default;
+$nav-pills-gutter: $spacing-stack-xs !default;
+$nav-pills-padding: 0.375em 0.75em !default;
+$nav-pills-border-radius: $shape-border-radius-md !default;
+$nav-pills-hover-bg: $grey-light !default;
+$nav-pills-active-bg: $color-primary !default;
+$nav-pills-active-color: invert-color($color-primary) !default;
 
 .nav {
   position: relative;
@@ -34,14 +34,14 @@ $nav-pills-item-active-color: invert-color($color-primary) !default;
   position: relative;
 
   &:not(:last-child) {
-    margin: 0 $nav-item-gutter 0 0;
+    margin: 0 $nav-gutter 0 0;
   }
 }
 
 .nav__link {
   cursor: pointer;
   display: block;
-  color: $nav-item-color;
+  color: $nav-color;
   line-height: $line-height-normal;
   text-align: center;
   white-space: nowrap;
@@ -49,7 +49,7 @@ $nav-pills-item-active-color: invert-color($color-primary) !default;
   text-decoration: none;
 
   &:hover {
-    color: $nav-item-hover-color;
+    color: $nav-hover-color;
   }
 
   &[disabled],
@@ -59,7 +59,7 @@ $nav-pills-item-active-color: invert-color($color-primary) !default;
   }
 
   &.is-active {
-    color: $nav-item-active-color;
+    color: $nav-active-color;
   }
 }
 
@@ -96,49 +96,49 @@ $nav-pills-item-active-color: invert-color($color-primary) !default;
 .nav.nav--pills {
   > .nav__item {
     &:not(:last-child) {
-      margin-right: $nav-pills-item-gutter;
+      margin-right: $nav-pills-gutter;
     }
   
     > .nav__link {
-      padding: $nav-pills-item-padding;
-      border-radius: $nav-pills-item-border-radius;
+      padding: $nav-pills-padding;
+      border-radius: $nav-pills-border-radius;
 
       &:hover {
-        background-color: $nav-pills-item-hover-bg;
+        background-color: $nav-pills-hover-bg;
       }
     }
 
     &.is-active {
       > .nav__link {
-        color: $nav-pills-item-active-color;
-        background-color: $nav-pills-item-active-bg;
+        color: $nav-pills-active-color;
+        background-color: $nav-pills-active-bg;
       }
     }
   }
 }
 
 .nav.nav--tabs {
-  border-bottom: $nav-tabs-item-border-width solid $nav-tabs-item-border-color;
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-line-color;
 
   > .nav__item {
     &:not(:last-child) {
-      margin-right: $nav-tabs-item-gutter;
+      margin-right: $nav-tabs-gutter;
     }
 
     > .nav__link {
-      padding: $nav-tabs-item-padding;
-      margin: 0 0 (0 - $nav-tabs-item-border-width) 0;
-      border-bottom: $nav-tabs-item-border-width solid transparent;
+      padding: $nav-tabs-padding;
+      margin: 0 0 (0 - $nav-tabs-border-width) 0;
+      border-bottom: $nav-tabs-border-width solid transparent;
       &:hover {
-        color: $nav-tabs-item-hover-color;
-        border-color: $nav-tabs-item-hover-border-color;
+        color: $nav-tabs-hover-color;
+        border-color: $nav-tabs-hover-border-color;
       }
     }
 
     &.is-active {
       > .nav__link {
-        color: $nav-tabs-item-active-color;
-        border-color: $nav-tabs-item-active-border-color;
+        color: $nav-tabs-active-color;
+        border-color: $nav-tabs-active-border-color;
       }
     }
   }

@@ -1,26 +1,27 @@
 /* ## Box
 ---------------------------------*/
-$box-border-width: $component-border-width !default;
-$box-border-radius: $component-border-radius-md !default;
-$box-margin-bottom: $spacing-stack-lg !default;
-$box-title-size: $text-size-base !default;
+$box-border-color: $grey-thin !default;
+$box-border-width: $shape-border-width !default;
+$box-border-radius: $shape-border-radius-md !default;
+$box-header-font-size: $text-size-md !default;
+$box-header-color: $grey-dark !default;
+$box-header-bg: $grey-light !default;
 $box-header-padding: $spacing-squish-md !default;
 $box-inner-padding: $spacing-square-md !default;
-$box-bg: $component-bg !default;
+$box-bg: $shape-bg !default;
 
 .box {
-  margin-bottom: $box-margin-bottom;
   border-radius: $box-border-radius;
 }
 
 .box__header {
-  color: $grey-dark;
-  font-size: $box-title-size;
+  color: $box-header-color;
+  font-size: $box-header-font-size;
   line-height: $line-height-tight;
   padding: $box-header-padding;
-  border: $box-border-width solid $grey-thin;
+  border: $box-border-width solid $box-border-color;
   border-radius: $box-border-radius $box-border-radius 0 0;
-  background-color: $grey-light;
+  background-color: $box-header-bg;
 
   &:only-child {
     border-radius: $box-border-radius;
@@ -29,7 +30,7 @@ $box-bg: $component-bg !default;
 
 .box__body {
   border-style: solid;
-  border-color: $grey-thin;
+  border-color: $box-border-color;
   border-width: 0 $box-border-width $box-border-width $box-border-width;
   border-radius: 0 0 $box-border-radius $box-border-radius;
   background-color: $box-bg;
@@ -52,6 +53,7 @@ $box-bg: $component-bg !default;
 
 }
 
+// variant modifiers
 @each $name, $color in $theme-colors {
   .box.box--#{$name} {
     @include box-variant(

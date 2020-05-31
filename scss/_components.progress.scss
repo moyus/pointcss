@@ -3,13 +3,14 @@
 $progress-height-sm: 4px !default;
 $progress-height-md: 8px !default;
 $progress-height-lg: 12px !default;
+$progress-border-raidus: 1993px !default;
 
 .progress {
   position: relative;
   display: block;
   width: 100%;
   height: $progress-height-md;
-  border-radius: 1993px;
+  border-radius: $progress-border-raidus;
   background-color: $grey-light;
   overflow: hidden;
 
@@ -38,15 +39,7 @@ $progress-height-lg: 12px !default;
   }
 }
 
-
-.progress--sm {
-  height: $progress-height-sm;
-}
-
-.progress--lg {
-  height: $progress-height-lg;
-}
-
+// modifier - variant
 @each $name, $color in $theme-colors {
   .progress--#{$name} {
     .progress__bar {
@@ -55,6 +48,16 @@ $progress-height-lg: 12px !default;
   }
 }
 
+// modifier - sizing
+.progress--sm {
+  height: $progress-height-sm;
+}
+
+.progress--lg {
+  height: $progress-height-lg;
+}
+
+// animation
 @keyframes progress-active {
   0% {
     opacity: 0.1;

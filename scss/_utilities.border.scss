@@ -1,21 +1,21 @@
 .border-top, .border-y {
-  border-top: $component-border-width solid $grey-thin !important;
+  border-top: $shape-border-width solid rgba($black, 0.08) !important;
 }
 
 .border-right, .border-x {
-  border-right: $component-border-width solid $grey-thin !important;
+  border-right: $shape-border-width solid rgba($black, 0.08) !important;
 }
 
 .border-bottom, .border-y {
-  border-bottom: $component-border-width solid $grey-thin !important;
+  border-bottom: $shape-border-width solid rgba($black, 0.08) !important;
 }
 
 .border-left, .border-x {
-  border-left: $component-border-width solid $grey-thin !important;
+  border-left: $shape-border-width solid rgba($black, 0.08) !important;
 }
 
 .border {
-  border: $component-border-width solid $grey-thin !important;
+  border: $shape-border-width solid rgba($black, 0.08) !important;
 }
 
 .border-none {
@@ -23,15 +23,15 @@
 }
 
 .rounded-sm {
-  border-radius: $component-border-radius-sm !important;
+  border-radius: $shape-border-radius-sm !important;
 }
 
 .rounded-md, .rounded {
-  border-radius: $component-border-radius-md !important;
+  border-radius: $shape-border-radius-md !important;
 }
 
 .rounded-lg {
-  border-radius: $component-border-radius-lg !important;
+  border-radius: $shape-border-radius-lg !important;
 }
 
 .rounded-full {

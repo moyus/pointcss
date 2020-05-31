@@ -194,11 +194,20 @@ $link-color:                            $color-primary !default;
 $code-color:                            #d73e48 !default;
 $code-bg:                               #fcf2f2 !default;
 
+// Shape
+// -----------------------------------------------------------------------------
+$shape-border-radius-sm:                2px !default;
+$shape-border-radius-md:                4px !default;
+$shape-border-radius-lg:                6px !default;
+$shape-border-width:                    1px !default;
+$shape-bg:                              $white !default;
+
 // Elevation
 // -----------------------------------------------------------------------------
+$shadow-edge:                           0 0 0 1px rgba($black, 0.05) !default;
 $shadow-sm:                             0 1px 3px rgba($black, 0.1) !default;
-$shadow-md:                             0 6px 16px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.05) !default;
-$shadow-lg:                             0 8px 28px rgba($black, 0.2), 0 0 0 1px rgba($black, 0.05) !default;
+$shadow-md:                             0 6px 16px rgba($black, 0.1) !default;
+$shadow-lg:                             0 8px 28px rgba($black, 0.2) !default;
 
 // Grid
 // -----------------------------------------------------------------------------
@@ -219,11 +228,3 @@ $container-max-widths: (
   "md": 980px,
   "lg": 1180px
 ) !default;
-
-// Components
-// -----------------------------------------------------------------------------
-$component-border-radius-sm:             2px !default;
-$component-border-radius-md:             4px !default;
-$component-border-radius-lg:             6px !default;
-$component-border-width:                 1px !default;
-$component-bg:                           $white !default;

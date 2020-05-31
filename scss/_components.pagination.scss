@@ -9,7 +9,7 @@ $pagination-padding-md: $spacing-squish-sm !default;
 $pagination-padding-lg: $spacing-squish-md !default;
 
 $pagination-gutter: $spacing-stack-xs !default;
-$pagination-border-radius: $component-border-radius-md !default;
+$pagination-border-radius: $shape-border-radius-md !default;
 $pagination-border-color: $grey-thin !default;
 $pagination-border-width: 1px !default;
 
@@ -22,7 +22,7 @@ $pagination-disabled-color: $grey-mute !default;
 $pagination-active-bg: $color-primary !default;
 $pagination-active-color: invert-color($color-primary) !default;
 
-$pagination-bordered-bg: $component-bg !default;
+$pagination-bordered-bg: $shape-bg !default;
 $pagination-bordered-hover-bg: $grey-light !default;
 $pagination-bordered-disabled-bg: $grey-shade !default;
 $pagination-bordered-disabled-color: $grey-mute !default;
@@ -113,7 +113,7 @@ $pagination-height-computed: $pagination-font-size-md * $line-height-normal + 2 
   }
 }
 
-// modifier - variant
+// variant modifiers
 .pagination--bordered {
   .pagination__link {
     border-color: $pagination-border-color;
@@ -148,7 +148,7 @@ $pagination-height-computed: $pagination-font-size-md * $line-height-normal + 2 
   }
 }
 
-// modifier - sizing
+// size modifiers
 .pagination--sm {
   $pagination-height-computed: $pagination-font-size-sm * $line-height-normal + 2 * nth($pagination-padding-sm, 1)  + 2 * $pagination-border-width;
 

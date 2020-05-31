@@ -1,25 +1,27 @@
 /* ## Breadcrumb
 ---------------------------------*/
-$breadcrumb-item-spacing: $spacing-stack-md !default;
+$breadcrumb-gutter: $spacing-stack-md !default;
+$breadcrumb-color: $grey-mute !default;
+$breadcrumb-gap-color: $grey-thin !default;
 
 .breadcrumb {
   margin: 0;
   padding: 0;
   list-style: none;
-  color: $grey-mute;
+  color: $breadcrumb-color;
   @include clearfix;
 }
 
 .breadcrumb__item {
   float: left;
-  color: $grey-mute;
+  color: $breadcrumb-color;
 
   &:nth-child(n+2) {
     &:before {
       content: '\0002f';
-      padding-left: $breadcrumb-item-spacing;
-      padding-right: $breadcrumb-item-spacing;
-      color: $grey-thin;
+      padding-left: $breadcrumb-gutter;
+      padding-right: $breadcrumb-gutter;
+      color: $breadcrumb-gap-color;
     }
   }
 }

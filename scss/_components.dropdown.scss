@@ -1,9 +1,9 @@
 /* ## Dropdown
 ---------------------------------*/
-$drodown-stack-spacing: $spacing-stack-sm !default;
-$dropdown-bg: $component-bg !default;
-$dropdown-shadow: $shadow-md !default;
-$dropdown-border-radius: $component-border-radius-md !default;
+$dropdown-bg: $shape-bg !default;
+$dropdown-gutter: $spacing-stack-sm !default;
+$dropdown-shadow: $shadow-md, $shadow-edge !default;
+$dropdown-border-radius: $shape-border-radius-md !default;
 $dropdown-width-sm: 160px !default;
 $dropdown-width-md: 200px !default;
 $dropdown-width-lg: 280px !default;
@@ -28,7 +28,7 @@ $dropdown-content-zIndex: $zIndex-1 !default;
   bottom: auto;
   width: $dropdown-width-md;
   padding: $dropdown-border-radius 0;
-  margin: $drodown-stack-spacing 0 0 0;
+  margin: $dropdown-gutter 0 0 0;
   border-radius: $dropdown-border-radius;
   background-color: $dropdown-bg;
   box-shadow: $dropdown-shadow;
@@ -44,6 +44,7 @@ $dropdown-content-zIndex: $zIndex-1 !default;
   }
 }
 
+// size modifiers
 .dropdown--sm {
   .dropdown__content {
     width: $dropdown-width-sm;
@@ -56,19 +57,14 @@ $dropdown-content-zIndex: $zIndex-1 !default;
   }
 }
 
-.dropdown--auto {
-  .dropdown__content {
-    width: auto;
-  }
-}
-
+// position modifiers
 .dropdown--bl {
   .dropdown__content {
     left: 0;
     top: 100%;
     right: auto;
     bottom: auto;
-    margin: $drodown-stack-spacing 0 0 0;
+    margin: $dropdown-gutter 0 0 0;
   }
 }
 
@@ -78,7 +74,7 @@ $dropdown-content-zIndex: $zIndex-1 !default;
     top: 100%;
     right: 0;
     bottom: auto;
-    margin: $drodown-stack-spacing 0 0 0;
+    margin: $dropdown-gutter 0 0 0;
   }
 }
 
@@ -88,7 +84,7 @@ $dropdown-content-zIndex: $zIndex-1 !default;
     top: 0;
     right: auto;
     bottom: auto;
-    margin: 0 0 0 $drodown-stack-spacing;
+    margin: 0 0 0 $dropdown-gutter;
   }
 }
 
@@ -98,7 +94,7 @@ $dropdown-content-zIndex: $zIndex-1 !default;
     top: auto;
     right: auto;
     bottom: 0;
-    margin: 0 0 0 $drodown-stack-spacing;
+    margin: 0 0 0 $dropdown-gutter;
   }
 }
 
@@ -108,7 +104,7 @@ $dropdown-content-zIndex: $zIndex-1 !default;
     top: auto;
     right: auto;
     bottom: 100%;
-    margin: 0 0 $drodown-stack-spacing 0;
+    margin: 0 0 $dropdown-gutter 0;
   }
 }
 
@@ -118,7 +114,7 @@ $dropdown-content-zIndex: $zIndex-1 !default;
     top: auto;
     right: 0;
     bottom: 100%;
-    margin: 0 0 $drodown-stack-spacing 0;
+    margin: 0 0 $dropdown-gutter 0;
   }
 }
 
@@ -128,7 +124,7 @@ $dropdown-content-zIndex: $zIndex-1 !default;
     top: 0;
     right: 100%;
     bottom: auto;
-    margin: 0 $drodown-stack-spacing 0 0;
+    margin: 0 $dropdown-gutter 0 0;
   }
 }
 
@@ -138,6 +134,6 @@ $dropdown-content-zIndex: $zIndex-1 !default;
     top: auto;
     right: 100%;
     bottom: 0;
-    margin: 0 $drodown-stack-spacing 0 0;
+    margin: 0 $dropdown-gutter 0 0;
   }
 }

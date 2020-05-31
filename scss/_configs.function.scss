@@ -13,7 +13,20 @@
 
   @return $value;
 }
-  
+
+@function round-even($number) {
+  $value: ceil($number);
+
+  @if ($value % 2 == 1) {
+    $value: $value - 1;
+  }
+
+  @return $value;
+}
+
+@function round-line-height($font-size, $line-height) {
+  @return round-even($font-size * $line-height) / $font-size;
+}
 
 @function luminance($color) {
   $rgb: (

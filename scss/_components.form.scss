@@ -1,40 +1,60 @@
 /* ## Form
 ---------------------------------*/
-$form-control-border-color:             $grey-thin !default;
-$form-control-border-width:             $component-border-width !default;
-$form-control-border-radius:            $component-border-radius-md !default;
-$form-control-bg:                       $component-bg !default;
+$form-control-color:                    $grey-dark !default;
+$form-control-bg:                       $shape-bg !default;
 $form-control-line-height:              $line-height-normal !default;
-$form-control-font-size-sm:             $text-size-sm !default;
-$form-control-font-size-md:             $text-size-md !default;
-$form-control-font-size-lg:             $text-size-lg !default;
+$form-control-border-color:             $grey-thin !default;
+$form-control-border-width:             $shape-border-width !default;
+$form-control-border-radius:            $shape-border-radius-md !default;
+$form-label-color:                      $grey-dark !default;
+$form-label-margin-bottom:              $spacing-stack-xs !default;
+$form-field-margin-bottom:              $spacing-stack-md !default;
+$form-help-margin-top:                  $spacing-stack-xs !default;
+$form-help-color:                       $grey-mute !default;
+$form-addon-bg:                         $grey-light !default;
+
 $form-control-padding-sm:               $spacing-squish-xs !default;
+$form-control-font-size-sm:             $text-size-sm !default;
+$form-control-line-height-sm:           round-line-height($form-control-font-size-sm, $form-control-line-height) !default;
+
 $form-control-padding-md:               $spacing-squish-sm !default;
+$form-control-font-size-md:             $text-size-md !default;
+$form-control-line-height-md:           round-line-height($form-control-font-size-md, $form-control-line-height) !default;
+
 $form-control-padding-lg:               $spacing-squish-md !default;
+$form-control-font-size-lg:             $text-size-lg !default;
+$form-control-line-height-lg:           round-line-height($form-control-font-size-lg, $form-control-line-height) !default;
+
 $form-control-placeholder-color:        rgba($grey-mute, 0.75) !default;
 $form-control-disabled-color:           $grey-mute !default;
 $form-control-disabled-bg:              $grey-shade !default;
-$form-range-color:                      $color-primary !default;
-$form-range-bg:                         $grey-thin !default;
+
+
+
 $form-checkbox-size:                    16px !default;
+$form-checkbox-active-color:            $color-primary !default;
 $form-radio-size:                       16px !default;
-$form-field-margin-bottom:              $spacing-stack-md !default;
-$enable-form-focus-box-shadow:          true !default;
-$form-control-height-computed:          $form-control-font-size-md * $form-control-line-height + nth($form-control-padding-md, 1) * 2 + $form-control-border-width * 2;
+$form-radio-active-color:               $color-primary !default;
+
+$form-range-color:                      $grey-dark !default;
+$form-range-bg:                         $grey-weak !default;
+$form-range-border-radius:              1993px !default;
 
 $icon-caret:                            "data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23" + str-slice("#{$grey-mute}", 2) + "' d='M9.987 10.635L7.751 8.41 7 9.136l2.988 2.865L13 9.124l-.746-.724z'/%3E%3C/svg%3E" !default;
 $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23" + str-slice("#{$form-control-bg}", 2) + "' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e" !default;
+
+$form-control-height-computed:          $form-control-font-size-md * $form-control-line-height-md + nth($form-control-padding-md, 1) * 2 + $form-control-border-width * 2;
 
 .form-input,
 .form-select,
 .form-textarea {
   display: block;
   width: 100%;
-  height: $form-control-height-computed;
-  color: $grey-dark;
+  color: $form-control-color;
   padding: $form-control-padding-md;
   font-size: $form-control-font-size-md;
-  line-height: $form-control-line-height;
+  line-height: $form-control-line-height-md;
+  height: $form-control-height-computed;
   border: $form-control-border-width solid $form-control-border-color;
   border-radius: $form-control-border-radius;
   background-color: $form-control-bg;
@@ -44,7 +64,6 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
   background-clip: padding-box;
   appearance: none;
 
-  // states
   &:hover,
   &.is-hovered {
     border-color: darken($form-control-border-color, 2.5%);
@@ -53,13 +72,11 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
   &:focus,
   &.is-focused {
     border-color: $color-primary;
-    @if $enable-form-focus-box-shadow {
-      box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
-    }
+    box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
   }
 
   &:disabled {
-    opacity: 1;
+    opacity: 0.75;
     cursor: not-allowed;
     color: $form-control-disabled-color !important;
     border-color: $form-control-disabled-bg !important;
@@ -81,9 +98,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
     &:focus,
     &.is-focused {
       border-color: $color-success;
-      @if $enable-form-focus-box-shadow {
-        box-shadow: 0 0 0 2px rgba($color-success, 0.25);
-      }
+      box-shadow: 0 0 0 2px rgba($color-success, 0.25);
     }
   }
 
@@ -97,9 +112,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
     &:focus,
     &.is-focused {
       border-color: $color-danger;
-      @if $enable-form-focus-box-shadow {
-        box-shadow: 0 0 0 2px rgba($color-danger, 0.25);
-      }
+      box-shadow: 0 0 0 2px rgba($color-danger, 0.25);
     }
   }
 
@@ -113,9 +126,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
     &:focus,
     &.is-focused {
       border-color: $color-warning;
-      @if $enable-form-focus-box-shadow {
-        box-shadow: 0 0 0 2px rgba($color-warning, 0.25);
-      }
+      box-shadow: 0 0 0 2px rgba($color-warning, 0.25);
     }
   }
 }
@@ -174,11 +185,12 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
 .form-select,
 .form-textarea {
   &--sm {
-    $form-control-height-computed: $form-control-font-size-sm * $form-control-line-height + nth($form-control-padding-sm, 1) * 2 + $form-control-border-width * 2;
+    $form-control-height-computed: $form-control-font-size-sm * $form-control-line-height-sm + nth($form-control-padding-sm, 1) * 2 + $form-control-border-width * 2;
 
     font-size: $form-control-font-size-sm;
-    padding: $form-control-padding-sm;
+    line-height: $form-control-line-height-sm;
     height: $form-control-height-computed;
+    padding: $form-control-padding-sm;
 
     &.form-input[type="file"] {
       min-height: $form-control-height-computed;
@@ -196,11 +208,12 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
   }
 
   &--lg {
-    $form-control-height-computed: $form-control-font-size-lg * $form-control-line-height + nth($form-control-padding-lg, 1) * 2 + $form-control-border-width * 2;
+    $form-control-height-computed: $form-control-font-size-lg * $form-control-line-height-lg + nth($form-control-padding-lg, 1) * 2 + $form-control-border-width * 2;
 
     font-size: $form-control-font-size-lg;
-    padding: $form-control-padding-lg;
+    line-height: $form-control-line-height-lg;
     height: $form-control-height-computed;
+    padding: $form-control-padding-lg;
 
     &.form-input[type="file"] {
       min-height: $form-control-height-computed;
@@ -236,7 +249,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
 
   &:checked {
     border: 0;
-    background-color: $color-primary;
+    background-color: $form-checkbox-active-color;
     background-image: url("#{$icon-check}");
     background-size: 100% 100%;
     background-position: center;
@@ -251,13 +264,11 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
   &:focus,
   &.is-focused {
     border-color: $color-primary;
-    @if $enable-form-focus-box-shadow {
-      box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
-    }
+    box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
   }
 
   &:disabled {
-    opacity: 1;
+    opacity: 0.75;
     cursor: not-allowed;
     color: $form-control-disabled-color !important;
     border-color: $form-control-disabled-bg !important;
@@ -285,7 +296,7 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
   &:checked {
     border: 0;
     background-color: $form-control-bg;
-    box-shadow: inset 0 0 0 ($form-radio-size / 3) $color-primary;
+    box-shadow: inset 0 0 0 ($form-radio-size / 3) $form-radio-active-color;
   }
 
   &:hover,
@@ -296,16 +307,14 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
   &:focus,
   &.is-focused {
     border-color: $color-primary;
-    @if $enable-form-focus-box-shadow {
-      box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
-      &:checked {
-        box-shadow: inset 0 0 0 ($form-radio-size / 3) $color-primary, 0 0 0 2px rgba($color-primary, 0.25);
-      }
+    box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
+    &:checked {
+      box-shadow: inset 0 0 0 ($form-radio-size / 3) $form-radio-active-color, 0 0 0 2px rgba($color-primary, 0.25);
     }
   }
 
   &:disabled {
-    opacity: 1;
+    opacity: 0.75;
     cursor: not-allowed;
     color: $form-control-disabled-color !important;
     border-color: $form-control-disabled-bg !important;
@@ -324,8 +333,8 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
   margin-top: 8px;
   margin-bottom: 8px;
   cursor: pointer;
-  border-radius: 9999px;
-  color: $grey-dark;
+  color: $form-range-color;
+  border-radius: $form-range-border-radius;
   background-color: $form-range-bg;
   -webkit-appearance: none;
   appearance: none;
@@ -354,31 +363,28 @@ $icon-check:                            "data:image/svg+xml,%3csvg viewBox='0 0 
 
 .form-label {
   display: block;
-  color: $grey-dark;
+  color: $form-label-color;
   line-height: $line-height-compact;
-  margin: 0 0 $spacing-stack-xs 0;
+  margin: 0 0 $form-label-margin-bottom 0;
 }
 
 .form-help {
   display: block;
-  color: $grey-mute;
+  color: $form-help-color;
   line-height: $line-height-compact;
-  margin: $spacing-stack-xs 0 0 0;
+  margin: $form-help-margin-top 0 0 0;
 }
 
 // Group
 .form-addon {
   display: inline-flex;
   align-items: center;
-  color: $grey-dark;
-  font-size: $text-size-base;
-  line-height: $line-height-normal;
   padding: $spacing-squish-sm;
   border-radius: $form-control-border-radius;
 
   &:not(.btn) {
     border: $form-control-border-width solid $form-control-border-color;
-    background-color: $grey-light;
+    background-color: $form-addon-bg;
   }
 }
 

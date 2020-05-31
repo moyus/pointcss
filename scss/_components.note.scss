@@ -1,19 +1,17 @@
 /* ## Note
 ---------------------------------*/
-$note-border-radius: $component-border-radius-md !default;
+$note-border-radius: $shape-border-radius-md !default;
 $note-padding: $spacing-square-md !default;
-$note-margin-bottom: $spacing-stack-md !default;
+$note-color: $grey-dark !default;
+$note-bg: $grey-light !default;
 
-// block
 .note {
-  position: relative;
   border-radius: $note-border-radius;
   padding: $note-padding;
-  margin-bottom: $note-margin-bottom;
 
   @include note-variant(
-    $background: $grey-light,
-    $color: $grey-dark
+    $background: $note-bg,
+    $color: $note-color
   );
 
   > *:first-child {
@@ -25,7 +23,7 @@ $note-margin-bottom: $spacing-stack-md !default;
   }
 }
 
-// modifiers
+// variant modifiers
 @each $name, $color in $theme-colors {
   .note.note--#{$name} {
     @include note-variant(

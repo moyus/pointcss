@@ -1,20 +1,19 @@
 /* ## List
 ---------------------------------*/
-$list-bg: $component-bg !default;
-$list-margin-bottom: $spacing-stack-md !default;
+$list-bg: $shape-bg !default;
 $list-padding-sm: $spacing-squish-xs !default;
 $list-padding-md: $spacing-squish-sm !default;
 $list-padding-lg: $spacing-squish-lg !default;
-$list-border-width: $component-border-width !default;
-$list-border-radius: $component-border-radius-md !default;
+$list-border-width: $shape-border-width !default;
+$list-border-radius: $shape-border-radius-md !default;
 $list-border-color: $grey-weak !default;
 $list-hover-color: $grey-light !default;
+$inline-list-gutter: $spacing-stack-xs !default;
 
 // Elements
 .list {
-  position: relative;
   padding: 0;
-  margin: 0 0 $list-margin-bottom 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -40,7 +39,7 @@ $list-hover-color: $grey-light !default;
   }
 }
 
-// Modifiers
+// variant modifiers
 .list--inset {
   .list__item,
   .list__link {
@@ -70,6 +69,14 @@ $list-hover-color: $grey-light !default;
   }
 }
 
+.list--borderless {
+  .list__item,
+  .list__link {
+    border: none;
+  }
+}
+
+// size modifiers
 .list--sm {
   .list__item,
   .list__link {
@@ -126,14 +133,7 @@ $list-hover-color: $grey-light !default;
   }
 }
 
-.list--borderless {
-  .list__item,
-  .list__link {
-    border: none;
-  }
-}
-
-// States
+// states
 .list__item,
 .list__link {
   &.is-active {
@@ -144,5 +144,18 @@ $list-hover-color: $grey-light !default;
       border-color: $color-primary;
       z-index: 2;
     }
+  }
+}
+
+// Inline list
+.inline-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: (0 - $inline-list-gutter);
+  margin-right: (0 - $inline-list-gutter);
+
+  > * {
+    flex: 0 0 auto;
+    margin: $inline-list-gutter;
   }
 }

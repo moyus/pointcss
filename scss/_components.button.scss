@@ -1,15 +1,22 @@
 /* ## Button
 ---------------------------------*/
-$btn-border-radius: $component-border-radius-md !default;
-$btn-border-width: $component-border-width !default;
+$btn-border-radius: $shape-border-radius-md !default;
+$btn-border-width: $shape-border-width !default;
 $btn-line-height: $line-height-normal !default;
-$btn-font-size-sm: $text-size-sm !default;
-$btn-font-size-md: $text-size-md !default;
-$btn-font-size-lg: $text-size-lg !default;
+
 $btn-padding-sm: $spacing-squish-xs !default;
+$btn-font-size-sm: $text-size-sm !default;
+$btn-line-height-sm: round-line-height($btn-font-size-sm, $btn-line-height) !default;
+
 $btn-padding-md: $spacing-squish-sm !default;
+$btn-font-size-md: $text-size-md !default;
+$btn-line-height-md: round-line-height($btn-font-size-md, $btn-line-height) !default;
+
 $btn-padding-lg: $spacing-squish-md !default;
-$btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-padding-md, 1)  + 2 * $btn-border-width;
+$btn-font-size-lg: $text-size-lg !default;
+$btn-line-height-lg: round-line-height($btn-font-size-lg, $btn-line-height) !default;
+
+$btn-height-computed: $btn-font-size-md * $btn-line-height-md + 2 * nth($btn-padding-md, 1)  + 2 * $btn-border-width;
 
 .btn {
   cursor: pointer;
@@ -18,11 +25,11 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
   vertical-align: middle;
   padding: $btn-padding-md;
   font-size: $btn-font-size-md;
-  line-height: $line-height-normal;
+  line-height: $btn-line-height-md;
   height: $btn-height-computed;
   min-width: $btn-height-computed;
-  border-width: $btn-border-width;
   border-style: solid;
+  border-width: $btn-border-width;
   border-radius: $btn-border-radius;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -53,7 +60,7 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
   }
 
   @include btn-variant(
-    $background: $component-bg,
+    $background: $shape-bg,
     $border: $grey-thin,
     $color: $grey-dark,
     $hover-background: $grey-light,
@@ -72,6 +79,7 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
 
 }
 
+// variant modifiers
 .btn.btn--link {
   text-decoration: underline;
   @include btn-variant(
@@ -136,10 +144,12 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
   }
 }
 
+// size modifiers
 .btn.btn--sm {
-  $btn-height-computed: $btn-font-size-sm * $btn-line-height + 2 * nth($btn-padding-sm, 1)  + 2 * $btn-border-width;
+  $btn-height-computed: $btn-font-size-sm * $btn-line-height-sm + 2 * nth($btn-padding-sm, 1)  + 2 * $btn-border-width;
 
   font-size: $btn-font-size-sm;
+  line-height: $btn-line-height-sm;
   border-radius: $btn-border-radius;
   padding: $btn-padding-sm;
   height: $btn-height-computed;
@@ -151,9 +161,10 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
 }
 
 .btn.btn--lg {
-  $btn-height-computed: $btn-font-size-lg * $btn-line-height + 2 * nth($btn-padding-lg, 1)  + 2 * $btn-border-width;
+  $btn-height-computed: $btn-font-size-lg * $btn-line-height-sm + 2 * nth($btn-padding-lg, 1)  + 2 * $btn-border-width;
 
   font-size: $btn-font-size-lg;
+  line-height: $btn-line-height-lg;
   border-radius: $btn-border-radius;
   padding: $btn-padding-lg;
   height: $btn-height-computed;
@@ -174,8 +185,7 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
   width: 100%;
 }
 
-/* ## Button Group
----------------------------------*/
+// containers
 .btn-group {
   display: inline-flex;
 
@@ -205,6 +215,7 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height + 2 * nth($btn-paddin
   }
 }
 
+// animation
 @keyframes spin-around {
   from {
     transform: rotate(0deg);

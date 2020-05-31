@@ -1,10 +1,12 @@
 /* ## Navbar
 ---------------------------------*/
-$navbar-height:                            60px !default;
 $navbar-font-size:                         $text-size-md !default;
 $navbar-color:                             $grey-dark !default;
 $navbar-font-size:                         $text-size-md !default;
-$navbar-item-spacing:                      $spacing-stack-lg !default;
+$navbar-item-gutter:                       $spacing-stack-lg !default;
+$navbar-item-padding:                      $spacing-squish-md !default;
+$navbar-light-color:                       $black !default;
+$navbar-dark-color:                        $white !default;
 
 .navbar {
   position: relative;
@@ -12,7 +14,6 @@ $navbar-item-spacing:                      $spacing-stack-lg !default;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  height: $navbar-height;
 }
 
 .navbar__start {
@@ -27,26 +28,35 @@ $navbar-item-spacing:                      $spacing-stack-lg !default;
   justify-content: flex-end;
 }
 
+.navbar__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .navbar__item {
-  position: relative;
   flex: 0 0 auto;
+  position: relative;
   color: $navbar-color;
   font-size: $navbar-font-size;
 
   &:not(:last-child) {
-    margin-right: $navbar-item-spacing;
+    margin-right: $navbar-item-gutter;
   }
 }
 
 .navbar__link {
   display: block;
   color: rgba($navbar-color, 0.75);
+
   &:hover {
-    color: rgba($navbar-color, 0.85);
+    color: $navbar-color;
   }
 }
 
-.navbar__item.is-active > .navbar__link,
 .navbar__link.is-active {
   color: $navbar-color;
   font-weight: $font-weight-medium;
@@ -56,49 +66,51 @@ $navbar-item-spacing:                      $spacing-stack-lg !default;
   font-size: $navbar-font-size * 1.25;
   line-height: $line-height-tight;
   color: $navbar-color;
-  margin-right: $navbar-item-spacing * 1.25;
+  margin-right: $navbar-item-gutter * 1.25;
 }
 
+// modifier - dark
 .navbar.navbar--dark {
   .navbar__brand {
-    color: $white;
+    color: $navbar-dark-color;
   }
 
   .navbar__item {
-    color: $white;
+    color: $navbar-dark-color;
   }
 
   .navbar__link {
-    color: rgba($white, 0.5);
-    &:hover {
-      color: rgba($white, 0.65);
-    }
-  }
+    color: rgba($navbar-dark-color, 0.5);
 
-  .navbar__item.is-active > .navbar__link,
-  .navbar__link.is-active {
-    color: $white;
+    &:hover {
+      color: rgba($navbar-dark-color, 0.75);
+    }
+  
+    &.is-active {
+      color: $navbar-dark-color;
+    }
   }
 }
 
+// modifier - light
 .navbar.navbar--light {
   .navbar__brand {
-    color: $black;
+    color: $navbar-light-color;
   }
 
   .navbar__item {
-    color: $black;
+    color: $navbar-light-color;
   }
 
   .navbar__link {
-    color: rgba($black, 0.65);
-    &:hover {
-      color: rgba($black, 0.85);
-    }
-  }
+    color: rgba($navbar-light-color, 0.75);
 
-  .navbar__item.is-active > .navbar__link,
-  .navbar__link.is-active {
-    color: $black;
+    &:hover {
+      color: $navbar-light-color;
+    }
+
+    &.is-active {
+      color: $navbar-light-color;
+    }
   }
 }

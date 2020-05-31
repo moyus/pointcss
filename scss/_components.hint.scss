@@ -4,7 +4,7 @@ $hint-color: $white !default;
 $hint-bg: $black !default;
 $hint-font-size: $text-size-sm !default;
 $hint-padding: $spacing-squish-sm !default;
-$hint-border-radius: $component-border-radius-sm !default;
+$hint-border-radius: $shape-border-radius-md !default;
 $hint-width-sm: 120px !default;
 $hint-width-md: 160px !default;
 $hint-width-lg: 220px !default;
@@ -26,8 +26,9 @@ $hint-width-lg: 220px !default;
     width: 0;
     height: 0;
     border-style: solid;
-    left: calc(50% - 5px);
+    left: 50%;
     bottom: 100%;
+    margin: 0 0 0 -5px;
     border-width: 5px 5px 0 5px;
     border-color: $hint-bg transparent transparent transparent;
   }
@@ -42,7 +43,8 @@ $hint-width-lg: 220px !default;
     background-color: $hint-bg;
     white-space: pre-wrap;
     left: 50%;
-    bottom: calc(100% + 5px);
+    bottom: 100%;
+    margin: 0 0 5px 0;
     width: $hint-width-md;
     transform: translateX(-50%);
   }
@@ -64,6 +66,7 @@ $hint-width-lg: 220px !default;
   }
 }
 
+// size modifiers
 .hint--sm {
   &:after {
     width: $hint-width-sm;
@@ -76,13 +79,15 @@ $hint-width-lg: 220px !default;
   }
 }
 
+// position modifiers
 .hint--left {
 
   &:before {
-    top: calc(50% - 5px);
+    top: 50%;
     left: auto;
     right: 100%;
     bottom: auto;
+    margin: -5px 0 0 0;
     border-width: 5px 0 5px 5px;
     border-color: transparent transparent transparent $black;
   }
@@ -90,8 +95,9 @@ $hint-width-lg: 220px !default;
   &:after {
     top: 50%;
     left: auto;
-    right: calc(100% + 5px);
+    right: 100%;
     bottom: auto;
+    margin: 0 5px 0 0;
     transform: translateY(-50%);
   }
 
@@ -110,10 +116,11 @@ $hint-width-lg: 220px !default;
 .hint--right {
 
   &:before {
-    top: calc(50% - 5px);
+    top: 50%;
     right: auto;
     bottom: auto;
     left: 100%;
+    margin: -5px 0 0 0;
     border-width: 5px 5px 5px 0;
     border-color: transparent $black transparent transparent;
   }
@@ -122,7 +129,8 @@ $hint-width-lg: 220px !default;
     top: 50%;
     right: auto;
     bottom: auto;
-    left: calc(100% + 5px);
+    left: 100%;
+    margin: 0 0 0 5px;
     transform: translateY(-50%);
   }
 
@@ -144,16 +152,18 @@ $hint-width-lg: 220px !default;
     top: 100%;
     right: auto;
     bottom: auto;
-    left: calc(50% - 5px);
+    left: 50%;
+    margin: 0 0 0 -5px;
     border-width: 0 5px 5px 5px;
     border-color: transparent transparent $black transparent;
   }
 
   &:after {
-    top: calc(100% + 5px);
+    top: 100%;
     right: auto;
     bottom: auto;
     left: 50%;
+    margin: 5px 0 0 0;
     transform: translateX(-50%);
   }
 

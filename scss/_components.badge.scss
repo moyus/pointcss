@@ -1,22 +1,33 @@
 /* ## Badge
 ---------------------------------*/
-$badge-font-size: $text-meta-sm !default;
+$badge-border-radius: $shape-border-radius-md !default;
 $badge-empty-size: 8px !default;
 
+$badge-font-size-sm: $text-meta-sm !default;
+$badge-line-height-sm: round-line-height($badge-font-size-sm, 1.5) !default;
+$badge-padding-sm: 0 .5em !default;
+
+$badge-font-size-md: $text-meta-sm !default;
+$badge-line-height-md: round-line-height($badge-font-size-sm, 2) !default;
+$badge-padding-md: 0 .75em !default;
+
+$badge-font-size-lg: $text-meta-md !default;
+$badge-line-height-lg: round-line-height($badge-font-size-sm, 2) !default;
+$badge-padding-lg: 0 .75em !default;
+
 .badge {
-  display: inline-block;
-  padding: .25em .5em;
-  font-size: $badge-font-size;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  padding: $badge-padding-md;
+  font-size: $badge-font-size-md;
+  line-height: $badge-line-height-md;
   text-align: center;
   white-space: nowrap;
-  border-radius: 1993px;
-  border: 1px solid transparent;
-  vertical-align: middle;
+  border-radius: $badge-border-radius;
   text-overflow: ellipsis;
   overflow: hidden;
 
-  @include badge-variant($component-bg, $grey-thin, $grey-dark);
+  @include badge-variant($grey-light);
 
   &:empty {
     min-width: auto;
@@ -26,17 +37,30 @@ $badge-empty-size: 8px !default;
   }
 }
 
-// theme
+// size modifiers
+.badge.badge--sm {
+  font-size: $badge-font-size-sm;
+  line-height: $badge-line-height-sm;
+  padding: $badge-padding-sm;
+}
+
+.badge.badge--lg {
+  font-size: $badge-font-size-lg;
+  line-height: $badge-line-height-lg;
+  padding: $badge-padding-lg;
+}
+
+// variant modifiers
+.badge.badge--pill {
+  border-radius: 1993px;
+}
+
 .badge.badge--black {
   @include badge-variant($black);
 }
 
 .badge.badge--dark {
   @include badge-variant($grey-dark);
-}
-
-.badge.badge--light {
-  @include badge-variant($grey-light);
 }
 
 .badge.badge--white {
@@ -49,7 +73,7 @@ $badge-empty-size: 8px !default;
   }
 }
 
-// position
+// position modifiers
 .badge.badge--lt {
   position: absolute;
   top: 0;

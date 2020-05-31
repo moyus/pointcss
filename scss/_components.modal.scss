@@ -3,12 +3,14 @@
 $modal-width-sm:                           480px !default;
 $modal-width-md:                           600px !default;
 $modal-width-lg:                           900px !default;
-$modal-border-radius:                      $component-border-radius-lg !default;
+$modal-border-radius:                      $shape-border-radius-lg !default;
 $modal-content-padding:                    $spacing-square-md !default;
-$modal-bg:                                 $component-bg !default;
-$modal-shadow:                             $shadow-lg !default;
+$modal-bg:                                 $shape-bg !default;
+$modal-shadow:                             $shadow-lg, $shadow-edge !default;
 $modal-title-font-size:                    $text-title-sm !default;
 $modal-title-line-height:                  $line-height-normal !default;
+$modal-title-color:                        $grey-dark !default;
+$modal-close-color:                        $grey-mute !default;
 $modal-zIndex:                             $zIndex-9 !default;
 $mask-zIndex:                              $zIndex-6 !default;
 $mask-bg:                                  rgba($black, 0.5) !default;
@@ -47,11 +49,12 @@ $mask-bg:                                  rgba($black, 0.5) !default;
 .modal__header {
   position: relative;
   flex-shrink: 0;
-  padding: $spacing-square-md;
+  padding: $modal-content-padding;
 }
 
 .modal__title {
   margin: 0;
+  color: $modal-title-color;
   font-weight: $font-weight-medium;
   font-size: $modal-title-font-size;
   line-height: $modal-title-line-height;
@@ -62,27 +65,46 @@ $mask-bg:                                  rgba($black, 0.5) !default;
   position: absolute;
   right: $modal-content-padding;
   top: $modal-content-padding;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 30px;
   height: 30px;
-  line-height: 1;
-  color: $grey-mute;
-  font-size: $text-size-xl;
   margin: 0;
   padding: 0;
   border: 0;
-  border-radius: $component-border-radius-md;
-  background-color: $grey-light;
-  font-family: Helvetica, Arial, sans-serif;
+  border-radius: $shape-border-radius-md;
+  opacity: 0.75;
+  color: $modal-close-color;
+  background-color: light-color($modal-close-color);
+  box-shadow: none;
   appearance: none;
 
-  &:hover {
-    background-color: darken($grey-light, 2.5%);
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: currentColor;
+    transform-origin: center;
   }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
   &:active {
-    background-color: darken($grey-light, 5%);
+    opacity: 1;
+    background-color: darken(light-color($modal-close-color), 2.5%);
   }
 }
 
@@ -100,7 +122,7 @@ $mask-bg:                                  rgba($black, 0.5) !default;
 }
 
 .modal.modal--mask {
-  background-color: rgba($black, 0.5);
+  background-color: $mask-bg;
 }
 
 .modal.modal--sm {
@@ -125,6 +147,6 @@ $mask-bg:                                  rgba($black, 0.5) !default;
   z-index: $mask-zIndex;
 }
 
-body.is-masking {
-  overflow: hidden;
+.is-masking {
+  overflow: hidden !important;
 }
