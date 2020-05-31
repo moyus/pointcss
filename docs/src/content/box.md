@@ -166,26 +166,6 @@ Pure HTML&CSS accordion component without any JavaScript code
         </div>
       </div>
     </details>
-    <details class="box">
-      <summary class="box__header">Accordion Box #2</summary>
-      <div class="box__body">
-        <div class="box__inner">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-          </p>
-        </div>
-      </div>
-    </details>
-    <details class="box">
-      <summary class="box__header">Accordion Box #3</summary>
-      <div class="box__body">
-        <div class="box__inner">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque praesentium velit eius, repudiandae voluptatum, non provident modi dolor accusamus sunt inventore omnis saepe repellat, officia veritatis fugiat quo tempore placeat.
-          </p>
-        </div>
-      </div>
-    </details>
   </div>
   <div class="snippet__source">
 

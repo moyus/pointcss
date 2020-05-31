@@ -276,36 +276,6 @@ All variants can combile with sizing modifier classes to change nav size
   </div>
 </section>
 
-###### Normal
-
-<section class="snippet">
-  <div class="snippet__preview">
-    <ul class="nav">
-      <li class="nav__item">
-        <a href="#" class="nav__link">Home</a>
-      </li>
-      <li class="nav__item">
-        <a href="#" class="nav__link">Link</a>
-      </li>
-      <li class="nav__item">
-        <a href="#" class="nav__link">Another Link</a>
-      </li>
-      <li class="nav__item">
-        <a href="#" class="nav__link is-disabled">Disabled</a>
-      </li>
-    </ul>
-  </div>
-  <div class="snippet__source">
-
-```html
-<ul class="nav">
-  ...
-</ul>
-```
-
-  </div>
-</section>
-
 ###### Large
 
 <section class="snippet">

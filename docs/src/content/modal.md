@@ -24,16 +24,14 @@ A floating layer to get user's feedback or display information.
     <div class="modal__content" role="document">
       <header class="modal__header">
         <h4 class="modal__title">Modal Title</h4>
-        <button type="button" class="modal__close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="modal__close" aria-label="Close"></button>
       </header>
       <div class="modal__body">
-          "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
+        "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
       </div>
       <footer class="modal__footer">
-          <button type="button" class="btn">Close</button>
-          <button type="button" class="btn btn--primary">Ok</button>
+        <button type="button" class="btn">Close</button>
+        <button type="button" class="btn btn--primary">Ok</button>
       </footer>
     </div>
   </div>
@@ -47,16 +45,14 @@ A floating layer to get user's feedback or display information.
   <div class="modal__content" role="document">
     <header class="modal__header">
       <h4 class="modal__title">Modal Title</h4>
-      <button type="button" class="modal__close" data-leave="modal" data-target="example-modal">
-        <span aria-hidden="true">&times;</span>
-      </button>
+      <button type="button" class="modal__close" data-leave="modal" data-target="example-modal" aria-label="Close"></button>
     </header>
     <div class="modal__body">
         "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist."
     </div>
     <footer class="modal__footer">
-        <button type="button" class="btn" data-leave="modal" data-target="example-modal">Close</button>
-        <button type="button" class="btn btn--primary">Ok</button>
+      <button type="button" class="btn" data-leave="modal" data-target="example-modal">Close</button>
+      <button type="button" class="btn btn--primary">Ok</button>
     </footer>
   </div>
 </div>
@@ -100,9 +96,7 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly c
   <div class="modal__content" role="document">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
-      <button type="button" class="modal__close" data-leave="modal" data-target="sm-modal">
-        <span aria-hidden="true">&times;</span>
-      </button>
+      <button type="button" class="modal__close" data-leave="modal" data-target="sm-modal" aria-label="Close"></button>
     </header>
     <div class="modal__body">
       Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est
@@ -113,8 +107,8 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly c
       consectetur.
     </div>
     <footer class="modal__footer">
-        <button type="button" class="btn" data-leave="modal" data-target="sm-modal">Close</button>
-        <button type="button" class="btn btn--primary">Ok</button>
+      <button type="button" class="btn" data-leave="modal" data-target="sm-modal">Close</button>
+      <button type="button" class="btn btn--primary">Ok</button>
     </footer>
   </div>
 </div>
@@ -123,9 +117,7 @@ Add `.modal--sm` or `.modal--lg` modifier class on `.modal` element to quickly c
   <div class="modal__content" role="document">
     <header class="modal__header">
       <h4 class="modal__title">Large Modal</h4>
-      <button type="button" class="modal__close" data-leave="modal" data-target="lg-modal">
-        <span aria-hidden="true">&times;</span>
-      </button>
+      <button type="button" class="modal__close" data-leave="modal" data-target="lg-modal" aria-label="Close"></button>
     </header>
     <div class="modal__body">
       Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est

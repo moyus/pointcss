@@ -115,14 +115,14 @@ By adding `.is-active` modifier class to create animated progress.
 
 <section class="snippet">
   <div class="snippet__preview">
-    <div class="progress is-active">
+    <div class="progress progress--success is-active">
       <div class="progress__bar" style="width: 60%;"></div>
     </div>
   </div>
   <div class="snippet__source">
 
 ```html
-<div class="progress is-active">
+<div class="progress progress--success is-active">
   <div class="progress__bar" style="width: 60%;"></div>
 </div>
 ```

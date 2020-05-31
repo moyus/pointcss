@@ -17,7 +17,7 @@ Pure CSS interactive component for discoverable content.
     <details class="dropdown">
       <summary class="btn dropdown__toggle">Click Me</summary>
       <div class="dropdown__content">
-        <nav class="list list--inset list--borderless m-0">
+        <nav class="list list--inset list--borderless">
           <a role="button" class="list__link">Item #1</a>
           <a role="button" class="list__link">Item #2</a>
           <a role="button" class="list__link">Item #3</a>
@@ -32,7 +32,7 @@ Pure CSS interactive component for discoverable content.
 <details class="dropdown">
   <summary class="btn dropdown__toggle">Click Me</summary>
   <div class="dropdown__content">
-    <nav class="list list--inset list--borderless m-0">
+    <nav class="list list--inset list--borderless">
       <a role="button" class="list__link">Item #1</a>
       <a role="button" class="list__link">Item #2</a>
       <a role="button" class="list__link">Item #3</a>
@@ -65,7 +65,7 @@ Use modifier classes below on `.dropdown` container to change the content positi
         <details class="dropdown dropdown--tl">
           <summary class="btn dropdown__toggle">Click Me</summary>
           <div class="dropdown__content">
-            <nav class="list list--inset list--borderless m-0">
+            <nav class="list list--inset list--borderless">
               <a role="button" class="list__link">Item #1</a>
               <a role="button" class="list__link">Item #2</a>
               <a role="button" class="list__link">Item #3</a>
@@ -78,7 +78,7 @@ Use modifier classes below on `.dropdown` container to change the content positi
         <details class="dropdown dropdown--rt">
           <summary class="btn dropdown__toggle">Click Me</summary>
           <div class="dropdown__content">
-            <nav class="list list--inset list--borderless m-0">
+            <nav class="list list--inset list--borderless">
               <a role="button" class="list__link">Item #1</a>
               <a role="button" class="list__link">Item #2</a>
               <a role="button" class="list__link">Item #3</a>
@@ -91,7 +91,7 @@ Use modifier classes below on `.dropdown` container to change the content positi
         <details class="dropdown dropdown--bl">
           <summary class="btn dropdown__toggle">Click Me</summary>
           <div class="dropdown__content">
-            <nav class="list list--inset list--borderless m-0">
+            <nav class="list list--inset list--borderless">
               <a role="button" class="list__link">Item #1</a>
               <a role="button" class="list__link">Item #2</a>
               <a role="button" class="list__link">Item #3</a>

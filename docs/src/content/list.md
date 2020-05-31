@@ -193,6 +193,8 @@ To quick create linkify list by using `<a>` tag and child `.list__link` class.
 
 Use `.list--sm`, `.list--lg` modifier classes on `.list` container to change size
 
+##### Small
+
 <section class="snippet">
   <div class="snippet__preview">
     <ul class="list list--bordered list--sm">
@@ -218,30 +220,7 @@ Use `.list--sm`, `.list--lg` modifier classes on `.list` container to change siz
   </div>
 </section>
 
-<section class="snippet">
-  <div class="snippet__preview">
-    <ul class="list list--bordered">
-      <li class="list__item">1. Active</li>
-      <li class="list__item">2. Dapibus ac facilisis in</li>
-      <li class="list__item">3. Morbi leo risus</li>
-      <li class="list__item">4. Disabled</li>
-      <li class="list__item">5. Vestibulum at eros</li>
-    </ul>
-  </div>
-  <div class="snippet__source">
-
-```html
-<ul class="list list--bordered">
-  <li class="list__item">1. Active</li>
-  <li class="list__item">2. Dapibus ac facilisis in</li>
-  <li class="list__item">3. Morbi leo risus</li>
-  <li class="list__item">4. Disabled</li>
-  <li class="list__item">5. Vestibulum at eros</li>
-</ul>
-```
-
-  </div>
-</section>
+##### Large
 
 <section class="snippet">
   <div class="snippet__preview">

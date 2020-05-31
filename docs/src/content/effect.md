@@ -54,11 +54,11 @@ Utilities for controlling an element's effect.
     </tr>
     <tr>
       <td><code>.shadow-md</code></td>
-      <td><code>box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05)</code></td>
+      <td><code>box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1)</code></td>
     </tr>
     <tr>
       <td><code>.shadow-lg</code></td>
-      <td><code>box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05)</code></td>
+      <td><code>box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2)</code></td>
     </tr>
   </tbody>
 </table>

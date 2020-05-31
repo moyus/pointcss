@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha13">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha13">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha13">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=200alpha14">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=200alpha14">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=200alpha14">
 </head>
 <body>
   <div id="docs" class="site">
@@ -24,7 +24,7 @@
   <div class="navbar__end">
     <div class="navbar__item shown@lg">
       <div class="site__metadata">
-        <span>v2.0.0-alpha.13</span>
+        <span>v2.0.0-alpha.14</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -189,27 +189,32 @@
   <div class="snippet__preview">
     <nav class="navbar">
       <div class="navbar__start">
-        <a role="button" class="navbar__brand">
+        <a class="navbar__brand">
           <img src="https://moyus.github.io/pointcss/images/logo.svg" alt="pointcss" />
         </a>
-        <div class="navbar__item is-active">
-          <a role="button" class="navbar__link">Home</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Content</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Components</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Utilities</a>
-        </div>
+        <ul class="navbar__list shown@lg">
+          <li class="navbar__item is-active">
+            <a class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Content</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Components</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Utilities</a>
+          </li>
+        </ul>
       </div>
       <div class="navbar__end">
-        <div class="navbar__item">
+        <div class="navbar__item hidden@lg">
+          <button class="btn">Menu</button>
+        </div>
+        <div class="navbar__item shown@lg">
           <div class="flex">
             <button class="btn">Sign up</button>
-          <button class="btn btn--primary ml-3">Log in</button>
+            <button class="btn btn--primary ml-3">Log in</button>
           </div>
         </div>
       </div>
@@ -218,32 +223,35 @@
   <div class="snippet__source">
 
 <pre><code class="language-html">&lt;nav class=&quot;navbar&quot;&gt;
-    &lt;div class=&quot;navbar__start&quot;&gt;
-      &lt;a role=&quot;button&quot; class=&quot;navbar__brand&quot;&gt;
-        &lt;img src=&quot;https://moyus.github.io/pointcss/images/logo.svg&quot; alt=&quot;pointcss&quot; /&gt;
-      &lt;/a&gt;
-      &lt;div class=&quot;navbar__item is-active&quot;&gt;
-        &lt;a role=&quot;button&quot; class=&quot;navbar__link&quot;&gt;Home&lt;/a&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;navbar__item&quot;&gt;
-        &lt;a role=&quot;button&quot; class=&quot;navbar__link&quot;&gt;Content&lt;/a&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;navbar__item&quot;&gt;
-        &lt;a role=&quot;button&quot; class=&quot;navbar__link&quot;&gt;Components&lt;/a&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;navbar__item&quot;&gt;
-        &lt;a role=&quot;button&quot; class=&quot;navbar__link&quot;&gt;Utilities&lt;/a&gt;
-      &lt;/div&gt;
+  &lt;div class=&quot;navbar__start&quot;&gt;
+    &lt;a class=&quot;navbar__brand&quot;&gt;
+      &lt;img src=&quot;...&quot; alt=&quot;Brand&quot; /&gt;
+    &lt;/a&gt;
+    &lt;ul class=&quot;navbar__list shown@lg&quot;&gt;
+      &lt;li class=&quot;navbar__item is-active&quot;&gt;
+        &lt;a class=&quot;navbar__link&quot;&gt;Home&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;navbar__item&quot;&gt;
+        &lt;a class=&quot;navbar__link&quot;&gt;Content&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;navbar__item&quot;&gt;
+        &lt;a class=&quot;navbar__link&quot;&gt;Components&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;navbar__item&quot;&gt;
+        &lt;a class=&quot;navbar__link&quot;&gt;Utilities&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;navbar__end&quot;&gt;
+    &lt;div class=&quot;navbar__item hidden@lg&quot;&gt;
+      &lt;button class=&quot;btn&quot;&gt;Menu&lt;/button&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;navbar__end&quot;&gt;
-      &lt;div class=&quot;navbar__item&quot;&gt;
-        &lt;div class=&quot;flex&quot;&gt;
-          &lt;button class=&quot;btn btn--loose&quot;&gt;Sign up&lt;/button&gt;
-        &lt;button class=&quot;btn btn--primary btn--loose ml-3&quot;&gt;Log in&lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
+    &lt;div class=&quot;navbar__item shown@lg&quot;&gt;
+      &lt;button class=&quot;btn&quot;&gt;Sign up&lt;/button&gt;
+      &lt;button class=&quot;btn btn--primary ml-3&quot;&gt;Log in&lt;/button&gt;
     &lt;/div&gt;
-  &lt;/nav&gt;</code></pre>
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
   </div>
 </section>
 
@@ -251,37 +259,40 @@
     <a name="variant" class="anchor" href="#variant"></a>
     Variant
     </h2><p>Choose <code>.navbar--light</code> for use with light background colors, or <code>.navbar--dark</code> for dark background colors</p>
-<section class="snippet">
+<h5 id="dark">Dark</h5><section class="snippet">
   <div class="snippet__preview">
-    <nav class="navbar navbar--dark px-5 bg-dark">
+    <nav class="navbar navbar--dark py-5 px-6 bg-dark">
       <div class="navbar__start">
         <a role="button" class="navbar__brand">POINTCSS</a>
-        <div class="navbar__item is-active">
-          <a role="button" class="navbar__link">Home</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Content</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Components</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Utilities</a>
-        </div>
+        <ul class="navbar__list shown@lg">
+          <li class="navbar__item is-active">
+            <a class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Content</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Components</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Utilities</a>
+          </li>
+        </ul>
       </div>
       <div class="navbar__end">
-        <div class="navbar__item">
-          <div class="flex">
-            <button class="btn btn--white btn--outline">Sign up</button>
-            <button class="btn btn--white btn--outline ml-3">Log in</button>
-          </div>
+        <div class="navbar__item hidden@lg">
+          <button class="btn btn--white btn--outline">Menu</button>
+        </div>
+        <div class="navbar__item shown@lg">
+          <button class="btn btn--white btn--outline">Sign up</button>
+          <button class="btn btn--white btn--outline ml-3">Log in</button>
         </div>
       </div>
     </nav>
   </div>
   <div class="snippet__source">
 
-<pre><code class="language-html">&lt;nav class=&quot;navbar navbar--dark px-5 bg-dark&quot;&gt;
+<pre><code class="language-html">&lt;nav class=&quot;navbar navbar--dark py-5 px-6 bg-dark&quot;&gt;
   ...
 &lt;/nav&gt;</code></pre>
   </div>
@@ -289,71 +300,77 @@
 
 <section class="snippet">
   <div class="snippet__preview">
-    <nav class="navbar navbar--dark px-5 bg-primary">
+    <nav class="navbar navbar--dark py-5 px-6 bg-primary">
       <div class="navbar__start">
         <a role="button" class="navbar__brand">POINTCSS</a>
-        <div class="navbar__item is-active">
-          <a role="button" class="navbar__link">Home</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Content</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Components</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Utilities</a>
-        </div>
+        <ul class="navbar__list shown@lg">
+          <li class="navbar__item is-active">
+            <a class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Content</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Components</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Utilities</a>
+          </li>
+        </ul>
       </div>
       <div class="navbar__end">
-        <div class="navbar__item">
-          <div class="flex">
-            <button class="btn btn--white btn--outline">Sign up</button>
-            <button class="btn btn--white btn--outline ml-3">Log in</button>
-          </div>
+        <div class="navbar__item hidden@lg">
+          <button class="btn btn--white btn--outline">Menu</button>
+        </div>
+        <div class="navbar__item shown@lg">
+          <button class="btn btn--white btn--outline">Sign up</button>
+          <button class="btn btn--white btn--outline ml-3">Log in</button>
         </div>
       </div>
     </nav>
   </div>
   <div class="snippet__source">
 
-<pre><code class="language-html">&lt;nav class=&quot;navbar navbar--dark px-5 bg-primary&quot;&gt;
+<pre><code class="language-html">&lt;nav class=&quot;navbar navbar--dark py-5 px-6 bg-primary&quot;&gt;
   ...
 &lt;/nav&gt;</code></pre>
   </div>
 </section>
 
-<section class="snippet">
+<h5 id="light">Light</h5><section class="snippet">
   <div class="snippet__preview">
-    <nav class="navbar navbar--light px-5 bg-light">
+    <nav class="navbar navbar--light py-5 px-6 bg-light">
       <div class="navbar__start">
         <a role="button" class="navbar__brand">POINTCSS</a>
-        <div class="navbar__item is-active">
-          <a role="button" class="navbar__link">Home</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Content</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Components</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Utilities</a>
-        </div>
+        <ul class="navbar__list shown@lg">
+          <li class="navbar__item is-active">
+            <a class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Content</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Components</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Utilities</a>
+          </li>
+        </ul>
       </div>
       <div class="navbar__end">
-        <div class="navbar__item">
-          <div class="flex">
-            <button class="btn">Sign up</button>
-          <button class="btn btn--primary ml-3">Log in</button>
-          </div>
+        <div class="navbar__item hidden@lg">
+          <button class="btn">Menu</button>
+        </div>
+        <div class="navbar__item shown@lg">
+          <button class="btn">Sign up</button>
+          <button class="btn ml-3">Log in</button>
         </div>
       </div>
     </nav>
   </div>
   <div class="snippet__source">
 
-<pre><code class="language-html">&lt;nav class=&quot;navbar navbar--light px-5 bg-light&quot;&gt;
+<pre><code class="language-html">&lt;nav class=&quot;navbar navbar--light py-5 px-6 bg-light&quot;&gt;
   ...
 &lt;/nav&gt;</code></pre>
   </div>

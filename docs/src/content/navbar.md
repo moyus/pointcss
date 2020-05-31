@@ -16,27 +16,32 @@ A fundamental navigation component, you can extend it to fit a more complex situ
   <div class="snippet__preview">
     <nav class="navbar">
       <div class="navbar__start">
-        <a role="button" class="navbar__brand">
+        <a class="navbar__brand">
           <img src="{{project.url}}/images/logo.svg" alt="pointcss" />
         </a>
-        <div class="navbar__item is-active">
-          <a role="button" class="navbar__link">Home</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Content</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Components</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Utilities</a>
-        </div>
+        <ul class="navbar__list shown@lg">
+          <li class="navbar__item is-active">
+            <a class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Content</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Components</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Utilities</a>
+          </li>
+        </ul>
       </div>
       <div class="navbar__end">
-        <div class="navbar__item">
+        <div class="navbar__item hidden@lg">
+          <button class="btn">Menu</button>
+        </div>
+        <div class="navbar__item shown@lg">
           <div class="flex">
             <button class="btn">Sign up</button>
-          <button class="btn btn--primary ml-3">Log in</button>
+            <button class="btn btn--primary ml-3">Log in</button>
           </div>
         </div>
       </div>
@@ -46,32 +51,35 @@ A fundamental navigation component, you can extend it to fit a more complex situ
 
 ```html
 <nav class="navbar">
-    <div class="navbar__start">
-      <a role="button" class="navbar__brand">
-        <img src="{{project.url}}/images/logo.svg" alt="pointcss" />
-      </a>
-      <div class="navbar__item is-active">
-        <a role="button" class="navbar__link">Home</a>
-      </div>
-      <div class="navbar__item">
-        <a role="button" class="navbar__link">Content</a>
-      </div>
-      <div class="navbar__item">
-        <a role="button" class="navbar__link">Components</a>
-      </div>
-      <div class="navbar__item">
-        <a role="button" class="navbar__link">Utilities</a>
-      </div>
+  <div class="navbar__start">
+    <a class="navbar__brand">
+      <img src="..." alt="Brand" />
+    </a>
+    <ul class="navbar__list shown@lg">
+      <li class="navbar__item is-active">
+        <a class="navbar__link">Home</a>
+      </li>
+      <li class="navbar__item">
+        <a class="navbar__link">Content</a>
+      </li>
+      <li class="navbar__item">
+        <a class="navbar__link">Components</a>
+      </li>
+      <li class="navbar__item">
+        <a class="navbar__link">Utilities</a>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar__end">
+    <div class="navbar__item hidden@lg">
+      <button class="btn">Menu</button>
     </div>
-    <div class="navbar__end">
-      <div class="navbar__item">
-        <div class="flex">
-          <button class="btn btn--loose">Sign up</button>
-        <button class="btn btn--primary btn--loose ml-3">Log in</button>
-        </div>
-      </div>
+    <div class="navbar__item shown@lg">
+      <button class="btn">Sign up</button>
+      <button class="btn btn--primary ml-3">Log in</button>
     </div>
-  </nav>
+  </div>
+</nav>
 ```
 
   </div>
@@ -81,30 +89,35 @@ A fundamental navigation component, you can extend it to fit a more complex situ
 
 Choose `.navbar--light` for use with light background colors, or `.navbar--dark` for dark background colors
 
+##### Dark
+
 <section class="snippet">
   <div class="snippet__preview">
-    <nav class="navbar navbar--dark px-5 bg-dark">
+    <nav class="navbar navbar--dark py-5 px-6 bg-dark">
       <div class="navbar__start">
         <a role="button" class="navbar__brand">POINTCSS</a>
-        <div class="navbar__item is-active">
-          <a role="button" class="navbar__link">Home</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Content</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Components</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Utilities</a>
-        </div>
+        <ul class="navbar__list shown@lg">
+          <li class="navbar__item is-active">
+            <a class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Content</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Components</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Utilities</a>
+          </li>
+        </ul>
       </div>
       <div class="navbar__end">
-        <div class="navbar__item">
-          <div class="flex">
-            <button class="btn btn--white btn--outline">Sign up</button>
-            <button class="btn btn--white btn--outline ml-3">Log in</button>
-          </div>
+        <div class="navbar__item hidden@lg">
+          <button class="btn btn--white btn--outline">Menu</button>
+        </div>
+        <div class="navbar__item shown@lg">
+          <button class="btn btn--white btn--outline">Sign up</button>
+          <button class="btn btn--white btn--outline ml-3">Log in</button>
         </div>
       </div>
     </nav>
@@ -112,7 +125,7 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
   <div class="snippet__source">
 
 ```html
-<nav class="navbar navbar--dark px-5 bg-dark">
+<nav class="navbar navbar--dark py-5 px-6 bg-dark">
   ...
 </nav>
 ```
@@ -122,28 +135,31 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
 
 <section class="snippet">
   <div class="snippet__preview">
-    <nav class="navbar navbar--dark px-5 bg-primary">
+    <nav class="navbar navbar--dark py-5 px-6 bg-primary">
       <div class="navbar__start">
         <a role="button" class="navbar__brand">POINTCSS</a>
-        <div class="navbar__item is-active">
-          <a role="button" class="navbar__link">Home</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Content</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Components</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Utilities</a>
-        </div>
+        <ul class="navbar__list shown@lg">
+          <li class="navbar__item is-active">
+            <a class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Content</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Components</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Utilities</a>
+          </li>
+        </ul>
       </div>
       <div class="navbar__end">
-        <div class="navbar__item">
-          <div class="flex">
-            <button class="btn btn--white btn--outline">Sign up</button>
-            <button class="btn btn--white btn--outline ml-3">Log in</button>
-          </div>
+        <div class="navbar__item hidden@lg">
+          <button class="btn btn--white btn--outline">Menu</button>
+        </div>
+        <div class="navbar__item shown@lg">
+          <button class="btn btn--white btn--outline">Sign up</button>
+          <button class="btn btn--white btn--outline ml-3">Log in</button>
         </div>
       </div>
     </nav>
@@ -151,7 +167,7 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
   <div class="snippet__source">
 
 ```html
-<nav class="navbar navbar--dark px-5 bg-primary">
+<nav class="navbar navbar--dark py-5 px-6 bg-primary">
   ...
 </nav>
 ```
@@ -159,30 +175,35 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
   </div>
 </section>
 
+##### Light
+
 <section class="snippet">
   <div class="snippet__preview">
-    <nav class="navbar navbar--light px-5 bg-light">
+    <nav class="navbar navbar--light py-5 px-6 bg-light">
       <div class="navbar__start">
         <a role="button" class="navbar__brand">POINTCSS</a>
-        <div class="navbar__item is-active">
-          <a role="button" class="navbar__link">Home</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Content</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Components</a>
-        </div>
-        <div class="navbar__item">
-          <a role="button" class="navbar__link">Utilities</a>
-        </div>
+        <ul class="navbar__list shown@lg">
+          <li class="navbar__item is-active">
+            <a class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Content</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Components</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link">Utilities</a>
+          </li>
+        </ul>
       </div>
       <div class="navbar__end">
-        <div class="navbar__item">
-          <div class="flex">
-            <button class="btn">Sign up</button>
-          <button class="btn btn--primary ml-3">Log in</button>
-          </div>
+        <div class="navbar__item hidden@lg">
+          <button class="btn">Menu</button>
+        </div>
+        <div class="navbar__item shown@lg">
+          <button class="btn">Sign up</button>
+          <button class="btn ml-3">Log in</button>
         </div>
       </div>
     </nav>
@@ -190,7 +211,7 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
   <div class="snippet__source">
 
 ```html
-<nav class="navbar navbar--light px-5 bg-light">
+<nav class="navbar navbar--light py-5 px-6 bg-light">
   ...
 </nav>
 ```

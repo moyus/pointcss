@@ -4,6 +4,7 @@ title: "Badge"
 catalogue:
   - Basic
   - Variant
+  - Sizing
   - Linked
   - Position
 ---
@@ -22,7 +23,7 @@ catalogue:
         <button class="btn">
           <div class="flex items-center">
             <span>Messages</span>
-            <span class="ml-3 badge badge--danger">12</span>
+            <span class="ml-3 badge badge--sm badge--danger">12</span>
           </div>
         </button>
       </div>
@@ -59,7 +60,6 @@ catalogue:
     <span class="badge badge--warning">Warning</span>
     <span class="badge badge--black">Black</span>
     <span class="badge badge--dark">Dark</span>
-    <span class="badge badge--light">Light</span>
     <span class="badge badge--white">White</span>
   </div>
   <div class="snippet__source">
@@ -72,7 +72,6 @@ catalogue:
 <span class="badge badge--warning">Warning</span>
 <span class="badge badge--black">Black</span>
 <span class="badge badge--dark">Dark</span>
-<span class="badge badge--light">Light</span>
 <span class="badge badge--white">White</span>
 ```
 
@@ -99,6 +98,32 @@ catalogue:
 <span class="badge badge--success"></span>
 <span class="badge badge--danger"></span>
 <span class="badge badge--warning"></span>
+```
+
+  </div>
+</section>
+
+## Sizing
+
+<section class="snippet">
+  <div class="snippet__preview">
+    <div class="level">
+      <div class="level__item">
+        <span class="badge badge--primary badge--sm">Small</span>
+      </div>
+      <div class="level__item">
+        <span class="badge badge--success">Normal</span>
+      </div>
+      <div class="level__item">
+        <span class="badge badge--warning badge--lg">Large</span>
+      </div>
+    </div>
+  </div>
+  <div class="snippet__source">
+
+```html
+<span class="badge badge--sm"></span>
+<span class="badge badge--lg"></span>
 ```
 
   </div>
@@ -137,7 +162,7 @@ By composing with other components, you can specify the position of badge.
   <div class="snippet__preview">
     <button class="btn btn--lose">
       <span>Messages</span>
-      <span class="badge badge--danger badge--rt">99</span>
+      <span class="badge badge--danger badge--sm badge--pill badge--rt">99</span>
     </button>
   </div>
   <div class="snippet__source">
@@ -145,7 +170,7 @@ By composing with other components, you can specify the position of badge.
 ```html
 <button class="btn btn--lose">
   <span>Messages</span>
-  <span class="badge badge--danger badge--rt">99</span>
+  <span class="badge badge--danger badge--pill badge--rt">99</span>
 </button>
 ```
 

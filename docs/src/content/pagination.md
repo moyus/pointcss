@@ -14,33 +14,77 @@ A reuseable and flexible navigation that lets users access pages of content.
 
 <section class="snippet">
   <div class="snippet__preview">
-    <nav class="pagination">
-      <span class="pagination__item is-disabled">Previous</span>
-      <em class="pagination__item is-active">1</em>
-      <a href="#" class="pagination__item">2</a>
-      <a href="#" class="pagination__item">3</a>
-      <a href="#" class="pagination__item">4</a>
-      <a href="#" class="pagination__item">5</a>
-      <span class="pagination__item">...</span>
-      <a href="#" class="pagination__item">99</a>
-      <a href="#" class="pagination__item">100</a>
-      <a href="#" class="pagination__item">Next</a>
+    <nav class="pagination" role="navigation">
+      <div class="pagination__item">
+        <span class="pagination__link is-disabled">Previous</span>
+      </div>
+      <ul class="pagination__list">
+        <li class="pagination__item">
+          <em class="pagination__link is-active">1</em>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">2</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">3</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">4</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">5</a>
+        </li>
+        <li class="pagination__item">
+          <span class="pagination__gap">...</span>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">99</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">100</a>
+        </li>
+      </ul>
+      <div class="pagination__item">
+        <a href="#" class="pagination__link">Next</a>
+      </div>
     </nav>
   </div>
   <div class="snippet__source">
 
 ```html
-<nav class="pagination">
-  <span class="pagination__item is-disabled">Previous</span>
-  <em class="pagination__item is-active">1</em>
-  <a href="#" class="pagination__item">2</a>
-  <a href="#" class="pagination__item">3</a>
-  <a href="#" class="pagination__item">4</a>
-  <a href="#" class="pagination__item">5</a>
-  <span class="pagination__item">...</span>
-  <a href="#" class="pagination__item">99</a>
-  <a href="#" class="pagination__item">100</a>
-  <a href="#" class="pagination__item">Next</a>
+<nav class="pagination" role="navigation">
+  <div class="pagination__item">
+    <span class="pagination__link is-disabled">Previous</span>
+  </div>
+  <ul class="pagination__list">
+    <li class="pagination__item">
+      <em class="pagination__link is-active">1</em>
+    </li>
+    <li class="pagination__item">
+      <a href="#" class="pagination__link">2</a>
+    </li>
+    <li class="pagination__item">
+      <a href="#" class="pagination__link">3</a>
+    </li>
+    <li class="pagination__item">
+      <a href="#" class="pagination__link">4</a>
+    </li>
+    <li class="pagination__item">
+      <a href="#" class="pagination__link">5</a>
+    </li>
+    <li class="pagination__item">
+      <span class="pagination__gap">...</span>
+    </li>
+    <li class="pagination__item">
+      <a href="#" class="pagination__link">99</a>
+    </li>
+    <li class="pagination__item">
+      <a href="#" class="pagination__link">100</a>
+    </li>
+  </ul>
+  <div class="pagination__item">
+    <a href="#" class="pagination__link">Next</a>
+  </div>
 </nav>
 ```
 
@@ -54,32 +98,45 @@ By adding `.pagination--bordered` modifier class on `.pagination` container to q
 <section class="snippet">
   <div class="snippet__preview">
     <nav class="pagination pagination--bordered">
-      <span class="pagination__item is-disabled">Previous</span>
-      <em class="pagination__item is-active">1</em>
-      <a href="#" class="pagination__item">2</a>
-      <a href="#" class="pagination__item">3</a>
-      <a href="#" class="pagination__item">4</a>
-      <a href="#" class="pagination__item">5</a>
-      <span class="pagination__item is-disabled">...</span>
-      <a href="#" class="pagination__item">99</a>
-      <a href="#" class="pagination__item">100</a>
-      <a href="#" class="pagination__item">Next</a>
+      <ul class="pagination__list">
+        <li class="pagination__item">
+          <em class="pagination__link is-active">1</em>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">2</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">3</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">4</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">5</a>
+        </li>
+        <li class="pagination__item">
+          <span class="pagination__gap">...</span>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">99</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">100</a>
+        </li>
+      </ul>
+      <div class="pagination__item">
+        <span class="pagination__link is-disabled">Previous</span>
+      </div>
+      <div class="pagination__item">
+        <a href="#" class="pagination__link">Next</a>
+      </div>
     </nav>
   </div>
   <div class="snippet__source">
 
 ```html
 <nav class="pagination pagination--bordered">
-  <span class="pagination__item is-disabled">Previous</span>
-  <em class="pagination__item is-active">1</em>
-  <a href="#" class="pagination__item">2</a>
-  <a href="#" class="pagination__item">3</a>
-  <a href="#" class="pagination__item">4</a>
-  <a href="#" class="pagination__item">5</a>
-  <span class="pagination__item is-disabled">...</span>
-  <a href="#" class="pagination__item">99</a>
-  <a href="#" class="pagination__item">100</a>
-  <a href="#" class="pagination__item">Next</a>
+  ...
 </nav>
 ```
 
@@ -90,19 +147,43 @@ By adding `.pagination--bordered` modifier class on `.pagination` container to q
 
 Add `.pagination--sm` or `.pagination--lg` modifier class to quickly create different size pagination
 
+##### Small
+
 <section class="snippet">
   <div class="snippet__preview">
     <nav class="pagination pagination--bordered pagination--sm">
-      <a href="#" class="pagination__item">Previous</a>
-      <em class="pagination__item is-active">1</em>
-      <a href="#" class="pagination__item">2</a>
-      <a href="#" class="pagination__item">3</a>
-      <a href="#" class="pagination__item">4</a>
-      <a href="#" class="pagination__item">5</a>
-      <span class="pagination__item">...</span>
-      <a href="#" class="pagination__item">99</a>
-      <a href="#" class="pagination__item">100</a>
-      <a href="#" class="pagination__item">Next</a>
+      <div class="pagination__item">
+        <a href="#" class="pagination__link">Previous</a>
+      </div>
+      <div class="pagination__item">
+        <a href="#" class="pagination__link">Next</a>
+      </div>
+      <ul class="pagination__list">
+        <li class="pagination__item">
+          <em class="pagination__link is-active">1</em>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">2</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">3</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">4</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">5</a>
+        </li>
+        <li class="pagination__item">
+          <span class="pagination__gap">...</span>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">99</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">100</a>
+        </li>
+      </ul>
     </nav>
   </div>
   <div class="snippet__source">
@@ -116,45 +197,43 @@ Add `.pagination--sm` or `.pagination--lg` modifier class to quickly create diff
   </div>
 </section>
 
-<section class="snippet">
-  <div class="snippet__preview">
-    <nav class="pagination pagination--bordered">
-      <a href="#" class="pagination__item">Previous</a>
-      <em class="pagination__item is-active">1</em>
-      <a href="#" class="pagination__item">2</a>
-      <a href="#" class="pagination__item">3</a>
-      <a href="#" class="pagination__item">4</a>
-      <a href="#" class="pagination__item">5</a>
-      <span class="pagination__item">...</span>
-      <a href="#" class="pagination__item">99</a>
-      <a href="#" class="pagination__item">100</a>
-      <a href="#" class="pagination__item">Next</a>
-    </nav>
-  </div>
-  <div class="snippet__source">
-
-```html
-<nav class="pagination pagination--bordered">
-  ...
-</nav>
-```
-
-  </div>
-</section>
+##### Large
 
 <section class="snippet">
   <div class="snippet__preview">
     <nav class="pagination pagination--bordered pagination--lg">
-      <a href="#" class="pagination__item">Previous</a>
-      <em class="pagination__item is-active">1</em>
-      <a href="#" class="pagination__item">2</a>
-      <a href="#" class="pagination__item">3</a>
-      <a href="#" class="pagination__item">4</a>
-      <a href="#" class="pagination__item">5</a>
-      <span class="pagination__item">...</span>
-      <a href="#" class="pagination__item">99</a>
-      <a href="#" class="pagination__item">100</a>
-      <a href="#" class="pagination__item">Next</a>
+      <div class="pagination__item">
+        <a href="#" class="pagination__link">Previous</a>
+      </div>
+      <ul class="pagination__list">
+        <li class="pagination__item">
+          <em class="pagination__link is-active">1</em>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">2</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">3</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">4</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">5</a>
+        </li>
+        <li class="pagination__item">
+          <span class="pagination__link">...</span>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">99</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">100</a>
+        </li>
+      </ul>
+      <div class="pagination__item">
+        <a href="#" class="pagination__link">Next</a>
+      </div>
     </nav>
   </div>
   <div class="snippet__source">
