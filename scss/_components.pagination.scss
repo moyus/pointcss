@@ -1,113 +1,174 @@
 /* ## Pagination
 ---------------------------------*/
-$pagination-border-width: 1px !default;
-$pagination-border-color: $grey-thin !default;
-$pagination-bg: $component-bg !default;
-$pagination-border-radius: $component-border-radius-md !default;
 $pagination-font-size-sm: $text-size-sm !default;
 $pagination-font-size-md: $text-size-md !default;
 $pagination-font-size-lg: $text-size-lg !default;
+
 $pagination-padding-sm: $spacing-squish-xs !default;
 $pagination-padding-md: $spacing-squish-sm !default;
 $pagination-padding-lg: $spacing-squish-md !default;
+
+$pagination-gutter: $spacing-stack-xs !default;
+$pagination-border-radius: $component-border-radius-md !default;
+$pagination-border-color: $grey-thin !default;
+$pagination-border-width: 1px !default;
+
+$pagination-bg: transparent !default;
+$pagination-color: $grey-dark !default;
+$pagination-hover-bg: $grey-light !default;
+$pagination-hover-color: $grey-dark !default;
+$pagination-disabled-bg: transparent !default;
+$pagination-disabled-color: $grey-mute !default;
+$pagination-active-bg: $color-primary !default;
+$pagination-active-color: invert-color($color-primary) !default;
+
+$pagination-bordered-bg: $component-bg !default;
+$pagination-bordered-hover-bg: $grey-light !default;
+$pagination-bordered-disabled-bg: $grey-shade !default;
+$pagination-bordered-disabled-color: $grey-mute !default;
+$pagination-bordered-active-bg: $color-primary !default;
+$pagination-bordered-active-color: invert-color($color-primary) !default;
+
 $pagination-height-computed: $pagination-font-size-md * $line-height-normal + 2 * nth($pagination-padding-md, 1)  + 2 * $pagination-border-width;
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  margin-left:  (0 - $pagination-gutter);
+  margin-right: (0 - $pagination-gutter);
+}
+
+.pagination__list {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .pagination__item {
-  position: relative;
+  flex: 0 0 auto;
+  display: inline-block;
+  margin: $pagination-gutter;
+}
+
+.pagination__link,
+.pagination__gap {
   display: inline-block;
   height: $pagination-height-computed;
-  min-width: $pagination-height-computed;;
-  color: $grey-mute;
+  min-width: $pagination-height-computed;
   font-size: $pagination-font-size-md;
+  font-weight: normal;
+  font-style: normal;
   line-height: $line-height-normal;
   padding: $pagination-padding-md;
   border-radius: $pagination-border-radius;
   border: $pagination-border-width solid transparent;
+  background-color: $pagination-bg;
   white-space: nowrap;
   text-overflow: ellipsis;
   text-decoration: none;
   text-align: center;
-  z-index: 5;
+  box-shadow: none;
+  appearance: none;
+}
+
+.pagination__gap {
+  color: rgba($pagination-color, 0.5);
+}
+
+.pagination__link {
+  color: $pagination-color;
+
+  &:focus {
+    border-color: $color-primary;
+  }
 
   &:hover {
-    color: $grey-dark;
-    background-color: $grey-light;
+    color: $pagination-hover-color;
+    background-color: $pagination-hover-bg;
+  }
+
+  &:active {
+    color: $pagination-hover-color;
+    border-color: transparent;
+    background-color: darken($pagination-hover-bg, 2.5%);
   }
 
   &.is-active {
-    color: $white;
-    border-color: $color-primary;
-    background-color: $color-primary;
-    z-index: 10;
+    color: $pagination-active-color;
+    font-weight: $font-weight-medium;
+    border-color: $pagination-active-bg;
+    background-color: $pagination-active-bg;
   }
 
-  &.is-disabled {
-    color: $grey-thin;
+  &.is-disabled,
+  &[disabled] {
+    opacity: 0.75;
+    color: $pagination-disabled-color;
+    background-color: $pagination-disabled-bg;
     cursor: not-allowed;
   }
 }
 
+// modifier - variant
+.pagination--bordered {
+  .pagination__link {
+    border-color: $pagination-border-color;
+    background-color: $pagination-bordered-bg;
+
+    &:focus {
+      border-color: $color-primary;
+    }
+
+    &:hover {
+      background-color: $pagination-bordered-hover-bg;
+    }    
+
+    &:active {
+      border-color: $pagination-border-color;
+      background-color: darken($pagination-bordered-hover-bg, 2.5%);
+    }
+
+    &.is-active {
+      color: $pagination-bordered-active-color;
+      border-color: $pagination-bordered-active-bg;
+      background-color: $pagination-bordered-active-bg;
+    }
+
+    &.is-disabled,
+    &[disabled] {
+      opacity: 0.75;
+      color: $pagination-bordered-disabled-color;
+      border-color: $pagination-bordered-disabled-bg;
+      background-color: $pagination-bordered-disabled-bg;
+    }
+  }
+}
+
+// modifier - sizing
 .pagination--sm {
   $pagination-height-computed: $pagination-font-size-sm * $line-height-normal + 2 * nth($pagination-padding-sm, 1)  + 2 * $pagination-border-width;
 
-  .pagination__item {
+  .pagination__link,
+  .pagination__gap {
     height: $pagination-height-computed;
     min-width: $pagination-height-computed;
     font-size: $pagination-font-size-sm;
     padding: $pagination-padding-sm;
-    border-radius: $pagination-border-radius;
   }
 }
 
 .pagination--lg {
   $pagination-height-computed: $pagination-font-size-lg * $line-height-normal + 2 * nth($pagination-padding-lg, 1)  + 2 * $pagination-border-width;
 
-  .pagination__item {
+  .pagination__link,
+  .pagination__gap {
     height: $pagination-height-computed;
     min-width: $pagination-height-computed;
     font-size: $pagination-font-size-lg;
     padding: $pagination-padding-lg;
-    border-radius: $pagination-border-radius;
-  }
-}
-
-.pagination--bordered {
-  .pagination__item {
-    border-color: $pagination-border-color;
-    margin-left: (0 - $pagination-border-width);
-    background-color: $pagination-bg;
-
-    &:hover {
-      background-color: $grey-light;
-    }
-
-    &:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    &:last-child {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
-    &:nth-child(n+2):nth-last-child(n+2) {
-      border-radius: 0;
-    }
-
-    &.is-active {
-      color: $white;
-      border-color: darken($color-primary, 5%);
-      background-color: $color-primary;
-    }
-
-    &.is-disabled {
-      background-color: $grey-shade;
-    }
   }
 }
