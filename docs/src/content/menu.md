@@ -511,7 +511,7 @@ You can create s small size of menu by adding `.menu--sm` on `.menu` container.
 
 <section class="snippet row row--stretch">
   <div class="snippet__preview col-4@lg col-5@md">
-    <aside class="menu menu--sm border rounded shadow-sm p-5" data-toggle="menu">
+    <aside class="menu menu--sm rounded sharp-shadow-sm p-5" data-toggle="menu">
       <p class="menu__heading">OVERVIEW</p>
       <ul class="menu__list">
         <li class="menu__item">
