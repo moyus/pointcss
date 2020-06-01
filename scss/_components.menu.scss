@@ -36,12 +36,9 @@ $menu-item-padding-md: ($spacing-square-sm $spacing-square-sm) !default;
 }
 
 .menu__list {
-  margin: 0 0 $menu-list-gutter;
+  margin: 0 0 $menu-list-gutter 0;
   padding: 0;
   list-style: none;
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .menu__item {

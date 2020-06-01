@@ -18,6 +18,18 @@
   opacity: 1 !important;
 }
 
+.lift-sm {
+  box-shadow: $lift-sm !important;
+}
+
+.lift-md {
+  box-shadow: $lift-md !important;
+}
+
+.lift-lg {
+  box-shadow: $lift-lg !important;
+}
+
 .shadow-sm {
   box-shadow: $shadow-sm !important;
 }
@@ -28,18 +40,6 @@
 
 .shadow-lg {
   box-shadow: $shadow-lg !important;
-}
-
-.sharp-shadow-sm {
-  box-shadow: $sharp-shadow-sm !important;
-}
-
-.sharp-shadow-md {
-  box-shadow: $sharp-shadow-md !important;
-}
-
-.sharp-shadow-lg {
-  box-shadow: $sharp-shadow-lg !important;
 }
 
 .shadonw-none {

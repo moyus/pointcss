@@ -71,7 +71,7 @@ $spacing-stack-sm:                      8px !default;
 $spacing-stack-md:                      16px !default;
 $spacing-stack-lg:                      24px !default;
 $spacing-stack-xl:                      32px !default;
-$spacing-stack-xxl:                     64px !default;
+$spacing-stack-xxl:                     40px !default;
 
 $spacings: (
   "0": 0,
@@ -83,7 +83,7 @@ $spacings: (
   "6": 16px,
   "7": 24px,
   "8": 32px,
-  "9": 64px,
+  "9": 40px,
 ) !default;
 
 // Typo
@@ -196,13 +196,13 @@ $code-bg:                               #fcf2f2 !default;
 
 // Elevation
 // -----------------------------------------------------------------------------
-$shadow-sm:                             0 1px 3px rgba($black, 0.1) !default;
-$shadow-md:                             0 6px 16px rgba($black, 0.1) !default;
-$shadow-lg:                             0 8px 28px rgba($black, 0.2) !default;
 $sharp-edge:                            0 0 0 1px rgba($black, 0.05) !default;
-$sharp-shadow-sm:                       ($shadow-sm, $sharp-edge) !default;
-$sharp-shadow-md:                       ($shadow-md, $sharp-edge) !default;
-$sharp-shadow-lg:                       ($shadow-lg, $sharp-edge) !default;
+$lift-sm:                               0 1px 3px rgba($black, 0.1) !default;
+$lift-md:                               0 6px 16px rgba($black, 0.1) !default;
+$lift-lg:                               0 8px 28px rgba($black, 0.2) !default;
+$shadow-sm:                             ($lift-sm, $sharp-edge) !default;
+$shadow-md:                             ($lift-md, $sharp-edge) !default;
+$shadow-lg:                             ($lift-lg, $sharp-edge) !default;
 
 // Shape
 // -----------------------------------------------------------------------------
