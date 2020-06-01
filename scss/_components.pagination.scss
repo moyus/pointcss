@@ -2,11 +2,9 @@
 ---------------------------------*/
 $pagination-font-size-sm: $text-size-sm !default;
 $pagination-font-size-md: $text-size-md !default;
-$pagination-font-size-lg: $text-size-lg !default;
 
 $pagination-padding-sm: $spacing-squish-xs !default;
 $pagination-padding-md: $spacing-squish-sm !default;
-$pagination-padding-lg: $spacing-squish-md !default;
 
 $pagination-gutter: $spacing-stack-xs !default;
 $pagination-border-radius: $shape-border-radius-md !default;
@@ -158,17 +156,5 @@ $pagination-height-computed: $pagination-font-size-md * $line-height-normal + 2 
     min-width: $pagination-height-computed;
     font-size: $pagination-font-size-sm;
     padding: $pagination-padding-sm;
-  }
-}
-
-.pagination--lg {
-  $pagination-height-computed: $pagination-font-size-lg * $line-height-normal + 2 * nth($pagination-padding-lg, 1)  + 2 * $pagination-border-width;
-
-  .pagination__link,
-  .pagination__gap {
-    height: $pagination-height-computed;
-    min-width: $pagination-height-computed;
-    font-size: $pagination-font-size-lg;
-    padding: $pagination-padding-lg;
   }
 }

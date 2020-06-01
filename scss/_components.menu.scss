@@ -1,30 +1,37 @@
 /* ## Menu
 ---------------------------------*/
-$menu-list-gutter: $spacing-stack-md !default;
+$menu-color: $grey-dark !default; 
+$menu-line-height: $line-height-normal !default;
 $menu-heading-color: $grey-mute !default;
-$menu-heading-font-size: .75em !default;
+$menu-list-gutter: $spacing-stack-md !default;
 $menu-heading-line-height: $line-height-tight !default;
 $menu-heading-margin-bottom: $spacing-stack-xs !default;
-$menu-item-color: $grey-dark !default;
-$menu-item-padding: .5em .75em !default;
 $menu-item-border-radius: $shape-border-radius-md !default;
+$menu-item-icon-size: 20px !default;
 $menu-item-gutter: $spacing-stack-xxs !default;
 $menu-item-hover-bg: $grey-light !default;
 $menu-item-active-bg: $color-primary !default;
 $menu-item-active-color: invert-color($menu-item-active-bg) !default;
-$menu-item-icon-size: 20px !default;
 $menu-divider-color: $grey-thin !default;
-$menu-children-line-color: $grey-weak !default;
-$menu-children-font-size: 0.875em !default;
+$menu-submenu-line-color: $grey-weak !default;
+
+$menu-font-size-sm: $text-size-sm !default;
+$menu-heading-font-size-sm: $text-size-sm !default;
+$menu-item-padding-sm: ($spacing-square-sm $spacing-square-sm) !default;
+
+$menu-font-size-md: $text-size-md !default;
+$menu-heading-font-size-md: $text-size-sm !default;
+$menu-item-padding-md: ($spacing-square-sm $spacing-square-sm) !default;
 
 .menu {
-  font-size: $text-size-md;
+  font-size: $menu-font-size-md;
+  line-height: round-line-height($menu-font-size-md, $menu-line-height);
 }
 
 .menu__heading {
-  font-size: $menu-heading-font-size;
-  line-height: $line-height-tight;
   color: $menu-heading-color;
+  font-size: $menu-heading-font-size-md;
+  line-height: $menu-heading-line-height;
   margin-bottom: $menu-heading-margin-bottom;
 }
 
@@ -46,13 +53,13 @@ $menu-children-font-size: 0.875em !default;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: $menu-item-padding;
+  padding: $menu-item-padding-md;
   border-radius: $menu-item-border-radius;
-  color: $menu-item-color;
+  color: $menu-color;
   cursor: pointer;
 
   &:hover {
-    background-color: $grey-light;
+    background-color: $menu-item-hover-bg;
   }
 
   &.is-active {
@@ -66,6 +73,7 @@ $menu-children-font-size: 0.875em !default;
   width: $menu-item-icon-size;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   margin-right: $spacing-stack-sm;
 }
@@ -79,8 +87,10 @@ $menu-children-font-size: 0.875em !default;
 }
 
 .menu__after {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   margin-left: $spacing-stack-sm;
 }
@@ -93,12 +103,14 @@ $menu-children-font-size: 0.875em !default;
 }
 
 .menu__item {
-  .menu__list {
+  > .menu__list {
     display: none;
-    font-size: $menu-children-font-size;
-    margin: $spacing-stack-xs 0 $spacing-stack-sm $spacing-stack-md;
-    padding: 0 0 0 $spacing-stack-sm;
-    border-left: 1px solid $menu-children-line-color;
+    margin: $spacing-stack-xs 0 $spacing-stack-sm (nth($menu-item-padding-md, 2) + $menu-item-icon-size / 2);
+    padding: 0 0 0 ($menu-item-icon-size / 2 + $spacing-stack-sm - nth($menu-item-padding-md, 2) * 0.75);
+    border-left: 1px solid $menu-submenu-line-color;
+    > .menu__item > .menu__link {
+      padding: nth($menu-item-padding-md, 1) * 0.75 nth($menu-item-padding-md, 2) * 0.75;
+    }
   }
 
   &.is-active {
@@ -110,11 +122,27 @@ $menu-children-font-size: 0.875em !default;
 
 // size modifier
 .menu.menu--sm {
-  font-size: $text-size-sm;
-}
+  font-size: $menu-font-size-sm;
+  line-height: round-line-height($menu-font-size-sm, $menu-line-height);
 
-.menu.menu--lg {
-  font-size: $text-size-lg;
+  > .menu__heading {
+    font-size: $menu-heading-font-size-sm;
+  }
+
+  > .menu__list {
+    > .menu__item {
+      > .menu__link {
+        padding: $menu-item-padding-sm;
+      }
+      > .menu__list {
+        margin: $spacing-stack-xs 0 $spacing-stack-sm (nth($menu-item-padding-sm, 2) + $menu-item-icon-size / 2);
+        padding: 0 0 0 ($menu-item-icon-size / 2 + $spacing-stack-sm - nth($menu-item-padding-sm, 2) * 0.75);
+        > .menu__item > .menu__link {
+          padding: nth($menu-item-padding-sm, 1) * 0.75 nth($menu-item-padding-sm, 2) * 0.75;
+        }
+      }
+    }
+  }
 }
 
 // theme modifier
