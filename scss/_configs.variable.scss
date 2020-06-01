@@ -143,10 +143,10 @@ $text-sizes: (
   "meta-sm": $text-meta-sm
 ) !default;
 
-$line-height-tight:                     1.25 !default;
-$line-height-compact:                   1.375 !default;
-$line-height-normal:                    1.5 !default;
-$line-height-relaxed:                   1.625 !default;
+$line-height-tight:                     1.25 !default;   // heading
+$line-height-compact:                   1.375 !default;  // title, meta
+$line-height-normal:                    1.5 !default;    // text
+$line-height-relaxed:                   1.625 !default;  // content
 $line-height-loose:                     2 !default;
 
 $line-heights: (
