@@ -167,7 +167,7 @@ gulp.task('report', function () {
 })
 
 gulp.task('clean', function () {
-  return del(['docs/**', '!docs/src']);
+  return del(['docs/**', '!docs/src', '!docs/.nojekyll']);
 })
 
 /**
