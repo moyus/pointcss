@@ -8,9 +8,9 @@
   <meta name="description" content="{{ project.description }}">
   <meta name="keywords" content="{{ project.keywords }}">
   <link rel="shortcut icon" href="{{project.url}}/images/favicon.ico" />
-  <link rel="stylesheet" href="{{project.url}}/css/point.css?v={{project.version | replace('.', '') | replace('-', '')}}">
-  <link rel="stylesheet" href="{{project.url}}/css/style.css?v={{project.version | replace('.', '') | replace('-', '')}}">
-  <link rel="stylesheet" href="{{project.url}}/css/prism.css?v={{project.version | replace('.', '') | replace('-', '')}}">
+  <link rel="stylesheet" href="{{project.url}}/css/point.css{% if project.hash %}?v={{project.hash}}{% endif %}">
+  <link rel="stylesheet" href="{{project.url}}/css/style.css{% if project.hash %}?v={{project.hash}}{% endif %}">
+  <link rel="stylesheet" href="{{project.url}}/css/prism.css{% if project.hash %}?v={{project.hash}}{% endif %}">
 </head>
 <body>
   <div id="docs" class="site">
@@ -44,6 +44,6 @@
   </div>
   <!-- END .site -->
   <script src="{{project.url}}/js/prism.js"></script>
-  <script src="{{project.url}}/js/point.js"></script>
+  <script src="{{project.url}}/js/point.js{% if project.hash %}?v={{project.hash}}{% endif %}"></script>
 </body>
 </html>
