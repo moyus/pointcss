@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "List"
+title: List
+path: [Components, List]
 catalogue:
   - Basic
   - Inset

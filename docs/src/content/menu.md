@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Menu"
+title: Menu
+path: [Components, Menu]
 catalogue:
   - Basic
   - Variant
@@ -23,7 +24,7 @@ Provide vertical navigation for content.
             <span class="menu__icon">🇺🇳</span>
             <span class="menu__label">Dashboard</span>
             <span class="menu__after">
-              <span class="badge badge--danger">13</span>
+              <span class="badge badge--danger badge--pill badge--sm">6</span>
             </span>
           </a>
         </li>
@@ -183,7 +184,7 @@ Provide vertical navigation for content.
         <span class="menu__icon">🇺🇳</span>
         <span class="menu__label">Dashboard</span>
         <span class="menu__after">
-          <span class="badge badge--danger">13</span>
+          <span class="badge badge--danger badge--pill badge--sm">6</span>
         </span>
       </a>
     </li>
@@ -233,7 +234,7 @@ Create a dark background menu by adding `.menu--dark` modifier class on `.menu` 
             <span class="menu__icon">🇺🇳</span>
             <span class="menu__label">Dashboard</span>
             <span class="menu__after">
-              <span class="badge badge--danger">13</span>
+              <span class="badge badge--danger badge--pill badge--sm">6</span>
             </span>
           </a>
         </li>
@@ -350,7 +351,7 @@ Create a dark background menu by adding `.menu--dark` modifier class on `.menu` 
         <span class="menu__icon">🇺🇳</span>
         <span class="menu__label">Dashboard</span>
         <span class="menu__after">
-          <span class="badge badge--danger">13</span>
+          <span class="badge badge--danger badge--pill badge--sm">6</span>
         </span>
       </a>
     </li>
@@ -376,7 +377,7 @@ Create a light background menu by adding `.menu--light` modifier class on `.menu
             <span class="menu__icon">🇺🇳</span>
             <span class="menu__label">Dashboard</span>
             <span class="menu__after">
-              <span class="badge badge--danger">13</span>
+              <span class="badge badge--danger badge--pill badge--sm">6</span>
             </span>
           </a>
         </li>
@@ -493,7 +494,7 @@ Create a light background menu by adding `.menu--light` modifier class on `.menu
         <span class="menu__icon">🇺🇳</span>
         <span class="menu__label">Dashboard</span>
         <span class="menu__after">
-          <span class="badge badge--danger">13</span>
+          <span class="badge badge--danger badge--pill badge--sm">6</span>
         </span>
       </a>
     </li>
@@ -519,7 +520,7 @@ You can create s small size of menu by adding `.menu--sm` on `.menu` container.
             <span class="menu__icon">🇺🇳</span>
             <span class="menu__label">Dashboard</span>
             <span class="menu__after">
-              <span class="badge badge--danger">13</span>
+              <span class="badge badge--danger badge--pill badge--sm">6</span>
             </span>
           </a>
         </li>
@@ -636,7 +637,7 @@ You can create s small size of menu by adding `.menu--sm` on `.menu` container.
         <span class="menu__icon">🇺🇳</span>
         <span class="menu__label">Dashboard</span>
         <span class="menu__after">
-          <span class="badge badge--danger">13</span>
+          <span class="badge badge--danger badge--pill badge--sm">6</span>
         </span>
       </a>
     </li>

@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Flex Grid"
+title: Flex Grid
+path: [Layouts, Flex Grid]
 catalogue:
   - Basic
   - Responsive

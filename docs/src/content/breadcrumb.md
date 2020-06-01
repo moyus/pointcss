@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Breadcrumb"
+title: Breadcrumb
+path: [Components, Breadcrumb]
 ---
 
 # Breadcrumb

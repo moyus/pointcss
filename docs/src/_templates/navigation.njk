@@ -1,126 +1,74 @@
+{% set menu = [
+  {
+    label: 'Getting Started',
+    children: [
+      { label: 'Introduction', path: '' },
+      { label: 'Installation', path: '#installation' },
+      { label: 'Customization', path: '#customization' },
+      { label: 'Browser Support', path: '#browser-support' },
+      { label: 'Style Guide', path: 'style-guide.html' }
+    ]
+  },
+  {
+    label: 'Content',
+    children: [
+      { label: 'Typography', path: 'typography.html' },
+      { label: 'Table', path: 'table.html' },
+      { label: 'Media', path: 'media.html' }
+    ]
+  },
+  {
+    label: 'Layouts',
+    children: [
+      { label: 'Container', path: 'container.html' },
+      { label: 'Flex Grid', path: 'flex-grid.html' },
+      { label: 'Level', path: 'level.html' }
+    ]
+  },
+  {
+    label: 'Components',
+    children: [
+      { label: 'Badge', path: 'badge.html' },
+      { label: 'Box', path: 'box.html' },
+      { label: 'Breadcrumb', path: 'breadcrumb.html' },
+      { label: 'Button', path: 'button.html' },
+      { label: 'Dropdown', path: 'dropdown.html' },
+      { label: 'Form', path: 'form.html' },
+      { label: 'Hint', path: 'hint.html' },
+      { label: 'List', path: 'list.html' },
+      { label: 'Modal', path: 'modal.html' },
+      { label: 'Menu', path: 'menu.html' },
+      { label: 'Nav', path: 'nav.html' },
+      { label: 'Navbar', path: 'navbar.html' },
+      { label: 'Note', path: 'note.html' },
+      { label: 'Pagination', path: 'pagination.html' },
+      { label: 'Progress', path: 'progress.html' }
+    ]
+  },
+  {
+    label: 'Utilities',
+    children: [
+      { label: 'Color', path: 'color.html' },
+      { label: 'Effect', path: 'effect.html' },
+      { label: 'Layout', path: 'layout.html' },
+      { label: 'Spacing', path: 'spacing.html' },
+      { label: 'Text', path: 'text.html' }
+    ]
+  }
+] %}
 <nav id="navigation" class="menu" data-toggle="menu">
   <ul class="menu__list">
-    <li class="menu__item"> 
-      <a class="menu__link">GETTING STARTED</a>
+    {% for group in menu %}
+    <li class="menu__item{% if page.path[0] === group.label %} is-active{% endif %}"> 
+      <a class="menu__link">{{ group.label }}</a>
       <ul class="menu__list">
+        {% for item in group.children %}
         <li class="menu__item">
-          <a href="{{project.url}}" class="menu__link">Introduction</a>
+          <a href="{{project.url + '/' + item.path}}" class="menu__link{% if page.path[1] === item.label %} is-active{% endif %}">{{item.label}}</a>
         </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/#installation" class="menu__link">Installation</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/#customization" class="menu__link">Customization</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/#browser-support" class="menu__link">Browser Support</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/style-guide.html" class="menu__link">Style Guide</a>
-        </li>
+        {% endfor %}
       </ul>
     <li>
-
-    <li class="menu__item">
-      <a class="menu__link">CONTENT</a>
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a href="{{project.url}}/typography.html" class="menu__link">Typography</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/table.html" class="menu__link">Table</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/media.html" class="menu__link">Media</a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="menu__item">
-      <a class="menu__link">LAYOUTS</a>
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a href="{{project.url}}/container.html" class="menu__link">Container</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/flex-grid.html" class="menu__link">Flex Grid</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/level.html" class="menu__link">Level</a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="menu__item">
-      <a class="menu__link">COMPONENTS</a>
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a href="{{project.url}}/badge.html" class="menu__link">Badge</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/box.html" class="menu__link">Box</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/breadcrumb.html" class="menu__link">Breadcrumb</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/button.html" class="menu__link">Button</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/dropdown.html" class="menu__link">Dropdown</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/form.html" class="menu__link">Form</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/hint.html" class="menu__link">Hint</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/list.html" class="menu__link">List</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/modal.html" class="menu__link">Modal</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/menu.html" class="menu__link">Menu</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/nav.html" class="menu__link">Nav</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/navbar.html" class="menu__link">Navbar</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/note.html" class="menu__link">Note</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/pagination.html" class="menu__link">Pagination</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/progress.html" class="menu__link">Progress</a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="menu__item">
-      <a class="menu__link">UTILITIES</a>
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a href="{{project.url}}/color.html" class="menu__link">Color</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/effect.html" class="menu__link">Effect</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/layout.html" class="menu__link">Layout</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/spacing.html" class="menu__link">Spacing</a>
-        </li>
-        <li class="menu__item">
-          <a href="{{project.url}}/text.html" class="menu__link">Text</a>
-        </li>
-      </ul>
-    </li>
+    {% endfor %}
   </ul>
 </nav>

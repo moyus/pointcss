@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Media"
+title: Media
+path: [Content, Media]
 catalogue:
   - Image
   - Video

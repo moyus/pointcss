@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Form"
+title: Form
+path: [Components, Form]
 catalogue:
   - Basic
   - Input

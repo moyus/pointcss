@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Typography"
+title: Typography
+path: [Content, Typography]
 catalogue:
   - Heading
   - Paragraph

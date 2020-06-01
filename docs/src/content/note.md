@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Note"
+title: Note
+path: [Components, Note]
 catalogue:
   - Basic
   - Variant

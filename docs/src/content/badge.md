@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Badge"
+title: Badge
+path: [Components, Badge]
 catalogue:
   - Basic
   - Variant

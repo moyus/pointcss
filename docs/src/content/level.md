@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Level"
+title: Level
+path: [Layouts, Level]
 catalogue:
   - Basic
   - Evenly

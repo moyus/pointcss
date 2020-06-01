@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Progress"
+title: Progress
+path: [Components, Progress]
 catalogue:
   - Basic
   - Variant

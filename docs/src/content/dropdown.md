@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Dropdown"
+title: Dropdown
+path: [Components, Dropdown]
 catalogue:
   - Basic
   - Position

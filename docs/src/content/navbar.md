@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Navbar"
+title: Navbar
+path: [Components, Navbar]
 catalogue:
   - Basic
   - Variant

@@ -3242,15 +3242,14 @@ fieldset[disabled] .btn {
 /* ## Menu
 ---------------------------------*/
 .menu {
-  font-size: 16px;
-  line-height: 1.5;
+  position: relative;
 }
 
 .menu__heading {
   color: #616161;
   font-size: 14px;
   line-height: 1.25;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .menu__list {
@@ -3267,10 +3266,14 @@ fieldset[disabled] .btn {
 .menu__link {
   display: flex;
   align-items: center;
+  align-content: center;
   flex-wrap: wrap;
-  padding: 8px 8px;
+  padding: 6px 12px;
   border-radius: 4px;
   color: #212121;
+  font-size: 16px;
+  line-height: 1.375;
+  height: 34px;
   cursor: pointer;
 }
 
@@ -3291,6 +3294,7 @@ fieldset[disabled] .btn {
   justify-content: center;
   text-align: center;
   margin-right: 8px;
+  margin-left: -4px;
 }
 
 .menu__label {
@@ -3317,41 +3321,35 @@ fieldset[disabled] .btn {
   background-color: #dbdbdb;
 }
 
-.menu__item > .menu__list {
+.menu__item .menu__list {
   display: none;
-  margin: 4px 0 8px 18px;
-  padding: 0 0 0 12px;
+  margin: 4px 0 8px 22px;
+  padding: 0 0 0 6px;
   border-left: 1px solid #e5e5e5;
-}
-
-.menu__item > .menu__list > .menu__item > .menu__link {
-  padding: 6px 6px;
 }
 
 .menu__item.is-active > .menu__list {
   display: block;
 }
 
-.menu.menu--sm {
+.menu.menu--sm .menu__heading {
+  font-size: 14px;
+}
+
+.menu.menu--sm .menu__link {
+  padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
+  height: 32px;
 }
 
-.menu.menu--sm > .menu__heading {
-  font-size: 14px;
+.menu.menu--sm .menu__icon {
+  margin-left: -4px;
 }
 
-.menu.menu--sm > .menu__list > .menu__item > .menu__link {
-  padding: 8px 8px;
-}
-
-.menu.menu--sm > .menu__list > .menu__item > .menu__list {
-  margin: 4px 0 8px 18px;
-  padding: 0 0 0 12px;
-}
-
-.menu.menu--sm > .menu__list > .menu__item > .menu__list > .menu__item > .menu__link {
-  padding: 6px 6px;
+.menu.menu--sm .menu__item .menu__list {
+  margin: 4px 0 8px 22px;
+  padding: 0 0 0 6px;
 }
 
 .menu.menu--dark .menu__heading {

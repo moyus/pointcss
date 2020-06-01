@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Layout"
+title: Layout
+path: [Utilities, Layout]
 ---
 
 # Layout

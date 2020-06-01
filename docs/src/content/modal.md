@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Modal"
+title: Modal
+path: [Components, Modal]
 catalogue:
   - Basic
   - Sizing

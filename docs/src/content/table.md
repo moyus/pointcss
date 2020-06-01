@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Table"
+title: Table
+path: [Content, Spacing]
 catalogue:
   - Basic
   - Striped

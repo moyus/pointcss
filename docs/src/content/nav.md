@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Nav"
+title: Nav
+path: [Components, Nav]
 catalogue:
   - Basic
   - Layout

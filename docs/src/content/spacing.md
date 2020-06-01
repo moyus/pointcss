@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Spacing"
+title: Spacing
+path: [Utilities, Spacing]
 ---
 
 # Spacing
@@ -56,7 +57,7 @@ Utilities for controlling an element's padding and margin.
     </tr>
     <tr>
       <td><code>9</code></td>
-      <td>64px</td>
+      <td>40px</td>
     </tr>
   </tbody>
 </table>

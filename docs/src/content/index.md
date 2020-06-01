@@ -1,6 +1,6 @@
 ---
 layout: master
-title: "Getting started"
+title: Getting started
 catalogue:
   - Installation
   - Customization

@@ -1,6 +1,6 @@
 ---
 layout: master
-title: "Style Guide"
+title: Style Guide
 catalogue:
   - BEM
   - Colors

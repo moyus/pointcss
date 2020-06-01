@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Pagination"
+title: Pagination
+path: [Components, Pagination]
 catalogue:
   - Basic
   - Bordered

@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Box"
+title: Box
+path: [Components, Box]
 catalogue:
   - Basic
   - Variant

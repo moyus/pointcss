@@ -1,6 +1,7 @@
 ---
 layout: master
-title: "Effect"
+title: Effect
+path: [Utilities, Effect]
 ---
 
 Utilities for controlling an element's effect.
