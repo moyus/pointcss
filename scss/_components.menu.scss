@@ -17,13 +17,13 @@ $menu-submenu-line-color: $grey-weak !default;
 
 $menu-font-size-sm: $text-size-sm !default;
 $menu-heading-font-size-sm: $text-size-sm !default;
-$menu-item-padding-sm: ($spacing-square-sm $spacing-square-sm) !default;
+$menu-item-padding-sm: $spacing-squish-sm !default;
 $menu-item-line-height-sm: round-line-height($menu-font-size-sm, $menu-item-line-height-base) !default;
 $menu-item-height-sm-computed: $menu-item-line-height-sm * $menu-font-size-sm + 2 * nth($menu-item-padding-sm, 1);
 
 $menu-font-size-md: $text-size-md !default;
 $menu-heading-font-size-md: $text-size-sm !default;
-$menu-item-padding-md: ($spacing-square-sm $spacing-square-sm) !default;
+$menu-item-padding-md: $spacing-squish-sm !default;
 $menu-item-line-height-md: round-line-height($menu-font-size-md, $menu-item-line-height-base) !default;
 $menu-item-height-md-computed: $menu-item-line-height-md * $menu-font-size-md + 2 * nth($menu-item-padding-md, 1);
 
@@ -52,6 +52,7 @@ $menu-item-height-md-computed: $menu-item-line-height-md * $menu-font-size-md + 
 .menu__link {
   display: flex;
   align-items: center;
+  align-content: center;
   flex-wrap: wrap;
   padding: $menu-item-padding-md;
   border-radius: $menu-item-border-radius;
@@ -79,6 +80,7 @@ $menu-item-height-md-computed: $menu-item-line-height-md * $menu-font-size-md + 
   justify-content: center;
   text-align: center;
   margin-right: $spacing-stack-sm;
+  margin-left: $spacing-stack-sm - nth($menu-item-padding-md, 2);
 }
 
 .menu__label {
@@ -106,7 +108,7 @@ $menu-item-height-md-computed: $menu-item-line-height-md * $menu-font-size-md + 
 }
 
 .menu__item {
-  > .menu__list {
+  .menu__list {
     display: none;
     margin: $spacing-stack-xs 0 $spacing-stack-sm (nth($menu-item-padding-md, 2) + $menu-item-icon-size / 2);
     padding: 0 0 0 ($menu-item-icon-size / 2 + $spacing-stack-sm - nth($menu-item-padding-md, 2));
@@ -122,24 +124,29 @@ $menu-item-height-md-computed: $menu-item-line-height-md * $menu-font-size-md + 
 
 // size modifier
 .menu.menu--sm {
-  > .menu__heading {
+
+  .menu__heading {
     font-size: $menu-heading-font-size-sm;
   }
 
-  > .menu__list {
-    > .menu__item {
-      > .menu__link {
-        padding: $menu-item-padding-sm;
-        font-size: $menu-font-size-sm;
-        line-height: $menu-item-line-height-sm;
-        height: $menu-item-height-sm-computed;
-      }
-      > .menu__list {
-        margin: $spacing-stack-xs 0 $spacing-stack-sm (nth($menu-item-padding-sm, 2) + $menu-item-icon-size / 2);
+  .menu__link {
+    padding: $menu-item-padding-sm;
+    font-size: $menu-font-size-sm;
+    line-height: $menu-item-line-height-sm;
+    height: $menu-item-height-sm-computed;
+  }
+
+  .menu__icon {
+    margin-left: $spacing-stack-sm - nth($menu-item-padding-sm, 2);
+  }
+
+  .menu__item {
+    .menu__list {
+      margin: $spacing-stack-xs 0 $spacing-stack-sm (nth($menu-item-padding-sm, 2) + $menu-item-icon-size / 2);
         padding: 0 0 0 ($menu-item-icon-size / 2 + $spacing-stack-sm - nth($menu-item-padding-sm, 2));
-      }
     }
   }
+
 }
 
 // theme modifier
