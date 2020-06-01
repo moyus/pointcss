@@ -1,13 +1,13 @@
 /* ## Menu
 ---------------------------------*/
 $menu-color: $grey-dark !default; 
-$menu-line-height: $line-height-normal !default;
 $menu-heading-color: $grey-mute !default;
 $menu-list-gutter: $spacing-stack-md !default;
 $menu-heading-line-height: $line-height-tight !default;
-$menu-heading-margin-bottom: $spacing-stack-xs !default;
+$menu-heading-margin-bottom: $spacing-stack-sm !default;
 $menu-item-border-radius: $shape-border-radius-md !default;
 $menu-item-icon-size: 20px !default;
+$menu-item-line-height-base: $line-height-compact !default;
 $menu-item-gutter: $spacing-stack-xxs !default;
 $menu-item-hover-bg: $grey-light !default;
 $menu-item-active-bg: $color-primary !default;
@@ -18,14 +18,17 @@ $menu-submenu-line-color: $grey-weak !default;
 $menu-font-size-sm: $text-size-sm !default;
 $menu-heading-font-size-sm: $text-size-sm !default;
 $menu-item-padding-sm: ($spacing-square-sm $spacing-square-sm) !default;
+$menu-item-line-height-sm: round-line-height($menu-font-size-sm, $menu-item-line-height-base) !default;
+$menu-item-height-sm-computed: $menu-item-line-height-sm * $menu-font-size-sm + 2 * nth($menu-item-padding-sm, 1);
 
 $menu-font-size-md: $text-size-md !default;
 $menu-heading-font-size-md: $text-size-sm !default;
 $menu-item-padding-md: ($spacing-square-sm $spacing-square-sm) !default;
+$menu-item-line-height-md: round-line-height($menu-font-size-md, $menu-item-line-height-base) !default;
+$menu-item-height-md-computed: $menu-item-line-height-md * $menu-font-size-md + 2 * nth($menu-item-padding-md, 1);
 
 .menu {
-  font-size: $menu-font-size-md;
-  line-height: round-line-height($menu-font-size-md, $menu-line-height);
+  position: relative;
 }
 
 .menu__heading {
@@ -53,6 +56,9 @@ $menu-item-padding-md: ($spacing-square-sm $spacing-square-sm) !default;
   padding: $menu-item-padding-md;
   border-radius: $menu-item-border-radius;
   color: $menu-color;
+  font-size: $menu-font-size-md;
+  line-height: $menu-item-line-height-md;
+  height: $menu-item-height-md-computed;
   cursor: pointer;
 
   &:hover {
@@ -103,11 +109,8 @@ $menu-item-padding-md: ($spacing-square-sm $spacing-square-sm) !default;
   > .menu__list {
     display: none;
     margin: $spacing-stack-xs 0 $spacing-stack-sm (nth($menu-item-padding-md, 2) + $menu-item-icon-size / 2);
-    padding: 0 0 0 ($menu-item-icon-size / 2 + $spacing-stack-sm - nth($menu-item-padding-md, 2) * 0.75);
+    padding: 0 0 0 ($menu-item-icon-size / 2 + $spacing-stack-sm - nth($menu-item-padding-md, 2));
     border-left: 1px solid $menu-submenu-line-color;
-    > .menu__item > .menu__link {
-      padding: nth($menu-item-padding-md, 1) * 0.75 nth($menu-item-padding-md, 2) * 0.75;
-    }
   }
 
   &.is-active {
@@ -119,9 +122,6 @@ $menu-item-padding-md: ($spacing-square-sm $spacing-square-sm) !default;
 
 // size modifier
 .menu.menu--sm {
-  font-size: $menu-font-size-sm;
-  line-height: round-line-height($menu-font-size-sm, $menu-line-height);
-
   > .menu__heading {
     font-size: $menu-heading-font-size-sm;
   }
@@ -130,13 +130,13 @@ $menu-item-padding-md: ($spacing-square-sm $spacing-square-sm) !default;
     > .menu__item {
       > .menu__link {
         padding: $menu-item-padding-sm;
+        font-size: $menu-font-size-sm;
+        line-height: $menu-item-line-height-sm;
+        height: $menu-item-height-sm-computed;
       }
       > .menu__list {
         margin: $spacing-stack-xs 0 $spacing-stack-sm (nth($menu-item-padding-sm, 2) + $menu-item-icon-size / 2);
-        padding: 0 0 0 ($menu-item-icon-size / 2 + $spacing-stack-sm - nth($menu-item-padding-sm, 2) * 0.75);
-        > .menu__item > .menu__link {
-          padding: nth($menu-item-padding-sm, 1) * 0.75 nth($menu-item-padding-sm, 2) * 0.75;
-        }
+        padding: 0 0 0 ($menu-item-icon-size / 2 + $spacing-stack-sm - nth($menu-item-padding-sm, 2));
       }
     }
   }
