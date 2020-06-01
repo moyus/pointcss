@@ -2611,35 +2611,6 @@ fieldset[disabled] .btn {
   min-height: 30px;
 }
 
-.form-input--lg,
-.form-select--lg,
-.form-textarea--lg {
-  font-size: 18px;
-  line-height: 1.44444444;
-  height: 44px;
-  padding: 8px 16px;
-}
-
-.form-input--lg.form-input[type="file"],
-.form-select--lg.form-input[type="file"],
-.form-textarea--lg.form-input[type="file"] {
-  min-height: 44px;
-}
-
-.form-input--lg.form-select[multiple],
-.form-select--lg.form-select[multiple],
-.form-textarea--lg.form-select[multiple] {
-  height: auto;
-  min-height: 44px;
-}
-
-.form-input--lg.form-textarea,
-.form-select--lg.form-textarea,
-.form-textarea--lg.form-textarea {
-  height: auto;
-  min-height: 44px;
-}
-
 .form-checkbox {
   cursor: pointer;
   position: relative;
@@ -3272,12 +3243,13 @@ fieldset[disabled] .btn {
 ---------------------------------*/
 .menu {
   font-size: 16px;
+  line-height: 1.5;
 }
 
 .menu__heading {
-  font-size: 0.75em;
-  line-height: 1.25;
   color: #616161;
+  font-size: 14px;
+  line-height: 1.25;
   margin-bottom: 4px;
 }
 
@@ -3300,7 +3272,7 @@ fieldset[disabled] .btn {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0.5em 0.75em;
+  padding: 8px 8px;
   border-radius: 4px;
   color: #212121;
   cursor: pointer;
@@ -3320,6 +3292,7 @@ fieldset[disabled] .btn {
   width: 20px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   margin-right: 8px;
 }
@@ -3333,8 +3306,10 @@ fieldset[disabled] .btn {
 }
 
 .menu__after {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   margin-left: 8px;
 }
@@ -3346,12 +3321,15 @@ fieldset[disabled] .btn {
   background-color: #dbdbdb;
 }
 
-.menu__item .menu__list {
+.menu__item > .menu__list {
   display: none;
-  font-size: 0.875em;
-  margin: 4px 0 8px 16px;
-  padding: 0 0 0 8px;
+  margin: 4px 0 8px 18px;
+  padding: 0 0 0 12px;
   border-left: 1px solid #e5e5e5;
+}
+
+.menu__item > .menu__list > .menu__item > .menu__link {
+  padding: 6px 6px;
 }
 
 .menu__item.is-active > .menu__list {
@@ -3360,10 +3338,24 @@ fieldset[disabled] .btn {
 
 .menu.menu--sm {
   font-size: 14px;
+  line-height: 1.42857143;
 }
 
-.menu.menu--lg {
-  font-size: 18px;
+.menu.menu--sm > .menu__heading {
+  font-size: 14px;
+}
+
+.menu.menu--sm > .menu__list > .menu__item > .menu__link {
+  padding: 8px 8px;
+}
+
+.menu.menu--sm > .menu__list > .menu__item > .menu__list {
+  margin: 4px 0 8px 18px;
+  padding: 0 0 0 12px;
+}
+
+.menu.menu--sm > .menu__list > .menu__item > .menu__list > .menu__item > .menu__link {
+  padding: 6px 6px;
 }
 
 .menu.menu--dark .menu__heading {
@@ -3832,14 +3824,6 @@ fieldset[disabled] .btn {
   min-width: 31px;
   font-size: 14px;
   padding: 4px 8px;
-}
-
-.pagination--lg .pagination__link,
-.pagination--lg .pagination__gap {
-  height: 45px;
-  min-width: 45px;
-  font-size: 18px;
-  padding: 8px 16px;
 }
 
 /* ## Progress

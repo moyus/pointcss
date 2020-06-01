@@ -145,9 +145,7 @@ By adding `.pagination--bordered` modifier class on `.pagination` container to q
 
 ## Sizing
 
-Add `.pagination--sm` or `.pagination--lg` modifier class to quickly create different size pagination
-
-##### Small
+You can get a small size of pagination by adding `.pagination--sm` modifier class on `.pagination` container.
 
 <section class="snippet">
   <div class="snippet__preview">
@@ -190,56 +188,6 @@ Add `.pagination--sm` or `.pagination--lg` modifier class to quickly create diff
 
 ```html
 <nav class="pagination pagination--bordered pagination--sm">
-  ...
-</nav>
-```
-
-  </div>
-</section>
-
-##### Large
-
-<section class="snippet">
-  <div class="snippet__preview">
-    <nav class="pagination pagination--bordered pagination--lg">
-      <div class="pagination__item">
-        <a href="#" class="pagination__link">Previous</a>
-      </div>
-      <ul class="pagination__list">
-        <li class="pagination__item">
-          <em class="pagination__link is-active">1</em>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__link">2</a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__link">3</a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__link">4</a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__link">5</a>
-        </li>
-        <li class="pagination__item">
-          <span class="pagination__link">...</span>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__link">99</a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__link">100</a>
-        </li>
-      </ul>
-      <div class="pagination__item">
-        <a href="#" class="pagination__link">Next</a>
-      </div>
-    </nav>
-  </div>
-  <div class="snippet__source">
-
-```html
-<nav class="pagination pagination--bordered pagination--lg">
   ...
 </nav>
 ```

@@ -169,6 +169,8 @@ The `.form-input` class is mean to be used on `<input>` HTML element
 
 ##### Sizing
 
+Your can create a small size of control by adding `.form-input--sm` modifier class on `.form-input` container.
+
 <section class="snippet">
   <div class="snippet__preview">
     <div class="form-field">
@@ -177,16 +179,12 @@ The `.form-input` class is mean to be used on `<input>` HTML element
     <div class="form-field">
       <input type="text" class="form-input form-input" placeholder="Normal sizing">
     </div>
-    <div class="form-field">
-      <input type="text" class="form-input form-input--lg" placeholder="Large sizing">
-    </div>
   </div>
   <div class="snippet__source">
 
 ```html
 <input type="text" class="form-input form-input--sm" placeholder="Small sizing">
 <input type="text" class="form-input form-input" placeholder="Normal sizing">
-<input type="text" class="form-input form-input--lg" placeholder="Large sizing">
 ```
 
   </div>
@@ -340,6 +338,8 @@ The `.form-select` class is mean to be used on `<select></select>` HTML element
 
 ##### Sizing
 
+Your can create a small size of control by adding `.form-select--sm` modifier class on `.form-select` container.
+
 <section class="snippet">
   <div class="snippet__preview">
     <div class="form-field">
@@ -362,23 +362,12 @@ The `.form-select` class is mean to be used on `<select></select>` HTML element
         <option value="4">Paris</option>
       </select>
     </div>
-    <div class="form-field">
-      <select class="form-select form-select--lg">
-        <option>Large sizing</option>
-        <option value="0">Beijing</option>
-        <option value="1">Washington</option>
-        <option value="2">Tokyo</option>
-        <option value="3">London</option>
-        <option value="4">Paris</option>
-      </select>
-    </div>
   </div>
   <div class="snippet__source">
 
 ```html
 <select class="form-select form-select--sm">...</select>
 <select class="form-select">...</select>
-<select class="form-select form-select--lg">...</select>
 ```
 
   </div>
@@ -458,6 +447,8 @@ The `.form-textarea` class is mean to be used on `<textarea></textarea>` HTML el
 
 ##### Sizing
 
+Your can create a small size of control by adding `.form-textarea--sm` modifier class on `.form-textarea` container.
+
 <section class="snippet">
   <div class="snippet__preview">
     <div class="form-field">
@@ -465,12 +456,8 @@ The `.form-textarea` class is mean to be used on `<textarea></textarea>` HTML el
       <textarea class="form-textarea form-textarea--sm" rows="4"></textarea>
     </div>
     <div class="form-field">
-      <label class="form-label">Normal state</label>
+      <label class="form-label">Normal sizing</label>
       <textarea class="form-textarea" rows="4"></textarea>
-    </div>
-    <div class="form-field">
-      <label class="form-label">Large sizing</label>
-      <textarea class="form-textarea form-textarea--lg" rows="4"></textarea>
     </div>
   </div>
   <div class="snippet__source">
