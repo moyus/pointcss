@@ -108,7 +108,7 @@ gulp.task('docs:html', function () {
           description: pkg.description,
           url: isProd ? pkg.website : 'http://localhost:3000',
           github: pkg.homepage,
-          version: pkg.version,
+          version: isProd ? Date.now() : pkg.version,
           keywords: pkg.keywords.join(','),
           download: pkg.homepage + '/releases',
           license: pkg.homepage + '/blob/master/LICENSE',
