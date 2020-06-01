@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Modal
-path: [Components, Modal]
+path:
+  - Components
+  - Modal
 catalogue:
   - Basic
   - Sizing

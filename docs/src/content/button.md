@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Button
-path: [Components, Button]
+path:
+  - Components
+  - Button
 catalogue:
   - Basic
   - Variant

@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Dropdown
-path: [Components, Dropdown]
+path:
+  - Components
+  - Dropdown
 catalogue:
   - Basic
   - Position

@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Hint
-path: [Components, Hint]
+path:
+  - Components
+  - Hint
 catalogue:
   - Basic
   - Sizing

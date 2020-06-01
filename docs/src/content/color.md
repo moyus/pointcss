@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Color
-path: [Utilities, Color]
+path:
+  - Utilities
+  - Color
 catalogue:
   - Text Color
   - Background Color

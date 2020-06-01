@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Text
-path: [Utilities, Text]
+path:
+  - Utilities
+  - Text
 catalogue:
   - Text Align
   - Text Decoration

@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Form
-path: [Components, Form]
+path:
+  - Components
+  - Form
 catalogue:
   - Basic
   - Input

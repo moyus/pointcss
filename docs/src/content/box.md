@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Box
-path: [Components, Box]
+path:
+  - Components
+  - Box
 catalogue:
   - Basic
   - Variant

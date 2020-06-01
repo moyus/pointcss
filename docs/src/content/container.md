@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Container
-path: [Layouts, Container]
+path:
+  - Layouts
+  - Container
 ---
 
 # Container

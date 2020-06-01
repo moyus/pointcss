@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Menu
-path: [Components, Menu]
+path:
+  - Components
+  - Menu
 catalogue:
   - Basic
   - Variant

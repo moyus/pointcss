@@ -1,7 +1,9 @@
 ---
 layout: master
 title: Spacing
-path: [Utilities, Spacing]
+path:
+  - Utilities
+  - Spacing
 ---
 
 # Spacing
