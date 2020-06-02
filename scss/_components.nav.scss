@@ -5,10 +5,13 @@ $nav-gutter: $spacing-stack-md !default;
 $nav-hover-color: $grey-dark !default;
 $nav-active-color: $color-primary !default;
 
-$nav-tabs-line-color: $grey-weak !default;
+$nav-font-size-sm: $text-size-sm !default;
+$nav-font-size-md: $text-size-md !default;
+
 $nav-tabs-gutter: $spacing-stack-xs !default;
 $nav-tabs-padding: 0.375em 0.75em !default;
 $nav-tabs-border-width: $shape-border-width !default;
+$nav-tabs-underline-color: $grey-weak !default;
 $nav-tabs-hover-color: $grey-dark !default;
 $nav-tabs-hover-border-color: $grey-dark !default;
 $nav-tabs-active-color: $color-primary !default;
@@ -23,19 +26,17 @@ $nav-pills-active-color: invert-color($color-primary) !default;
 
 .nav {
   position: relative;
-  margin: 0;
+  margin: 0 (0 - $nav-gutter / 2);
   padding: 0;
   list-style: none;
   display: flex;
-  font-size: $text-size-md;
+  font-size: $nav-font-size-md;
 }
 
 .nav__item {
   position: relative;
-
-  &:not(:last-child) {
-    margin: 0 $nav-gutter 0 0;
-  }
+  padding-left: $nav-gutter / 2;
+  padding-right: $nav-gutter / 2;
 }
 
 .nav__link {
@@ -65,11 +66,7 @@ $nav-pills-active-color: invert-color($color-primary) !default;
 
 // size modifiers
 .nav.nav--sm {
-  font-size: $text-size-sm;
-}
-
-.nav.nav--lg {
-  font-size: $text-size-lg;
+  font-size: $nav-font-size-sm;
 }
 
 // layout modifiers
@@ -94,10 +91,12 @@ $nav-pills-active-color: invert-color($color-primary) !default;
 
 // variant modifiers
 .nav.nav--pills {
+  margin-left: 0 - $nav-pills-gutter / 2;
+  margin-right: 0 - $nav-pills-gutter / 2;
+
   > .nav__item {
-    &:not(:last-child) {
-      margin-right: $nav-pills-gutter;
-    }
+    padding-left: $nav-pills-gutter / 2;
+    padding-right: $nav-pills-gutter / 2;
   
     > .nav__link {
       padding: $nav-pills-padding;
@@ -118,12 +117,13 @@ $nav-pills-active-color: invert-color($color-primary) !default;
 }
 
 .nav.nav--tabs {
-  border-bottom: $nav-tabs-border-width solid $nav-tabs-line-color;
+  margin-left: 0 - $nav-tabs-gutter / 2;
+  margin-right: 0 - $nav-tabs-gutter / 2;
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-underline-color;
 
   > .nav__item {
-    &:not(:last-child) {
-      margin-right: $nav-tabs-gutter;
-    }
+    padding-left: $nav-tabs-gutter / 2;
+    padding-right: $nav-tabs-gutter / 2;
 
     > .nav__link {
       padding: $nav-tabs-padding;

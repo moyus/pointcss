@@ -14,6 +14,8 @@ $navbar-dark-color:                        $white !default;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin-left: 0 - $navbar-item-gutter / 2;
+  margin-right: 0 - $navbar-item-gutter / 2;
 }
 
 .navbar__start {
@@ -42,10 +44,8 @@ $navbar-dark-color:                        $white !default;
   position: relative;
   color: $navbar-color;
   font-size: $navbar-font-size;
-
-  &:not(:last-child) {
-    margin-right: $navbar-item-gutter;
-  }
+  padding-left: $navbar-item-gutter / 2;
+  padding-right: $navbar-item-gutter / 2;
 }
 
 .navbar__link {
@@ -66,7 +66,9 @@ $navbar-dark-color:                        $white !default;
   font-size: $navbar-font-size * 1.25;
   line-height: $line-height-tight;
   color: $navbar-color;
-  margin-right: $navbar-item-gutter * 1.25;
+  padding-left: $navbar-item-gutter / 2;
+  padding-right: $navbar-item-gutter / 2;
+  margin-right: $navbar-item-gutter / 2;
 }
 
 // modifier - dark
