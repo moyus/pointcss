@@ -244,12 +244,7 @@ By adding `.nav--pills` modifier class on `.nav` element to create pills styled 
 
 ## Sizing
 
-All variants can combile with sizing modifier classes to change nav size
-
-- `.nav--sm`
-- `.nav--lg`
-
-###### Small
+All variants can combile with `.nav--sm` modifier classes to get a small size of it.
 
 <section class="snippet">
   <div class="snippet__preview">
@@ -272,36 +267,6 @@ All variants can combile with sizing modifier classes to change nav size
 
 ```html
 <ul class="nav nav--sm">
-  ...
-</ul>
-```
-
-  </div>
-</section>
-
-###### Large
-
-<section class="snippet">
-  <div class="snippet__preview">
-    <ul class="nav nav--lg">
-      <li class="nav__item">
-        <a href="#" class="nav__link">Home</a>
-      </li>
-      <li class="nav__item">
-        <a href="#" class="nav__link">Link</a>
-      </li>
-      <li class="nav__item">
-        <a href="#" class="nav__link">Another Link</a>
-      </li>
-      <li class="nav__item">
-        <a href="#" class="nav__link is-disabled">Disabled</a>
-      </li>
-    </ul>
-  </div>
-  <div class="snippet__source">
-
-```html
-<ul class="nav nav--lg">
   ...
 </ul>
 ```

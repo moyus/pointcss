@@ -1,6 +1,6 @@
 /*!
  * @moyu/pointcss
- * @version v2.0.0-alpha.14
+ * @version v2.0.0-alpha.15
  * @link https://github.com/moyus/pointcss
  * @author moyu <moyuboy@gmail.com> (https://moyu.io)
  * @license MIT
@@ -3394,7 +3394,7 @@ fieldset[disabled] .btn {
 ---------------------------------*/
 .nav {
   position: relative;
-  margin: 0;
+  margin: 0 -8px;
   padding: 0;
   list-style: none;
   display: flex;
@@ -3403,10 +3403,8 @@ fieldset[disabled] .btn {
 
 .nav__item {
   position: relative;
-}
-
-.nav__item:not(:last-child) {
-  margin: 0 16px 0 0;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .nav__link {
@@ -3437,10 +3435,6 @@ fieldset[disabled] .btn {
   font-size: 14px;
 }
 
-.nav.nav--lg {
-  font-size: 18px;
-}
-
 .nav.nav--start {
   justify-content: flex-start;
 }
@@ -3461,8 +3455,14 @@ fieldset[disabled] .btn {
   flex: 1 1;
 }
 
-.nav.nav--pills > .nav__item:not(:last-child) {
-  margin-right: 4px;
+.nav.nav--pills {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+.nav.nav--pills > .nav__item {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .nav.nav--pills > .nav__item > .nav__link {
@@ -3480,11 +3480,14 @@ fieldset[disabled] .btn {
 }
 
 .nav.nav--tabs {
+  margin-left: -2px;
+  margin-right: -2px;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.nav.nav--tabs > .nav__item:not(:last-child) {
-  margin-right: 4px;
+.nav.nav--tabs > .nav__item {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .nav.nav--tabs > .nav__item > .nav__link {
@@ -3511,6 +3514,8 @@ fieldset[disabled] .btn {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 .navbar__start {
@@ -3539,10 +3544,8 @@ fieldset[disabled] .btn {
   position: relative;
   color: #212121;
   font-size: 16px;
-}
-
-.navbar__item:not(:last-child) {
-  margin-right: 24px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .navbar__link {
@@ -3563,7 +3566,9 @@ fieldset[disabled] .btn {
   font-size: 20px;
   line-height: 1.25;
   color: #212121;
-  margin-right: 30px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-right: 12px;
 }
 
 .navbar.navbar--dark .navbar__brand {

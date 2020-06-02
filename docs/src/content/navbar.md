@@ -96,7 +96,7 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
 
 <section class="snippet">
   <div class="snippet__preview">
-    <nav class="navbar navbar--dark py-5 px-6 bg-dark">
+    <nav class="navbar navbar--dark p-5 bg-dark">
       <div class="navbar__start">
         <a role="button" class="navbar__brand">POINTCSS</a>
         <ul class="navbar__list shown@lg">
@@ -128,7 +128,7 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
   <div class="snippet__source">
 
 ```html
-<nav class="navbar navbar--dark py-5 px-6 bg-dark">
+<nav class="navbar navbar--dark p-5 bg-dark">
   ...
 </nav>
 ```
@@ -138,7 +138,7 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
 
 <section class="snippet">
   <div class="snippet__preview">
-    <nav class="navbar navbar--dark py-5 px-6 bg-primary">
+    <nav class="navbar navbar--dark p-5 bg-primary">
       <div class="navbar__start">
         <a role="button" class="navbar__brand">POINTCSS</a>
         <ul class="navbar__list shown@lg">
@@ -170,7 +170,7 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
   <div class="snippet__source">
 
 ```html
-<nav class="navbar navbar--dark py-5 px-6 bg-primary">
+<nav class="navbar navbar--dark p-5 bg-primary">
   ...
 </nav>
 ```
@@ -182,7 +182,7 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
 
 <section class="snippet">
   <div class="snippet__preview">
-    <nav class="navbar navbar--light py-5 px-6 bg-light">
+    <nav class="navbar navbar--light p-5 bg-light">
       <div class="navbar__start">
         <a role="button" class="navbar__brand">POINTCSS</a>
         <ul class="navbar__list shown@lg">
@@ -214,7 +214,7 @@ Choose `.navbar--light` for use with light background colors, or `.navbar--dark`
   <div class="snippet__source">
 
 ```html
-<nav class="navbar navbar--light py-5 px-6 bg-light">
+<nav class="navbar navbar--light p-5 bg-light">
   ...
 </nav>
 ```
