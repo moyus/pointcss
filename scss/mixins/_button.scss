@@ -26,7 +26,9 @@
 
   &:focus,
   &.is-focused {
-    box-shadow: 0 0 0 2px rgba($active-background, 0.25);
+    @if $enable-btn-focus-shadow {
+      box-shadow: 0 0 0 2px rgba($active-background, 0.25);
+    }
   }
 
   &:active,
@@ -78,7 +80,9 @@
 
   &:focus,
   &.is-focused {
-    box-shadow: 0 0 0 2px rgba($active-color, 0.25);
+    @if $enable-btn-focus-shadow {
+      box-shadow: 0 0 0 2px rgba($active-color, 0.25);
+    }
   }
 
   &:active,

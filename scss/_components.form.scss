@@ -12,6 +12,7 @@ $form-field-margin-bottom:              $spacing-stack-md !default;
 $form-help-margin-top:                  $spacing-stack-xs !default;
 $form-help-color:                       $grey-mute !default;
 $form-addon-bg:                         $grey-light !default;
+$enable-form-focus-shadow:              true !default;
 
 $form-control-padding-sm:               $spacing-squish-xs !default;
 $form-control-font-size-sm:             $text-size-sm !default;
@@ -66,7 +67,9 @@ $form-control-height-computed:          $form-control-font-size-md * $form-contr
   &:focus,
   &.is-focused {
     border-color: $color-primary;
-    box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
+    @if $enable-form-focus-shadow {
+      box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
+    }
   }
 
   &:disabled {
@@ -92,7 +95,9 @@ $form-control-height-computed:          $form-control-font-size-md * $form-contr
     &:focus,
     &.is-focused {
       border-color: $color-success;
-      box-shadow: 0 0 0 2px rgba($color-success, 0.25);
+      @if $enable-form-focus-shadow {
+        box-shadow: 0 0 0 2px rgba($color-success, 0.25);
+      }
     }
   }
 
@@ -106,7 +111,9 @@ $form-control-height-computed:          $form-control-font-size-md * $form-contr
     &:focus,
     &.is-focused {
       border-color: $color-danger;
-      box-shadow: 0 0 0 2px rgba($color-danger, 0.25);
+      @if $enable-form-focus-shadow {
+        box-shadow: 0 0 0 2px rgba($color-danger, 0.25);
+      }
     }
   }
 
@@ -120,7 +127,9 @@ $form-control-height-computed:          $form-control-font-size-md * $form-contr
     &:focus,
     &.is-focused {
       border-color: $color-warning;
-      box-shadow: 0 0 0 2px rgba($color-warning, 0.25);
+      @if $enable-form-focus-shadow {
+        box-shadow: 0 0 0 2px rgba($color-warning, 0.25);
+      }
     }
   }
 }
@@ -235,7 +244,9 @@ $form-control-height-computed:          $form-control-font-size-md * $form-contr
   &:focus,
   &.is-focused {
     border-color: $color-primary;
-    box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
+    @if $enable-form-focus-shadow {
+      box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
+    }
   }
 
   &:disabled {
@@ -278,7 +289,9 @@ $form-control-height-computed:          $form-control-font-size-md * $form-contr
   &:focus,
   &.is-focused {
     border-color: $color-primary;
-    box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
+    @if $enable-form-focus-shadow {
+      box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
+    }
     &:checked {
       box-shadow: inset 0 0 0 ($form-radio-size / 3) $form-radio-active-color, 0 0 0 2px rgba($color-primary, 0.25);
     }
