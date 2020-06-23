@@ -1,6 +1,6 @@
 /*!
  * @moyu/pointcss
- * @version v2.0.0-alpha.16
+ * @version v2.0.0
  * @link https://github.com/moyus/pointcss
  * @author moyu <moyuboy@gmail.com> (https://moyu.io)
  * @license MIT
@@ -2559,9 +2559,10 @@ fieldset[disabled] .btn {
 .form-select:not([multiple]) {
   padding-right: 32px;
   background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23616161' d='M9.987 10.635L7.751 8.41 7 9.136l2.988 2.865L13 9.124l-.746-.724z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23616161' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.78 5.47a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 6.53a.75.75 0 011.06-1.06L8 9.19l3.72-3.72a.75.75 0 011.06 0z'/%3E%3C/svg%3E");
+  background-size: 16px;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right 12px center;
 }
 
 .form-select[multiple] {
@@ -2632,7 +2633,7 @@ fieldset[disabled] .btn {
 .form-checkbox:checked {
   border: 0;
   background-color: #636AFF;
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3E%3C/svg%3E");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
