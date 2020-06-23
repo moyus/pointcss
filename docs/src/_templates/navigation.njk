@@ -56,11 +56,16 @@
     ]
   }
 ] %}
-<nav id="navigation" class="menu" data-toggle="menu">
+<nav id="navigation" class="menu site__menu" data-toggle="menu">
   <ul class="menu__list">
     {% for group in menu %}
-    <li class="menu__item{% if page.path[0] === group.label %} is-active{% endif %}"> 
-      <a class="menu__link">{{ group.label }}</a>
+    <li class="menu__item  has-children{% if page.path[0] === group.label %} is-active{% endif %}"> 
+      <a class="menu__link">
+        <span class="menu__label">{{ group.label }}</span>
+        <span class="menu__after">
+          <i class="icon-caret"></i>
+        </span>
+      </a>
       <ul class="menu__list">
         {% for item in group.children %}
         <li class="menu__item">

@@ -8,8 +8,8 @@
   height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e5e5e5;
   background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.05);
   z-index: 10;
 }
 
@@ -97,6 +97,30 @@
 
 .site__catalogue a:hover {
   color: #212121;
+}
+
+.menu.site__menu .menu__item.has-children > .menu__link {
+  position: relative;
+}
+
+.menu.site__menu .menu__item.has-children > .menu__link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23616161' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.78 5.47a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 6.53a.75.75 0 011.06-1.06L8 9.19l3.72-3.72a.75.75 0 011.06 0z'/%3E%3C/svg%3E");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.menu.site__menu .menu__item.has-children.is-active > .menu__link::after {
+  transform: rotate(0deg);
 }
 
 @media (max-width: 999px) {
