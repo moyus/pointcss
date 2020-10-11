@@ -68,7 +68,10 @@ $form-control-height-computed:          $form-control-font-size-md * $form-contr
   &.is-focused {
     border-color: $color-primary;
     @if $enable-form-focus-shadow {
-      box-shadow: 0 0 0 2px rgba($color-primary, 0.25);
+      box-shadow: 0 0 0 0.125em rgba($color-primary, 0.25);
+      &:-webkit-autofill {
+        box-shadow: 0 0 0px 1000px $form-control-bg inset, 0 0 0 0.125em rgba($color-primary, 0.25);
+      }
     }
   }
 
@@ -137,7 +140,7 @@ $form-control-height-computed:          $form-control-font-size-md * $form-contr
 // input
 .form-input {
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px $form-control-bg inset;
+    box-shadow: 0 0 0px 1000px $form-control-bg inset;
   }
 
   &[type="file"] {
