@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=1592926717981">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=1592926717981">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=1592926717981">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=1602387606230">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=1602387606230">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=1602387606230">
 </head>
 <body>
   <div id="docs" class="site">
@@ -24,7 +24,7 @@
   <div class="navbar__end">
     <div class="navbar__item shown@lg">
       <div class="site__metadata">
-        <span>v2.0.0</span>
+        <span>v2.0.1</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -263,7 +263,7 @@
         <div class="form-help"></div>
       </div>
       <div class="form-field">
-        <label class="flex items-center">
+        <label class="flex items-center pointer">
           <input type="checkbox" class="form-checkbox" name="remember" id="remember">
           <span class="ml-3">Remember Me?</span>
         </label>
@@ -287,7 +287,7 @@
     &lt;div class=&quot;form-help&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;form-field&quot;&gt;
-    &lt;label class=&quot;flex items-center&quot;&gt;
+    &lt;label class=&quot;flex items-center pointer&quot;&gt;
       &lt;input type=&quot;checkbox&quot; class=&quot;form-checkbox&quot; name=&quot;remember&quot; id=&quot;remember&quot;&gt;
       &lt;span class=&quot;ml-3&quot;&gt;Remember Me?&lt;/span&gt;
     &lt;/label&gt;
@@ -683,11 +683,11 @@
     <div class="form-field">
       <label for="gender" class="form-label">Gender</label>
       <div class="flex items-center">
-        <label class="inline-flex items-center mr-5">
+        <label class="inline-flex items-center mr-5 pointer">
           <input type="radio" name="gender" class="form-radio" checked>
           <span class="ml-3">Male</span>
         </label>
-        <label class="inline-flex items-center">
+        <label class="inline-flex items-center pointer">
           <input type="radio" name="gender" class="form-radio">
           <span class="ml-3">Female</span>
         </label>
@@ -699,11 +699,11 @@
 <pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
   &lt;label for=&quot;gender&quot; class=&quot;form-label&quot;&gt;Gender&lt;/label&gt;
   &lt;div class=&quot;flex items-center&quot;&gt;
-    &lt;label class=&quot;inline-flex items-center mr-5&quot;&gt;
+    &lt;label class=&quot;inline-flex items-center mr-5 pointer&quot;&gt;
       &lt;input type=&quot;radio&quot; name=&quot;gender&quot; class=&quot;form-radio&quot;&gt;
       &lt;span class=&quot;ml-3&quot;&gt;Male&lt;/span&gt;
     &lt;/label&gt;
-    &lt;label class=&quot;inline-flex items-center&quot;&gt;
+    &lt;label class=&quot;inline-flex items-center pointer&quot;&gt;
       &lt;input type=&quot;radio&quot; name=&quot;gender&quot; class=&quot;form-radio&quot;&gt;
       &lt;span class=&quot;ml-3&quot;&gt;Female&lt;/span&gt;
     &lt;/label&gt;
@@ -719,7 +719,7 @@
 <section class="snippet">
   <div class="snippet__preview">
     <div class="form-field">
-      <label class="flex items-center">
+      <label class="flex items-center pointer">
         <input type="checkbox" class="form-checkbox" name="remember" id="remember">
         <span class="ml-3">Remember Me?</span>
       </label>
@@ -728,7 +728,7 @@
   <div class="snippet__source">
 
 <pre><code class="language-html">&lt;div class=&quot;form-field&quot;&gt;
-  &lt;label class=&quot;flex items-center&quot;&gt;
+  &lt;label class=&quot;flex items-center pointer&quot;&gt;
     &lt;input type=&quot;checkbox&quot; class=&quot;form-checkbox&quot; name=&quot;remember&quot; id=&quot;remember&quot;&gt;
     &lt;span class=&quot;ml-3&quot;&gt;Remember Me?&lt;/span&gt;
   &lt;/label&gt;
@@ -880,31 +880,31 @@
   <div class="snippet__preview">
     <form>
       <div class="row">
-        <div class="col-3@md">
-          <span class="form-label mt-3 hidden-down@md">Username</span>
+        <div class="col-3@md shown@md">
+          <span class="form-label mt-3">Username</span>
         </div>
         <div class="col-9@md">
           <div class="form-field">
-            <label class="form-label hidden-up@md">Username</label>
+            <label class="form-label hidden@md">Username</label>
             <input type="text" class="form-input">
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-3@md">
-          <span class="form-label mt-3 hidden-down@md">Password</span>
+        <div class="col-3@md shown@md">
+          <span class="form-label mt-3">Password</span>
         </div>
         <div class="col-9@md">
           <div class="form-field">
-            <label class="form-label hidden-up@md">Password</label>
+            <label class="form-label hidden@md">Password</label>
             <input type="password" class="form-input">
           </div>
         </div>
       </div>
-      <div class="row is-center">
+      <div class="row">
         <div class="col-9@md col-offset-3@md">
           <div class="form-field">
-            <label class="inline-flex items-center">
+            <label class="inline-flex items-center pointer">
               <input type="checkbox" class="form-checkbox">
               <span class="ml-3">Remember me?</span>
             </label>
@@ -924,23 +924,23 @@
 
 <pre><code class="language-html">&lt;form&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-3@md&quot;&gt;
-      &lt;span class=&quot;form-label mt-3 hidden-down@md&quot;&gt;Username&lt;/span&gt;
+    &lt;div class=&quot;col-3@md shown@md&quot;&gt;
+      &lt;span class=&quot;form-label mt-3&quot;&gt;Username&lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&quot;col-9@md&quot;&gt;
       &lt;div class=&quot;form-field&quot;&gt;
-        &lt;label class=&quot;form-label hidden-up@md&quot;&gt;Username&lt;/label&gt;
+        &lt;label class=&quot;form-label hidden@md&quot;&gt;Username&lt;/label&gt;
         &lt;input type=&quot;text&quot; class=&quot;form-input&quot;&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-3@md hidden-down@md&quot;&gt;
-      &lt;span class=&quot;form-label mt-3 hidden-down@md&quot;&gt;Password&lt;/span&gt;
+    &lt;div class=&quot;col-3@md shown@md&quot;&gt;
+      &lt;span class=&quot;form-label mt-3&quot;&gt;Password&lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&quot;col-9@md&quot;&gt;
       &lt;div class=&quot;form-field&quot;&gt;
-        &lt;label class=&quot;form-label hidden-up@md&quot;&gt;Password&lt;/label&gt;
+        &lt;label class=&quot;form-label hidden@md&quot;&gt;Password&lt;/label&gt;
         &lt;input type=&quot;password&quot; class=&quot;form-input&quot;&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -948,7 +948,7 @@
   &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-9@md col-offset-3@md&quot;&gt;
       &lt;div class=&quot;form-field&quot;&gt;
-        &lt;label class=&quot;inline-flex items-center&quot;&gt;
+        &lt;label class=&quot;inline-flex items-center pointer&quot;&gt;
           &lt;input type=&quot;checkbox&quot; class=&quot;form-checkbox&quot;&gt;
           &lt;span class=&quot;ml-3&quot;&gt;Remember me?&lt;/span&gt;
         &lt;/label&gt;
@@ -958,7 +958,7 @@
   &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-9@md col-offset-3@md&quot;&gt;
       &lt;div class=&quot;form-field&quot;&gt;
-        &lt;button type=&quot;submit&quot; class=&quot;btn btn--primary&quot;&gt;Login&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn--primary&quot;&gt;Login&lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -994,6 +994,6 @@
   </div>
   <!-- END .site -->
   <script src="https://moyus.github.io/pointcss/js/prism.js"></script>
-  <script src="https://moyus.github.io/pointcss/js/point.js?v=1592926717981"></script>
+  <script src="https://moyus.github.io/pointcss/js/point.js?v=1602387606230"></script>
 </body>
 </html>

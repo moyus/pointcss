@@ -35,7 +35,7 @@ Generic form controls.
         <div class="form-help"></div>
       </div>
       <div class="form-field">
-        <label class="flex items-center">
+        <label class="flex items-center pointer">
           <input type="checkbox" class="form-checkbox" name="remember" id="remember">
           <span class="ml-3">Remember Me?</span>
         </label>
@@ -60,7 +60,7 @@ Generic form controls.
     <div class="form-help"></div>
   </div>
   <div class="form-field">
-    <label class="flex items-center">
+    <label class="flex items-center pointer">
       <input type="checkbox" class="form-checkbox" name="remember" id="remember">
       <span class="ml-3">Remember Me?</span>
     </label>
@@ -503,11 +503,11 @@ The `.form-radio` class is mean to be used on `<input type="radio">` HTML elemen
     <div class="form-field">
       <label for="gender" class="form-label">Gender</label>
       <div class="flex items-center">
-        <label class="inline-flex items-center mr-5">
+        <label class="inline-flex items-center mr-5 pointer">
           <input type="radio" name="gender" class="form-radio" checked>
           <span class="ml-3">Male</span>
         </label>
-        <label class="inline-flex items-center">
+        <label class="inline-flex items-center pointer">
           <input type="radio" name="gender" class="form-radio">
           <span class="ml-3">Female</span>
         </label>
@@ -520,11 +520,11 @@ The `.form-radio` class is mean to be used on `<input type="radio">` HTML elemen
 <div class="form-field">
   <label for="gender" class="form-label">Gender</label>
   <div class="flex items-center">
-    <label class="inline-flex items-center mr-5">
+    <label class="inline-flex items-center mr-5 pointer">
       <input type="radio" name="gender" class="form-radio">
       <span class="ml-3">Male</span>
     </label>
-    <label class="inline-flex items-center">
+    <label class="inline-flex items-center pointer">
       <input type="radio" name="gender" class="form-radio">
       <span class="ml-3">Female</span>
     </label>
@@ -542,7 +542,7 @@ The `.form-checkbox` class is mean to be used on `<input type="checkbox">` HTML 
 <section class="snippet">
   <div class="snippet__preview">
     <div class="form-field">
-      <label class="flex items-center">
+      <label class="flex items-center pointer">
         <input type="checkbox" class="form-checkbox" name="remember" id="remember">
         <span class="ml-3">Remember Me?</span>
       </label>
@@ -552,7 +552,7 @@ The `.form-checkbox` class is mean to be used on `<input type="checkbox">` HTML 
 
 ```html
 <div class="form-field">
-  <label class="flex items-center">
+  <label class="flex items-center pointer">
     <input type="checkbox" class="form-checkbox" name="remember" id="remember">
     <span class="ml-3">Remember Me?</span>
   </label>
@@ -726,31 +726,31 @@ Use Grid classes to create horizontal forms
   <div class="snippet__preview">
     <form>
       <div class="row">
-        <div class="col-3@md">
-          <span class="form-label mt-3 hidden-down@md">Username</span>
+        <div class="col-3@md shown@md">
+          <span class="form-label mt-3">Username</span>
         </div>
         <div class="col-9@md">
           <div class="form-field">
-            <label class="form-label hidden-up@md">Username</label>
+            <label class="form-label hidden@md">Username</label>
             <input type="text" class="form-input">
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-3@md">
-          <span class="form-label mt-3 hidden-down@md">Password</span>
+        <div class="col-3@md shown@md">
+          <span class="form-label mt-3">Password</span>
         </div>
         <div class="col-9@md">
           <div class="form-field">
-            <label class="form-label hidden-up@md">Password</label>
+            <label class="form-label hidden@md">Password</label>
             <input type="password" class="form-input">
           </div>
         </div>
       </div>
-      <div class="row is-center">
+      <div class="row">
         <div class="col-9@md col-offset-3@md">
           <div class="form-field">
-            <label class="inline-flex items-center">
+            <label class="inline-flex items-center pointer">
               <input type="checkbox" class="form-checkbox">
               <span class="ml-3">Remember me?</span>
             </label>
@@ -771,23 +771,23 @@ Use Grid classes to create horizontal forms
 ```html
 <form>
   <div class="row">
-    <div class="col-3@md">
-      <span class="form-label mt-3 hidden-down@md">Username</span>
+    <div class="col-3@md shown@md">
+      <span class="form-label mt-3">Username</span>
     </div>
     <div class="col-9@md">
       <div class="form-field">
-        <label class="form-label hidden-up@md">Username</label>
+        <label class="form-label hidden@md">Username</label>
         <input type="text" class="form-input">
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-3@md hidden-down@md">
-      <span class="form-label mt-3 hidden-down@md">Password</span>
+    <div class="col-3@md shown@md">
+      <span class="form-label mt-3">Password</span>
     </div>
     <div class="col-9@md">
       <div class="form-field">
-        <label class="form-label hidden-up@md">Password</label>
+        <label class="form-label hidden@md">Password</label>
         <input type="password" class="form-input">
       </div>
     </div>
@@ -795,7 +795,7 @@ Use Grid classes to create horizontal forms
   <div class="row">
     <div class="col-9@md col-offset-3@md">
       <div class="form-field">
-        <label class="inline-flex items-center">
+        <label class="inline-flex items-center pointer">
           <input type="checkbox" class="form-checkbox">
           <span class="ml-3">Remember me?</span>
         </label>
@@ -805,7 +805,7 @@ Use Grid classes to create horizontal forms
   <div class="row">
     <div class="col-9@md col-offset-3@md">
       <div class="form-field">
-        <button type="submit" class="btn btn--primary">Login</button>
+        <button type="button" class="btn btn--primary">Login</button>
       </div>
     </div>
   </div>

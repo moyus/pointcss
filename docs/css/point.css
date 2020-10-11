@@ -1,6 +1,6 @@
 /*!
  * @moyu/pointcss
- * @version v2.0.0
+ * @version v2.0.1
  * @link https://github.com/moyus/pointcss
  * @author moyu <moyuboy@gmail.com> (https://moyu.io)
  * @license MIT
@@ -1626,7 +1626,7 @@ details.box[open] > summary.box__header {
 }
 
 .btn:focus, .btn.is-focused {
-  box-shadow: 0 0 0 2px rgba(234, 234, 234, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(234, 234, 234, 0.25);
 }
 
 .btn:active, .btn.is-actived {
@@ -1667,7 +1667,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn--link:focus, .btn.btn--link.is-focused {
-  box-shadow: 0 0 0 2px rgba(234, 234, 234, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(234, 234, 234, 0.25);
 }
 
 .btn.btn--link:active, .btn.btn--link.is-actived {
@@ -1711,7 +1711,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn--black:focus, .btn.btn--black.is-focused {
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
 }
 
 .btn.btn--black:active, .btn.btn--black.is-actived {
@@ -1770,7 +1770,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn--dark:focus, .btn.btn--dark.is-focused {
-  box-shadow: 0 0 0 2px rgba(20, 20, 20, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(20, 20, 20, 0.25);
 }
 
 .btn.btn--dark:active, .btn.btn--dark.is-actived {
@@ -1829,7 +1829,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn--light:focus, .btn.btn--light.is-focused {
-  box-shadow: 0 0 0 2px rgba(234, 234, 234, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(234, 234, 234, 0.25);
 }
 
 .btn.btn--light:active, .btn.btn--light.is-actived {
@@ -1888,7 +1888,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn--white:focus, .btn.btn--white.is-focused {
-  box-shadow: 0 0 0 2px rgba(242, 242, 242, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(242, 242, 242, 0.25);
 }
 
 .btn.btn--white:active, .btn.btn--white.is-actived {
@@ -1947,7 +1947,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn--primary:focus, .btn.btn--primary.is-focused {
-  box-shadow: 0 0 0 2px rgba(74, 82, 255, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(74, 82, 255, 0.25);
 }
 
 .btn.btn--primary:active, .btn.btn--primary.is-actived {
@@ -2006,7 +2006,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn--danger:focus, .btn.btn--danger.is-focused {
-  box-shadow: 0 0 0 2px rgba(255, 21, 7, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(255, 21, 7, 0.25);
 }
 
 .btn.btn--danger:active, .btn.btn--danger.is-actived {
@@ -2065,7 +2065,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn--success:focus, .btn.btn--success.is-focused {
-  box-shadow: 0 0 0 2px rgba(44, 180, 101, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(44, 180, 101, 0.25);
 }
 
 .btn.btn--success:active, .btn.btn--success.is-actived {
@@ -2124,7 +2124,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn--info:focus, .btn.btn--info.is-focused {
-  box-shadow: 0 0 0 2px rgba(0, 95, 230, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(0, 95, 230, 0.25);
 }
 
 .btn.btn--info:active, .btn.btn--info.is-actived {
@@ -2183,7 +2183,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn--warning:focus, .btn.btn--warning.is-focused {
-  box-shadow: 0 0 0 2px rgba(228, 181, 11, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(228, 181, 11, 0.25);
 }
 
 .btn.btn--warning:active, .btn.btn--warning.is-actived {
@@ -2446,7 +2446,15 @@ fieldset[disabled] .btn {
 .form-textarea:focus,
 .form-textarea.is-focused {
   border-color: #636AFF;
-  box-shadow: 0 0 0 2px rgba(99, 106, 255, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(99, 106, 255, 0.25);
+}
+
+.form-input:focus:-webkit-autofill, .form-input.is-focused:-webkit-autofill,
+.form-select:focus:-webkit-autofill,
+.form-select.is-focused:-webkit-autofill,
+.form-textarea:focus:-webkit-autofill,
+.form-textarea.is-focused:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #ffffff inset, 0 0 0 0.125em rgba(99, 106, 255, 0.25);
 }
 
 .form-input:disabled,
@@ -2538,7 +2546,7 @@ fieldset[disabled] .btn {
 }
 
 .form-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  box-shadow: 0 0 0px 1000px #ffffff inset;
 }
 
 .form-input[type="file"] {
@@ -3498,13 +3506,12 @@ fieldset[disabled] .btn {
 }
 
 .nav.nav--tabs > .nav__item > .nav__link:hover {
-  color: #212121;
-  border-color: #212121;
+  color: #636AFF;
 }
 
 .nav.nav--tabs > .nav__item.is-active > .nav__link {
   color: #636AFF;
-  border-color: #636AFF;
+  border-bottom-color: #636AFF;
 }
 
 /* ## Navbar
@@ -3905,7 +3912,7 @@ fieldset[disabled] .btn {
   cursor: pointer !important;
 }
 
-.forbid {
+.forbidden {
   cursor: not-allowed !important;
 }
 
