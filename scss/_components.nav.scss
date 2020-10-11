@@ -10,12 +10,11 @@ $nav-font-size-md: $text-size-md !default;
 
 $nav-tabs-gutter: $spacing-stack-xs !default;
 $nav-tabs-padding: 0.375em 0.75em !default;
-$nav-tabs-border-width: $shape-border-width !default;
+$nav-tabs-underline-height: $shape-border-width !default;
 $nav-tabs-underline-color: $grey-weak !default;
 $nav-tabs-hover-color: $grey-dark !default;
-$nav-tabs-hover-border-color: $grey-dark !default;
 $nav-tabs-active-color: $color-primary !default;
-$nav-tabs-active-border-color: $color-primary !default;
+$nav-tabs-active-underline-height: $nav-tabs-underline-height !default;
 
 $nav-pills-gutter: $spacing-stack-xs !default;
 $nav-pills-padding: 0.375em 0.75em !default;
@@ -119,7 +118,7 @@ $nav-pills-active-color: invert-color($color-primary) !default;
 .nav.nav--tabs {
   margin-left: 0 - $nav-tabs-gutter / 2;
   margin-right: 0 - $nav-tabs-gutter / 2;
-  border-bottom: $nav-tabs-border-width solid $nav-tabs-underline-color;
+  border-bottom: $nav-tabs-underline-height solid $nav-tabs-underline-color;
 
   > .nav__item {
     padding-left: $nav-tabs-gutter / 2;
@@ -127,18 +126,17 @@ $nav-pills-active-color: invert-color($color-primary) !default;
 
     > .nav__link {
       padding: $nav-tabs-padding;
-      margin: 0 0 (0 - $nav-tabs-border-width) 0;
-      border-bottom: $nav-tabs-border-width solid transparent;
+      margin: 0 0 (0 - $nav-tabs-underline-height) 0;
+      border-bottom: $nav-tabs-active-underline-height solid transparent;
       &:hover {
-        color: $nav-tabs-hover-color;
-        border-color: $nav-tabs-hover-border-color;
+        color: $nav-tabs-active-color;
       }
     }
 
     &.is-active {
       > .nav__link {
         color: $nav-tabs-active-color;
-        border-color: $nav-tabs-active-border-color;
+        border-bottom-color: $nav-tabs-active-color;
       }
     }
   }
