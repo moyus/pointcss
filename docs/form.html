@@ -8,9 +8,9 @@
   <meta name="description" content="A flexible CSS Framework for building modern responsive web apps">
   <meta name="keywords" content="css,sass,flexbox,responsive,front-end,mobile-friendly,framework,web">
   <link rel="shortcut icon" href="https://moyus.github.io/pointcss/images/favicon.ico" />
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=1602387606230">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=1602387606230">
-  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=1602387606230">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/point.css?v=1602950780466">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/style.css?v=1602950780466">
+  <link rel="stylesheet" href="https://moyus.github.io/pointcss/css/prism.css?v=1602950780466">
 </head>
 <body>
   <div id="docs" class="site">
@@ -24,7 +24,7 @@
   <div class="navbar__end">
     <div class="navbar__item shown@lg">
       <div class="site__metadata">
-        <span>v2.0.1</span>
+        <span>v2.0.2</span>
         <a href="https://github.com/moyus/pointcss" title="Github" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0" fill="currentColor"></path>
@@ -387,20 +387,24 @@
   </div>
 </section>
 
-<h5 id="sizing">Sizing</h5><p>Your can create a small size of control by adding <code>.form-input--sm</code> modifier class on <code>.form-input</code> container.</p>
+<h5 id="sizing">Sizing</h5><p>Your can create a small size of control by adding <code>.form-input--sm</code> or <code>.form-input--lg</code> modifier class on <code>.form-input</code> container.</p>
 <section class="snippet">
   <div class="snippet__preview">
     <div class="form-field">
       <input type="text" class="form-input form-input--sm" placeholder="Small sizing">
     </div>
     <div class="form-field">
-      <input type="text" class="form-input form-input" placeholder="Normal sizing">
+      <input type="text" class="form-input" placeholder="Normal sizing">
+    </div>
+    <div class="form-field">
+      <input type="text" class="form-input form-input--lg" placeholder="Large sizing">
     </div>
   </div>
   <div class="snippet__source">
 
 <pre><code class="language-html">&lt;input type=&quot;text&quot; class=&quot;form-input form-input--sm&quot; placeholder=&quot;Small sizing&quot;&gt;
-&lt;input type=&quot;text&quot; class=&quot;form-input form-input&quot; placeholder=&quot;Normal sizing&quot;&gt;</code></pre>
+&lt;input type=&quot;text&quot; class=&quot;form-input&quot; placeholder=&quot;Normal sizing&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-input form-input--lg&quot; placeholder=&quot;Large sizing&quot;&gt;</code></pre>
   </div>
 </section>
 
@@ -542,7 +546,7 @@
   </div>
 </section>
 
-<h5 id="sizing">Sizing</h5><p>Your can create a small size of control by adding <code>.form-select--sm</code> modifier class on <code>.form-select</code> container.</p>
+<h5 id="sizing">Sizing</h5><p>Your can create a small size of control by adding <code>.form-select--sm</code> or <code>.form-select--lg</code> modifier class on <code>.form-select</code> container.</p>
 <section class="snippet">
   <div class="snippet__preview">
     <div class="form-field">
@@ -565,11 +569,22 @@
         <option value="4">Paris</option>
       </select>
     </div>
+    <div class="form-field">
+      <select class="form-select form-select--lg">
+        <option>Large sizing</option>
+        <option value="0">Beijing</option>
+        <option value="1">Washington</option>
+        <option value="2">Tokyo</option>
+        <option value="3">London</option>
+        <option value="4">Paris</option>
+      </select>
+    </div>
   </div>
   <div class="snippet__source">
 
 <pre><code class="language-html">&lt;select class=&quot;form-select form-select--sm&quot;&gt;...&lt;/select&gt;
-&lt;select class=&quot;form-select&quot;&gt;...&lt;/select&gt;</code></pre>
+&lt;select class=&quot;form-select&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;form-select form-select--lg&quot;&gt;...&lt;/select&gt;</code></pre>
   </div>
 </section>
 
@@ -637,7 +652,7 @@
   </div>
 </section>
 
-<h5 id="sizing">Sizing</h5><p>Your can create a small size of control by adding <code>.form-textarea--sm</code> modifier class on <code>.form-textarea</code> container.</p>
+<h5 id="sizing">Sizing</h5><p>Your can create a small size of control by adding <code>.form-textarea--sm</code> or <code>.form-textarea--lg</code> modifier class on <code>.form-textarea</code> container.</p>
 <section class="snippet">
   <div class="snippet__preview">
     <div class="form-field">
@@ -647,6 +662,10 @@
     <div class="form-field">
       <label class="form-label">Normal sizing</label>
       <textarea class="form-textarea" rows="4"></textarea>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Large sizing</label>
+      <textarea class="form-textarea form-textarea--lg" rows="4"></textarea>
     </div>
   </div>
   <div class="snippet__source">
@@ -994,6 +1013,6 @@
   </div>
   <!-- END .site -->
   <script src="https://moyus.github.io/pointcss/js/prism.js"></script>
-  <script src="https://moyus.github.io/pointcss/js/point.js?v=1602387606230"></script>
+  <script src="https://moyus.github.io/pointcss/js/point.js?v=1602950780466"></script>
 </body>
 </html>
