@@ -1,6 +1,6 @@
 /*!
  * @moyu/pointcss
- * @version v2.0.1
+ * @version v2.0.2
  * @link https://github.com/moyus/pointcss
  * @author moyu <moyuboy@gmail.com> (https://moyu.io)
  * @license MIT
@@ -2247,12 +2247,12 @@ fieldset[disabled] .btn {
   line-height: 1.44444444;
   border-radius: 4px;
   padding: 8px 16px;
-  height: 43.71428571px;
-  min-width: 43.71428571px;
+  height: 44px;
+  min-width: 44px;
 }
 
 .btn.btn--lg.btn--icon {
-  width: 43.71428571px;
+  width: 44px;
 }
 
 .btn.btn--loose {
@@ -2618,6 +2618,35 @@ fieldset[disabled] .btn {
 .form-textarea--sm.form-textarea {
   height: auto;
   min-height: 30px;
+}
+
+.form-input--lg,
+.form-select--lg,
+.form-textarea--lg {
+  font-size: 18px;
+  line-height: 1.44444444;
+  height: 44px;
+  padding: 8px 16px;
+}
+
+.form-input--lg.form-input[type="file"],
+.form-select--lg.form-input[type="file"],
+.form-textarea--lg.form-input[type="file"] {
+  min-height: 44px;
+}
+
+.form-input--lg.form-select[multiple],
+.form-select--lg.form-select[multiple],
+.form-textarea--lg.form-select[multiple] {
+  height: auto;
+  min-height: 44px;
+}
+
+.form-input--lg.form-textarea,
+.form-select--lg.form-textarea,
+.form-textarea--lg.form-textarea {
+  height: auto;
+  min-height: 44px;
 }
 
 .form-checkbox {
