@@ -162,7 +162,7 @@ $btn-height-computed: $btn-font-size-md * $btn-line-height-md + 2 * nth($btn-pad
 }
 
 .btn.btn--lg {
-  $btn-height-computed: $btn-font-size-lg * $btn-line-height-sm + 2 * nth($btn-padding-lg, 1)  + 2 * $btn-border-width;
+  $btn-height-computed: $btn-font-size-lg * $btn-line-height-lg + 2 * nth($btn-padding-lg, 1)  + 2 * $btn-border-width;
 
   font-size: $btn-font-size-lg;
   line-height: $btn-line-height-lg;

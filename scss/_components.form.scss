@@ -22,6 +22,10 @@ $form-control-padding-md:               $spacing-squish-sm !default;
 $form-control-font-size-md:             $text-size-md !default;
 $form-control-line-height-md:           round-line-height($form-control-font-size-md, $form-control-line-height) !default;
 
+$form-control-padding-lg:               $spacing-squish-md !default;
+$form-control-font-size-lg:             $text-size-lg !default;
+$form-control-line-height-lg:           round-line-height($form-control-font-size-lg, $form-control-line-height) !default;
+
 $form-control-placeholder-color:        rgba($grey-mute, 0.75) !default;
 $form-control-disabled-color:           $grey-mute !default;
 $form-control-disabled-bg:              $grey-shade !default;
@@ -198,6 +202,29 @@ $form-control-height-computed:          $form-control-font-size-md * $form-contr
     line-height: $form-control-line-height-sm;
     height: $form-control-height-computed;
     padding: $form-control-padding-sm;
+
+    &.form-input[type="file"] {
+      min-height: $form-control-height-computed;
+    }
+
+    &.form-select[multiple] {
+      height: auto;
+      min-height: $form-control-height-computed;
+    }
+
+    &.form-textarea {
+      height: auto;
+      min-height: $form-control-height-computed;
+    }
+  }
+
+  &--lg {
+    $form-control-height-computed: $form-control-font-size-lg * $form-control-line-height-lg + nth($form-control-padding-lg, 1) * 2 + $form-control-border-width * 2;
+
+    font-size: $form-control-font-size-lg;
+    line-height: $form-control-line-height-lg;
+    height: $form-control-height-computed;
+    padding: $form-control-padding-lg;
 
     &.form-input[type="file"] {
       min-height: $form-control-height-computed;
